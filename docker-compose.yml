@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  istart:
+    container_name: iSTART
+    build:
+      context: .
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
