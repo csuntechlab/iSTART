@@ -5,13 +5,8 @@
         "build": "laravel-nuxt build"
     },
     "dependencies": {
-        "laravel-nuxt": "^1.4.7"
+        "laravel-nuxt": "^1.4.7",
+        "webpack": "^3.11.0"
     },
-    "devDependencies": {
-        "html-webpack-plugin": "^3.2.0",
-        "webpack": "^4.29.3",
-        "webpack-cli": "^3.2.3",
-        "webpack-dev-middleware": "^3.5.2",
-        "webpack-dev-server": "^3.1.14"
-    }
+    "devDependencies": {}
 }

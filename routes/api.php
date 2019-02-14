@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('me', function () {
+    // Let's return fake information.
+    return [
+        'name' => 'Jake Doe',
+    ];
+});
