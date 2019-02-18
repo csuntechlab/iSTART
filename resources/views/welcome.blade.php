@@ -15,5 +15,5 @@
             <v-App></v-App>
         </div>
     </body>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('js/main.js') }}"></script>
 </html>
