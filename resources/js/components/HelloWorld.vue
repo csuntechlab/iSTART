@@ -6,7 +6,7 @@
       THE TIME TO END YOUR ADDICTION IS NOW!
     </p>
     <h3>LOGIN</h3>
-    <div class="alert alert-primary" role="alert">
+            <div class="alert alert-primary" role="alert">
       A simple primary alert—check it out!
     </div>
   </div>
