@@ -8,12 +8,15 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type"text/css" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         <div id="app">
             <v-App></v-App>
         </div>
+
+        <script src="{{ asset('js/main.js') }}"></script>
+
     </body>
-    <script type="text/javascript" src="{{ mix('js/main.js') }}"></script>
+
 </html>
