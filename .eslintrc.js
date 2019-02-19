@@ -5,7 +5,8 @@ module.exports = {
   },
   'extends': [
     'plugin:vue/essential',
-    '@vue/standard'
+    '@vue/standard',
+    'eslint-config-standard'
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -21,6 +22,13 @@ module.exports = {
     'describe': true,
     'it': true,
     'waitsFor': true,
-    'require': true
+    'require': true,
+    'pit': true,
+    'xit': true,
+    'xdescribe': true,
+    'mockFn': true,
+    'afterEach': true,
+    'beforeEach': true,
+    'runs': true
   }
 }
