@@ -14,7 +14,6 @@ export default {
   },
   data () {
     return {
-      ya_mama_object: { robert: 'hi' }
     }
   }
 }
