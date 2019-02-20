@@ -1,5 +1,4 @@
-os:
-- linux
+os: linux
 matrix:
  include:
 - language: php
