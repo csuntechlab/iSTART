@@ -1,0 +1,33 @@
+os:
+- linux
+matrix:
+ include:
+- language: php
+php:
+- '7.1'
+before_script:
+- cp .env.travis .env
+- composer self-update
+- composer install --no-interaction
+- phpenv config-rm xdebug.ini
+script:
+- vendor/bin/phpunit
+branches:
+  only:
+  - dev
+
+- language: node_js
+node_js:
+- '8'
+branches:
+  only:
+  - dev
+cache:
+  directories:
+  - node_modules
+before_install:
+- yarn update
+install:
+- yarn install
+script:
+- yarn test:unit
