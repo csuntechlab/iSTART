@@ -1,10 +1,10 @@
-os:
-- linux
 matrix:
  include:
 - language: php
 php:
 - '7.1'
+os:
+- linux
 before_script:
 - cp .env.travis .env
 - composer self-update
@@ -15,8 +15,9 @@ script:
 #branches:
 #  only:
 #  - dev
-
 - language: node_js
+os:
+- linux
 node_js:
 - '8'
 #branches:
