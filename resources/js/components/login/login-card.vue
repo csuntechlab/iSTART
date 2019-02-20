@@ -50,7 +50,6 @@ export default {
     validEmailCheck () {
       this.validEmail = this.form.email.includes('@')
     }
-
   }
 }
 </script>
