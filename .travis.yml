@@ -12,16 +12,16 @@ before_script:
 - phpenv config-rm xdebug.ini
 script:
 - vendor/bin/phpunit
-branches:
-  only:
-  - dev
+#branches:
+#  only:
+#  - dev
 
 - language: node_js
 node_js:
 - '8'
-branches:
-  only:
-  - dev
+#branches:
+#  only:
+#  - dev
 cache:
   directories:
   - node_modules
