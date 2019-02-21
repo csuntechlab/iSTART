@@ -3,7 +3,6 @@
         <form>
         <div class="form-group">
             <label for="email">CSUN email</label>
-            <small v-if="submitted && !form.email">Please Enter your Email</small>
             <small v-if="submitted && !validEmail"> Please enter a <strong>Valid</strong> email</small>
             <input v-model="form.email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" required>
         </div>
@@ -18,6 +17,7 @@
 </template>
 
 <script>
+// import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'login-card',
   data () {
@@ -31,10 +31,13 @@ export default {
     }
   },
   methods: {
+    // ...mapActions([
+    //   'verifyUserData'
+    // ]),
     submitForm () {
       this.submitted = true
       if (this.checkFormInputs()) {
-        console.log('inputs are good')
+
       } else {
         console.log('inputs are not good')
       }
