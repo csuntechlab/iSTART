@@ -1,6 +1,6 @@
-#branches:
-#  only:
-#    - dev
+branches:
+  only:
+    - dev
 matrix:
   include:
     - stage: "phpunit"
