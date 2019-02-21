@@ -17,7 +17,7 @@
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   name: 'login-card',
   data () {
@@ -31,13 +31,13 @@ export default {
     }
   },
   methods: {
-    // ...mapActions([
-    //   'verifyUserData'
-    // ]),
+    ...mapActions([
+      'verifyUserData'
+    ]),
     submitForm () {
       this.submitted = true
       if (this.checkFormInputs()) {
-
+        this.verifyUserData(this.form)
       } else {
         console.log('inputs are not good')
       }
