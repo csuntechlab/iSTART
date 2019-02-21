@@ -20,8 +20,8 @@ matrix:
       os: linux
       node_js: '8'
       cache:
-     	directories: 
-	  - node_modules
+     	  directories: 
+	    - node_modules
       install:
         - yarn install
       script:
