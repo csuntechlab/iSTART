@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit backupGlobals="false"
         backupStaticAttributes="false"
-        bootstrap="vendor/autoload.php"
+        bootstrap="./vendor/autoload.php"
         colors="true"
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
@@ -9,8 +9,11 @@
         processIsolation="false"
         stopOnFailure="false">
     <testsuites>
-        <test   suite name="Application Test Suite">
+        <testsuite name="Application Test Suite">
             <directory suffix="Test.php">./tests/phpunit</directory>
+        </testsuite>
+        <testsuite name="Controller Test">
+            <directory suffix="Test.php">./tests/phpunit/ControllerTests</directory>
         </testsuite>
     </testsuites>
     <filter>

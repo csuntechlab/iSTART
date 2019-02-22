@@ -17,6 +17,7 @@ class UserRoleController extends Controller
 
     public function getRole(Request $request)
     {
+        dd($request->email);
         $data = ['user_email' => $request->email];
         return $this->userRoleUtility->getRole($data);
     }
