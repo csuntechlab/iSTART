@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Contracts\UserRoleContracts;
@@ -7,7 +9,6 @@ use Illuminate\Http\Request;
 
 class UserRoleController extends Controller
 {
-
     protected $userRoleUtility;
 
     public function __construct(UserRoleContracts $userRoleUtility)
@@ -17,8 +18,8 @@ class UserRoleController extends Controller
 
     public function getRole(Request $request)
     {
-        dd($request->email);
         $data = ['user_email' => $request->email];
+
         return $this->userRoleUtility->getRole($data);
     }
 }
