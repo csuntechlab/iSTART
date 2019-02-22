@@ -5,7 +5,12 @@ const verifyUserDataAPI = (payload, success, error) => {
   .then(
     response => {
       success(response.data);
-    })
+    }
+  ).catch(
+    failure => { 
+      error(failure)
+    }
+  )
 }
 
 export default {
