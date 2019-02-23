@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Contracts\UserRoleContracts;
+use App\Contracts\UserRoleContract;
 use Illuminate\Http\Request;
 
 class UserRoleController extends Controller
 {
     protected $userRoleUtility;
 
-    public function __construct(UserRoleContracts $userRoleUtility)
+    public function __construct(UserRoleContract $userRoleUtility)
     {
         $this->userRoleUtility = $userRoleUtility;
     }

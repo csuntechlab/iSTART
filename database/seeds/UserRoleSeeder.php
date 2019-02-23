@@ -12,10 +12,10 @@ class UserRoleSeeder extends Seeder
     public function run()
     {
         DB::table('user_roles')->insert([
-            'user_email' => 'nr_cyndee.bellamy@csun.edu',
             'user_role' => 'comparison',
+            'user_email' => 'nr_cyndee.bellamy@csun.edu',
             'display_name' => 'Cyndee Bellamy',
-            'password' => 'yungbasedGod',
+            'password' => 'yungbasedgod',
             'remember_token' => '12394iresjntgruirf9eiokwj',
         ]);
     }

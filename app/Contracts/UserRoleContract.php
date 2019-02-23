@@ -4,7 +4,7 @@ namespace App\Contracts;
 
 use Illuminate\Http\Request;
 
-interface UserRoleContracts
+interface UserRoleContract
 {
     public function getRole(array $data): array;
 

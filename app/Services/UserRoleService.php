@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Contracts\UserRoleContracts;
+use App\Contracts\UserRoleContract;
 use App\Models\UserRoles;
 
-class UserRoleServices implements UserRoleContracts
+class UserRoleService implements UserRoleContract
 {
     public function getRole(array $data): array
     {
