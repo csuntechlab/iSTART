@@ -1938,8 +1938,6 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.checkFormInputs()) {
         this.verifyUserData(this.form);
-      } else {
-        console.log('inputs are not good');
       }
     },
     checkFormInputs: function checkFormInputs() {
@@ -1988,6 +1986,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'login',
@@ -2010,6 +2009,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
 //
 //
 //
@@ -20402,7 +20413,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "loginCardWrapper" }, [
     _c("form", [
       _c("div", { staticClass: "form-group" }, [
         _c("label", { attrs: { for: "email" } }, [_vm._v("CSUN email")]),
@@ -20476,7 +20487,7 @@ var render = function() {
       _c(
         "button",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "btn btn-primary btn-login",
           attrs: { type: "submit" },
           on: {
             click: function($event) {
@@ -20516,7 +20527,7 @@ var render = function() {
     "div",
     { staticClass: "container" },
     [
-      _c("h1", { staticClass: "text-center" }, [_vm._v("iSTART")]),
+      _c("h1", { staticClass: "text-center login-title" }, [_vm._v("iSTART")]),
       _vm._v(" "),
       _c("login-card")
     ],
@@ -56916,9 +56927,21 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mutation_types_login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mutation-types/login */ "./resources/js/store/mutation-types/login.js");
-/* harmony import */ var _api_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../api/login */ "./resources/js/api/login.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../router */ "./resources/js/router.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _mutation_types_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mutation-types/login */ "./resources/js/store/mutation-types/login.js");
+/* harmony import */ var _api_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/login */ "./resources/js/api/login.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../router */ "./resources/js/router.js");
+
+
+
+
 
 
 
@@ -56926,9 +56949,17 @@ __webpack_require__.r(__webpack_exports__);
   verifyUserData: function verifyUserData(_ref, payload) {
     var commit = _ref.commit,
         dispatch = _ref.dispatch;
-    _api_login__WEBPACK_IMPORTED_MODULE_1__["default"].verifyUserDataAPI(payload, function (success) {
-      commit(_mutation_types_login__WEBPACK_IMPORTED_MODULE_0__["default"].VERIFY_USER_DATA, success);
-      _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
+    _api_login__WEBPACK_IMPORTED_MODULE_5__["default"].verifyUserDataAPI(payload, function (success) {
+      success.token = "1234";
+      var cookieExpirationDate = new Date();
+      cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
+      var cookieValue = success.token; // now.setMonth( now.getMonth() + 1 );
+
+      document.cookie = "userKey = ".concat(cookieValue);
+      document.cookie = "expires = ".concat(cookieExpirationDate.toUTCString(), ";");
+      commit(_mutation_types_login__WEBPACK_IMPORTED_MODULE_4__["default"].VERIFY_USER_DATA, success); //create cookie and session
+
+      _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
         name: 'welcome'
       });
     }, function (error) {
@@ -57000,10 +57031,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _mutation_types_login__WEBPACK_IMPORTED_MODULE_1__["default"].VERIFY_USER_DATA, function (state, payload) {
-  console.log('this is from the mutation');
-  console.log(payload);
-  state.email = payload.email;
-  state.password = payload.password;
+  state.user = payload;
 }));
 
 /***/ }),

@@ -1,8 +1,9 @@
 <template>
     <div class="container">
-        <h1 class="text-center">iSTART</h1>
+        <h1 class="text-center login-title">iSTART</h1>
         <login-card></login-card>
-    </div>
+        </div>
+
 </template>
 
 <script>

@@ -1,5 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.loginCardWrapper {
+  margin: auto;
+  width: 55%;
+  height: auto;
+}
+
+.btn-login {
+  text-align: center;
+  font-weight: bold;
+  background: #2699FB;
+  color: white;
+}
+
+.login-title {
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  color: #2699FB;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

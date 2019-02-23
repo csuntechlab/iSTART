@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="loginCardWrapper">
         <form>
         <div class="form-group">
             <label for="email">CSUN email</label>
@@ -11,7 +11,7 @@
             <small v-if="submitted && !form.password">Please Enter your password</small>
             <input v-model="form.password" type="password" class="form-control" placeholder="Password" required>
         </div>
-        <button type="submit" @click.prevent="submitForm" class="btn btn-primary">Submit</button>
+        <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-login">Submit</button>
         </form>
     </div>
 </template>
@@ -38,8 +38,6 @@ export default {
       this.submitted = true
       if (this.checkFormInputs()) {
         this.verifyUserData(this.form)
-      } else {
-        console.log('inputs are not good')
       }
     },
     checkFormInputs () {
