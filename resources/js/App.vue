@@ -1,9 +1,30 @@
 <template>
-  <div>
     <div id="nav">
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
-    </div>
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      loadingCheck: false
+    }
+  },
+  methods: {
+    checkForCookies () {
+      if (document.cookie.indexOf('userKey') !== -1) {
+        console.log(document.cookie)
+        console.log(typeof document.cookie)
+        this.$router.push({ name: 'welcome' })
+      } else {
+        this.$router.push({ name: 'login' })
+      }
+    }
+  },
+  beforeMount () {
+    this.checkForCookies()
+  }
+}
+</script>
