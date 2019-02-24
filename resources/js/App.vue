@@ -24,7 +24,7 @@ export default {
       }
     }
   },
-  beforeMount () {
+  mounted () {
     this.checkForCookies()
   }
 }

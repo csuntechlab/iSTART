@@ -1,10 +1,9 @@
-import _login from '../../mutation-types/login';
 import Login from '../../../api/login';
 import router from '../../../router';
 
 export default {
   
-  verifyUserData({commit,dispatch}, payload) {
+  verifyUserData(context,payload) {
     Login.verifyUserDataAPI(
 			payload,
 			success => {
@@ -14,11 +13,12 @@ export default {
 				cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
 				document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;
 				// localStorage.setItem('userKey', success.token);
-				commit(_login.VERIFY_USER_DATA, success);
+				context.commit('VERIFY_USER_DATA', success);
 				router.push({name:'welcome'});
 			},
 			error => {
-				console.log(error)}
+				console.log(error)
+			}
 		)
   }
 }

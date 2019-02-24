@@ -1986,7 +1986,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  beforeMount: function beforeMount() {
+  mounted: function mounted() {
     this.checkForCookies();
   }
 });
@@ -57430,25 +57430,33 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mutation_types_login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mutation-types/login */ "./resources/js/store/mutation-types/login.js");
-/* harmony import */ var _api_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../api/login */ "./resources/js/api/login.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../router */ "./resources/js/router.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _api_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../api/login */ "./resources/js/api/login.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../router */ "./resources/js/router.js");
+
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  verifyUserData: function verifyUserData(_ref, payload) {
-    var commit = _ref.commit,
-        dispatch = _ref.dispatch;
-    _api_login__WEBPACK_IMPORTED_MODULE_1__["default"].verifyUserDataAPI(payload, function (success) {
+  verifyUserData: function verifyUserData(context, payload) {
+    _api_login__WEBPACK_IMPORTED_MODULE_4__["default"].verifyUserDataAPI(payload, function (success) {
       success.token = "1234";
       var cookieValue = success.token;
       var cookieExpirationDate = new Date();
       cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
       document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; "); // localStorage.setItem('userKey', success.token);
 
-      commit(_mutation_types_login__WEBPACK_IMPORTED_MODULE_0__["default"].VERIFY_USER_DATA, success);
-      _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
+      context.commit('VERIFY_USER_DATA', success);
+      _router__WEBPACK_IMPORTED_MODULE_5__["default"].push({
         name: 'welcome'
       });
     }, function (error) {
@@ -57515,13 +57523,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var _mutation_types_login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mutation-types/login */ "./resources/js/store/mutation-types/login.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _mutation_types_login__WEBPACK_IMPORTED_MODULE_1__["default"].VERIFY_USER_DATA, function (state, payload) {
-  state.user = payload;
-}));
+/* harmony default export */ __webpack_exports__["default"] = ({
+  VERIFY_USER_DATA: function VERIFY_USER_DATA(state, payload) {
+    state.user = payload;
+  }
+});
 
 /***/ }),
 
@@ -57537,22 +57543,6 @@ __webpack_require__.r(__webpack_exports__);
 //LOGIN STATE
 /* harmony default export */ __webpack_exports__["default"] = ({
   user: {}
-});
-
-/***/ }),
-
-/***/ "./resources/js/store/mutation-types/login.js":
-/*!****************************************************!*\
-  !*** ./resources/js/store/mutation-types/login.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var VERIFY_USER_DATA = "login/VERIFY_USER_DATA";
-/* harmony default export */ __webpack_exports__["default"] = ({
-  VERIFY_USER_DATA: VERIFY_USER_DATA
 });
 
 /***/ }),
