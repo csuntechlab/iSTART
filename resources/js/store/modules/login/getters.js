@@ -1,6 +1,6 @@
 //LOGIN GETTERS
 
 export default {
-  email: state => state.email,
-  password: state => state.password
+  user: state => state.user,
+  correctLoginInfo: state => state.user
 }

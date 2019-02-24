@@ -20,5 +20,10 @@ export default {
 				console.log(error)
 			}
 		)
-  }
+	},
+	clearUserData(context) {
+		document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
+		router.push({name: 'login'});
+		context.commit('CLEAR_USER_DATA');
+	}
 }

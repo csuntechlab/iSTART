@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'welcome',
   data () {
@@ -13,9 +14,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'clearUserData'
+    ]),
     logout () {
-      document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
-      this.$router.push({ name: 'login' })
+      this.clearUserData()
     }
 
   },

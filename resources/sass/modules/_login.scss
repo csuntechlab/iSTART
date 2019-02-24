@@ -1,19 +1,25 @@
+
+
 .loginCardWrapper {
   margin: auto;
   width: 55%;
   height: auto;
 }
-.btn-login {
+.btn-primary {
+  display: block !important;
+  margin: 0 auto !important;
+  background-color: $istartBlue !important;
+  font-weight: 700 !important;
+  width: 7rem;
   text-align: center;
-  font-weight: bold;
-  background: $istartBlue;
-  color: white;
-  
+  &:hover {
+	  box-shadow: inset 0 0 50px 50px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .login-title {
   margin-top: 12rem;
   margin-bottom: 2rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: $istartBlue;
 }

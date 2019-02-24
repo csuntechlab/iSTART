@@ -2,8 +2,8 @@
     <div class="loginCardWrapper">
         <form>
         <div class="form-group">
-            <label for="email">CSUN email</label>
-            <small v-if="submitted && !validEmail"> Please enter a <strong>Valid</strong> email</small>
+            <label for="email">CSUN Credentials</label>
+            <small v-if="submitted && !form.email">Please enter your credentials</small>
             <input v-model="form.email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" required>
         </div>
         <div class="form-group">
@@ -11,7 +11,7 @@
             <small v-if="submitted && !form.password">Please Enter your password</small>
             <input v-model="form.password" type="password" class="form-control" placeholder="Password" required>
         </div>
-        <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-login">Submit</button>
+        <button type="submit" @click.prevent="submitForm" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </template>
@@ -41,15 +41,11 @@ export default {
       }
     },
     checkFormInputs () {
-      this.validEmailCheck()
-      if (this.validEmail && this.form.password) {
+      if (this.form.email && this.form.password) {
         return true
       } else {
         return false
       }
-    },
-    validEmailCheck () {
-      this.validEmail = this.form.email.includes('@')
     }
   }
 }

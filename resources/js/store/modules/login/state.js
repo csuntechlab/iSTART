@@ -1,4 +1,5 @@
 //LOGIN STATE
 export default {
-  user: {}
+  user: {},
+  correctLoginInfo: null
 }
