@@ -16,6 +16,7 @@ export default {
     checkForCookies () {
       if (document.cookie.indexOf('userKey') !== -1) {
         console.log(document.cookie)
+        console.log(document.cookie.includes('userKey'))
         console.log(typeof document.cookie)
         this.$router.push({ name: 'welcome' })
       } else {

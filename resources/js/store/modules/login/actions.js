@@ -12,8 +12,8 @@ export default {
 				var cookieValue = success.token;
 				var cookieExpirationDate = new Date();
 				cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
-				document.cookie = `userKey = ${cookieValue}`;
-				document.cookie = `expires = ${cookieExpirationDate.toUTCString()};`;
+				document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;
+				// localStorage.setItem('userKey', success.token);
 				commit(_login.VERIFY_USER_DATA, success);
 				router.push({name:'welcome'});
 			},
