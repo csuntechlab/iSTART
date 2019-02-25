@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import loginCard from '../components/login/login-card.vue'
+import loginCard from './../components/login/login-card.vue'
 export default {
   name: 'login',
   data () {
