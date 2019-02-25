@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     checkForCookies () {
-      if (document.cookie.indexOf('userKey') !== -1) {
+      if (document.cookie.includes('userKey')) {
         this.$router.push({ name: 'welcome' })
       } else {
         this.$router.push({ name: 'login' })

@@ -2,12 +2,15 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
-
-//Modules
-@import './modules/login';
-
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 // @import "../node_modules/bootstrap/scss/functions";
+
+// Global
+@import "global/variables";
+@import "global/layout";
+@import "global/helpers";
+
+// Modules
+@import "modules/error";
+@import './modules/login';
