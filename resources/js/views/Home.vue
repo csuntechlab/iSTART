@@ -6,12 +6,15 @@
 
 <script>
 import HelloWorld from '../components/HelloWorld'
+import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
   name: 'home',
+  mixins: [changeRouteTitle],
   components: {
     HelloWorld
   },
+
   data () {
     return {
     }
