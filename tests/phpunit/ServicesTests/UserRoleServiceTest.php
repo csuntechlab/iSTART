@@ -16,7 +16,7 @@ class UserRoleServiceTest extends TestCase
     /**
      * @test
      */
-    public function getRole_returns_role_password_remember_token_display_name_and_email_from_utility_as_array()
+    public function getRole_returns_role_remember_token_display_name_and_email_from_utility_as_array()
     {
         $userRoleService = new UserRoleService();
 
@@ -24,7 +24,6 @@ class UserRoleServiceTest extends TestCase
             'user_email' => 'someone@face.com',
             'user_role' => 'some role',
             'display_name' => 'Someone Name',
-            'password' => 'pass1',
             'remember_token' => 'toke',
         ])->save();
 
@@ -32,7 +31,6 @@ class UserRoleServiceTest extends TestCase
             'user_email' => 'someone@face.com',
             'user_role' => 'some role',
             'display_name' => 'Someone Name',
-            'password' => 'pass1',
             'remember_token' => 'toke',
         ];
 

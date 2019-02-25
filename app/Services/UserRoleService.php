@@ -17,7 +17,6 @@ class UserRoleService implements UserRoleContract
             'user_role' => $userRole['user_role'],
             'user_email' => $data['user_email'],
             'display_name' => $userRole['display_name'],
-            'password' => $userRole['password'],
             'remember_token' => $userRole['remember_token'],
             ];
     }

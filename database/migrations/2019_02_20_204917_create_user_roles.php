@@ -18,7 +18,6 @@ class CreateUserRoles extends Migration
             $table->string('user_role');
             $table->string('display_name');
             $table->string('remember_token');
-            $table->string('password');
             $table->timestamps();
         });
     }

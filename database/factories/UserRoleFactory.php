@@ -20,7 +20,6 @@ $factory->define(App\Models\UserRoles::class, function (Faker $faker) {
         'user_email' => 'someone@face.com',
         'user_role' => 'comparison',
         'display_name' => 'Cyndee Bellamy',
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm',
         'remember_token' => '12394iresjntgruirf9eiokwj',
     ];
 });

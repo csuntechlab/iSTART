@@ -14,6 +14,6 @@ class UserRoles extends Model
      * @var array
      */
     protected $fillable = [
-        'user_email', 'user_role', 'password', 'remember_token', 'display_name',
+        'user_email', 'user_role', 'remember_token', 'display_name',
     ];
 }

@@ -15,7 +15,6 @@ class UserRoleSeeder extends Seeder
             'user_role' => 'comparison',
             'user_email' => 'nr_cyndee.bellamy@csun.edu',
             'display_name' => 'Cyndee Bellamy',
-            'password' => 'yungbasedgod',
             'remember_token' => '12394iresjntgruirf9eiokwj',
         ]);
     }
