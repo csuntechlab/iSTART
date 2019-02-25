@@ -1,5 +1,5 @@
 const verifyUserDataAPI = (payload, success, error) => {
-  window.axios.get(`https://jsonplaceholder.typicode.com/users/1`)
+  window.axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload)
   .then(
     response => {
       success(response.data);

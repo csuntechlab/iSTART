@@ -2029,7 +2029,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+
+
+
+
 
 //
 //
@@ -2044,7 +2056,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  methods: Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(['clearUserData']), {
+  methods: Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapActions"])(['clearUserData']), {
     logout: function logout() {
       this.clearUserData();
     }
@@ -56563,7 +56575,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var verifyUserDataAPI = function verifyUserDataAPI(payload, success, error) {
-  window.axios.get("https://jsonplaceholder.typicode.com/users/1").then(function (response) {
+  window.axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload).then(function (response) {
     success(response.data);
   }).catch(function (failure) {
     error(failure);
@@ -56841,12 +56853,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   verifyUserData: function verifyUserData(context, payload) {
     _api_login__WEBPACK_IMPORTED_MODULE_0__["default"].verifyUserDataAPI(payload, function (success) {
-      success.token = "1234";
+      console.log(success.token);
       var cookieValue = success.token;
       var cookieExpirationDate = new Date();
       cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
-      document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; "); // localStorage.setItem('userKey', success.token);
-
+      document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; ");
       context.commit('VERIFY_USER_DATA', success);
       _router__WEBPACK_IMPORTED_MODULE_1__["default"].push({
         name: 'welcome'
@@ -56937,6 +56948,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   VERIFY_USER_DATA: function VERIFY_USER_DATA(state, payload) {
     state.user = payload;
+    state.correctLoginInfo = true;
   },
   CLEAR_USER_DATA: function CLEAR_USER_DATA(state, payload) {
     state.user = {};

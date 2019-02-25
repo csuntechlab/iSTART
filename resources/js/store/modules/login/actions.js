@@ -7,12 +7,11 @@ export default {
     Login.verifyUserDataAPI(
 			payload,
 			success => {
-				success.token = "1234";
+				console.log(success.token);
 				var cookieValue = success.token;
 				var cookieExpirationDate = new Date();
 				cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
 				document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;
-				// localStorage.setItem('userKey', success.token);
 				context.commit('VERIFY_USER_DATA', success);
 				router.push({name:'welcome'});
 			},
