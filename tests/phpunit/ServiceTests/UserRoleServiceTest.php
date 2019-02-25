@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ServicesTests;
+namespace Tests\ServiceTests;
 
 use App\Models\UserRoles;
 use App\Services\UserRoleService;
