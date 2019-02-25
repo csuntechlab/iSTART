@@ -29,6 +29,7 @@ export default new Router({
     {
       path: '/interventiongroup',
       name: 'InterventionGroup',
+      meta: { title: 'iSTART - Intervention' },
       component: InterventionGroup
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
