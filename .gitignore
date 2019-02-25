@@ -9,4 +9,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
 .DS_Store
+=======
+.php_cs.cache
+>>>>>>> 22a55bdb1f98baa2023e6cad3ec4be0cfedfabaa
