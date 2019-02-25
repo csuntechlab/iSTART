@@ -1,17 +1,12 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// Libraries & Frameworks
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // @import "../node_modules/bootstrap/scss/functions";
 
+// Global
+@import "global/variables";
+@import "global/layout";
+@import "global/helpers";
 
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+// Modules
+@import "modules/error";
