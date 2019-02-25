@@ -1,0 +1,51 @@
+.error {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1.5rem 3rem;
+
+    &-code > * {
+        font-size: 12rem;
+    }
+
+    &-message > * {
+        font-size: 2rem;
+    }
+
+    &-return {
+        & > * {
+            display: inline-block;
+            outline: 2px solid rgb(25, 25, 25);
+            padding: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        &:hover > * {
+            background-color: rgb(215, 215, 215);
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-code > * {
+            font-size: 6rem;
+        }
+
+        &-message > * {
+            font-size: 1.25rem;
+        }
+
+        &-return {
+            & > * {
+                font-size: 1rem;
+                display: inline-block;
+                outline: 2px solid rgb(25, 25, 25);
+                padding: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            &:hover > * {
+                background-color: rgb(215, 215, 215);
+            }
+        }
+    }
+}
