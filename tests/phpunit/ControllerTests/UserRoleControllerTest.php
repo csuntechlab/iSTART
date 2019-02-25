@@ -27,8 +27,6 @@ class UserRoleControllerTest extends TestCase
      */
     public function getRole_returns_role_and_email_from_utility_as_array()
     {
-        // $this->UserRoleController = new UserRoleController($this->utility);
-
         $data = [
             'user_role' => 'some role',
             'user_email' => '@face.come',
