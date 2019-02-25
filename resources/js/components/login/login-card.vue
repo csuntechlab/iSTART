@@ -1,5 +1,6 @@
 <template>
     <div class="loginCardWrapper">
+
         <form>
         <div class="form-group">
             <label for="email">CSUN Credentials</label>

@@ -3,7 +3,8 @@ export default {
     state.user = payload;
     state.correctLoginInfo = true;
   },
-  CLEAR_USER_DATA(state,payload) {
+  CLEAR_USER_DATA(state) {
     state.user = {};
+    state.correctLoginInfo = null;
   }
 }
