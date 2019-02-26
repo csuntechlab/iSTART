@@ -50,9 +50,18 @@ class LoginController extends Controller
             'password'=>$request->password
         ];
 
-        //$credentials = ['username'=>'mbenda.ndour.487@my.csun.edu','password'=>'lastsemester2019.'];
+        $hashedKey = $this->createHashedKey();
+        $token = $this->createNewToken($hashedKey);
+        $userInformation = $this->authenticationUtility->authenticateUser($credentials);
+        if($userInformation['valid']==1) {
+            $userInformation['token'] = $token;
 
-        return $this->authenticationUtility->authenticateUser($credentials);
+            return response()->json($userInformation);
+        }else{
+
+            return response()->json($userInformation);
+        }
+
 
     }
 }

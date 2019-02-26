@@ -25,7 +25,7 @@ class LoginControllerTest extends TestCase
 
     public function eligible_user_can_log_in()
     {
-        $data = ['username' => 'mn117580', 'password' => 'lastsemester2019.'];
+        $data = ['username' => 'steve', 'password' => ''];
         $controller = new LoginController($this->verifier);
         $request = new Request($data);
         $this->verifier

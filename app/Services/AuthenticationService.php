@@ -5,6 +5,7 @@ namespace App\Services;
 
 use App\Contracts\AuthenticationContract;
 
+
 class AuthenticationService implements AuthenticationContract
 {
 
@@ -21,10 +22,18 @@ class AuthenticationService implements AuthenticationContract
             //return json_decode($user);
            // dd(gettype($user));
             //dd(json_decode($user));
-            $response = $user[0];
+            //$response = [$user[0],'Valid'=>'1'];
+             $user[0]['valid'] = '1';
+             $response = $user[0];
+            //dd(gettype($response));
+
             return $response;
 
-        }else{echo 'false';}
+        }else{
+
+            $response = ['valid'=>'0'];
+            return $response;
+        }
     }
 
 }

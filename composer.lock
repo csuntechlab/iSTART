@@ -1,11 +1,50 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "0d3f4e6dc50cde341c7bd60aaaae6171",
     "packages": [
+        {
+            "name": "csun-metalab/laravel-directory-authentication",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-directory-authentication.git",
+                "reference": "d39145657c414887f6a2f84214a93ec4b033e489"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-directory-authentication/zipball/d39145657c414887f6a2f84214a93ec4b033e489",
+                "reference": "d39145657c414887f6a2f84214a93ec4b033e489",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Authentication/"
+                ],
+                "psr-4": {
+                    "CSUNMetaLab\\Authentication\\": "src/Authentication/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "Composer package for Laravel 5.0 and above to allow for directory-based authentication",
+            "time": "2018-04-30T21:56:20+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -3011,6 +3050,56 @@
             "time": "2019-01-30T11:44:30+00:00"
         },
         {
+            "name": "tiesa/ldap",
+            "version": "dev-master",
+            "target-dir": "Toyota/Component/Ldap",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ccottet/ldap.git",
+                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ccottet/ldap/zipball/0759f17996fbb434ee5155dc527b95d8059c6d41",
+                "reference": "0759f17996fbb434ee5155dc527b95d8059c6d41",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ldap": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7.13"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Toyota\\Component\\Ldap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cyril Cottet",
+                    "email": "cyril.cottet@gmail.com"
+                }
+            ],
+            "description": "LDAP made easy & practical to use in PHP",
+            "homepage": "https://github.com/ccottet/ldap",
+            "keywords": [
+                "ldap"
+            ],
+            "time": "2013-02-04 07:37:38"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -4938,7 +5027,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "tiesa/ldap": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
