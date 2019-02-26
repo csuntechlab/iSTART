@@ -4,7 +4,7 @@ import router from './../../../router';
 export default {
   
   verifyUserData({commit},payload) {
-    Login.verifyUserDataAPI(
+  Login.verifyUserDataAPI(
 			payload,
 			success => {
 				var cookieValue = success.token;

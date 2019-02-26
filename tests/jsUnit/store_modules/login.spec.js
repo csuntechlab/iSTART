@@ -2,12 +2,9 @@ import loginStore from './../../../resources/js/store/modules/login/index';
 import loginAPI from './../../../resources/js/api/login';
 
 //TESTING ACTIONS
-// jest.mock('axios');
 jest.mock('./../../../resources/js/api/login');
 describe('loginStore/actions/VerifyUserData', () => {
-  it('should commit to VERIFY_USER_DATA mutation', async () => {
-    const commit = jest.fn();
-    loginAPI.verifyUserDataAPI = jest.fn();
+  it('should commit to VERIFY_USER_DATA mutation', async() => {
     const payload = {
       userCredentials: 'edgkano@gmail.com',
       password: 'password'
@@ -17,10 +14,10 @@ describe('loginStore/actions/VerifyUserData', () => {
       username: 'csunStudent123'
     }
     loginAPI.verifyUserDataAPI.mockResolvedValue(apiResponse);
-    await loginStore.actions.verifyUserData({commit}, payload)
+    const commit = jest.fn();
+    await loginStore.actions.verifyUserData({commit});
     expect(commit).toHaveBeenCalledWith("VERIFY_USER_DATA",
     payload);
-
   });
     
   
