@@ -1,30 +1,31 @@
 import loginStore from './../../../resources/js/store/modules/login/index';
-import loginAPI from './../../../resources/js/api/login';
+import loginAPI from './../../../resources/js/api/login.js';
+// jest.mock('axios');
+jest.mock('./../../../resources/js/api/login.js')
 
-//TESTING ACTIONS
-jest.mock('./../../../resources/js/api/login');
+
+//TESTING ACTIONS  
 describe('loginStore/actions/VerifyUserData', () => {
-  it('should commit to VERIFY_USER_DATA mutation', async() => {
-    const payload = {
-      userCredentials: 'edgkano@gmail.com',
-      password: 'password'
-    };
+  it('should commit to VERIFY_USER_DATA mutation when action is called', async() => {
+    // let data;
+    // const commit = jest.fn();
+    // loginStore.actions.verifyUserData(commit, {usercredential: 'e', password: 'k'})
+    // .then(()=> {
+    //   expect(commit).toEqual(apiResponse);
+    // })
     const apiResponse = {
-      token: '123rke4',
-      username: 'csunStudent123'
-    }
+      token: '1234',
+      username: 'test123'
+    } 
     loginAPI.verifyUserDataAPI.mockResolvedValue(apiResponse);
     const commit = jest.fn();
-    await loginStore.actions.verifyUserData({commit});
-    expect(commit).toHaveBeenCalledWith("VERIFY_USER_DATA",
-    payload);
-  });
-    
-  
+    await loginStore.actions.verifyUserData({commit}, apiResponse);
+    expect(commit).toHaveBeenCalledWith('VERIFY_USER_DATA', apiResponse);
+    });
 });
 
 describe('loginStore/actions/ClearUserData', () => {
-  it('should commit to CLEAR_USER_DATA mutation', ()=>{
+  it('should commit to CLEAR_USER_DATA mutation when action is called', ()=>{
     const commit = jest.fn();
     loginStore.actions.clearUserData({commit});
     expect(commit).toHaveBeenCalledWith("CLEAR_USER_DATA");
@@ -34,7 +35,7 @@ describe('loginStore/actions/ClearUserData', () => {
 //TESTING MUTATIONS
 
 describe('loginStore/mutations/VERIFY_USER_DATA', ()=> {
-  it('should set user object with username, password, and correctLoginInfo to true', () =>{
+  it('should set user object with username, password, and correctLoginInfo to true when mutation is called', () =>{
     const state = {
       user: {},
       correctLoginInfo: null
@@ -52,7 +53,7 @@ describe('loginStore/mutations/VERIFY_USER_DATA', ()=> {
 });
 
 describe('loginStore/mutations/CLEAR_USER_DATA', ()=> {
-  it('should clear the user object and nullify correctLoginInfo', ()=> {
+  it('should clear the user object and nullify correctLoginInfo when mutation is called', ()=> {
     const state = {
       user: {
         token: '123rke4',

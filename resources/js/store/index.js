@@ -7,12 +7,12 @@ import router from '../router'
 Vue.use(Vuex);
 
 //MODULES
-import Login from './modules/login';
+import User from './modules/user';
 
 //MODULE MAP
 export default new Vuex.Store({
 	strict: process.env.NODE_ENV !== 'production',
 	modules: {
-		Login
+		User
 	}
 });
