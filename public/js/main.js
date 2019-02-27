@@ -58845,10 +58845,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/api/login.js":
-/*!***********************************!*\
-  !*** ./resources/js/api/login.js ***!
-  \***********************************/
+/***/ "./resources/js/api/user.js":
+/*!**********************************!*\
+  !*** ./resources/js/api/user.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -59178,10 +59178,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../api/login */ "./resources/js/api/login.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _api_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../../api/user */ "./resources/js/api/user.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
 
 
 
@@ -59199,13 +59211,13 @@ __webpack_require__.r(__webpack_exports__);
           switch (_context.prev = _context.next) {
             case 0:
               commit = _ref.commit;
-              return _context.abrupt("return", _api_login__WEBPACK_IMPORTED_MODULE_3__["default"].verifyUserDataAPI(payload).then(function (response) {
+              return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_7__["default"].verifyUserDataAPI(payload).then(function (response) {
                 var cookieValue = response.data.token;
                 var cookieExpirationDate = new Date();
                 cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
                 document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; ");
                 commit('VERIFY_USER_DATA', response.data);
-                _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+                _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
                   name: 'welcome'
                 });
               }).catch(function (failure) {
@@ -59229,7 +59241,7 @@ __webpack_require__.r(__webpack_exports__);
   clearUserData: function clearUserData(_ref2) {
     var commit = _ref2.commit;
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;';
-    _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+    _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
       name: 'login'
     });
     commit('CLEAR_USER_DATA');

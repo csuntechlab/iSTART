@@ -1,4 +1,4 @@
-import Login from './../../../api/login';
+import User from './../../../api/user';
 import router from './../../../router';
 import axios from 'axios';
 export default {
@@ -32,7 +32,7 @@ async verifyUserData({commit},payload) {
 	// .catch(
 	// 	failure => console.log(failure)
 	// )
-	return Login.verifyUserDataAPI(payload)
+	return User.verifyUserDataAPI(payload)
 	.then(
 		response => {
 			var cookieValue = response.data.token;
