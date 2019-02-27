@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;

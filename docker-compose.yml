@@ -1,10 +1,17 @@
-version: '3.3'
+version: '3'
+
 services:
-  istart:
+  webserver:
     container_name: iSTART
-    build:
-      context: .
+    image: csunmetalab/environment:nomi
     ports:
-      - 8080:80
+      - '8080:80'
     volumes:
-      - .:/var/www/html
+      - .:/var/www/
+  composer:
+   restart: 'no'
+   container_name: iSTART_composer
+   image: composer:latest
+   command: install
+   volumes:
+      - .:/app/
