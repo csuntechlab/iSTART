@@ -50,6 +50,7 @@ class LoginController extends Controller
             'password'=>$request->password
         ];
 
+        dd($credentials);
         $hashedKey = $this->createHashedKey();
         $token = $this->createNewToken($hashedKey);
         $userInformation = $this->authenticationUtility->authenticateUser($credentials);
