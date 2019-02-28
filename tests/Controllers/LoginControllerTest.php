@@ -25,29 +25,50 @@ class LoginControllerTest extends TestCase
      *
      */
 
+    protected $LoginController;
     protected $utility;
-    /** @test */
 
     public function setUp()
     {
         parent::setUp();
         $this->utility = Mockery::mock(AuthenticationContract::class);
+        $this->LoginController = new LoginController($this->utility);
+
     }
+    /** @test */
 
     public function eligible_user_can_log_in()
     {
-        $data = ['username' => 'steve', 'password' => ''];
-        $controller = new LoginController($this->utility);
+        $data = ['username' => 'steve@csun.edu', 'password' => ''];
+        $returnData = ['user_id'=> '0','email'=>'steve@csun.edu','affiliation'=>'faculty',
+                        'rank'=>'Lecturer','valid'=>'1',
+                        'token'=>'$2y$10$Nu3XOwBaMHnpH4D.QeVW9.SwpGd0m0Nc1pEL8iGFNDsZ1Qeqg9sJu.COvtdidfDF71HMnwi1i0LS'];
         $request = new Request($data);
-
         $this->utility
             ->shouldReceive('authenticateUser')
-            ->andReturn($data);
-
-
-
-
-        $response = $controller->authenticateUser($request);
-        $this->assertEquals($data, $this->controller->authenticateUser($request));
+            ->andReturn($returnData);
+        $response = $this->post('/loginVerification',$data);;
+        $response->assertStatus(200);
+        $response->assertJsonStructure(['user_id',
+                                        'email',
+                                        'affiliation',
+                                        'rank',
+                                        'valid',
+                                        'token']);
+        $this->assertArrayHasKey('token',$this->LoginController->authenticateUser($request));
+        $this->assertNotNull($this->LoginController->authenticateUser($request)['token']);
     }
-}//how to test if route was hit
+
+    /** @test */
+
+    public function ineligible_user_cannot_log_in()
+    {
+        $data = ['username' => 'tim@csun.edu', 'password' => '00'];
+        $returnData = ['valid' => '0'];
+        $request = new Request($data);
+        $this->utility
+            ->shouldReceive('authenticateUser')
+            ->andReturn($returnData);
+        $this->assertEquals($returnData, $this->LoginController->authenticateUser($request));
+    }
+}

@@ -25,7 +25,6 @@ class AuthenticationService implements AuthenticationContract
             //$response = [$user[0],'Valid'=>'1'];
              $user[0]['valid'] = '1';
              $response = $user[0];
-            //dd(gettype($response));
 
             return $response;
 

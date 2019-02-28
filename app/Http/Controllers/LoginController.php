@@ -50,17 +50,21 @@ class LoginController extends Controller
             'password'=>$request->password
         ];
 
-        dd($credentials);
+
+        //dd($credentials);
         $hashedKey = $this->createHashedKey();
         $token = $this->createNewToken($hashedKey);
         $userInformation = $this->authenticationUtility->authenticateUser($credentials);
+       // dd($userInformation);
+
         if($userInformation['valid']==1) {
             $userInformation['token'] = $token;
 
-            return response()->json($userInformation);
+              //return response()->json($userInformation);
+            return $userInformation;
         }else{
 
-            return response()->json($userInformation);
+            return $userInformation;
         }
 
 
