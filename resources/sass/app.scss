@@ -4,9 +4,11 @@
 // @import "../node_modules/bootstrap/scss/functions";
 
 // Global
-@import "global/variables";
-@import "global/layout";
 @import "global/helpers";
+@import "global/layout";
+@import "global/navbar";
+@import "global/variables";
+
 
 // Modules
 @import "modules/error";

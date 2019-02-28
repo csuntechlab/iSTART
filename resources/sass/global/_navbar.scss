@@ -1,0 +1,39 @@
+@import './variables';
+
+.navbar{
+    background-color: $i-light-blue;
+    color: $i-white;
+    &__dropdown{
+        height: 100vh;
+        background-color: $i-blue;
+        margin-right: -1rem;
+        margin-left: -1rem;
+        margin-top: 1rem;
+        &-item{
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding-left: 2.3rem;
+            padding-top: 0.85rem;
+            padding-bottom: 0.85rem;
+            border-top: 1px solid $i-dark-blue;
+            border-left: 1px solid $i-dark-blue;
+            border-right: 1px solid $i-dark-blue;
+            &--bottom{
+                border-bottom: 1px solid $i-dark-blue;
+            }
+        }
+    }
+
+    &__body{
+        text-align: right;
+        margin-bottom: 4px;
+        font-size: 0.85rem;
+        margin-right: 1.5px;
+        &-text{
+            margin-bottom: -0.15rem;
+        }
+    }
+
+}
+
+
