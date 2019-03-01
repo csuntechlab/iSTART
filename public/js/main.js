@@ -21781,7 +21781,7 @@ var render = function() {
               expression: "form.userCredentials"
             }
           ],
-          staticClass: "form-control",
+          staticClass: "form-control data-username",
           attrs: {
             type: "userCredentials",
             placeholder: "Enter credentials",
@@ -21816,7 +21816,12 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "password", placeholder: "Password", required: "" },
+          attrs: {
+            type: "password",
+            placeholder: "Password",
+            required: "",
+            "data-password": ""
+          },
           domProps: { value: _vm.form.password },
           on: {
             input: function($event) {

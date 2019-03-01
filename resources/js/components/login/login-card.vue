@@ -5,14 +5,14 @@
         <div class="form-group">
             <label for="userCredentials">CSUN Credentials</label>
             <small v-if="submitted && !form.userCredentials">Please enter your credentials</small>
-            <input v-model="form.userCredentials" type="userCredentials" class="form-control"
+            <input v-model="form.userCredentials" type="userCredentials" class="form-control data-username"
             placeholder="Enter credentials"
             required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <small v-if="submitted && !form.password">Please Enter your password</small>
-            <input v-model="form.password" type="password" class="form-control" placeholder="Password" required>
+            <input v-model="form.password" type="password" class="form-control" placeholder="Password" required data-password>
         </div>
         <button type="submit" @click.prevent="submitForm" class="btn btn-primary">Submit</button>
         </form>
