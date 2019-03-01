@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'ldap',
-            'model' => CSUNMetaLab\Authentication\MetaUser::class,
+            'model' => App\Models\User::class,
         ],
 
         // 'users' => [

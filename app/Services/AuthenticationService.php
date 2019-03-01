@@ -18,14 +18,9 @@ class AuthenticationService implements AuthenticationContract
 
         if(auth()->attempt($credentials)){
 
-            $user = auth()->user()->get();
-            //return json_decode($user);
-           // dd(gettype($user));
-            //dd(json_decode($user));
-            //$response = [$user[0],'Valid'=>'1'];
-             $user[0]['valid'] = '1';
-             $response = $user[0];
-
+            $user = auth()->user();
+             $user['valid'] = '1';
+            $response = ['user_id'=>$user->user_id,'valid'=>$user->valid];//change this objects
             return $response;
 
         }else{
@@ -33,6 +28,7 @@ class AuthenticationService implements AuthenticationContract
             $response = ['valid'=>'0'];
             return $response;
         }
+
     }
 
 }

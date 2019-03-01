@@ -11,13 +11,14 @@ class User extends MetaUser
 {
     use Notifiable;
 
+    public $incrementing = false;
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array primary string thatis a string eloquent
      */
     protected $fillable = [
-        'username', 'email', 'password',
+        'user_id','username', 'email', 'password',
     ];
 
     /**

@@ -40,19 +40,16 @@ class LoginControllerTest extends TestCase
     public function eligible_user_can_log_in()
     {
         $data = ['username' => 'steve@csun.edu', 'password' => ''];
-        $returnData = ['user_id'=> '0','email'=>'steve@csun.edu','affiliation'=>'faculty',
-                        'rank'=>'Lecturer','valid'=>'1',
+        $returnData = ['user_id'=> '0','valid'=>'1',
                         'token'=>'$2y$10$Nu3XOwBaMHnpH4D.QeVW9.SwpGd0m0Nc1pEL8iGFNDsZ1Qeqg9sJu.COvtdidfDF71HMnwi1i0LS'];
         $request = new Request($data);
         $this->utility
             ->shouldReceive('authenticateUser')
             ->andReturn($returnData);
+
         $response = $this->post('/loginVerification',$data);;
         $response->assertStatus(200);
         $response->assertJsonStructure(['user_id',
-                                        'email',
-                                        'affiliation',
-                                        'rank',
                                         'valid',
                                         'token']);
         $this->assertArrayHasKey('token',$this->LoginController->authenticateUser($request));
