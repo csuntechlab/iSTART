@@ -1,8 +1,6 @@
 import UserAPI from './../../../api/user';
 import router from './../../../router';
-import axios from 'axios';
 export default {
-
 async verifyUserData({commit},payload) {
 	return UserAPI.verifyUserDataAPI(payload)
 	.then(

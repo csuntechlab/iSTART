@@ -3,9 +3,11 @@
 
         <form>
         <div class="form-group">
-            <label for="email">CSUN Credentials</label>
-            <small v-if="submitted && !form.email">Please enter your credentials</small>
-            <input v-model="form.email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" required>
+            <label for="userCredentials">CSUN Credentials</label>
+            <small v-if="submitted && !form.userCredentials">Please enter your credentials</small>
+            <input v-model="form.userCredentials" type="userCredentials" class="form-control"
+            placeholder="Enter credentials"
+            required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
@@ -24,11 +26,10 @@ export default {
   data () {
     return {
       form: {
-        email: '',
+        userCredentials: '',
         password: ''
       },
-      submitted: false,
-      validEmail: true
+      submitted: false
     }
   },
   methods: {
@@ -42,7 +43,7 @@ export default {
       }
     },
     checkFormInputs () {
-      if (this.form.email && this.form.password) {
+      if (this.form.userCredentials && this.form.password) {
         return true
       } else {
         return false
