@@ -10,4 +10,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .php_cs.cache
-.idea/*
+.idea
+.DS_Store
