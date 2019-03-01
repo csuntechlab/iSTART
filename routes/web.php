@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('loginVerification', 'LoginController@authenticateUser');
+Route::get('logout','LoginController@logout');

@@ -40,7 +40,7 @@ class LoginControllerTest extends TestCase
     public function eligible_user_can_log_in()
     {
         $data = ['username' => 'steve@csun.edu', 'password' => ''];
-        $returnData = ['user_id'=> '0','valid'=>'1',
+        $returnData = ['user_id'=> 'members:100010526','valid'=>'1',
                         'token'=>'$2y$10$Nu3XOwBaMHnpH4D.QeVW9.SwpGd0m0Nc1pEL8iGFNDsZ1Qeqg9sJu.COvtdidfDF71HMnwi1i0LS'];
         $request = new Request($data);
         $this->utility
@@ -68,4 +68,6 @@ class LoginControllerTest extends TestCase
             ->andReturn($returnData);
         $this->assertEquals($returnData, $this->LoginController->authenticateUser($request));
     }
+
+
 }
