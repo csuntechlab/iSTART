@@ -1,4 +1,4 @@
-import User from './../../../api/user';
+import UserAPI from './../../../api/user';
 import router from './../../../router';
 import axios from 'axios';
 export default {
@@ -32,10 +32,10 @@ async verifyUserData({commit},payload) {
 	// .catch(
 	// 	failure => console.log(failure)
 	// )
-	return User.verifyUserDataAPI(payload)
+	return UserAPI.verifyUserDataAPI(payload)
 	.then(
 		response => {
-			var cookieValue = response.data.token;
+			var cookieValue = response.token;
 			var cookieExpirationDate = new Date();
 			cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
 			document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;

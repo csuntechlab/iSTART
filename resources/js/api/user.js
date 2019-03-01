@@ -18,7 +18,9 @@
 
 export default {
   verifyUserDataAPI(payload) {
-    console.log("hello");
-    return axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload);
+    return axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload)
+  },
+  getVerifiedUser() {
+
   }
 }

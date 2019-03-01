@@ -58872,9 +58872,9 @@ __webpack_require__.r(__webpack_exports__);
 // }
 /* harmony default export */ __webpack_exports__["default"] = ({
   verifyUserDataAPI: function verifyUserDataAPI(payload) {
-    console.log("hello");
     return axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload);
-  }
+  },
+  getVerifiedUser: function getVerifiedUser() {}
 });
 
 /***/ }),
@@ -59212,7 +59212,7 @@ __webpack_require__.r(__webpack_exports__);
             case 0:
               commit = _ref.commit;
               return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_7__["default"].verifyUserDataAPI(payload).then(function (response) {
-                var cookieValue = response.data.token;
+                var cookieValue = response.token;
                 var cookieExpirationDate = new Date();
                 cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
                 document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; ");
