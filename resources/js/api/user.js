@@ -20,7 +20,4 @@ export default {
   verifyUserDataAPI(payload) {
     return axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload)
   },
-  getVerifiedUser() {
-
-  }
 }

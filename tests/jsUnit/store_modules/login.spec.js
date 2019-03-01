@@ -1,15 +1,13 @@
 import userStore from './../../../resources/js/store/modules/user/index';
 import userAPI from './../../../resources/js/api/user';
-// jest.mock('axios');
 jest.mock('./../../../resources/js/api/user');
 
 
 //TESTING ACTIONS  
 describe('userStore/actions/VerifyUserData', () => {
-  it('should commit to VERIFY_USER_DATA mutation when action is called', async() => {
-    expect.assertions(1);
+  it('should commit to VERIFY_USER_DATA mutation when action is called', async () => {
     const userInfo = {
-      userCredentials: 'ed',
+      userCredentials: 'eddy',
       password: 'password'
     }
     const apiResponse = {
@@ -20,9 +18,8 @@ describe('userStore/actions/VerifyUserData', () => {
       return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
     })
     var commit = jest.fn()
-    userStore.actions.verifyUserData({commit}, userInfo);
-    // console.log(apiResponse);
-    expect(commit).toBeCalledWith('VERIFY_USER_DATA', apiResponse);
+    await userStore.actions.verifyUserData({commit}, userInfo);
+    expect(commit).toHaveBeenCalled();
   });
 });
 
