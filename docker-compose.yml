@@ -1,17 +1,18 @@
-version: '3'
-
+version: '3.7'
 services:
-  webserver:
+  istart:
     container_name: iSTART
-    image: csunmetalab/environment:nomi
+    build:
+      context: .
+      target: base
     ports:
-      - '8080:80'
+      - 8080:80
     volumes:
-      - .:/var/www/
+      - .:/var/www/html  
   composer:
-   restart: 'no'
-   container_name: iSTART_composer
-   image: composer:latest
-   command: install
-   volumes:
-     - .:/app/
+    restart: 'no'
+    container_name: helix_composer
+    image: composer:latest
+    command: install --ignore-platform-reqs
+    volumes:
+      - .:/app/
