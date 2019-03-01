@@ -20361,7 +20361,9 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v(_vm._s(_vm.msg))]),
     _vm._v(" "),
-    _c("p", [_vm._v("\n    THE TIME TO END YOUR ADDICTION IS NOW!\n  ")]),
+    _c("p", { attrs: { "data-test": "lol" } }, [
+      _vm._v("\n    THE TIME TO END YOUR ADDICTION IS NOW!\n  ")
+    ]),
     _vm._v(" "),
     _c("h3", [_vm._v("LOGIN")]),
     _vm._v(" "),
@@ -20398,14 +20400,55 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "navbar__body" }, [
-      _c("p", { staticClass: "navbar__body-text" }, [_vm._v("Research ID")]),
+      _c(
+        "p",
+        {
+          staticClass: "navbar__body-text",
+          attrs: { "data-test": "navbar-title" }
+        },
+        [_vm._v("Research ID")]
+      ),
       _vm._v(" "),
-      _c("p", { staticClass: "navbar__body-text" }, [
-        _vm._v(" " + _vm._s(_vm.userID))
-      ])
+      _c(
+        "p",
+        {
+          staticClass: "navbar__body-text",
+          attrs: { "data-test": "navbar-user-id" }
+        },
+        [_vm._v(" " + _vm._s(_vm.userID))]
+      )
     ]),
     _vm._v(" "),
-    _vm._m(1)
+    _c(
+      "div",
+      {
+        staticClass: "collapse navbar-collapse navbar__dropdown",
+        attrs: { id: "navbarTogglerDemo01" }
+      },
+      [
+        _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "navbar__dropdown-item" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "nav-link active",
+                  attrs: { to: "/schedule", href: "#" }
+                },
+                [_vm._v("SCHEDULE")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(2)
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -20433,39 +20476,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "navbar__dropdown-item active" }, [
+      _c("a", { staticClass: "nav-link active", attrs: { href: "#" } }, [
+        _vm._v("MODULES")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
-      "div",
-      {
-        staticClass: "collapse navbar-collapse navbar__dropdown",
-        attrs: { id: "navbarTogglerDemo01" }
-      },
+      "li",
+      { staticClass: "navbar__dropdown-item navbar__dropdown-item--bottom" },
       [
-        _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
-          _c("li", { staticClass: "navbar__dropdown-item active" }, [
-            _c("a", { staticClass: "nav-link active", attrs: { href: "#" } }, [
-              _vm._v("MODULES")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "navbar__dropdown-item" }, [
-            _c("a", { staticClass: "nav-link active", attrs: { href: "#" } }, [
-              _vm._v("SCHEDULE")
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass: "navbar__dropdown-item navbar__dropdown-item--bottom"
-            },
-            [
-              _c(
-                "a",
-                { staticClass: "nav-link active", attrs: { href: "#" } },
-                [_vm._v("LOGOUT")]
-              )
-            ]
-          )
+        _c("a", { staticClass: "nav-link active", attrs: { href: "#" } }, [
+          _vm._v("LOGOUT")
         ])
       ]
     )
@@ -57192,10 +57218,22 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
 //  LOGIN STATE
 /* harmony default export */ __webpack_exports__["default"] = ({
   user: {
-    userID: 'JM939'
+    userID: 'JJM939'
   },
   correctLoginInfo: null
 });
