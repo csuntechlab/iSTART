@@ -67,8 +67,7 @@ class LoginController extends Controller
 
     public function logout()
     {
-       // auth()->logout();
-        dd(auth()->user());
-        return auth()->user();
+       auth()->logout();
+
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Controllers;
+namespace Tests\ControllerTests;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -47,11 +47,8 @@ class LoginControllerTest extends TestCase
             ->shouldReceive('authenticateUser')
             ->andReturn($returnData);
 
-        $response = $this->post('/loginVerification',$data);;
-        $response->assertStatus(200);
-        $response->assertJsonStructure(['user_id',
-                                        'valid',
-                                        'token']);
+        $this->assertArrayHasKey('user_id',$this->LoginController->authenticateUser($request));
+        $this->assertArrayHasKey('valid',$this->LoginController->authenticateUser($request));
         $this->assertArrayHasKey('token',$this->LoginController->authenticateUser($request));
         $this->assertNotNull($this->LoginController->authenticateUser($request)['token']);
     }

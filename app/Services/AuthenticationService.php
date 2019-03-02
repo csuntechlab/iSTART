@@ -4,6 +4,7 @@ namespace App\Services;
 
 
 use App\Contracts\AuthenticationContract;
+use Illuminate\Support\Facades\Auth;
 
 
 class AuthenticationService implements AuthenticationContract
@@ -15,7 +16,7 @@ class AuthenticationService implements AuthenticationContract
 
             $user = auth()->user();
              $user['valid'] = '1';
-            $response = ['user_id'=>$user->user_id,'valid'=>$user->valid];
+            $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid']];
             return $response;
 
         }else{
