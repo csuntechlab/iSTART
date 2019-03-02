@@ -10,17 +10,9 @@ services:
     volumes:
       - .:/var/www/html  
   composer:
-<<<<<<< HEAD
     restart: 'no'
     container_name: iSTART_composer
     image: composer:latest
     command: install --ignore-platform-reqs
     volumes:
-=======
-   restart: 'no'
-   container_name: iSTART_composer
-   image: composer:latest
-   command: install
-   volumes:
->>>>>>> 9f5cb3e... created tests and fixed how I was naming everything
       - .:/app/
