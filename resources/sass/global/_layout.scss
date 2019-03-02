@@ -1,0 +1,14 @@
+/*
+	* What should I put in this file?
+	* This file should only contain abstract layouts and overrides in a global scope
+	* i.e. body, #app, .panel, etc.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
