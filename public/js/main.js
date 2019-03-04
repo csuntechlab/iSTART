@@ -2004,19 +2004,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-
-
-
-
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 //
 //
@@ -2045,13 +2033,13 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        userCredentials: '',
+        username: '',
         password: ''
       },
       submitted: false
     };
   },
-  methods: Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapActions"])(['verifyUserData']), {
+  methods: Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(['verifyUserData']), {
     submitForm: function submitForm() {
       this.submitted = true;
 
@@ -2060,13 +2048,14 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     checkFormInputs: function checkFormInputs() {
-      if (this.form.userCredentials && this.form.password) {
+      if (this.form.username) {
         return true;
       } else {
         return false;
       }
     }
-  })
+  }),
+  computed: Object(C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["correctLoginInfo"]))
 });
 
 /***/ }),
@@ -21763,12 +21752,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "loginCardWrapper" }, [
     _c("form", [
+      _vm.correctLoginInfo === false
+        ? _c("p", { staticClass: "form-required m-0" }, [
+            _vm._v(
+              "Login failed. Make sure you have the correct access rights."
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _c("div", { staticClass: "form-group" }, [
-        _c("label", { attrs: { for: "userCredentials" } }, [
+        _c("label", { attrs: { for: "username" } }, [
           _vm._v("CSUN Credentials")
         ]),
         _vm._v(" "),
-        _vm.submitted && !_vm.form.userCredentials
+        _vm.submitted && !_vm.form.username
           ? _c("p", { staticClass: "form-required m-0" }, [
               _vm._v("Please enter your credentials")
             ])
@@ -21779,23 +21776,23 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.form.userCredentials,
-              expression: "form.userCredentials"
+              value: _vm.form.username,
+              expression: "form.username"
             }
           ],
           staticClass: "form-control",
           attrs: {
-            type: "userCredentials",
+            type: "username",
             placeholder: "Enter credentials",
             required: ""
           },
-          domProps: { value: _vm.form.userCredentials },
+          domProps: { value: _vm.form.username },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.$set(_vm.form, "userCredentials", $event.target.value)
+              _vm.$set(_vm.form, "username", $event.target.value)
             }
           }
         })
@@ -21803,12 +21800,6 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "form-group" }, [
         _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
-        _vm._v(" "),
-        _vm.submitted && !_vm.form.password
-          ? _c("p", { staticClass: "form-required m-0" }, [
-              _vm._v("Please Enter your password")
-            ])
-          : _vm._e(),
         _vm._v(" "),
         _c("input", {
           directives: [
@@ -58848,25 +58839,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// const verifyUserDataAPI = (payload, success, error) => {
-//   window.axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload)
-//   .then(
-//     response => {
-//       success(response.data);
-//     }
-//   ).catch(
-//     failure => { 
-//       error(failure)
-//     }
-//   )
-// }
-// const verifyUserDataAPI = (payload) => {
-//   console.log("hello");
-//   return window.axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload);
-// }
 /* harmony default export */ __webpack_exports__["default"] = ({
   verifyUserDataAPI: function verifyUserDataAPI(payload) {
-    return axios.post('http://www.mocky.io/v2/5c734b2f330000e42176029b', payload);
+    return axios.post('loginVerification', payload);
   }
 });
 
@@ -59159,8 +59134,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var C_Users_Cano_Desktop_meta_lab_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../api/user */ "./resources/js/api/user.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _api_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../../api/user */ "./resources/js/api/user.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
+
+
+
+
 
 
 
@@ -59177,17 +59164,21 @@ __webpack_require__.r(__webpack_exports__);
           switch (_context.prev = _context.next) {
             case 0:
               commit = _ref.commit;
-              return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_3__["default"].verifyUserDataAPI(payload).then(function (response) {
-                var cookieValue = response.token;
-                var cookieExpirationDate = new Date();
-                cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
-                document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; ");
-                commit('VERIFY_USER_DATA', response.data);
-                _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
-                  name: 'welcome'
-                });
+              return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_7__["default"].verifyUserDataAPI(payload).then(function (response) {
+                if (response.data.valid === "1") {
+                  var cookieValue = response.data.token;
+                  var cookieExpirationDate = new Date();
+                  cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
+                  document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), "; ");
+                  commit('VERIFY_USER_DATA', response.data);
+                  _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
+                    name: 'welcome'
+                  });
+                } else {
+                  commit('VERIFY_USER_DATA', response.data);
+                }
               }).catch(function (failure) {
-                return console.log(failure);
+                return console.error(failure);
               }));
 
             case 2:
@@ -59207,7 +59198,7 @@ __webpack_require__.r(__webpack_exports__);
   clearUserData: function clearUserData(_ref2) {
     var commit = _ref2.commit;
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;';
-    _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+    _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
       name: 'login'
     });
     commit('CLEAR_USER_DATA');
@@ -59231,7 +59222,7 @@ __webpack_require__.r(__webpack_exports__);
     return state.user;
   },
   correctLoginInfo: function correctLoginInfo(state) {
-    return state.user;
+    return state.correctLoginInfo;
   }
 });
 
@@ -59274,8 +59265,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   VERIFY_USER_DATA: function VERIFY_USER_DATA(state, payload) {
-    state.user = payload;
-    state.correctLoginInfo = true;
+    if (payload.valid === "1") {
+      state.user = payload;
+      state.correctLoginInfo = true;
+    } else {
+      state.correctLoginInfo = false;
+    }
   },
   CLEAR_USER_DATA: function CLEAR_USER_DATA(state) {
     state.user = {};

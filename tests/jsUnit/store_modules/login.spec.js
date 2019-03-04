@@ -7,12 +7,15 @@ jest.mock('./../../../resources/js/api/user');
 describe('userStore/actions/VerifyUserData', () => {
   it('should commit to VERIFY_USER_DATA mutation when action is called', async () => {
     const userInfo = {
-      userCredentials: 'eddy',
-      password: 'password'
+      userCredentials: 'steve@csun.edu',
+      
     }
     const apiResponse = {
-      token: '1234',
-      username: 'test123'
+      data: {
+        user_id: "studentMember",
+        valid: "1",
+        token: "123rke4"
+      }
     } 
     userAPI.verifyUserDataAPI.mockImplementation(calledWith => {
       return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
@@ -39,12 +42,14 @@ describe('userStore/mutations/VERIFY_USER_DATA', ()=> {
       user: {},
       correctLoginInfo: null
     }
-    userStore.mutations.VERIFY_USER_DATA(state, {token: '123rke4', username: 'csunStudent123'});
+    const payload = {
+      "user_id": "studentMember",
+      "valid": "1",
+      "token": "123rke4"
+  }
+    userStore.mutations.VERIFY_USER_DATA(state, payload);
     expect(state).toEqual({
-      user: {
-        token: '123rke4',
-        username: 'csunStudent123'
-      },
+      user: payload,
       correctLoginInfo: true
     }
     )

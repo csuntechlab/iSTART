@@ -2,5 +2,5 @@
 
 export default {
   user: state => state.user,
-  correctLoginInfo: state => state.user
+  correctLoginInfo: state => state.correctLoginInfo
 }

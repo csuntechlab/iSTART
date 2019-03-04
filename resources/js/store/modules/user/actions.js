@@ -5,16 +5,20 @@ async verifyUserData({commit},payload) {
 	return UserAPI.verifyUserDataAPI(payload)
 	.then(
 		response => {
-			var cookieValue = response.token;
-			var cookieExpirationDate = new Date();
-			cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
-			document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;
-			commit('VERIFY_USER_DATA', response.data);
-			router.push({name:'welcome'});
-
+			if(response.data.valid==="1"){
+				var cookieValue = response.data.token;
+				var cookieExpirationDate = new Date();
+				cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() +1);
+				document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()}; `;
+				commit('VERIFY_USER_DATA', response.data);
+				router.push({name:'welcome'});
+			}
+			else {
+				commit('VERIFY_USER_DATA', response.data);
+			}			
 		})
 		.catch(
-			failure => console.log(failure)
+			failure => console.error(failure)
 		)
 	},
 	clearUserData({commit}) {

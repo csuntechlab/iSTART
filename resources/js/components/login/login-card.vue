@@ -1,17 +1,17 @@
 <template>
     <div class="loginCardWrapper">
-
         <form>
+        <p v-if="correctLoginInfo===false" class="form-required m-0">Login failed. Make sure you have the correct access rights.</p>
         <div class="form-group">
-            <label for="userCredentials">CSUN Credentials</label>
-            <p v-if="submitted && !form.userCredentials" class="form-required m-0">Please enter your credentials</p>
-            <input v-model="form.userCredentials" type="userCredentials" class="form-control"
+            <label for="username">CSUN Credentials</label>
+            <p v-if="submitted && !form.username" class="form-required m-0">Please enter your credentials</p>
+            <input v-model="form.username" type="username" class="form-control"
             placeholder="Enter credentials"
             required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <p v-if="submitted && !form.password" class="form-required m-0">Please Enter your password</p>
+            <!-- <p v-if="submitted && !form.password" class="form-required m-0">Please Enter your password</p> -->
             <input v-model="form.password" type="password" class="form-control" placeholder="Password" required>
         </div>
         <button type="submit" @click.prevent="submitForm" class="btn btn-primary">Submit</button>
@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'login-card',
   data () {
     return {
       form: {
-        userCredentials: '',
+        username: '',
         password: ''
       },
       submitted: false
@@ -43,12 +43,17 @@ export default {
       }
     },
     checkFormInputs () {
-      if (this.form.userCredentials && this.form.password) {
+      if (this.form.username) {
         return true
       } else {
         return false
       }
     }
+  },
+  computed: {
+    ...mapGetters([
+      'correctLoginInfo'
+    ])
   }
 }
 </script>
