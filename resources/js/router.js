@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
+import Error from './views/Error.vue'
 
 Vue.use(Router)
 
@@ -13,11 +14,13 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      meta: { title: 'iSTART' },
       component: Home
     },
     {
       path: '/about',
       name: 'about',
+      meta: { title: 'iSTART - About' },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -30,6 +33,11 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: ComparisonGroup
+    },
+    {
+      path: '*',
+      name: 'Error',
+      component: Error
     }
   ]
 })

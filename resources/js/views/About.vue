@@ -27,12 +27,14 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
+
 export default {
-  name: 'About'
+  name: 'About',
+  mixins: [changeRouteTitle]
 }
 </script>
