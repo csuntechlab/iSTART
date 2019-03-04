@@ -51,11 +51,5 @@ export default new Router({
       meta: { title: 'iSTART - Intervention' },
       component: InterventionGroup
     },
-    {
-      path: '*',
-      name: 'Error',
-      component: Error
-    }
-      
   ]
 })

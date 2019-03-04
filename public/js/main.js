@@ -59298,10 +59298,6 @@ vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       title: 'iSTART - Intervention'
     },
     component: _views_InterventionGroup_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
-  }, {
-    path: '*',
-    name: 'Error',
-    component: _views_Error_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
   }]
 }));
 
