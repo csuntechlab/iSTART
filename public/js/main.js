@@ -59024,14 +59024,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
 /* harmony import */ var _registerServiceWorker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./registerServiceWorker */ "./resources/js/registerServiceWorker.js");
-/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../sass/app.scss */ "./resources/sass/app.scss");
+/* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../sass/app.scss */ "./resources/sass/app.scss");
 /* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_sass_app_scss__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
-
-
-__webpack_require__(/*! ./bootstrap.js */ "./resources/js/bootstrap.js");
 
 
 
@@ -59048,6 +59045,8 @@ new vue__WEBPACK_IMPORTED_MODULE_4___default.a({
     return h(_App_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
   }
 }).$mount('#app');
+
+__webpack_require__(/*! ./bootstrap.js */ "./resources/js/bootstrap.js");
 
 /***/ }),
 
