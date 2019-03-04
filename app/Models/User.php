@@ -15,10 +15,10 @@ class User extends MetaUser
     /**
      * The attributes that are mass assignable.
      *
-     * @var array primary string thatis a string eloquent
+     * @var array primary string that is a string eloquent
      */
     protected $fillable = [
-        'user_id','username', 'email', 'password',
+        'user_id', 'username', 'email', 'password',
     ];
 
     /**
