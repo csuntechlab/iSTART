@@ -20,3 +20,11 @@
   font-size: 4rem;
   color: $istartBlue;
 }
+
+.form-required { 
+  padding: .4rem 0;
+  clear: both;
+  color: red;
+  font-weight: bold;
+  visibility: visible;
+}

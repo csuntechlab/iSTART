@@ -21769,7 +21769,9 @@ var render = function() {
         ]),
         _vm._v(" "),
         _vm.submitted && !_vm.form.userCredentials
-          ? _c("small", [_vm._v("Please enter your credentials")])
+          ? _c("p", { staticClass: "form-required m-0" }, [
+              _vm._v("Please enter your credentials")
+            ])
           : _vm._e(),
         _vm._v(" "),
         _c("input", {
@@ -21781,7 +21783,7 @@ var render = function() {
               expression: "form.userCredentials"
             }
           ],
-          staticClass: "form-control data-username",
+          staticClass: "form-control",
           attrs: {
             type: "userCredentials",
             placeholder: "Enter credentials",
@@ -21803,7 +21805,9 @@ var render = function() {
         _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
         _vm._v(" "),
         _vm.submitted && !_vm.form.password
-          ? _c("small", [_vm._v("Please Enter your password")])
+          ? _c("p", { staticClass: "form-required m-0" }, [
+              _vm._v("Please Enter your password")
+            ])
           : _vm._e(),
         _vm._v(" "),
         _c("input", {
@@ -21816,12 +21820,7 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: {
-            type: "password",
-            placeholder: "Password",
-            required: "",
-            "data-password": ""
-          },
+          attrs: { type: "password", placeholder: "Password", required: "" },
           domProps: { value: _vm.form.password },
           on: {
             input: function($event) {

@@ -11767,3 +11767,11 @@ a.text-dark:focus {
   color: #2699FB;
 }
 
+.form-required {
+  padding: 0.4rem 0;
+  clear: both;
+  color: red;
+  font-weight: bold;
+  visibility: visible;
+}
+
