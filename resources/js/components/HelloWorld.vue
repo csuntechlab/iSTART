@@ -9,6 +9,8 @@
         <div class="alert alert-primary" role="alert">
       A simple primary alert—check it out!
     </div>
+    <router-link to="/about">About</router-link>
+
   </div>
 </template>
 

@@ -11713,17 +11713,6 @@ a.text-dark:focus {
   border-bottom: 1px solid #106DBC;
 }
 
-.navbar__body {
-  text-align: right;
-  margin-bottom: 4px;
-  font-size: 0.85rem;
-  margin-right: 1.5px;
-}
-
-.navbar__body-text {
-  margin-bottom: -0.15rem;
-}
-
 /*
 	* What should I put in this file?
 	* This file should only contain sass variables

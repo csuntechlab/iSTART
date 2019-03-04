@@ -3,10 +3,6 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
-    <div class="navbar__body">
-      <p class="navbar__body-text">Research ID</p>
-      <p data-test="navbar-user-id" class="navbar__body-text"> {{ userID }}</p>
-    </div>
     <div class="collapse navbar-collapse navbar__dropdown" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-lg-0">
         <li class="navbar__dropdown-item active">
