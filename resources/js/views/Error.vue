@@ -6,20 +6,14 @@
     <div class="error-message">
       <h2 class="transition-350ms">You have landed in unkown territory.</h2>
     </div>
-    <div class="error-return pointer" @click="returnHome">
-      <h3 class="transition-350ms">Click here to return home!</h3>
-    </div>
+    <router-link class="error-return pointer" tag="div" to="/">
+      <button class="transition-350ms"><h3>Click here to return home!</h3></button>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Error',
-
-  methods: {
-    returnHome () {
-      this.$router.push({ path: '/' })
-    }
-  }
+  name: 'Error'
 }
 </script>

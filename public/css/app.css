@@ -11707,15 +11707,29 @@ a.text-dark:focus {
   font-size: 2rem;
 }
 
+.error-return {
+  margin-top: 1rem;
+}
+
 .error-return > * {
+  background: none;
+  border: none;
   display: inline-block;
   outline: 2px solid #191919;
   padding: 0.5rem;
-  margin-top: 1rem;
 }
 
 .error-return:hover > * {
   background-color: #d7d7d7;
+}
+
+.error-return * {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.error-return button {
+  margin: 0;
 }
 
 @media only screen and (max-width: 767px) {
@@ -11727,16 +11741,8 @@ a.text-dark:focus {
     font-size: 1.25rem;
   }
 
-  .error-return > * {
+  .error-return * {
     font-size: 1rem;
-    display: inline-block;
-    outline: 2px solid #191919;
-    padding: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .error-return:hover > * {
-    background-color: #d7d7d7;
   }
 }
 
