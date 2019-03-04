@@ -14,4 +14,4 @@ services:
    image: composer:latest
    command: install
    volumes:
-     - .:/app/
+      - .:/app/
