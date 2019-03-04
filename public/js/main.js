@@ -20456,72 +20456,91 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("nav", { staticClass: "navbar navbar-dark" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "collapse navbar-collapse navbar__dropdown",
+        attrs: { id: "navbarTogglerDemo01" }
+      },
+      [
+        _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
+          _c(
+            "li",
+            { staticClass: "navbar__dropdown-item active" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "nav-link active",
+                  attrs: { to: "#", href: "#" }
+                },
+                [_vm._v("MODULES")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            { staticClass: "navbar__dropdown-item" },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "nav-link active",
+                  attrs: { to: "#", href: "#" }
+                },
+                [_vm._v("SCHEDULE")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "li",
+            {
+              staticClass: "navbar__dropdown-item navbar__dropdown-item--bottom"
+            },
+            [
+              _c(
+                "router-link",
+                {
+                  staticClass: "nav-link active",
+                  attrs: { to: "#", href: "#" }
+                },
+                [_vm._v("LOGOUT")]
+              )
+            ],
+            1
+          )
+        ])
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("nav", { staticClass: "navbar navbar-dark" }, [
-      _c(
-        "button",
-        {
-          staticClass: "navbar-toggler",
-          attrs: {
-            type: "button",
-            "data-toggle": "collapse",
-            "data-target": "#navbarTogglerDemo01",
-            "aria-controls": "navbarTogglerDemo01",
-            "aria-expanded": "false",
-            "aria-label": "Toggle navigation"
-          }
-        },
-        [_c("span", { staticClass: "navbar-toggler-icon " })]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "collapse navbar-collapse navbar__dropdown",
-          attrs: { id: "navbarTogglerDemo01" }
-        },
-        [
-          _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
-            _c("li", { staticClass: "navbar__dropdown-item active" }, [
-              _c(
-                "a",
-                { staticClass: "nav-link active", attrs: { href: "#" } },
-                [_vm._v("MODULES")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "navbar__dropdown-item" }, [
-              _c(
-                "a",
-                { staticClass: "nav-link active", attrs: { href: "#" } },
-                [_vm._v("SCHEDULE")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "li",
-              {
-                staticClass:
-                  "navbar__dropdown-item navbar__dropdown-item--bottom"
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "nav-link active", attrs: { href: "#" } },
-                  [_vm._v("LOGOUT")]
-                )
-              ]
-            )
-          ])
-        ]
-      )
-    ])
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarTogglerDemo01",
+          "aria-controls": "navbarTogglerDemo01",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon " })]
+    )
   }
 ]
 render._withStripped = true

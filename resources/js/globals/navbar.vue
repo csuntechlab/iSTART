@@ -6,13 +6,13 @@
     <div class="collapse navbar-collapse navbar__dropdown" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-lg-0">
         <li class="navbar__dropdown-item active">
-          <a class="nav-link active" href="#">MODULES</a>
+          <router-link to="#" class="nav-link active" href="#">MODULES</router-link>
         </li>
         <li class="navbar__dropdown-item">
-          <a class="nav-link active" href="#">SCHEDULE</a>
+          <router-link to="#" class="nav-link active" href="#">SCHEDULE</router-link>
         </li>
         <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
-          <a class="nav-link active" href="#">LOGOUT</a>
+          <router-link to="#" class="nav-link active" href="#">LOGOUT</router-link>
         </li>
       </ul>
     </div>
