@@ -1,6 +1,6 @@
-import navbar from '../../../resources/js/globals/navbar'
+import navbar from './../../../resources/js/globals/navbar'
 import Vuex from 'vuex'
-import User from '../../../resources/js/store/modules/user'
+import User from './../../../resources/js/store/modules/user'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 const localVue = createLocalVue()
@@ -19,7 +19,7 @@ describe('Navbar.vue', () => {
     store = new Vuex.Store({
       modules: {
         User: {
-          state: User.state
+          state: User.state  
         }
       }
     })

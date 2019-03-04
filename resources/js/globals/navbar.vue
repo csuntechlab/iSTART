@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="navbar__body">
-      <p data-test="navbar-title" class="navbar__body-text">Research ID</p>
+      <p class="navbar__body-text">Research ID</p>
       <p data-test="navbar-user-id" class="navbar__body-text"> {{ userID }}</p>
     </div>
     <div class="collapse navbar-collapse navbar__dropdown" id="navbarTogglerDemo01">
@@ -13,7 +13,7 @@
           <a class="nav-link active" href="#">MODULES</a>
         </li>
         <li class="navbar__dropdown-item">
-          <router-link to="/schedule" class="nav-link active" href="#">SCHEDULE</router-link>
+          <a class="nav-link active" href="#">SCHEDULE</a>
         </li>
         <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
           <a class="nav-link active" href="#">LOGOUT</a>

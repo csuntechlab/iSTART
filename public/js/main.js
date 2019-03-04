@@ -20361,9 +20361,7 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v(_vm._s(_vm.msg))]),
     _vm._v(" "),
-    _c("p", { attrs: { "data-test": "lol" } }, [
-      _vm._v("\n    THE TIME TO END YOUR ADDICTION IS NOW!\n  ")
-    ]),
+    _c("p", [_vm._v("\n    THE TIME TO END YOUR ADDICTION IS NOW!\n  ")]),
     _vm._v(" "),
     _c("h3", [_vm._v("LOGIN")]),
     _vm._v(" "),
@@ -20400,14 +20398,7 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "navbar__body" }, [
-      _c(
-        "p",
-        {
-          staticClass: "navbar__body-text",
-          attrs: { "data-test": "navbar-title" }
-        },
-        [_vm._v("Research ID")]
-      ),
+      _c("p", { staticClass: "navbar__body-text" }, [_vm._v("Research ID")]),
       _vm._v(" "),
       _c(
         "p",
@@ -20437,7 +20428,7 @@ var render = function() {
                 "router-link",
                 {
                   staticClass: "nav-link active",
-                  attrs: { to: "/schedule", href: "#" }
+                  attrs: { to: "/schedule", "h\ref": "#" }
                 },
                 [_vm._v("SCHEDULE")]
               )
