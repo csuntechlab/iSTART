@@ -2,21 +2,23 @@
 
 namespace App\Models;
 
+use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends MetaUser
 {
     use Notifiable;
 
+    public $incrementing = false;
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array primary string that is a string eloquent
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'user_id', 'username', 'email', 'password',
     ];
 
     /**
