@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
 
+        App\Providers\AuthenticationServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -178,6 +179,9 @@ return [
          * Custom Service Providers
          */
         App\Providers\UserRoleServiceProvider::class,
+
+        CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
+
 
     ],
 
