@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
 Route::post('loginVerification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
