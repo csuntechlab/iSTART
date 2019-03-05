@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\UserResearch;
 use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -29,4 +30,9 @@ class User extends MetaUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function passUserIdToUserRearchModel(){
+        return $this->hasOne('user_id', 'research_id');
+    }
+
 }
