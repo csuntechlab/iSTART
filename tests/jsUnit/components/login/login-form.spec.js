@@ -1,11 +1,11 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import loginForm from './../../../../resources/js/components/login/login-form.vue';
+import login from './../../../../resources/js/views/login.vue';
 import Vuex from 'vuex';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
-describe('login-form.vue', () => {
+describe('login.vue', () => {
   const store = new Vuex.Store({
     modules: {
       User: {
@@ -16,8 +16,7 @@ describe('login-form.vue', () => {
     }
   });
   it('should receive user input when user types in form', ()=> {
-  
-    const wrapper = shallowMount(loginForm, {store,localVue});
+    const wrapper = shallowMount(login, {store,localVue});
     const userCredentials = "gj2210";
     const inputArray = wrapper.findAll(".form-control");
     inputArray.at(0).setValue(userCredentials);
