@@ -19,13 +19,13 @@ export default new Router({
       component: Error
     },
     {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: Login,
       meta: {title: 'iSTART | login'}
     },
     {
-      path: '/welcome',
+      path: '/',
       name: 'welcome',
       component: Welcome,
       meta: { title: 'iSTART' },

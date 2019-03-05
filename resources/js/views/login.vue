@@ -1,13 +1,13 @@
 <template>
-    <div class="container">
-        <h1 class="text-center login-title">iSTART</h1>
+    <div class="container login">
+        <h1 class="login__title">iSTART</h1>
         <login-card></login-card>
         </div>
 
 </template>
 
 <script>
-import loginCard from './../components/login/login-card.vue'
+import loginCard from './../components/login/login-form.vue'
 export default {
   name: 'login',
   data () {
