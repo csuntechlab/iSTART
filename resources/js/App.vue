@@ -5,11 +5,6 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      loadingCheck: false
-    }
-  },
   methods: {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
