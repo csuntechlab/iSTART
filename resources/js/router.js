@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from './views/login.vue'
+import Login from './views/Login.vue'
 import Welcome from './views/welcome.vue'
 import ControlGroup from './views/ControlGroup.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
@@ -22,13 +22,13 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login,
-      meta: {title: 'iSTART | login'}
+      meta: { title: 'iSTART | login' }
     },
     {
       path: '/',
       name: 'welcome',
       component: Welcome,
-      meta: { title: 'iSTART' },
+      meta: { title: 'iSTART' }
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -50,6 +50,6 @@ export default new Router({
       name: 'InterventionGroup',
       meta: { title: 'iSTART - Intervention' },
       component: InterventionGroup
-    },
+    }
   ]
 })
