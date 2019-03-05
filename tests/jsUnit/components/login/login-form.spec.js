@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-describe('login.vue', () => {
+describe('Login.vue', () => {
   const store = new Vuex.Store({
     modules: {
       User: {
