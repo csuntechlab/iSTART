@@ -31,8 +31,8 @@ class User extends MetaUser
         'password', 'remember_token',
     ];
 
-    public function passUserIdToUserRearchModel(){
-        return $this->hasOne('user_id', 'research_id');
+    public function passUserIdToUserResearch(){
+        return $this->hasOne('App\Models\UserResearch', 'user_id');
     }
 
 }
