@@ -10,6 +10,8 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "commit": "npm run production; git add .; printf 'Enter a commit message: '; read -r message; git commit -m \"$message\"",
+    "jest-unit": "yarn test:unit",
+    "jest-clearCache": "yarn jest --clearCache",
     "test:unit": "vue-cli-service test:unit",
     "watch": "npm run development -- --watch",
     "watch-poll": "npm run watch -- --watch-poll"
@@ -40,6 +42,7 @@
     "cross-env": "^5.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jest-extended": "^0.11.1",
     "jquery": "^3.2",
     "laravel-mix": "^4.0.7",
     "lint-staged": "^8.1.0",

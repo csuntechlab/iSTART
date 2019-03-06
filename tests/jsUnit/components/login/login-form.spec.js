@@ -1,6 +1,7 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Login from './../../../../resources/js/views/Login.vue'
 import Vuex from 'vuex'
+import 'jest-extended'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
