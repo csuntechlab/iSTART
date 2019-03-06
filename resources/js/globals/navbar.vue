@@ -12,7 +12,7 @@
           <router-link to="#" class="nav-link active" data-toggle="collapse" data-target="#hamburger-menu" href="#">SCHEDULE</router-link>
         </li>
         <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
-          <a class="pointer nav-link active" data-toggle="collapse" data-target="#hamburger-menu" v-on:click="logout">LOGOUT</a>
+          <a class="pointer nav-link active" data-toggle="collapse" data-target="#hamburger-menu" data-text="logout-button" v-on:click="logout">LOGOUT</a>
         </li>
       </ul>
     </div>
