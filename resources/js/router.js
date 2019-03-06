@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Login from './views/login.vue'
+import Login from './views/Login.vue'
+import Welcome from './views/Welcome.vue'
+import ControlGroup from './views/ControlGroup.vue'
+import ComparisonGroup from './views/ComparisonGroup.vue'
+import InterventionGroup from './views/InterventionGroup.vue'
 import Error from './views/Error.vue'
 
 Vue.use(Router)
@@ -12,30 +14,42 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      meta: { title: 'iSTART' },
-      component: Home
+      path: '*',
+      name: 'Error',
+      component: Error
     },
     {
       path: '/login',
-      name: 'Login',
+      name: 'login',
       component: Login,
       meta: { title: 'iSTART | login' }
     },
     {
-      path: '/about',
-      name: 'about',
-      meta: { title: 'iSTART - About' },
+      path: '/',
+      name: 'welcome',
+      component: Welcome,
+      meta: { title: 'iSTART' }
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: About
     },
     {
-      path: '*',
-      name: 'Error',
-      component: Error
+      path: '/controlgroup',
+      name: 'ControlGroup',
+      meta: { title: 'iSTART - Control' },
+      component: ControlGroup
+    },
+    {
+      path: '/comparisonGroup',
+      name: 'ComparisonGroup',
+      meta: { title: 'iSTART - Comparison' },
+      component: ComparisonGroup
+    },
+    {
+      path: '/interventiongroup',
+      name: 'InterventionGroup',
+      meta: { title: 'iSTART - Intervention' },
+      component: InterventionGroup
     }
   ]
 })
