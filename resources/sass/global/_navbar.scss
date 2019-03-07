@@ -3,6 +3,10 @@
 .navbar{
     background-color: $i-light-blue;
     color: $i-white;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     &__dropdown{
         height: 100vh;
         background-color: $i-blue;

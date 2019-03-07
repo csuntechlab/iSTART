@@ -6240,6 +6240,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -6277,6 +6279,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var C_Users_Owner_Documents_META_LAB_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
+//
+//
 //
 //
 //
@@ -26084,7 +26088,7 @@ var render = function() {
         ]
       }),
       _vm._v(" "),
-      _c("router-view")
+      _c("div", { staticClass: "main" }, [_c("router-view")], 1)
     ],
     1
   )
@@ -26111,82 +26115,86 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "navbar navbar-dark" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "collapse navbar-collapse navbar__dropdown",
-        attrs: { id: "hamburger-menu" }
-      },
-      [
-        _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
-          _c(
-            "li",
-            { staticClass: "navbar__dropdown-item active" },
-            [
-              _c(
-                "router-link",
-                {
-                  staticClass: "nav-link active",
-                  attrs: {
-                    to: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#hamburger-menu",
-                    href: "#"
-                  }
-                },
-                [_vm._v("MODULES")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "navbar__dropdown-item" },
-            [
-              _c(
-                "router-link",
-                {
-                  staticClass: "nav-link active",
-                  attrs: {
-                    to: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#hamburger-menu",
-                    href: "#"
-                  }
-                },
-                [_vm._v("SCHEDULE")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass: "navbar__dropdown-item navbar__dropdown-item--bottom"
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass: "pointer nav-link active",
-                  attrs: {
-                    "data-toggle": "collapse",
-                    "data-target": "#hamburger-menu"
+  return _c("div", [
+    _c("nav", { staticClass: "navbar navbar-dark" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "collapse navbar-collapse navbar__dropdown",
+          attrs: { id: "hamburger-menu" }
+        },
+        [
+          _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
+            _c(
+              "li",
+              { staticClass: "navbar__dropdown-item active" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link active",
+                    attrs: {
+                      to: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#hamburger-menu",
+                      href: "#"
+                    }
                   },
-                  on: { click: _vm.logout }
-                },
-                [_vm._v("LOGOUT")]
-              )
-            ]
-          )
-        ])
-      ]
-    )
+                  [_vm._v("MODULES")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "navbar__dropdown-item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link active",
+                    attrs: {
+                      to: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#hamburger-menu",
+                      href: "#"
+                    }
+                  },
+                  [_vm._v("SCHEDULE")]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass:
+                  "navbar__dropdown-item navbar__dropdown-item--bottom"
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "pointer nav-link active",
+                    attrs: {
+                      "data-toggle": "collapse",
+                      "data-target": "#hamburger-menu",
+                      "data-text": "logout-button"
+                    },
+                    on: { click: _vm.logout }
+                  },
+                  [_vm._v("LOGOUT")]
+                )
+              ]
+            )
+          ])
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -26202,8 +26210,6 @@ var staticRenderFns = [
           type: "button",
           "data-toggle": "collapse",
           "data-target": "#hamburger-menu",
-          "aria-controls": "navbarTogglerDemo01",
-          "aria-expanded": "false",
           "aria-label": "Toggle navigation"
         }
       },
@@ -63713,23 +63719,35 @@ vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../router */ "./resources/js/router.js");
-/* harmony import */ var _modules_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/user */ "./resources/js/store/modules/user/index.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../router */ "./resources/js/router.js");
+/* harmony import */ var _modules_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/user */ "./resources/js/store/modules/user/index.js");
+
+
+
+
 
 
  //INIT VUEX
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]); //MODULES
+vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_5__["default"]); //MODULES
 
  //MODULE MAP
 
-/* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
+/* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_5__["default"].Store({
   strict: "development" !== 'production',
   modules: {
-    User: _modules_user__WEBPACK_IMPORTED_MODULE_3__["default"]
+    User: _modules_user__WEBPACK_IMPORTED_MODULE_7__["default"]
   }
 }));
 

@@ -6,7 +6,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-describe('Navbar.vue', () => {
+describe('navbar.vue', () => {
   let store
   let state
 
@@ -41,7 +41,6 @@ describe('Navbar.vue', () => {
 
   describe('userStore/mutations/CLEAR_USER_DATA', () => {
     it('should clear the user object and nullify correctLoginInfo when mutation is called', () => {
-
       User.mutations.CLEAR_USER_DATA(state)
       expect(state).toEqual({
         user: {},

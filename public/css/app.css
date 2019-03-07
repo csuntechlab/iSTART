@@ -11668,6 +11668,10 @@ a.text-dark:focus {
   transition: 350ms ease-out;
 }
 
+.hide {
+  display: none;
+}
+
 /*
 	* What should I put in this file?
 	* This file should only contain abstract layouts and overrides in a global scope
@@ -11685,6 +11689,13 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.main {
+  position: relative;
+  margin-top: 4rem;
+  z-index: 0;
+  width: 100%;
+}
+
 /*
 	* What should I put in this file?
 	* This file should only contain sass variables
@@ -11694,6 +11705,10 @@ a.text-dark:focus {
 .navbar {
   background-color: #2699FB;
   color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar__dropdown {

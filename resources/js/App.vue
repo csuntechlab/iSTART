@@ -1,7 +1,9 @@
 <template>
-  <div>
+<div>
     <navbar v-show="$route.path != '/login'" ></navbar>
-    <router-view/>
+    <div class="main">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -11,6 +13,7 @@ export default {
   components: {
     navbar
   },
+
   methods: {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {

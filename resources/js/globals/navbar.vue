@@ -1,6 +1,7 @@
 <template>
+<div>
   <nav class="navbar navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger-menu" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger-menu" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse navbar__dropdown" id="hamburger-menu">
@@ -17,11 +18,13 @@
       </ul>
     </div>
   </nav>
+  </div>
 </template>
 <script>
 import { mapState, mapActions } from 'vuex'
 export default {
   name: 'navbar',
+
   computed: {
     ...mapState({
       userID: state => state.User.user.userID
