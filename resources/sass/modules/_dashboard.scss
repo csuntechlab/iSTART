@@ -28,6 +28,14 @@
       &-button {
         display: inline-block;
         text-align: right;
+
+        &  * {
+          color: rgb(25, 25, 25);
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
 
       &-text {
