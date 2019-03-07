@@ -1,0 +1,38 @@
+.dashboard {
+  &-notification {
+    background-color: rgb(245, 245, 245);
+    color: rgb(25, 25, 25);
+
+    & * {
+      font-size: 1rem;
+      transition: 350ms;
+
+      @include media-breakpoint-up(sm) {
+        & {
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    &__message {
+      &-container {
+        display: inline-block;
+      }
+
+      &-date {
+        color: $i-blue;
+      }
+    }
+
+    &__schedule {
+      &-button {
+        display: inline-block;
+        text-align: right;
+      }
+
+      &-text {
+        font-weight: bold;
+      }
+    }
+  }
+}

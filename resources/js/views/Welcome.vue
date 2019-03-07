@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <h1 class="text-center">Welcome to iSTART</h1>
+        <router-link to="/test">
+          <a>Test</a>
+        </router-link>
         <button @click.prevent="logout">Logout</button>
     </div>
 </template>
