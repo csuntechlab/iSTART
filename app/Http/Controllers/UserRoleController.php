@@ -22,4 +22,12 @@ class UserRoleController extends Controller
 
         return $this->userRoleUtility->getRole($data);
     }
+
+    public function sortAuthenticatedUsers()
+    {
+        $user = auth()->user();
+        $userInformation = $this->userRoleUtility->sortAuthenticatedUsers($user);
+        return ($userInformation);
+
+    }
 }

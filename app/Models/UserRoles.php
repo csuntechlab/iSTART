@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserRoles extends Model
 {
+    protected $primaryKey = 'user_email';
+    public $incrementing = false;
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -16,4 +20,12 @@ class UserRoles extends Model
     protected $fillable = [
         'user_email', 'user_role', 'remember_token', 'display_name',
     ];
+
+    public function userRole()
+    {
+        return $this->hasOne('App\Models\User', 'email','user_email');
+
+    }
+
+
 }

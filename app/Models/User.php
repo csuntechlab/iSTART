@@ -29,4 +29,17 @@ class User extends MetaUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function userRole()
+    {
+
+        return $this->hasOne('App\Models\UserRoles','user_email');
+    }
+
+//    public function hasRole($user)
+//    {
+//        if ($user->roles())
+//
+//        return
+//    }
 }

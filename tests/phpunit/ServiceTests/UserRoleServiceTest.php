@@ -13,6 +13,14 @@ class UserRoleServiceTest extends TestCase
 {
     use DatabaseMigrations;
 
+    protected $utility;
+
+    public function setUp()
+    {
+        parent::setUp();
+        $this->utility = new UserRoleService();
+
+    }
     /**
      * @test
      */
@@ -38,5 +46,31 @@ class UserRoleServiceTest extends TestCase
         $outputFromUserRoleService = $userRoleService->getRole($email);
 
         $this->assertEquals($data, $outputFromUserRoleService);
+    }
+
+    /**
+     * @test
+     */
+    public function user_is_evenly_distributed_into_the_groups_and_assigned_a_role()
+    {
+        $userRolesDB = ['user_role'];
+        $this->assertDatabaseMissing('user_roles', $userRolesDB);
+
+        for($i = 1; $i <= 120; $i++) {
+            $data = [//user data
+                'user_id' => 'member',
+                'email' => 'nr_steven.fitzgerald@csun.edu',
+                ''
+            ];
+            $this->utility->sortAuthenticatedUsers($data);
+            $userRolesDB = [
+                'id' => $i,
+                'user_role' => 'comparison',//since each user will have different group, how will
+                //make it so each user_role is not just testing comparison
+
+            ];
+
+            $this->assertDatabaseHas('user_roles', $userRolesDB);
+        }
     }
 }
