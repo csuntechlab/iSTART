@@ -15,6 +15,7 @@ import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
 import DashboardNotification from './../../components/global/DashboardNotification'
 
 export default {
+  name: 'dashboard',
   data () {
     return {
       headings: [
@@ -25,7 +26,7 @@ export default {
       ]
     }
   },
-  name: 'home',
+
   mixins: [changeRouteTitle],
   components: {
     DashboardNotification
