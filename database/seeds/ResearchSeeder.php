@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UserResearchSeeder extends Seeder
+class ResearchSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,8 @@ class UserResearchSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('user_research')->insert([
-            'user_id' => '789',
+        DB::table('research')->insert([
+            'user_email' => '789@gmail.com',
             'research_id' => '9789'
         ]);
     }

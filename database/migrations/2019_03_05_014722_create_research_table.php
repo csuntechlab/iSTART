@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserResearchTable extends Migration
+class CreateResearchTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateUserResearchTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_research', function (Blueprint $table) {
+        Schema::create('research', function (Blueprint $table) {
             $table->string('user_email');
-            $table->foreign('user_email')->references('email')->on('user');
-            $table->string('research_id');
+            $table->integer('research_id');
         });
     }
 

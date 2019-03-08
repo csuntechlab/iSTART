@@ -6,7 +6,7 @@ use App\Models\User;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserResearch extends Model
+class Research extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,6 +14,10 @@ class UserResearch extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'research_id'
+        'user_email', 'research_id'
     ];
+
+    public function user(){
+        return $this->hasOne('App\Models\User', 'email', 'user_email');
+    }
 }
