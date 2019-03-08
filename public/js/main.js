@@ -26136,7 +26136,7 @@ var render = function() {
                   {
                     staticClass: "nav-link active",
                     attrs: {
-                      to: "/",
+                      to: "#",
                       "data-toggle": "collapse",
                       "data-target": "#navbar",
                       href: "#"
@@ -26157,7 +26157,7 @@ var render = function() {
                   {
                     staticClass: "nav-link active",
                     attrs: {
-                      to: "/",
+                      to: "#",
                       "data-toggle": "collapse",
                       "data-target": "#navbar",
                       href: "#"
