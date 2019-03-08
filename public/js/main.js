@@ -26123,7 +26123,7 @@ var render = function() {
         "div",
         {
           staticClass: "collapse navbar-collapse navbar__dropdown",
-          attrs: { id: "hamburger-menu" }
+          attrs: { id: "navbar" }
         },
         [
           _c("ul", { staticClass: "navbar-nav mr-auto mt-lg-0" }, [
@@ -26138,7 +26138,7 @@ var render = function() {
                     attrs: {
                       to: "#",
                       "data-toggle": "collapse",
-                      "data-target": "#hamburger-menu",
+                      "data-target": "#navbar",
                       href: "#"
                     }
                   },
@@ -26159,7 +26159,7 @@ var render = function() {
                     attrs: {
                       to: "#",
                       "data-toggle": "collapse",
-                      "data-target": "#hamburger-menu",
+                      "data-target": "#navbar",
                       href: "#"
                     }
                   },
@@ -26182,7 +26182,7 @@ var render = function() {
                     staticClass: "pointer nav-link active",
                     attrs: {
                       "data-toggle": "collapse",
-                      "data-target": "#hamburger-menu",
+                      "data-target": "#navbar",
                       "data-text": "logout-button"
                     },
                     on: { click: _vm.logout }
@@ -26209,7 +26209,7 @@ var staticRenderFns = [
         attrs: {
           type: "button",
           "data-toggle": "collapse",
-          "data-target": "#hamburger-menu",
+          "data-target": "#navbar",
           "aria-label": "Toggle navigation"
         }
       },
@@ -63630,23 +63630,15 @@ if (false) {}
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
-/* harmony import */ var _views_Welcome_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/Welcome.vue */ "./resources/js/views/Welcome.vue");
-/* harmony import */ var _views_ControlGroup_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/ControlGroup.vue */ "./resources/js/views/ControlGroup.vue");
-/* harmony import */ var _views_ComparisonGroup_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/ComparisonGroup.vue */ "./resources/js/views/ComparisonGroup.vue");
-/* harmony import */ var _views_InterventionGroup_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/InterventionGroup.vue */ "./resources/js/views/InterventionGroup.vue");
-/* harmony import */ var _views_Error_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./views/Error.vue */ "./resources/js/views/Error.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
+/* harmony import */ var _views_Welcome_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/Welcome.vue */ "./resources/js/views/Welcome.vue");
+/* harmony import */ var _views_ControlGroup_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/ControlGroup.vue */ "./resources/js/views/ControlGroup.vue");
+/* harmony import */ var _views_ComparisonGroup_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/ComparisonGroup.vue */ "./resources/js/views/ComparisonGroup.vue");
+/* harmony import */ var _views_InterventionGroup_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/InterventionGroup.vue */ "./resources/js/views/InterventionGroup.vue");
+/* harmony import */ var _views_Error_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/Error.vue */ "./resources/js/views/Error.vue");
 
 
 
@@ -63655,29 +63647,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]);
-/* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_5__["default"]({
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   base: Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}).BASE_URL,
   routes: [{
     path: '*',
     name: 'Error',
-    component: _views_Error_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+    component: _views_Error_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   }, {
     path: '/login',
     name: 'login',
-    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     meta: {
       title: 'iSTART | login'
     }
   }, {
     path: '/',
     name: 'welcome',
-    component: _views_Welcome_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    component: _views_Welcome_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     meta: {
       title: 'iSTART' // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
@@ -63690,21 +63678,21 @@ vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     meta: {
       title: 'iSTART - Control'
     },
-    component: _views_ControlGroup_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _views_ControlGroup_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/comparisonGroup',
     name: 'ComparisonGroup',
     meta: {
       title: 'iSTART - Comparison'
     },
-    component: _views_ComparisonGroup_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _views_ComparisonGroup_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '/interventiongroup',
     name: 'InterventionGroup',
     meta: {
       title: 'iSTART - Intervention'
     },
-    component: _views_InterventionGroup_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+    component: _views_InterventionGroup_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   }]
 }));
 

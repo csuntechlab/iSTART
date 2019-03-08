@@ -27,6 +27,13 @@ describe('userStore/actions/VerifyUserData', () => {
   })
 })
 
+describe('userStore/actions/ClearUserData', () => {
+  it('should commit to CLEAR_USER_DATA mutation when action is called', () => {
+    const commit = jest.fn()
+    userStore.actions.clearUserData({ commit })
+    expect(commit).toHaveBeenCalledWith('CLEAR_USER_DATA')
+  })
+})
 // VueX Mutation Testing
 describe('userStore/mutations/VERIFY_USER_DATA', () => {
   it('should set user object with username, password, and correctLoginInfo to true when mutation is called', () => {
@@ -47,5 +54,23 @@ describe('userStore/mutations/VERIFY_USER_DATA', () => {
       correctLoginInfo: true
     }
     )
+  })
+})
+
+describe('userStore/mutations/CLEAR_USER_DATA', () => {
+  it('should clear the user object and nullify correctLoginInfo when mutation is called', () => {
+    const state = {
+      user: {
+        token: '123rke4',
+        username: 'csunStudent123'
+      },
+      correctLoginInfo: true
+    }
+
+    userStore.mutations.CLEAR_USER_DATA(state)
+    expect(state).toEqual({
+      user: {},
+      correctLoginInfo: null
+    })
   })
 })

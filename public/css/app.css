@@ -11712,11 +11712,12 @@ a.text-dark:focus {
 }
 
 .navbar__dropdown {
-  height: 100vh;
+  height: 100%;
   background-color: #2699FB;
-  margin-right: -1rem;
-  margin-left: -1rem;
-  margin-top: 1rem;
+  margin: 3.3rem -1rem -1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .navbar__dropdown-item {

@@ -8,11 +8,12 @@
     z-index: 1;
     width: 100%;
     &__dropdown{
-        height: 100vh;
-        background-color: $i-blue;
-        margin-right: -1rem;
-        margin-left: -1rem;
-        margin-top: 1rem;
+        height: 100%;
+        background-color: $i-light-blue;
+        margin: 3.3rem -1rem null -1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
         &-item{
             font-size: 0.8rem;
             font-weight: 700;

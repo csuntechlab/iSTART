@@ -1,19 +1,19 @@
 <template>
 <div>
   <nav class="navbar navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hamburger-menu" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
-    <div class="collapse navbar-collapse navbar__dropdown" id="hamburger-menu">
+    <div class="collapse navbar-collapse navbar__dropdown" id="navbar">
       <ul class="navbar-nav mr-auto mt-lg-0">
         <li class="navbar__dropdown-item active">
-          <router-link to="#" class="nav-link active" data-toggle="collapse" data-target="#hamburger-menu" href="#">MODULES</router-link>
+          <router-link to="#" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">MODULES</router-link>
         </li>
         <li class="navbar__dropdown-item">
-          <router-link to="#" class="nav-link active" data-toggle="collapse" data-target="#hamburger-menu" href="#">SCHEDULE</router-link>
+          <router-link to="#" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">SCHEDULE</router-link>
         </li>
         <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
-          <a class="pointer nav-link active" data-toggle="collapse" data-target="#hamburger-menu" data-text="logout-button" v-on:click="logout">LOGOUT</a>
+          <a class="pointer nav-link active" data-toggle="collapse" data-target="#navbar" data-text="logout-button" v-on:click="logout">LOGOUT</a>
         </li>
       </ul>
     </div>
