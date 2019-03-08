@@ -11788,8 +11788,10 @@ a.text-dark:focus {
 }
 
 .dashboard-notification {
-  background-color: whitesmoke;
+  background-color: white;
   color: #191919;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(38, 153, 251, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(38, 153, 251, 0.2);
 }
 
 .dashboard-notification * {

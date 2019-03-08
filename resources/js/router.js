@@ -5,7 +5,7 @@ import Welcome from './views/Welcome.vue'
 import ControlGroup from './views/ControlGroup.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
 import InterventionGroup from './views/InterventionGroup.vue'
-import Dashboard from './components/Dashboard.vue'
+import Dashboard from './components/global/Dashboard.vue'
 import Test from './views/Test.vue'
 import Error from './views/Error.vue'
 
