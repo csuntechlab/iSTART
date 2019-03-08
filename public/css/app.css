@@ -11663,9 +11663,18 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.focus:focus {
+  -webkit-box-shadow: 1px 2px 2px 1px #2699FB;
+          box-shadow: 1px 2px 2px 1px #2699FB;
+}
+
 .transition-350ms {
   -webkit-transition: 350ms ease-out;
   transition: 350ms ease-out;
+}
+
+.padding-container {
+  padding: 0.5rem 1rem;
 }
 
 /*
@@ -11778,8 +11787,45 @@ a.text-dark:focus {
   }
 }
 
-.notification {
-  background-color: white;
-  height: 4.2rem;
+.dashboard-notification {
+  background-color: whitesmoke;
+  color: #191919;
+}
+
+.dashboard-notification * {
+  font-size: 1rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+@media (min-width: 576px) {
+  .dashboard-notification * {
+    font-size: 1.15rem;
+  }
+}
+
+.dashboard-notification__message-container {
+  display: inline-block;
+}
+
+.dashboard-notification__message-date {
+  color: #2699FB;
+}
+
+.dashboard-notification__schedule-button {
+  display: inline-block;
+  text-align: right;
+}
+
+.dashboard-notification__schedule-button * {
+  color: #191919;
+}
+
+.dashboard-notification__schedule-button *:hover {
+  text-decoration: none;
+}
+
+.dashboard-notification__schedule-text {
+  font-weight: bold;
 }
 

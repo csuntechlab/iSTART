@@ -6,6 +6,7 @@ import ControlGroup from './views/ControlGroup.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
 import InterventionGroup from './views/InterventionGroup.vue'
 import Dashboard from './components/Dashboard.vue'
+import Test from './views/Test.vue'
 import Error from './views/Error.vue'
 
 Vue.use(Router)
@@ -23,16 +24,13 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login,
-      meta: {title: 'iSTART | login'}
+      meta: { title: 'iSTART | login' }
     },
     {
       path: '/',
       name: 'welcome',
       component: Welcome,
-      meta: { title: 'iSTART' },
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: { title: 'iSTART' }
     },
     {
       path: '/controlgroup',
@@ -56,6 +54,12 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      meta: { title: 'iSTART - Test' },
+      component: Test
     }
   ]
 })
