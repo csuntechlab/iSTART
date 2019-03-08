@@ -6262,7 +6262,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     checkForCookies: function checkForCookies() {
       if (document.cookie.includes('userKey')) {
-        console.log('yea');
+        if (this.$route.fullPath === "/login") {
+          this.$router.push({
+            name: 'welcome'
+          });
+        }
       } else {
         this.$router.push({
           name: 'login'
@@ -6409,7 +6413,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_global_Dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/global/Dashboard */ "./resources/js/components/global/Dashboard.vue");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_global_Dashboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/global/Dashboard */ "./resources/js/components/global/Dashboard.vue");
+
+
+
+
 //
 //
 //
@@ -6421,7 +6437,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ComparisonGroup',
   components: {
-    Dashboard: _components_global_Dashboard__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Dashboard: _components_global_Dashboard__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 
@@ -26182,7 +26198,7 @@ var render = function() {
         ]
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "main" }, [_c("router-view")], 1)
+      _c("div", { staticClass: "main-wrapper" }, [_c("router-view")], 1)
     ],
     1
   )
@@ -26450,7 +26466,11 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "ComparisonGroup" },
-    [_c("h1", [_vm._v("Comparison Group")]), _vm._v(" "), _c("dashboard")],
+    [
+      _c("dashboard"),
+      _vm._v(" "),
+      _c("h1", { staticClass: "text-center" }, [_vm._v("Comparison Group")])
+    ],
     1
   )
 }
@@ -26574,7 +26594,11 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "InterventionGroup" },
-    [_c("h1", [_vm._v("Intervention Group")]), _vm._v(" "), _c("dashboard")],
+    [
+      _c("dashboard"),
+      _vm._v(" "),
+      _c("h1", { staticClass: "text-center" }, [_vm._v("Intervention Group")])
+    ],
     1
   )
 }

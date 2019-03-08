@@ -11698,23 +11698,16 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-.main {
-  position: relative;
-  margin-top: 4rem;
+.main-wrapper {
+  margin-top: 3.2rem;
   z-index: 0;
   width: 100%;
 }
 
-/*
-	* What should I put in this file?
-	* This file should only contain sass variables
-	* i.e. $color, $font, $background, etc.
-*/
-
 .navbar {
   background-color: #2699FB;
   color: #FFFFFF;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;

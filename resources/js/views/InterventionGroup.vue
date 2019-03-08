@@ -1,7 +1,7 @@
 <template>
   <div class="InterventionGroup">
-    <h1>Intervention Group</h1>
     <dashboard/>
+    <h1 class="text-center">Intervention Group</h1>
   </div>
 </template>
 
