@@ -34,7 +34,6 @@ describe('userStore/actions/ClearUserData', () => {
     expect(commit).toHaveBeenCalledWith('CLEAR_USER_DATA')
   })
 })
-
 // VueX Mutation Testing
 describe('userStore/mutations/VERIFY_USER_DATA', () => {
   it('should set user object with username, password, and correctLoginInfo to true when mutation is called', () => {

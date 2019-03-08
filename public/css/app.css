@@ -14,7 +14,7 @@
  */
 
 :root {
-  --blue: #3490dc;
+  --blue: #007bff;
   --indigo: #6574cd;
   --purple: #9561e2;
   --pink: #f66d9b;
@@ -11677,6 +11677,10 @@ a.text-dark:focus {
   padding: 0.5rem 1rem;
 }
 
+.hide {
+  display: none;
+}
+
 /*
 	* What should I put in this file?
 	* This file should only contain abstract layouts and overrides in a global scope
@@ -11692,6 +11696,52 @@ a.text-dark:focus {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.main {
+  position: relative;
+  margin-top: 4rem;
+  z-index: 0;
+  width: 100%;
+}
+
+/*
+	* What should I put in this file?
+	* This file should only contain sass variables
+	* i.e. $color, $font, $background, etc.
+*/
+
+.navbar {
+  background-color: #2699FB;
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar__dropdown {
+  height: 100%;
+  background-color: #2699FB;
+  margin: 3.3rem -1rem -1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar__dropdown-item {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-left: 2.3rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-top: 1px solid #106DBC;
+  border-left: 1px solid #106DBC;
+  border-right: 1px solid #106DBC;
+}
+
+.navbar__dropdown-item--bottom {
+  border-bottom: 1px solid #106DBC;
 }
 
 .btn {

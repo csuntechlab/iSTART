@@ -13,7 +13,6 @@
             <v-App></v-App>
         </div>
 
-        <script defer src="{{ asset('/fontawesome-5.7.2/js/all.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
