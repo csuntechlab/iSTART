@@ -6,5 +6,6 @@ use Illuminate\Http\Request;
 
 interface UserRoleContract
 {
-    public function matchIDs(array $data);
+    public function matchID(array $data);
 }
+    

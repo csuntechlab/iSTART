@@ -9,7 +9,7 @@ use App\Models\UserResearch;
 
 class UserResearchService implements UserResearchContract
 {
-    public function matchIDs(array $data)
+    public function matchID(array $data)
     {
         $userResearch = UserResearch::where('user_id', $data['user_id'])->first();
         return [

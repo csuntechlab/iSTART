@@ -14,7 +14,8 @@ class CreateUserResearchTable extends Migration
     public function up()
     {
         Schema::create('user_research', function (Blueprint $table) {
-            $table->string('user_id');
+            $table->string('user_email');
+            $table->foreign('user_email')->references('email')->on('user');
             $table->string('research_id');
         });
     }
