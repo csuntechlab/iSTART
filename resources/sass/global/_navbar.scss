@@ -1,0 +1,33 @@
+@import './variables';
+
+.navbar{
+    background-color: $i-light-blue;
+    color: $i-white;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    &__dropdown{
+        height: 100%;
+        background-color: $i-light-blue;
+        margin: 3.3rem -1rem null -1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        &-item{
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding-left: 2.3rem;
+            padding-top: 0.85rem;
+            padding-bottom: 0.85rem;
+            border-top: 1px solid $i-dark-blue;
+            border-left: 1px solid $i-dark-blue;
+            border-right: 1px solid $i-dark-blue;
+            &--bottom{
+                border-bottom: 1px solid $i-dark-blue;
+            }
+        }
+    }
+}
+
+

@@ -15,7 +15,7 @@ async verifyUserData({commit},payload) {
 			}
 			else {
 				commit('VERIFY_USER_DATA', response.data);
-			}			
+			}
 		})
 		.catch(
 			failure => console.error(failure)

@@ -22,13 +22,13 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login,
-      meta: {title: 'iSTART | login'}
+      meta: { title: 'iSTART | login' }
     },
     {
       path: '/',
       name: 'welcome',
       component: Welcome,
-      meta: { title: 'iSTART' },
+      meta: { title: 'iSTART' }
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
