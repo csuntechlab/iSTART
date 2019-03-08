@@ -8,7 +8,7 @@ export default {
   methods: {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
-        this.$router.push({ name: 'welcome' })
+        console.log('yea')
       } else {
         this.$router.push({ name: 'login' })
       }
