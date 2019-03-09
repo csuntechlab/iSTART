@@ -15,5 +15,9 @@ class ResearchSeeder extends Seeder
             'user_email' => '789@gmail.com',
             'research_id' => '9789'
         ]);
+        DB::table('research')->insert([
+            'user_email' => 'nr_april.feldman@csun.edu',
+            'research_id' => '04'
+        ]);
     }
 }

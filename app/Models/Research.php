@@ -16,7 +16,7 @@ class Research extends Model
     protected $fillable = [
         'user_email', 'research_id'
     ];
-
+    
     public function user(){
         return $this->hasOne('App\Models\User', 'email', 'user_email');
     }
