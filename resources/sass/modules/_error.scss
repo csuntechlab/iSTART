@@ -13,19 +13,32 @@
     }
 
     &-return {
+        margin-top: 1rem;
+
         & > * {
+            background: none;
+            border: none;
             display: inline-block;
             outline: 2px solid rgb(25, 25, 25);
             padding: 0.5rem;
-            margin-top: 1rem;
         }
 
         &:hover > * {
             background-color: rgb(215, 215, 215);
         }
+
+        // Tag Overides
+        & * {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        & button {
+            margin: 0;
+        }
     }
 
-    @media only screen and (max-width: 767px) {
+    @include media-breakpoint-down(md) {
         &-code > * {
             font-size: 6rem;
         }
@@ -35,16 +48,8 @@
         }
 
         &-return {
-            & > * {
+            & * {
                 font-size: 1rem;
-                display: inline-block;
-                outline: 2px solid rgb(25, 25, 25);
-                padding: 0.5rem;
-                margin-top: 1rem;
-            }
-
-            &:hover > * {
-                background-color: rgb(215, 215, 215);
             }
         }
     }
