@@ -178,8 +178,8 @@ return [
         /*
          * Custom Service Providers
          */
+        App\Providers\ResearchServiceProvider::class,
         App\Providers\UserRoleServiceProvider::class,
-
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
 
 

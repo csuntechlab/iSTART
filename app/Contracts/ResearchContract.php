@@ -4,7 +4,7 @@ namespace App\Contracts;
 
 use Illuminate\Http\Request;
 
-interface UserRoleContract
+interface ResearchContract
 {
-    public function userHasResearchId(String $email);
+    public function userHasResearchId(array $data);
 }

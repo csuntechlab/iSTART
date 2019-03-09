@@ -10,7 +10,7 @@ use App\Models\UserRoles;
 class UserRoleService implements UserRoleContract
 {
     public function getRole(array $data): array
-    {
+    { 
         $userRole = UserRoles::where('user_email', $data['user_email'])->first();
 
         return [
