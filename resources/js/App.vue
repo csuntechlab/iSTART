@@ -1,9 +1,7 @@
 <template>
-<div>
+  <div class="app">
     <navbar v-show="$route.path != '/login'" ></navbar>
-    <div class="main">
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 
@@ -23,8 +21,10 @@ export default {
       }
     }
   },
+
   mounted () {
     this.checkForCookies()
+    console.log('Yes')
   }
 }
 </script>

@@ -30,6 +30,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'login',
   data () {
@@ -41,16 +42,19 @@ export default {
       submitted: false
     }
   },
+
   methods: {
     ...mapActions([
       'verifyUserData'
     ]),
+
     submitForm () {
       this.submitted = true
       if (this.checkFormInputs()) {
         this.verifyUserData(this.userInfoForm)
       }
     },
+
     checkFormInputs () {
       if (this.userInfoForm.username) {
         return true
@@ -59,6 +63,7 @@ export default {
       }
     }
   },
+
   computed: {
     ...mapGetters([
       'correctLoginInfo'

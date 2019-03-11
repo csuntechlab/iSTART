@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/Login.vue'
+import Logout from './views/Logout.vue'
 import Welcome from './views/Welcome.vue'
 import ControlGroup from './views/ControlGroup.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
@@ -25,13 +26,15 @@ export default new Router({
       meta: { title: 'iSTART | login' }
     },
     {
+      path: '/logout',
+      name: 'logout',
+      component: Logout
+    },
+    {
       path: '/',
       name: 'welcome',
       component: Welcome,
       meta: { title: 'iSTART' }
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
     },
     {
       path: '/controlgroup',
