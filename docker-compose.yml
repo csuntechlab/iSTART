@@ -3,8 +3,8 @@ services:
   istart:
     container_name: iSTART
     build:
-      context: .
-      target: base
+      context: .  
+      target: base      
     ports:
       - 8080:80
     volumes:
