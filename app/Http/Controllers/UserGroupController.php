@@ -18,7 +18,7 @@ class UserGroupController extends Controller
 
     public function getGroup(Request $request)
     {
-        $data = ['user_email' => $request->email];
+        $data = ['user_id' => $request->user_id];
 
         return $this->userGroupUtility->getGroup($data);
     }

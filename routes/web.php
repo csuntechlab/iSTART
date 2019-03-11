@@ -16,4 +16,4 @@ Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Route::post('loginVerification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
 
-Route::get('/get_group/{email}','UserGroupController@getGroup');
+Route::get('/get_group/{user_id}','UserGroupController@getGroup');

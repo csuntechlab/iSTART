@@ -11,11 +11,11 @@ class UserGroupService implements UserGroupContract
 {
     public function getGroup(array $data): array
     {
-        $userGroup = UserGroups::where('user_email', $data['user_email'])->first();
+        $userGroup = UserGroups::where('user_id', $data['user_id'])->first();
 
         return [
             'user_group' => $userGroup['user_group'],
-            'user_email' => $data['user_email'],
+            'user_id' => $data['user_id'],
             'display_name' => $userGroup['display_name'],
             'remember_token' => $userGroup['remember_token'],
             ];

@@ -14,6 +14,6 @@ class UserGroups extends Model
      * @var array
      */
     protected $fillable = [
-        'user_email', 'user_group', 'remember_token', 'display_name',
+        'user_id', 'user_group', 'remember_token', 'display_name',
     ];
 }

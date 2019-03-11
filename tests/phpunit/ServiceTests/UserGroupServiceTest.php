@@ -21,20 +21,20 @@ class UserGroupServiceTest extends TestCase
         $userGroupService = new UserGroupService();
 
         $userGroupFactory = factory(UserGroups::class)->make([
-            'user_email' => 'someone@face.com',
+            'user_id' => 'someone@face.com',
             'user_group' => 'some group',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ])->save();
 
         $data = [
-            'user_email' => 'someone@face.com',
+            'user_id' => 'someone@face.com',
             'user_group' => 'some group',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ];
 
-        $email = ['user_email' => 'someone@face.com'];
+        $email = ['user_id' => 'someone@face.com'];
         $outputFromUserGroupService = $userGroupService->getGroup($email);
 
         $this->assertEquals($data, $outputFromUserGroupService);

@@ -29,12 +29,12 @@ class UserGroupControllerTest extends TestCase
     {
         $data = [
             'user_group' => 'some group',
-            'user_email' => '@face.come',
+            'user_id' => '@face.come',
         ];
 
         $request = new Request();
         $request->replace([
-            'email' => '@face.come',
+            'user_id' => '@face.come',
         ]);
 
         $this->utility
