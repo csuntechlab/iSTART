@@ -11,11 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/get_role/{email}', 'UserRoleController@getRole');
-
-/** Allows laravel to be able to serve/host any vue page */
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+
+Route::post('loginVerification', 'LoginController@authenticateUser');
+Route::get('logout','LoginController@logout');
+
+Route::get('/get_role/{email}','UserRoleController@getRole');
