@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
-import Welcome from './views/Welcome.vue'
+import Dashboard from './views/Dashboard.vue'
 import ControlGroup from './views/ControlGroup.vue'
 import ComparisonGroup from './views/ComparisonGroup.vue'
 import InterventionGroup from './views/InterventionGroup.vue'
@@ -28,12 +28,13 @@ export default new Router({
     {
       path: '/logout',
       name: 'logout',
-      component: Logout
+      component: Logout,
+      meta: { title: 'iSTART' }
     },
     {
       path: '/',
-      name: 'welcome',
-      component: Welcome,
+      name: 'dashboard',
+      component: Dashboard,
       meta: { title: 'iSTART' }
     },
     {

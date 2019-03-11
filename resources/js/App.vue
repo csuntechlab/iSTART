@@ -15,7 +15,7 @@ export default {
   methods: {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
-        this.$router.push({ name: 'welcome' })
+        this.$router.push({ name: 'dashboard' })
       } else {
         this.$router.push({ name: 'login' })
       }
@@ -24,7 +24,6 @@ export default {
 
   mounted () {
     this.checkForCookies()
-    console.log('Yes')
   }
 }
 </script>
