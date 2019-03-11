@@ -1,12 +1,11 @@
 <template>
-  <div class="test">
+  <div class="dashboard">
     <DashboardNotification></DashboardNotification>
-    <div class="content mt-5">
-      <div class="row justify-content-center" v-for="(item, index) in headings" :key="index">
-        <p>{{item}}</p>
+    <div class="mt-5">
+      <div class="row text-center m-0" v-for="(item, index) in headings" :key="index">
+        <p class="w-100">{{item}}</p>
       </div>
     </div>
-
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-notification padding-notification">
+  <div class="dashboard-notification">
     <div class="row">
       <div class="dashboard-notification__message-container col-7">
         <span class="dashboard-notification__message">Next module will be available on</span>
