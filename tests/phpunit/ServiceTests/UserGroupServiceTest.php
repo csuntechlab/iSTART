@@ -4,39 +4,39 @@ declare(strict_types=1);
 
 namespace Tests\ServiceTests;
 
-use App\Models\UserRoles;
-use App\Services\UserRoleService;
+use App\Models\UserGroups;
+use App\Services\UserGroupService;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
-class UserRoleServiceTest extends TestCase
+class UserGroupServiceTest extends TestCase
 {
     use DatabaseMigrations;
 
     /**
      * @test
      */
-    public function getRole_returns_role_remember_token_display_name_and_email_from_utility_as_array()
+    public function getGroup_returns_group_remember_token_display_name_and_email_from_utility_as_array()
     {
-        $userRoleService = new UserRoleService();
+        $userGroupService = new UserGroupService();
 
-        $userRoleFactory = factory(UserRoles::class)->make([
+        $userGroupFactory = factory(UserGroups::class)->make([
             'user_email' => 'someone@face.com',
-            'user_role' => 'some role',
+            'user_group' => 'some group',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ])->save();
 
         $data = [
             'user_email' => 'someone@face.com',
-            'user_role' => 'some role',
+            'user_group' => 'some group',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ];
 
         $email = ['user_email' => 'someone@face.com'];
-        $outputFromUserRoleService = $userRoleService->getRole($email);
+        $outputFromUserGroupService = $userGroupService->getGroup($email);
 
-        $this->assertEquals($data, $outputFromUserRoleService);
+        $this->assertEquals($data, $outputFromUserGroupService);
     }
 }

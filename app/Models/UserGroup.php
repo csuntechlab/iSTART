@@ -6,7 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserRoles extends Model
+class UserGroups extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,6 +14,6 @@ class UserRoles extends Model
      * @var array
      */
     protected $fillable = [
-        'user_email', 'user_role', 'remember_token', 'display_name',
+        'user_email', 'user_group', 'remember_token', 'display_name',
     ];
 }
