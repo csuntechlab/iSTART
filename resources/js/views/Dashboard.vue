@@ -26,6 +26,7 @@ export default {
   },
 
   data () {
+    // Waiting for route to be updated to implement state
     return {
       controlGroup: false,
       comparisonGroup: false,

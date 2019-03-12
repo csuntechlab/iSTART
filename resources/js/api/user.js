@@ -1,5 +1,7 @@
+import axios from 'axios'
+
 export default {
-  verifyUserDataAPI(payload) {
+  verifyUserDataAPI (payload) {
     return axios.post('loginVerification', payload)
-  },
+  }
 }
