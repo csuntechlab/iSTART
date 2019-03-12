@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\ServiceTests;
+namespace Tests\ServicesTests;
 
 use App\Models\UserRoles;
-use App\Services\UserRoleService;
+use App\Services\UserRoleService; 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 

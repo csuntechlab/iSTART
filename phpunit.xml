@@ -14,7 +14,7 @@
             <directory suffix="Test.php">./tests/phpunit/ControllerTests</directory>
         </testsuite>
         <testsuite name="Service Test">
-            <directory suffix="Test.php">./tests/phpunit/ServiceTests</directory>
+            <directory suffix="Test.php">./tests/phpunit/ServicesTests</directory>
         </testsuite>
     </testsuites>
     <filter>

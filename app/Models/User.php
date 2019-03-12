@@ -32,7 +32,7 @@ class User extends MetaUser
     ];
 
     public function research(){
-        return $this->hasOne('App\Models\Research', 'user_email');
+        return $this->hasOne('App\Models\Research', 'user_id');
     }
 
 }

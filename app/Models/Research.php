@@ -14,10 +14,10 @@ class Research extends Model
      * @var array
      */
     protected $fillable = [
-        'user_email', 'research_id'
+        'user_id', 'research_id'
     ];
-    
+
     public function user(){
-        return $this->hasOne('App\Models\User', 'email', 'user_email');
+        return $this->hasOne('App\Models\User', 'email', 'user_id');
     }
 }

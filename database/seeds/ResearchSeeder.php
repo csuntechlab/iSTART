@@ -7,17 +7,20 @@ class ResearchSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
      */
     public function run()
     {
         DB::table('research')->insert([
-            'user_email' => '789@gmail.com',
+            'user_id' => 'members:000022996',
             'research_id' => '9789'
         ]);
         DB::table('research')->insert([
-            'user_email' => 'nr_april.feldman@csun.edu',
+            'user_id' => 'members:000021315',
             'research_id' => '04'
+        ]);
+        DB::table('research')->insert([
+            'user_id'=>'members:100010526',
+            'research_id' => '10'
         ]);
     }
 }

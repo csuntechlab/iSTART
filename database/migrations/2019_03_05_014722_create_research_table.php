@@ -14,7 +14,7 @@ class CreateResearchTable extends Migration
     public function up()
     {
         Schema::create('research', function (Blueprint $table) {
-            $table->string('user_email');
+            $table->string('user_id');
             $table->integer('research_id');
         });
     }
@@ -26,6 +26,6 @@ class CreateResearchTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_research');
+        Schema::dropIfExists('research');
     }
 }

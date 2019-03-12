@@ -7,9 +7,11 @@ use App\Models\Research;
 
 class ResearchService implements ResearchContract
 {
-    public function userHasResearchId(array $data){
-        $userResearch = Research::where('user_email', $data['user_email'])->first();
-
+    public function userHasResearchId($user){
+        $userResearch = null;
+        if(isset($user['user_id'])){
+            $userResearch = Research::where('user_id', $user['user_id'])->first();
+        }
         if( $userResearch === null){
             return false;
         }else {

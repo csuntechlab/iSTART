@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 interface ResearchContract
 {
-    public function userHasResearchId(array $data);
+    public function userHasResearchId($user);
 }
