@@ -1,5 +1,5 @@
 <template>
-  <div class="ComparisonGroup">
+  <div class="comparison-group">
     <h1>Comparison Group</h1>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="InterventionGroup">
+  <div class="intervention-group">
     <h1>Intervention Group</h1>
   </div>
 </template>
