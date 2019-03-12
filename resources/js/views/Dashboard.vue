@@ -18,7 +18,7 @@ import ComparisonGroup from './ComparisonGroup'
 import InterventionGroup from './InterventionGroup'
 
 export default {
-  name: 'dashboard',
+  name: 'Dashboard',
   components: {
     ControlGroup,
     ComparisonGroup,

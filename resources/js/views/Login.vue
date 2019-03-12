@@ -32,7 +32,7 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  name: 'login',
+  name: 'Login',
   data () {
     return {
       userInfoForm: {

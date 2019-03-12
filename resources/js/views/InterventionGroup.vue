@@ -1,16 +1,16 @@
 <template>
   <div class="intervention-group">
-    <dashboard/>
+    <DashboardModules></DashboardModules>
     <h1 class="text-center">Intervention Group</h1>
   </div>
 </template>
 
 <script>
-import Dashboard from './../components/global/Dashboard'
+import DashboardModules from './../components/global/DashboardModules'
 export default {
   name: 'InterventionGroup',
   components: {
-    Dashboard
+    DashboardModules
   }
 }
 </script>

@@ -18,19 +18,19 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'login',
+      name: 'Login',
       component: Login,
       meta: { title: 'iSTART | login' }
     },
     {
       path: '/logout',
-      name: 'logout',
+      name: 'Logout',
       component: Logout,
       meta: { title: 'iSTART' }
     },
     {
       path: '/',
-      name: 'dashboard',
+      name: 'Dashboard',
       component: Dashboard,
       meta: { title: 'iSTART' }
     }

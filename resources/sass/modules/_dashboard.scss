@@ -1,50 +1,50 @@
 .dashboard {
-  padding: 0;
-  
-  &-notification {
-    padding: 0.5rem 1rem;
-    background-color: white;
-    color: rgb(25, 25, 25);
-    box-shadow: 0 4px 8px 0 rgba(38,153,251, 0.2);
+    padding: 0;
 
-    & * {
-      font-size: 1rem;
-      transition: 350ms;
+    &-notification {
+        padding: 0.5rem 1rem;
+        background-color: white;
+        color: rgb(25, 25, 25);
+        box-shadow: 0 4px 8px 0 rgba(38,153,251, 0.2);
 
-      @include media-breakpoint-up(sm) {
-        & {
-          font-size: 1.15rem;
+        & * {
+        font-size: 1rem;
+        transition: 350ms;
+
+            @include media-breakpoint-up(sm) {
+                & {
+                    font-size: 1.15rem;
+                }
+            }
         }
-      }
-    }
 
-    &__message {
-      &-container {
-        display: inline-block;
-      }
+        &__message {
+            &-container {
+                display: inline-block;
+            }
 
-      &-date {
-        color: $i-blue;
-      }
-    }
-
-    &__schedule {
-      &-button {
-        display: inline-block;
-        text-align: right;
-
-        &  * {
-          color: rgb(25, 25, 25);
-
-          &:hover {
-            text-decoration: none;
-          }
+            &-date {
+                color: $i-blue;
+            }
         }
-      }
 
-      &-text {
-        font-weight: bold;
-      }
+        &__schedule {
+            &-button {
+                display: inline-block;
+                text-align: right;
+
+                &  * {
+                color: rgb(25, 25, 25);
+
+                &:hover {
+                    text-decoration: none;
+                }
+                }
+            }
+
+            &-text {
+                font-weight: bold;
+            }
+        }
     }
-  }
 }
