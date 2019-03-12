@@ -1,9 +1,8 @@
-@import './variables';
 
 .navbar{
     background-color: $i-light-blue;
     color: $i-white;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;

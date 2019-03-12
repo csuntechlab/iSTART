@@ -1,7 +1,9 @@
 <template>
   <div class="app">
     <navbar v-show="$route.path != '/login'" ></navbar>
-    <router-view />
+    <div class="main-wrapper">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,9 @@ export default {
   methods: {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
-        this.$router.push({ name: 'dashboard' })
+        if (this.$route.fullPath === '/login') {
+          this.$router.push({ name: 'dashboard' })
+        }
       } else {
         this.$router.push({ name: 'login' })
       }

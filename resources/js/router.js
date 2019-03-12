@@ -3,9 +3,6 @@ import Router from 'vue-router'
 import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
-import ControlGroup from './views/ControlGroup.vue'
-import ComparisonGroup from './views/ComparisonGroup.vue'
-import InterventionGroup from './views/InterventionGroup.vue'
 import Error from './views/Error.vue'
 
 Vue.use(Router)
@@ -36,24 +33,6 @@ export default new Router({
       name: 'dashboard',
       component: Dashboard,
       meta: { title: 'iSTART' }
-    },
-    {
-      path: '/controlgroup',
-      name: 'ControlGroup',
-      meta: { title: 'iSTART - Control' },
-      component: ControlGroup
-    },
-    {
-      path: '/comparisonGroup',
-      name: 'ComparisonGroup',
-      meta: { title: 'iSTART - Comparison' },
-      component: ComparisonGroup
-    },
-    {
-      path: '/interventiongroup',
-      name: 'InterventionGroup',
-      meta: { title: 'iSTART - Intervention' },
-      component: InterventionGroup
     }
   ]
 })
