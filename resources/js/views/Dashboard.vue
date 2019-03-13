@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import ControlGroup from './ControlGroup'
-import ComparisonGroup from './ComparisonGroup'
-import InterventionGroup from './InterventionGroup'
+import ControlGroup from './../components/dashboard/ControlGroup'
+import ComparisonGroup from './../components/dashboard/ComparisonGroup'
+import InterventionGroup from './../components/dashboard/InterventionGroup'
 
 export default {
   name: 'Dashboard',

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import DashboardModules from './../components/global/DashboardModules'
+import DashboardModules from './DashboardModules'
 
 export default {
   name: 'ComparisonGroup',

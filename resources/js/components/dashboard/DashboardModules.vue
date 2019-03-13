@@ -11,7 +11,7 @@
 
 <script>
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
-import DashboardNotification from './../../components/global/DashboardNotification'
+import DashboardNotification from './DashboardNotification'
 
 export default {
   name: 'DashboardModules',

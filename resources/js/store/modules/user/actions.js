@@ -12,7 +12,7 @@ export default {
             cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1)
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
-            router.push({ name: 'dashboard' })
+            router.push({ name: 'Dashboard' })
           } else {
             commit('VERIFY_USER_DATA', response.data)
           }
@@ -24,7 +24,7 @@ export default {
 
   clearUserData ({ commit }) {
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
-    router.push({ name: 'login' })
+    router.push({ name: 'Login' })
     commit('CLEAR_USER_DATA')
   }
 }

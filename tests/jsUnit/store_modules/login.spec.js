@@ -71,16 +71,16 @@ describe('userStore/mutations/VERIFY_USER_DATA', () => {
     expect(state.user.group).toEqual(payload.group)
   })
 
-  it('should set user object group to intervention when mutation is called', () => {
+  it('should set user object group for intervention when mutation is called', () => {
     payload.group = 'intervention'
     userStore.mutations.VERIFY_USER_DATA(state, payload)
     expect(state.user.group).toEqual(payload.group)
   })
 
-  it('should set user object group to null when mutation is called', () => {
+  it('should check user object group for null when mutation is called', () => {
     payload.group = null
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.group).toEqual(payload.group)
+    expect(state.user.group).toEqual(null)
   })
 })
 
