@@ -1,37 +1,34 @@
 <template>
   <div class="dashboard container-fluid">
-    <div v-if="controlGroup">
+    <div v-if="this.userGroup === 'control'">
       <ControlGroup></ControlGroup>
     </div>
-    <div v-if="comparisonGroup">
+    <div v-if="this.userGroup === 'comparison'">
       <ComparisonGroup></ComparisonGroup>
     </div>
-    <div v-if="interventionGroup">
+    <div v-if="this.userGroup === 'intervention'">
       <InterventionGroup></InterventionGroup>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import ControlGroup from './../components/dashboard/ControlGroup'
 import ComparisonGroup from './../components/dashboard/ComparisonGroup'
 import InterventionGroup from './../components/dashboard/InterventionGroup'
 
 export default {
   name: 'Dashboard',
+  computed: {
+    ...mapGetters([
+      'userGroup'
+    ])
+  },
   components: {
     ControlGroup,
     ComparisonGroup,
     InterventionGroup
-  },
-
-  data () {
-    // Waiting for route to be updated to implement state
-    return {
-      controlGroup: false,
-      comparisonGroup: false,
-      interventionGroup: true
-    }
   }
 }
 </script>
