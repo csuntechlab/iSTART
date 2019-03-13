@@ -27,6 +27,16 @@ describe('userStore/actions/VerifyUserData', () => {
     await userStore.actions.verifyUserData({ commit }, userInfo)
     expect(commit).toHaveBeenCalled()
   })
+
+  it('should respond with null user group and check for userInfo to be null or undefined', async () => {
+    apiResponse.group = null
+    userAPI.verifyUserDataAPI.mockImplementation(calledWith => {
+      return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
+    })
+    let commit = jest.fn()
+    await userStore.actions.verifyUserData({ commit }, userInfo)
+    expect(userInfo.group).toBeNil()
+  })
 })
 
 describe('userStore/actions/ClearUserData', () => {

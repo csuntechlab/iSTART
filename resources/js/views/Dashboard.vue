@@ -1,12 +1,12 @@
 <template>
   <div class="dashboard container-fluid">
-    <div v-if="this.userGroup === 'control'">
+    <div v-if="this.user.group === 'control'">
       <ControlGroup></ControlGroup>
     </div>
-    <div v-if="this.userGroup === 'comparison'">
+    <div v-if="this.user.group === 'comparison'">
       <ComparisonGroup></ComparisonGroup>
     </div>
-    <div v-if="this.userGroup === 'intervention'">
+    <div v-if="this.user.group === 'intervention'">
       <InterventionGroup></InterventionGroup>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   name: 'Dashboard',
   computed: {
     ...mapGetters([
-      'userGroup'
+      'user'
     ])
   },
   components: {

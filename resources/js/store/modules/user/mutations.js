@@ -7,6 +7,7 @@ export default {
       state.correctLoginInfo = false
     }
   },
+
   CLEAR_USER_DATA (state) {
     state.user = {}
     state.correctLoginInfo = null
