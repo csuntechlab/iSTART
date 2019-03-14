@@ -14,10 +14,10 @@ class CreateUserRoles extends Migration
     public function up()
     {
         Schema::create('user_roles', function (Blueprint $table) {
-            $table->string('user_email');
-            $table->string('user_role');
-            $table->string('display_name');
-            $table->string('remember_token');
+            $table->string('user_id');
+            $table->string('user_role')->nullable();
+            $table->string('display_name')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }

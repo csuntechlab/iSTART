@@ -33,7 +33,7 @@ class User extends MetaUser
     public function userRole()
     {
 
-        return $this->hasOne('App\Models\UserRoles','user_email');
+        return $this->hasOne('App\Models\UserRoles','user_id');
     }
 
 //    public function hasRole($user)

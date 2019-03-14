@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Tests\ServiceTests;
 
 use App\Models\UserRoles;
+use App\Models\User;
 use App\Services\UserRoleService;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
+use Illuminate\Support\Facades\DB;
+
 
 class UserRoleServiceTest extends TestCase
 {
@@ -53,24 +56,40 @@ class UserRoleServiceTest extends TestCase
      */
     public function user_is_evenly_distributed_into_the_groups_and_assigned_a_role()
     {
-        $userRolesDB = ['user_role'];
+        $service = new UserRoleService();
+        $userRolesDB = [];
         $this->assertDatabaseMissing('user_roles', $userRolesDB);
 
         for($i = 1; $i <= 120; $i++) {
-            $data = [//user data
-                'user_id' => 'member',
-                'email' => 'nr_steven.fitzgerald@csun.edu',
-                ''
-            ];
-            $this->utility->sortAuthenticatedUsers($data);
-            $userRolesDB = [
-                'id' => $i,
-                'user_role' => 'comparison',//since each user will have different group, how will
-                //make it so each user_role is not just testing comparison
 
+            $user = new User(['user_id'=>$i]
+                            );
+            $this->be($user);
+            $dataFromService = $service->sortAuthenticatedUsers($user);
+
+            $userRolesDB = [
+
+                'user_id'=>$i,
+                'user_role'=>$dataFromService
             ];
 
             $this->assertDatabaseHas('user_roles', $userRolesDB);
+            $this->assertNotNull($dataFromService);
+
         }
+
+        $groups = DB::table('user_roles')
+            ->selectRaw('user_role, COUNT(*) as count')
+            ->groupBy('user_role')
+            ->get();
+
+        $comparisonCountFromData = $groups->where('user_role', 'comparison')->first();
+        $controlCountFromData = $groups->where('user_role', 'control')->first();
+        $interventionCountFromData = $groups->where('user_role', 'intervention')->first();
+
+        $this->assertEquals($comparisonCountFromData->count,40);
+        $this->assertEquals($controlCountFromData->count,40);
+        $this->assertEquals($interventionCountFromData->count,40);
+
     }
 }

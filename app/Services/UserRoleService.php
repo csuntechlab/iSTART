@@ -25,46 +25,94 @@ class UserRoleService implements UserRoleContract
             ];
     }
 
+
     public function sortAuthenticatedUsers($user)
     {
+        $userInUserRoles = UserRoles::where('user_id', $user['user_id'])->first();
+        //dd($userInUserRoles);
+        //dd($user);
 
-
-        $userInUserRoles = UserRoles::where('user_email', $user['email'])->first();
 
         if($userInUserRoles == null) {
 
-        $userInUserRoles = UserRoles::firstOrCreate(['user_email'=>$user['email'],'user_role'=>'','display_name'=>'','remember_token'=>'']);
+       // $userInUserRoles = UserRoles::firstOrCreate(['user_id'=>$user['user_id'],'user_role'=>'','display_name'=>'','remember_token'=>'']);
+           // dd($userInUserRoles);
+
+            $userInUserRoles = new UserRoles();
+            $userInUserRoles->user_id = $user['user_id'];
+            $userInUserRoles->user_role = null;
+            $userInUserRoles->display_name = null;
+            $userInUserRoles->remember_token = null;
+            $userInUserRoles->save();
+
 
             $groups = DB::table('user_roles')
                 ->selectRaw('user_role, COUNT(*) as count')
                 ->groupBy('user_role')
                 ->get();
-            $comparisonCount = $groups->where('user_role', 'comparison')->first();
-            $controlCount = $groups->where('user_role', 'control')->first();
-            $interventionCount = $groups->where('user_role', 'intervention')->first();
 
-            if ($comparisonCount->count < $controlCount->count and $interventionCount->count) {
-                $userInUserRoles->user_role = 'comparison';
-                $userInUserRoles->save();
+            $comparison_Count = 0;
+            $control_Count = 0;
+            $intervention_Count = 0;
 
-                return 'comparison';
+            $comparisonCountFromData = $groups->where('user_role', 'comparison')->first();
+            $controlCountFromData = $groups->where('user_role', 'control')->first();
+            $interventionCountFromData = $groups->where('user_role', 'intervention')->first();
 
-            } elseif ($controlCount->count < $comparisonCount->count and $interventionCount->count) {
+
+            if ( $comparisonCountFromData != NULL){
+                $comparison_Count = $comparisonCountFromData->count;
+
+            }
+            if ($controlCountFromData != NULL) {
+                $control_Count = $controlCountFromData->count;
+            }
+
+            if ($interventionCountFromData != NULL) {
+                $intervention_Count = $interventionCountFromData->count;
+                //ONLY CONTROL IS POPULATING, NOTHING ELSE IN THE DATABASE IS.
+
+            }
+
+            if ($control_Count == 0){
 
                 $userInUserRoles->user_role = 'control';
                 $userInUserRoles->save();
 
-                return 'control';
-            } else {
+               // dd($userInUserRoles);
+
+                //return $userInUserRoles->user_role;
+
+
+            }elseif($comparison_Count == 0){
+
+                $userInUserRoles->user_role = 'comparison';
+                $userInUserRoles->save();
+
+
+            }elseif ($intervention_Count == 0){
 
                 $userInUserRoles->user_role = 'intervention';
                 $userInUserRoles->save();
 
-                return 'intervention';
+            }elseif ( $comparison_Count <= $control_Count and $comparison_Count<= $intervention_Count){
+
+                $userInUserRoles->user_role = 'comparison';
+                $userInUserRoles->save();
+
+            } elseif ($control_Count < $comparison_Count and $control_Count< $intervention_Count) {
+
+                $userInUserRoles->user_role = 'control';
+                $userInUserRoles->save();
+
+            } else{
+
+                $userInUserRoles->user_role = 'intervention';
+                $userInUserRoles->save();
             }
-        }else{
-            return $userInUserRoles->user_role;
+           // var_dump($groups);
         }
 
+        return $userInUserRoles->user_role;
     }
 }

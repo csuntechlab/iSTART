@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserRoles extends Model
 {
-    protected $primaryKey = 'user_email';
+    protected $table = 'user_roles';
+    protected $primaryKey = 'user_id';
     public $incrementing = false;
 
 
@@ -18,12 +19,12 @@ class UserRoles extends Model
      * @var array
      */
     protected $fillable = [
-        'user_email', 'user_role', 'remember_token', 'display_name',
+        'user_id', 'user_role', 'remember_token', 'display_name',
     ];
 
     public function userRole()
     {
-        return $this->hasOne('App\Models\User', 'email','user_email');
+        return $this->hasOne('App\Models\User', 'user_id','user_id');
 
     }
 
