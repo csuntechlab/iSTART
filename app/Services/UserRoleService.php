@@ -29,14 +29,8 @@ class UserRoleService implements UserRoleContract
     public function sortAuthenticatedUsers($user)
     {
         $userInUserRoles = UserRoles::where('user_id', $user['user_id'])->first();
-        //dd($userInUserRoles);
-        //dd($user);
-
 
         if($userInUserRoles == null) {
-
-       // $userInUserRoles = UserRoles::firstOrCreate(['user_id'=>$user['user_id'],'user_role'=>'','display_name'=>'','remember_token'=>'']);
-           // dd($userInUserRoles);
 
             $userInUserRoles = new UserRoles();
             $userInUserRoles->user_id = $user['user_id'];
@@ -70,7 +64,6 @@ class UserRoleService implements UserRoleContract
 
             if ($interventionCountFromData != NULL) {
                 $intervention_Count = $interventionCountFromData->count;
-                //ONLY CONTROL IS POPULATING, NOTHING ELSE IN THE DATABASE IS.
 
             }
 
@@ -78,11 +71,6 @@ class UserRoleService implements UserRoleContract
 
                 $userInUserRoles->user_role = 'control';
                 $userInUserRoles->save();
-
-               // dd($userInUserRoles);
-
-                //return $userInUserRoles->user_role;
-
 
             }elseif($comparison_Count == 0){
 
@@ -110,7 +98,6 @@ class UserRoleService implements UserRoleContract
                 $userInUserRoles->user_role = 'intervention';
                 $userInUserRoles->save();
             }
-           // var_dump($groups);
         }
 
         return $userInUserRoles->user_role;
