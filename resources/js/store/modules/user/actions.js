@@ -18,7 +18,6 @@ export default {
               document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
               router.push({ name: 'Login' })
               commit('CLEAR_USER_DATA')
-              console.log('NO USER GROUP DEFINED!')
             }
           } else {
             commit('VERIFY_USER_DATA', response.data)
