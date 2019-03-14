@@ -10,6 +10,7 @@ use Mockery;
 use App\Contracts\AuthenticationContract;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
 
 class AuthenticationServiceTest extends TestCase

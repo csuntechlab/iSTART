@@ -29,4 +29,9 @@ class User extends MetaUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getUserRole()
+    {
+        return $this->hasOne('App\Models\UserGroup');
+    }
 }

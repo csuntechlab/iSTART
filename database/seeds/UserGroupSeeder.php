@@ -13,7 +13,7 @@ class UserGroupSeeder extends Seeder
     {
         DB::table('user_groups')->insert([
             'user_group' => 'comparison',
-            'user_id' => 'members:000022431',
+            'user_id' => 'members:000022575',
             'display_name' => 'Cyndee Bellamy',
             'remember_token' => '12394iresjntgruirf9eiokwj',
         ]);

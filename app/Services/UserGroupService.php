@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Contracts\UserGroupContract;
-use App\Models\UserGroups;
+use App\Models\UserGroup;
 
 class UserGroupService implements UserGroupContract
 {
     public function getGroup(array $data): array
     {
-        $userGroup = UserGroups::where('user_id', $data['user_id'])->first();
+        $userGroup = UserGroup::where('user_id', $data['user_id'])->first();
 
         return [
             'user_group' => $userGroup['user_group'],

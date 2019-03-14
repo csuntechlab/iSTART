@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\ServiceTests;
 
-use App\Models\UserGroups;
+use App\Models\UserGroup;
 use App\Services\UserGroupService;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
@@ -20,7 +20,7 @@ class UserGroupServiceTest extends TestCase
     {
         $userGroupService = new UserGroupService();
 
-        $userGroupFactory = factory(UserGroups::class)->make([
+        $userGroupFactory = factory(UserGroup::class)->make([
             'user_id' => 'someone@face.com',
             'user_group' => 'some group',
             'display_name' => 'Someone Name',

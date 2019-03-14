@@ -6,8 +6,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserGroups extends Model
+class UserGroup extends Model
 {
+    protected $table = 'user_groups';
     /**
      * The attributes that are mass assignable.
      *
@@ -16,4 +17,10 @@ class UserGroups extends Model
     protected $fillable = [
         'user_id', 'user_group', 'remember_token', 'display_name',
     ];
+    public function getUserRole()
+    {
+        return $this->belongsTo('App\Models\UserGroup');
+    }
+
+
 }
