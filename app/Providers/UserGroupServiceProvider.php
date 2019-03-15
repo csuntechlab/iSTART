@@ -6,13 +6,13 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class UserRoleServiceProvider extends ServiceProvider
+class UserGroupServiceProvider extends ServiceProvider
 {
     public function register()
     {
         $this->app->bind(
-            'App\Contracts\UserRoleContract',
-            'App\Services\UserRoleService'
+            'App\Contracts\UserGroupContract',
+            'App\Services\UserGroupService'
         );
     }
 }
