@@ -181,6 +181,8 @@ return [
         App\Providers\UserRoleServiceProvider::class,
 
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
+        CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,
+
 
 
     ],

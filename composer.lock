@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9c1a68838f803a55bbf8c28d8d14865",
+    "content-hash": "039201f31f0f2f55e650a3684ca7f5d4",
     "packages": [
         {
             "name": "csun-metalab/laravel-directory-authentication",
@@ -44,6 +44,45 @@
             ],
             "description": "Composer package for Laravel 5.0 and above to allow for directory-based authentication",
             "time": "2018-04-30T21:56:20+00:00"
+        },
+        {
+            "name": "csun-metalab/laravel-proxypass",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/csun-metalab/laravel-proxypass.git",
+                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/csun-metalab/laravel-proxypass/zipball/dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
+                "reference": "dc64a99045e45ffaf39dd128a996d9f7e8ad49f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/ProxyPass/"
+                ],
+                "psr-0": {
+                    "CSUNMetaLab\\ProxyPass\\": "src/ProxyPass/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Fritz",
+                    "email": "mattf@burbankparanormal.com"
+                }
+            ],
+            "description": "Composer package for Laravel that resolves the correct absolute URLs when behind a proxy",
+            "time": "2017-11-08T18:56:10+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3097,7 +3136,7 @@
             "keywords": [
                 "ldap"
             ],
-            "time": "2013-02-04T07:37:38+00:00"
+            "time": "2013-02-04 07:37:38"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
