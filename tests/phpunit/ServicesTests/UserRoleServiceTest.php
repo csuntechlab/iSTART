@@ -22,7 +22,6 @@ class UserRoleServiceTest extends TestCase
     {
         parent::setUp();
         $this->utility = new UserRoleService();
-
     }
     /**
      * @test

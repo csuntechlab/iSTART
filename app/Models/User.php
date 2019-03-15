@@ -36,10 +36,4 @@ class User extends MetaUser
         return $this->hasOne('App\Models\UserRoles','user_id');
     }
 
-//    public function hasRole($user)
-//    {
-//        if ($user->roles())
-//
-//        return
-//    }
 }
