@@ -37,7 +37,6 @@ class AuthenticationServiceTest extends TestCase
      * @test
      */
     public function authenticateUser_returns_authenticated_user(){
-//        $data = ['username' => 'steve@csun.edu', 'password' => ''];
         $returnData = ['user_id'=>'members:000022575',
                         'valid'=>'1',
                         'user_group'=> 'comparison'

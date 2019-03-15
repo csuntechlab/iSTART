@@ -16,7 +16,7 @@ class UserGroupServiceTest extends TestCase
     /**
      * @test
      */
-    public function getGroup_returns_group_remember_token_display_name_and_email_from_utility_as_array()
+    public function getGroup_returns_group_remember_token_display_name_and_id_from_utility_as_array()
     {
         $userGroupService = new UserGroupService();
 
@@ -34,8 +34,8 @@ class UserGroupServiceTest extends TestCase
             'remember_token' => 'toke',
         ];
 
-        $email = ['user_id' => 'someone@face.com'];
-        $outputFromUserGroupService = $userGroupService->getGroup($email);
+        $id = ['user_id' => 'someone@face.com'];
+        $outputFromUserGroupService = $userGroupService->getGroup($id);
 
         $this->assertEquals($data, $outputFromUserGroupService);
     }

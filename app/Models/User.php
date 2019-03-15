@@ -30,7 +30,7 @@ class User extends MetaUser
         'password', 'remember_token',
     ];
 
-    public function getUserRole()
+    public function getUserGroup()
     {
         return $this->hasOne('App\Models\UserGroup');
     }

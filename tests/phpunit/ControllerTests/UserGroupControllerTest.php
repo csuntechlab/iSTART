@@ -25,7 +25,7 @@ class UserGroupControllerTest extends TestCase
     /**
      * @test
      */
-    public function getGroup_returns_group_and_email_from_utility_as_array()
+    public function getGroup_returns_group_and_id_from_utility_as_array()
     {
         $data = [
             'user_group' => 'some group',

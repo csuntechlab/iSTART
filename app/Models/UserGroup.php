@@ -17,7 +17,7 @@ class UserGroup extends Model
     protected $fillable = [
         'user_id', 'user_group', 'remember_token', 'display_name',
     ];
-    public function getUserRole()
+    public function getUserGroup()
     {
         return $this->belongsTo('App\Models\UserGroup');
     }
