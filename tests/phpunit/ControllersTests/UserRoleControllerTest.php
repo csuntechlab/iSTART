@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ControllerTests;
+namespace Tests\ControllersTests;
 
 use App\Contracts\UserRoleContract;
 use App\Http\Controllers\UserRoleController;

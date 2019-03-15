@@ -15,11 +15,11 @@ class UserRoleService implements UserRoleContract
 {
     public function getRole(array $data): array
     {
-        $userRole = UserRoles::where('user_email', $data['user_email'])->first();
+        $userRole = UserRoles::where('user_id', $data['user_id'])->first();
 
         return [
             'user_role' => $userRole['user_role'],
-            'user_email' => $data['user_email'],
+            'user_id' => $data['user_id'],
             'display_name' => $userRole['display_name'],
             'remember_token' => $userRole['remember_token'],
             ];

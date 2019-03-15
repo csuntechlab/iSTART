@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ServiceTests;
+namespace Tests\ServicesTests;
 
 use App\Models\UserRoles;
 use App\Models\User;
@@ -32,21 +32,21 @@ class UserRoleServiceTest extends TestCase
         $userRoleService = new UserRoleService();
 
         $userRoleFactory = factory(UserRoles::class)->make([
-            'user_email' => 'someone@face.com',
+            'user_id' => 'members:12345',
             'user_role' => 'some role',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ])->save();
 
         $data = [
-            'user_email' => 'someone@face.com',
+            'user_id' => 'members:12345',
             'user_role' => 'some role',
             'display_name' => 'Someone Name',
             'remember_token' => 'toke',
         ];
 
-        $email = ['user_email' => 'someone@face.com'];
-        $outputFromUserRoleService = $userRoleService->getRole($email);
+        $user_id = ['user_id' => 'members:12345'];
+        $outputFromUserRoleService = $userRoleService->getRole($user_id);
 
         $this->assertEquals($data, $outputFromUserRoleService);
     }
