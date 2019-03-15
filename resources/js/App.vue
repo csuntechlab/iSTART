@@ -1,9 +1,32 @@
 <template>
-  <div>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<div>
+    <navbar v-show="$route.path != '/login'" ></navbar>
+    <div class="main-wrapper">
+      <router-view />
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+import navbar from './globals/navbar.vue'
+export default {
+  components: {
+    navbar
+  },
+
+  methods: {
+    checkForCookies () {
+      if (document.cookie.includes('userKey')) {
+        if (this.$route.fullPath === '/login') {
+          this.$router.push({ name: 'welcome' })
+        }
+      } else {
+        this.$router.push({ name: 'login' })
+      }
+    }
+  },
+  mounted () {
+    this.checkForCookies()
+  }
+}
+</script>
