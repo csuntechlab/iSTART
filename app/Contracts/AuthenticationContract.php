@@ -11,6 +11,5 @@ namespace App\Contracts;
 
 interface AuthenticationContract
 {
-
     public function authenticateUser($credentials);
 }

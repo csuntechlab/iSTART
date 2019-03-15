@@ -5,9 +5,10 @@ namespace App\Models;
 use App\Models\User;
 
 use Illuminate\Database\Eloquent\Model;
-
+ 
 class Research extends Model
 {
+    protected $table = 'research';
     /**
      * The attributes that are mass assignable.
      *

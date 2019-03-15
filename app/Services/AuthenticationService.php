@@ -8,16 +8,16 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthenticationService implements AuthenticationContract
 {
-    protected $researchUtility;
+    protected $researchUtility = null;
 
-    public function __constructor(ResearchContract $researchUtility){
+    public function __construct(ResearchContract $researchUtility){
         $this->researchUtility = $researchUtility;
     }
 
     public function authenticateUser($credentials){
         if(auth()->attempt($credentials)){
             $user = auth()->user();
-            if( $this->researchUtility->userHasResearchId($user['user_id']) == true ){
+            if( $this->researchUtility->userHasResearchId($user) ){
                 $user['valid'] = '1';
                 $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid']];
                 return $response;
