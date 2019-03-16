@@ -11,6 +11,7 @@ class User extends MetaUser
 {
     use Notifiable;
 
+    protected $primaryKey = 'user_id';
     public $incrementing = false;
     /**
      * The attributes that are mass assignable.
@@ -30,10 +31,8 @@ class User extends MetaUser
         'password', 'remember_token',
     ];
 
-    public function userRole()
+    public function getUserGroup()
     {
-
-        return $this->hasOne('App\Models\UserRoles','user_id');
+        return $this->hasOne('App\Models\UserGroup');
     }
-
 }

@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::post('loginVerification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
 
-Route::get('/get_role/{email}','UserRoleController@getRole');
+Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
 Route::get('/user','UserRoleController@sortAuthenticatedUsers');

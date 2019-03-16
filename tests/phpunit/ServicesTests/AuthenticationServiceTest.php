@@ -10,7 +10,9 @@ use Mockery;
 use App\Contracts\AuthenticationContract;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AuthenticationServiceTest extends TestCase
 {
@@ -18,12 +20,15 @@ class AuthenticationServiceTest extends TestCase
      *@uses AuthenticationService
      * @return void
      */
+
+    use DatabaseMigrations;
     protected $AuthenticationService;
     protected $utility;
 
     public function setUp()
     {
         parent::setUp();
+        $this->seed(\UserGroupSeeder::class);
         $this->utility = Mockery::spy(AuthenticationContract::class);
 
     }
@@ -32,12 +37,12 @@ class AuthenticationServiceTest extends TestCase
      * @test
      */
     public function authenticateUser_returns_authenticated_user(){
-//        $data = ['username' => 'steve@csun.edu', 'password' => ''];
-        $returnData = ['user_id'=>'members:100010526',
+        $returnData = ['user_id'=>'members:000022575',
                         'valid'=>'1',
+                        'user_group'=> 'comparison'
                         ];
         $user = new User([
-            'user_id' => 'members:100010526',
+            'user_id' => 'members:000022575',
             'rank' => 'beast',
         ]);
         $this->be($user);

@@ -6,16 +6,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserRoles extends Migration
+class CreateUserGroups extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create('user_roles', function (Blueprint $table) {
+        Schema::create('user_groups', function (Blueprint $table) {
             $table->string('user_id');
-            $table->string('user_role')->nullable();
+            $table->string('user_group')->nullable();
             $table->string('display_name')->nullable();
             $table->string('remember_token')->nullable();
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateUserRoles extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_roles');
+        Schema::dropIfExists('user_groups');
     }
 }

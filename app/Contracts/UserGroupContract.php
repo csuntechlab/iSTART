@@ -4,10 +4,9 @@ namespace App\Contracts;
 
 use Illuminate\Http\Request;
 
-interface UserRoleContract
+interface UserGroupContract
 {
-    public function getRole(array $data): array;
+    public function getGroup(array $data): array;
     public function sortAuthenticatedUsers($user);
-
 
 }
