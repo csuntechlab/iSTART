@@ -179,8 +179,9 @@ return [
          * Custom Service Providers
          */
         App\Providers\ResearchServiceProvider::class,
-        App\Providers\UserRoleServiceProvider::class,
+        App\Providers\UserGroupServiceProvider::class,
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
+        CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,
 
 
     ],

@@ -11,7 +11,9 @@ use App\Contracts\AuthenticationContract;
 use App\Contracts\ResearchContract;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AuthenticationServiceTest extends TestCase
 {
@@ -19,6 +21,8 @@ class AuthenticationServiceTest extends TestCase
      *@uses AuthenticationService
      * @return void
      */
+
+    use DatabaseMigrations;
     protected $AuthenticationService;
     protected $utility;
     protected $researchContract;
@@ -26,6 +30,7 @@ class AuthenticationServiceTest extends TestCase
     public function setUp()
     {
         parent::setUp();
+        $this->seed('UserGroupSeeder');
         $this->utility = Mockery::spy(AuthenticationContract::class);
         $this->researchUtility = Mockery::spy(ResearchContract::class);
     }
@@ -34,13 +39,13 @@ class AuthenticationServiceTest extends TestCase
      * @test
      */
     public function authenticateUser_returns_authenticated_user(){
-        $returnSuccessfulData = [
-            'user_id'=>'members:100010526',
-            'valid'=>'1'
+        $returnData = [
+            'user_id'=>'members:000022575',
+            'valid'=>'1',
+            'user_group'=> 'comparison'
         ];
-
         $user = new User([
-            'user_id' => 'members:100010526',
+            'user_id' => 'members:000022575',
             'rank' => 'beast',
         ]);
 
@@ -49,14 +54,14 @@ class AuthenticationServiceTest extends TestCase
             ->once()
             ->andReturn(true);
         Auth::shouldReceive('user')
-            ->andReturn($returnSuccessfulData);
+            ->andReturn($returnData);
 
         $service = new AuthenticationService($this->researchUtility);
 
         $this->utility
             ->shouldReceive('authenticateUser')
-            ->andReturn($returnSuccessfulData);
+            ->andReturn($returnData);
         // dd($service->authenticateUser($user));
-        $this->assertEquals($returnSuccessfulData, $service->authenticateUser($user));
+        $this->assertEquals($returnData, $service->authenticateUser($user));
     }
 }

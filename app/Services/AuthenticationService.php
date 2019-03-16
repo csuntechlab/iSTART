@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Services;
+use App\Models\UserGroup;
 use App\Contracts\AuthenticationContract;
 use App\Contracts\ResearchContract;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ class AuthenticationService implements AuthenticationContract
             $user = auth()->user();
             if( $this->researchUtility->userHasResearchId($user) ){
                 $user['valid'] = '1';
-                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid']];
+                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroupValue['user_group']];
                 return $response;
             } else{
                 $response = ['valid' => '0'];

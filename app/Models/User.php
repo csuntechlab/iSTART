@@ -35,4 +35,8 @@ class User extends MetaUser
         return $this->hasOne('App\Models\Research', 'user_id');
     }
 
+    public function getUserGroup()
+    {
+        return $this->hasOne('App\Models\UserGroup');
+    }
 }

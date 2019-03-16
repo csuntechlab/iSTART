@@ -79,7 +79,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #F5F5F5;
 }
 
 [tabindex="-1"]:focus {
@@ -526,7 +526,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f8fafc;
+  background-color: #F5F5F5;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -4537,16 +4537,16 @@ input[type=button].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  -webkit-box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
-          box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
+  -webkit-box-shadow: 0 0 0 1px #F5F5F5, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
+          box-shadow: 0 0 0 1px #F5F5F5, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
+  box-shadow: 0 0 0 1px #F5F5F5, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
+  box-shadow: 0 0 0 1px #F5F5F5, 0 0 0 0.2rem rgba(38, 153, 251, 0.25);
 }
 
 .custom-range::-moz-focus-outer {
@@ -4765,8 +4765,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #f8fafc;
-  border-color: #dee2e6 #dee2e6 #f8fafc;
+  background-color: #F5F5F5;
+  border-color: #dee2e6 #dee2e6 #F5F5F5;
 }
 
 .nav-tabs .dropdown-menu {
@@ -11663,6 +11663,11 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.focus:focus {
+  -webkit-box-shadow: 1px 2px 2px 1px #2699FB;
+          box-shadow: 1px 2px 2px 1px #2699FB;
+}
+
 .transition-350ms {
   -webkit-transition: 350ms ease-out;
   transition: 350ms ease-out;
@@ -11689,23 +11694,16 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-.main {
-  position: relative;
-  margin-top: 4rem;
+.main-wrapper {
+  margin-top: 3.2rem;
   z-index: 0;
   width: 100%;
 }
 
-/*
-	* What should I put in this file?
-	* This file should only contain sass variables
-	* i.e. $color, $font, $background, etc.
-*/
-
 .navbar {
   background-color: #2699FB;
   color: #FFFFFF;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
@@ -11826,5 +11824,50 @@ a.text-dark:focus {
     margin-top: 6rem;
     margin-bottom: 2rem;
   }
+}
+
+.dashboard-notification {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #191919;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(38, 153, 251, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(38, 153, 251, 0.2);
+}
+
+.dashboard-notification * {
+  font-size: 1rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+@media (min-width: 576px) {
+  .dashboard-notification * {
+    font-size: 1.15rem;
+  }
+}
+
+.dashboard-notification__message-container {
+  display: inline-block;
+}
+
+.dashboard-notification__message-date {
+  color: #2699FB;
+}
+
+.dashboard-notification__schedule-button {
+  display: inline-block;
+  text-align: right;
+}
+
+.dashboard-notification__schedule-button * {
+  color: #191919;
+}
+
+.dashboard-notification__schedule-button *:hover {
+  text-decoration: none;
+}
+
+.dashboard-notification__schedule-text {
+  font-weight: bold;
 }
 
