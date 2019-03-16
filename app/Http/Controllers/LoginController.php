@@ -70,12 +70,4 @@ class LoginController extends Controller
        auth()->logout();
 
     }
-
-    public function sortAuthenticatedUsers()
-    {
-        $user = auth()->user();
-        $userInformation = $this->authenticationUtility->authenticateUser($user);
-        return ($userInformation);
-
-    }
 }
