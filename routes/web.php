@@ -20,7 +20,7 @@ Route::get('logout','LoginController@logout');
 
 Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
-Route::get('/user','UserRoleController@sortAuthenticatedUsers');
+Route::get('/user','UserGroupController@sortAuthenticatedUsers');
 
 Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
 Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');

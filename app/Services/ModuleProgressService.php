@@ -14,8 +14,6 @@ class ModuleProgressService implements ModuleProgressContract
                                             ->where('current_module',$data['current_module'])
                                             ->first()
                                             ->toArray();
-
-
         
         return [
             'user_id' => $moduleProgress['user_id'],
