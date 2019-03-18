@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import navbar from './globals/navbar.vue'
+import navbar from './components/global/navbar.vue'
 import { clearTimeout, setTimeout } from 'timers';
 import {mapActions} from 'vuex'
 export default {
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'logout'
+      'clearUserData'
     ]),
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
@@ -30,13 +30,14 @@ export default {
           this.$router.push({ name: 'welcome' })
         }
       } else {
-        this.$router.push({ name: 'login' })
+        this.$router.push({ name: 'Login' })
       }
     },
     checkUserInactivity() {
       var idleTimeout= parseInt(document.querySelector('meta[name=idle-timeout]').content)  
       this.timeout = setTimeout(()=>{
-        this.logout();
+        console.log('logout')
+        this.clearUserData();
       }, idleTimeout * 60 * 1000)
       window.addEventListener("mousemove", this.resetTimer, false);
       window.addEventListener("mousedown", this.resetTimer, false);

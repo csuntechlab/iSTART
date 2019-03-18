@@ -1,0 +1,19 @@
+.page {
+  &-description {
+    margin-bottom: 1rem;
+
+    & > * {
+      margin: 0;
+    }
+
+    &__header {
+      font-weight: bold;
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__info {
+      font-size: 1.15rem;
+    }
+  }
+}

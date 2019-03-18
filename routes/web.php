@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::post('loginVerification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
 
 Route::get('/get_group/{user_id}','UserGroupController@getGroup');
+
+Route::get('/user','UserRoleController@sortAuthenticatedUsers');

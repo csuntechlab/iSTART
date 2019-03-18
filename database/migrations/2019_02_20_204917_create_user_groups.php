@@ -15,9 +15,9 @@ class CreateUserGroups extends Migration
     {
         Schema::create('user_groups', function (Blueprint $table) {
             $table->string('user_id');
-            $table->string('user_group');
-            $table->string('display_name');
-            $table->string('remember_token');
+            $table->string('user_group')->nullable();
+            $table->string('display_name')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamps();
         });
     }

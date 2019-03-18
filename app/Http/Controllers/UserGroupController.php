@@ -22,4 +22,13 @@ class UserGroupController extends Controller
 
         return $this->userGroupUtility->getGroup($data);
     }
+
+    public function sortAuthenticatedUsers()
+    {
+        $user = auth()->user();
+        $userInformation = $this->userGroupUtility->sortAuthenticatedUsers($user);
+        return ($userInformation);
+
+    }
 }
+
