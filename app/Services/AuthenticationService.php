@@ -27,8 +27,9 @@ class AuthenticationService implements AuthenticationContract
                 $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroup];
                 return $response;
             } else{
-                $newUser = $this->userGroupUtility->sortAuthenticatedUsers($user);
-                $response = ['valid' => '1', 'user_group' => $user['user_group']];
+                $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
+                $newUserInfo = $this->userGroupUtility->getGroup($user);
+                $response = ['valid' => '1', 'user_group' => $userGroup, 'user_id' => $newUserInfo['user_id']];
                 return $response;
             }
         }else{

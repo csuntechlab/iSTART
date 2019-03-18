@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserGroupService implements UserGroupContract
 {
-    public function getGroup(array $data): array
+    public function getGroup($data)
     {
         $userGroup = UserGroup::where('user_id', $data['user_id'])->first();
 

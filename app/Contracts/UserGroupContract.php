@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 interface UserGroupContract
 {
-    public function getGroup(array $data): array;
+    public function getGroup($data);
     public function sortAuthenticatedUsers($user);
 
 }
