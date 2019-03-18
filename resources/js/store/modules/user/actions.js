@@ -14,7 +14,7 @@ async verifyUserData({commit},payload) {
 				router.push({name:'welcome'});
 			}
 			else {
-				commit('VERIFY_USER_DATA', response.data);
+				commit('VERIFY_USER_DATA', response.data)
 			}
 		})
 		.catch(
