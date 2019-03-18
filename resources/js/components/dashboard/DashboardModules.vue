@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div class="dashboard-modules">
     <DashboardNotification></DashboardNotification>
     <div class="mt-5">
       <div class="row text-center m-0" v-for="(item, index) in headings" :key="index">
@@ -11,10 +11,10 @@
 
 <script>
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
-import DashboardNotification from './../../components/global/DashboardNotification'
+import DashboardNotification from './DashboardNotification'
 
 export default {
-  name: 'dashboard',
+  name: 'DashboardModules',
   data () {
     return {
       headings: [
