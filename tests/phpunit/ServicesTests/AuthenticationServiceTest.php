@@ -28,7 +28,7 @@ class AuthenticationServiceTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->seed('UserGroupSeeder');
+        $this->seed(\UserGroupSeeder::class);
         $this->utility = Mockery::spy(AuthenticationContract::class);
 
     }

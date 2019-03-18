@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ControllerTests;
+namespace Tests\ControllersTests;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
