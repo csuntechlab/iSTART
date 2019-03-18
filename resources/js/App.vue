@@ -23,10 +23,14 @@ export default {
       } else {
         this.$router.push({ name: 'login' })
       }
+    },
+    getEnvTimeout() {
+      console.log(document.querySelector('meta[name=time-limit]').content)
     }
   },
   mounted () {
-    this.checkForCookies()
+    this.checkForCookies(),
+    this.getEnvTimeout()
   }
 }
 </script>

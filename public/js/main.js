@@ -6272,10 +6272,13 @@ __webpack_require__.r(__webpack_exports__);
           name: 'login'
         });
       }
+    },
+    getEnvTimeout: function getEnvTimeout() {
+      console.log(document.querySelector('meta[name=time-limit]').content);
     }
   },
   mounted: function mounted() {
-    this.checkForCookies();
+    this.checkForCookies(), this.getEnvTimeout();
   }
 });
 
