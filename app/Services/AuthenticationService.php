@@ -19,19 +19,17 @@ class AuthenticationService implements AuthenticationContract
     }
 
     public function authenticateUser($credentials){
-        // dd($credentials);
         if(auth()->attempt($credentials)){
             $user = auth()->user();
-            // dd($user);
-            if( $this->researchUtility->userHasResearchId($user) ){
+            if( $hasResearchId = $this->researchUtility->userHasResearchId($user) == true){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
-                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroup, 'research_id' => true];
+                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroup, 'research_id' => $hasResearchId];
                 return $response;
             } else{
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
-                $newUserInfo = $this->userGroupUtility->getGroup($user);
-                $response = ['valid' => '1', 'user_group' => $userGroup, 'user_id' => $newUserInfo['user_id'], 'research_id' => false];
+                $response = ['valid' => '1', 'user_group' => $userGroup, 'user_id' => $user['user_id'], 'research_id' =>$hasResearchId];
+
                 return $response;
             }
         }else{

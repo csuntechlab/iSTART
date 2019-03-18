@@ -41,11 +41,13 @@ class AuthenticationServiceTest extends TestCase
     /**
      * @test
      */
+
     public function authenticateUser_without_reasearch_id_returns_authenticated_user(){
         $data = [
             'user_id'=>'members:000022575',
             'valid'=>'1',
-            'user_group'=> 'comparison'
+            'user_group'=> 'comparison',
+            'research_id' => false
         ];
 
         $user = new User([
@@ -65,19 +67,22 @@ class AuthenticationServiceTest extends TestCase
         Auth::shouldReceive('user')
             ->andReturn($data);
 
+        $this->utility
+        ->shouldReceive(['authenticateUser' => $credentials])
+        ->andReturn($data['user_id'], $data['valid'], $data['user_group'], $data['research_id']);
+
         $this->userGroupUtility
-            ->shouldReceive('sortAuthenticatedUsers')
-            ->andReturn($data['user_group']);
+            ->shouldReceive(['sortAuthenticatedUsers' => $user],
+                            ['getGroup' => $user])
+            ->andReturn($data['user_group'], $data['user_id']);
 
         $this->researchUtility
-            ->shouldReceive('userHasResearchId')
-            ->andReturn($data['user_id'], $data['user_id']);
+            ->shouldReceive(['userHasResearchId' => $user])
+            ->andReturn(false);
 
         $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
 
-        $this->utility
-            ->shouldReceive('authenticateUser')
-            ->andReturn($data);
+
 
         $this->assertEquals($data, $service->authenticateUser($credentials));
     }
@@ -86,7 +91,8 @@ class AuthenticationServiceTest extends TestCase
         $data = [
             'user_id'=>'members:000021315',
             'valid'=>'1',
-            'user_group'=> 'intervention'
+            'user_group'=> 'intervention',
+            'research_id' => true
         ];
 
         $userWithResearchId = new User([
@@ -108,11 +114,11 @@ class AuthenticationServiceTest extends TestCase
 
         $this->userGroupUtility
             ->shouldReceive('sortAuthenticatedUsers')
-            ->andReturn($data['user_group']);
+            ->andReturn($data['user_group'], $data['user_id']);
 
         $this->researchUtility
             ->shouldReceive('userHasResearchId')
-            ->andReturn($data['user_id'], $data['user_id']);
+            ->andReturn($data['research_id']);
 
         $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
 
