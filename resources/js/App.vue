@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div class="app">
     <navbar v-show="$route.path != '/login'" ></navbar>
     <div class="main-wrapper">
       <router-view />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import navbar from './globals/navbar.vue'
+import navbar from './components/global/navbar'
 export default {
   components: {
     navbar
@@ -18,13 +18,14 @@ export default {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
         if (this.$route.fullPath === '/login') {
-          this.$router.push({ name: 'welcome' })
+          this.$router.push({ name: 'Dashboard' })
         }
       } else {
-        this.$router.push({ name: 'login' })
+        this.$router.push({ name: 'Login' })
       }
     }
   },
+
   mounted () {
     this.checkForCookies()
   }

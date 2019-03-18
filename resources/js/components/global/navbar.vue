@@ -20,8 +20,10 @@
   </nav>
   </div>
 </template>
+
 <script>
 import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'navbar',
 
@@ -34,6 +36,7 @@ export default {
     ...mapActions([
       'clearUserData'
     ]),
+
     logout () {
       this.clearUserData()
     }
