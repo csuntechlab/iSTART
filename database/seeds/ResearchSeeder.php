@@ -1,4 +1,5 @@
 
+
 <?php
 
 use Illuminate\Database\Seeder;
@@ -23,5 +24,13 @@ class ResearchSeeder extends Seeder
             'user_id'=>'members:100010526',
             'research_id' => '10'
         ]);
+        DB::table('research')->insert([
+            'user_id' => 'members:000022575',
+            'research_id' => '210'
+        ]);
+
+        
+
+
     }
 }

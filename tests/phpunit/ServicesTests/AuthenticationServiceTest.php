@@ -44,23 +44,21 @@ class AuthenticationServiceTest extends TestCase
 
     public function authenticateUser_without_reasearch_id_returns_authenticated_user(){
         $data = [
-            'user_id'=>'members:000022575',
-            'valid'=>'1',
-            'user_group'=> 'comparison',
-            'research_id' => false
+            'valid'=>'0',
         ];
 
         $user = new User([
-            'user_id' => 'members:000022575',
+            'user_id' => 'members:000022431',
             'rank' => 'beast',
         ]);
 
         $credentials = [
-            'username' => 'cyndee.bellamy@csun.edu',
+            'username' => 'yvonne.monreal@csun.edu',
             'password' => ''
         ];
 
         $this->be($user);
+
         Auth::shouldReceive('attempt')
             ->once()
             ->andReturn(true);
@@ -69,20 +67,13 @@ class AuthenticationServiceTest extends TestCase
 
         $this->utility
         ->shouldReceive(['authenticateUser' => $credentials])
-        ->andReturn($data['user_id'], $data['valid'], $data['user_group'], $data['research_id']);
-
-        $this->userGroupUtility
-            ->shouldReceive(['sortAuthenticatedUsers' => $user],
-                            ['getGroup' => $user])
-            ->andReturn($data['user_group'], $data['user_id']);
+        ->andReturn($data['valid']);
 
         $this->researchUtility
             ->shouldReceive(['userHasResearchId' => $user])
             ->andReturn(false);
 
         $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
-
-
 
         $this->assertEquals($data, $service->authenticateUser($credentials));
     }
