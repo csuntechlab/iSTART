@@ -1,12 +1,12 @@
 <template>
   <div class="dashboard container-fluid">
-    <div v-if="this.user.group === 'control'">
+    <div v-if="this.user.user_group === 'control'">
       <ControlGroup></ControlGroup>
     </div>
-    <div v-if="this.user.group === 'comparison'">
+    <div v-if="this.user.user_group === 'comparison'">
       <ComparisonGroup></ComparisonGroup>
     </div>
-    <div v-if="this.user.group === 'intervention'">
+    <div v-if="this.user.user_group === 'intervention'">
       <InterventionGroup></InterventionGroup>
     </div>
   </div>
