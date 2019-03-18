@@ -13,14 +13,14 @@ export default {
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
             router.push({ name: 'Dashboard' })
-
-            if (response.data.group !== 'control' || response.data.group !== 'comparison' || response.data.group !== 'intervention') {
-              document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
-              router.push({ name: 'Login' })
-              commit('CLEAR_USER_DATA')
-            }
           } else {
             commit('VERIFY_USER_DATA', response.data)
+          }
+
+          if (response.data.user_group === null) {
+            document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
+            router.push({ name: 'Login' })
+            commit('CLEAR_USER_DATA')
           }
         })
       .catch(

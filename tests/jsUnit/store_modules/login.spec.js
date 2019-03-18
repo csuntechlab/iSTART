@@ -15,7 +15,7 @@ describe('userStore/actions/VerifyUserData', () => {
       user_id: 'studentMember',
       valid: '1',
       token: '123rke4',
-      group: ''
+      user_group: ''
     }
   }
 
@@ -29,13 +29,13 @@ describe('userStore/actions/VerifyUserData', () => {
   })
 
   it('should respond with null user group and check for userInfo to be null or undefined', async () => {
-    apiResponse.group = null
+    apiResponse.user_group = null
     userAPI.verifyUserDataAPI.mockImplementation(calledWith => {
       return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
     })
     let commit = jest.fn()
     await userStore.actions.verifyUserData({ commit }, userInfo)
-    expect(userInfo.group).toBeNil()
+    expect(userInfo.user_group).toBeNil()
   })
 })
 
@@ -58,7 +58,7 @@ describe('userStore/mutations/VERIFY_USER_DATA', () => {
     'user_id': 'studentMember',
     'valid': '1',
     'token': '123rke4',
-    'group': ''
+    'user_group': ''
   }
 
   it('should set user object with username, password, and correctLoginInfo to true when mutation is called', () => {
@@ -70,27 +70,27 @@ describe('userStore/mutations/VERIFY_USER_DATA', () => {
   })
 
   it('should set user object group for control when mutation is called', () => {
-    payload.group = 'control'
+    payload.user_group = 'control'
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.group).toEqual(payload.group)
+    expect(state.user.user_group).toEqual(payload.user_group)
   })
 
   it('should set user object group for comparison when mutation is called', () => {
-    payload.group = 'comparison'
+    payload.user_group = 'comparison'
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.group).toEqual(payload.group)
+    expect(state.user.user_group).toEqual(payload.user_group)
   })
 
   it('should set user object group for intervention when mutation is called', () => {
-    payload.group = 'intervention'
+    payload.user_group = 'intervention'
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.group).toEqual(payload.group)
+    expect(state.user.user_group).toEqual(payload.user_group)
   })
 
   it('should check user object group for null when mutation is called', () => {
-    payload.group = null
+    payload.user_group = null
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.group).toEqual(null)
+    expect(state.user.user_group).toEqual(null)
   })
 })
 
