@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'clearUserData'
+      'logout'
     ]),
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
@@ -34,11 +34,10 @@ export default {
       }
     },
     checkUserInactivity() {
-      var timeLimit= document.querySelector('meta[name=time-limit]').content        
+      var idleTimeout= parseInt(document.querySelector('meta[name=idle-timeout]').content)  
       this.timeout = setTimeout(()=>{
-        console.log('log out user')
-        this.clearUserData();
-      }, 4000)
+        this.logout();
+      }, idleTimeout * 60 * 1000)
       window.addEventListener("mousemove", this.resetTimer, false);
       window.addEventListener("mousedown", this.resetTimer, false);
       window.addEventListener("keypress", this.resetTimer, false);

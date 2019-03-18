@@ -27,10 +27,10 @@ describe('userStore/actions/VerifyUserData', () => {
   })
 })
 
-describe('userStore/actions/ClearUserData', () => {
+describe('userStore/actions/logout', () => {
   it('should commit to CLEAR_USER_DATA mutation when action is called', () => {
     const commit = jest.fn()
-    userStore.actions.clearUserData({ commit })
+    userStore.actions.logout({ commit })
     expect(commit).toHaveBeenCalledWith('CLEAR_USER_DATA')
   })
 })

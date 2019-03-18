@@ -21,7 +21,7 @@ async verifyUserData({commit},payload) {
 			failure => console.error(failure)
 		)
 	},
-	clearUserData({commit}) {
+	logout({commit}) {
 		document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
 		router.push({name: 'login'});
 		commit('CLEAR_USER_DATA');

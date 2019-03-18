@@ -32,10 +32,10 @@ export default {
   },
   methods: {
     ...mapActions([
-      'clearUserData'
+      'logout'
     ]),
     logout () {
-      this.clearUserData()
+      this.logout()
     }
   }
 }
