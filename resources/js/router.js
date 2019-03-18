@@ -7,6 +7,7 @@ import ComparisonGroup from './views/ComparisonGroup.vue'
 import InterventionGroup from './views/InterventionGroup.vue'
 import Dashboard from './components/global/Dashboard.vue'
 import Error from './views/Error.vue'
+import schedule from './views/schedule.vue'
 
 Vue.use(Router)
 
@@ -35,28 +36,10 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
     },
     {
-      path: '/controlgroup',
-      name: 'ControlGroup',
-      meta: { title: 'iSTART - Control' },
-      component: ControlGroup
-    },
-    {
-      path: '/comparisonGroup',
-      name: 'ComparisonGroup',
-      meta: { title: 'iSTART - Comparison' },
-      component: ComparisonGroup
-    },
-    {
-      path: '/interventiongroup',
-      name: 'InterventionGroup',
-      meta: { title: 'iSTART - Intervention' },
-      component: InterventionGroup
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: Dashboard
-    },
-
+      path: '/schedule',
+      name: 'schedule',
+      component: schedule,
+      meta: { title: 'iSTART | Schedule' }
+    }
   ]
 })
