@@ -26,12 +26,12 @@ class AuthenticationService implements AuthenticationContract
             if( $this->researchUtility->userHasResearchId($user) ){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
-                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroup];
+                $response = ['user_id'=>$user['user_id'],'valid'=>$user['valid'], 'user_group'=>$userGroup, 'research_id' => true];
                 return $response;
             } else{
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
                 $newUserInfo = $this->userGroupUtility->getGroup($user);
-                $response = ['valid' => '1', 'user_group' => $userGroup, 'user_id' => $newUserInfo['user_id']];
+                $response = ['valid' => '1', 'user_group' => $userGroup, 'user_id' => $newUserInfo['user_id'], 'research_id' => false];
                 return $response;
             }
         }else{
