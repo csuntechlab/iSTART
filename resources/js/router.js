@@ -4,6 +4,7 @@ import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
+import schedule from './views/schedule.vue'
 
 Vue.use(Router)
 
@@ -33,6 +34,12 @@ export default new Router({
       name: 'Dashboard',
       component: Dashboard,
       meta: { title: 'iSTART' }
+    },
+    {
+      path: '/schedule',
+      name: 'schedule',
+      component: schedule,
+      meta: { title: 'iSTART | Schedule' }
     }
   ]
 })
