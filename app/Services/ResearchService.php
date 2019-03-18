@@ -8,9 +8,8 @@ use App\Models\Research;
 class ResearchService implements ResearchContract
 {
     public function userHasResearchId($user){
-        $user_id = $user['user_id'];
-        $userResearch = Research::where('user_id', $user_id)->first();
-
+        $userResearch = Research::where('user_id', $user_id['user_id'])->first();
+        dd($userResearch);
         if( $userResearch == null){
             return false;
         }else {

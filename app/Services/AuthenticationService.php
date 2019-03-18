@@ -19,8 +19,10 @@ class AuthenticationService implements AuthenticationContract
     }
 
     public function authenticateUser($credentials){
+        // dd($credentials);
         if(auth()->attempt($credentials)){
             $user = auth()->user();
+            // dd($user);
             if( $this->researchUtility->userHasResearchId($user) ){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);

@@ -26,22 +26,20 @@ class ResearchServiceTest extends TestCase
     public function userHasResearchId_returns_true_if_user_id_exists_in_research()
     {
 
-        $researchService = new ResearchService();
-
         $researchFactory = factory(Research::class)->make([
-            'user_id'=>"members:100010526",
+            'user_id'=>'members:100010526',
             'research_id' => '10'
         ]);
-        $booleanValueFromOutput = true;
+        $expectedOutput = true;
         $user = ['user_id' => 'members:100010526'];
 
         $this->researchUtility
             ->shouldReceive('userHasResearchId')
-            ->andReturn($booleanValueFromOutput);
+            ->andReturn($expectedOutput);
 
-        $outputFromResearchService = $researchService->userHasResearchId($user);
-        dd($outputFromResearchService);
-        $this->assertEquals($booleanValueFromOutput, $outputFromResearchService);
+        $booleanOutput= $this->researchUtility->userHasResearchId($user);
+
+        $this->assertEquals($booleanOutput, $expectedOutput);
 
     }
 
@@ -58,15 +56,12 @@ class ResearchServiceTest extends TestCase
             'research_id' => '10'
         ]);
 
-        $booleanValueFromOutput = false;
+        $expectedOutput = false;
         $user = ['user_id' => 'members:100010526'];
         $data = json_decode($user['user_id'], true);
-        if(isset($data)){
-            $outputFromResearchService = $researchService->userHasResearchId($data);
-        }else{
-            $outputFromResearchService = false;
-        }
 
-        $this->assertEquals($booleanValueFromOutput, $outputFromResearchService);
+        $booleanOutput= $this->researchUtility->userHasResearchId($user);
+
+        $this->assertEquals($booleanOutput, $expectedOutput);
     }
 }
