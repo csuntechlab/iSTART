@@ -28,8 +28,11 @@ class ResearchSeeder extends Seeder
             'user_id' => 'members:000022575',
             'research_id' => '210'
         ]);
+        DB::table('research')->insert([
+            'user_id' => 'members:000022219',
+            'research_id' => '32'
+        ]);
 
-        
 
 
     }
