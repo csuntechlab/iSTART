@@ -1,10 +1,10 @@
 <template>
   <div class="schedule-modules container-fluid">
     <div v-for="(item, index) in schedule" :key="index" class="row">
-      <div class="col-7 col-l-6">
+      <div class="col-5 col-l-6">
         <span>{{ item.name }}</span>
       </div>
-      <div class="schedule-modules__date col-5 col-l-6">
+      <div class="schedule-modules__date col-7 col-l-6">
         <span>{{ item.date }}</span>
       </div>
     </div>

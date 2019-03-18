@@ -4,7 +4,7 @@
   padding-top: 2rem;
 
   &-container {
-    padding: 0 2rem;
+    padding: 0 1.25rem;
 
     @include media-breakpoint-up(md) { 
       & {
@@ -23,6 +23,7 @@
     &__header {
       font-weight: bold;
       font-size: 1.75rem;
+      margin-bottom: 0.5rem;
     }
 
     &__info {
