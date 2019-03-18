@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserGroup extends Model
 {
     protected $table = 'user_groups';
+    protected $primaryKey = 'user_id';
+    public $incrementing = false;
     /**
      * The attributes that are mass assignable.
      *
