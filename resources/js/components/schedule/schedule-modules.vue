@@ -4,7 +4,7 @@
       <div class="col-5 col-l-6">
         <span>{{ item.name }}</span>
       </div>
-      <div class="schedule-modules__date col-7 col-l-6">
+      <div class="text-right col-7 col-l-6">
         <span>{{ item.date }}</span>
       </div>
     </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="schedule">
-    <div class="schedule-container container-fluid transition-350ms">
-      <div class="schedule-description">
-        <h1 class="schedule-description__header">Schedule</h1>
-        <p class="schedule-description__info">New modules, surveys, and quizzes will be available weekly.</p>
+    <div class="container transition-350ms">
+      <div class="page-description">
+        <h1 class="page-description__header">Schedule</h1>
+        <p class="page-description__info">New modules, surveys, and quizzes will be available weekly.</p>
       </div>
 
       <div class="schedule-labels row">

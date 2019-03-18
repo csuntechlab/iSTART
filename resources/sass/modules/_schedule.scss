@@ -3,34 +3,6 @@
   color: rgb(60, 60, 60);
   padding-top: 2rem;
 
-  &-container {
-    padding: 0 1.25rem;
-
-    @include media-breakpoint-up(md) { 
-      & {
-        padding: 0 8rem;
-      }
-    }
-  }
-
-  &-description {
-    margin-bottom: 1rem;
-
-    & > * {
-      margin: 0;
-    }
-
-    &__header {
-      font-weight: bold;
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    &__info {
-      font-size: 1.15rem;
-    }
-  }
-
   &-labels {
     & * {
       font-style: normal;
@@ -59,10 +31,6 @@
 
     & * {
       font-size: 1rem;
-    }
-
-    &__date {
-      text-align: right;
     }
   }
 }
