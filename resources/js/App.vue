@@ -36,7 +36,6 @@ export default {
     checkUserInactivity() {
       var idleTimeout= parseInt(document.querySelector('meta[name=idle-timeout]').content)  
       this.timeout = setTimeout(()=>{
-        console.log('logout')
         this.clearUserData();
       }, idleTimeout * 60 * 1000)
       window.addEventListener("mousemove", this.resetTimer, false);
