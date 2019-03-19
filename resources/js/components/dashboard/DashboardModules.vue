@@ -12,7 +12,6 @@
         </div>
         <div class="dashboard-modules__progress row align-items-center">
           <div class="col-4 col-md-6 dashboard-modules__percentage text-left">
-            <span>Test</span>
             <span>{{item.percentCompletion}}</span>
           </div>
           <div class="col-8 col-md-6 dashboard-modules__completion text-right">
