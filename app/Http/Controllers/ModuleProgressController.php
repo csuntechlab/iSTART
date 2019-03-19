@@ -17,6 +17,11 @@ class ModuleProgressController extends Controller
 
     public function getModuleProgress(Request $request)
     {
+        $validator = $request->validate([
+            'user_id' => 'required',
+            'current_module' => 'required',
+        ]);
+
         $data = [
             'user_id' => $request->user_id,
             'current_module' => $request->current_module,
@@ -27,6 +32,13 @@ class ModuleProgressController extends Controller
 
     public function setModuleProgress(Request $request)
     {
+        $validator = $request->validate([
+            'user_id' => 'required',
+            'current_module' => 'required',
+            'current_page' => 'required',
+            'max_page' => 'required'
+        ]);
+
         $data = [
             'user_id' => $request->user_id,
             'current_module' => $request->current_module,

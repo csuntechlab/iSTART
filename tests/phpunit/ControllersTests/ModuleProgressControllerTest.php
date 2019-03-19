@@ -9,6 +9,7 @@ use App\Http\Controllers\ModuleProgressController;
 use Illuminate\Http\Request;
 use Mockery;
 use Tests\TestCase;
+use Illuminate\Validation\ValidationException;
 
 class ModuleProgressControllerTest extends TestCase
 {
@@ -50,8 +51,9 @@ class ModuleProgressControllerTest extends TestCase
     /**
      * @test
      */
-    public function setModuleProgress_calls_utility()
+    public function getModuleProgress_throws_a_ValidationException_if_request_is_missing_current_module()
     {
+        $this->expectException(ValidationException::class);
         $data = [
             'user_id' => 'member:1123334',
             'current_module' => 'alcohol',
@@ -59,6 +61,48 @@ class ModuleProgressControllerTest extends TestCase
             'max_page' => 17
         ];
 
+        $request = new Request();
+        $request->replace([
+            'user_id' => 'member:1123334',
+        ]);
+
+        $this->utility
+            ->shouldReceive('getModuleProgress')
+            ->andReturn($data);
+
+        $this->ModuleProgressController->getModuleProgress($request);
+    }
+
+    /**
+     * @test
+     */
+    public function getModuleProgress_throws_a_ValidationException_if_request_is_missing_user_id()
+    {
+        $this->expectException(ValidationException::class);
+        $data = [
+            'user_id' => 'member:1123334',
+            'current_module' => 'alcohol',
+            'current_page' => 7,
+            'max_page' => 17
+        ];
+
+        $request = new Request();
+        $request->replace([
+            'current_module' => 'alcohol'
+        ]);
+
+        $this->utility
+            ->shouldReceive('getModuleProgress')
+            ->andReturn($data);
+
+        $this->ModuleProgressController->getModuleProgress($request);
+    }
+
+    /**
+     * @test
+     */
+    public function setModuleProgress_calls_utility()
+    {
         $request = new Request();
         $request->replace([
             'user_id' => 'member:1123334',
@@ -72,5 +116,87 @@ class ModuleProgressControllerTest extends TestCase
 
         $this->ModuleProgressController->setModuleProgress($request);
     }
+
+    /**
+     * @test
+     */
+    public function setModuleProgress_throws_a_ValidationException_if_user_id_is_missing()
+    {
+        $this->expectException(ValidationException::class);
+
+        $request = new Request();
+        $request->replace([
+            'current_module' => 'alcohol',
+            'current_page' => 7,
+            'max_page' => 17
+        ]);
+
+        $this->utility
+            ->shouldReceive('setModuleProgress');
+
+        $this->ModuleProgressController->setModuleProgress($request);
+    }
+
+    /**
+     * @test
+     */
+    public function setModuleProgress_throws_a_ValidationException_if_current_module_is_missing()
+    {
+        $this->expectException(ValidationException::class);
+
+        $request = new Request();
+        $request->replace([
+            'user_id' => 'member:1123334',
+            'current_page' => 7,
+            'max_page' => 17
+        ]);
+
+        $this->utility
+            ->shouldReceive('setModuleProgress');
+
+        $this->ModuleProgressController->setModuleProgress($request);
+    }
+
+    /**
+     * @test
+     */
+    public function setModuleProgress_throws_a_ValidationException_if_current_page_is_missing()
+    {
+        $this->expectException(ValidationException::class);
+
+        $request = new Request();
+        $request->replace([
+            'user_id' => 'member:1123334',
+            'current_module' => 'alcohol',
+            'max_page' => 17
+        ]);
+
+        $this->utility
+            ->shouldReceive('setModuleProgress');
+
+        $this->ModuleProgressController->setModuleProgress($request);
+    }
+
+    /**
+     * @test
+     */
+    public function setModuleProgress_throws_a_ValidationException_if_max_page_is_missing()
+    {
+        $this->expectException(ValidationException::class);
+
+        $request = new Request();
+        $request->replace([
+            'user_id' => 'member:1123334',
+            'current_module' => 'alcohol',
+            'current_page' => 7,
+        ]);
+
+        $this->utility
+            ->shouldReceive('setModuleProgress');
+
+        $this->ModuleProgressController->setModuleProgress($request);
+    }
+
+    
     
 }
