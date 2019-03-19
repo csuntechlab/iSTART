@@ -9,13 +9,13 @@
 
 <script>
 import navbar from './components/global/navbar.vue'
-import { clearTimeout, setTimeout } from 'timers';
-import {mapActions} from 'vuex'
+import { clearTimeout, setTimeout } from 'timers'
+import { mapActions } from 'vuex'
 export default {
   components: {
     navbar
   },
-  data() {
+  data () {
     return {
       timeout: null
     }
@@ -33,27 +33,27 @@ export default {
         this.$router.push({ name: 'Login' })
       }
     },
-    checkUserInactivity() {
-      var idleTimeout= parseFloat(document.querySelector('meta[name=idle-timeout]').content)  
-      this.timeout = setTimeout(()=>{
-        this.clearUserData();
+    checkUserInactivity () {
+      var idleTimeout = parseFloat(document.querySelector('meta[name=idle-timeout]').content)
+      this.timeout = setTimeout(() => {
+        this.clearUserData()
       }, idleTimeout * 60 * 1000)
-      window.addEventListener("mousemove", this.resetTimer);
-      window.addEventListener("mousedown", this.resetTimer);
-      window.addEventListener("keypress", this.resetTimer);
-      window.addEventListener("DOMMouseScroll", this.resetTimer);
-      window.addEventListener("mousewheel", this.resetTimer);
-      window.addEventListener("touchmove", this.resetTimer);
-      window.addEventListener("MSPointerMove", this.resetTimer);   
+      window.addEventListener('mousemove', this.resetTimer, { passive: true })
+      window.addEventListener('mousedown', this.resetTimer, { passive: true })
+      window.addEventListener('keypress', this.resetTimer, { passive: true })
+      window.addEventListener('DOMMouseScroll', this.resetTimer, { passive: true })
+      window.addEventListener('mousewheel', this.resetTimer, { passive: true })
+      window.addEventListener('touchmove', this.resetTimer, { passive: true })
+      window.addEventListener('MSPointerMove', this.resetTimer, { passive: true })
     },
-    resetTimer() {
+    resetTimer () {
       clearTimeout(this.timeout)
-        this.checkUserInactivity() 
+      this.checkUserInactivity()
     }
   },
   mounted () {
     this.checkForCookies()
     this.checkUserInactivity()
-  },
+  }
 }
 </script>
