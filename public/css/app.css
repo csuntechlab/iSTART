@@ -11899,7 +11899,6 @@ a.text-dark:focus {
   background-color: rgba(25, 25, 25, 0.6);
   color: whitesmoke;
   text-align: left;
-  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 1.75rem;
   position: absolute;
@@ -11909,7 +11908,15 @@ a.text-dark:focus {
 }
 
 .dashboard-modules__progress {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.dashboard-modules__completion {
+  font-size: 1rem;
+}
+
+.dashboard-modules__status {
+  font-weight: bold;
 }
 
 .schedule {

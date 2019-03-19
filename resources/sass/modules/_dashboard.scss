@@ -72,7 +72,6 @@
             background-color:rgba(25, 25, 25, 0.6);
             color: rgb(245, 245, 245);
             text-align: left;
-            font-family: 'Arial', sans-serif;
             font-weight: bold;
             font-size: 1.75rem;
             position: absolute;
@@ -82,7 +81,15 @@
         }
 
         &__progress {
-            padding: 0.5rem 0.75rem;
+            padding: 0.5rem 0;
+        }
+
+        &__completion {
+            font-size: 1rem;
+        }
+
+        &__status {
+            font-weight: bold;
         }
     }
 }

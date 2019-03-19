@@ -26580,31 +26580,42 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "dashboard-modules__progress row" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "col-6 dashboard-modules__percentage text-left"
-                },
-                [
-                  _c("span", [_vm._v("Test")]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v(_vm._s(item.percentCompletion))])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "col-6 dashboard-modeuls__completion text-right"
-                },
-                [
-                  _c("span", [_vm._v(_vm._s(item.completion.status))]),
-                  _vm._v(":\n          "),
-                  _c("span", [_vm._v(_vm._s(item.completion.date))])
-                ]
-              )
-            ])
+            _c(
+              "div",
+              {
+                staticClass:
+                  "dashboard-modules__progress row align-items-center"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-4 col-md-6 dashboard-modules__percentage text-left"
+                  },
+                  [
+                    _c("span", [_vm._v("Test")]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(item.percentCompletion))])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "col-8 col-md-6 dashboard-modules__completion text-right"
+                  },
+                  [
+                    _c("span", { staticClass: "dashboard-modules__status" }, [
+                      _vm._v(_vm._s(item.completion.status))
+                    ]),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "fas fa-chevron-right" })
+                  ]
+                )
+              ]
+            )
           ]
         )
       }),
