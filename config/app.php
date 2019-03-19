@@ -178,6 +178,7 @@ return [
         /*
          * Custom Service Providers
          */
+        App\Providers\ResearchServiceProvider::class,
         App\Providers\UserGroupServiceProvider::class,
         App\Providers\ModuleProgressServiceProvider::class,
 
