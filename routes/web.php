@@ -22,3 +22,6 @@ Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
 Route::get('/sendMailTest','MailController@sendMail');
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
+
+Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
+Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
