@@ -18,6 +18,7 @@ class UserGroupSeeder extends Seeder
             'remember_token' => '12394iresjntgruirf9eiokwj',
         ]);
         DB::table('user_groups')->insert([
+
             'user_group' => 'intervention',
             'user_id' => 'members:000021315',
             'display_name' => 'April Feldman',

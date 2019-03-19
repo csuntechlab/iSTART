@@ -1,15 +1,12 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-
-class UserGroup extends Model
+class ModuleProgress extends Model
 {
-    protected $table = 'user_groups';
+    protected $table = 'module_progresses';
     protected $primaryKey = 'user_id';
     public $incrementing = false;
     /**
@@ -18,12 +15,6 @@ class UserGroup extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'user_group', 'remember_token', 'display_name',
+        'user_id', 'current_module', 'current_page', 'max_page',
     ];
-    public function getUserGroup()
-    {
-        return $this->belongsTo('App\Models\UserGroup');
-    }
-
-
 }
