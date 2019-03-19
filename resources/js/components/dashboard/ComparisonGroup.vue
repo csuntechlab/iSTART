@@ -1,17 +1,17 @@
 <template>
-  <div class="ComparisonGroup">
-    <dashboard></dashboard>
+  <div class="comparison-group">
+    <DashboardModules></DashboardModules>
     <h1 class="text-center">Comparison Group</h1>
   </div>
 </template>
 
 <script>
-import Dashboard from './../components/global/Dashboard'
+import DashboardModules from './DashboardModules'
 
 export default {
   name: 'ComparisonGroup',
   components: {
-    Dashboard
+    DashboardModules
   }
 }
 </script>
