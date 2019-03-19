@@ -23,11 +23,30 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 
-$primary: #2699FB;
-$primary-accent-dark: #106DBC;
-$secondary: #FFFFFF;
+$primaryColor: rgb(38,153,251);
+$primaryColor--light: lighten($primaryColor, 0.6);
+$primaryColor--med: rgb(16, 109, 188);
+$primaryColor--dark: darken($primaryColor, 0.8);
+$primaryColor--shadow: rgba(38, 153, 251, 0.2);
+
+$secondaryColor: #FFFFFF;
+$secondaryColor--light: lighten($secondaryColor, 0.6);
+$secondaryColor--dark: darken($secondaryColor, 0.8);
+
+// Shades (Standard Shades)
+$white: rgb(245, 245, 245);
+$white--light: rgb(255,255,255);
+$white--dark: rgb(235, 235, 235);
+$grey: rgb(160, 160, 160);
+$grey--light: rgb(225, 225, 225);
+$grey--dark: rgb(145, 145, 145);
+
 $black: rgb(25, 25, 25);
+$black--light: rgb(60, 60, 60);
+$black--dark: rgb(0, 0, 0);
 
-$focus: rgba(38, 153, 251, 0.2);
-
-
+// Flexible Colors (Accounts for background-color)
+$black--80: rgba(0, 0, 0, 0.8);
+$black--60: rgba(0, 0, 0, 0.6);
+$white--80: rgba(255, 255, 255, 0.8);
+$white--60: rgba(255, 255, 255, 0.6);
