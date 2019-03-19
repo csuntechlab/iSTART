@@ -1,7 +1,7 @@
 
 .navbar{
     background-color: $primary;
-    color: $i-white;
+    color: $text;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -19,11 +19,11 @@
             padding-left: 2.3rem;
             padding-top: 0.85rem;
             padding-bottom: 0.85rem;
-            border-top: 1px solid $secodary;
-            border-left: 1px solid $secodary;
-            border-right: 1px solid $secodary;
+            border-top: 1px solid $primary-accent-dark;
+            border-left: 1px solid $primary-accent-dark;
+            border-right: 1px solid $primary-accent-dark;
             &--bottom{
-                border-bottom: 1px solid $secodary;
+                border-bottom: 1px solid $primary-accent-dark;
             }
         }
     }

@@ -64642,8 +64642,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var C_Users_Owner_Documents_META_LAB_iSTART_node_modules_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _api_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../api/user */ "./resources/js/api/user.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _api_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../../api/user */ "./resources/js/api/user.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../router */ "./resources/js/router.js");
+
+
+
+
 
 
 
@@ -64660,14 +64672,14 @@ __webpack_require__.r(__webpack_exports__);
           switch (_context.prev = _context.next) {
             case 0:
               commit = _ref.commit;
-              return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_3__["default"].verifyUserDataAPI(payload).then(function (response) {
+              return _context.abrupt("return", _api_user__WEBPACK_IMPORTED_MODULE_7__["default"].verifyUserDataAPI(payload).then(function (response) {
                 if (response.data.valid === '1') {
                   var cookieValue = response.data.token;
                   var cookieExpirationDate = new Date();
                   cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1);
                   document.cookie = "userKey = ".concat(cookieValue, "; expires = ").concat(cookieExpirationDate.toUTCString(), ";");
                   commit('VERIFY_USER_DATA', response.data);
-                  _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+                  _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
                     name: 'Dashboard'
                   });
                 } else {
@@ -64676,7 +64688,7 @@ __webpack_require__.r(__webpack_exports__);
 
                 if (response.data.user_group === null) {
                   document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;';
-                  _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+                  _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
                     name: 'Login'
                   });
                   commit('CLEAR_USER_DATA');
@@ -64702,7 +64714,7 @@ __webpack_require__.r(__webpack_exports__);
   clearUserData: function clearUserData(_ref2) {
     var commit = _ref2.commit;
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;';
-    _router__WEBPACK_IMPORTED_MODULE_4__["default"].push({
+    _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
       name: 'Login'
     });
     commit('CLEAR_USER_DATA');
@@ -65153,7 +65165,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\r\n            border-top: 1px solid $secodary;\r\n                                 ^\r\n      Undefined variable.\n   ╷\n22 │             border-top: 1px solid $secodary;\r\n   │                                   ^^^^^^^^^\n   ╵\n  resources\\sass\\global\\_navbar.scss 22:35  @import\n  stdin 11:9                                root stylesheet\r\n      in C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\resources\\sass\\global\\_navbar.scss (line 22, column 35)\n    at runLoaders (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass-loader\\lib\\loader.js:52:13)\n    at Function.$2 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:24680:48)\n    at wg.$2 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:15592:16)\n    at ud.vE (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8441:3)\n    at iD.bf (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8371:25)\n    at iD.cK (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8358:6)\n    at pe.cK (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8148:35)\n    at Object.m (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:1405:19)\n    at C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:5113:51\n    at wG.a (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:1416:71)\n    at wG.$2 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8163:23)\n    at vg.$2 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8158:25)\n    at ud.vE (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8441:3)\n    at iD.bf (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8371:25)\n    at iD.cK (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8358:6)\n    at Object.eval (eval at C0 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:651:15), <anonymous>:2:37)\n    at ud.vE (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9070:42)\n    at ud.vD (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:9072:32)\n    at ip.uO (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8378:46)\n    at tL.$0 (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8523:7)\n    at Object.eF (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:1532:80)\n    at ah.bf (C:\\Users\\Owner\\Documents\\META+LAB\\iSTART\\node_modules\\sass\\sass.dart.js:8441:3)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
