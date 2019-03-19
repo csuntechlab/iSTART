@@ -34,17 +34,20 @@ export default {
       }
     },
     checkUserInactivity() {
-      var idleTimeout= parseInt(document.querySelector('meta[name=idle-timeout]').content)  
+      if(this.$route.fullPath !=='login') {
+        var idleTimeout= parseInt(document.querySelector('meta[name=idle-timeout]').content)  
       this.timeout = setTimeout(()=>{
+        console.log('time to log out')
         this.clearUserData();
-      }, idleTimeout * 60 * 1000)
+      }, 4 * 1000)
       window.addEventListener("mousemove", this.resetTimer, {passive:true});
       window.addEventListener("mousedown", this.resetTimer, {passive:true});
       window.addEventListener("keypress", this.resetTimer, {passive:true});
       window.addEventListener("DOMMouseScroll", this.resetTimer, {passive:true});
       window.addEventListener("mousewheel", this.resetTimer, {passive:true});
       window.addEventListener("touchmove", this.resetTimer, {passive:true});
-      window.addEventListener("MSPointerMove", this.resetTimer, {passive:true});      
+      window.addEventListener("MSPointerMove", this.resetTimer, {passive:true}); 
+      }     
     },
     resetTimer() {
       clearTimeout(this.timeout)
