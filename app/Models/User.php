@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Research;
 use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -30,6 +31,10 @@ class User extends MetaUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function research(){
+        return $this->hasOne('App\Models\Research', 'user_id');
+    }
 
     public function getUserGroup()
     {

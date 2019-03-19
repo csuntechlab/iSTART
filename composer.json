@@ -12,6 +12,7 @@
         "csun-metalab/laravel-directory-authentication": "^1.6",
         "csun-metalab/laravel-proxypass": "^1.1",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "tiesa/ldap": "dev-master"
