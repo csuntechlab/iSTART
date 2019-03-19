@@ -38,13 +38,13 @@ export default {
       this.timeout = setTimeout(()=>{
         this.clearUserData();
       }, idleTimeout * 60 * 1000)
-      window.addEventListener("mousemove", this.resetTimer, false);
-      window.addEventListener("mousedown", this.resetTimer, false);
-      window.addEventListener("keypress", this.resetTimer, false);
-      window.addEventListener("DOMMouseScroll", this.resetTimer, false);
-      window.addEventListener("mousewheel", this.resetTimer, false);
-      window.addEventListener("touchmove", this.resetTimer, false);
-      window.addEventListener("MSPointerMove", this.resetTimer, false);      
+      window.addEventListener("mousemove", this.resetTimer, {passive:true});
+      window.addEventListener("mousedown", this.resetTimer, {passive:true});
+      window.addEventListener("keypress", this.resetTimer, {passive:true});
+      window.addEventListener("DOMMouseScroll", this.resetTimer, {passive:true});
+      window.addEventListener("mousewheel", this.resetTimer, {passive:true});
+      window.addEventListener("touchmove", this.resetTimer, {passive:true});
+      window.addEventListener("MSPointerMove", this.resetTimer, {passive:true});      
     },
     resetTimer() {
       clearTimeout(this.timeout)
