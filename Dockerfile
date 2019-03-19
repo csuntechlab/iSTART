@@ -1,3 +1,5 @@
+FROM csunmetalab/environment:base-20190130 as base
+COPY . /var/www/html
 # Backend
 FROM composer:latest as vendor
 COPY database/ database/
@@ -16,9 +18,6 @@ COPY package.json webpack.mix.js yarn.lock /app/
 COPY resources/ /app/resources/
 WORKDIR /app
 RUN yarn install 
-FROM csunmetalab/environment:base-20190130 as base
-COPY . /var/www/html
-# Expose ports.
 # Change /var/www permission
 RUN chown -hR www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 # Expose port 80 and 6001 
