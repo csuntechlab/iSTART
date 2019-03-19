@@ -1,5 +1,5 @@
 <template>
-  <div class="intervention-group">
+  <div class="intervention-group container">
     <DashboardModules></DashboardModules>
     <h1 class="text-center">Intervention Group</h1>
   </div>

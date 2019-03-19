@@ -47,4 +47,42 @@
             }
         }
     }
+
+    &-modules {
+        &__module {
+            background-color: rgb(255, 255, 255);
+        }
+
+        &__overview {
+            position: relative;
+        }
+
+        &__thumbnail {
+            overflow: hidden;
+            max-height: 160px;
+
+            &-image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &__header {
+            background-color:rgba(25, 25, 25, 0.6);
+            color: rgb(245, 245, 245);
+            text-align: left;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 1.75rem;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 0 0.75rem;
+        }
+
+        &__progress {
+            padding: 0.5rem 0.75rem;
+        }
+    }
 }
