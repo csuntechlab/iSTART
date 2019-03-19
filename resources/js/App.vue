@@ -27,7 +27,7 @@ export default {
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
         if (this.$route.fullPath === '/login') {
-          this.$router.push({ name: 'welcome' })
+          this.$router.push({ name: 'dashboard' })
         }
       } else {
         this.$router.push({ name: 'Login' })
