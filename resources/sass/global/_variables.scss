@@ -37,6 +37,7 @@ $secondaryColor--dark: darken($secondaryColor, 0.8);
 $white: rgb(245, 245, 245);
 $white--light: rgb(255,255,255);
 $white--dark: rgb(235, 235, 235);
+
 $grey: rgb(160, 160, 160);
 $grey--lighter: rgb(215, 215, 215);
 $grey--light: rgb(225, 225, 225);
@@ -46,12 +47,13 @@ $black: rgb(25, 25, 25);
 $black--light: rgb(60, 60, 60);
 $black--dark: rgb(0, 0, 0);
 
-// Flexible Colors (Accounts for background-color)
+// Flexible Colors (Accounts for a transparent effect background-color)
 $black--80: rgba(0, 0, 0, 0.8);
 $black--60: rgba(0, 0, 0, 0.6);
 $black--40: rgba(0, 0, 0, 0.4);
 $black--20: rgba(0, 0, 0, 0.2);
 $black--04: rgba(0, 0, 0, 0.04);
+
 $white--80: rgba(255, 255, 255, 0.8);
 $white--60: rgba(255, 255, 255, 0.6);
 $white--40: rgba(255, 255, 255, 0.4);
