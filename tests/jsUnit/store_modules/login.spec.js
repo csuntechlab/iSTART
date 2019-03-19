@@ -35,9 +35,18 @@ describe('userStore/actions/VerifyUserData', () => {
       return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
     })
     let commit = jest.fn()
-    await userStore.actions.verifyUserData({ commit }, apiResponse)
-    console.log(apiResponse)
+    await userStore.actions.verifyUserData({ commit }, userInfo)
     expect(apiResponse.data.isAdmin).toBeTrue()
+  })
+
+  it('should respond with isAdmin of true and check for userInfo.isAdmin to be true', async () => {
+    apiResponse.data.isAdmin = null
+    userAPI.verifyUserDataAPI.mockImplementation(calledWith => {
+      return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
+    })
+    let commit = jest.fn()
+    await userStore.actions.verifyUserData({ commit }, userInfo)
+    expect(apiResponse.data.isAdmin).toBeNil()
   })
 
   it('should respond with null user group and check for userInfo.user_group to be null or undefined', async () => {
@@ -46,7 +55,7 @@ describe('userStore/actions/VerifyUserData', () => {
       return calledWith === userInfo ? Promise.resolve(apiResponse) : Promise.resolve()
     })
     let commit = jest.fn()
-    await userStore.actions.verifyUserData({ commit }, apiResponse)
+    await userStore.actions.verifyUserData({ commit }, userInfo)
     expect(apiResponse.data.user_group).toBeNil()
   })
 })
