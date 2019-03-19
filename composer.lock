@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "039201f31f0f2f55e650a3684ca7f5d4",
+    "content-hash": "1fe880b6a29548043bd7d661f8843e5a",
     "packages": [
         {
             "name": "csun-metalab/laravel-directory-authentication",
