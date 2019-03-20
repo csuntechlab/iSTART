@@ -10,6 +10,7 @@ use Mockery;
 use App\Contracts\AuthenticationContract;
 use App\Contracts\ResearchContract;
 use App\Contracts\UserGroupContract;
+use App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserGroup;
@@ -25,24 +26,93 @@ class AuthenticationServiceTest extends TestCase
 
     use DatabaseMigrations;
     protected $AuthenticationService;
-    protected $utility;
+    protected $service;
     protected $researchContract;
     protected $userGroupUtility;
+    protected $userAdminModelUtility;
 
     public function setUp()
     {
         parent::setUp();
-        $this->seed(\UserGroupSeeder::class);
-        $this->utility = Mockery::spy(AuthenticationContract::class);
         $this->researchUtility = Mockery::spy(ResearchContract::class);
         $this->userGroupUtility = Mockery::spy(UserGroupContract::class);
+        $this->userAdminModelUtility = Mockery::spy(UserAdminModelRepositoryInterface::class);
+        $this->service = new AuthenticationService(
+            $this->researchUtility, 
+            $this->userGroupUtility, 
+            $this->userAdminModelUtility
+        );
     }
 
     /**
      * @test
      */
+    public function authenticateUser_on_uncredited_user_returns_unauthenticated_user(){
+        $data = [
+            'valid'=>'0',
+        ];
 
-    public function authenticateUser_without_reasearch_id_returns_authenticated_user(){
+        $user = new User([
+            'user_id' => '251'
+        ]);
+
+        $credentials = [
+            'username' => 'yvonne.monreal@csun.edu',
+            'password' => ''
+        ];
+
+        $this->be($user);
+
+        Auth::shouldReceive('attempt')
+            ->once()
+            ->andReturn(false);
+
+        $this->assertEquals($data, $this->service->authenticateUser($credentials));
+
+
+    }
+
+    /**
+     * @test
+     */
+    public function authenticateUser_on_admin_user_returns_authenticated_admin_user(){
+        $data = [
+            'user_id' => '251',
+            'valid' => '1',
+            'isAdmin' => true,
+            'user_group' => null
+        ];
+
+        $user = new User([
+            'user_id' => '251'
+        ]);
+
+        $credentials = [
+            'username' => 'sun.ra@csun.edu',
+            'password' => ''
+        ];
+
+        $this->be($user);
+
+        Auth::shouldReceive('attempt')
+            ->once()
+            ->andReturn(true);
+        Auth::shouldReceive('user')
+            ->andReturn($user);
+        
+        $this->userAdminModelUtility
+            ->shouldReceive(['find' => $user['user_id']])
+            ->andReturn(true);
+
+        $this->assertEquals($data, $this->service->authenticateUser($credentials));
+
+
+    }
+
+    /**
+     * @test
+     */
+    public function authenticateUser_without_reasearch_id_returns_unauthenticated_user(){
         $data = [
             'valid'=>'0',
         ];
@@ -63,30 +133,32 @@ class AuthenticationServiceTest extends TestCase
             ->once()
             ->andReturn(true);
         Auth::shouldReceive('user')
-            ->andReturn($data);
-
-        $this->utility
-        ->shouldReceive(['authenticateUser' => $credentials])
-        ->andReturn($data['valid']);
+            ->andReturn($user);
+        
 
         $this->researchUtility
             ->shouldReceive(['userHasResearchId' => $user])
             ->andReturn(false);
 
-        $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
+        $this->userAdminModelUtility
+            ->shouldReceive(['find' => $user['user_id']])
+            ->andReturn(false);
 
-        $this->assertEquals($data, $service->authenticateUser($credentials));
+        $this->assertEquals($data, $this->service->authenticateUser($credentials));
     }
 
+    /**
+     * @test
+     */
     public function authenticateUser_with_reasearch_id_returns_authenticated_user(){
         $data = [
             'user_id'=>'members:000021315',
             'valid'=>'1',
             'user_group'=> 'intervention',
-            'research_id' => true
+            'isAdmin' => false
         ];
 
-        $userWithResearchId = new User([
+        $user = new User([
             'user_id' => 'members:000021315',
             'rank' => 'alt supreme leader',
         ]);
@@ -97,26 +169,25 @@ class AuthenticationServiceTest extends TestCase
         ];
 
         $this->be($user);
+
         Auth::shouldReceive('attempt')
             ->once()
             ->andReturn(true);
-        Auth::shouldReceive('userWithResearchId')
-            ->andReturn($data);
+        Auth::shouldReceive('user')
+            ->andReturn($user);
 
         $this->userGroupUtility
             ->shouldReceive('sortAuthenticatedUsers')
             ->andReturn($data['user_group'], $data['user_id']);
 
+        $this->userAdminModelUtility
+            ->shouldReceive(['find' => $user['user_id']])
+            ->andReturn(false);
+
         $this->researchUtility
             ->shouldReceive('userHasResearchId')
-            ->andReturn($data['research_id']);
+            ->andReturn(true);
 
-        $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
-
-        $this->utility
-            ->shouldReceive('authenticateUser')
-            ->andReturn($data);
-
-        $this->assertEquals($data, $service->authenticateUser($credentials));
+        $this->assertEquals($data, $this->service->authenticateUser($credentials));
     }
 }
