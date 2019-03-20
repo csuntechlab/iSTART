@@ -53,8 +53,11 @@
     }
 
     &-modules {
-        background-color: rgb(255, 255, 255);
         color: rgb(25, 25, 25);
+
+        &-container {
+            margin-bottom: 1rem;
+        }
 
         &__overview {
             position: relative;
@@ -76,7 +79,7 @@
             color: rgb(245, 245, 245);
             text-align: left;
             font-weight: bold;
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             position: absolute;
             width: 100%;
             bottom: 0;
@@ -84,16 +87,18 @@
         }
 
         &__progress {
+            background-color: rgb(235, 235, 235);
             padding: 0.4rem 0;
             padding-bottom: 0.35rem;
         }
 
-        &__completion {
-            font-size: 1rem;
-        }
-
         &__status {
             font-weight: bold;
+            margin-right: 0.25rem;
+
+            &-circle {
+                color: $green;
+            }
         }
     }
 }
