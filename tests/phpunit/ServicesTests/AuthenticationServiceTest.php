@@ -8,9 +8,13 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use App\Contracts\AuthenticationContract;
+use App\Contracts\ResearchContract;
+use App\Contracts\UserGroupContract;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AuthenticationServiceTest extends TestCase
 {
@@ -18,41 +22,101 @@ class AuthenticationServiceTest extends TestCase
      *@uses AuthenticationService
      * @return void
      */
+
+    use DatabaseMigrations;
     protected $AuthenticationService;
     protected $utility;
+    protected $researchContract;
+    protected $userGroupUtility;
 
     public function setUp()
     {
         parent::setUp();
+        $this->seed(\UserGroupSeeder::class);
         $this->utility = Mockery::spy(AuthenticationContract::class);
-
+        $this->researchUtility = Mockery::spy(ResearchContract::class);
+        $this->userGroupUtility = Mockery::spy(UserGroupContract::class);
     }
 
     /**
      * @test
      */
-    public function authenticateUser_returns_authenticated_user(){
-//        $data = ['username' => 'steve@csun.edu', 'password' => ''];
-        $returnData = ['user_id'=>'members:100010526',
-                        'valid'=>'1',
-                        ];
+
+    public function authenticateUser_without_reasearch_id_returns_authenticated_user(){
+        $data = [
+            'valid'=>'0',
+        ];
+
         $user = new User([
-            'user_id' => 'members:100010526',
+            'user_id' => 'members:000022431',
             'rank' => 'beast',
         ]);
+
+        $credentials = [
+            'username' => 'yvonne.monreal@csun.edu',
+            'password' => ''
+        ];
+
         $this->be($user);
+
         Auth::shouldReceive('attempt')
             ->once()
             ->andReturn(true);
         Auth::shouldReceive('user')
-            ->andReturn($returnData);
+            ->andReturn($data);
 
-        $service = new AuthenticationService($this->utility);
+        $this->utility
+        ->shouldReceive(['authenticateUser' => $credentials])
+        ->andReturn($data['valid']);
+
+        $this->researchUtility
+            ->shouldReceive(['userHasResearchId' => $user])
+            ->andReturn(false);
+
+        $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
+
+        $this->assertEquals($data, $service->authenticateUser($credentials));
+    }
+
+    public function authenticateUser_with_reasearch_id_returns_authenticated_user(){
+        $data = [
+            'user_id'=>'members:000021315',
+            'valid'=>'1',
+            'user_group'=> 'intervention',
+            'research_id' => true
+        ];
+
+        $userWithResearchId = new User([
+            'user_id' => 'members:000021315',
+            'rank' => 'alt supreme leader',
+        ]);
+
+        $credentials = [
+            'username' => 'april.feldman@csun.edu',
+            'password' => ''
+        ];
+
+        $this->be($user);
+        Auth::shouldReceive('attempt')
+            ->once()
+            ->andReturn(true);
+        Auth::shouldReceive('userWithResearchId')
+            ->andReturn($data);
+
+        $this->userGroupUtility
+            ->shouldReceive('sortAuthenticatedUsers')
+            ->andReturn($data['user_group'], $data['user_id']);
+
+        $this->researchUtility
+            ->shouldReceive('userHasResearchId')
+            ->andReturn($data['research_id']);
+
+        $service = new AuthenticationService($this->researchUtility, $this->userGroupUtility);
 
         $this->utility
             ->shouldReceive('authenticateUser')
-            ->andReturn($returnData);
+            ->andReturn($data);
 
-        $this->assertEquals($returnData, $service->authenticateUser($user));
+        $this->assertEquals($data, $service->authenticateUser($credentials));
     }
 }

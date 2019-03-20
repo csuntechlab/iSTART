@@ -7,9 +7,14 @@
 // Global
 @import "global/helpers";
 @import "global/layout";
+@import "global/base";
+@import "global/navbar";
 @import "global/buttons";
 @import "global/forms";
 
 // Modules
 @import "modules/error";
-@import 'modules/login';
+@import "modules/login";
+@import "modules/dashboard";
+@import "modules/schedule";
+@import "modules/page"

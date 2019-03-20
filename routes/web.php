@@ -11,9 +11,17 @@
 |
 */
 
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::post('loginVerification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
 
-Route::get('/get_role/{email}','UserRoleController@getRole');
+Route::get('/get_group/{user_id}','UserGroupController@getGroup');
+
+Route::get('/sendMailTest','MailController@sendMail');
+Route::get('/user','UserGroupController@sortAuthenticatedUsers');
+
+Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
+Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');

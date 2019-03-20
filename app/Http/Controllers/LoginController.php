@@ -44,12 +44,10 @@ class LoginController extends Controller
     }
 
     public function authenticateUser(Request $request){
-
         $credentials = [
             'username'=> $request->username,
             'password'=>$request->password
         ];
-
         $hashedKey = $this->createHashedKey();
         $token = $this->createNewToken($hashedKey);
         $userInformation = $this->authenticationUtility->authenticateUser($credentials);

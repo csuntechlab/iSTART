@@ -5,9 +5,17 @@
 */
 
 .pointer {
-    cursor: pointer;
+	cursor: pointer;
+}
+
+.focus:focus {
+	box-shadow: 1px 2px 2px 1px $i-blue;
 }
 
 .transition-350ms {
-    transition: 350ms ease-out;
+	transition: 350ms ease-out;
+}
+
+.hide{
+	display:none;
 }
