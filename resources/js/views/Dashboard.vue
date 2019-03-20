@@ -13,9 +13,11 @@ import ControlGroup from './../components/dashboard/ControlGroup'
 import ComparisonGroup from './../components/dashboard/ComparisonGroup'
 import InterventionGroup from './../components/dashboard/InterventionGroup'
 import DashboardNotification from './../components/dashboard/DashboardNotification'
+import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
   name: 'Dashboard',
+  mixins: [changeRouteTitle],
   computed: {
     ...mapGetters([
       'user'
