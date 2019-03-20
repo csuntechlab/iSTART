@@ -10,7 +10,7 @@
 <script>
 import navbar from './components/global/navbar.vue'
 import { clearTimeout, setTimeout } from 'timers'
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 export default {
   components: {
     navbar
@@ -20,10 +20,20 @@ export default {
       timeout: null
     }
   },
+  computed: {
+    ...mapState({
+      userObject: state => state.User.user
+    })
+  },
   methods: {
     ...mapActions([
       'clearUserData'
     ]),
+    userExists () {
+      if (Object.keys(this.userObject).length === 0) {
+        this.clearUserData()
+      }
+    },
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
         if (this.$route.fullPath === '/login') {
@@ -54,6 +64,7 @@ export default {
   mounted () {
     this.checkForCookies()
     this.checkUserInactivity()
+    this.userExists()
   }
 }
 </script>
