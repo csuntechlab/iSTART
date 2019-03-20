@@ -1,17 +1,39 @@
-version: '3'
-
+version: '3.7'
 services:
-  webserver:
-    container_name: iSTART
-    image: csunmetalab/environment:nomi
-    ports:
-      - '8080:80'
+  redis:
+    container_name: iSTART_redis
+    image: "redis:3.2"
+    command: "redis-server --appendonly yes"
     volumes:
-      - .:/var/www/
+      - .:/data/
   composer:
-   restart: 'no'
-   container_name: iSTART_composer
-   image: composer:latest
-   command: install
-   volumes:
+    restart: 'no'
+    container_name: iSTART_composer
+    image: composer:latest
+    command: install --ignore-platform-reqs
+    volumes:
       - .:/app/
+    depends_on:
+      - redis
+  istart:
+    container_name: iSTART
+    build:
+      context: .  
+      target: base      
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+    depends_on: 
+      - redis
+      - composer
+  echo:
+    container_name: iSTART_echo
+    image: ebm17915/laravel-echo-server:latest
+    working_dir: "/usr/src/app"
+    volumes:
+      - "./:/usr/src/app"
+    depends_on:
+      - redis
+      - composer
+      - istart    

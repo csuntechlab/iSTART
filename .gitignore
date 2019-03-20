@@ -5,8 +5,8 @@
 /vendor
 .env
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
+appendonly.aof
+laravel-echo-server.lock
 npm-debug.log
 yarn-error.log
 .DS_Store
