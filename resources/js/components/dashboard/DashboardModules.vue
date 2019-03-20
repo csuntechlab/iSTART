@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
 import DashboardNotification from './DashboardNotification'
 
 export default {
@@ -26,7 +25,6 @@ export default {
     }
   },
 
-  mixins: [changeRouteTitle],
   components: {
     DashboardNotification
   }
