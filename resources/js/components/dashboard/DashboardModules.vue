@@ -1,27 +1,29 @@
 <template>
-  <div class="dashboard-modules">
-    <div class="mt-5">
-      <div class="dashboard-modules__module text-center m-0 col-12" v-for="(item, index) in modules" :key="index">
-        <div class="dashboard-modules__overview row">
-          <div class="dashboard-modules__thumbnail">
-            <img class="dashboard-modules__thumbnail-image" src="./../../../../public/images/thumbnail/test.jpg">
+  <router-link to="/">
+    <div class="dashboard-modules">
+      <div class="mt-5">
+        <div class="text-center m-0 col-12" v-for="(item, index) in modules" :key="index">
+          <div class="dashboard-modules__overview row">
+            <div class="dashboard-modules__thumbnail">
+              <img class="dashboard-modules__thumbnail-image" src="./../../../../public/images/thumbnail/test.jpg">
+            </div>
+            <div class="dashboard-modules__header">
+              {{item.name}}
+            </div>
           </div>
-          <div class="dashboard-modules__header">
-            {{item.name}}
-          </div>
-        </div>
-        <div class="dashboard-modules__progress row align-items-center">
-          <div class="col-4 col-md-6 dashboard-modules__percentage text-left">
-            <span>{{item.percentCompletion}}</span>
-          </div>
-          <div class="col-8 col-md-6 dashboard-modules__completion text-right">
-            <span class="dashboard-modules__status">{{item.completion.status}}</span>
-            <i class="fas fa-chevron-right"></i>
+          <div class="dashboard-modules__progress row align-items-center">
+            <div class="col-4 col-md-6 dashboard-modules__percentage text-left">
+              <span>{{item.percentCompletion}}</span>
+            </div>
+            <div class="col-8 col-md-6 dashboard-modules__completion text-right">
+              <span class="dashboard-modules__status">{{item.completion.status}}</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -48,11 +50,11 @@ export default {
   },
 
   methods: {
-    checkCompletion (percentAsNumber) {
-      if (percentAsNumber < 1 || percentAsNumber > 99) {
+    checkCompletion (progressPercentAsNumber) {
+      if (progressPercentAsNumber < 1 || progressPercentAsNumber > 99) {
         return ''
       } else {
-        return percentAsNumber.toString() + '%'
+        return progressPercentAsNumber.toString() + '%'
       }
     }
   }

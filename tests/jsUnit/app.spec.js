@@ -1,6 +1,6 @@
 import 'jest-extended'
-import { shallowMount } from '@vue/test-utils';
-import App from './../../resources/js/App.vue';
+// import { shallowMount } from '@vue/test-utils'
+// import App from './../../resources/js/App.vue'
 
 describe('setup test', () => {
   it('should add to 2', () => {

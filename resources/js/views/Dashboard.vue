@@ -1,16 +1,9 @@
 <template>
   <div class="dashboard container-fluid">
-    <div v-if="this.user.user_group === 'control'">
-      <ControlGroup></ControlGroup>
-    </div>
-    <div v-if="this.user.user_group === 'comparison'">
-      <DashboardNotification></DashboardNotification>
-      <ComparisonGroup></ComparisonGroup>
-    </div>
-    <div v-if="this.user.user_group === 'intervention'">
-      <DashboardNotification></DashboardNotification>
-      <InterventionGroup></InterventionGroup>
-    </div>
+    <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
+    <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
+    <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
+    <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
   </div>
 </template>
 

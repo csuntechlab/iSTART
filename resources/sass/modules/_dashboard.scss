@@ -1,6 +1,10 @@
 .dashboard {
     padding: 0;
 
+    &:hover a {
+        text-decoration: none;
+    }
+
     &-notification {
         padding: 0.5rem 1rem;
         background-color: white;
@@ -49,9 +53,8 @@
     }
 
     &-modules {
-        &__module {
-            background-color: rgb(255, 255, 255);
-        }
+        background-color: rgb(255, 255, 255);
+        color: rgb(25, 25, 25);
 
         &__overview {
             position: relative;
@@ -59,7 +62,7 @@
 
         &__thumbnail {
             overflow: hidden;
-            max-height: 160px;
+            max-height: 8.5rem;
 
             &-image {
                 object-fit: cover;
@@ -73,15 +76,16 @@
             color: rgb(245, 245, 245);
             text-align: left;
             font-weight: bold;
-            font-size: 1.75rem;
+            font-size: 1.45rem;
             position: absolute;
             width: 100%;
             bottom: 0;
-            padding: 0 0.75rem;
+            padding: 0 1rem;
         }
 
         &__progress {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
+            padding-bottom: 0.35rem;
         }
 
         &__completion {
