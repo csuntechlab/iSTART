@@ -40,4 +40,5 @@ class User extends MetaUser
     {
         return $this->hasOne('App\Models\UserGroup');
     }
+
 }
