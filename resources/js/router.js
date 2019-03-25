@@ -6,7 +6,7 @@ import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
 import schedule from './views/schedule.vue'
 import admin from './views/admin.vue'
-import store from './store/index.js'
+import store from './store/modules/user/index'
 
 Vue.use(Router)
 
