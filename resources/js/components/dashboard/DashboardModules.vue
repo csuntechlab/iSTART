@@ -74,7 +74,6 @@ export default {
 
   methods: {
     checkCompletionStatus (progressPercentAsNumber) {
-      console.log(progressPercentAsNumber)
       if (progressPercentAsNumber < 1) {
         return 'Start'
       } else if (progressPercentAsNumber > 99) {
