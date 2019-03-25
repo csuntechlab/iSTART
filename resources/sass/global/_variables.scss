@@ -40,7 +40,7 @@ $secondaryColor--lighter: lighten($secondaryColor, 0.4);
 $secondaryColor--light: lighten($secondaryColor, 0.6);
 $secondaryColor--medium: lighten($secondaryColor, 0.8);
 $secondaryColor--dark: darken($secondaryColor, 0.8);
-$secondaryColor--darker: darken($secondaryColor, 1);
+// $secondaryColor--darker: darken($secondaryColor, 1);
 $secondaryColor--80: rgba($secondaryColor, 0.8);
 $secondaryColor--60: rgba($secondaryColor, 0.6);
 $secondaryColor--40: rgba($secondaryColor, 0.4);
@@ -69,6 +69,9 @@ $black--40: rgba(0, 0, 0, 0.4);
 $black--20: rgba(0, 0, 0, 0.2);
 $black--04: rgba(0, 0, 0, 0.04);
 
-
+$theme-colors: (
+    "primary": $primaryColor,
+    "secondary": $secondaryColor
+);
 
 

@@ -13,7 +13,10 @@
 </template>
 
 <script>
+import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
+
 export default {
-  name: 'Error'
+  name: 'Error',
+  mixins: [changeRouteTitle]
 }
 </script>

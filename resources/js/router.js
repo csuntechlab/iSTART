@@ -5,6 +5,7 @@ import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
 import schedule from './views/schedule.vue'
+import admin from './views/admin.vue'
 
 Vue.use(Router)
 
@@ -14,31 +15,37 @@ export default new Router({
     {
       path: '*',
       name: 'Error',
-      component: Error
+      component: Error,
+      meta: { title: 'iSTART | Error' }
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login,
-      meta: { title: 'iSTART' }
+      component: Login
     },
     {
       path: '/logout',
       name: 'Logout',
       component: Logout,
-      meta: { title: 'iSTART' }
+      meta: { title: 'iSTART | Logout' }
     },
     {
       path: '/',
       name: 'Dashboard',
       component: Dashboard,
-      meta: { title: 'iSTART' }
+      meta: { title: 'iSTART | Dashboard' }
     },
     {
       path: '/schedule',
       name: 'schedule',
       component: schedule,
       meta: { title: 'iSTART | Schedule' }
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: admin,
+      meta: { title: 'iSTART | Admin' }
     }
   ]
 })
