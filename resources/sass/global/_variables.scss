@@ -5,7 +5,7 @@
 */
 
 // Body
-//previous body-bg: #f8fafc 
+//previous body-bg: #f8fafc
 $body-bg: #F5F5F5;
 
 // Typography
@@ -14,17 +14,64 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$i-light-blue: #2699FB;
-$i-dark-blue: #106DBC;
 $indigo: #6574cd;
-$purple: #9561e2;
+$purple: #7d63a3;
 $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
-$cyan: #6cb2eb;
-$i-white: #FFFFFF;
-$i-blue: #2699FB;
-$primary: $i-blue;
+$white: rgb(245, 245, 245);
+
+$primaryColor: rgb(38,153,251);
+$primaryColor--lighter: lighten($primaryColor, 0.4);
+$primaryColor--light: lighten($primaryColor, 0.6);
+$primaryColor--medium: rgb(16, 109, 188);
+$primaryColor--dark: darken($primaryColor, 0.8);
+$primaryColor--darker: darken($primaryColor, 1);
+$primaryColor--80: rgba($primaryColor, 0.8);
+$primaryColor--60: rgba($primaryColor, 0.6);
+$primaryColor--40: rgba($primaryColor, 0.4);
+$primaryColor--20: rgba($primaryColor, 0.2);
+
+$secondaryColor: $white;
+$secondaryColor--lighter: lighten($secondaryColor, 0.4);
+$secondaryColor--light: lighten($secondaryColor, 0.6);
+$secondaryColor--medium: lighten($secondaryColor, 0.8);
+$secondaryColor--dark: darken($secondaryColor, 0.8);
+// $secondaryColor--darker: darken($secondaryColor, 1);
+$secondaryColor--80: rgba($secondaryColor, 0.8);
+$secondaryColor--60: rgba($secondaryColor, 0.6);
+$secondaryColor--40: rgba($secondaryColor, 0.4);
+$secondaryColor--20: rgba($secondaryColor, 0.2);
+
+$grey: rgb(160, 160, 160);
+$grey--lighter: rgb(215, 215, 215);
+$grey--light: rgb(225, 225, 225);
+$grey--medium: lighten($grey--light, 0.8);
+$grey--dark: rgb(145, 145, 145);
+$grey--darker: darken($grey--dark, 0.4);
+$grey--80: rgba($grey, 0.8);
+$grey--60: rgba($grey, 0.6);
+$grey--40: rgba($grey, 0.4);
+$grey--20: rgba($grey, 0.2);
+
+$black: rgb(25, 25, 25);
+$black--lighter: lighten($black, 0.4);
+$black--light: rgb(60, 60, 60);
+$black--medium: lighten($black--light, 0.4);
+$black--dark: rgb(0, 0, 0);
+$black--darker: darken($black--dark, 0.4);
+$black--80: rgba(0, 0, 0, 0.8);
+$black--60: rgba(0, 0, 0, 0.6);
+$black--40: rgba(0, 0, 0, 0.4);
+$black--20: rgba(0, 0, 0, 0.2);
+$black--04: rgba(0, 0, 0, 0.04);
+
+$theme-colors: (
+    "primary": $primaryColor,
+    "secondary": $secondaryColor
+);
+
+
