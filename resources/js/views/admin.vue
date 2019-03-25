@@ -6,7 +6,7 @@
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
-  name: 'schedule',
+  name: 'Admin',
   mixins: [changeRouteTitle]
 }
 </script>

@@ -5,7 +5,7 @@ import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
 import schedule from './views/schedule.vue'
-import admin from './views/admin.vue'
+import Admin from './views/Admin.vue'
 
 Vue.use(Router)
 
@@ -43,8 +43,8 @@ export default new Router({
     },
     {
       path: '/admin',
-      name: 'admin',
-      component: admin,
+      name: 'Admin',
+      component: Admin,
       meta: { title: 'iSTART | Admin' }
     }
   ]
