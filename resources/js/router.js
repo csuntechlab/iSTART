@@ -6,7 +6,6 @@ import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
 import schedule from './views/schedule.vue'
 import admin from './views/admin.vue'
-import store from './store/modules/user/index'
 
 Vue.use(Router)
 
@@ -53,20 +52,3 @@ const router = new Router({
 })
 
 export default router
-
-// Before each route change check if route needs & has proper authentication
-router.beforeEach((to, from, next) => {
-  if (to.meta.requiresAuth) {
-    if (!store.getters.correctLoginInfo) {
-      next({ path: '/login' })
-    } else if (store.getters.user.isAdmin && to.meta.adminAuth) {
-      next()
-    } else if (!(store.getters.user.isAdmin) && to.meta.userAuth) {
-      next()
-    } else {
-      next(from.path)
-    }
-  } else {
-    next()
-  }
-})

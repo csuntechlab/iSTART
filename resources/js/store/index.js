@@ -7,9 +7,11 @@ import './../router'
 Vue.use(Vuex)
 
 // MODULE MAP
-export default new Vuex.Store({
+const store = new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   modules: {
     User
   }
 })
+
+export default store
