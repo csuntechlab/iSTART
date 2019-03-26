@@ -6,12 +6,17 @@ import router from './router'
 import store from './store/index.js'
 import './registerServiceWorker'
 import './../sass/app.scss'
+import progress from './components/progress/progressLoader.vue'
+import VueProgress from 'vue-progress-path'
+
+Vue.use(VueProgress)
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
+  progress,
   render: h => h(App)
 }).$mount('#app')
 
