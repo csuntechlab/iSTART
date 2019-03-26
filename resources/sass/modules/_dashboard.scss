@@ -3,9 +3,9 @@
 
     &-notification {
         padding: 0.5rem 1rem;
-        background-color: white;
-        color: rgb(25, 25, 25);
-        box-shadow: 0 4px 8px 0 rgba(38,153,251, 0.2);
+        background-color: $secondaryColor;
+        color: $black;
+        box-shadow: 0 4px 8px 0 $primaryColor--20;
 
         & * {
         font-size: 1rem;
@@ -24,7 +24,7 @@
             }
 
             &-date {
-                color: $i-blue;
+                color: $primaryColor;
             }
         }
 
@@ -34,7 +34,7 @@
                 text-align: right;
 
                 &  * {
-                color: rgb(25, 25, 25);
+                color: $black;
 
                 &:hover {
                     text-decoration: none;
