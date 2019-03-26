@@ -1,15 +1,15 @@
 <template>
   <div class="intervention-group container">
-    <DashboardModules></DashboardModules>
+    <DashboardModule></DashboardModule>
   </div>
 </template>
 
 <script>
-import DashboardModules from './DashboardModules'
+import DashboardModule from './DashboardModule'
 export default {
   name: 'InterventionGroup',
   components: {
-    DashboardModules
+    DashboardModule
   }
 }
 </script>

@@ -1,36 +1,34 @@
 <template>
-  <router-link to="/">
-    <div class="dashboard-modules">
-      <div class="mt-5">
-        <div class="dashboard-modules-container text-center col-12" v-for="(item, index) in modules" :key="index">
-          <div class="dashboard-modules__overview row">
-            <div class="dashboard-modules__thumbnail">
-              <img class="dashboard-modules__thumbnail-image" src="./../../../../public/images/thumbnail/test.jpg">
+    <div class="dashboard-module-wrap mt-5">
+      <div class="dashboard-module text-center col-12" v-for="(item, index) in modules" :key="index">
+        <router-link to="/">
+          <div class="dashboard-module__overview row">
+            <div class="dashboard-module__thumbnail">
+              <img class="dashboard-module__thumbnail-image" src="./../../../../public/images/thumbnail/test.jpg">
             </div>
-            <div class="dashboard-modules__header">
+            <div class="dashboard-module__header">
               {{item.name}}
             </div>
           </div>
-          <div class="dashboard-modules__progress row align-items-center">
+          <div class="dashboard-module__progress row align-items-center">
             <div class="col-5 text-left">
               <span>{{item.completion.date}}</span>
             </div>
             <div class="col-7 text-right">
-              <span class="dashboard-modules__status">{{item.completion.status}}</span>
-              <i v-bind:class="[ item.completion.completed ? 'dashboard-modules__status-circle fas fa-check-circle' : 'fas fa-chevron-right' ]"></i>
+              <span class="dashboard-module__status">{{item.completion.status}}</span>
+              <i v-bind:class="[ item.completion.completed ? 'dashboard-module__status-circle fas fa-check-circle' : 'fas fa-chevron-right' ]"></i>
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
-  </router-link>
 </template>
 
 <script>
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
 
 export default {
-  name: 'DashboardModules',
+  name: 'DashboardModule',
   mixins: [changeRouteTitle],
 
   data () {

@@ -7,9 +7,9 @@
 
     &-notification {
         padding: 0.5rem 1rem;
-        background-color: white;
-        color: rgb(25, 25, 25);
-        box-shadow: 0 4px 8px 0 rgba(38,153,251, 0.2);
+        background-color: $secondaryColor;
+        color: $black;
+        box-shadow: 0 4px 8px 0 $primaryColor--20;
 
         & * {
         font-size: 1rem;
@@ -28,7 +28,7 @@
             }
 
             &-date {
-                color: $i-blue;
+                color: $primaryColor;
             }
         }
 
@@ -38,7 +38,7 @@
                 text-align: right;
 
                 &  * {
-                color: rgb(25, 25, 25);
+                color: $black;
 
                 &:hover {
                     text-decoration: none;
@@ -52,10 +52,14 @@
         }
     }
 
-    &-modules {
-        color: rgb(25, 25, 25);
+    &-module {
+        margin-bottom: 1rem;
 
-        &-container {
+        & * {
+            font-weight: bold;
+        }
+
+        &-wrap {
             margin-bottom: 1rem;
         }
 
@@ -75,10 +79,9 @@
         }
 
         &__header {
-            background-color:rgba(25, 25, 25, 0.6);
-            color: rgb(245, 245, 245);
+            background-color:$black--60;
+            color: $white;
             text-align: left;
-            font-weight: bold;
             font-size: 1.5rem;
             position: absolute;
             width: 100%;
@@ -87,13 +90,13 @@
         }
 
         &__progress {
-            background-color: rgb(235, 235, 235);
+            background-color: $grey--light;
+            color: $black;
             padding: 0.4rem 0;
             padding-bottom: 0.35rem;
         }
 
         &__status {
-            font-weight: bold;
             margin-right: 0.25rem;
 
             &-circle {

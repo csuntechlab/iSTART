@@ -19,12 +19,12 @@
             background: none;
             border: none;
             display: inline-block;
-            outline: 2px solid rgb(25, 25, 25);
+            outline: 2px solid $black;
             padding: 0.5rem;
         }
 
         &:hover > * {
-            background-color: rgb(215, 215, 215);
+            background-color: $grey--lighter;
         }
 
         // Tag Overides
