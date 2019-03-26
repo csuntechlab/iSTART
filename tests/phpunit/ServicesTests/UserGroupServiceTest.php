@@ -8,20 +8,23 @@ use App\Models\UserGroup;
 use App\Models\User;
 use App\Services\UserGroupService;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use PHPUnit\Framework\Constraint\IsTrue;
 use Tests\TestCase;
 use Illuminate\Support\Facades\DB;
-
-
+use App\Contracts\UserGroupContract;
+Use Mockery;
 class UserGroupServiceTest extends TestCase
 {
     use DatabaseMigrations;
 
     protected $utility;
+    protected $mockUserGroup;
 
     public function setUp()
     {
         parent::setUp();
         $this->utility = new UserGroupService();
+        $this->mockUserGroup = Mockery::mock(UserGroupContract::class);
     }
     /**
      * @test
@@ -89,6 +92,25 @@ class UserGroupServiceTest extends TestCase
         $this->assertEquals($comparisonCountFromData->count,40);
         $this->assertEquals($controlCountFromData->count,40);
         $this->assertEquals($interventionCountFromData->count,40);
+
+    }
+
+    /**
+     * @test
+     */
+    public function test_if_mail_function_is_called()
+    {
+        $data = ['user_id'=>'members:100010526'
+
+        ];
+
+        $mock = $this->getMockBuilder(UserGroupService::class)->setMethods(['sendMail'])->getMock();
+        $mock->expects($this->once())
+            ->method('sendMail');
+        $mock->sortAuthenticatedUsers($data);
+
+        dd($mock);
+        $this->assertTrue($mock, 'True');
 
     }
 }
