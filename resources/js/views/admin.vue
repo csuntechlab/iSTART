@@ -1,12 +1,71 @@
 <template>
+  <div>
   <h1>Admin</h1>
+  <div v-if="incorrectFileType" class="invalid-feedback ">Please enter an excel file</div>
+  <div class="col-12">
+    <label>File
+      <input type="file" id="file" ref="file" @change="handleFileChange"/>
+    </label>
+    <button @click.prevent="submitFile">Submit</button>
+  </div>
+  </div>
+  
 </template>
 
 <script>
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
+import XLSX from 'xlsx';
 
 export default {
-  name: 'schedule',
-  mixins: [changeRouteTitle]
+  name: 'admin',
+  mixins: [changeRouteTitle],
+  data() {
+    return {
+      participants: '',
+      incorrectFileType: false
+    }
+  },
+  methods: {
+    handleFileChange(evt) {
+      const files = evt.target.files;
+			if(files && files[0]) this.parseFile(files[0]);
+		},
+    submitFile(evt) {
+      let formData = new FormData();
+      evt.stopPropagation(); 
+      evt.preventDefault();
+    },
+    parseFile(file) {
+			/* Boilerplate to set up FileReader */
+			const reader = new FileReader();
+			reader.onload = (e) => {
+        /* Parse data */
+        const bstr = e.target.result;
+        try {
+          const wb = XLSX.read(bstr, {type:'binary'})
+            /* Get first worksheet */
+          const wsname = wb.SheetNames[0];
+          const ws = wb.Sheets[wsname];
+          /* Convert array of arrays */
+          const data = XLSX.utils.sheet_to_json(ws, {header:1});
+          /* Update data */
+          const excelSheetJSON = [];
+          for (var i = 1; i <data.length; i++) {
+            var currentStudent = {
+              email: data[i][0],
+              participant_id: data[i][1]
+            }
+            excelSheetJSON.push(currentStudent);
+          }
+          this.participants = excelSheetJSON;
+          this.incorrectFileType = false;
+        }
+        catch(err){
+          this.incorrectFileType = true
+        }       
+      };
+      reader.readAsBinaryString(file);
+    },
+  }
 }
 </script>
