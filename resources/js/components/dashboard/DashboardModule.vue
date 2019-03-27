@@ -4,7 +4,7 @@
         <router-link to="/">
           <div class="dashboard-module__overview row">
             <div class="dashboard-module__thumbnail">
-              <img class="dashboard-module__thumbnail-image" src="./../../../../public/images/thumbnail/test.jpg">
+              <img class="dashboard-module__thumbnail-image" v-bind:src="item.image">
             </div>
             <div class="dashboard-module__header">
               {{item.name}}
@@ -12,7 +12,10 @@
           </div>
           <div class="dashboard-module__progress row align-items-center">
             <div class="col-5 text-left">
-              <span>{{item.completion.date}}</span>
+              <loading-progress>
+
+              </loading-progress>
+              <span>{{ item.completion.date}}</span>
             </div>
             <div class="col-7 text-right">
               <span class="dashboard-module__status">{{item.completion.status}}</span>
@@ -36,17 +39,19 @@ export default {
       modules: {
         alcohol: {
           name: 'Alcohol',
+          image: '/images/thumbnail/alcohol_thumbnail.jpg',
           completion: {
             progress: 0,
             completed: false,
             status: this.checkCompletionStatus(0),
-            date: 'Available until: 00/00/00'
+            date: '4 days left to complete'
           },
           description: 'Alcohol, I feel fuzzy'
         },
 
         marijuana: {
           name: 'Marijuana',
+          image: '/images/thumbnail/test.jpg',
           completion: {
             progress: 50,
             completed: false,
@@ -58,6 +63,7 @@ export default {
 
         tobacco: {
           name: 'Tobacco',
+          image: '/images/thumbnail/test.jpg',
           completion: {
             progress: 100,
             completed: true,

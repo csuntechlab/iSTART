@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse navbar__dropdown" id="navbar">
       <ul class="navbar-nav mr-auto mt-lg-0">
         <li class="navbar__dropdown-item active">
-          <router-link to="/dashboard" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">MODULES</router-link>
+          <router-link to="/" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">MODULES</router-link>
         </li>
         <li class="navbar__dropdown-item">
           <router-link to="/schedule" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">SCHEDULE</router-link>
