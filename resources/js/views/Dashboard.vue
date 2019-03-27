@@ -1,14 +1,9 @@
 <template>
   <div class="dashboard container-fluid">
-    <div v-if="this.user.user_group === 'control'">
-      <ControlGroup></ControlGroup>
-    </div>
-    <div v-if="this.user.user_group === 'comparison'">
-      <ComparisonGroup></ComparisonGroup>
-    </div>
-    <div v-if="this.user.user_group === 'intervention'">
-      <InterventionGroup></InterventionGroup>
-    </div>
+    <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
+    <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
+    <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
+    <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
     <loading-progress
       :progress="module_percentage"
       :size="size"
@@ -27,6 +22,7 @@ import { mapGetters } from 'vuex'
 import ControlGroup from './../components/dashboard/ControlGroup'
 import ComparisonGroup from './../components/dashboard/ComparisonGroup'
 import InterventionGroup from './../components/dashboard/InterventionGroup'
+import DashboardNotification from './../components/dashboard/DashboardNotification'
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
@@ -40,7 +36,8 @@ export default {
   components: {
     ControlGroup,
     ComparisonGroup,
-    InterventionGroup
+    InterventionGroup,
+    DashboardNotification
   },
   data () {
     return {
