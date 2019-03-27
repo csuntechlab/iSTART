@@ -1,6 +1,10 @@
 .dashboard {
     padding: 0;
 
+    &:hover a {
+        text-decoration: none;
+    }
+
     &-notification {
         padding: 0.5rem 1rem;
         background-color: $secondaryColor;
@@ -44,6 +48,59 @@
 
             &-text {
                 font-weight: bold;
+            }
+        }
+    }
+
+    &-module {
+        margin-bottom: 1rem;
+
+        & * {
+            font-weight: bold;
+        }
+
+        &-wrap {
+            margin-bottom: 1rem;
+        }
+
+        &__overview {
+            position: relative;
+        }
+
+        &__thumbnail {
+            overflow: hidden;
+            max-height: 8.5rem;
+
+            &-image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &__header {
+            background-color:$black--60;
+            color: $white;
+            text-align: left;
+            font-size: 1.5rem;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding: 0 1rem;
+        }
+
+        &__progress {
+            background-color: $grey--light;
+            color: $black;
+            padding: 0.4rem 0;
+            padding-bottom: 0.35rem;
+        }
+
+        &__status {
+            margin-right: 0.25rem;
+
+            &-circle {
+                color: $green;
             }
         }
     }
