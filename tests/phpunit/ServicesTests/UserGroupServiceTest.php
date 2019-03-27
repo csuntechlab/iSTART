@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\ServicesTests;
 
+use App\Contracts\UserAssignedGroupEmailContract;
 use App\Models\UserGroup;
 use App\Models\User;
 use App\Services\UserGroupService;
@@ -18,20 +19,23 @@ class UserGroupServiceTest extends TestCase
     use DatabaseMigrations;
 
     protected $utility;
-    protected $mockUserGroup;
+    protected $userGroupUtility;
+    //protected $userAssignedGroupEmailUtility;
 
     public function setUp()
     {
         parent::setUp();
-        $this->utility = new UserGroupService();
-        $this->mockUserGroup = Mockery::mock(UserGroupContract::class);
+
+        $this->userAssignedGroupEmailUtility = Mockery::spy(UserAssignedGroupEmailContract::class);
+        $this->utility = new UserGroupService($this->userAssignedGroupEmailUtility);
+        $this->userGroupUtility = Mockery::spy(UserGroupContract::class);
     }
     /**
      * @test
      */
     public function getGroup_returns_group_remember_token_display_name_and_email_from_utility_as_array()
     {
-        $userGroupService = new UserGroupService();
+        $userGroupService = new UserGroupService($this->userAssignedGroupEmailUtility);
 
         $userGroupFactory = factory(UserGroup::class)->make([
             'user_id' => 'members:12345',
@@ -58,7 +62,7 @@ class UserGroupServiceTest extends TestCase
      */
     public function user_is_evenly_distributed_into_the_groups_and_assigned_a_group()
     {
-        $service = new UserGroupService();
+       // $service = new UserGroupService($this->userAssignedGroupEmailUtility);
         $userGroupDB = [];
         $this->assertDatabaseMissing('user_groups', $userGroupDB);
 
@@ -67,7 +71,7 @@ class UserGroupServiceTest extends TestCase
             $user = new User(['user_id'=>$i]
                             );
             $this->be($user);
-            $dataFromService = $service->sortAuthenticatedUsers($user);
+            $dataFromService = $this->utility->sortAuthenticatedUsers($user);
 
             $userGroupDB = [
 
@@ -89,6 +93,11 @@ class UserGroupServiceTest extends TestCase
         $controlCountFromData = $groups->where('user_group', 'control')->first();
         $interventionCountFromData = $groups->where('user_group', 'intervention')->first();
 
+        $this->userAssignedGroupEmailUtility
+            ->shouldReceive('sendEmail')
+            ->andReturn(true);
+
+
         $this->assertEquals($comparisonCountFromData->count,40);
         $this->assertEquals($controlCountFromData->count,40);
         $this->assertEquals($interventionCountFromData->count,40);
@@ -108,9 +117,14 @@ class UserGroupServiceTest extends TestCase
         $mock->expects($this->once())
             ->method('sendMail');
         $mock->sortAuthenticatedUsers($data);
+        
+        $this->userGroupUtility
+            ->shouldReceive('sendMail')
+            ->once()
+            ->andReturn(true);
 
-        dd($mock);
-        $this->assertTrue($mock, 'True');
+        //dd($mock);
+        $this->assertTrue();
 
     }
 }

@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Contracts\UserAssignedGroupEmailContract;
 use App\Contracts\UserGroupContract;
 use Illuminate\Http\Request;
 
 class UserGroupController extends Controller
 {
-    protected $userGroupUtility;
+    protected $userGroupUtility = null;
 
     public function __construct(UserGroupContract $userGroupUtility)
     {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\UserAssignedGroupEmailContract;
 use App\Services\UserGroupService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -12,16 +13,16 @@ use App\Models\Research;
 
 class MailController extends Controller
 {
+    protected $emailUtility;
+
+    public function __construct(UserAssignedGroupEmailContract $emailUtility)
+    {
+        $this->emailUtility = $emailUtility;
+    }
+
     public function sendMail()
     {
-        $user = auth()->user();
-        $userGroup = UserGroup::find($user['user_id']);
-        $researchID = Research::find($user['user_id']);
-        $genericEmail = new \stdClass();
-        $genericEmail->user_group = $userGroup['user_group'];
-        $genericEmail->research_id = $researchID['research_id'];
-        Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($genericEmail));
-
-        return "good";
+        return $this->emailUtility->sendMail();
     }
 }
+//create a service and contract and call the contract in the user group service. then test that

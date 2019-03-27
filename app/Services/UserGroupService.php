@@ -8,10 +8,17 @@ use App\Contracts\UserGroupContract;
 use App\Http\Controllers\MailController;
 use App\Models\UserGroup;
 use Illuminate\Support\Facades\DB;
-use App\Mail\GenericEmail;
+use App\Contracts\UserAssignedGroupEmailContract;
 
 class UserGroupService implements UserGroupContract
 {
+    protected $userAssignedGroupEmailUtility = null;
+
+    public function __construct(UserAssignedGroupEmailContract $userAssignedGroupEmailUtility)
+    {
+        $this->userAssignedGroupEmailUtility = $userAssignedGroupEmailUtility;
+    }
+
     public function getGroup($data)
     {
         $userGroup = UserGroup::where('user_id', $data['user_id'])->first();
@@ -36,7 +43,6 @@ class UserGroupService implements UserGroupContract
             $userInUserGroup->display_name = null;
             $userInUserGroup->remember_token = null;
             $userInUserGroup->save();
-
 
             $groups = DB::table('user_groups')
                 ->selectRaw('user_group, COUNT(*) as count')
@@ -98,8 +104,7 @@ class UserGroupService implements UserGroupContract
             }
         }
 
-        $email = new MailController();
-        $email->sendMail();
+        $this->userAssignedGroupEmailUtility->sendMail();
 
         return $userInUserGroup->user_group;
     }
