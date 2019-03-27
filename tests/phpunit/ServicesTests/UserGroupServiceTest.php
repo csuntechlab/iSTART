@@ -107,24 +107,4 @@ class UserGroupServiceTest extends TestCase
     /**
      * @test
      */
-    public function test_if_mail_function_is_called()
-    {
-        $data = ['user_id'=>'members:100010526'
-
-        ];
-
-        $mock = $this->getMockBuilder(UserGroupService::class)->setMethods(['sendMail'])->getMock();
-        $mock->expects($this->once())
-            ->method('sendMail');
-        $mock->sortAuthenticatedUsers($data);
-        
-        $this->userGroupUtility
-            ->shouldReceive('sendMail')
-            ->once()
-            ->andReturn(true);
-
-        //dd($mock);
-        $this->assertTrue();
-
-    }
 }
