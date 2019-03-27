@@ -9,8 +9,16 @@
     <div v-if="this.user.user_group === 'intervention'">
       <InterventionGroup></InterventionGroup>
     </div>
-    <progress-loader :sizeString="64" :shapeString="shape.circle" :module_percentage="module_percentage"></progress-loader>
-    <progress-loader :sizeString="64" :shapeString="shape.line" :module_percentage="module_percentage"></progress-loader>
+    <loading-progress
+      :progress="module_percentage"
+      :size="size"
+      :shape="shape.line"
+    />
+    <loading-progress
+      :progress="module_percentage"
+      :size="size"
+      :shape="shape.circle"
+    />
   </div>
 </template>
 
@@ -19,7 +27,6 @@ import { mapGetters } from 'vuex'
 import ControlGroup from './../components/dashboard/ControlGroup'
 import ComparisonGroup from './../components/dashboard/ComparisonGroup'
 import InterventionGroup from './../components/dashboard/InterventionGroup'
-import progressLoader from './../components/progress/progressLoader'
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
@@ -33,8 +40,7 @@ export default {
   components: {
     ControlGroup,
     ComparisonGroup,
-    InterventionGroup,
-    progressLoader
+    InterventionGroup
   },
   data () {
     return {
