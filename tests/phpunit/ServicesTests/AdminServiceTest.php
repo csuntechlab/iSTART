@@ -72,17 +72,13 @@ class AdminServiceTest extends TestCase
 
         $good = [
             [
-                [
-                    'email' => 'sun.ra@space.net',
-                    'research_id' => 'pew'
-                ],
+                'email' => 'sun.ra@space.net',
+                'research_id' => 'pew',
                 'user_id' => 123
             ],
             [
-                [
-                    'email' => 'coleman.hawkings@sax.phone',
-                    'research_id' => 'neeto'
-                ],
+                'email' => 'coleman.hawkings@sax.phone',
+                'research_id' => 'neeto',
                 'user_id' => 456
             ]
         ];

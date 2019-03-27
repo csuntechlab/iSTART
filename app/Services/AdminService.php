@@ -27,7 +27,10 @@ class AdminService implements AdminContract
             if(null === $userId) {
                 array_push($bad, $emailPair);
             } else {
-                array_push($good, [$emailPair, 'user_id' => $userId]);
+                array_push($good, [
+                    'email' => $emailPair['email'],
+                    'research_id' => $emailPair['research_id'],
+                    'user_id' => $userId]);
             }
         }
 
