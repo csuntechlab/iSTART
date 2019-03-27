@@ -29,7 +29,7 @@ class AdminService implements AdminContract
             } else {
                 array_push($good, [
                     'email' => $emailPair['email'],
-                    'research_id' => $emailPair['research_id'],
+                    'participant_id' => $emailPair['participant_id'],
                     'user_id' => $userId]);
             }
         }

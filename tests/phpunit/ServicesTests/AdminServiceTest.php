@@ -34,19 +34,19 @@ class AdminServiceTest extends TestCase
         $input_data = [
             [
                 'email' => 'sun.ra@space.net',
-                'research_id' => 'pew'
+                'participant_id' => 'pew'
             ],
             [
                 'email' => 'ornette.coleman@free.net',
-                'research_id' => 'pow'
+                'participant_id' => 'pow'
             ],
             [
                 'email' => 'coleman.hawkings@sax.phone',
-                'research_id' => 'neeto'
+                'participant_id' => 'neeto'
             ],
             [
                 'email' => 'one.more@test.me',
-                'research_id' => 'crayola'
+                'participant_id' => 'crayola'
             ],
         ];
 
@@ -73,12 +73,12 @@ class AdminServiceTest extends TestCase
         $good = [
             [
                 'email' => 'sun.ra@space.net',
-                'research_id' => 'pew',
+                'participant_id' => 'pew',
                 'user_id' => 123
             ],
             [
                 'email' => 'coleman.hawkings@sax.phone',
-                'research_id' => 'neeto',
+                'participant_id' => 'neeto',
                 'user_id' => 456
             ]
         ];
@@ -86,11 +86,11 @@ class AdminServiceTest extends TestCase
         $bad = [
             [
                 'email' => 'ornette.coleman@free.net',
-                'research_id' => 'pow'
+                'participant_id' => 'pow'
             ],
             [
                 'email' => 'one.more@test.me',
-                'research_id' => 'crayola'
+                'participant_id' => 'crayola'
             ],
         ];
 
