@@ -5,6 +5,9 @@ import router from './router'
 import store from './store/index.js'
 import './registerServiceWorker'
 import './../sass/app.scss'
+import VueProgress from 'vue-progress-path'
+
+Vue.use(VueProgress)
 
 Vue.config.productionTip = false
 
