@@ -40,7 +40,6 @@ describe('Admin.vue', () => {
     } 
   }
   it('should parse the json version of the excel file to an object format when parseFile is called', ()=> {
-    // localVue.mixin(mixin)
     const wrapper = shallowMount(Admin, {
       mocks: {$route} 
     });
