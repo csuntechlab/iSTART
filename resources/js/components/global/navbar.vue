@@ -1,44 +1,52 @@
 <template>
-<div>
-  <nav class="navbar navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <button class="navbar__button" type="button" @click="toggleNavigation">
+      <i class="fas fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse navbar__dropdown" id="navbar">
-      <ul class="navbar-nav mr-auto mt-lg-0">
-        <li class="navbar__dropdown-item active">
-          <router-link to="/dashboard" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">MODULES</router-link>
-        </li>
-        <li class="navbar__dropdown-item">
-          <router-link to="/schedule" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">SCHEDULE</router-link>
-        </li>
-        <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
-          <a class="pointer nav-link active" data-toggle="collapse" data-target="#navbar" data-text="logout-button" v-on:click="logout">LOGOUT</a>
-        </li>
-      </ul>
-    </div>
   </nav>
+  <div id="dropdown" class="navbar__dropdown transition-350ms">
+    <ul class="navbar-nav navbar__dropdown-list">
+      <li class="navbar__dropdown-item">
+        <router-link to="/dashboard" class="nav-link" href="#">MODULES</router-link>
+      </li>
+      <li class="navbar__dropdown-item">
+        <router-link to="/schedule" class="nav-link" href="#">SCHEDULE</router-link>
+      </li>
+      <li class="navbar__dropdown-item">
+        <router-link to="/logout" class="nav-link" href="#">LOGOUT</router-link>
+      </li>
+    </ul>
   </div>
+</div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'navbar',
-
   computed: {
     ...mapState({
       userID: state => state.User.user.userID
     })
   },
-  methods: {
-    ...mapActions([
-      'clearUserData'
-    ]),
 
-    logout () {
-      this.clearUserData()
+  data () {
+    return {
+      toggleNav: false
+    }
+  },
+
+  methods: {
+    toggleNavigation () {
+      if (this.toggleNav === false) {
+        document.getElementById('dropdown').classList.add('navbar__dropdown--show')
+        this.toggleNav = true
+      } else {
+        document.getElementById('dropdown').classList.remove('navbar__dropdown--show')
+        this.toggleNav = false
+      }
     }
   }
 }
