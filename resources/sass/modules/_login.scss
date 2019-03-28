@@ -4,10 +4,10 @@
         margin-top: 8rem;
         margin-bottom: 1.5rem;
         font-size: 4rem;
-        color: $primary;
+        color: $primaryColor;
     }
 
-    @include media-breakpoint-down(sm) { 
+    @include media-breakpoint-down(sm) {
         &__title {
             margin-top: 6rem;
             margin-bottom: 2rem;

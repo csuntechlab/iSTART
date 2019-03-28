@@ -38,7 +38,7 @@ export default {
     ]),
 
     logout () {
-      this.clearUserData();
+      this.clearUserData()
     }
   }
 }
