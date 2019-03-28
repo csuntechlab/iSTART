@@ -21,21 +21,21 @@ export default {
   mixins: [changeRouteTitle],
   data() {
     return {
-      participants: '',
+      participants: [],
       incorrectFileType: false
     }
   },
   methods: {
     handleFileChange(evt) {
       const files = evt.target.files;
-			if(files && files[0]) this.parseFile(files[0]);
+			if(files && files[0]) this.readFile(files[0]);
 		},
     submitFile(evt) {
-      let formData = new FormData();
       evt.stopPropagation(); 
       evt.preventDefault();
+      this.$store.dispatch('verifyExcelSheet', this.participants);
     },
-    parseFile(file) {
+    readFile(file) {
 			/* Boilerplate to set up FileReader */
 			const reader = new FileReader();
 			reader.onload = (e) => {
@@ -43,22 +43,11 @@ export default {
         const bstr = e.target.result;
         try {
           const wb = XLSX.read(bstr, {type:'binary'})
-            /* Get first worksheet */
+          this.incorrectFileType = false;
           const wsname = wb.SheetNames[0];
           const ws = wb.Sheets[wsname];
-          /* Convert array of arrays */
           const data = XLSX.utils.sheet_to_json(ws, {header:1});
-          /* Update data */
-          const excelSheetJSON = [];
-          for (var i = 1; i <data.length; i++) {
-            var currentStudent = {
-              email: data[i][0],
-              participant_id: data[i][1]
-            }
-            excelSheetJSON.push(currentStudent);
-          }
-          this.participants = excelSheetJSON;
-          this.incorrectFileType = false;
+          this.participants = this.parseFile(data);
         }
         catch(err){
           this.incorrectFileType = true
@@ -66,6 +55,18 @@ export default {
       };
       reader.readAsBinaryString(file);
     },
+    parseFile(excelSheetJSON) {
+      console.table(excelSheetJSON)
+      const parsedExcelSheet = [];
+        for (var i = 1; i <excelSheetJSON.length; i++) {
+          var currentStudent = {
+            email: excelSheetJSON[i][0],
+            participant_id: excelSheetJSON[i][1]
+          }
+          parsedExcelSheet.push(currentStudent);
+        }
+      return parsedExcelSheet;
+    }
   }
 }
 </script>
