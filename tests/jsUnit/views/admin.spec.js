@@ -1,7 +1,7 @@
-import { shallowMount } from '@vue/test-utils';
-import Admin from './../../resources/js/views/admin';
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import Admin from './../../../resources/js/views/admin.vue';
+const localVue = createLocalVue();
 
-const wrapper = shallowMount(Admin);
 describe('Admin.vue', () => {
   const excelSheetJSON = [
     ["email", "participant_id"],
@@ -31,10 +31,19 @@ describe('Admin.vue', () => {
     {
       email: "edgar.canozelaya.6@my.csun.edu",
       participant_id: 43466
-    },
-    
-  ]
+    },  
+  ];
+  
+  const $route = {
+    meta: {
+      title: 'ISTART'
+    } 
+  }
   it('should parse the json version of the excel file to an object format when parseFile is called', ()=> {
+    // localVue.mixin(mixin)
+    const wrapper = shallowMount(Admin, {
+      mocks: {$route} 
+    });
     expect(wrapper.vm.parseFile(excelSheetJSON)).toEqual(parsedExcelSheet)
   })
 

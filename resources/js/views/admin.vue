@@ -56,7 +56,6 @@ export default {
       reader.readAsBinaryString(file);
     },
     parseFile(excelSheetJSON) {
-      console.table(excelSheetJSON)
       const parsedExcelSheet = [];
         for (var i = 1; i <excelSheetJSON.length; i++) {
           var currentStudent = {

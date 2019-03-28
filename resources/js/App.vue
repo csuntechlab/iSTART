@@ -35,13 +35,13 @@ export default {
       }
     },
     checkForCookies () {
-      // if (document.cookie.includes('userKey')) {
-      //   if (this.$route.fullPath === '/login') {
-      //     this.$router.push({ name: 'dashboard' })
-      //   }
-      // } else {
-      //   this.$router.push({ name: 'Login' })
-      // }
+      if (document.cookie.includes('userKey')) {
+        if (this.$route.fullPath === '/login') {
+          this.$router.push({ name: 'dashboard' })
+        }
+      } else {
+        this.$router.push({ name: 'Login' })
+      }
     },
     checkUserInactivity () {
       var idleTimeout = parseFloat(document.querySelector('meta[name=idle-timeout]').content)
