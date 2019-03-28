@@ -1,34 +1,75 @@
 import 'jest-extended'
+import { beforeEach } from './../../resources/js/__mocks__/main'
 
-describe('setup test', () => {
-  let user = {
-    correctLoginInfo: null,
-    isAdmin: null
+describe('beforeEach', () => {
+  const next = jest.fn()
+
+  let store = {
+    getters: {
+      correctLoginInfo: null,
+      user: {
+        isAdmin: null
+      }
+    }
   }
 
-  const toUserRoute = {
-    requiresAuth: true,
-    userAuth: true,
-    adminAuth: null
+  let to = {
+    meta: {
+      requiresAuth: null,
+      userAuth: null,
+      adminAuth: null
+    }
   }
 
-  const toAdminRoute = {
-    requiresAuth: true,
-    userAuth: null,
-    adminAuth: true
+  let from = {
+    path: '/dashboard'
   }
 
-  it('should check if user has correctLoginInfo', () => {
-    expect(user.correctLoginInfo).toBeNil()
+  it('should set requiresAuth to false and checks for next to be called', () => {
+    to.meta.requiresAuth = false
+
+    beforeEach(to, undefined, next)
+    expect(next).toHaveBeenCalled()
   })
 
-  it('should set user.isAdmin to true and compare against toAdminRoute', () => {
-    user.isAdmin = true
-    expect(user.isAdmin).toBe(toAdminRoute.adminAuth)
+  it('should set requiresAuth to undefined and checks for next to be called', () => {
+    to.meta.requiresAuth = undefined
+
+    beforeEach(to, undefined, next)
+    expect(next).toHaveBeenCalled()
   })
 
-  it('should set user.isAdmin to true and compare against toAdminRoute', () => {
-    user.isAdmin = false
-    expect(!user.isAdmin).toBe(toUserRoute.userAuth)
+  it('should set correctLoginInfo to false and checks for next to be called', () => {
+    store.getters.correctLoginInfo = false
+
+    beforeEach(to, undefined, next)
+    expect(next).toHaveBeenCalled()
+  })
+
+  it('should set isAdmin to true & adminAuth to true and checks for next to be called', () => {
+    store.getters.user.isAdmin = true
+    to.meta.adminAuth = true
+
+    beforeEach(to, undefined, next)
+    expect(next).toHaveBeenCalled()
+  })
+
+  it('should set isAdmin to false & userAuth to true and checks for next to be called', () => {
+    store.getters.user.isAdmin = false
+    to.meta.userAuth = true
+
+    beforeEach(to, undefined, next)
+    expect(next).toHaveBeenCalled()
+  })
+
+  it('should set correctLoginInfo to true & userAuth to false and expect from.path to not be nil', () => {
+    store.getters.correctLoginInfo = true
+    store.getters.user.isAdmin = false
+    to.meta.userAuth = false
+    to.meta.adminAuth = false
+
+    beforeEach(to, from, next)
+    expect(from.path).not.toBeNil()
+    expect(next).toHaveBeenCalled()
   })
 })
