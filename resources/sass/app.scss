@@ -3,6 +3,8 @@
 // Libraries & Frameworks
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+@import '../../node_modules/vue-progress-path/dist/vue-progress-path.css';
+
 
 // Global
 @import "global/helpers";
@@ -17,4 +19,7 @@
 @import "modules/login";
 @import "modules/dashboard";
 @import "modules/schedule";
-@import "modules/page"
+@import "modules/page";
+
+//Components
+@import "components/progress";

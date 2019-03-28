@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);.vue-progress-path{display:inline-block}.vue-progress-path path{fill:none;stroke-width:6;-webkit-transition:stroke-dashoffset .3s ease-in-out;transition:stroke-dashoffset .3s ease-in-out}.vue-progress-path .background{stroke:#ddd}.vue-progress-path .progress{stroke:#40b883}.vue-progress-path.indeterminate path{-webkit-transition:none;transition:none}@charset "UTF-8";
 
 /*
 	* What should I put in this file?
@@ -11982,5 +11982,10 @@ a.text-dark:focus {
 
 .page-description__info {
   font-size: 1.15rem;
+}
+
+.vue-progress-path {
+  width: 60px !important;
+  height: 60px !important;
 }
 

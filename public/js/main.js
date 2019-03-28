@@ -6400,19 +6400,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
-/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
-/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
-/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
-/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../mixins/changeRouteTitle.js */ "./resources/js/mixins/changeRouteTitle.js");
-
-
-
-
+/* harmony import */ var _mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../mixins/changeRouteTitle.js */ "./resources/js/mixins/changeRouteTitle.js");
+//
+//
 //
 //
 //
@@ -6445,9 +6435,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DashboardModule',
-  mixins: [_mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_4__["changeRouteTitle"]],
+  mixins: [_mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_0__["changeRouteTitle"]],
   data: function data() {
     return {
+      size: 50,
+      shape: {
+        circle: 'circle',
+        line: 'line'
+      },
+      module_percentage: 0.24,
       modules: {
         alcohol: {
           name: 'Alcohol',
@@ -6686,6 +6682,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -6701,6 +6702,16 @@ __webpack_require__.r(__webpack_exports__);
     ComparisonGroup: _components_dashboard_ComparisonGroup__WEBPACK_IMPORTED_MODULE_3__["default"],
     InterventionGroup: _components_dashboard_InterventionGroup__WEBPACK_IMPORTED_MODULE_4__["default"],
     DashboardNotification: _components_dashboard_DashboardNotification__WEBPACK_IMPORTED_MODULE_5__["default"]
+  },
+  data: function data() {
+    return {
+      size: 50,
+      shape: {
+        circle: 'circle',
+        line: 'line'
+      },
+      module_percentage: 0.24
+    };
   }
 });
 
@@ -6853,6 +6864,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../mixins/changeRouteTitle.js */ "./resources/js/mixins/changeRouteTitle.js");
+//
+//
 //
 //
 //
@@ -26709,16 +26722,22 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "col-5 text-left" },
+                  { staticClass: "col-7 text-left" },
                   [
-                    _c("loading-progress"),
+                    _c("loading-progress", {
+                      attrs: {
+                        progress: _vm.module_percentage,
+                        size: _vm.size,
+                        shape: _vm.shape.circle
+                      }
+                    }),
                     _vm._v(" "),
                     _c("span", [_vm._v(_vm._s(item.completion.date))])
                   ],
                   1
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-7 text-right" }, [
+                _c("div", { staticClass: "col-5 text-right" }, [
                   _c("span", { staticClass: "dashboard-module__status" }, [
                     _vm._v(_vm._s(item.completion.status))
                   ]),
@@ -27035,7 +27054,15 @@ var render = function() {
       _vm._v(" "),
       this.user.user_group === "intervention"
         ? _c("InterventionGroup")
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("loading-progress", {
+        attrs: {
+          progress: _vm.module_percentage,
+          size: _vm.size,
+          shape: _vm.shape.line
+        }
+      })
     ],
     1
   )
@@ -27279,9 +27306,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Admin")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("Admin")])])
+  }
+]
 render._withStripped = true
 
 
@@ -48550,6 +48584,289 @@ function normalizeComponent (
 
 /***/ }),
 
+/***/ "./node_modules/vue-progress-path/dist/vue-progress-path.esm.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/vue-progress-path/dist/vue-progress-path.esm.js ***!
+  \**********************************************************************/
+/*! exports provided: globalOptions, Progress, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globalOptions", function() { return globalOptions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Progress", function() { return Progress$$1; });
+var shapes = {
+  circle: function circle(size) {
+    return "\n  \tM " + size / 2 + ", " + size / 2 + "\n    m 0, -" + size / 2 + "\n    a " + size / 2 + "," + size / 2 + " 0 1 1 0," + size + "\n    a " + size / 2 + "," + size / 2 + " 0 1 1 0,-" + size + "\n  ";
+  },
+  semicircle: function semicircle(size) {
+    return "\n  \tM " + size / 2 + ", " + size / 2 + "\n    m -" + size / 2 + ", 0\n    a " + size / 2 + "," + size / 2 + " 0 1 1 " + size + ",0\n  ";
+  },
+  line: function line(size) {
+    return "\n  \tM 0," + size / 2 + "\n    L " + size + "," + size / 2 + "\n  ";
+  },
+  square: function square(size) {
+    return "\n  \tM 0,0\n    L " + size + ",0\n    L " + size + "," + size + "\n    L 0," + size + "\n    Z\n\t";
+  }
+};
+
+var Progress$$1 = { render: function render() {
+		var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "vue-progress-path", class: _vm.cssClass, style: _vm.style }, [_c('svg', { attrs: { "width": _vm.finalWidth, "height": _vm.finalHeight, "viewBox": '0 0 ' + _vm.finalWidth + ' ' + _vm.finalHeight } }, [_c('g', { attrs: { "transform": 'translate(' + (_vm.finalWidth - _vm.size) / 2 + ', ' + (_vm.finalHeight - _vm.size) / 2 + ') rotate(' + _vm.finalRotation + ', ' + _vm.size / 2 + ', ' + _vm.size / 2 + ')' } }, [_c('g', { staticClass: "container" }, [!_vm.hideBackground ? _c('path', { staticClass: "background", attrs: { "d": _vm.path } }) : _vm._e(), _c('path', { ref: "path", staticClass: "progress", attrs: { "d": _vm.path, "stroke-dasharray": _vm.finalDasharray + ' ' + _vm.finalDasharray, "stroke-dashoffset": _vm.finalDashoffset } })])])])]);
+	}, staticRenderFns: [],
+	name: 'Progress',
+
+	props: {
+		counterClockwise: {
+			type: Boolean,
+			default: false
+		},
+		fillDuration: {
+			type: [String, Number],
+			default: 1
+		},
+		height: {
+			type: [String, Number],
+			default: 0
+		},
+		hideBackground: {
+			type: Boolean,
+			default: false
+		},
+		indeterminate: {
+			type: Boolean,
+			default: false
+		},
+		progress: {
+			type: Number,
+			default: 0,
+			validate: function validate(value) {
+				return value >= -1 && value <= 1;
+			}
+		},
+		rotate: {
+			type: Boolean,
+			default: false
+		},
+		rotationDuration: {
+			type: [String, Number],
+			default: 1
+		},
+		shape: {
+			type: String,
+			default: null
+		},
+		size: {
+			type: [String, Number],
+			default: 100
+		},
+		staticPath: {
+			type: Boolean,
+			default: false
+		},
+		width: {
+			type: [String, Number],
+			default: 0
+		}
+	},
+
+	data: function data() {
+		return {
+			dasharray: 0,
+			dashoffset: 0,
+			rotation: 0,
+			animating: false
+		};
+	},
+
+
+	computed: {
+		cssClass: function cssClass() {
+			return {
+				'indeterminate': this.indeterminate
+			};
+		},
+		finalDasharray: function finalDasharray() {
+			return this.finalDashoffset === 0 || this.finalDashoffset === this.dasharray * 2 ? 0 : this.dasharray;
+		},
+		finalDashoffset: function finalDashoffset() {
+			if (this.animating) {
+				return this.dashoffset;
+			} else {
+				if (this.finalProgress < 0) {
+					return -this.dasharray * this.finalProgress + this.dasharray;
+				} else {
+					return (1 - this.finalProgress) * this.dasharray;
+				}
+			}
+		},
+		finalHeight: function finalHeight() {
+			return this.height || parseFloat(this.size) + 50;
+		},
+		finalProgress: function finalProgress() {
+			if (this.counterClockwise) {
+				return -this.progress;
+			} else {
+				return this.progress;
+			}
+		},
+		finalRotation: function finalRotation() {
+			return this.animating ? this.rotation : 0;
+		},
+		finalShape: function finalShape() {
+			if (this.shape) {
+				return this.shape;
+			} else {
+				return globalOptions.defaultShape;
+			}
+		},
+		finalWidth: function finalWidth() {
+			return this.width || parseFloat(this.size) + 50;
+		},
+		style: function style() {
+			return {
+				width: this.finalWidth + 'px',
+				height: this.finalHeight + 'px'
+			};
+		},
+		svgStyle: function svgStyle() {
+			return {};
+		},
+		path: function path() {
+			var path = shapes[this.finalShape] || this.finalShape;
+			if (path) {
+				if (typeof path === 'function') {
+					path = path(this.size);
+				}
+				return path;
+			}
+		}
+	},
+
+	watch: {
+		indeterminate: {
+			handler: function handler(value) {
+				if (value) {
+					this.startAnimation();
+				} else {
+					this.stopAnimation();
+				}
+			},
+
+			immediate: true
+		},
+
+		path: {
+			handler: function handler() {
+				var _this = this;
+
+				this.$nextTick(function () {
+					_this.dasharray = _this.$refs.path.getTotalLength();
+				});
+			},
+
+			immediate: true
+		}
+	},
+
+	methods: {
+		frame: function frame(timestamp) {
+			var time = timestamp - this._animationLastFrame;
+			this._animationLastFrame = timestamp;
+
+			if (this.rotate) {
+				var direction = this.counterClockwise ? -1 : 1;
+				var d = time * 360 / (parseFloat(this.rotationDuration) * 1000);
+				this.rotation += d * direction;
+				if (this.counterClockwise) {
+					if (this.rotation < 0) {
+						this.rotation += 360;
+					}
+				} else {
+					if (this.rotation > 360) {
+						this.rotation -= 360;
+					}
+				}
+			}
+
+			if (!this.staticPath) {
+				var range = this.dasharray * 2;
+				var _direction = this.counterClockwise ? 1 : -1;
+				var _d = time * range / (parseFloat(this.fillDuration) * 1000);
+				this.dashoffset += _d * _direction;
+				if (this.counterClockwise) {
+					if (this.dashoffset < 0) {
+						this.dashoffset += range;
+					}
+				} else {
+					if (this.dashoffset > range) {
+						this.dashoffset -= range;
+					}
+				}
+			}
+
+			if (this.animating) {
+				requestAnimationFrame(this.frame);
+			}
+		},
+		startAnimation: function startAnimation() {
+			this.dashoffset = this.dasharray;
+			this.rotation = 0;
+			this.animating = true;
+			this._animationLastFrame = performance.now();
+			requestAnimationFrame(this.frame);
+		},
+		stopAnimation: function stopAnimation() {
+			this.animating = false;
+		}
+	},
+
+	beforeDestroy: function beforeDestroy() {
+		this.stopAnimation();
+	}
+};
+
+// import { setOptions } from './options'
+
+var globalOptions = {};
+
+function registerComponents(Vue, prefix) {
+	Vue.component(prefix + 'progress', Progress$$1);
+}
+
+var plugin = {
+	// eslint-disable-next-line no-undef
+	version: "0.0.2",
+	install: function install(Vue, options) {
+		globalOptions = Object.assign({}, {
+			installComponents: true,
+			componentsPrefix: 'loading-',
+			defaultShape: 'circle'
+		}, options);
+
+		if (globalOptions.installComponents) {
+			registerComponents(Vue, globalOptions.componentsPrefix);
+		}
+	}
+};
+
+// Auto-install
+var GlobalVue = null;
+if (typeof window !== 'undefined') {
+	GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+	GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+	GlobalVue.use(plugin);
+}
+
+
+/* harmony default export */ __webpack_exports__["default"] = (plugin);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
 /***/ "./node_modules/vue-router/dist/vue-router.esm.js":
 /*!********************************************************!*\
   !*** ./node_modules/vue-router/dist/vue-router.esm.js ***!
@@ -64799,6 +65116,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _registerServiceWorker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./registerServiceWorker */ "./resources/js/registerServiceWorker.js");
 /* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../sass/app.scss */ "./resources/sass/app.scss");
 /* harmony import */ var _sass_app_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_sass_app_scss__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var vue_progress_path__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-progress-path */ "./node_modules/vue-progress-path/dist/vue-progress-path.esm.js");
 
 
 
@@ -64810,6 +65128,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+vue__WEBPACK_IMPORTED_MODULE_4___default.a.use(vue_progress_path__WEBPACK_IMPORTED_MODULE_11__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_4___default.a.config.productionTip = false;
 new vue__WEBPACK_IMPORTED_MODULE_4___default.a({
   router: _router__WEBPACK_IMPORTED_MODULE_7__["default"],

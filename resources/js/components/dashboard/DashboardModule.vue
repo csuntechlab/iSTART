@@ -11,13 +11,15 @@
             </div>
           </div>
           <div class="dashboard-module__progress row align-items-center">
-            <div class="col-5 text-left">
-              <loading-progress>
-
-              </loading-progress>
+            <div class="col-7 text-left">
+              <loading-progress
+                :progress="module_percentage"
+                :size="size"
+                :shape="shape.circle"
+              />
               <span>{{ item.completion.date}}</span>
             </div>
-            <div class="col-7 text-right">
+            <div class="col-5 text-right">
               <span class="dashboard-module__status">{{item.completion.status}}</span>
               <i v-bind:class="[ item.completion.completed ? 'dashboard-module__status-circle fas fa-check-circle' : 'fas fa-chevron-right' ]"></i>
             </div>
@@ -36,6 +38,12 @@ export default {
 
   data () {
     return {
+      size: 50,
+      shape: {
+        circle: 'circle',
+        line: 'line'
+      },
+      module_percentage: 0.24,
       modules: {
         alcohol: {
           name: 'Alcohol',
