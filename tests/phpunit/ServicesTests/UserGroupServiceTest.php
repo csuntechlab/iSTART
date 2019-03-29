@@ -20,7 +20,7 @@ class UserGroupServiceTest extends TestCase
 
     protected $utility;
     protected $userGroupUtility;
-    //protected $userAssignedGroupEmailUtility;
+    protected $userAssignedGroupEmailUtility;
 
     public function setUp()
     {
@@ -62,7 +62,6 @@ class UserGroupServiceTest extends TestCase
      */
     public function user_is_evenly_distributed_into_the_groups_and_assigned_a_group()
     {
-       // $service = new UserGroupService($this->userAssignedGroupEmailUtility);
         $userGroupDB = [];
         $this->assertDatabaseMissing('user_groups', $userGroupDB);
 
@@ -104,7 +103,5 @@ class UserGroupServiceTest extends TestCase
 
     }
 
-    /**
-     * @test
-     */
+
 }

@@ -33,7 +33,6 @@ class GenericEmail extends Mailable
     public function build()
     {
         return $this->view('mail.generic');
-//        return $this->from('donotreply@example.com')
-//                    ->view('mail.generic');
+
     }
 }

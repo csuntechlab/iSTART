@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Contracts\UserGroupContract;
-use App\Http\Controllers\MailController;
 use App\Models\UserGroup;
 use Illuminate\Support\Facades\DB;
 use App\Contracts\UserAssignedGroupEmailContract;
