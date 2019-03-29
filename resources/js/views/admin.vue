@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleFileChange(evt) {
-      const files = evt.target.files;
+      var files = evt.target.files;
 			if(files && files[0]) this.readFile(files[0]);
 		},
     submitFile(evt) {
@@ -37,17 +37,24 @@ export default {
     },
     readFile(file) {
 			/* Boilerplate to set up FileReader */
-			const reader = new FileReader();
+			var reader = new FileReader();
 			reader.onload = (e) => {
-        /* Parse data */
-        const bstr = e.target.result;
+        var bstr = e.target.result;
         try {
-          const wb = XLSX.read(bstr, {type:'binary'})
+          var wb = XLSX.read(bstr, {type:'binary'})
           this.incorrectFileType = false;
-          const wsname = wb.SheetNames[0];
-          const ws = wb.Sheets[wsname];
-          const data = XLSX.utils.sheet_to_json(ws, {header:1});
-          this.participants = this.parseFile(data);
+          var fileName = this.$refs.file.files[0].name;
+          
+          if (this.checkFileType(fileName)) {
+            var wsname = wb.SheetNames[0];
+            var ws = wb.Sheets[wsname];
+            var data = XLSX.utils.sheet_to_json(ws, {header:1});
+            this.participants = this.parseFile(data);
+          }
+          else {
+            this.incorrectFileType = true;
+          }
+          
         }
         catch(err){
           this.incorrectFileType = true
@@ -56,7 +63,7 @@ export default {
       reader.readAsBinaryString(file);
     },
     parseFile(excelSheetJSON) {
-      const parsedExcelSheet = [];
+      var parsedExcelSheet = [];
         for (var i = 1; i <excelSheetJSON.length; i++) {
           var currentStudent = {
             email: excelSheetJSON[i][0],
@@ -65,6 +72,16 @@ export default {
           parsedExcelSheet.push(currentStudent);
         }
       return parsedExcelSheet;
+    },
+    checkFileType(fileName) {
+      var acceptedFileTypes = ["xlsx", "xlsb", "xlsm", "xls", "csv"]
+      var fileIsAccepted = false; 
+      for (var i =0; i <acceptedFileTypes.length; i++) {
+        if (fileName.includes(acceptedFileTypes[i])) { 
+            fileIsAccepted = true;
+        }
+      }
+      return fileIsAccepted;
     }
   }
 }
