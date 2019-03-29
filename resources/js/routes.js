@@ -2,8 +2,8 @@ import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Error from './views/Error.vue'
-import schedule from './views/schedule.vue'
-import admin from './views/admin.vue'
+import Schedule from './views/Schedule.vue'
+import Admin from './views/Admin.vue'
 
 export default [
   {
@@ -33,13 +33,13 @@ export default [
   {
     path: '/schedule',
     name: 'schedule',
-    component: schedule,
+    component: Schedule,
     meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
   },
   {
     path: '/admin',
     name: 'admin',
-    component: admin,
+    component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
   }
 ]
