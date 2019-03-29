@@ -26,13 +26,13 @@ export default {
     }
   },
   methods: {
-    handleFileChange(evt) {
-      var files = evt.target.files;
+    handleFileChange(event) {
+      var files = event.target.files;
 			if(files && files[0]) this.readFile(files[0]);
 		},
-    submitFile(evt) {
-      evt.stopPropagation(); 
-      evt.preventDefault();
+    submitFile(event) {
+      event.stopPropagation(); 
+      event.preventDefault();
       this.$store.dispatch('verifyExcelSheet', this.participants);
     },
     readFile(file) {
