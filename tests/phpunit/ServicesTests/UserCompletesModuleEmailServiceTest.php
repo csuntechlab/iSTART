@@ -3,6 +3,7 @@
 namespace Tests\ServicesTests;
 
 use App\Services\UserCompletesModuleEmailService;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -15,6 +16,8 @@ use App\Services\AuthenticationService;
 
 class UserCompletesModuleEmailServiceTest extends TestCase
 {
+    use DatabaseMigrations;
+
     protected $userCompletesModuleEmailUtility;
     protected $service;
 
