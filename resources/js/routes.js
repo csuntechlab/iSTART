@@ -32,13 +32,13 @@ export default [
   },
   {
     path: '/schedule',
-    name: 'schedule',
+    name: 'Schedule',
     component: Schedule,
     meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
   },
   {
     path: '/admin',
-    name: 'admin',
+    name: 'Admin',
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
   }
