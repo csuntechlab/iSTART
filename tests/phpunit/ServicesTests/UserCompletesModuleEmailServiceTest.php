@@ -15,11 +15,6 @@ use App\Services\AuthenticationService;
 
 class UserCompletesModuleEmailServiceTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     protected $userCompletesModuleEmailUtility;
     protected $service;
 
@@ -35,9 +30,8 @@ class UserCompletesModuleEmailServiceTest extends TestCase
      */
     public function email_function_is_called_and_email_is_sent()
     {
-//
+
         $email = $this->service;
-        //dd($email->sendMail());
         $this->assertTrue($email->sendMail());
     }
 }
