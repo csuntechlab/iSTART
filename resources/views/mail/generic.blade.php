@@ -1,4 +1,3 @@
-<!doctype html>
 @component('mail::message')
 Hello Admin,
     User group is: {{$genericEmail->user_group}}
