@@ -1,5 +1,5 @@
 <template>
-  <div class="control-group">
+  <div class="control-group container">
     <h1>Control Group</h1>
   </div>
 </template>
