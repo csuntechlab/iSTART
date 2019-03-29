@@ -4,11 +4,6 @@
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
     <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
     <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
-    <loading-progress
-      :progress="module_percentage"
-      :size="size"
-      :shape="shape.line"
-    />
   </div>
 </template>
 

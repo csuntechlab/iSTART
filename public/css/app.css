@@ -11919,10 +11919,44 @@ a.text-dark:focus {
 }
 
 .dashboard-module__progress {
-  background-color: #e1e1e1;
+  background-color: #f7f7f7;
   color: #191919;
   padding: 0.4rem 0;
   padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.dashboard-module__progress-loader {
+  width: 3.75rem !important;
+  height: 3.75rem !important;
+  margin-left: -1.5625rem;
+  margin-top: -2.03125rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress-loader {
+    margin-top: -1.34375rem;
+    width: 4.15rem !important;
+    height: 4.15rem !important;
+  }
+}
+
+.dashboard-module__progress-text {
+  margin-top: 0.25rem;
+  margin-bottom: 0rem;
+  position: absolute;
+  margin-left: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress-text {
+    margin-top: 1rem;
+  }
 }
 
 .dashboard-module__status {
@@ -11982,12 +12016,5 @@ a.text-dark:focus {
 
 .page-description__info {
   font-size: 1.15rem;
-}
-
-.vue-progress-path {
-  width: 60px !important;
-  height: 60px !important;
-  margin-left: -25px;
-  margin-top: -32.5px;
 }
 

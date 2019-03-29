@@ -12,8 +12,9 @@
           </div>
           <div class="dashboard-module__progress row align-items-center">
             <div class="col-2 text-left">
-              <loading-progress
-                :progress="module_percentage"
+              <p class="dashboard-module__progress-text">{{ item.completion.progress }}%</p>
+              <loading-progress class="dashboard-module__progress-loader"
+                :progress="item.completion.progress /100"
                 :size="size"
                 :shape="shape.circle"
               />
@@ -45,15 +46,14 @@ export default {
         circle: 'circle',
         line: 'line'
       },
-      module_percentage: 0.24,
       modules: {
         alcohol: {
           name: 'Alcohol',
           image: '/images/thumbnail/alcohol_thumbnail.jpg',
           completion: {
-            progress: 0,
+            progress: 2,
             completed: false,
-            status: this.checkCompletionStatus(0),
+            status: this.checkCompletionStatus(2),
             date: '4 days left to complete'
           },
           description: 'Alcohol, I feel fuzzy'

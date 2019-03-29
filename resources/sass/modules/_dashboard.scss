@@ -90,10 +90,33 @@
         }
 
         &__progress {
-            background-color: $grey--light;
+            background-color: $secondaryColor--light;
             color: $black;
             padding: 0.4rem 0;
             padding-bottom: 0.7rem;
+            @include media-breakpoint-up(md){
+                padding-bottom: 1.5rem;
+            }
+            &-loader{
+                width: 3.75rem !important;
+                height: 3.75rem !important;
+                margin-left: -1.5625rem;
+                margin-top: -2.03125rem;
+                @include media-breakpoint-up(md){
+                    margin-top: -1.34375rem;
+                    width: 4.15rem !important;
+                    height: 4.15rem !important;
+                }
+            }
+            &-text{
+                margin-top: 0.25rem;
+                margin-bottom: 0rem;
+                position: absolute;
+                margin-left: 0.9375rem;
+                @include media-breakpoint-up(md){
+                    margin-top: 1rem;
+                }
+            }
         }
 
         &__status {
