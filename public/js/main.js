@@ -6400,7 +6400,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../mixins/changeRouteTitle.js */ "./resources/js/mixins/changeRouteTitle.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ "./node_modules/core-js/modules/es6.array.iterator.js");
+/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.promise */ "./node_modules/core-js/modules/es6.promise.js");
+/* harmony import */ var core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.object.assign */ "./node_modules/core-js/modules/es6.object.assign.js");
+/* harmony import */ var core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es7.promise.finally */ "./node_modules/core-js/modules/es7.promise.finally.js");
+/* harmony import */ var core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_promise_finally__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../mixins/changeRouteTitle.js */ "./resources/js/mixins/changeRouteTitle.js");
+
+
+
+
+//
+//
 //
 //
 //
@@ -6435,7 +6449,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DashboardModule',
-  mixins: [_mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_0__["changeRouteTitle"]],
+  mixins: [_mixins_changeRouteTitle_js__WEBPACK_IMPORTED_MODULE_4__["changeRouteTitle"]],
   data: function data() {
     return {
       size: 50,
@@ -6481,6 +6495,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     };
   },
+  computed: {},
   methods: {
     checkCompletionStatus: function checkCompletionStatus(progressPercentAsNumber) {
       if (progressPercentAsNumber < 1) {
@@ -26722,7 +26737,7 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "col-7 text-left" },
+                  { staticClass: "col-2 text-left" },
                   [
                     _c("loading-progress", {
                       attrs: {
@@ -26730,12 +26745,14 @@ var render = function() {
                         size: _vm.size,
                         shape: _vm.shape.circle
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("span", [_vm._v(_vm._s(item.completion.date))])
+                    })
                   ],
                   1
                 ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-4 text-left" }, [
+                  _c("span", [_vm._v(_vm._s(item.completion.date))])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-5 text-right" }, [
                   _c("span", { staticClass: "dashboard-module__status" }, [

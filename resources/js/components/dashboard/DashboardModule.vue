@@ -11,12 +11,14 @@
             </div>
           </div>
           <div class="dashboard-module__progress row align-items-center">
-            <div class="col-7 text-left">
+            <div class="col-2 text-left">
               <loading-progress
                 :progress="module_percentage"
                 :size="size"
                 :shape="shape.circle"
               />
+            </div>
+            <div class="col-4 text-left">
               <span>{{ item.completion.date}}</span>
             </div>
             <div class="col-5 text-right">
@@ -83,7 +85,8 @@ export default {
       }
     }
   },
-
+  computed: {
+  },
   methods: {
     checkCompletionStatus (progressPercentAsNumber) {
       if (progressPercentAsNumber < 1) {
