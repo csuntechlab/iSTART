@@ -6,7 +6,7 @@
     <label>File
       <input type="file" id="file" ref="file" @change="handleFileChange"/>
     </label>
-    <button @click.prevent="submitFile">Submit</button>
+    <button v-if="!incorrectFileType" @click.prevent="submitFile">Submit</button>
   </div>
   </div>
   
