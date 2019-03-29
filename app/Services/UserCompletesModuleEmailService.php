@@ -22,6 +22,5 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $userCompletesModuleEmail->research_id = $researchID['research_id'];
         Mail::to((env('RECIEVE_EMAIL')))->send(new UserCompletesModuleEmail($userCompletesModuleEmail));
 
-        return true;
     }
 }
