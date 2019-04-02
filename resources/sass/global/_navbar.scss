@@ -28,13 +28,13 @@
         }
     }
 
-    &__dropdown{
+    &-dropdown{
         background-color: $primaryColor;
         overflow: hidden;
         height: 0;
 
         &--show {
-            padding: 0.5rem;
+            padding: 0.5rem 0;
             height: 100%;
         }
 
@@ -43,7 +43,7 @@
             margin: 0 -1rem;
         }
 
-        &-item {
+        &__item {
             font-size: 0.8rem;
             font-weight: 700;
             padding-left: 2.3rem;
@@ -55,7 +55,7 @@
             }
         }
         
-        &-divider {
+        &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
             }
