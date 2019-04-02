@@ -7,15 +7,23 @@
   </nav>
   <div id="dropdown" class="navbar__dropdown transition-350ms">
     <ul class="navbar-nav navbar__dropdown-list">
-      <li class="navbar__dropdown-item">
-        <router-link to="/dashboard" class="nav-link" href="#">MODULES</router-link>
-      </li>
-      <li class="navbar__dropdown-item">
-        <router-link to="/schedule" class="nav-link" href="#">SCHEDULE</router-link>
-      </li>
-      <li class="navbar__dropdown-item">
-        <router-link to="/logout" class="nav-link" href="#">LOGOUT</router-link>
-      </li>
+      <router-link to="/" class="navbar__dropdown-divider">
+        <div @click="closeNavigation" class="navbar__dropdown-item">
+          <li class="nav-link">MODULE</li>
+        </div>
+      </router-link>
+
+      <router-link to="/schedule" class="navbar__dropdown-divider">
+        <div class="navbar__dropdown-item" @click="closeNavigation">
+          <li class="nav-link">SCHEDULE</li>
+        </div>
+      </router-link>
+
+      <router-link to="/logout" class="navbar__dropdown-divider">
+        <div class="navbar__dropdown-item" @click="closeNavigation">
+          <li class="nav-link">LOGOUT</li>
+        </div>
+      </router-link>
     </ul>
   </div>
 </div>
@@ -27,19 +35,24 @@ export default {
 
   data () {
     return {
-      toggleNav: false
+      isNavOpen: false
     }
   },
 
   methods: {
     toggleNavigation () {
-      if (this.toggleNav === false) {
+      if (this.isNavOpen === false) {
         document.getElementById('dropdown').classList.add('navbar__dropdown--show')
-        this.toggleNav = true
+        this.isNavOpen = true
       } else {
         document.getElementById('dropdown').classList.remove('navbar__dropdown--show')
-        this.toggleNav = false
+        this.isNavOpen = false
       }
+    },
+
+    closeNavigation () {
+      this.isNavOpen = true
+      this.toggleNavigation()
     }
   }
 }
