@@ -42,9 +42,11 @@ export default {
   methods: {
     toggleNavigation () {
       if (this.isNavOpen === false) {
+        document.querySelector('body').classList.add('body--overflow-hidden')
         document.getElementById('dropdown').classList.add('navbar-dropdown--show')
         this.isNavOpen = true
       } else {
+        document.querySelector('body').classList.remove('body--overflow-hidden')
         document.getElementById('dropdown').classList.remove('navbar-dropdown--show')
         this.isNavOpen = false
       }
