@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import ScheduleModules from './../components/schedule/schedule-modules'
+import ScheduleModules from './../components/schedule/ScheduleModules'
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
