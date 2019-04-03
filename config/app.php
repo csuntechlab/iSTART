@@ -182,6 +182,7 @@ return [
         App\Providers\UserGroupServiceProvider::class,
         App\Providers\ModuleProgressServiceProvider::class,
         App\Providers\ModelRepositoryServiceProvider::class,
+        App\Providers\AdminServiceProvider::class,
 
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
         CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,

@@ -26,4 +26,4 @@ Route::get('/user','UserGroupController@sortAuthenticatedUsers');
 Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
 Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
 
-Route::post('/checkEmailsInJson', 'AdminController@checkEmailsInJson');
+Route::post('/verifyExcelSheet', 'AdminController@checkEmailsInJson');
