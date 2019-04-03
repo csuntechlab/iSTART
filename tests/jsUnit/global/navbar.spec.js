@@ -1,4 +1,4 @@
-import navbar from './../../../resources/js/components/global/navbar.vue'
+import navbar from './../../../resources/js/components/global/Navbar.vue'
 import { shallowMount, RouterLinkStub } from '@vue/test-utils'
 
 describe('navbar.vue', () => {
