@@ -20,7 +20,7 @@
               />
             </div>
             <div class="col-4 text-left">
-              <span>{{ item.completion.date}}</span>
+              <span :class="checkCompletionStatus() === 'Completed'">{{ item.completion.date}}</span>
             </div>
             <div class="col-5 text-right">
               <span class="dashboard-module__status">{{item.completion.status}}</span>

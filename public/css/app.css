@@ -11677,6 +11677,10 @@ a.text-dark:focus {
   display: none;
 }
 
+.body--overflow-hidden {
+  overflow: hidden;
+}
+
 /*
     * What should I put in this file?
     * This file should only contain abstract layouts and overrides in a global scope
@@ -11703,34 +11707,63 @@ a.text-dark:focus {
 .navbar {
   background-color: #2699fb;
   color: whitesmoke;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-wrapper {
+  pointer-events: none;
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
-}
-
-.navbar__dropdown {
   height: 100%;
-  background-color: #2699fb;
-  margin: 3.3rem -1rem -1rem;
-  position: fixed;
   width: 100%;
-  top: 0;
 }
 
-.navbar__dropdown-item {
+.navbar-wrapper * {
+  pointer-events: auto;
+}
+
+.navbar__button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.65rem;
+}
+
+.navbar__button:hover {
+  color: #d7d7d7;
+}
+
+.navbar-dropdown {
+  background-color: #2699fb;
+  overflow: hidden;
+  height: 0;
+}
+
+.navbar-dropdown--show {
+  padding: 0.5rem 0;
+  height: 100%;
+}
+
+.navbar-dropdown-list {
+  border: 1px solid #106dbc;
+  margin: 0 -1rem;
+}
+
+.navbar-dropdown__item {
   font-size: 0.8rem;
   font-weight: 700;
   padding-left: 2.3rem;
   padding-top: 0.85rem;
   padding-bottom: 0.85rem;
-  border-top: 1px solid #106dbc;
-  border-left: 1px solid #106dbc;
-  border-right: 1px solid #106dbc;
 }
 
-.navbar__dropdown-item--bottom {
-  border-bottom: 1px solid #106dbc;
+.navbar-dropdown__item > * {
+  color: whitesmoke;
+}
+
+.navbar-dropdown__divider:not(:nth-child(1)) {
+  border-top: 1px solid #106dbc;
 }
 
 .btn {
