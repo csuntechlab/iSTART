@@ -4,6 +4,9 @@
 	* i.e. &--active, scrollbar, media queries, etc.
 */
 
+$numberParameters: (5, 10, 15, 20, 25, 30, 35, 40, 50);
+
+
 .pointer {
 	cursor: pointer;
 }
@@ -22,4 +25,31 @@
 
 .body--overflow-hidden {
 	overflow: hidden;
+}
+
+@each $num in $numberParameters{
+    .pad-left--#{$num}{
+        padding-left: #{$num}px;
+    }
+    .pad-right--#{$num}{
+        padding-right: #{$num}px;
+    }
+    .pad-top--#{$num}{
+        padding-top: #{$num}px;
+    }
+    .pad-bottom--#{$num}{
+        padding-bottom: #{$num}px;
+    }
+    .margin-left--#{$num}{
+        margin-left: #{$num}px;
+    }
+    .margin-right--#{$num}{
+        margin-right: #{$num}px;
+    }
+    .margin-top--#{$num}{
+        margin-top: #{$num}px;
+    }
+    .margin-bottom--#{$num}{
+        margin-bottom: #{$num}px;
+    }
 }

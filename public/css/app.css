@@ -11681,6 +11681,294 @@ a.text-dark:focus {
   overflow: hidden;
 }
 
+.pad-left--5 {
+  padding-left: 5px;
+}
+
+.pad-right--5 {
+  padding-right: 5px;
+}
+
+.pad-top--5 {
+  padding-top: 5px;
+}
+
+.pad-bottom--5 {
+  padding-bottom: 5px;
+}
+
+.margin-left--5 {
+  margin-left: 5px;
+}
+
+.margin-right--5 {
+  margin-right: 5px;
+}
+
+.margin-top--5 {
+  margin-top: 5px;
+}
+
+.margin-bottom--5 {
+  margin-bottom: 5px;
+}
+
+.pad-left--10 {
+  padding-left: 10px;
+}
+
+.pad-right--10 {
+  padding-right: 10px;
+}
+
+.pad-top--10 {
+  padding-top: 10px;
+}
+
+.pad-bottom--10 {
+  padding-bottom: 10px;
+}
+
+.margin-left--10 {
+  margin-left: 10px;
+}
+
+.margin-right--10 {
+  margin-right: 10px;
+}
+
+.margin-top--10 {
+  margin-top: 10px;
+}
+
+.margin-bottom--10 {
+  margin-bottom: 10px;
+}
+
+.pad-left--15 {
+  padding-left: 15px;
+}
+
+.pad-right--15 {
+  padding-right: 15px;
+}
+
+.pad-top--15 {
+  padding-top: 15px;
+}
+
+.pad-bottom--15 {
+  padding-bottom: 15px;
+}
+
+.margin-left--15 {
+  margin-left: 15px;
+}
+
+.margin-right--15 {
+  margin-right: 15px;
+}
+
+.margin-top--15 {
+  margin-top: 15px;
+}
+
+.margin-bottom--15 {
+  margin-bottom: 15px;
+}
+
+.pad-left--20 {
+  padding-left: 20px;
+}
+
+.pad-right--20 {
+  padding-right: 20px;
+}
+
+.pad-top--20 {
+  padding-top: 20px;
+}
+
+.pad-bottom--20 {
+  padding-bottom: 20px;
+}
+
+.margin-left--20 {
+  margin-left: 20px;
+}
+
+.margin-right--20 {
+  margin-right: 20px;
+}
+
+.margin-top--20 {
+  margin-top: 20px;
+}
+
+.margin-bottom--20 {
+  margin-bottom: 20px;
+}
+
+.pad-left--25 {
+  padding-left: 25px;
+}
+
+.pad-right--25 {
+  padding-right: 25px;
+}
+
+.pad-top--25 {
+  padding-top: 25px;
+}
+
+.pad-bottom--25 {
+  padding-bottom: 25px;
+}
+
+.margin-left--25 {
+  margin-left: 25px;
+}
+
+.margin-right--25 {
+  margin-right: 25px;
+}
+
+.margin-top--25 {
+  margin-top: 25px;
+}
+
+.margin-bottom--25 {
+  margin-bottom: 25px;
+}
+
+.pad-left--30 {
+  padding-left: 30px;
+}
+
+.pad-right--30 {
+  padding-right: 30px;
+}
+
+.pad-top--30 {
+  padding-top: 30px;
+}
+
+.pad-bottom--30 {
+  padding-bottom: 30px;
+}
+
+.margin-left--30 {
+  margin-left: 30px;
+}
+
+.margin-right--30 {
+  margin-right: 30px;
+}
+
+.margin-top--30 {
+  margin-top: 30px;
+}
+
+.margin-bottom--30 {
+  margin-bottom: 30px;
+}
+
+.pad-left--35 {
+  padding-left: 35px;
+}
+
+.pad-right--35 {
+  padding-right: 35px;
+}
+
+.pad-top--35 {
+  padding-top: 35px;
+}
+
+.pad-bottom--35 {
+  padding-bottom: 35px;
+}
+
+.margin-left--35 {
+  margin-left: 35px;
+}
+
+.margin-right--35 {
+  margin-right: 35px;
+}
+
+.margin-top--35 {
+  margin-top: 35px;
+}
+
+.margin-bottom--35 {
+  margin-bottom: 35px;
+}
+
+.pad-left--40 {
+  padding-left: 40px;
+}
+
+.pad-right--40 {
+  padding-right: 40px;
+}
+
+.pad-top--40 {
+  padding-top: 40px;
+}
+
+.pad-bottom--40 {
+  padding-bottom: 40px;
+}
+
+.margin-left--40 {
+  margin-left: 40px;
+}
+
+.margin-right--40 {
+  margin-right: 40px;
+}
+
+.margin-top--40 {
+  margin-top: 40px;
+}
+
+.margin-bottom--40 {
+  margin-bottom: 40px;
+}
+
+.pad-left--50 {
+  padding-left: 50px;
+}
+
+.pad-right--50 {
+  padding-right: 50px;
+}
+
+.pad-top--50 {
+  padding-top: 50px;
+}
+
+.pad-bottom--50 {
+  padding-bottom: 50px;
+}
+
+.margin-left--50 {
+  margin-left: 50px;
+}
+
+.margin-right--50 {
+  margin-right: 50px;
+}
+
+.margin-top--50 {
+  margin-top: 50px;
+}
+
+.margin-bottom--50 {
+  margin-bottom: 50px;
+}
+
 /*
     * What should I put in this file?
     * This file should only contain abstract layouts and overrides in a global scope
@@ -11951,45 +12239,73 @@ a.text-dark:focus {
   padding: 0 1rem;
 }
 
-.dashboard-module__progress {
+.dashboard-module__body {
   background-color: #f7f7f7;
   color: #191919;
   padding: 0.4rem 0;
   padding-bottom: 0.7rem;
 }
 
+.dashboard-module__body-progress {
+  width: 50px;
+  padding-top: 25px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
 @media (min-width: 768px) {
-  .dashboard-module__progress {
+  .dashboard-module__body-progress {
+    padding-top: 27px;
+    margin-top: -20px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__body {
     padding-bottom: 1.5rem;
   }
 }
 
-.dashboard-module__progress-loader {
-  width: 3.75rem !important;
-  height: 3.75rem !important;
+.dashboard-module__body-loader {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
   margin-left: -1.5625rem;
-  margin-top: -2.03125rem;
+  margin-top: -3.03125rem;
 }
 
 @media (min-width: 768px) {
-  .dashboard-module__progress-loader {
-    margin-top: -1.34375rem;
+  .dashboard-module__body-loader {
+    margin-top: -3.34375rem;
     width: 4.15rem !important;
     height: 4.15rem !important;
   }
 }
 
-.dashboard-module__progress-text {
-  margin-top: 0.25rem;
-  margin-bottom: 0rem;
-  position: absolute;
-  margin-left: 0.9375rem;
+.dashboard-module__body-text {
+  margin-bottom: -1.55rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .dashboard-module__progress-text {
-    margin-top: 1rem;
+  .dashboard-module__body-text {
+    margin-top: 0rem;
+    margin-bottom: -1.45rem;
+    padding-top: 10px;
   }
+}
+
+.dashboard-module__body-text--md {
+  margin-left: 4.25px;
+}
+
+.dashboard-module__body-text--lg {
+  font-size: 0.9rem;
+  margin-left: 2.25px;
+}
+
+.dashboard-module__body-date {
+  display: block;
 }
 
 .dashboard-module__status {
