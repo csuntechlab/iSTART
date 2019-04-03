@@ -9,79 +9,76 @@
     <button v-if="!incorrectFileType" @click.prevent="submitFile">Submit</button>
   </div>
   </div>
-  
+
 </template>
 
 <script>
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
-import XLSX from 'xlsx';
+import XLSX from 'xlsx'
 
 export default {
   name: 'admin',
   mixins: [changeRouteTitle],
-  data() {
+  data () {
     return {
       participants: [],
       incorrectFileType: false
     }
   },
   methods: {
-    handleFileChange(event) {
-      var files = event.target.files;
-			if(files && files[0]) this.readFile(files[0]);
-		},
-    submitFile(event) {
-      event.stopPropagation(); 
-      event.preventDefault();
-      this.$store.dispatch('verifyExcelSheet', this.participants);
+    handleFileChange (event) {
+      var files = event.target.files
+      if (files && files[0]) this.readFile(files[0])
     },
-    readFile(file) {
-			/* Boilerplate to set up FileReader */
-			var reader = new FileReader();
-			reader.onload = (e) => {
-        var bstr = e.target.result;
+    submitFile (event) {
+      event.stopPropagation()
+      event.preventDefault()
+      this.$store.dispatch('verifyExcelSheet', this.participants)
+    },
+    readFile (file) {
+      /* Boilerplate to set up FileReader */
+      var reader = new FileReader()
+      reader.onload = (e) => {
+        var bstr = e.target.result
         try {
-          var wb = XLSX.read(bstr, {type:'binary'})
-          this.incorrectFileType = false;
-          var fileName = this.$refs.file.files[0].name;
-          
+          var wb = XLSX.read(bstr, { type: 'binary' })
+          this.incorrectFileType = false
+          var fileName = this.$refs.file.files[0].name
+
           if (this.checkFileType(fileName)) {
-            var wsname = wb.SheetNames[0];
-            var ws = wb.Sheets[wsname];
-            var data = XLSX.utils.sheet_to_json(ws, {header:1});
-            this.participants = this.parseFile(data);
+            var wsname = wb.SheetNames[0]
+            var ws = wb.Sheets[wsname]
+            var data = XLSX.utils.sheet_to_json(ws, { header: 1 })
+            this.participants = this.parseFile(data)
+          } else {
+            this.incorrectFileType = true
           }
-          else {
-            this.incorrectFileType = true;
-          }
-          
-        }
-        catch(err){
+        } catch (err) {
           this.incorrectFileType = true
-        }       
-      };
-      reader.readAsBinaryString(file);
-    },
-    parseFile(excelSheetJSON) {
-      var parsedExcelSheet = [];
-        for (var i = 1; i <excelSheetJSON.length; i++) {
-          var currentStudent = {
-            email: excelSheetJSON[i][0],
-            participant_id: excelSheetJSON[i][1]
-          }
-          parsedExcelSheet.push(currentStudent);
-        }
-      return parsedExcelSheet;
-    },
-    checkFileType(fileName) {
-      var acceptedFileTypes = ["xlsx", "xlsb", "xlsm", "xls", "csv"]
-      var fileIsAccepted = false; 
-      for (var i =0; i <acceptedFileTypes.length; i++) {
-        if (fileName.includes(acceptedFileTypes[i])) { 
-            fileIsAccepted = true;
         }
       }
-      return fileIsAccepted;
+      reader.readAsBinaryString(file)
+    },
+    parseFile (excelSheetJSON) {
+      var parsedExcelSheet = []
+      for (var i = 1; i < excelSheetJSON.length; i++) {
+        var currentStudent = {
+          email: excelSheetJSON[i][0],
+          participant_id: excelSheetJSON[i][1]
+        }
+        parsedExcelSheet.push(currentStudent)
+      }
+      return parsedExcelSheet
+    },
+    checkFileType (fileName) {
+      var acceptedFileTypes = ['xlsx', 'xlsb', 'xlsm', 'xls', 'csv']
+      var fileIsAccepted = false
+      for (var i = 0; i < acceptedFileTypes.length; i++) {
+        if (fileName.includes(acceptedFileTypes[i])) {
+          fileIsAccepted = true
+        }
+      }
+      return fileIsAccepted
     }
   }
 }

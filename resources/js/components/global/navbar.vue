@@ -1,44 +1,60 @@
 <template>
-<div>
-  <nav class="navbar navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <button class="navbar__button" type="button" @click="toggleNavigation">
+      <i class="fas fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse navbar__dropdown" id="navbar">
-      <ul class="navbar-nav mr-auto mt-lg-0">
-        <li class="navbar__dropdown-item active">
-          <router-link to="/dashboard" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">MODULES</router-link>
-        </li>
-        <li class="navbar__dropdown-item">
-          <router-link to="/schedule" class="nav-link active" data-toggle="collapse" data-target="#navbar" href="#">SCHEDULE</router-link>
-        </li>
-        <li class="navbar__dropdown-item navbar__dropdown-item--bottom">
-          <a class="pointer nav-link active" data-toggle="collapse" data-target="#navbar" data-text="logout-button" v-on:click="logout">LOGOUT</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
   </div>
+  <div id="dropdown" class="navbar-dropdown transition-350ms">
+    <div class="navbar-nav navbar-dropdown-list">
+      <router-link to="/" class="navbar-dropdown-list__divider">
+        <div @click="closeNavigation" class="navbar-dropdown__item">
+          <span class="nav-link">MODULE</span>
+        </div>
+      </router-link>
+
+      <router-link to="/schedule" class="navbar-dropdown__divider">
+        <div class="navbar-dropdown__item" @click="closeNavigation">
+          <span class="nav-link">SCHEDULE</span>
+        </div>
+      </router-link>
+
+      <router-link to="/logout" class="navbar-dropdown__divider">
+        <div class="navbar-dropdown__item" @click="closeNavigation">
+          <span class="nav-link">LOGOUT</span>
+        </div>
+      </router-link>
+    </div>
+  </div>
+</nav>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-
 export default {
   name: 'navbar',
 
-  computed: {
-    ...mapState({
-      userID: state => state.User.user.userID
-    })
+  data () {
+    return {
+      isNavOpen: false
+    }
   },
-  methods: {
-    ...mapActions([
-      'clearUserData'
-    ]),
 
-    logout () {
-      this.clearUserData()
+  methods: {
+    toggleNavigation () {
+      if (this.isNavOpen === false) {
+        document.querySelector('body').classList.add('body--overflow-hidden')
+        document.getElementById('dropdown').classList.add('navbar-dropdown--show')
+        this.isNavOpen = true
+      } else {
+        document.querySelector('body').classList.remove('body--overflow-hidden')
+        document.getElementById('dropdown').classList.remove('navbar-dropdown--show')
+        this.isNavOpen = false
+      }
+    },
+
+    closeNavigation () {
+      this.isNavOpen = true
+      this.toggleNavigation()
     }
   }
 }
