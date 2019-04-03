@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Research extends Model
 {
     protected $table = 'research';
+    protected $primaryKey = 'user_id';
     /**
      * The attributes that are mass assignable.
      *
