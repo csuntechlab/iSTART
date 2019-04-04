@@ -12,6 +12,6 @@ class MailController extends Controller
     {
         Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail);
 
-        return "good";
+        return 'good';
     }
 }
