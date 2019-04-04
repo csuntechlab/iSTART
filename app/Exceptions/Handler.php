@@ -56,7 +56,7 @@ class Handler extends ExceptionHandler
                 }
 
             if ($exception->getStatusCode() == 500)
-                if(auth()->user()){
+                if(auth()->check()){
                     return redirect()->back();
                 }else {
                     return redirect()->guest('404');
