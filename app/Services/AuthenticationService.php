@@ -28,6 +28,7 @@ class AuthenticationService implements AuthenticationContract
     public function authenticateUser($credentials){
         if(auth()->attempt($credentials)){
             $user = auth()->user();
+
             if($this->userAdminModelUtility->find($user['user_id'])) {
                 return [
                     'user_id' => $user['user_id'],
