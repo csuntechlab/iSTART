@@ -25,4 +25,3 @@ class MailController extends Controller
         return $this->emailUtility->sendMail();
     }
 }
-//create a service and contract and call the contract in the user group service. then test that
