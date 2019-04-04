@@ -29,7 +29,7 @@ class AuthenticationService implements AuthenticationContract
 
         if(auth()->attempt($credentials)){
             $user = auth()->user();
-           // dd($user);
+
             if($this->userAdminModelUtility->find($user['user_id'])) {
                 return [
                     'user_id' => $user['user_id'],
