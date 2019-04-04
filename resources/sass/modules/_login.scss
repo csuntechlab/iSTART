@@ -1,10 +1,14 @@
 .login {
     &__title {
+        display: block;
         text-align: center;
         margin-top: 8rem;
         margin-bottom: 1.5rem;
         font-size: 4rem;
         color: $primaryColor;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
     }
 
     @include media-breakpoint-down(sm) {
@@ -12,6 +16,39 @@
             margin-top: 6rem;
             margin-bottom: 2rem;
         }
+    }
+
+    &__form-input {
+        border-radius: 5px;
+        border-color: #BCE0FD;
+    }
+    ::placeholder {
+        color: $primaryColor--lighter;
+        font-size: .75rem;
+    }
+    &__form-label {
+        color: $primaryColor--dark;
+        font-weight: 700;
+    }
+    &__form-title {
+        display: none;
+
+    }
+
+    @include media-breakpoint-up(md) {
+        &__form {
+            padding: 5rem;
+            border: solid;
+            border-radius: 5px;
+            border-color: $primaryColor--lighter;
+            box-shadow: 0 2px 4px $primaryColor--lighter;
+        }
+        &__form-title {
+            display: block; 
+            margin-bottom: 1.5rem;
+            color: $primaryColor--dark;
+        }
+        
     }
 }
 
