@@ -4,7 +4,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store/index.js'
 import VueProgress from 'vue-progress-path'
-import './../sass/app.scss'
 
 Vue.use(VueProgress)
 
