@@ -1,6 +1,9 @@
 <template>
-  <div class="container login">
-    <h1 class="login__title transition-350ms">iSTART</h1>
+  <div>
+    <div class="container fill-height login">
+      <div class="row">
+        <h1 class="login__title transition-350ms">iSTART</h1>
+      </div>
     <div class="login--desktop-card">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
@@ -21,7 +24,7 @@
             <!-- <div v-if="submitted && !userInfoForm.password" class="invalid-feedback">Please Enter your password</div> -->
             <div v-if="correctLoginInfo===false" class="invalid-feedback mt-0 mb-2 text-center">Login failed. Make sure you have the correct access rights.</div>
             <div class="form-group text-center">
-              <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg">Submit</button>
+              <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg">Sign In</button>
             </div>
           </form>
         </div>
@@ -30,6 +33,9 @@
     </div>
     
   </div>
+
+  </div>
+  
 </template>
 
 <script>

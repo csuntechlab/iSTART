@@ -11694,10 +11694,21 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+@media (min-width: 768px) {
+  body {
+    background-color: #e7f2f7;
+  }
+}
+
 .main-wrapper {
   margin-top: 3.3rem;
   z-index: 0;
   width: 100%;
+}
+
+.container {
+  background-color: whitesmoke;
+  height: 100%;
 }
 
 .navbar {
@@ -11811,19 +11822,34 @@ a.text-dark:focus {
   }
 }
 
+.login {
+  height: calc(100vh - 3.3rem);
+}
+
 .login__title {
   display: block;
   text-align: center;
-  margin-top: 8rem;
   margin-bottom: 1.5rem;
   font-size: 4rem;
+  width: 100%;
   color: #2699fb;
 }
 
 @media (min-width: 768px) {
   .login__title {
-    display: none;
+    margin-top: -3.3rem;
+    padding: 0.5rem;
+    z-index: 1;
+    top: 0;
+    font-size: 2.25rem;
+    text-align: left;
+    background-color: #2699fb;
+    color: whitesmoke;
   }
+}
+
+.login__form-title {
+  display: none;
 }
 
 @media (max-width: 767.98px) {
@@ -11863,12 +11889,10 @@ a.text-dark:focus {
   font-weight: 700;
 }
 
-.login__form-title {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .login__form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     padding: 5rem;
     border: solid;
     border-radius: 5px;

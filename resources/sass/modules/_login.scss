@@ -1,14 +1,25 @@
 .login {
+    height: calc(100vh - 3.3rem);
     &__title {
         display: block;
         text-align: center;
-        margin-top: 8rem;
         margin-bottom: 1.5rem;
         font-size: 4rem;
+        width: 100%;        
         color: $primaryColor;
         @include media-breakpoint-up(md) {
-            display: none;
+            margin-top: -3.3rem;
+            padding: .5rem;
+            z-index: 1;
+            top: 0;
+            font-size: 2.25rem;
+            text-align: left;
+            background-color: $primaryColor;
+            color: $secondaryColor;
         }
+    }
+    &__form-title {
+        display: none;
     }
 
     @include media-breakpoint-down(sm) {
@@ -30,13 +41,11 @@
         color: $primaryColor--dark;
         font-weight: 700;
     }
-    &__form-title {
-        display: none;
-
-    }
 
     @include media-breakpoint-up(md) {
         &__form {
+            margin-top: 3rem;
+            margin-bottom: 3rem; 
             padding: 5rem;
             border: solid;
             border-radius: 5px;
