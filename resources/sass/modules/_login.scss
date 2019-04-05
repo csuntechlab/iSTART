@@ -30,7 +30,7 @@
     }
 
     &__form-input {
-        border-radius: 5px;
+        border-radius: 15px;
         border-color: #BCE0FD;
     }
     ::placeholder {
@@ -47,10 +47,10 @@
             margin-top: 3rem;
             margin-bottom: 3rem; 
             padding: 5rem;
-            border: solid;
-            border-radius: 5px;
+            border: thin;
+            border-radius: 20px;
             border-color: $primaryColor--lighter;
-            box-shadow: 0 2px 4px $primaryColor--lighter;
+            box-shadow: 0 .75px 2.25px $primaryColor--lighter;
         }
         &__form-title {
             display: block; 
