@@ -7,13 +7,13 @@
   </div>
   <div id="dropdown" class="navbar-dropdown transition-350ms">
     <div class="navbar-nav navbar-dropdown-list">
-      <router-link v-show="!adminUser" to="/" class="navbar-dropdown-list__divider">
+      <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown-list__divider">
         <div @click="closeNavigation" class="navbar-dropdown__item">
           <span class="nav-link">MODULE</span>
         </div>
       </router-link>
 
-      <router-link v-show="!adminUser" to="/schedule" class="navbar-dropdown__divider">
+      <router-link v-show="!isAdminUser" to="/schedule" class="navbar-dropdown__divider">
         <div class="navbar-dropdown__item" @click="closeNavigation">
           <span class="nav-link">SCHEDULE</span>
         </div>
