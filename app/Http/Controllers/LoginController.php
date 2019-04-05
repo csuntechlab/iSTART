@@ -63,11 +63,6 @@ class LoginController extends Controller
 
     }
 
-    public function error(){
-
-        return view('ErrorsBlade.page_doesnt_exist');
-    }
-
     public function logout()
     {
        auth()->logout();
