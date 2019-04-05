@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: mbendandour
+ * Date: 3/29/19
+ * Time: 10:18 AM
+ */
 
 namespace App\Mail;
 
@@ -7,22 +13,21 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class GenericEmail extends Mailable
+
+class UserCompletesModuleEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      *
-     *
      * @return void
      */
+    public $userCompletesModuleEmail;
 
-    public $genericEmail;
-
-    public function __construct($genericEmail)
+    public function __construct($userCompletesModuleEmail)
     {
-        $this->genericEmail = $genericEmail;
+        $this->userCompletesModuleEmail = $userCompletesModuleEmail;
     }
 
     /**
@@ -32,7 +37,6 @@ class GenericEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.generic');
-
+        return $this->view('mail.UserCompletesModuleEmail');
     }
 }
