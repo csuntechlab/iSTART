@@ -1,5 +1,10 @@
 <template>
   <div class="container login">
+    <div classs="login__loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
     <h1 class="login__title transition-350ms">iSTART</h1>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-8 col-lg-6">
