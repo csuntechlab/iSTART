@@ -26,6 +26,7 @@ class AuthenticationService implements AuthenticationContract
     }
 
     public function authenticateUser($credentials){
+
         if(auth()->attempt($credentials)){
             $user = auth()->user();
 

@@ -14,11 +14,15 @@ class GenericEmail extends Mailable
     /**
      * Create a new message instance.
      *
+     *
      * @return void
      */
-    public function __construct()
+
+    public $genericEmail;
+
+    public function __construct($genericEmail)
     {
-        //
+        $this->genericEmail = $genericEmail;
     }
 
     /**
@@ -29,5 +33,6 @@ class GenericEmail extends Mailable
     public function build()
     {
         return $this->view('mail.generic');
+
     }
 }
