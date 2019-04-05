@@ -6,9 +6,13 @@
     <div class="error-message">
       <h2 class="transition-350ms">You have landed in unkown territory.</h2>
     </div>
-    <router-link class="error-return pointer" tag="div" to="/">
-      <button class="transition-350ms"><h3>Click here to return home!</h3></button>
-    </router-link>
+    <div>
+      <router-link class="error-return pointer" to="/">
+        <button class="transition-350ms" @click="historyBack">
+          <h3>Click here to return home!</h3>
+        </button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -17,6 +21,12 @@ import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
   name: 'Error',
-  mixins: [changeRouteTitle]
+  mixins: [changeRouteTitle],
+
+  methods: {
+    historyBack () {
+      this.$router.back()
+    }
+  }
 }
 </script>
