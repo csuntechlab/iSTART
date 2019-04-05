@@ -35,8 +35,8 @@ class LoginControllerTest extends TestCase
         $this->LoginController = new LoginController($this->utility);
 
     }
+    
     /** @test */
-
     public function eligible_user_can_log_in()
     {
         $data = ['username' => 'steve@csun.edu', 'password' => ''];

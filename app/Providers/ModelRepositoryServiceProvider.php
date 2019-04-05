@@ -12,5 +12,10 @@ class ModelRepositoryServiceProvider extends ServiceProvider
             'App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface',
             'App\ModelRepositories\UserAdminModelRepository'
         );
+
+        $this->app->bind(
+            'App\ModelRepositoryInterfaces\UserModelRepositoryInterface',
+            'App\ModelRepositories\UserModelRepository'
+        );
     }
 }
