@@ -12,13 +12,13 @@
           </div>
           <div class="dashboard-module__body row align-items-center">
             <div class="col-2 text-left">
-              <div class="dashboard-module__body-progress">
-                <p class="dashboard-module__body-text"
+              <div class="dashboard-module__progress">
+                <p class="dashboard-module__progress-text"
                  :class="item.completion.progress.toString().length <= 2 ?
-                 'dashboard-module__body-text--sm' :
-                 'dashboard-module__body-text--lg'">{{ item.completion.progress }}%
+                 'dashboard-module__progress-text--sm' :
+                 'dashboard-module__progress-text--lg'">{{ item.completion.progress }}%
                 </p>
-                <loading-progress class="dashboard-module__body-loader"
+                <loading-progress class="dashboard-module__loader"
                   :progress="item.completion.progress /100"
                   :size="size"
                   :shape="shape.circle"
@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="col-5 text-left">
-              <span class="dashboard-module__body-date margin-left--15">{{ item.completion.date}}</span>
+              <span class="dashboard-module__date ml-3">{{ item.completion.date}}</span>
             </div>
             <div class="col-4 text-right">
               <span class="dashboard-module__status">{{item.completion.status}}</span>

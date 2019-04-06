@@ -12271,14 +12271,7 @@ a.text-dark:focus {
   padding: 0 1rem;
 }
 
-.dashboard-module__body {
-  background-color: #f7f7f7;
-  color: #191919;
-  padding: 0.4rem 0;
-  padding-bottom: 0.7rem;
-}
-
-.dashboard-module__body-progress {
+.dashboard-module__progress {
   width: 50px;
   padding-top: 25px;
   margin-top: -10px;
@@ -12286,20 +12279,36 @@ a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  .dashboard-module__body-progress {
+  .dashboard-module__progress {
     padding-top: 27px;
     margin-top: -20px;
     padding-bottom: 0;
   }
 }
 
+.dashboard-module__progress-text {
+  margin-bottom: -1.55rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
-  .dashboard-module__body {
-    padding-bottom: 1.5rem;
+  .dashboard-module__progress-text {
+    margin-top: 0rem;
+    margin-bottom: -1.45rem;
+    padding-top: 10px;
   }
 }
 
-.dashboard-module__body-loader {
+.dashboard-module__progress-text--md {
+  margin-left: 4.25px;
+}
+
+.dashboard-module__progress-text--lg {
+  font-size: 0.9rem;
+  margin-left: 2.25px;
+}
+
+.dashboard-module__loader {
   width: 2.75rem !important;
   height: 2.75rem !important;
   margin-left: -1.5625rem;
@@ -12307,37 +12316,28 @@ a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  .dashboard-module__body-loader {
+  .dashboard-module__loader {
     margin-top: -3.34375rem;
     width: 4.15rem !important;
     height: 4.15rem !important;
   }
 }
 
-.dashboard-module__body-text {
-  margin-bottom: -1.55rem;
-  text-align: center;
+.dashboard-module__date {
+  display: block;
+}
+
+.dashboard-module__body {
+  background-color: #f7f7f7;
+  color: #191919;
+  padding: 0.4rem 0;
+  padding-bottom: 0.7rem;
 }
 
 @media (min-width: 768px) {
-  .dashboard-module__body-text {
-    margin-top: 0rem;
-    margin-bottom: -1.45rem;
-    padding-top: 10px;
+  .dashboard-module__body {
+    padding-bottom: 1.5rem;
   }
-}
-
-.dashboard-module__body-text--md {
-  margin-left: 4.25px;
-}
-
-.dashboard-module__body-text--lg {
-  font-size: 0.9rem;
-  margin-left: 2.25px;
-}
-
-.dashboard-module__body-date {
-  display: block;
 }
 
 .dashboard-module__status {
