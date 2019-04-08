@@ -49,17 +49,18 @@ class Handler extends ExceptionHandler
         if ($this->isHttpException($exception)) {
             if ($exception->getStatusCode() == 404) {
                 if (auth()->check()) {
-                    return redirect()->guest('/');
+                    return redirect('/#');
                 } else {
-                    return response()->json($exception->getStatusCode(), 404);
+                    return redirect()->guest('/');
+
                 }
             }
 
             if ($exception->getStatusCode() == 500)
                 if(auth()->check()){
-                    return redirect()->guest('/');
+                    return redirect('/#');
                 }else {
-                    return response()->json($exception->getStatusCode(), 404);
+                    return redirect()->guest('/');
                 }
         }
 
