@@ -10,16 +10,16 @@
               {{item.name}}
             </div>
           </div>
-          <div class="dashboard-module__body row align-items-center">
+          <div class="row   dashboard-module__body align-items-center">
             <div class="col-2 text-left">
               <div class="dashboard-module__progress">
                 <p class="dashboard-module__progress-text"
-                 :class="item.completion.progress.toString().length <= 2 ?
-                 'dashboard-module__progress-text--sm' :
-                 'dashboard-module__progress-text--lg'">{{ item.completion.progress }}%
+                :class="item.completion.progress.toString().length <= 2 ?
+                'dashboard-module__progress-text--sm' :
+                'dashboard-module__progress-text--lg'">{{ item.completion.progress }}%
                 </p>
                 <loading-progress class="dashboard-module__loader"
-                  :progress="item.completion.progress /100"
+                  :progress="item.completion.progress/100"
                   :size="size"
                   :shape="shape.circle"
                 />

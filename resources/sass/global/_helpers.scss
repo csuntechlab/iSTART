@@ -3,9 +3,6 @@
 	* This file should only contain css attributes with selectors and events in a global scope
 	* i.e. &--active, scrollbar, media queries, etc.
 */
-$numIndex: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-$numberParameters: (0.3125, 0.625, 0.9375 , 1.25, 1.5625, 1.875, 2.1875, 2.5, 2.8125, 3.125);
-
 
 .pointer {
 	cursor: pointer;
@@ -25,31 +22,4 @@ $numberParameters: (0.3125, 0.625, 0.9375 , 1.25, 1.5625, 1.875, 2.1875, 2.5, 2.
 
 .body--overflow-hidden {
 	overflow: hidden;
-}
-
-@each $num, $numIndex in $numberParameters{
-    .pad-left--#{$numIndex}{
-        padding-left: #{$num}rem;
-    }
-    .pad-right--#{$numIndex}{
-        padding-right: #{$num}rem;
-    }
-    .pad-top--#{$numIndex}{
-        padding-top: #{$num}rem;
-    }
-    .pad-bottom--#{$numIndex}{
-        padding-bottom: #{$num}rem;
-    }
-    .margin-left--#{$numIndex}{
-        margin-left: #{$num}rem;
-    }
-    .margin-right--#{ $numIndex}{
-        margin-right: #{$num}rem;
-    }
-    .margin-top--#{$numIndex}{
-        margin-top: #{$num}rem;
-    }
-    .margin-bottom--#{$numIndex}{
-        margin-bottom: #{$num}rem;
-    }
 }
