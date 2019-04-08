@@ -31,5 +31,17 @@ export default {
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
     router.push({ name: 'Login' })
     commit('CLEAR_USER_DATA')
-  }
+  },
+  async verifyExcelSheet({commit}, payload) {
+    console.log('this is not meant to fully work just yet, everything will be wired up on STR-55. Once it is wired up, the return value will be console logged')
+    return UserAPI.verifyExcelSheetAPI(payload)
+    .then(
+      response => {
+        const categorizedPartipants = response.data;
+        commit('SET_CATEGORIZED_PARTICIPANTS', categorizedPartipants);
+      }
+    ).catch(
+      failure => console.error(failure)
+    )
+}
 }
