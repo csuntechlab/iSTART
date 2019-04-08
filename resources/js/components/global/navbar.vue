@@ -18,8 +18,7 @@
           <span class="nav-link">SCHEDULE</span>
         </div>
       </router-link>
-
-      <router-link v-if="closeNavigation" to="/logout" class="navbar-dropdown__divider">
+      <router-link to="/logout" class="navbar-dropdown__divider">
         <div class="navbar-dropdown__item" @click="closeNavigation">
           <span class="nav-link">LOGOUT</span>
         </div>
