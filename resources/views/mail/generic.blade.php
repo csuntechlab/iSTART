@@ -1,3 +1,4 @@
-<!doctype html>
 @component('mail::message')
-This is an email
+Hello Admin,
+    User group is: {{$genericEmail->user_group}}
+    User Research ID is: {{$genericEmail->research_id}}
