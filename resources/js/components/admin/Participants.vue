@@ -2,6 +2,7 @@
   <div>
     <div class="goodParticipants" v-if="categorizedParticipants.good !== undefined">
       <h2> Good to go</h2>
+      {{categorizedParticipants}}
       <table class="table table-striped">
         <thead>
           <tr>
