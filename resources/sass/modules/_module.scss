@@ -1,0 +1,9 @@
+.module{
+    background-color: $primaryColor;
+    &__header{
+        transform: scaleX(36.5);
+        transform: scaleY(4);
+        width: 51.5px !important;
+        height: 100px !important;
+    }
+}
