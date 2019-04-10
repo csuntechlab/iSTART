@@ -2,5 +2,6 @@
 export default {
   user: {},
   correctLoginInfo: null,
-  categorizedParticipants: {}
+  categorizedParticipants: {},
+  participantsWereSubmitted: null
 }

@@ -43,5 +43,18 @@ export default {
     ).catch(
       failure => console.error(failure)
     )
-}
+  },
+  async submitGoodParticipants({commit}, payload) {
+    return UserAPI.submitGoodParticipantsAPI(payload).then(
+      response => {
+        console.log(response.data)
+        commit('PARTICIPANTS_WERE_SUBMITTED', true)
+      }
+    ).catch(
+      failure => {
+        console.error(failure)
+        commit('PARTICIPANTS_WERE_SUBMITTED', false)
+      }
+    )
+  }
 }

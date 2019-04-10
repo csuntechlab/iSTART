@@ -33,7 +33,7 @@
           </tr>
         </tbody>    
       </table>
-      <p>Would you like submit the good participants?</p>
+      <h2>Would you like submit the good participants?</h2>
 
       <button class="btn btn-danger">No</button>
       <button class="btn btn-primary">Yes</button>
@@ -48,6 +48,12 @@ export default {
     ...mapGetters([
       'categorizedParticipants'
     ])
+  },
+  methods: {
+    submitGoodParticipants() {
+      console.log(this.categorizedParticipants.good)
+      this.$store.dispatch.submitGoodParticipants(this.categorizedParticipants.good)
+    }
   }
 }
 </script>

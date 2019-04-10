@@ -6,5 +6,8 @@ export default {
   },
   verifyExcelSheetAPI(payload) {
     return axios.post('verifyExcelSheet', payload)
+  },
+  submitGoodParticipantsAPI(payload) {
+    return axios.post('submitGoodParticipants', payload)
   }
 }
