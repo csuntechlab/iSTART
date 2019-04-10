@@ -88,16 +88,68 @@
             bottom: 0;
             padding: 0 1rem;
         }
-
-        &__progress {
-            background-color: $grey--light;
+        &__progress{
+            width: 50px;
+            padding-top: 25px;
+            margin-top: -10px;
+            padding-bottom: 10px;
+            @include media-breakpoint-up(md){
+                padding-top: 27px;
+                margin-top: -20px;
+                padding-bottom: 0;
+            }
+            &-text{
+                margin-bottom: -1.55rem;
+                text-align: center;
+                @include media-breakpoint-up(md){
+                    margin-top: 0rem;
+                    margin-bottom: -1.45rem;
+                    padding-top: 10px;
+                }
+                &--md{
+                    margin-left:4.25px
+                }
+                &--lg{
+                    font-size:0.90rem;
+                    margin-left: 2.25px;
+                }
+            }
+        }
+        &__loader{
+            width: 2.75rem !important;
+            height: 2.75rem !important;
+            margin-left: -1.5625rem;
+            margin-top: -3.03125rem;
+            @include media-breakpoint-up(md){
+                margin-top: -3.34375rem;
+                width: 4.15rem !important;
+                height: 4.15rem !important;
+            }
+        }
+        &__date{
+                display:block;
+                font-size: 1rem;
+                @media screen and (max-width: 344px){
+                    font-size: 0.7rem;
+                }
+        }
+        &__body {
+            background-color: $secondaryColor--light;
             color: $black;
             padding: 0.4rem 0;
-            padding-bottom: 0.35rem;
+            padding-bottom: 0.7rem;
+            @include media-breakpoint-up(md){
+                padding-bottom: 1.5rem;
+            }
+
         }
 
         &__status {
             margin-right: 0.25rem;
+            @media screen and (max-width:344px){
+                font-size: 0.8rem;
+                margin-right: 0.1rem;
+            }
 
             &-circle {
                 color: $green;
