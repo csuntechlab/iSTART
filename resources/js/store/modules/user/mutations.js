@@ -15,6 +15,5 @@ export default {
 
   SET_CATEGORIZED_PARTICIPANTS (state, payload) {
     state.categorizedParticipants = payload;
-    console.log(payload)
   }
 }

@@ -109,7 +109,6 @@ describe('userStore/actions/verifyExcelSheet', ()=> {
     let commit = jest.fn();
     await userStore.actions.verifyExcelSheet({commit}, participants);
     expect(commit).toHaveBeenCalled();
-
   });
 });
 
@@ -157,9 +156,9 @@ describe('userStore/mutations/VERIFY_USER_DATA', () => {
   it('should check user object group for null when mutation is called', () => {
     payload.user_group = null
     userStore.mutations.VERIFY_USER_DATA(state, payload)
-    expect(state.user.user_group).toEqual(null)
-  })
-})
+    expect(state.user.user_group).toEqual(null);
+  });
+});
 
 describe('userStore/mutations/CLEAR_USER_DATA', () => {
   it('should clear the user object and nullify correctLoginInfo when mutation is called', () => {
@@ -175,8 +174,33 @@ describe('userStore/mutations/CLEAR_USER_DATA', () => {
     expect(state).toEqual({
       user: {},
       correctLoginInfo: null
+    });
+  });
+});
+
+describe('userStore/mutations/SET_CATEGORIZED_PARTICIPANTS',()=> {
+  const state = { 
+    categorizedParticipants: {}
+  }
+  const payload = {
+    "good": [ 
+      { "email": "nr_liad.golan.736@my.csun.edu", "participant_id": 689679, "user_id": "members:106771546" },
+      { "email": "nr_brian.linggadjaja.785@my.csun.edu", "participant_id": 41210, "user_id": "members:108688604" }, 
+      { "email": "nr_joshua.magdaleno.472@my.csun.edu", "participant_id": 5784, "user_id": "members:107046340" },
+      { "email": "nr_mbenda.ndour.487@my.csun.edu", "participant_id": 11137, "user_id": "members:103338987" },
+      { "email": "nr_edgar.canozelaya.6@my.csun.edu", "participant_id": 43466, "user_id": "members:108687187" } 
+    ],
+    "bad": [ 
+      { "email": "nr_yeslawd@aol.com", "participant_id": 3849894 },
+      { "email": "nr_imavirus@donottrustme.com", "participant_id": 0 } 
+    ] 
+  };
+  it('should set categorizedParticipants to payload when SET_CATEGORIZED_PARTICIPANTS is called', ()=> {
+    userStore.mutations.SET_CATEGORIZED_PARTICIPANTS(state,payload);
+    expect(state).toEqual({
+      categorizedParticipants: payloaddock
     })
-  })
+  });
 })
 
 
