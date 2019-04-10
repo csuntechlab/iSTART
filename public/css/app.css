@@ -11952,14 +11952,90 @@ a.text-dark:focus {
 }
 
 .dashboard-module__progress {
-  background-color: #e1e1e1;
+  width: 50px;
+  padding-top: 25px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress {
+    padding-top: 27px;
+    margin-top: -20px;
+    padding-bottom: 0;
+  }
+}
+
+.dashboard-module__progress-text {
+  margin-bottom: -1.55rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress-text {
+    margin-top: 0rem;
+    margin-bottom: -1.45rem;
+    padding-top: 10px;
+  }
+}
+
+.dashboard-module__progress-text--md {
+  margin-left: 4.25px;
+}
+
+.dashboard-module__progress-text--lg {
+  font-size: 0.9rem;
+  margin-left: 2.25px;
+}
+
+.dashboard-module__loader {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  margin-left: -1.5625rem;
+  margin-top: -3.03125rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__loader {
+    margin-top: -3.34375rem;
+    width: 4.15rem !important;
+    height: 4.15rem !important;
+  }
+}
+
+.dashboard-module__date {
+  display: block;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 344px) {
+  .dashboard-module__date {
+    font-size: 0.7rem;
+  }
+}
+
+.dashboard-module__body {
+  background-color: #f7f7f7;
   color: #191919;
   padding: 0.4rem 0;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__body {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .dashboard-module__status {
   margin-right: 0.25rem;
+}
+
+@media screen and (max-width: 344px) {
+  .dashboard-module__status {
+    font-size: 0.8rem;
+    margin-right: 0.1rem;
+  }
 }
 
 .dashboard-module__status-circle {
