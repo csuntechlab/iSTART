@@ -1,6 +1,8 @@
 <template>
   <div>
     <navbar v-show="$route.path != '/login'" ></navbar>
+    <CookiesNotification></CookiesNotification>
+    <div>cookies testing huh?</div>
     <div class="main-wrapper">
       <router-view />
     </div>
@@ -8,12 +10,15 @@
 </template>
 
 <script>
-import navbar from './components/global/navbar.vue'
+import Navbar from './components/global/navba.vue'
+import CookiesNotification from './components/global/CookiesNotification'
 import { clearTimeout, setTimeout } from 'timers'
 import { mapActions, mapState } from 'vuex'
+
 export default {
   components: {
-    navbar
+    Navbar,
+    CookiesNotification
   },
   data () {
     return {
