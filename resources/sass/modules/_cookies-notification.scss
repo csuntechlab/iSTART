@@ -1,7 +1,7 @@
 .cookies-notification {
   background-color: $grey--light;
   box-shadow: 0 4px 8px 0 $black--20;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   font-size: 1rem;
   margin: 0;
@@ -20,6 +20,7 @@
   }
 
   &__button-accept {
+    width: 100%;
     margin-top: 0.75rem;
   }
 }
