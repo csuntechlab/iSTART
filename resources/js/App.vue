@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div>
     <navbar v-show="$route.path != '/login'" ></navbar>
     <div class="main-wrapper">
       <router-view />
@@ -62,7 +62,7 @@ export default {
     }
   },
   mounted () {
-    this.checkForCookies()
+    // this.checkForCookies()
     this.checkUserInactivity()
     this.userExists()
   }

@@ -23,6 +23,7 @@
             <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg">Submit</button>
           </div>
         </form>
+        <router-link to="module">Module</router-link>
       </div>
     </div>
   </div>

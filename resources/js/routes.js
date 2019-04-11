@@ -29,13 +29,15 @@ export default [
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true}
   },
   {
     path: '/module',
     name: 'Module',
     component: Module,
-    meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+    // meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Modules' }
+
   },
   {
     path: '/schedule',

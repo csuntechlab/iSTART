@@ -11734,6 +11734,10 @@ a.text-dark:focus {
   color: #d7d7d7;
 }
 
+.navbar__title {
+  text-align: center;
+}
+
 .navbar-dropdown {
   background-color: #2699fb;
   overflow: hidden;
@@ -11859,17 +11863,34 @@ a.text-dark:focus {
   }
 }
 
-.module {
-  background-color: #2699fb;
+.module__header {
+  margin-top: -2px;
 }
 
-.module__header {
-  -webkit-transform: scaleX(36.5);
-          transform: scaleX(36.5);
-  -webkit-transform: scaleY(4);
-          transform: scaleY(4);
-  width: 51.5px !important;
-  height: 100px !important;
+.module__footerText {
+  color: whitesmoke;
+}
+
+.module__footer {
+  padding-top: 20px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  background-color: #2699fb;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.module__progress {
+  font-size: 1rem;
+  color: white;
+  font-weight: 1000;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.module__progressBar.vue-progress-path path {
+  stroke-width: 25;
 }
 
 .dashboard {
@@ -11965,14 +11986,90 @@ a.text-dark:focus {
 }
 
 .dashboard-module__progress {
-  background-color: #e1e1e1;
+  width: 50px;
+  padding-top: 25px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress {
+    padding-top: 27px;
+    margin-top: -20px;
+    padding-bottom: 0;
+  }
+}
+
+.dashboard-module__progress-text {
+  margin-bottom: -1.55rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__progress-text {
+    margin-top: 0rem;
+    margin-bottom: -1.45rem;
+    padding-top: 10px;
+  }
+}
+
+.dashboard-module__progress-text--md {
+  margin-left: 4.25px;
+}
+
+.dashboard-module__progress-text--lg {
+  font-size: 0.9rem;
+  margin-left: 2.25px;
+}
+
+.dashboard-module__loader {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  margin-left: -1.5625rem;
+  margin-top: -3.03125rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__loader {
+    margin-top: -3.34375rem;
+    width: 4.15rem !important;
+    height: 4.15rem !important;
+  }
+}
+
+.dashboard-module__date {
+  display: block;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 344px) {
+  .dashboard-module__date {
+    font-size: 0.7rem;
+  }
+}
+
+.dashboard-module__body {
+  background-color: #f7f7f7;
   color: #191919;
   padding: 0.4rem 0;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .dashboard-module__body {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .dashboard-module__status {
   margin-right: 0.25rem;
+}
+
+@media screen and (max-width: 344px) {
+  .dashboard-module__status {
+    font-size: 0.8rem;
+    margin-right: 0.1rem;
+  }
 }
 
 .dashboard-module__status-circle {
@@ -12028,5 +12125,9 @@ a.text-dark:focus {
 
 .page-description__info {
   font-size: 1.15rem;
+}
+
+.vue-progress-path .progress {
+  stroke: #1374CD;
 }
 

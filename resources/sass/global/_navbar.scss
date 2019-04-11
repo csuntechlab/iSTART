@@ -27,6 +27,9 @@
             color: $grey--lighter;
         }
     }
+    &__title{
+        text-align: center;
+    }
 
     &-dropdown{
         background-color: $primaryColor;
@@ -54,7 +57,7 @@
                 color: $white;
             }
         }
-        
+
         &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;

@@ -1,9 +1,28 @@
 .module{
-    background-color: $primaryColor;
     &__header{
-        transform: scaleX(36.5);
-        transform: scaleY(4);
-        width: 51.5px !important;
-        height: 100px !important;
+        margin-top: -2px;
     }
+    &__footerText{
+        color: $secondaryColor;
+    }
+    &__footer{
+        padding-top: 20px;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0px;
+        background-color: $primaryColor;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    &__progress{
+        font-size: 1rem;
+        color: white;
+        font-weight: 1000;
+        margin-top: -20px;
+        text-align: center;
+    }
+}
+
+.module__progressBar.vue-progress-path path {
+    stroke-width: 25;
 }

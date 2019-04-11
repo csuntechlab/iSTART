@@ -1,4 +1,18 @@
 const mix = require('laravel-mix')
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
+// mix.webpackConfig({
+//   plugins: [
+//     new BrowserSyncPlugin({
+//       files: [
+//         'app/**/*',
+//         'public/**/*',
+//         'resources/**/**/*',
+//         'routes/**/*'
+//       ]
+//     })
+//   ]
+// })
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +27,6 @@ const mix = require('laravel-mix')
 
 mix.js('resources/js/main.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
-
 if (mix.inProduction()) {
   mix.version()
 }
