@@ -8,12 +8,18 @@
     </label>
     <button v-if="!incorrectFileType" @click.prevent="submitFile">Submit</button>
   </div>
-  <Participants/>
+  <div>
+    <Participants v-if="participantsWereSubmitted===null"/>
+    <h2 v-if="participantsWereSubmitted===true">Participants were submitted!</h2>
+    <h2 v-if="participantsWereSubmitted===false"> Participants were not submitted</h2>
+  </div>
   </div>
 
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 import XLSX from 'xlsx'
 import Participants from './../components/admin/Participants.vue'
@@ -30,6 +36,11 @@ export default {
   components: {
     Participants
   },
+  computed: {
+    ...mapGetters([
+      'participantsWereSubmitted'
+    ])
+  },
   methods: {
     handleFileChange (event) {
       var files = event.target.files;
@@ -40,6 +51,7 @@ export default {
     submitFile (event) {
       event.stopPropagation();
       event.preventDefault();
+      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null)
       this.$store.dispatch('verifyExcelSheet', this.participants);
     },
     readFile (file) {

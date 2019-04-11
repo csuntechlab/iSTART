@@ -34,9 +34,8 @@
         </tbody>    
       </table>
       <h2>Would you like submit the good participants?</h2>
-
-      <button class="btn btn-danger">No</button>
-      <button class="btn btn-primary">Yes</button>
+      <button class="btn btn-danger" @click="participantsWillNotBeSubmitted">No</button>
+      <button class="btn btn-primary" @click="submitGoodParticipants">Yes</button>
     </div>
   </div>
 </template>
@@ -52,7 +51,10 @@ export default {
   methods: {
     submitGoodParticipants() {
       console.log(this.categorizedParticipants.good)
-      this.$store.dispatch.submitGoodParticipants(this.categorizedParticipants.good)
+      this.$store.dispatch('submitGoodParticipants', this.categorizedParticipants.good)
+    },
+    participantsWillNotBeSubmitted() {
+      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', false)
     }
   }
 }

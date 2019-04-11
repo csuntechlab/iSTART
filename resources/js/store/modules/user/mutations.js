@@ -18,6 +18,7 @@ export default {
   },
   
   PARTICIPANTS_WERE_SUBMITTED(state, payload) {
+    state.categorizedParticipants= {}
     state.participantsWereSubmitted = payload
   }
 }

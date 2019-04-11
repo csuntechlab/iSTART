@@ -33,7 +33,6 @@ export default {
     commit('CLEAR_USER_DATA')
   },
   async verifyExcelSheet({commit}, payload) {
-    console.log('this is not meant to fully work just yet, everything will be wired up on STR-55. Once it is wired up, the return value will be console logged')
     return UserAPI.verifyExcelSheetAPI(payload)
     .then(
       response => {
@@ -52,6 +51,7 @@ export default {
       }
     ).catch(
       failure => {
+        console.log('this is not meant to fully work just yet, everything will be wired up on STR-55. Once it is wired up, the user will receive a message saying the users were submitted')
         console.error(failure)
         commit('PARTICIPANTS_WERE_SUBMITTED', false)
       }

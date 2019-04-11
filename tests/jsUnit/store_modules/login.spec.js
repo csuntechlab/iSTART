@@ -2,6 +2,7 @@ import userStore from './../../../resources/js/store/modules/user/index'
 import userAPI from './../../../resources/js/api/user'
 import 'jest-extended'
 import { promised } from 'q';
+import { isNull } from 'util';
 
 jest.mock('./../../../resources/js/api/user')
 
@@ -112,6 +113,24 @@ describe('userStore/actions/verifyExcelSheet', ()=> {
   });
 });
 
+describe('userStore/actions/submitGoodParticipants', ()=> {
+  it('should commit to PARTICIPANTS_WERE_SUBMITTED when action is called', async() => {
+    const goodParticipants = [ 
+      { "email": "nr_liad.golan.736@my.csun.edu", "participant_id": 689679, "user_id": "members:106771546" },
+      { "email": "nr_brian.linggadjaja.785@my.csun.edu", "participant_id": 41210, "user_id": "members:108688604" }, 
+      { "email": "nr_joshua.magdaleno.472@my.csun.edu", "participant_id": 5784, "user_id": "members:107046340" },
+      { "email": "nr_mbenda.ndour.487@my.csun.edu", "participant_id": 11137, "user_id": "members:103338987" },
+      { "email": "nr_edgar.canozelaya.6@my.csun.edu", "participant_id": 43466, "user_id": "members:108687187" } 
+    ];
+    userAPI.verifyExcelSheetAPI.mockImplementation(calledWith => {
+      return calledWith === goodParticipants ? Promise.resolve(true) : promised.resolve();
+    });
+    let commit = jest.fn();
+    await userStore.actions.verifyExcelSheet({commit}, goodParticipants);
+    expect(commit).toHaveBeenCalled();
+
+  })
+})
 
 // VueX Mutation Testing
 describe('userStore/mutations/VERIFY_USER_DATA', () => {
@@ -198,9 +217,23 @@ describe('userStore/mutations/SET_CATEGORIZED_PARTICIPANTS',()=> {
   it('should set categorizedParticipants to payload when SET_CATEGORIZED_PARTICIPANTS is called', ()=> {
     userStore.mutations.SET_CATEGORIZED_PARTICIPANTS(state,payload);
     expect(state).toEqual({
-      categorizedParticipants: payloaddock
+      categorizedParticipants: payload
     })
   });
+});
+
+describe('userStore/mutations/PARTICIPANTS_WERE_SUBMITTED', ()=> {
+  const state = { 
+    categorizedParticipants: {},
+    participantsWereSubmitted: null
+  }
+  it('sets participantsWereSubmitted to true when mutation is called',()=> {
+    userStore.mutations.PARTICIPANTS_WERE_SUBMITTED(state, true);
+    expect(state).toEqual({
+      categorizedParticipants: {}, 
+      participantsWereSubmitted: true
+    })
+  })
 })
 
 
