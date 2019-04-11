@@ -6,9 +6,9 @@ use App\Models\User;
 
 use Illuminate\Database\Eloquent\Model;
  
-class Research extends Model
+class Participant extends Model
 {
-    protected $table = 'research';
+    protected $table = 'participant';
     protected $primaryKey = 'user_id';
     /**
      * The attributes that are mass assignable.
@@ -16,7 +16,7 @@ class Research extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'research_id'
+        'user_id', 'participant_id'
     ];
 
     public function user(){

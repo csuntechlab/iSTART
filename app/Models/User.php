@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Research;
+use App\Models\Participant;
 use CSUNMetaLab\Authentication\MetaUser;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -32,8 +32,8 @@ class User extends MetaUser
         'password', 'remember_token',
     ];
 
-    public function research(){
-        return $this->hasOne('App\Models\Research', 'user_id');
+    public function Participant(){
+        return $this->hasOne('App\Models\Participant', 'user_id');
     }
 
     public function getUserGroup()
