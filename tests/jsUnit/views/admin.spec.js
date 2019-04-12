@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Admin from './../../../resources/js/views/admin.vue';
+import Admin from './../../../resources/js/views/Admin.vue';
 
 describe('Admin.vue', () => {
   

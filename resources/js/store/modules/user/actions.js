@@ -15,7 +15,7 @@ export default {
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
             if (response.data.isAdmin) {
-              router.push({ name: 'admin' })
+              router.push({ name: 'Admin' })
             } else {
               router.push({ name: 'Dashboard' })
             }
