@@ -45,13 +45,13 @@ export default {
     handleFileChange (event) {
       var files = event.target.files;
       if (files && files[0]) {
-        this.readFile(files[0])
+        this.readFile(files[0]);
       } 
     },
     submitFile (event) {
       event.stopPropagation();
       event.preventDefault();
-      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null)
+      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null);
       this.$store.dispatch('verifyExcelSheet', this.participants);
     },
     readFile (file) {
