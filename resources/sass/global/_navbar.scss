@@ -27,8 +27,14 @@
             color: $grey--lighter;
         }
     }
+    &__text{
+        font-size: 1.12rem;
+        @include media-breakpoint-up(md){
+            font-size:1.2rem;
+        }
+    }
     &__title{
-        text-align: center;
+        bottom:-0.5rem;
     }
 
     &-dropdown{

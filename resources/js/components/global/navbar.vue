@@ -1,13 +1,13 @@
 <template>
 <nav class="navbar-wrapper">
   <div class="navbar row">
-      <div class="col-2">
+      <div class="col-1">
         <button class="navbar__button" type="button" @click="toggleNavigation">
           <i class="fas fa-bars"></i>
         </button>
       </div>
-      <div class="col-10">
-        <p v-show="$route.path === '/module'" class="text-center navbar__title">{{ module_title }}</p>
+      <div class="col-4 offset-3 text-center mr-auto navbar__title">
+        <p v-show="$route.path === '/module'" class="navbar__text">{{ module_title }}</p>
       </div>
     </div>
   <div id="dropdown" class="navbar-dropdown transition-350ms">

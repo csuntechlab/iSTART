@@ -11734,8 +11734,18 @@ a.text-dark:focus {
   color: #d7d7d7;
 }
 
+.navbar__text {
+  font-size: 1.12rem;
+}
+
+@media (min-width: 768px) {
+  .navbar__text {
+    font-size: 1.2rem;
+  }
+}
+
 .navbar__title {
-  text-align: center;
+  bottom: -0.5rem;
 }
 
 .navbar-dropdown {
