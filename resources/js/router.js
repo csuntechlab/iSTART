@@ -4,7 +4,7 @@ import routes from './routes'
 
 Vue.use(Router)
 
-const router = new Router({
+const router = new Router({ 
   routes,
   base: process.env.BASE_URL
 })
