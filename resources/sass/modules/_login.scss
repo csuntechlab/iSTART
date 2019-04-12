@@ -18,7 +18,6 @@
             color: $secondaryColor;
         }
     }
-
     @include media-breakpoint-down(sm) {
         &__title {
             margin-top: 6rem;
@@ -32,12 +31,9 @@
     }
 
 
-}    
+}
+    
 .loginForm {
-    &__input {
-        border-radius: 15px;
-        border-color: $inputBorder;
-    }
     &__label {
         color: $primaryColor--dark;
         font-weight: 700;
@@ -50,10 +46,8 @@
         margin-top: 5rem;
         margin-bottom: 3rem; 
         padding: 5rem;
-        border: thin;
-        border-style: solid;
         border-radius: 20px;
-        border-color: $primaryColor--lighter;
+        border: thin, solid, $primaryColor--lighter ;
         box-shadow: 0 .75px 2.25px $primaryColor--lighter;
         
         &__title {

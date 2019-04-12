@@ -11794,6 +11794,11 @@ a.text-dark:focus {
   margin-bottom: 1.3rem;
 }
 
+.form-control {
+  border-radius: 15px;
+  border-color: #bce0fd;
+}
+
 .error {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11908,11 +11913,6 @@ a.text-dark:focus {
   font-size: 0.75rem;
 }
 
-.loginForm__input {
-  border-radius: 15px;
-  border-color: #bce0fd;
-}
-
 .loginForm__label {
   color: #2297fb;
   font-weight: 700;
@@ -11927,10 +11927,8 @@ a.text-dark:focus {
     margin-top: 5rem;
     margin-bottom: 3rem;
     padding: 5rem;
-    border: thin;
-    border-style: solid;
     border-radius: 20px;
-    border-color: #289afb;
+    border: thin, solid, #289afb;
     -webkit-box-shadow: 0 0.75px 2.25px #289afb;
             box-shadow: 0 0.75px 2.25px #289afb;
   }
