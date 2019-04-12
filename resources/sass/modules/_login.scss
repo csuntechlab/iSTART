@@ -36,7 +36,7 @@
 .loginForm {
     &__input {
         border-radius: 15px;
-        border-color: #BCE0FD;
+        border-color: $inputBorder;
     }
     &__label {
         color: $primaryColor--dark;
@@ -51,6 +51,7 @@
         margin-bottom: 3rem; 
         padding: 5rem;
         border: thin;
+        border-style: solid;
         border-radius: 20px;
         border-color: $primaryColor--lighter;
         box-shadow: 0 .75px 2.25px $primaryColor--lighter;

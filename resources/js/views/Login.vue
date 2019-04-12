@@ -12,14 +12,14 @@
             <h2 class="loginForm__title">Login</h2>
             <div class="form-group">
               <label for="username" class="loginForm__label">CSUN Username or Email</label>
-              <input v-model="userInfoForm.username" type="username" class="form-control loginForm__input"
+              <input v-model="userInfoForm.username" type="username" class="form-control form-control-lg loginForm__input"
               placeholder="CSUN Username or Email"
               required>
             </div>
             <div v-if="submitted && !userInfoForm.username" class="invalid-feedback ">Please enter your credentials</div>
             <div class="form-group">
               <label for="password" class="loginForm__label">Password</label>
-              <input v-model="userInfoForm.password" type="password" class="form-control loginForm__input" placeholder="Password" required>
+              <input v-model="userInfoForm.password" type="password" class=" form-control form-control-lg loginForm__input" placeholder="Password" required>
             </div>
             <!-- <div v-if="submitted && !userInfoForm.password" class="invalid-feedback">Please Enter your password</div> -->
             <div v-if="correctLoginInfo===false" class="invalid-feedback mt-0 mb-2 text-center">Login failed. Make sure you have the correct access rights.</div>
