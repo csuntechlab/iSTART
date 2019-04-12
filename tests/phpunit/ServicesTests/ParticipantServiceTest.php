@@ -9,10 +9,12 @@ use App\Models\Participant;
 use App\Services\ParticipantService;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
-
+use Illuminate\Support\Facades\DB;
 class ParticipantServiceTest extends TestCase
 {
     use DatabaseMigrations;
+
+    protected $participantUtility;
 
     public function setUp()
     {
@@ -63,5 +65,33 @@ class ParticipantServiceTest extends TestCase
         $booleanOutput= $this->participantUtility->userHasParticipantId($user);
 
         $this->assertEquals($booleanOutput, $expectedOutput);
+    }
+    /**
+     * @test
+     */
+    public function user_marked_as_good_is_added_to_participant_table(){
+
+        $boolean = false;
+        $data = [
+            ["email"=>"nr_liad.golan@my.csun.edu","participant_id"=>'689679',"user_id"=>"members:123456789"],
+            ["email"=>"nr_brian.linggadjaja@my.csun.edu","participant_id"=>'41210',"user_id"=>"members:987654321"],
+            ["email"=>"khal.drogo@my.csun.edu","participant_id"=>'41210',"user_id"=>"members:101010101"],
+
+];
+        $this->participantUtility->addGoodParticipantsToParticipantsTable($data);
+
+        foreach ($data as $goodParticipants)
+       if(DB::table('participant')
+            ->where('participant_id',$goodParticipants['participant_id'])){
+            $boolean = true;
+       }
+       $this->assertTrue($boolean);
+        
+
+
+
+
+
+
     }
 }
