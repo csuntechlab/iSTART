@@ -11928,7 +11928,7 @@ a.text-dark:focus {
     margin-bottom: 3rem;
     padding: 5rem;
     border-radius: 20px;
-    border: thin, solid, #289afb;
+    border: thin solid #289afb;
     -webkit-box-shadow: 0 0.75px 2.25px #289afb;
             box-shadow: 0 0.75px 2.25px #289afb;
   }
