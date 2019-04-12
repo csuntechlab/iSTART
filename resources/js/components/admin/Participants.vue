@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="badParticipants" v-if="categorizedParticipants.bad !== undefined">
+    <div class="participants__bad" v-if="categorizedParticipants.bad !== undefined">
       <h2>The following emails were not found: </h2>
       <table class="table table-striped" >
         <thead>
@@ -17,7 +17,7 @@
         </tbody>    
       </table>
     </div>
-    <div class="goodParticipants" v-if="categorizedParticipants.good !== undefined">
+    <div class="participants__good" v-if="categorizedParticipants.good !== undefined">
       <h2> The following emails can be submitted: </h2>
       <table class="table table-striped">
         <thead>
