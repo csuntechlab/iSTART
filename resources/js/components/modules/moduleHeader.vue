@@ -2,7 +2,7 @@
   <div class="module__header">
     <loading-progress class="module__progressBar"
       :progress="module.progress"
-      :size="module.size"
+      :size="windowWidth"
       :shape="module.shape"
       :height="module.height"
       :width="windowWidth"
@@ -19,8 +19,14 @@ export default {
       module: {
         shape: 'line',
         progress: 0.59,
-        height: 26,
-        size: window.innerWidth
+        height: 26
+      }
+    }
+  },
+  watch: {
+    watchWidthSize () {
+      window.onresize = () => {
+        this.windowWidth = window.innerWidth
       }
     }
   },
