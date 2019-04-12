@@ -3,7 +3,8 @@
     <h1 class="login__title transition-350ms">iSTART</h1>
     <div class="row justify-content-center">
       <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-        <form class="login__form">
+        <loading-progress v-if="loginIsLoading===true"/>
+        <form v-else class="login__form">
           <div class="form-group">
             <label for="username">CSUN Username or Email</label>
             <input v-model="userInfoForm.username" type="username" class="form-control"
@@ -45,7 +46,7 @@ export default {
 
   methods: {
     ...mapActions([
-      'verifyUserData'
+      'verifyUserData',
     ]),
 
     submitForm () {
@@ -66,7 +67,8 @@ export default {
 
   computed: {
     ...mapGetters([
-      'correctLoginInfo'
+      'correctLoginInfo',
+      'loginIsLoading'
     ])
   }
 }

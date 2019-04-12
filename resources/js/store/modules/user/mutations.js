@@ -11,5 +11,9 @@ export default {
   CLEAR_USER_DATA (state) {
     state.user = {}
     state.correctLoginInfo = null
+  },
+
+  LOGIN_IS_LOADING(state, payload) {
+    state.loginIsLoading = payload
   }
 }
