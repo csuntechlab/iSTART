@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import navbar from './components/global/navbar.vue'
+import Navbar from './components/global/Navbar.vue'
 import { clearTimeout, setTimeout } from 'timers'
 import { mapActions, mapState } from 'vuex'
 export default {
   components: {
-    navbar
+    Navbar
   },
   data () {
     return {
