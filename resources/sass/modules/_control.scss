@@ -1,12 +1,14 @@
 .control-group{
-    height: 100vh;
+    height: calc(100vh - 3.3rem);
     background-color: #F5F5F5;
     &__body{
-        box-shadow: 1.1px 1.3px 5px $primaryColor--light;
-        min-height: calc(100vh - 20rem);
-        border-radius: 2px;
-        margin-top: 3rem;
-        padding-top: 7.5rem;
+        box-shadow: 0.5px 1.1px 6px $primaryColor--light;
+        min-height: calc(100vh - 17.5rem);
+        border-radius: 4px;
+        margin-top: 4rem;
+        padding-top: 7.25rem;
+        margin-left: -25px;
+        margin-right: -25px;
     }
     &__icon{
         font-size: 2rem;
@@ -15,6 +17,6 @@
         margin-top:1rem;
     }
     &__text{
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.15rem;
     }
 }
