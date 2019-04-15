@@ -1,5 +1,16 @@
+body {
+    @include media-breakpoint-up(md) {
+        background-color: $backgroundColor;     
+    }
+
+}
 .main-wrapper {
     margin-top: 3.3rem;
     z-index: 0;
     width: 100%;
+}
+
+.container {
+    background-color: $white; 
+    height: 100%;
 }
