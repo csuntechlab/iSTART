@@ -12183,7 +12183,7 @@ a.text-dark:focus {
   font-size: 1.15rem;
 }
 
-.vue-progress-path {
+.loginForm .vue-progress-path {
   z-index: 1;
   position: absolute;
   left: 50%;
@@ -12192,14 +12192,14 @@ a.text-dark:focus {
 }
 
 @media (min-width: 768px) {
-  .vue-progress-path {
+  .loginForm .vue-progress-path {
     top: 35%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
   }
 }
 
-.vue-progress-path .progress {
+.loginForm .vue-progress-path .progress {
   stroke: #2699fb;
 }
 
