@@ -11920,7 +11920,6 @@ a.text-dark:focus {
   /* For Safari 3.1 to 6.0 */
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  cursor: no-drop !important;
 }
 
 .loginForm__label {
@@ -12182,5 +12181,25 @@ a.text-dark:focus {
 
 .page-description__info {
   font-size: 1.15rem;
+}
+
+.vue-progress-path {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media (min-width: 768px) {
+  .vue-progress-path {
+    top: 35%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+}
+
+.vue-progress-path .progress {
+  stroke: #2699fb;
 }
 

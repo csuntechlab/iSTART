@@ -1,3 +1,14 @@
 .vue-progress-path{
-    
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    @include media-breakpoint-up(md) {
+      top:35%;
+      transform: translate(-50%);
+    }
+    .progress {
+      stroke: $primaryColor;
+    }
+
 }

@@ -40,7 +40,6 @@
         opacity: 0.2;
         -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
         transition: 0.2s;
-        cursor: no-drop !important;
     }
     &__label {
         color: $primaryColor--dark;
