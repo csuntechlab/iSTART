@@ -2,5 +2,7 @@
 export default {
   user: {},
   correctLoginInfo: null,
-  loginIsLoading: false
+  loginIsLoading: false,
+  categorizedParticipants: {},
+  participantsWereSubmitted: null
 }
