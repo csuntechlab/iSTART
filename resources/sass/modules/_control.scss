@@ -1,0 +1,20 @@
+.control-group{
+    height: 100vh;
+    background-color: #F5F5F5;
+    &__body{
+        box-shadow: 1.1px 1.3px 5px $primaryColor--light;
+        min-height: calc(100vh - 20rem);
+        border-radius: 2px;
+        margin-top: 3rem;
+        padding-top: 7.5rem;
+    }
+    &__icon{
+        font-size: 2rem;
+    }
+    &__content{
+        margin-top:1rem;
+    }
+    &__text{
+        margin-bottom: 0.25rem;
+    }
+}
