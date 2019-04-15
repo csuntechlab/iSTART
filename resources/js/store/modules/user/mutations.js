@@ -11,5 +11,14 @@ export default {
   CLEAR_USER_DATA (state) {
     state.user = {}
     state.correctLoginInfo = null
+  },
+
+  SET_CATEGORIZED_PARTICIPANTS (state, payload) {
+    state.categorizedParticipants = payload;
+  },
+  
+  PARTICIPANTS_WERE_SUBMITTED(state, payload) {
+    state.categorizedParticipants= {}
+    state.participantsWereSubmitted = payload
   }
 }
