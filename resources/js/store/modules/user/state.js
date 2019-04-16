@@ -1,5 +1,7 @@
 //LOGIN STATE
 export default {
   user: {},
-  correctLoginInfo: null
+  correctLoginInfo: null,
+  categorizedParticipants: {},
+  participantsWereSubmitted: null
 }
