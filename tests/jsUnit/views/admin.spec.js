@@ -1,17 +1,29 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Admin from './../../../resources/js/views/admin.vue';
+import Admin from './../../../resources/js/views/Admin.vue';
+import Vuex from 'vuex'
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 describe('Admin.vue', () => {
-  
-  
+  const store = new Vuex.Store({
+    modules: {
+      User: {
+        getters: {
+          participantsWereSubmitted: () => null
+        }
+      }
+    }
+  })
   const $route = {
     meta: {
       title: 'ISTART'
     } 
   }
   const wrapper = shallowMount(Admin, {
-    mocks: {$route} 
-  });
+    store,
+    mocks: {$route},
+    localVue
+  }, );
   it('should parse the json version of the excel file to an object format when parseFile is called', ()=> {
     const excelSheetJSON = [
       ["email", "participant_id"],

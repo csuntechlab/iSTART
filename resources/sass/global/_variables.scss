@@ -7,7 +7,7 @@
 // Body
 //previous body-bg: #f8fafc
 $body-bg: #F5F5F5;
-
+$inputBorder: rgb(188,224,253);
 // Typography
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
@@ -34,6 +34,7 @@ $primaryColor--80: rgba($primaryColor, 0.8);
 $primaryColor--60: rgba($primaryColor, 0.6);
 $primaryColor--40: rgba($primaryColor, 0.4);
 $primaryColor--20: rgba($primaryColor, 0.2);
+$backgroundColor: rgb(231,242,247);
 
 $secondaryColor: $white;
 $secondaryColor--lighter: lighten($secondaryColor, 0.4);

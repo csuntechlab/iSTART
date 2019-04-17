@@ -4,16 +4,20 @@
     <div class="main-wrapper">
       <router-view />
     </div>
+    <CookiesNotification></CookiesNotification>
   </div>
 </template>
 
 <script>
-import navbar from './components/global/navbar.vue'
+import Navbar from './components/global/Navbar.vue'
+import CookiesNotification from './components/global/CookiesNotification'
 import { clearTimeout, setTimeout } from 'timers'
 import { mapActions, mapState } from 'vuex'
+
 export default {
   components: {
-    navbar
+    Navbar,
+    CookiesNotification
   },
   data () {
     return {
