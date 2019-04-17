@@ -55,7 +55,7 @@ export default {
       modules: {
         alcohol: {
           name: 'Alcohol',
-          image: '/images/thumbnail/alcohol_thumbnail.jpg',
+          image: 'images/thumbnail/alcohol_thumbnail.jpg',
           completion: {
             progress: 2,
             completed: false,
@@ -67,7 +67,7 @@ export default {
 
         marijuana: {
           name: 'Marijuana',
-          image: '/images/thumbnail/test.jpg',
+          image: 'images/thumbnail/test.jpg',
           completion: {
             progress: 50,
             completed: false,
@@ -79,7 +79,7 @@ export default {
 
         tobacco: {
           name: 'Tobacco',
-          image: '/images/thumbnail/test.jpg',
+          image: 'images/thumbnail/test.jpg',
           completion: {
             progress: 100,
             completed: true,
