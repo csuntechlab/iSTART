@@ -17,7 +17,7 @@ class ParticipantController extends Controller
 
         $goodParticipants = [
 
-            'goodParticipants'=> $request->good
+            'goodParticipants'=> $request->all()
         ];
 
         return $this->participantUtility->addGoodParticipantsToParticipantsTable($goodParticipants);
