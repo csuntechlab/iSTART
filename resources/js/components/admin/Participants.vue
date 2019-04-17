@@ -14,7 +14,7 @@
             <td>{{participant.email}}</td>
             <td>{{participant.participant_id}}</td>
           </tr>
-        </tbody>    
+        </tbody>
       </table>
     </div>
     <div class="participants__good" v-if="categorizedParticipants.good !== undefined">
@@ -29,9 +29,9 @@
         <tbody>
           <tr :key="participant.participant_id" v-for="participant in categorizedParticipants.good">
             <td>{{participant.email}}</td>
-            <td>{{participant.participant_id}}</td>            
+            <td>{{participant.participant_id}}</td>
           </tr>
-        </tbody>    
+        </tbody>
       </table>
       <h2>Would you like submit the good participants?</h2>
       <button class="btn btn-danger" @click="participantsWillNotBeSubmitted">No</button>
@@ -40,7 +40,7 @@
   </div>
 </template>
 <script>
-import {mapActions, mapGetters} from 'vuex';
+import { mapGetters } from 'vuex'
 export default {
   name: 'Participants',
   computed: {
@@ -49,11 +49,11 @@ export default {
     ])
   },
   methods: {
-    submitGoodParticipants() {
+    submitGoodParticipants () {
       console.log(this.categorizedParticipants.good)
       this.$store.dispatch('submitGoodParticipants', this.categorizedParticipants.good)
     },
-    participantsWillNotBeSubmitted() {
+    participantsWillNotBeSubmitted () {
       this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', false)
     }
   }

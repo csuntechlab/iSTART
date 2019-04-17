@@ -7,7 +7,7 @@
     <div >
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-          
+
           <form class="loginForm">
             <h2 class="loginForm__title">Login</h2>
             <div class="form-group">
@@ -29,13 +29,13 @@
           </form>
         </div>
     </div>
-      
+
     </div>
-    
+
   </div>
 
   </div>
-  
+
 </template>
 
 <script>
@@ -59,10 +59,12 @@ export default {
     ]),
 
     submitForm () {
-      this.submitted = true
-      if (this.checkFormInputs()) {
+      let isCookiesPolicyAccepted = window.localStorage.isCookiesPolicyAccepted
+      if (isCookiesPolicyAccepted && this.checkFormInputs()) {
         this.verifyUserData(this.userInfoForm)
       }
+
+      this.submitted = true
     },
 
     checkFormInputs () {
