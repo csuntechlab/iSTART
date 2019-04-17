@@ -13,6 +13,9 @@ export default {
     state.correctLoginInfo = null
   },
 
+  LOGIN_IS_LOADING(state, payload) {
+    state.loginIsLoading = payload
+  },
   SET_CATEGORIZED_PARTICIPANTS (state, payload) {
     state.categorizedParticipants = payload;
   },

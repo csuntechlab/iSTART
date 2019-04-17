@@ -2,11 +2,11 @@
     height: calc(100vh - 3.3rem);
     background-color: #F5F5F5;
     &__body{
-        box-shadow: 0px 2px 5.5px $primaryColor--lighter;
+        box-shadow: 0px 3.5px 4px $primaryColor--lighter;
         min-height: calc(100vh - 17.5rem);
         border-radius: 4px;
         margin-top: 4rem;
-        padding-top: 7.25rem;
+        padding-top: 9rem;
         margin-left: -25px;
         margin-right: -25px;
     }

@@ -3,16 +3,17 @@ import router from './../../../router'
 
 export default {
   async verifyUserData ({ commit }, payload) {
+    commit('LOGIN_IS_LOADING', true)
     return UserAPI.verifyUserDataAPI(payload)
       .then(
         response => {
+          commit('LOGIN_IS_LOADING', false)
           if (response.data.valid === '1') {
             let cookieValue = response.data.token
             let cookieExpirationDate = new Date()
             cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1)
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
-
             if (response.data.isAdmin) {
               router.push({ name: 'Admin' })
             } else {
