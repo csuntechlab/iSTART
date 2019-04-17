@@ -1,5 +1,8 @@
 <template>
-<nav class="navbar-wrapper">
+<nav class="navbar navbar-expand-lg ">
+
+</nav>
+<!-- <nav class="navbar-wrapper ">
   <div class="navbar">
     <button class="navbar__button" type="button" @click="toggleNavigation">
       <i class="fas fa-bars"></i>
@@ -25,7 +28,7 @@
       </router-link>
     </div>
   </div>
-</nav>
+</nav> -->
 </template>
 
 <script>
