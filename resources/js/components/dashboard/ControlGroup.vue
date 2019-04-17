@@ -3,12 +3,12 @@
   <div class="row">
     <div class="col-8 offset-2 text-center">
       <div class="control-group__body">
-        <i class="control-group__icon fas fa-user" style="color:#299afb"></i>
+        <i class="control-group__icon fas fa-user"></i>
         <div class="control-group__content">
-          <p class="control-group__text">Thank you for participating.</p>
-          <p class="control-group__text">You are part of the control group.</p>
-          <p class="control-group__text">You will receive an email with further</p>
-          <p class="control-group__text">instructions.</p>
+          <p class="control-group__text">Thank you for participating.<br>
+          You are part of the control group.<br>
+          You will receive an email with further<br>
+          instructions.</p>
         </div>
       </div>
     </div>
