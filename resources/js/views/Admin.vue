@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import { mapGetters } from 'vuex'
 
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 import XLSX from 'xlsx'
@@ -43,61 +43,61 @@ export default {
   },
   methods: {
     handleFileChange (event) {
-      var files = event.target.files;
+      var files = event.target.files
       if (files && files[0]) {
-        this.readFile(files[0]);
-      } 
+        this.readFile(files[0])
+      }
     },
     submitFile (event) {
-      event.stopPropagation();
-      event.preventDefault();
-      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null);
-      this.$store.dispatch('verifyExcelSheet', this.participants);
+      event.stopPropagation()
+      event.preventDefault()
+      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null)
+      this.$store.dispatch('verifyExcelSheet', this.participants)
     },
     readFile (file) {
       /* Boilerplate to set up FileReader */
-      var reader = new FileReader();
+      var reader = new FileReader()
       reader.onload = (e) => {
-        var binaryString = e.target.result;
+        var binaryString = e.target.result
         try {
-          var workBook = XLSX.read(binaryString, { type: 'binary' });
-          this.incorrectFileType = false;
-          var fileName = this.$refs.file.files[0].name;
+          var workBook = XLSX.read(binaryString, { type: 'binary' })
+          this.incorrectFileType = false
+          var fileName = this.$refs.file.files[0].name
 
           if (this.checkFileType(fileName)) {
-            var worksheetName = workBook.SheetNames[0];
-            var ws = workBook.Sheets[worksheetName];
-            var data = XLSX.utils.sheet_to_json(ws, { header: 1 });
-            this.participants = this.parseFile(data);
+            var worksheetName = workBook.SheetNames[0]
+            var ws = workBook.Sheets[worksheetName]
+            var data = XLSX.utils.sheet_to_json(ws, { header: 1 })
+            this.participants = this.parseFile(data)
           } else {
-            this.incorrectFileType = true;
+            this.incorrectFileType = true
           }
         } catch (err) {
-          this.incorrectFileType = true;
+          this.incorrectFileType = true
         }
       }
-      reader.readAsBinaryString(file);
+      reader.readAsBinaryString(file)
     },
     parseFile (excelSheetJSON) {
-      var parsedExcelSheet = [];
+      var parsedExcelSheet = []
       for (var i = 1; i < excelSheetJSON.length; i++) {
         var currentStudent = {
           email: excelSheetJSON[i][0],
           participant_id: excelSheetJSON[i][1]
-        };
-        parsedExcelSheet.push(currentStudent);
+        }
+        parsedExcelSheet.push(currentStudent)
       }
-      return parsedExcelSheet;
+      return parsedExcelSheet
     },
     checkFileType (fileName) {
-      var acceptedFileTypes = ['xlsx', 'xlsb', 'xlsm', 'xls', 'csv'];
-      var fileIsAccepted = false;
+      var acceptedFileTypes = ['xlsx', 'xlsb', 'xlsm', 'xls', 'csv']
+      var fileIsAccepted = false
       for (var i = 0; i < acceptedFileTypes.length; i++) {
         if (fileName.includes(acceptedFileTypes[i])) {
-          fileIsAccepted = true;
+          fileIsAccepted = true
         }
       }
-      return fileIsAccepted;
+      return fileIsAccepted
     }
   }
 }

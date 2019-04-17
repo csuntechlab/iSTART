@@ -37,13 +37,13 @@
           </form>
         </div>
     </div>
-      
+
     </div>
-    
+
   </div>
 
   </div>
-  
+
 </template>
 
 <script>
@@ -69,10 +69,12 @@ export default {
     ]),
 
     submitForm () {
-      this.submitted = true
-      if (this.checkFormInputs()) {
+      let isCookiesPolicyAccepted = window.localStorage.isCookiesPolicyAccepted
+      if (isCookiesPolicyAccepted && this.checkFormInputs()) {
         this.verifyUserData(this.userInfoForm)
       }
+
+      this.submitted = true
     },
 
     checkFormInputs () {
