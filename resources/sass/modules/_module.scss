@@ -16,19 +16,20 @@
             margin-right: 2rem;
         }
     }
-    &__footer{
-        @include media-breakpoint-down(sm){
-            position: fixed;
-        }
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 0px;
-        @include media-breakpoint-up(md){
-            background-color: $secondaryColor;
+    &-footer{
+        &__background{
+            @include media-breakpoint-down(sm){
+                position: fixed;
+                width: 100%;
+                padding-top:10px;
+            }
+            @include media-breakpoint-up(md){
+                background-color: $secondaryColor;
 
+            }
+            background-color: $primaryColor;
+            padding-bottom: 15px;
         }
-        background-color: $primaryColor;
-        padding-bottom: 15px;
     }
     &__progressBar{
         @include media-breakpoint-up(md){

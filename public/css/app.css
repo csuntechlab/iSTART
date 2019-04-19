@@ -11984,22 +11984,21 @@ a.text-dark:focus {
   margin-right: 2rem;
 }
 
-.module__footer {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 0px;
+.module-footer__background {
   background-color: #2699fb;
   padding-bottom: 15px;
 }
 
 @media (max-width: 767.98px) {
-  .module__footer {
+  .module-footer__background {
     position: fixed;
+    width: 100%;
+    padding-top: 10px;
   }
 }
 
 @media (min-width: 768px) {
-  .module__footer {
+  .module-footer__background {
     background-color: whitesmoke;
   }
 }
