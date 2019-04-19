@@ -28,7 +28,7 @@ export default [
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true}
+    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
   },
   {
     path: '/schedule',
