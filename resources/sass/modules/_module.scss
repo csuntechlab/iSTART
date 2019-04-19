@@ -2,6 +2,10 @@
     &__header{
         margin-top: -2px;
     }
+    &-content{
+        background-color:red;
+        height: calc(100vh - 9rem);
+    }
     &__footerText{
         color: $secondaryColor;
 
@@ -13,10 +17,10 @@
         }
     }
     &__footer{
-        padding-top: 20px;
         @include media-breakpoint-down(sm){
             position: fixed;
         }
+        position: absolute;
         bottom: 0;
         margin-bottom: 0px;
         @include media-breakpoint-up(md){
@@ -24,7 +28,6 @@
 
         }
         background-color: $primaryColor;
-        width: 100%;
         padding-bottom: 15px;
     }
     &__progressBar{
