@@ -11710,11 +11710,7 @@ a.text-dark:focus {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .container--desktop {
-=======
-.container {
->>>>>>> 67eac609b751313f7183b5be11115cf47e77e60c
   background-color: whitesmoke;
   height: 100%;
 }
@@ -11975,7 +11971,6 @@ a.text-dark:focus {
   color: whitesmoke;
 }
 
-<<<<<<< HEAD
 .module__footerText--left {
   margin-left: 2rem;
 }
@@ -11986,11 +11981,6 @@ a.text-dark:focus {
 
 .module__footer {
   padding-top: 20px;
-=======
-.module__footer {
-  padding-top: 20px;
-  position: fixed;
->>>>>>> 67eac609b751313f7183b5be11115cf47e77e60c
   bottom: 0;
   margin-bottom: 0px;
   background-color: #2699fb;
@@ -11998,7 +11988,6 @@ a.text-dark:focus {
   padding-bottom: 15px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 767.98px) {
   .module__footer {
     position: fixed;
@@ -12017,8 +12006,6 @@ a.text-dark:focus {
   }
 }
 
-=======
->>>>>>> 67eac609b751313f7183b5be11115cf47e77e60c
 .module__progress {
   font-size: 1rem;
   color: white;

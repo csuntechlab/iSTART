@@ -1,5 +1,5 @@
 <template>
-  <div :class="windowWidth >= 768 ? 'container--desktop container module' : 'module' ">
+  <div ref="moduleContainer" :class="windowWidth >= 768 ? 'container--desktop container module' : 'module' ">
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <module-footer></module-footer>
   </div>
@@ -21,15 +21,14 @@ export default {
     }
   },
   mounted () {
-    if (document.getElementsByClassName('.container')) {
-      this.sizeOfContainer = document.querySelector('.container').offsetWidth
-    }
     window.onresize = () => {
-      this.sizeOfContainer = this.sizeOfContainer
+      this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
     }
   },
   computed: {
-
+    containerSize () {
+      return this.sizeOfContainer
+    }
   }
 }
 </script>

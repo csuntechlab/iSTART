@@ -18,7 +18,7 @@ export default {
   ],
   data () {
     return {
-      w: this.getContainerSize,
+      w: this.size_of_container,
       windowWidth: window.innerWidth,
       module: {
         shape: 'line',
@@ -35,7 +35,7 @@ export default {
   mounted () {
     window.onresize = () => {
       this.windowWidth = window.innerWidth
-      this.w = this.getCOntainerSize
+      this.w = this.getContainerSize
     }
   }
 }
