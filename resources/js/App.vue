@@ -66,7 +66,7 @@ export default {
     }
   },
   mounted () {
-    this.checkForCookies()
+    // this.checkForCookies()
     this.checkUserInactivity()
     this.userExists()
   }

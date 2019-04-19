@@ -1,20 +1,29 @@
 <template>
-<nav class="navbar navbar-expand-lg ">
 
-</nav>
-<!-- <nav class="navbar-wrapper ">
+<nav class="navbar-wrapper transition-350ms">
   <div class="navbar">
     <button class="navbar__button" type="button" @click="toggleNavigation">
       <i class="fas fa-bars"></i>
     </button>
   </div>
+  
+  
+  
+  
+  
   <div id="dropdown" class="navbar-dropdown transition-350ms">
     <div class="navbar-nav navbar-dropdown-list">
       <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown-list__divider">
         <div @click="closeNavigation" class="navbar-dropdown__item">
-          <span class="nav-link">MODULE</span>
+          <span class="nav-link">DASHBOARD</span>
         </div>
       </router-link>
+
+
+
+
+
+
 
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar-dropdown__divider">
         <div class="navbar-dropdown__item" @click="closeNavigation">
@@ -28,7 +37,7 @@
       </router-link>
     </div>
   </div>
-</nav> -->
+</nav>
 </template>
 
 <script>
