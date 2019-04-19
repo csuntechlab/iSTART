@@ -2,10 +2,10 @@
   <div class="module__header">
     <loading-progress class="module__progressBar"
       :progress="module.progress"
-      :size="windowWidth"
+      :size="size_of_container !== undefined ? getContainerSize : windowWidth"
       :shape="module.shape"
       :height="module.height"
-      :width="windowWidth"
+      :width="size_of_container !== undefined ? getContainerSize : windowWidth"
     />
     <h1 class="module__progress">{{ module.progress* 100}}% </h1>
   </div>
@@ -13,8 +13,12 @@
 <script>
 export default {
   name: 'moduleHeader',
+  props: [
+    'size_of_container'
+  ],
   data () {
     return {
+      w: this.getContainerSize,
       windowWidth: window.innerWidth,
       module: {
         shape: 'line',
@@ -23,16 +27,15 @@ export default {
       }
     }
   },
-  watch: {
-    watchWidthSize () {
-      window.onresize = () => {
-        this.windowWidth = window.innerWidth
-      }
+  computed: {
+    getContainerSize () {
+      return this.size_of_container
     }
   },
   mounted () {
     window.onresize = () => {
       this.windowWidth = window.innerWidth
+      this.w = this.getCOntainerSize
     }
   }
 }

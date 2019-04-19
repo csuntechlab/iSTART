@@ -4,15 +4,33 @@
     }
     &__footerText{
         color: $secondaryColor;
+
+        &--left{
+            margin-left: 2rem;
+        }
+        &--right{
+            margin-right: 2rem;
+        }
     }
     &__footer{
         padding-top: 20px;
-        position: fixed;
+        @include media-breakpoint-down(sm){
+            position: fixed;
+        }
         bottom: 0;
         margin-bottom: 0px;
+        @include media-breakpoint-up(md){
+            background-color: $secondaryColor;
+
+        }
         background-color: $primaryColor;
         width: 100%;
         padding-bottom: 15px;
+    }
+    &__progressBar{
+        @include media-breakpoint-up(md){
+            margin-left: -15px;
+        }
     }
     &__progress{
         font-size: 1rem;

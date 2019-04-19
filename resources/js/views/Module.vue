@@ -1,6 +1,6 @@
 <template>
-  <div class="module">
-    <module-header></module-header>
+  <div :class="windowWidth >= 768 ? 'container--desktop container module' : 'module' ">
+    <module-header :size_of_container="sizeOfContainer"></module-header>
     <module-footer></module-footer>
   </div>
 </template>
@@ -13,6 +13,23 @@ export default {
   components: {
     moduleHeader,
     moduleFooter
+  },
+  data () {
+    return {
+      windowWidth: window.innerWidth,
+      sizeOfContainer: 0
+    }
+  },
+  mounted () {
+    if (document.getElementsByClassName('.container')) {
+      this.sizeOfContainer = document.querySelector('.container').offsetWidth
+    }
+    window.onresize = () => {
+      this.sizeOfContainer = this.sizeOfContainer
+    }
+  },
+  computed: {
+
   }
 }
 </script>

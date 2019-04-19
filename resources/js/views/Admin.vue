@@ -8,13 +8,21 @@
     </label>
     <button v-if="!incorrectFileType" @click.prevent="submitFile">Submit</button>
   </div>
+  <div>
+    <Participants v-if="participantsWereSubmitted===null"/>
+    <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>
+    <h2 v-if="participantsWereSubmitted==false"> Participants were not submitted</h2>
+  </div>
   </div>
 
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 import XLSX from 'xlsx'
+import Participants from './../components/admin/Participants.vue'
 
 export default {
   name: 'admin',
@@ -25,29 +33,40 @@ export default {
       incorrectFileType: false
     }
   },
+  components: {
+    Participants
+  },
+  computed: {
+    ...mapGetters([
+      'participantsWereSubmitted'
+    ])
+  },
   methods: {
     handleFileChange (event) {
       var files = event.target.files
-      if (files && files[0]) this.readFile(files[0])
+      if (files && files[0]) {
+        this.readFile(files[0])
+      }
     },
     submitFile (event) {
       event.stopPropagation()
       event.preventDefault()
+      this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null)
       this.$store.dispatch('verifyExcelSheet', this.participants)
     },
     readFile (file) {
       /* Boilerplate to set up FileReader */
       var reader = new FileReader()
       reader.onload = (e) => {
-        var bstr = e.target.result
+        var binaryString = e.target.result
         try {
-          var wb = XLSX.read(bstr, { type: 'binary' })
+          var workBook = XLSX.read(binaryString, { type: 'binary' })
           this.incorrectFileType = false
           var fileName = this.$refs.file.files[0].name
 
           if (this.checkFileType(fileName)) {
-            var wsname = wb.SheetNames[0]
-            var ws = wb.Sheets[wsname]
+            var worksheetName = workBook.SheetNames[0]
+            var ws = workBook.Sheets[worksheetName]
             var data = XLSX.utils.sheet_to_json(ws, { header: 1 })
             this.participants = this.parseFile(data)
           } else {

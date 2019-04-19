@@ -33,7 +33,14 @@
 
 }
     
+
 .loginForm {
+    &__loading {
+        z-index: -1;
+        opacity: 0.2;
+        -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
+        transition: 0.2s;
+    }
     &__label {
         color: $primaryColor--dark;
         font-weight: 700;

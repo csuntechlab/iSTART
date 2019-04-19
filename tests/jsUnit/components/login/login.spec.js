@@ -11,7 +11,8 @@ describe('Login.vue', () => {
     modules: {
       User: {
         getters: {
-          correctLoginInfo: () => null
+          correctLoginInfo: () => null,
+          loginIsLoading: ()=>false
         }
       }
     }
