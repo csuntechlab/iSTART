@@ -3,7 +3,8 @@
 export default {
   user: state => state.user,
   correctLoginInfo: state => state.correctLoginInfo,
-  categorizedParticipants: state => state.categorizedParticipants,
   isAdminUser: state => state.user.isAdmin,
+  loginIsLoading: state => state.loginIsLoading,
+  categorizedParticipants: state => state.categorizedParticipants,
   participantsWereSubmitted: state => state.participantsWereSubmitted
 }
