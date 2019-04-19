@@ -4,7 +4,7 @@
     <div class="col-8 offset-2 text-center">
       <div class="control-group__body">
         <i class="control-group__icon fas fa-user"></i>
-        <div class="control-group__content">
+        <div class="mt-3">
           <p class="control-group__text">Thank you for participating.<br>
           You are part of the control group.<br>
           You will receive an email with further<br>
