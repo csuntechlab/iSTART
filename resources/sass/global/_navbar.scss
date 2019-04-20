@@ -2,7 +2,17 @@
 .navbar{
     background-color: $primaryColor;
     color: $secondaryColor;
-    padding: 0.25rem 0.5rem;
+    padding: 0rem 0.5rem;
+    &__title {
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: .5rem;
+            font-size: 2.25rem;
+            text-align: left;
+            color: $secondaryColor;
+        }
+    }
 
     &-wrapper {
         pointer-events: none;
@@ -45,6 +55,7 @@
             border: 1px solid $primaryColor--medium;
             margin: 0 -1rem;
             @include media-breakpoint-up(md) {
+                margin: 0;
                 flex-direction: row;
                 border: 0;
             }
@@ -56,10 +67,6 @@
             padding-left: 2.3rem;
             padding-top: 0.85rem;
             padding-bottom: 0.85rem;
-            @include media-breakpoint-up(md) {
-                padding-top: 0.85rem;
-            }
-
             & > * {
                 color: $white;
             }
@@ -68,11 +75,14 @@
         &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
+                @include media-breakpoint-up(md) {
+                    border: none;
+                }
             }
         }
         @include media-breakpoint-up(md) {
             display: flex;
-            height: initial;
+            height: 3.5rem;
         }
     }
 }
