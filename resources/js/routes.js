@@ -41,5 +41,11 @@ export default [
     name: 'Admin',
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-  }
+  },
+  {
+    path: '/testme',
+    name: 'Dashboard',
+    component: Dashboard,
+    meta: { title: 'iSTART | Dashboard', requiresAuth: false, userAuth: true}
+  },
 ]

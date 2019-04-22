@@ -11718,11 +11718,23 @@ a.text-dark:focus {
 .navbar {
   background-color: #2699fb;
   color: whitesmoke;
-  padding: 0rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0rem 0.5rem;
+  }
+}
+
+.navbar__title {
+  display: none;
 }
 
 @media (min-width: 768px) {
   .navbar__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0;
     padding: 0.5rem;
     font-size: 2.25rem;
@@ -11774,12 +11786,10 @@ a.text-dark:focus {
 
 .navbar-dropdown-list {
   border: 1px solid #106dbc;
-  margin: 0 -1rem;
 }
 
 @media (min-width: 768px) {
   .navbar-dropdown-list {
-    margin: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

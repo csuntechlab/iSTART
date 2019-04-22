@@ -1,14 +1,14 @@
 <template>
 
 <nav class="navbar-wrapper transition-350ms">
-  <div class="navbar">
+  <div class="row navbar">
     <button class="navbar__button" type="button" @click="toggleNavigation">
       <i class="fas fa-bars"></i>
     </button>
   </div>
   <div id="dropdown" class="navbar-dropdown transition-350ms">
-    <div class="navbar-nav navbar-dropdown-list">
       <h1 class="navbar__title">iSTART</h1>
+    <div class="offset-sm-4 offset-md-4 offset-lg-6 offset-xl-7 navbar-nav navbar-dropdown-list">
       <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown-list__divider">
         <div @click="closeNavigation" class="navbar-dropdown__item">
           <span class="nav-link">DASHBOARD</span>

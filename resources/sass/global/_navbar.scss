@@ -2,10 +2,14 @@
 .navbar{
     background-color: $primaryColor;
     color: $secondaryColor;
-    padding: 0rem 0.5rem;
+    @include media-breakpoint-up(md) {
+        padding: 0rem 0.5rem;    
+    }
     &__title {
+        display:none;
 
         @include media-breakpoint-up(md) {
+            display: flex;
             margin: 0;
             padding: .5rem;
             font-size: 2.25rem;
@@ -53,9 +57,7 @@
 
         &-list {
             border: 1px solid $primaryColor--medium;
-            margin: 0 -1rem;
             @include media-breakpoint-up(md) {
-                margin: 0;
                 flex-direction: row;
                 border: 0;
             }
