@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     checkWindowWidth () {
-      if (this.windowWidth >= 720) {
+      if (this.windowWidth >= 768) {
         return 'container--desktop container module'
       } else {
         return 'module'

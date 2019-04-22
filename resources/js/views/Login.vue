@@ -34,7 +34,6 @@
                 <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
               </div>
             </div>
-            <router-link to="/module">Go to module</router-link>
           </form>
         </div>
     </div>
