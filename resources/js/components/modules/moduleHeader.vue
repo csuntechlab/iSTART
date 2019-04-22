@@ -18,7 +18,6 @@ export default {
   ],
   data () {
     return {
-      w: this.size_of_container,
       windowWidth: 0,
       module: {
         shape: 'line',
@@ -52,7 +51,7 @@ export default {
     }
   },
   mounted () {
-    this.getProgressBarSize()
+    // this.getProgressBarSize
     window.onresize = () => {
       this.getContainerSize = this.size_of_container
     }

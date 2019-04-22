@@ -19,11 +19,16 @@ export default {
   },
   data () {
     return {
-      windowWidth: window.innerWidth,
+      windowWidth: 0,
       sizeOfContainer: 0
     }
   },
   created () {
+    window.addEventListener('resize', this.getWindowWidth)
+    this.getWindowWidth()
+  },
+  destroyed () {
+    window.addEventListener('resize', this.getWindowWidth)
   },
   computed: {
     checkWindowWidth () {
@@ -32,6 +37,11 @@ export default {
       } else {
         return 'module'
       }
+    }
+  },
+  methods: {
+    getWindowWidth () {
+      this.windowWidth = window.innerWidth
     }
   },
   mounted () {
