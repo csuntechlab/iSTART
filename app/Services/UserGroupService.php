@@ -101,9 +101,10 @@ class UserGroupService implements UserGroupContract
                 $userInUserGroup->user_group = 'intervention';
                 $userInUserGroup->save();
             }
+
+            $this->userAssignedGroupEmailUtility->sendMail();
         }
 
-        $this->userAssignedGroupEmailUtility->sendMail();
 
         return $userInUserGroup->user_group;
     }
