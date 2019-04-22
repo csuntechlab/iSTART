@@ -188,7 +188,7 @@ return [
 
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
         CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,
-
+        CSUNMetaLab\ForceHttps\Providers\ForceHttpsServiceProvider::class,
 
     ],
 

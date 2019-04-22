@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.1.3",
         "csun-metalab/laravel-directory-authentication": "^1.6",
+        "csun-metalab/laravel-force-https": "^1.0",
         "csun-metalab/laravel-proxypass": "^1.1",
         "faisalman/simple-excel-php": " 0.3.*",
         "fideloper/proxy": "^4.0",
