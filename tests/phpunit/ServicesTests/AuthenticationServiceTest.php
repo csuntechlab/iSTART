@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use App\Contracts\AuthenticationContract;
-use App\Contracts\ResearchContract;
+use App\Contracts\ParticipantContract;
 use App\Contracts\UserGroupContract;
 use App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface;
 use Illuminate\Http\Request;
@@ -27,18 +27,18 @@ class AuthenticationServiceTest extends TestCase
     use DatabaseMigrations;
     protected $AuthenticationService;
     protected $service;
-    protected $researchContract;
+    protected $participantContract;
     protected $userGroupUtility;
     protected $userAdminModelUtility;
 
     public function setUp()
     {
         parent::setUp();
-        $this->researchUtility = Mockery::spy(ResearchContract::class);
+        $this->participantUtility = Mockery::spy(ParticipantContract::class);
         $this->userGroupUtility = Mockery::spy(UserGroupContract::class);
         $this->userAdminModelUtility = Mockery::spy(UserAdminModelRepositoryInterface::class);
         $this->service = new AuthenticationService(
-            $this->researchUtility, 
+            $this->participantUtility,
             $this->userGroupUtility, 
             $this->userAdminModelUtility
         );
@@ -136,8 +136,8 @@ class AuthenticationServiceTest extends TestCase
             ->andReturn($user);
         
 
-        $this->researchUtility
-            ->shouldReceive(['userHasResearchId' => $user])
+        $this->participantUtility
+            ->shouldReceive(['userHasParticipantId' => $user])
             ->andReturn(false);
 
         $this->userAdminModelUtility
@@ -184,8 +184,8 @@ class AuthenticationServiceTest extends TestCase
             ->shouldReceive(['find' => $user['user_id']])
             ->andReturn(false);
 
-        $this->researchUtility
-            ->shouldReceive('userHasResearchId')
+        $this->participantUtility
+            ->shouldReceive('userHasParticipantId')
             ->andReturn(true);
 
         $this->assertEquals($data, $this->service->authenticateUser($credentials));
