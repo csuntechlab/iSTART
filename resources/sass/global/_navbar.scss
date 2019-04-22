@@ -49,6 +49,8 @@
         background-color: $primaryColor;
         overflow: hidden;
         height: 0;
+        justify-content: space-between;
+
 
         &--show {
             padding: 0.5rem 0;
@@ -60,6 +62,7 @@
             @include media-breakpoint-up(md) {
                 flex-direction: row;
                 border: 0;
+                padding-right: 2rem;
             }
         }
 

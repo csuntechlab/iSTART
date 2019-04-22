@@ -11777,6 +11777,9 @@ a.text-dark:focus {
   background-color: #2699fb;
   overflow: hidden;
   height: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar-dropdown--show {
@@ -11795,6 +11798,7 @@ a.text-dark:focus {
         -ms-flex-direction: row;
             flex-direction: row;
     border: 0;
+    padding-right: 2rem;
   }
 }
 
