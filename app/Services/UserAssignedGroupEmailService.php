@@ -15,10 +15,10 @@ class UserAssignedGroupEmailService implements UserAssignedGroupEmailContract
     {
         $user = auth()->user();
         $userGroup = UserGroup::find($user['user_id']);
-        $ParticipantID = Participant::find($user['user_id']);
+        $participantID = Participant::find($user['user_id']);
         $genericEmail = new \stdClass();
         $genericEmail->user_group = $userGroup['user_group'];
-        $genericEmail->Participant_id = $ParticipantID['participant_id'];
+        $genericEmail->participant_id = $participantID['participant_id'];
         Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($genericEmail));
 
         return true;

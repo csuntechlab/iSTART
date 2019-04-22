@@ -11,16 +11,16 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthenticationService implements AuthenticationContract
 {
-    protected $ParticipantUtility = null;
+    protected $participantUtility = null;
     protected $userGroupUtility = null;
     protected $userAdminModelUtility = null;
 
     public function __construct(
-        ParticipantContract $ParticipantUtility, 
+        ParticipantContract $participantUtility,
         UserGroupContract $userGroupUtility,
         UserAdminModelRepositoryInterface $userAdminModelUtility
         ){
-        $this->ParticipantUtility = $ParticipantUtility;
+        $this->participantUtility = $participantUtility;
         $this->userGroupUtility = $userGroupUtility;
         $this->userAdminModelUtility = $userAdminModelUtility;
     }
@@ -39,7 +39,7 @@ class AuthenticationService implements AuthenticationContract
                 ];
             }
 
-            if($this->ParticipantUtility->userHasParticipantId($user) == true){
+            if($this->participantUtility->userHasParticipantId($user) == true){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
 

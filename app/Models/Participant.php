@@ -22,4 +22,9 @@ class Participant extends Model
     public function user(){
         return $this->hasOne('App\Models\User', 'email', 'user_id');
     }
+
+    public function participant()
+    {
+        return $this->hasOne('App\Models\Participant', 'user_id');
+    }
 }

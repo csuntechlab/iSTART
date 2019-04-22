@@ -27,18 +27,18 @@ class AuthenticationServiceTest extends TestCase
     use DatabaseMigrations;
     protected $AuthenticationService;
     protected $service;
-    protected $ParticipantContract;
+    protected $participantContract;
     protected $userGroupUtility;
     protected $userAdminModelUtility;
 
     public function setUp()
     {
         parent::setUp();
-        $this->ParticipantUtility = Mockery::spy(ParticipantContract::class);
+        $this->participantUtility = Mockery::spy(ParticipantContract::class);
         $this->userGroupUtility = Mockery::spy(UserGroupContract::class);
         $this->userAdminModelUtility = Mockery::spy(UserAdminModelRepositoryInterface::class);
         $this->service = new AuthenticationService(
-            $this->ParticipantUtility, 
+            $this->participantUtility,
             $this->userGroupUtility, 
             $this->userAdminModelUtility
         );
@@ -136,7 +136,7 @@ class AuthenticationServiceTest extends TestCase
             ->andReturn($user);
         
 
-        $this->ParticipantUtility
+        $this->participantUtility
             ->shouldReceive(['userHasParticipantId' => $user])
             ->andReturn(false);
 
@@ -184,7 +184,7 @@ class AuthenticationServiceTest extends TestCase
             ->shouldReceive(['find' => $user['user_id']])
             ->andReturn(false);
 
-        $this->ParticipantUtility
+        $this->participantUtility
             ->shouldReceive('userHasParticipantId')
             ->andReturn(true);
 

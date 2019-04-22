@@ -32,7 +32,7 @@ class User extends MetaUser
         'password', 'remember_token',
     ];
 
-    public function Participant(){
+    public function participant(){
         return $this->hasOne('App\Models\Participant', 'user_id');
     }
 
