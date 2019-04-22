@@ -1,5 +1,5 @@
 <template>
-  <div ref="moduleContainer" :class="windowWidth >= 720 ? 'container--desktop container module' : 'module' ">
+  <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <module-content></module-content>
     <module-footer></module-footer>
@@ -25,13 +25,21 @@ export default {
   },
   created () {
   },
-  beforeMount () {
-
+  computed: {
+    checkWindowWidth () {
+      if (this.windowWidth >= 720) {
+        return 'container--desktop container module'
+      } else {
+        return 'module'
+      }
+    }
   },
   mounted () {
     this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
     window.onresize = () => {
-      this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+      if (this.sizeOfContainer) {
+        this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+      }
     }
   }
 }

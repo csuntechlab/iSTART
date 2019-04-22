@@ -2,10 +2,10 @@
   <div class="module__header">
     <loading-progress class="module__progressBar"
       :progress="module.progress"
-      :size="getContainerSize <= 720 ? windowWidth : getContainerSize"
+      :size="getProgressBarSize"
       :shape="module.shape"
       :height="module.height"
-      :width="getContainerSize <= 720 ? windowWidth : getContainerSize"
+      :width="getProgressBarSize"
     />
     <h1 class="module__progress">{{ module.progress* 100}}% </h1>
   </div>
@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       w: this.size_of_container,
-      windowWidth: window.innerWidth,
+      windowWidth: 0,
       module: {
         shape: 'line',
         progress: 0.59,
@@ -27,18 +27,34 @@ export default {
       }
     }
   },
+  created () {
+    window.addEventListener('resize', this.resizeWidth)
+    this.resizeWidth()
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.resizeWidth)
+  },
   computed: {
+    getProgressBarSize () {
+      if (this.size_of_container < 720) {
+        return this.windowWidth
+      } else {
+        return this.getContainerSize
+      }
+    },
     getContainerSize () {
       return this.size_of_container
-    },
-    getWindowWidth () {
-      return this.windowWidth
+    }
+  },
+  methods: {
+    resizeWidth () {
+      this.windowWidth = window.innerWidth
     }
   },
   mounted () {
-    this.windowWidth = window.innerWidth
+    this.getProgressBarSize()
     window.onresize = () => {
-      this.windowWidth = window.innerWidth
+      this.getContainerSize = this.size_of_container
     }
   }
 }

@@ -11972,6 +11972,13 @@ a.text-dark:focus {
   height: calc(100vh - 9rem);
 }
 
+@media (max-width: 767.98px) {
+  .module-content {
+    height: calc(100vh - 6.5rem);
+    padding-bottom: 25px;
+  }
+}
+
 .module__footerText {
   color: whitesmoke;
 }
@@ -11993,6 +12000,8 @@ a.text-dark:focus {
   .module-footer__background {
     position: fixed;
     width: 100%;
+    bottom: 0;
+    left: 0;
     padding-top: 10px;
   }
 }
