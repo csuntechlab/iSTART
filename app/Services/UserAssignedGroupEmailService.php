@@ -7,7 +7,7 @@ use App\Mail\GenericEmail;
 use App\Contracts\UserAssignedGroupEmailContract;
 use App\Http\Controllers\UserGroupController;
 use App\Models\UserGroup;
-use App\Models\Research;
+use App\Models\Participant;
 
 class UserAssignedGroupEmailService implements UserAssignedGroupEmailContract
 {
@@ -15,10 +15,10 @@ class UserAssignedGroupEmailService implements UserAssignedGroupEmailContract
     {
         $user = auth()->user();
         $userGroup = UserGroup::find($user['user_id']);
-        $researchID = Research::find($user['user_id']);
+        $participantID = Participant::find($user['user_id']);
         $genericEmail = new \stdClass();
         $genericEmail->user_group = $userGroup['user_group'];
-        $genericEmail->research_id = $researchID['research_id'];
+        $genericEmail->participant_id = $participantID['participant_id'];
         Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($genericEmail));
 
         return true;

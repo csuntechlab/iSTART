@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\GenericEmail;
 use App\Http\Controllers\UserGroupController;
 use App\Models\UserGroup;
-use App\Models\Research;
+use App\Models\Participant;
 
 class MailController extends Controller
 {

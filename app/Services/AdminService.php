@@ -6,7 +6,7 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\DB;
 use App\Contracts\AdminContract;
-use App\Model\User;
+use App\Models\User;
 use App\ModelRepositoryInterfaces\UserModelRepositoryInterface;
 
 class AdminService implements AdminContract
@@ -18,11 +18,11 @@ class AdminService implements AdminContract
         $this->userModelUtility = $userModelUtility;
     }
 
-    public function validateEmails($emailResearchIdPairings)
+    public function validateEmails($emailParticipantIdPairings)
     {
         $good = [];
         $bad = [];
-        foreach ($emailResearchIdPairings as $emailPair) {
+        foreach ($emailParticipantIdPairings as $emailPair) {
             $userId = $this->userModelUtility->find($emailPair['email']);
             if(null === $userId) {
                 array_push($bad, $emailPair);
