@@ -51,7 +51,6 @@ export default {
     }
   },
   mounted () {
-    // this.getProgressBarSize
     window.onresize = () => {
       this.getContainerSize = this.size_of_container
     }
