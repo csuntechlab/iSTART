@@ -19,7 +19,7 @@ class ParticipantServiceTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->participantUtility = Mockery::spy(ParticipantContract::class);
+        $this->participantUtility = new ParticipantService();
     }
 
     /**
@@ -31,13 +31,9 @@ class ParticipantServiceTest extends TestCase
         $ParticipantFactory = factory(Participant::class)->make([
             'user_id'=>'members:100010526',
             'participant_id' => '10'
-        ]);
+        ])->save();
         $expectedOutput = true;
         $user = ['user_id' => 'members:100010526'];
-
-        $this->participantUtility
-            ->shouldReceive('userHasParticipantId')
-            ->andReturn($expectedOutput);
 
         $booleanOutput= $this->participantUtility->userHasParticipantId($user);
 
@@ -53,10 +49,6 @@ class ParticipantServiceTest extends TestCase
 
         $ParticipantService = new ParticipantService();
 
-        $ParticipantFactory = factory(Participant::class)->make([
-            'user_id'=>'members:100010526',
-            'participant_id' => '10'
-        ]);
 
         $expectedOutput = false;
         $user = ['user_id' => 'members:100010526'];
@@ -71,27 +63,32 @@ class ParticipantServiceTest extends TestCase
      */
     public function user_marked_as_good_is_added_to_participant_table(){
 
-        $boolean = false;
-        $data = [
+        $data = [ 'goodParticipants' => [
             ["email"=>"nr_liad.golan@my.csun.edu","participant_id"=>'689679',"user_id"=>"members:123456789"],
             ["email"=>"nr_brian.linggadjaja@my.csun.edu","participant_id"=>'41210',"user_id"=>"members:987654321"],
-            ["email"=>"khal.drogo@my.csun.edu","participant_id"=>'41210',"user_id"=>"members:101010101"],
-
-];
+            ["email"=>"khal.drogo@my.csun.edu","participant_id"=>'7',"user_id"=>"members:101010101"]
+            ]
+        ];
         $this->participantUtility->addGoodParticipantsToParticipantsTable($data);
 
-        foreach ($data as $goodParticipants)
-       if(DB::table('participant')
-            ->where('participant_id',$goodParticipants['participant_id'])){
-            $boolean = true;
-       }
-       $this->assertTrue($boolean);
+        $this->assertDatabaseHas('participant',["participant_id"=>'689679',"user_id"=>"members:123456789"]);
+        $this->assertDatabaseHas('participant',["participant_id"=>'41210',"user_id"=>"members:987654321"]);
+        $this->assertDatabaseHas('participant',["participant_id"=>'7',"user_id"=>"members:101010101"]);
+
+    }
+
+    /**
+     * @test
+     */
+    public function user_that_exists_can_get_removed_from_the_participant_table() {
+        $user = ['user_id' => '251', 'participant_id' => '10'];
         
+        $ParticipantFactory = factory(Participant::class)->make($user)->save();
 
+        $this->assertDatabaseHas('participant',$user);
 
+        $this->participantUtility->removeUserFromParticipantsTable($user);
 
-
-
-
+        $this->assertDatabaseMissing('participant',$user);
     }
 }
