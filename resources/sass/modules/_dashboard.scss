@@ -68,7 +68,7 @@
         & * {
             font-weight: bold;
 
-            @include media-breakpoint-up(sm) {
+            @include media-breakpoint-up(md) {
                 color: $black;
             }
         }
@@ -113,6 +113,8 @@
             min-height: 100%;
 
             @include media-breakpoint-down(sm) {
+                background-color: rgba(0, 0, 0, 0);
+                margin-top: -2.4rem;
                 padding: 0;
             }
         }
