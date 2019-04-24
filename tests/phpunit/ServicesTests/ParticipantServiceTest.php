@@ -91,4 +91,17 @@ class ParticipantServiceTest extends TestCase
 
         $this->assertDatabaseMissing('participant',$user);
     }
+
+    /**
+     * @test
+     */
+    public function user_that_does_not_exist_does_not_break_remove_function() {
+        $user = ['user_id' => '251', 'participant_id' => '10'];
+
+        $this->assertDatabaseMissing('participant',$user);
+
+        $this->participantUtility->removeUserFromParticipantsTable($user);
+
+        $this->assertDatabaseMissing('participant',$user);
+    }
 }
