@@ -1,5 +1,8 @@
 .login {
+    background-color: $white;
     min-height: calc(100vh - 3.3rem);
+    margin-top: 3.3rem;
+    
     &__title {
         display: block;
         text-align: center;
