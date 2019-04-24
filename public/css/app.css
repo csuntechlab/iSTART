@@ -11711,8 +11711,8 @@ a.text-dark:focus {
 }
 
 .container {
+  min-height: calc(100vh - 3.3rem);
   background-color: whitesmoke;
-  height: 100%;
 }
 
 .navbar {
@@ -11858,10 +11858,6 @@ a.text-dark:focus {
   .error-return * {
     font-size: 1rem;
   }
-}
-
-.login {
-  min-height: calc(100vh - 3.3rem);
 }
 
 .login__title {
@@ -12245,6 +12241,37 @@ a.text-dark:focus {
 .cookies-notification__button-accept {
   width: 100%;
   margin-top: 0.75rem;
+}
+
+.introSlide {
+  max-height: calc(100vh - 3.3rem);
+}
+
+.introSlide__image-container {
+  height: 50%;
+}
+
+.introSlide__content-wrapper {
+  background-color: #395871;
+}
+
+.introSlide__title {
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+.introSlide__description {
+  color: whitesmoke;
+}
+
+.introSlide__start-btn {
+  width: 100%;
+  border-radius: 0;
+}
+
+.introSlide__button-wrapper {
+  width: 100%;
+  margin: 0;
 }
 
 .loginForm .vue-progress-path {

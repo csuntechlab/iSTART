@@ -1,0 +1,27 @@
+.introSlide {
+  max-height: calc(100vh - 3.3rem);
+  &__image-container {
+    height: 50%;
+  }
+  &__image {
+  }
+  &__content-wrapper {
+    background-color: $introSlide--backgroundColor;
+  }
+  &__title {
+    color: $secondaryColor;
+    font-weight: 700;
+  }
+  &__description {
+    color: $secondaryColor;
+  }
+  &__start-btn {
+    width: 100%;
+    border-radius: 0;
+  }
+  &__button-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+}

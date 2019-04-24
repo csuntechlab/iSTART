@@ -1,12 +1,21 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-      <img class="dashboard-module__thumbnail-image" v-bind:src="image">
+  <div class="container introSlide">
+    <div class="row introSlide__image-container">
+      <div class="col-12 p-0">
+        <img class="dashboard-module__thumbnail-image" v-bind:src="moduleImage">
       </div>
     </div>
-    <div class="row">
-      <div class="c"
+    <div class="row introSlide__content-wrapper">
+      <div class="col-12">
+        <h1 class="introSlide__title">{{moduleTitle}}</h1>
+        <p class="introSlide__description">{{moduleInfo}}</p>
+        <p class="introSlide__description">Estimated Completion time: {{estimatedCompletion}}</p>
+      </div>
+      <div class="row introSlide__button-wrapper">
+        <div class="col-12 p-0">
+          <button class="btn btn-primary introSlide__start-btn">Start</button>
+        </div>  
+      </div>
     </div>
     
   </div>
@@ -20,7 +29,7 @@ export default {
       moduleTitle: 'Alcohol',
       moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',
       estimatedCompletion: '10',
-      image: 'images/thumbnail/alcohol_thumbnail.jpg'
+      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg'
     }
   }
 }
