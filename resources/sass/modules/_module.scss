@@ -1,0 +1,57 @@
+.module{
+    overflow: hidden;
+    &__header{
+        margin-top: -2px;
+    }
+    &-content{
+        background-color:red;
+        height: calc(100vh - 9rem);
+        @include media-breakpoint-down(sm){
+            height: calc(100vh - 6.5rem);
+            padding-bottom: 25px;
+        }
+    }
+    &__footerText{
+        color: $secondaryColor;
+
+        &--left{
+            margin-left: 2rem;
+        }
+        &--right{
+            margin-right: 2rem;
+        }
+    }
+    &-footer{
+        &__background{
+            @include media-breakpoint-down(sm){
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                padding-top:10px;
+            }
+            @include media-breakpoint-up(md){
+                background-color: $secondaryColor;
+
+            }
+            background-color: $primaryColor;
+            padding-bottom: 15px;
+        }
+    }
+    &__progressBar{
+        @include media-breakpoint-up(md){
+            margin-left: -15px;
+        }
+    }
+    &__progress{
+        font-size: 1rem;
+        color: white;
+        font-weight: 1000;
+        margin-top: -20px;
+        text-align: center;
+    }
+}
+
+.module__progressBar.vue-progress-path path {
+    stroke-width: 25;
+}
