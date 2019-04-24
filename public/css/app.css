@@ -11738,6 +11738,12 @@ a.text-dark:focus {
           justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .navbar__menu-toggles {
+    width: auto;
+  }
+}
+
 .navbar__title {
   display: inline;
 }
