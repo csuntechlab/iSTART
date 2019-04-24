@@ -11745,6 +11745,20 @@ a.text-dark:focus {
   color: #d7d7d7;
 }
 
+.navbar__text {
+  font-size: 1.12rem;
+}
+
+@media (min-width: 768px) {
+  .navbar__text {
+    font-size: 1.2rem;
+  }
+}
+
+.navbar__title {
+  bottom: -0.5rem;
+}
+
 .navbar-dropdown {
   background-color: #2699fb;
   overflow: hidden;
@@ -11943,6 +11957,77 @@ a.text-dark:focus {
     margin-bottom: 1.5rem;
     color: #2297fb;
   }
+}
+
+.module {
+  overflow: hidden;
+}
+
+.module__header {
+  margin-top: -2px;
+}
+
+.module-content {
+  background-color: red;
+  height: calc(100vh - 9rem);
+}
+
+@media (max-width: 767.98px) {
+  .module-content {
+    height: calc(100vh - 6.5rem);
+    padding-bottom: 25px;
+  }
+}
+
+.module__footerText {
+  color: whitesmoke;
+}
+
+.module__footerText--left {
+  margin-left: 2rem;
+}
+
+.module__footerText--right {
+  margin-right: 2rem;
+}
+
+.module-footer__background {
+  background-color: #2699fb;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 767.98px) {
+  .module-footer__background {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .module-footer__background {
+    background-color: whitesmoke;
+  }
+}
+
+@media (min-width: 768px) {
+  .module__progressBar {
+    margin-left: -15px;
+  }
+}
+
+.module__progress {
+  font-size: 1rem;
+  color: white;
+  font-weight: 1000;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.module__progressBar.vue-progress-path path {
+  stroke-width: 25;
 }
 
 .dashboard {
@@ -12272,6 +12357,10 @@ a.text-dark:focus {
 .introSlide__button-wrapper {
   width: 100%;
   margin: 0;
+}
+
+.vue-progress-path .progress {
+  stroke: #1374CD;
 }
 
 .loginForm .vue-progress-path {
