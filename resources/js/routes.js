@@ -1,16 +1,16 @@
 import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
-import Error from './views/Error.vue'
+// import Error from './views/Error.vue'
 import Schedule from './views/Schedule.vue'
 import Admin from './views/Admin.vue'
 
 export default [
   {
     path: '*',
-    name: 'Error',
-    component: Error,
-    meta: { title: 'iSTART | Error', requiresAuth: false }
+    // name: 'Error',
+    component: next({ path: from.path })
+    // meta: { title: 'iSTART | Error', requiresAuth: false }
   },
   {
     path: '/login',
@@ -41,5 +41,5 @@ export default [
     name: 'Admin',
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-  }
+  },
 ]

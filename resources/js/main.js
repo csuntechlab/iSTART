@@ -32,4 +32,9 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
+  console.log('to: ' + to.path)
+  console.log('from: ' + from.path)
+  if (to.path === '/*') {
+    console.log('hittt')
+  }
 })
