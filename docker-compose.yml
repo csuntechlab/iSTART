@@ -18,13 +18,13 @@ services:
   istart:
     container_name: iSTART
     build:
-      context: .  
-      target: base      
+      context: .
+      target: base
     ports:
-      - 8080:80
+      - 8081:80
     volumes:
       - .:/var/www/html
-    depends_on: 
+    depends_on:
       - redis
       - composer
   echo:
@@ -36,4 +36,4 @@ services:
     depends_on:
       - redis
       - composer
-      - istart    
+      - istart

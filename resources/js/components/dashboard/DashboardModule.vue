@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard-module-wrap mt-5">
       <div class="dashboard-module text-center col-12" v-for="(item, index) in modules" :key="index">
-        <router-link to="/">
+        <router-link to="/module">
           <div class="row">
             <div class="dashboard-module__overview-wrapper col-12 col-md-6">
               <div class="dashboard-module__overview row">
