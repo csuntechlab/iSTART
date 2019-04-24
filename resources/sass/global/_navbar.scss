@@ -27,6 +27,15 @@
             color: $grey--lighter;
         }
     }
+    &__text{
+        font-size: 1.12rem;
+        @include media-breakpoint-up(md){
+            font-size:1.2rem;
+        }
+    }
+    &__title{
+        bottom:-0.5rem;
+    }
 
     &-dropdown{
         background-color: $primaryColor;
@@ -54,7 +63,7 @@
                 color: $white;
             }
         }
-        
+
         &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
