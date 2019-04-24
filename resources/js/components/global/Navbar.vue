@@ -1,13 +1,15 @@
 <template>
-
-<nav class="navbar-wrapper transition-350ms">
-  <div class="row navbar">
-    <button class="navbar__button" type="button" @click="toggleNavigation">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
+<nav class="navbar-wrapper">
+  <div class="navbar row">
+      <div class="navbar__menu-toggles">
+        <button class="navbar__button" type="button" @click="toggleNavigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="navbar__title">iSTART</h1>
+        <div></div>
+      </div>
+    </div>
   <div id="dropdown" class="navbar-dropdown transition-350ms">
-    <h1 class="navbar__title">iSTART</h1>
     <div class="navbar-nav navbar-dropdown-list">
       <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown-list__divider">
         <div @click="closeNavigation" class="navbar-dropdown__item">
@@ -41,7 +43,8 @@ export default {
 
   data () {
     return {
-      isNavOpen: false
+      isNavOpen: false,
+      module_title: 'Alcohol'
     }
   },
   computed: {

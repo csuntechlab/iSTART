@@ -2,18 +2,25 @@
 .navbar{
     background-color: $primaryColor;
     color: $secondaryColor;
+    padding: 0.3rem 1rem;
     @include media-breakpoint-up(md) {
+        height: 0;
         padding: 0rem 0.5rem;    
     }
+    &__menu-toggles {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between;
+    }
     &__title {
-        display:none;
-
+        display: inline;
         @include media-breakpoint-up(md) {
             display: flex;
-            margin: 0;
+            margin-left: 0.5rem;
             padding: .5rem;
             font-size: 2.25rem;
             text-align: left;
+
             color: $secondaryColor;
         }
     }
@@ -44,12 +51,18 @@
             display: none;
         }
     }
+    &__text{
+        font-size: 1.12rem;
+        @include media-breakpoint-up(md){
+            font-size:1.2rem;
+        }
+    }
 
     &-dropdown{
         background-color: $primaryColor;
         overflow: hidden;
         height: 0;
-        justify-content: space-between;
+        justify-content: flex-end;
 
 
         &--show {
@@ -76,7 +89,7 @@
                 color: $white;
             }
         }
-        
+
         &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
