@@ -34,12 +34,15 @@
                     />
                   </div>
                 </div>
-                <div class="col-5 col-md-10 text-left">
-                  <span class="dashboard-module__date ml-3">{{ item.completion.date}}</span>
+                <div class="col-6 col-md-10 text-left">
+                  <span class="dashboard-module__date ml-3">
+                    {{ item.completion.date}}
+                    <i v-if="item.completion.completed" class="dashboard-module__status-circle fas fa-check-circle"></i>
+                  </span>
                 </div>
                 <div class="dashboard-module__status-wrapper col-4 col-md-12">
                   <span v-if="!item.completion.completed" class="dashboard-module__status">{{item.completion.status}}</span>
-                  <i v-bind:class="[ item.completion.completed ? 'dashboard-module__status-indicator dashboard-module__status-circle fas fa-check-circle' : 'dashboard-module__status-indicator fas fa-chevron-right' ]"></i>
+                  <i v-if="!item.completion.completed" class="dashboard-module__status-indicator fas fa-chevron-right"></i>
                 </div>
               </div>
             </div>

@@ -67,10 +67,6 @@
 
         & * {
             font-weight: bold;
-
-            @include media-breakpoint-up(md) {
-                color: $black;
-            }
         }
 
         &-wrap {
@@ -120,25 +116,37 @@
         }
 
         &__header {
+            color: $black;
             text-align: left;
+            font-family: 'Arial', sans-serif;
             font-size: 1.5rem;
             font-weight: bold;
             width: 100%;
             padding: 0 1rem;
 
+            &:hover {
+                color: $black;
+            }
+
             @include media-breakpoint-down(sm) {
                 background-color:$black--60;
                 color: $white;
+
+                &:hover {
+                    color: $white;
+                }
             }
         }
 
         &__description {
+            color: $black;
             text-align: left;
             font-size: 1rem;
             padding: 0 1rem;
             margin-bottom: 0.75rem;
 
             @include media-breakpoint-down(sm) {
+                color: $black;
                 display: none;
                 margin-bottom: 0;
             }
@@ -191,6 +199,7 @@
         &__date {
             display:block;
             font-size: 1rem;
+            margin-top: 0.72rem;
 
             @media screen and (max-width: 344px) {
                 font-size: 0.7rem;
