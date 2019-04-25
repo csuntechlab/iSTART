@@ -7,10 +7,14 @@ namespace Tests\ControllersTests;
 use App\Contracts\ModuleProgressContract;
 use App\Http\Controllers\ModuleProgressController;
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\Job;
 use Mockery;
 use Tests\TestCase;
 use Illuminate\Validation\ValidationException;
-
+use Illuminate\Support\Facades\Queue;
+use App\Jobs\SendNewModuleEmail;
+use Illuminate\Support\Carbon;
+use App\Models\ModuleProgress;
 class ModuleProgressControllerTest extends TestCase
 {
     public $utility;
@@ -195,6 +199,23 @@ class ModuleProgressControllerTest extends TestCase
             ->shouldReceive('setModuleProgress');
 
         $this->ModuleProgressController->setModuleProgress($request);
+    }
+    /**
+     * @test
+     */
+    public function moduleComplete_sends_email_to_user_5_days_after_module_complete()
+    {
+        $data = ['user_id' => 'members:000022575'];
+        $moduleComplete = ModuleProgress::find($data['user_id']);
+
+        Queue::fake();
+
+
+
+       SendNewModuleEmail::dispatch($moduleComplete);
+
+
+        Queue::assertPushed(SendNewModuleEmail::class);
     }
 
     

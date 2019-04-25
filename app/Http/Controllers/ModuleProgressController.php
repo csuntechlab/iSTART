@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ModulesEvent;
+use App\Models\ModuleProgress;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
-
-
+use App\Jobs\SendNewModuleEmail;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Carbon;
 class ModuleProgressController extends Controller
 {
     protected $moduleProgressUtility = null;
@@ -47,6 +50,18 @@ class ModuleProgressController extends Controller
         ];
 
         $this->moduleProgressUtility->getModuleProgress($data);
+    }
+    public function moduleComplete(Request $request){
+
+        $user = $request->all();
+        $moduleComplete = ModuleProgress::find($user['user_id']);
+
+        $job = (new SendNewModuleEmail($moduleComplete))
+            ->delay(Carbon::now()->addSeconds(env('MODULE_COMPLETION')));
+        $this->dispatch($job);
+
+
+        return 'true';
     }
 
 }
