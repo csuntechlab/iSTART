@@ -17,6 +17,7 @@
     }
     &__title {
         display: inline;
+        margin-bottom: 0;
         margin-left: -.8rem;
         @include media-breakpoint-up(md) {
             display: flex;
