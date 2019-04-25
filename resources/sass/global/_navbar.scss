@@ -2,7 +2,33 @@
 .navbar{
     background-color: $primaryColor;
     color: $secondaryColor;
-    padding: 0.25rem 0.5rem;
+    padding: 0.3rem 1rem;
+    @include media-breakpoint-up(md) {
+        height: 0;
+        padding: 0rem 0.5rem;    
+    }
+    &__menu-toggles {
+        width: 100%;
+        display: flex; 
+        justify-content: space-between;
+        @include media-breakpoint-up(md) {
+            width: auto;    
+        }
+    }
+    &__title {
+        display: inline;
+        margin-bottom: 0;
+        margin-left: -.8rem;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            margin-left: 0.8rem;
+            padding: .5rem;
+            font-size: 2.25rem;
+            text-align: left;
+
+            color: $secondaryColor;
+        }
+    }
 
     &-wrapper {
         pointer-events: none;
@@ -22,9 +48,13 @@
         border: none;
         color: $white;
         font-size: 1.65rem;
+        margin-left: 0.8rem;
 
         &:hover {
             color: $grey--lighter;
+        }
+        @include media-breakpoint-up(md) {
+            display: none;
         }
     }
     &__text{
@@ -33,14 +63,13 @@
             font-size:1.2rem;
         }
     }
-    &__title{
-        bottom:-0.5rem;
-    }
 
     &-dropdown{
         background-color: $primaryColor;
         overflow: hidden;
         height: 0;
+        justify-content: flex-end;
+
 
         &--show {
             padding: 0.5rem 0;
@@ -49,7 +78,11 @@
 
         &-list {
             border: 1px solid $primaryColor--medium;
-            margin: 0 -1rem;
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+                border: 0;
+                padding-right: 2rem;
+            }
         }
 
         &__item {
@@ -58,7 +91,6 @@
             padding-left: 2.3rem;
             padding-top: 0.85rem;
             padding-bottom: 0.85rem;
-
             & > * {
                 color: $white;
             }
@@ -67,7 +99,14 @@
         &__divider {
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
+                @include media-breakpoint-up(md) {
+                    border: none;
+                }
             }
+        }
+        @include media-breakpoint-up(md) {
+            display: flex;
+            height: 3.5rem;
         }
     }
 }

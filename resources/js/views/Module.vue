@@ -45,9 +45,12 @@ export default {
     }
   },
   mounted () {
-    this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+    if(this.$refs.moduleContainer) {
+      this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+
+    }
     window.onresize = () => {
-      if (this.sizeOfContainer) {
+      if (this.$refs.moduleContainer) {
         this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
       }
     }
