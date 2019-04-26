@@ -30,3 +30,4 @@ Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
 
 Route::post('/verifyExcelSheet', 'AdminController@checkEmailsInJson');
 Route::post('/newModuleAvailable','ModuleProgressController@moduleComplete');
+Route::post('/submitGoodParticipants','ParticipantController@addGoodParticipantsToParticipantsTable');

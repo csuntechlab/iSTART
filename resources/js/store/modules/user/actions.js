@@ -3,16 +3,17 @@ import router from './../../../router'
 
 export default {
   async verifyUserData ({ commit }, payload) {
+    commit('LOGIN_IS_LOADING', true)
     return UserAPI.verifyUserDataAPI(payload)
       .then(
         response => {
+          commit('LOGIN_IS_LOADING', false)
           if (response.data.valid === '1') {
             let cookieValue = response.data.token
             let cookieExpirationDate = new Date()
             cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1)
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
-
             if (response.data.isAdmin) {
               router.push({ name: 'Admin' })
             } else {
@@ -31,5 +32,30 @@ export default {
     document.cookie = 'userKey =; expires = Thu, 01 Jan 1970 00:00:01 GMT;'
     router.push({ name: 'Login' })
     commit('CLEAR_USER_DATA')
+  },
+  async verifyExcelSheet({commit}, payload) {
+    return UserAPI.verifyExcelSheetAPI(payload)
+    .then(
+      response => {
+        const categorizedPartipants = response.data;
+        commit('SET_CATEGORIZED_PARTICIPANTS', categorizedPartipants);
+      }
+    ).catch(
+      failure => console.error(failure)
+    )
+  },
+  async submitGoodParticipants({commit}, payload) {
+    return UserAPI.submitGoodParticipantsAPI(payload).then(
+      response => {
+        console.log(response.data)
+        commit('PARTICIPANTS_WERE_SUBMITTED', true)
+      }
+    ).catch(
+      failure => {
+        console.log('this is not meant to fully work just yet, everything will be wired up on STR-55. Once it is wired up, the user will receive a message saying the users were submitted')
+        console.error(failure)
+        commit('PARTICIPANTS_WERE_SUBMITTED', false)
+      }
+    )
   }
 }

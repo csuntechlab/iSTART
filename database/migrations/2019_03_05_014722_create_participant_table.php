@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateResearchTable extends Migration
+class CreateParticipantTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateResearchTable extends Migration
      */
     public function up()
     {
-        Schema::create('research', function (Blueprint $table) {
+        Schema::create('participant', function (Blueprint $table) {
             $table->string('user_id');
-            $table->integer('research_id');
+            $table->integer('participant_id');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateResearchTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('research');
+        Schema::dropIfExists('participant');
     }
 }
