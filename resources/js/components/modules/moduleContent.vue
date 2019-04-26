@@ -1,11 +1,17 @@
 <template>
     <div class="row">
-        <div class="module-content"></div>
+        <div class="module-content">
+          <quiz-template></quiz-template>
+        </div>
     </div>
 </template>
 
 <script>
+import quizTemplate from './quizTemplate'
 export default {
-  name: 'moduleContent'
+  name: 'moduleContent',
+  components: {
+    quizTemplate
+  }
 }
 </script>

@@ -6,7 +6,6 @@
         margin-top: -2px;
     }
     &-content{
-        background-color:red;
         height: calc(100vh - 9rem);
         @include media-breakpoint-down(sm){
             height: calc(100vh - 6.5rem);
@@ -21,6 +20,36 @@
         }
         &--right{
             margin-right: 2rem;
+        }
+    }
+    &-quiz{
+        width: 100%;
+        margin: 1.5rem;
+        &__header{
+            padding-right: 2.75rem;
+        }
+        &__header-font{
+            @include media-breakpoint-down(sm){
+                font-size: 0.90rem;
+            }
+        }
+        &__body{
+            margin-top: 2rem;
+        }
+        &__options{
+            list-style: none;
+            margin-left: -2.5rem;
+        }
+        &__option{
+            border: 2px solid $primaryColor;
+            border-radius: 3px;
+            height: 6.75rem;
+            width: 13.25rem;
+            margin-bottom: 3rem;
+            cursor: pointer;
+            @include media-breakpoint-down(sm){
+                transform: translateX(50%);
+            }
         }
     }
     &-footer{
