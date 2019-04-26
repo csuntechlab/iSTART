@@ -10,18 +10,18 @@
     <div class="module-quiz__body">
       <ul class="module-quiz__options">
         <div class="row">
-          <div class="col-sm-5 col-12">
+          <div class="col-sm-5 offset-2 offset-sm-0 col-12">
             <li class="module-quiz__option">Option 1</li>
           </div>
-          <div class="col-sm-5 col-12">
+          <div class="col-sm-5 offset-2 offset-sm-0 col-12">
             <li class="module-quiz__option">Option 2</li>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-5 col-12">
+          <div class="col-sm-5 offset-2 offset-sm-0 col-12">
             <li class="module-quiz__option">Option 3</li>
           </div>
-          <div class="col-sm-5 col-12">
+          <div class="col-sm-5 offset-2 offset-sm-0 col-12">
             <li class="module-quiz__option">Option 4</li>
           </div>
         </div>

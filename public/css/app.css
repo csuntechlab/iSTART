@@ -12047,7 +12047,7 @@ a.text-dark:focus {
 }
 
 .module {
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -12109,13 +12109,6 @@ a.text-dark:focus {
   width: 13.25rem;
   margin-bottom: 3rem;
   cursor: pointer;
-}
-
-@media (max-width: 767.98px) {
-  .module-quiz__option {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-  }
 }
 
 .module-footer__background {
