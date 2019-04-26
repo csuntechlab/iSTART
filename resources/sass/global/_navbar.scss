@@ -2,11 +2,14 @@
 .navbar{
     background-color: $primaryColor;
     color: $secondaryColor;
+    margin: auto;
     padding: 0.3rem 1rem;
+
     @include media-breakpoint-up(md) {
         height: 0;
         padding: 0rem 0.5rem;    
     }
+    
     &__menu-toggles {
         width: 100%;
         display: flex; 
@@ -15,8 +18,9 @@
             width: auto;    
         }
     }
+
     &__title {
-        display: inline;
+        display: inline-block;
         margin-bottom: 0;
         margin-left: -.8rem;
         @include media-breakpoint-up(md) {
@@ -37,6 +41,10 @@
         z-index: 1;
         height: 100%;
         width: 100%;
+
+        @include media-breakpoint-up(md) {
+            position: sticky;
+        }
 
         & * {
             pointer-events: auto;
