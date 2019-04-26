@@ -3,7 +3,7 @@
 namespace App\Services;
 use App\Models\UserGroup;
 use App\Contracts\AuthenticationContract;
-use App\Contracts\ResearchContract;
+use App\Contracts\ParticipantContract;
 use App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface;
 use App\Contracts\UserGroupContract;
 use Illuminate\Support\Facades\Auth;
@@ -11,16 +11,16 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthenticationService implements AuthenticationContract
 {
-    protected $researchUtility = null;
+    protected $participantUtility = null;
     protected $userGroupUtility = null;
     protected $userAdminModelUtility = null;
 
     public function __construct(
-        ResearchContract $researchUtility, 
+        ParticipantContract $participantUtility,
         UserGroupContract $userGroupUtility,
         UserAdminModelRepositoryInterface $userAdminModelUtility
         ){
-        $this->researchUtility = $researchUtility;
+        $this->participantUtility = $participantUtility;
         $this->userGroupUtility = $userGroupUtility;
         $this->userAdminModelUtility = $userAdminModelUtility;
     }
@@ -39,7 +39,7 @@ class AuthenticationService implements AuthenticationContract
                 ];
             }
 
-            if($this->researchUtility->userHasResearchId($user) == true){
+            if($this->participantUtility->userHasParticipantId($user) == true){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
 

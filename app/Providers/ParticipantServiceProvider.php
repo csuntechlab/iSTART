@@ -6,13 +6,13 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class ResearchServiceProvider extends ServiceProvider
+class ParticipantServiceProvider extends ServiceProvider
 {
     public function register()
     {
         $this->app->bind(
-            'App\Contracts\ResearchContract',
-            'App\Services\ResearchService'
+            'App\Contracts\ParticipantContract',
+            'App\Services\ParticipantService'
         );
     }
 }

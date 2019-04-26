@@ -178,7 +178,7 @@ return [
         /*
          * Custom Service Providers
          */
-        App\Providers\ResearchServiceProvider::class,
+        App\Providers\ParticipantServiceProvider::class,
         App\Providers\UserGroupServiceProvider::class,
         App\Providers\ModuleProgressServiceProvider::class,
         App\Providers\ModelRepositoryServiceProvider::class,

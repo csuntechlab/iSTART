@@ -6,7 +6,7 @@ namespace App\Services;
 use Illuminate\Support\Facades\Mail;
 use App\Contracts\UserCompletesModuleEmailContract;
 use App\Models\ModuleProgress;
-use App\Models\Research;
+use App\Models\Participant;
 use App\Mail\UserCompletesModuleEmail;
 use App\Http\Controllers\UserCompletesModuleEmailController;
 
@@ -16,10 +16,10 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
     {
         $user = auth()->user();
         $currentModule = ModuleProgress::find($user['user_id']);
-        $researchID = Research::find($user['user_id']);
+        $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmail = new \stdClass();
         $userCompletesModuleEmail->current_module = $currentModule['current_module'];
-        $userCompletesModuleEmail->research_id = $researchID['research_id'];
+        $userCompletesModuleEmail->Participant_id = $ParticipantID['participant_id'];
         Mail::to((env('RECIEVE_EMAIL')))->send(new UserCompletesModuleEmail($userCompletesModuleEmail));
 
     }
