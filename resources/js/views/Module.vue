@@ -49,7 +49,7 @@ export default {
       this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
     }
     window.onresize = () => {
-      if (this.refs.moduleContainer) {
+      if (this.$refs.moduleContainer) {
         this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
       }
     }
