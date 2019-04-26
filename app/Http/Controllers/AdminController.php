@@ -16,9 +16,9 @@ class AdminController extends Controller
 
     public function checkEmailsInJson(Request $request)
     {
-        $emailResearchIdPairs = json_decode($request->getContent(), true);
+        $emailParticipantIdPairs = json_decode($request->getContent(), true);
 
-        return json_encode($this->adminUtility->validateEmails($emailResearchIdPairs));
+        return json_encode($this->adminUtility->validateEmails($emailParticipantIdPairs));
 
     }
 }

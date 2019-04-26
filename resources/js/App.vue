@@ -1,19 +1,18 @@
 <template>
-<div>
-    <navbar v-show="$route.path != '/login'" ></navbar>
-    <div class="main-wrapper">
-      <router-view />
-    </div>
+  <div>
+    <router-view />
+    <CookiesNotification></CookiesNotification>
   </div>
 </template>
 
 <script>
-import navbar from './components/global/navbar.vue'
+import CookiesNotification from './components/global/CookiesNotification'
 import { clearTimeout, setTimeout } from 'timers'
 import { mapActions, mapState } from 'vuex'
+
 export default {
   components: {
-    navbar
+    CookiesNotification
   },
   data () {
     return {

@@ -1,18 +1,70 @@
 .login {
+    background-color: $white;
+    min-height: calc(100vh - 3.3rem);
+    margin-top: 3.3rem;
+    
     &__title {
+        display: block;
         text-align: center;
-        margin-top: 8rem;
         margin-bottom: 1.5rem;
         font-size: 4rem;
+        width: 100%;        
         color: $primaryColor;
+        @include media-breakpoint-up(md) {
+            margin-top: -3.3rem;
+            padding: .5rem;
+            z-index: 1;
+            top: 0;
+            font-size: 2.25rem;
+            text-align: left;
+            background-color: $primaryColor;
+            color: $secondaryColor;
+        }
     }
-
     @include media-breakpoint-down(sm) {
         &__title {
             margin-top: 6rem;
             margin-bottom: 2rem;
         }
     }
+
+    ::placeholder {
+        color: $primaryColor--lighter;
+        font-size: .75rem;
+    }
+
+
 }
+    
 
+.loginForm {
+    &__loading {
+        z-index: -1;
+        opacity: 0.2;
+        -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
+        transition: 0.2s;
+    }
+    &__label {
+        color: $primaryColor--dark;
+        font-weight: 700;
+    }
+    &__title{ 
+        display: none;
 
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: 5rem;
+        margin-bottom: 3rem; 
+        padding: 5rem;
+        border-radius: 20px;
+        border: thin solid $primaryColor--lighter ;
+        box-shadow: 0 .75px 2.25px $primaryColor--lighter;
+        
+        &__title {
+            display: block; 
+            margin-bottom: 1.5rem;
+            color: $primaryColor--dark;
+        }
+        
+    }
+}

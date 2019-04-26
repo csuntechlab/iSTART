@@ -28,3 +28,4 @@ Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressContro
 Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
 
 Route::post('/verifyExcelSheet', 'AdminController@checkEmailsInJson');
+Route::post('/submitGoodParticipants','ParticipantController@addGoodParticipantsToParticipantsTable');

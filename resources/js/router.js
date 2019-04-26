@@ -1,12 +1,12 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import routes from './routes'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-const router = new Router({
+const router = new VueRouter({
   routes,
-  base: process.env.BASE_URL
+  base: process.env.BASE_URL,
 })
 
 export default router

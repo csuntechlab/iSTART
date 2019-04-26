@@ -1,16 +1,14 @@
 import Login from './views/Login.vue'
 import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
-import Error from './views/Error.vue'
-import schedule from './views/schedule.vue'
-import admin from './views/admin.vue'
+import Module from './views/Module.vue'
+// import Error from './views/Error.vue'
+import Schedule from './views/Schedule.vue'
+import Admin from './views/Admin.vue'
 
 export default [
   {
-    path: '*',
-    name: 'Error',
-    component: Error,
-    meta: { title: 'iSTART | Error', requiresAuth: false }
+    path: '*'
   },
   {
     path: '/login',
@@ -31,15 +29,21 @@ export default [
     meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
   },
   {
+    path: '/module',
+    name: 'Module',
+    component: Module,
+    meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+  },
+  {
     path: '/schedule',
-    name: 'schedule',
-    component: schedule,
+    name: 'Schedule',
+    component: Schedule,
     meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
   },
   {
     path: '/admin',
-    name: 'admin',
-    component: admin,
+    name: 'Admin',
+    component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-  }
+  },
 ]
