@@ -12097,18 +12097,26 @@ a.text-dark:focus {
   margin-top: 2rem;
 }
 
-.module-quiz__options {
-  list-style: none;
-  margin-left: -2.5rem;
-}
-
 .module-quiz__option {
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
   border: 2px solid #2699fb;
   border-radius: 3px;
-  height: 6.75rem;
+  height: 6.25rem;
   width: 13.25rem;
   margin-bottom: 3rem;
   cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .module-quiz__option {
+    height: 6.25rem;
+    width: 17rem;
+  }
+}
+
+.module-quiz__option--generic {
+  font-weight: 500;
 }
 
 .module-footer__background {

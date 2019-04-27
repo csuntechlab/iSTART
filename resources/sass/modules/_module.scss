@@ -37,16 +37,23 @@
             margin-top: 2rem;
         }
         &__options{
-            list-style: none;
-            margin-left: -2.5rem;
         }
         &__option{
+            padding-left: 1.25rem;
+            padding-top: 0.75rem;
             border: 2px solid $primaryColor;
             border-radius: 3px;
-            height: 6.75rem;
+            height: 6.25rem;
             width: 13.25rem;
+            @include media-breakpoint-up(sm){
+                height: 6.25rem;
+                width: 17rem;
+            }
             margin-bottom: 3rem;
             cursor: pointer;
+            &--generic{
+                font-weight: 500;
+            }
         }
     }
     &-footer{

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import quizTemplate from './quizTemplate'
+import quizTemplate from './templates/quizTemplate'
 export default {
   name: 'moduleContent',
   components: {
