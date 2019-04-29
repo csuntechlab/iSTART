@@ -12079,8 +12079,9 @@ a.text-dark:focus {
 }
 
 .module-quiz {
-  width: 100%;
-  margin: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2.25rem;
 }
 
 .module-quiz__header {
@@ -12156,6 +12157,12 @@ a.text-dark:focus {
 
 .module__progressBar.vue-progress-path path {
   stroke-width: 25;
+}
+
+@media (min-width: 576px) {
+  .module__progressBar.vue-progress-path path {
+    stroke-width: 30;
+  }
 }
 
 .dashboard {

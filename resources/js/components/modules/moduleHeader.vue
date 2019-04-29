@@ -4,7 +4,7 @@
       :progress="module.progress"
       :size="getProgressBarSize"
       :shape="module.shape"
-      :height="module.height"
+      :height="getProgressBarHeight"
       :width="getProgressBarSize"
     />
     <h1 class="module__progress">{{ module.progress* 100}}% </h1>
@@ -39,6 +39,13 @@ export default {
         return this.windowWidth
       } else {
         return this.getContainerSize
+      }
+    },
+    getProgressBarHeight () {
+      if (this.size_of_container < 720) {
+        return this.module.height
+      } else {
+        return 30
       }
     },
     getContainerSize () {

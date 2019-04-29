@@ -23,8 +23,9 @@
         }
     }
     &-quiz{
-        width: 100%;
-        margin: 1.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 2.25rem;
         &__header{
             padding-right: 2.75rem;
         }
@@ -89,4 +90,7 @@
 
 .module__progressBar.vue-progress-path path {
     stroke-width: 25;
+    @include media-breakpoint-up(sm){
+        stroke-width: 30;
+    }
 }

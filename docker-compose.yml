@@ -21,7 +21,7 @@ services:
       context: .
       target: base
     ports:
-      - 8081:80
+      - 8080:80
     volumes:
       - .:/var/www/html
     depends_on:

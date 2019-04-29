@@ -7,12 +7,8 @@
         </div>
       </div>
     </div>
-    <div class="module-quiz__body">
-      <div class="module-quiz__options">
-        <div class="row">
-          <quiz-option v-for="(option, id) in options" :option_number="option" :key="id"></quiz-option>
-        </div>
-      </div>
+    <div class="row mt-4">
+      <quiz-option v-for="(option, id) in options" :option_number="option" :key="id"></quiz-option>
     </div>
   </div>
 </template>
