@@ -1,9 +1,9 @@
 
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store/index.js'
-import VueProgress from 'vue-progress-path'
+import Vue from 'vue';
+import VueProgress from 'vue-progress-path';
+import App from './App.vue';
+import router from './router';
+import store from './store/index.js';
 
 Vue.use(VueProgress)
 
@@ -31,5 +31,9 @@ router.beforeEach((to, from, next) => {
     }
   } else {
     next()
+  }
+  // returns user back to their previous page
+  if (to.matched[0].path === '*') {
+    next({ path: from.path })
   }
 })

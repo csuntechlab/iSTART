@@ -1,5 +1,5 @@
 <template>
-  <div ref="moduleContainer" :class="checkWindowWidth">
+  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <module-content></module-content>
     <module-footer></module-footer>
@@ -45,9 +45,11 @@ export default {
     }
   },
   mounted () {
-    this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+    if (this.$refs.moduleContainer) {
+      this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+    }
     window.onresize = () => {
-      if (this.sizeOfContainer) {
+      if (this.$refs.moduleContainer) {
         this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
       }
     }

@@ -1,8 +1,8 @@
 <template>
-  <div class="container introSlide">
+  <div class="introSlide">
     <div class="row introSlide__image-container">
       <div class="col-12 p-0">
-        <img class="dashboard-module__thumbnail-image" v-bind:src="moduleImage">
+        <img class="introSlide__image" v-bind:src="moduleImage">
       </div>
     </div>
     <div class="row introSlide__content-wrapper">
@@ -17,7 +17,6 @@
         </div>  
       </div>
     </div>
-    
   </div>
   
 </template>
