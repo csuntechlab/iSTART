@@ -8,7 +8,6 @@ use App\Contracts\UserCompletesModuleEmailContract;
 use App\Models\ModuleProgress;
 use App\Models\Participant;
 use App\Mail\UserCompletesModuleEmail;
-use App\Http\Controllers\UserCompletesModuleEmailController;
 
 class UserCompletesModuleEmailService implements UserCompletesModuleEmailContract
 {
