@@ -1,38 +1,40 @@
-.module{
+.module {
     overflow: hidden;
     height: 100vh;
 
-    &__header{
+    &__header {
         margin-top: -2px;
     }
-    &-content{
-        background-color:red;
+    &-content {
+        overflow: auto;
         height: calc(100vh - 9rem);
+        width: 100%;
+
         @include media-breakpoint-down(sm){
             height: calc(100vh - 6.5rem);
             padding-bottom: 25px;
         }
     }
-    &__footerText{
+    &__footerText {
         color: $secondaryColor;
 
-        &--left{
+        &--left {
             margin-left: 2rem;
         }
-        &--right{
+        &--right {
             margin-right: 2rem;
         }
     }
-    &-footer{
-        &__background{
-            @include media-breakpoint-down(sm){
+    &-footer {
+        &__background {
+            @include media-breakpoint-down(sm) {
                 position: fixed;
                 width: 100%;
                 bottom: 0;
                 left: 0;
                 padding-top:10px;
             }
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(md) {
                 background-color: $secondaryColor;
 
             }
@@ -40,12 +42,12 @@
             padding-bottom: 15px;
         }
     }
-    &__progressBar{
-        @include media-breakpoint-up(md){
+    &__progressBar {
+        @include media-breakpoint-up(md) {
             margin-left: -15px;
         }
     }
-    &__progress{
+    &__progress {
         font-size: 1rem;
         color: white;
         font-weight: 1000;

@@ -10,6 +10,7 @@
 import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+
 export default {
   name: 'Module',
   components: {

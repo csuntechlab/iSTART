@@ -1,11 +1,15 @@
 <template>
-    <div class="row">
-        <div class="module-content"></div>
-    </div>
+  <div class="module-content">
+    <alcohol></alcohol>
+  </div>
 </template>
 
 <script>
+import alcohol from './../../views/substances/Alcohol'
+
 export default {
-  name: 'moduleContent'
+  components: {
+    alcohol
+  }
 }
 </script>
