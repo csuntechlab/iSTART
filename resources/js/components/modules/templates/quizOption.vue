@@ -1,6 +1,11 @@
 <template>
-  <div class="col-sm-5 offset-2 offset-sm-0 col-12">
-    <p v-on:click="newSlide()" class="module-quiz__option">Option {{ option_number }}</p>
+  <div class="col-sm-6 offset-2 offset-sm-0 col-12">
+    <div class="module-quiz__option">
+      <div class="module-quiz__selection">
+        <i class="fas fa-check-circle module-quiz__icon"></i>
+      </div>
+      <p v-on:click="newSlide()" class="module-quiz__text">Option {{ option_number }}</p>
+    </div>
   </div>
 </template>
 <script>
