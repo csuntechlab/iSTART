@@ -56,9 +56,9 @@ class ModuleProgressController extends Controller
 
         $user = $request->all();
         $moduleInfo = ModuleProgress::find($user['user_id']);
-        Log::debug('test');
+
         $this->dispatch(new SendReminderModuleEmail($moduleInfo));
-        Log::debug('test');
+
 
         return 'true';
 
