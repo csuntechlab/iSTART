@@ -12102,12 +12102,6 @@ a.text-dark:focus {
   }
 }
 
-@media (min-width: 768px) {
-  .module__progressBar {
-    margin-left: -15px;
-  }
-}
-
 .module__progress {
   font-size: 1rem;
   color: white;
@@ -12535,8 +12529,12 @@ a.text-dark:focus {
 }
 
 .introSlide__content-wrapper {
-  background-color: #395871;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
   padding: 0.5rem 1.5rem 0rem 1.5rem;
+  background-color: #395871;
 }
 
 .introSlide__title {

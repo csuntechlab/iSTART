@@ -41,11 +41,6 @@
             padding-bottom: 15px;
         }
     }
-    &__progressBar{
-        @include media-breakpoint-up(md){
-            margin-left: -15px;
-        }
-    }
     &__progress{
         font-size: 1rem;
         color: white;
