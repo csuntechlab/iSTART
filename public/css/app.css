@@ -12114,6 +12114,7 @@ a.text-dark:focus {
 .module-quiz__icon {
   margin-left: 4.25px;
   margin-top: 15px;
+  color: whitesmoke;
 }
 
 .module-quiz__option {

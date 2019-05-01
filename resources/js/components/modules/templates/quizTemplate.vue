@@ -8,7 +8,11 @@
       </div>
     </div>
     <div class="row mt-4 justify-content-center">
-      <quiz-option v-for="(option, id)  in options" :option_number="option" :key="id" :optionID="id"></quiz-option>
+      <quiz-option v-for="(option, id)  in options"
+        :option_number="option"
+        :key="id"
+        :optionID="id">
+      </quiz-option>
     </div>
   </div>
 </template>

@@ -4,7 +4,10 @@
       <div v-if="getAccessToDisplayContent && option_number == answer" class="module-quiz__selection">
         <i class="fas fa-check-circle module-quiz__icon"></i>
       </div>
-      <p class="module-quiz__text">Option {{ option_number }}</p>
+      <div v-else-if="getAccessToDisplayContent && selectedCard > 0" class="module-quiz__selection">
+        <i class="fas fa-times-circle module-quiz__icon"></i>
+      </div>
+      <p class="module-quiz__text">Option {{ option_number }}: Lorem, ipsum dolor sit amet consectetur adipisicing elitfficiis! Consequuntur,  </p>
     </div>
   </div>
 </template>
@@ -18,7 +21,8 @@ export default {
   ],
   data () {
     return {
-      answer: 3
+      answer: 3,
+      selectedCard: 0
     }
   },
   computed: {
@@ -36,6 +40,7 @@ export default {
     ),
     newSlide: function () {
       this.changeSlide()
+      this.selectedCard++
     }
   }
 }
