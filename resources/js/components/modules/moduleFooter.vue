@@ -5,14 +5,15 @@
         <router-link :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'" to="/"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</router-link>
       </div>
       <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <router-link v-if="isAbleToProceed === true" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/module" tag="button" :disabled="!isDisabled">Continue <i v-if="width<=768" class="fas fa-chevron-right"></i></router-link>
-        <router-link v-else :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/" tag="button" :disabled="isDisabled">Continue <i v-if="width<=768" class="fas fa-chevron-right"></i></router-link>
+        <router-link v-if="getAccessToDisplayContent" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/login" :disabled="!isDisabled">
+            Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'moduleFooter',
   data () {
@@ -31,11 +32,15 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'isAbleToProceed'
+        'getAccessToDisplayContent'
       ]
     )
   },
   methods: {
+    ...mapActions(
+      [
+      ]
+    ),
     handleWidthResize () {
       this.width = window.innerWidth
     }
