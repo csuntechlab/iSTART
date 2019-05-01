@@ -21,19 +21,24 @@ services:
       context: .
       target: base
     ports:
-      - 8081:80
+      - 8080:80
     volumes:
       - .:/var/www/html
     depends_on:
       - redis
       - composer
-  echo:
-    container_name: iSTART_echo
-    image: ebm17915/laravel-echo-server:latest
-    working_dir: "/usr/src/app"
+  db:
+    image: mysql:5.6.41
+    container_name: istart_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: istart
+      MYSQL_USER: istart
+      MYSQL_PASSWORD: istart
+      MYSQL_ROOT_PASSWORD: istart
+    ports:
+      - 3306:3306
     volumes:
-      - "./:/usr/src/app"
-    depends_on:
-      - redis
-      - composer
-      - istart
+      - db_data:/var/lib/mysql/
+volumes:
+    db_data:
