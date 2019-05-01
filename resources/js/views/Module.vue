@@ -1,5 +1,6 @@
 <template>
-  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
+  <div ref="moduleContainer" :class="checkWindowWidth">
+    <navbar></navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <module-content></module-content>
     <module-footer></module-footer>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import navbar from './../components/global/Navbar'
 import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
@@ -15,7 +17,8 @@ export default {
   components: {
     moduleHeader,
     moduleFooter,
-    moduleContent
+    moduleContent,
+    navbar
   },
   data () {
     return {

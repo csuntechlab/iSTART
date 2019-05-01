@@ -11777,6 +11777,7 @@ a.text-dark:focus {
   .navbar-wrapper {
     position: -webkit-sticky;
     position: sticky;
+    height: initial;
   }
 }
 
@@ -12049,6 +12050,7 @@ a.text-dark:focus {
 .module {
   overflow: hidden;
   height: 100vh;
+  padding: 0;
 }
 
 .module__header {
@@ -12525,14 +12527,10 @@ a.text-dark:focus {
   margin-top: 0.75rem;
 }
 
-.introSlide {
-  max-height: calc(100vh - 3.3rem);
-}
-
 .introSlide__image {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 36rem;
+  max-height: 30rem;
   width: 100%;
 }
 
@@ -12548,6 +12546,12 @@ a.text-dark:focus {
 
 .introSlide__description {
   color: whitesmoke;
+}
+
+@media (max-width: 991.98px) {
+  .introSlide__description {
+    font-size: 1.3rem;
+  }
 }
 
 .introSlide__start-btn {
