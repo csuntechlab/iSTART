@@ -1,15 +1,15 @@
 <template>
   <div class="module-content">
-    <alcohol></alcohol>
+    <CardFlip></CardFlip>
   </div>
 </template>
 
 <script>
-import alcohol from './../../views/substances/Alcohol'
+import CardFlip from './media/CardFlip'
 
 export default {
   components: {
-    alcohol
+    CardFlip
   }
 }
 </script>
