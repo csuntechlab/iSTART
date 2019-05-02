@@ -37,7 +37,6 @@
             font-weight: 600;
             @include media-breakpoint-down(sm){
                 font-size: 0.90rem;
-                font-weight: 100;
             }
         }
         &__body{
@@ -47,6 +46,12 @@
             margin-left: 4.25px;
             margin-top: 15px;
             color: $white;
+        }
+        &__img{
+            margin-top: -3.5px;
+            margin-left: 7.5px;
+            height: 85px;
+            width: 85px;
         }
         &__options{
         }
@@ -68,6 +73,10 @@
             &--generic{
                 font-weight: 500;
             }
+            &--img{
+                height: 10.25rem;
+                font-size: 0.85rem;
+            }
         }
         &__selection{
             width: 25px;
@@ -80,6 +89,9 @@
             float: left;
             margin-left: -21px;
             margin-top: -12.25px;
+            &--img{
+                height: 160px;
+            }
         }
         &__text{
             padding-left: 1rem;
