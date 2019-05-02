@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
+import moduleContent from './../components/modules/moduleContent'
 import moduleFooter from './../components/modules/moduleFooter'
 
 export default {
@@ -18,19 +18,23 @@ export default {
     moduleFooter,
     moduleContent
   },
+
   data () {
     return {
       windowWidth: 0,
       sizeOfContainer: 0
     }
   },
+
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
   },
+
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
   },
+
   computed: {
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
@@ -40,11 +44,13 @@ export default {
       }
     }
   },
+
   methods: {
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }
   },
+
   mounted () {
     if (this.$refs.moduleContainer) {
       this.sizeOfContainer = this.$refs.moduleContainer.clientWidth

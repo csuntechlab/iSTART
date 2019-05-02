@@ -14,14 +14,24 @@
       position: relative;
       transform-style: preserve-3d;
       height: 100%;
+      min-height: 8.5rem;
       max-width: 20rem;
+      margin: 0 auto;
     }
 
     &--active {
       transform: rotateX(-180deg);
+
+      & .media__card-front {
+        position: absolute;
+      }
+
+      & .media__card-back {
+        position: relative;
+      }
     }
 
-    &--front, &--back {
+    &-front, &-back {
       background-color: $backgroundColor;
       backface-visibility: hidden;
       display: flex;
@@ -31,13 +41,18 @@
       height: 100%;
       width: 100%;
       padding: 0.75rem 1rem;
+
+      & figure, & figcaption {
+        text-align: center;
+        margin: 0;
+      }
     }
 
-    &--front {
+    &-front {
       position: relative;
     }
 
-    &--back {
+    &-back {
       background-color: $primaryColor;
       color: $white;
       position: absolute;

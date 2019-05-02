@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CardFlip from './media/CardFlip'
+import CardFlip from './templates/CardFlip'
 
 export default {
   components: {
