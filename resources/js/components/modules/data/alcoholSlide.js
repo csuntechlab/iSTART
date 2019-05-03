@@ -34,7 +34,7 @@ export const alcoholSlide = {
                 caption: 'Alcohol with shots of whiskey'
               },
               question: null,
-              description: 'Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up.'
+              description: 'Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up.'
             }
           }
         }

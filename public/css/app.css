@@ -12574,6 +12574,7 @@ a.text-dark:focus {
   background-color: #e7f2f7;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
