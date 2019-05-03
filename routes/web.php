@@ -22,6 +22,7 @@ Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
 Route::get('/sendCompleteModuleMailTest','UserCompletesModuleEmailController@sendMail');
 Route::get('/sendMailTest','MailController@sendMail');
+Route::get('/sendStudentRemovedEmail', 'StudentRemovedFromStudyController@sendStudentRemovedMail');
 
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
 Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
