@@ -19,7 +19,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmail = new \stdClass();
         $userCompletesModuleEmail->current_module = $currentModule['current_module'];
-        $userCompletesModuleEmail->Participant_id = $ParticipantID['participant_id'];
+        $userCompletesModuleEmail->participant_id = $ParticipantID['participant_id'];
         Mail::to((env('RECIEVE_EMAIL')))->send(new UserCompletesModuleEmail($userCompletesModuleEmail));
 
     }
