@@ -21,6 +21,7 @@ Route::get('logout','LoginController@logout');
 Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
 Route::get('/sendCompleteModuleMailTest','UserCompletesModuleEmailController@sendMail');
+Route::get('/sendUserRunningOutOfTimeMailTest','UserRunningOutOfTimeEmailController@sendMail');
 Route::get('/sendMailTest','MailController@sendMail');
 
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
