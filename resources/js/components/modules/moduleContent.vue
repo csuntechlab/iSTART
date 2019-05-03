@@ -1,15 +1,15 @@
 <template>
   <div class="module-content">
-    <CardFlip></CardFlip>
+    <cardFlip></cardFlip>
   </div>
 </template>
 
 <script>
-import CardFlip from './templates/CardFlip'
+import cardFlip from './templates/cardFlip'
 
 export default {
   components: {
-    CardFlip
+    cardFlip
   }
 }
 </script>

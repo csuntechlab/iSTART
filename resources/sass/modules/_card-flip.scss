@@ -1,4 +1,4 @@
-.media {
+.card-flip {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -43,8 +43,14 @@
       padding: 0.75rem 1rem;
 
       & figure, & figcaption {
+        font-size: 1rem;
         text-align: center;
         margin: 0;
+      }
+
+      * {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.25rem;
       }
     }
 
@@ -60,11 +66,6 @@
       left: 0;
       text-align: center;
       transform: rotateX(-180deg);
-      
-      * {
-        font-family: 'Arial', sans-serif;
-        font-size: 1.25rem;
-      }
     }
 
     &-image {

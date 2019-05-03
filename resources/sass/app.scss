@@ -23,7 +23,9 @@
 @import "modules/page";
 @import "modules/control";
 @import "modules/cookies-notification";
-@import "modules/media";
+
+// Templates
+@import "modules/card-flip";
 
 //Components
 @import "components/progress";
