@@ -12521,10 +12521,14 @@ a.text-dark:focus {
   margin-top: 0.75rem;
 }
 
+.introSlide__image-container {
+  margin-top: -8px;
+}
+
 .introSlide__image {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 30rem;
+  max-height: 66vh;
   width: 100%;
 }
 
@@ -12535,6 +12539,12 @@ a.text-dark:focus {
   z-index: 1;
   padding: 0.5rem 1.5rem 0rem 1.5rem;
   background-color: #395871;
+}
+
+@media (min-width: 768px) {
+  .introSlide__content-wrapper {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .introSlide__title {
@@ -12548,13 +12558,15 @@ a.text-dark:focus {
 
 @media (max-width: 991.98px) {
   .introSlide__description {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
 .introSlide__start-btn {
   width: 100%;
   border-radius: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .introSlide__button-wrapper {

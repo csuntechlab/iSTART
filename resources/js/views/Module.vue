@@ -2,12 +2,13 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <navbar></navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <module-content></module-content>
+    <intro-slide></intro-slide>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
+import introSlide from './../components/content/IntroSlide' 
 import navbar from './../components/global/Navbar'
 import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
@@ -18,7 +19,8 @@ export default {
     moduleHeader,
     moduleFooter,
     moduleContent,
-    navbar
+    navbar,
+    introSlide
   },
   data () {
     return {
