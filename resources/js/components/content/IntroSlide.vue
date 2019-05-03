@@ -6,14 +6,17 @@
       </div>
     </div>
     <div class="row introSlide__content-wrapper">
-      <div class="col-12">
+      <div class="col-12 col-md-3">
         <h1 class="introSlide__title">{{moduleTitle}}</h1>
-        <p class="introSlide__description">{{moduleInfo}}</p>
+        <button class="btn btn-primary introSlide__start-btn">Start</button>
+      </div>
+      <div class="col col-md-1"></div>
+      <div class="col-12 col-md-8">
+        <p class="introSlide__description mb-2">{{moduleInfo}}</p>
         <p class="introSlide__description">Estimated Completion time: {{estimatedCompletion}}</p>
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">
-          <button class="btn btn-primary introSlide__start-btn">Start</button>
         </div>  
       </div>
     </div>

@@ -1,6 +1,5 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
-    <navbar></navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <intro-slide></intro-slide>
     <module-footer></module-footer>
