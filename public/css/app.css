@@ -12143,12 +12143,18 @@ a.text-dark:focus {
   }
 }
 
+@media (max-width: 991.98px) {
+  .module-quiz__option {
+    margin-bottom: 1rem;
+  }
+}
+
 .module-quiz__option--generic {
   font-weight: 500;
 }
 
 .module-quiz__option--img {
-  height: 10.25rem;
+  height: 9.75rem;
   font-size: 0.85rem;
 }
 
@@ -12169,11 +12175,12 @@ a.text-dark:focus {
 }
 
 .module-quiz__selection--img {
-  height: 160px;
+  height: 9.4rem;
 }
 
 .module-quiz__text {
-  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-left: 0.75rem;
 }
 
 .module-footer__background {

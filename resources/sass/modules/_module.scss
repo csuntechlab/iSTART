@@ -69,12 +69,15 @@
                 width: 18.5rem;
             }
             margin-bottom: 3rem;
+            @include media-breakpoint-down(md){
+                margin-bottom: 1rem;
+            }
             cursor: pointer;
             &--generic{
                 font-weight: 500;
             }
             &--img{
-                height: 10.25rem;
+                height: 9.75rem;
                 font-size: 0.85rem;
             }
         }
@@ -90,11 +93,12 @@
             margin-left: -21px;
             margin-top: -12.25px;
             &--img{
-                height: 160px;
+                height: 9.4rem;
             }
         }
         &__text{
-            padding-left: 1rem;
+            padding-top: 0.5rem;
+            padding-left: 0.75rem;
         }
     }
     &-footer{

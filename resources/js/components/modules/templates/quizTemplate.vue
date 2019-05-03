@@ -8,8 +8,9 @@
       </div>
     </div>
     <div class="row mt-4 justify-content-center">
-      <quiz-option v-for="(option, id)  in options"
-        :image="option.image"
+      <quiz-option v-for="(element, id)  in optionsObject"
+        :image="element.image"
+        :option="element.option"
         :key="id"
         :optionID="id">
       </quiz-option>
@@ -26,18 +27,22 @@ export default {
   },
   data () {
     return {
-      options: {
+      optionsObject: {
         0: {
-          image: 'images/thumbnail/alcohol_thumbnail.jpg'
+          image: 'images/thumbnail/alcohol_thumbnail.jpg',
+          option: 'Some option bro'
         },
         1: {
-          image: 'images/thumbnail/alcohol_thumbnail.jpg'
+          image: 'images/thumbnail/alcohol_thumbnail.jpg',
+          option: 'another option bro'
         },
         2: {
-          image: 'images/thumbnail/alcohol_thumbnail.jpg'
+          image: 'images/thumbnail/alcohol_thumbnail.jpg',
+          option: 'another another option bro'
         },
         3: {
-          image: 'images/thumbnail/alcohol_thumbnail.jpg'
+          image: 'images/thumbnail/alcohol_thumbnail.jpg',
+          option: 'another another another option bro'
         }
       }
     }

@@ -5,9 +5,9 @@
         <router-link :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'" to="/"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</router-link>
       </div>
       <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <router-link v-if="getAccessToDisplayContent" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/login" :disabled="!isDisabled">
+        <button v-if="getAccessToDisplayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/login" :disabled="!isDisabled">
             Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
-        </router-link>
+        </button>
       </div>
     </div>
   </div>
@@ -19,7 +19,8 @@ export default {
   data () {
     return {
       width: 0,
-      isDisabled: true
+      isDisabled: true,
+      current_slide: 0
     }
   },
   created () {
@@ -39,10 +40,15 @@ export default {
   methods: {
     ...mapActions(
       [
+        'hideContent'
       ]
     ),
     handleWidthResize () {
       this.width = window.innerWidth
+    },
+    proceedAndHideContent: function () {
+      this.hideContent()
+      this.current_slide += 1
     }
   },
   mounted () {

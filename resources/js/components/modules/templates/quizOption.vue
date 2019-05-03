@@ -1,24 +1,14 @@
 <template>
   <div class="col-sm-6 col-12">
-    <div v-if="image" v-on:click="newSlide()" class="module-quiz__option module-quiz__option--img">
-      <div v-if="getAccessToDisplayContent && optionID == answer" class="module-quiz__selection--img">
+    <div v-on:click="newSlide()" class="module-quiz__option module-quiz__option--img">
+      <div v-if="getAccessToDisplayContent && optionID == answer" class="module-quiz__selection module-quiz__selection--img">
         <i class="fas fa-check-circle module-quiz__icon"></i>
       </div>
-      <div v-else-if="getAccessToDisplayContent && selectedCard > 0" class="module-quiz__selection--img">
+      <div v-else-if="getAccessToDisplayContent && selectedCard > 0" class="module-quiz__selection module-quiz__selection--img">
         <i class="fas fa-times-circle module-quiz__icon"></i>
       </div>
-      <img class="module-quiz__img" :src="image" alt="alcohol module imgae">
-      <p class="module-quiz__text">Option {{ optionID }}: Lorem, ipsum dolor sit amet consectetur</p>
-    </div>
-    <div v-else v-on:click="newSlide()" class="module-quiz__option">
-      <div v-if="getAccessToDisplayContent && optionID == answer" class="module-quiz__selection">
-        <i class="fas fa-check-circle module-quiz__icon"></i>
-      </div>
-      <div v-else-if="getAccessToDisplayContent && selectedCard > 0" class="module-quiz__selection">
-        <i class="fas fa-times-circle module-quiz__icon"></i>
-      </div>
-      <img class="module-quiz__img" :src="image" alt="alcohol module imgae">
-      <p class="module-quiz__text">Option {{ optionID }}: Lorem, ipsum dolor sit amet consectetur adipisicing elitfficiis! Consequuntur,  </p>
+      <img v-if="image" class="module-quiz__img" :src="image" alt="alcohol module imgae">
+      <p class="module-quiz__text">{{ option }}</p>
     </div>
   </div>
 </template>
@@ -29,7 +19,8 @@ export default {
   props: [
 
     'optionID',
-    'image'
+    'image',
+    'option'
   ],
   data () {
     return {
