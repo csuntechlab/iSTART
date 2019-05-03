@@ -9,7 +9,6 @@ use App\Models\ModuleProgress;
 use App\Models\Participant;
 use App\Mail\UserCompletesModuleEmailToAdmin;
 use App\Mail\UserCompletesModuleEmailToStudent;
-use App\Http\Controllers\UserCompletesModuleEmailController;
 
 class UserCompletesModuleEmailService implements UserCompletesModuleEmailContract
 {
