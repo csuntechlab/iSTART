@@ -16,8 +16,13 @@ class UserCompletesModuleEmailController extends Controller
     {
         $this->userCompletesModuleEmailUtility = $userCompletesModuleEmailUtility;
     }
-    public function sendMail()
+    public function sendMailToAdmin()
     {
-        return $this->userCompletesModuleEmailUtility->sendMail();
+        return $this->userCompletesModuleEmailUtility->sendMailToAdmin();
+    }
+
+    public function sendMailToStudent()
+    {
+        return $this->userCompletesModuleEmailUtility->sendMailToStudent();
     }
 }
