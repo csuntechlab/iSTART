@@ -1,14 +1,13 @@
 <template>
   <div class="col-sm-6 col-12">
-    <div v-on:click="newSlide()" class="module-quiz__option module-quiz__option--img">
-      <div v-if="getAccessToDisplayContent && optionID == answer" class="module-quiz__selection module-quiz__selection--img">
-        <i class="fas fa-check-circle module-quiz__icon"></i>
-      </div>
-      <div v-else-if="getAccessToDisplayContent && selectedCard > 0" class="module-quiz__selection module-quiz__selection--img">
-        <i class="fas fa-times-circle module-quiz__icon"></i>
+    <div v-on:click="newSlide()" :class="disableBlockSelection" class="module-quiz__option module-quiz__option--img">
+      <div v-if="displayContent && selectedCard > 0" class="transition-350ms module-quiz__selection module-quiz__selection--img">
+        <i v-if="optionID == answer" class="fas fa-check-circle module-quiz__icon"></i>
+        <i v-else-if="selectedCard > 0" class="fas fa-times-circle module-quiz__icon"></i>
       </div>
       <img v-if="image" class="module-quiz__img" :src="image" alt="alcohol module imgae">
       <p class="module-quiz__text">{{ option }}</p>
+      <p class="module-quiz__answer" v-if="displayContent && selectedCard > 0">{{ correct_answer }}</p>
     </div>
   </div>
 </template>
@@ -20,7 +19,8 @@ export default {
 
     'optionID',
     'image',
-    'option'
+    'option',
+    'correct_answer'
   ],
   data () {
     return {
@@ -32,18 +32,24 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'getAccessToDisplayContent'
+        'displayContent'
       ]
-    )
+    ),
+    disableBlockSelection () {
+      if (this.selectedCard < 1 && this.displayContent === true) {
+        return 'module-quiz__option--preventSelection'
+      }
+      return null
+    }
   },
   methods: {
     ...mapActions(
       [
-        'changeSlide'
+        'toggleContent'
       ]
     ),
     newSlide: function () {
-      this.changeSlide()
+      this.toggleContent(true)
       this.selectedCard++
     }
   }

@@ -1,3 +1,3 @@
 export default {
-  getAccessToDisplayContent: state => state.slides.hasUserSelectedAnOption
+  displayContent: state => state.slides.hasUserSelectedAnOption
 }

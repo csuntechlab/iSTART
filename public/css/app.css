@@ -12084,12 +12084,16 @@ a.text-dark:focus {
 
 .module__footerText--right {
   margin-right: 2rem;
+  outline: inherit;
+  border: none;
+  background: none;
 }
 
 .module-quiz {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-top: 2.25rem;
+  color: #2699fb;
 }
 
 .module-quiz__header {
@@ -12158,6 +12162,14 @@ a.text-dark:focus {
   font-size: 0.85rem;
 }
 
+.module-quiz__option--answer {
+  height: 11.15rem;
+}
+
+.module-quiz__option--preventSelection {
+  pointer-events: none;
+}
+
 .module-quiz__selection {
   width: 25px;
   background-color: #2699fb;
@@ -12180,6 +12192,11 @@ a.text-dark:focus {
 
 .module-quiz__text {
   padding-top: 0.5rem;
+  padding-left: 0.75rem;
+  margin-bottom: -3.5px;
+}
+
+.module-quiz__answer {
   padding-left: 0.75rem;
 }
 

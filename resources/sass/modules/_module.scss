@@ -24,12 +24,16 @@
         }
         &--right{
             margin-right: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
         }
     }
     &-quiz{
         margin-left: 1.5rem;
         margin-right: 1.5rem;
         margin-top: 2.25rem;
+        color: $primaryColor;
         &__header{
             padding-right: 2.75rem;
         }
@@ -80,6 +84,12 @@
                 height: 9.75rem;
                 font-size: 0.85rem;
             }
+            &--answer{
+                height: 11.15rem;
+            }
+            &--preventSelection{
+                pointer-events: none;
+            }
         }
         &__selection{
             width: 25px;
@@ -98,6 +108,10 @@
         }
         &__text{
             padding-top: 0.5rem;
+            padding-left: 0.75rem;
+            margin-bottom: -3.5px;
+        }
+        &__answer{
             padding-left: 0.75rem;
         }
     }

@@ -5,7 +5,10 @@
         <router-link :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'" to="/"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</router-link>
       </div>
       <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <button v-if="getAccessToDisplayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" to="/login" :disabled="!isDisabled">
+        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'">
+            Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
+        </button>
+        <button  v-else :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" disabled>
             Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
         </button>
       </div>
@@ -33,21 +36,21 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'getAccessToDisplayContent'
+        'displayContent'
       ]
     )
   },
   methods: {
     ...mapActions(
       [
-        'hideContent'
+        'toggleContent'
       ]
     ),
     handleWidthResize () {
       this.width = window.innerWidth
     },
     proceedAndHideContent: function () {
-      this.hideContent()
+      this.toggleContent(false)
       this.current_slide += 1
     }
   },
