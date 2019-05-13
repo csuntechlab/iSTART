@@ -31,3 +31,4 @@ Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
 
 Route::post('/verifyExcelSheet', 'AdminController@checkEmailsInJson');
 Route::post('/submitGoodParticipants','ParticipantController@addGoodParticipantsToParticipantsTable');
+Route::post('/removeParticipant','ParticipantController@removeParticipantFromStudy');
