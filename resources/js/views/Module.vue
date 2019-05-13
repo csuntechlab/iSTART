@@ -1,5 +1,5 @@
 <template>
-  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
+  <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <quiz-template></quiz-template>
     <module-footer></module-footer>
