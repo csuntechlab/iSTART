@@ -1,21 +1,22 @@
 <template>
   <div class="module" ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <module-content></module-content>
+    <info-template></info-template>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
-import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import infoTemplate from './../components/modules/templates/infoTemplate'
+
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    moduleContent
+    infoTemplate
   },
   data () {
     return {
