@@ -8,4 +8,5 @@ interface ParticipantContract
 {
     public function userHasParticipantId($user);
     public function addGoodParticipantsToParticipantsTable($goodParticipants);
+    public function removeUserFromParticipantsTable($user);
 }
