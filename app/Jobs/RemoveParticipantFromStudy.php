@@ -38,7 +38,7 @@ class RemoveParticipantFromStudy implements ShouldQueue
         $user = $this->user;
 
         //Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($user));
-
+        //commented out until STR-97 is merged
 
 
     }
