@@ -11,5 +11,7 @@ namespace App\Contracts;
 
 interface UserCompletesModuleEmailContract
 {
-    public function sendMail();
+    public function sendMailToAdmin();
+
+    public function sendMailToStudent();
 }

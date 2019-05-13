@@ -21,6 +21,10 @@ Route::get('logout','LoginController@logout');
 Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
 Route::get('/sendCompleteModuleMailTest','UserCompletesModuleEmailController@sendMail');
+Route::get('/sendStudentRemovedEmailAdmin','StudentRemovedFromStudyController@sendStudentRemovedFromStudyAdmin');
+Route::get('/sendCompleteModuleMailAdminTest','UserCompletesModuleEmailController@sendMailToAdmin');
+Route::get('/sendCompleteModuleMailStudentTest','UserCompletesModuleEmailController@sendMailToStudent');
+
 Route::get('/sendMailTest','MailController@sendMail');
 
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
@@ -29,3 +33,4 @@ Route::post('/setModuleProgress','ModuleProgressController@setModuleProgress');
 
 Route::post('/verifyExcelSheet', 'AdminController@checkEmailsInJson');
 Route::post('/submitGoodParticipants','ParticipantController@addGoodParticipantsToParticipantsTable');
+Route::post('/getReminder','ModuleProgressController@remindUserofModule');
