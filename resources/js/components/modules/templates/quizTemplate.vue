@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12">
         <div class="module-quiz__header">
-          <h2 class="module-quiz__header-font">Let’s see what you think - Taking two shots of tequila is the same as which of the following: </h2>
+          <h2 class="module-quiz__header-font">Let’s see what you think - Taking two shots of tequila is the same as which of the following:</h2>
         </div>
       </div>
     </div>
@@ -51,7 +51,6 @@ export default {
           image: 'images/thumbnail/alcohol_thumbnail.jpg',
           option: 'another another another option bro',
           correct_answer: 'Correct'
-
         }
       }
     }

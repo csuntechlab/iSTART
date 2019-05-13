@@ -6,7 +6,7 @@
         <i v-else-if="selectedCard > 0" class="fas fa-times-circle module-quiz__icon"></i>
       </div>
       <div>
-        <img v-if="image" class="module-quiz__img" :src="image" alt="alcohol module imgae">
+        <img v-if="image" class="module-quiz__img" :src="image" alt="alcohol module image">
         <p class="module-quiz__text">{{ option }}</p>
         <p class="module-quiz__answer" v-if="displayContent && selectedCard > 0">{{ correct_answer }}</p>
       </div>
