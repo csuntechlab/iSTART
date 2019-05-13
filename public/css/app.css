@@ -12078,25 +12078,6 @@ a.text-dark:focus {
   margin-right: 2rem;
 }
 
-.module-info {
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  width: 100%;
-}
-
-.module-info__header {
-  font-weight: bold;
-}
-
-.module-info__body {
-  margin-top: 1.85rem;
-}
-
-.module-info__sentence {
-  font-size: 1rem;
-}
-
 .module-footer__background {
   background-color: #2699fb;
   padding-bottom: 15px;
