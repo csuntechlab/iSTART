@@ -44,14 +44,16 @@
         }
         &__icon{
             margin-left: 4.25px;
+            margin-right:4.25px;
             margin-top: 15px;
             color: $white;
         }
         &__img{
+            height: auto;
             margin-top: -3.5px;
             margin-left: 7.5px;
-            height: 85px;
-            width: 85px;
+            height: auto;
+            max-width: 90%;
         }
         &__options{
         }
@@ -60,10 +62,10 @@
             padding-top: 0.75rem;
             border: 2.5px solid $primaryColor;
             border-radius: 3px;
-            height: 6.25rem;
             width: 17rem;
             margin-left: auto;
             margin-right: auto;
+            font-size: 1rem;
             @include media-breakpoint-up(sm){
                 height: 7.5rem;
                 width: 18.5rem;
@@ -77,11 +79,9 @@
                 font-weight: 500;
             }
             &--img{
-                height: 9.75rem;
-                font-size: 0.85rem;
-            }
-            &--answer{
-                height: 11.15rem;
+                display: flex;
+                height: auto;
+                width: 100%;
             }
             &--preventSelection{
                 pointer-events: none;
@@ -90,22 +90,13 @@
         &__selection{
             width: 25px;
             background-color: $primaryColor;
-            height: 96px;
-            @include media-breakpoint-up(sm){
-            height: 116px;
-            }
-            position: relative;
-            float: left;
             margin-left: -21px;
             margin-top: -12.25px;
-            &--img{
-                height: 9.48rem;
-            }
         }
         &__text{
             padding-top: 0.5rem;
             padding-left: 0.75rem;
-            margin-bottom: -3.5px;
+            margin-bottom: 0.25rem;
         }
         &__answer{
             padding-left: 0.75rem;
