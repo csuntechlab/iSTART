@@ -186,6 +186,7 @@ return [
         App\Providers\UserCompletesModuleEmailServiceProvider::class,
         App\Providers\UserAssignedGroupEmailServiceProvider::class,
         App\Providers\StudentRemovedFromStudyAdminEmailServiceProvider::class,
+        App\Providers\EmailServiceProvider::class,
 
         CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
         CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,

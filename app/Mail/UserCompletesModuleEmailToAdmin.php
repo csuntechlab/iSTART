@@ -14,7 +14,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 
-class UserCompletesModuleEmail extends Mailable
+class UserCompletesModuleEmailToAdmin extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,11 +23,11 @@ class UserCompletesModuleEmail extends Mailable
      *
      * @return void
      */
-    public $userCompletesModuleEmail;
+    public $userCompletesModuleEmailToAdmin;
 
-    public function __construct($userCompletesModuleEmail)
+    public function __construct($userCompletesModuleEmailToAdmin)
     {
-        $this->userCompletesModuleEmail = $userCompletesModuleEmail;
+        $this->userCompletesModuleEmailToAdmin = $userCompletesModuleEmailToAdmin;
     }
 
     /**
@@ -37,6 +37,6 @@ class UserCompletesModuleEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.UserCompletesModuleEmail');
+        return $this->view('mail.UserCompletesModuleEmailToAdmin');
     }
 }
