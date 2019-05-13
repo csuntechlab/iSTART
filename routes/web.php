@@ -20,6 +20,8 @@ Route::get('logout','LoginController@logout');
 
 Route::get('/get_group/{user_id}','UserGroupController@getGroup');
 
+Route::get('/sendCompleteModuleMailTest','UserCompletesModuleEmailController@sendMail');
+Route::get('/sendStudentRemovedEmailAdmin','StudentRemovedFromStudyController@sendStudentRemovedFromStudyAdmin');
 Route::get('/sendCompleteModuleMailAdminTest','UserCompletesModuleEmailController@sendMailToAdmin');
 Route::get('/sendCompleteModuleMailStudentTest','UserCompletesModuleEmailController@sendMailToStudent');
 
