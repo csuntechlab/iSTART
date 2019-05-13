@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import introSlide from './../components/content/IntroSlide' 
+import introSlide from './../components/modules/templates/IntroSlide' 
 import Navbar from './../components/global/Navbar'
 import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'

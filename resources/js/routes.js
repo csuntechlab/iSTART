@@ -5,8 +5,6 @@ import Module from './views/Module.vue'
 // import Error from './views/Error.vue'
 import Schedule from './views/Schedule.vue'
 import Admin from './views/Admin.vue'
-import Intro from './components/content/IntroSlide.vue'
-
 export default [
   {
     path: '*'
@@ -47,10 +45,4 @@ export default [
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
   },
-  {
-    path: '/intro',
-    name: 'intro',
-    component: Intro,
-    meta: { title: 'iSTART | Admin', requiresAuth: false, adminAuth: false }
-  }
 ]

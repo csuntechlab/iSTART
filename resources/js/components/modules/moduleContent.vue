@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import introSlide from './../content/IntroSlide' 
+import introSlide from './templates/IntroSlide' 
 
 export default {
   name: 'moduleContent',
