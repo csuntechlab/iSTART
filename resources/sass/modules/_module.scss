@@ -50,8 +50,8 @@
         }
         &__img{
             height: auto;
-            margin-top: -3.5px;
-            margin-left: 7.5px;
+            margin-top: 7px;
+            margin-left: 7px;
             height: auto;
             max-width: 90%;
         }
@@ -60,14 +60,12 @@
             padding-top: 0.75rem;
             border: 2.5px solid $primaryColor;
             border-radius: 3px;
-            width: 17rem;
             margin-left: auto;
             margin-right: auto;
             font-size: 1rem;
-            @include media-breakpoint-up(sm){
-                height: 7.5rem;
-                width: 18.5rem;
-            }
+            display: flex;
+            height: auto;
+            width: 100%;
             margin-bottom: 3rem;
             @include media-breakpoint-down(md){
                 margin-bottom: 1rem;
@@ -76,11 +74,7 @@
             &--generic{
                 font-weight: 500;
             }
-            &--img{
-                display: flex;
-                height: auto;
-                width: 100%;
-            }
+
             &--preventSelection{
                 pointer-events: none;
             }
@@ -92,9 +86,9 @@
             margin-top: -12.25px;
         }
         &__text{
-            padding-top: 0.5rem;
+            padding-top: 0.75rem;
             padding-left: 0.75rem;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
         }
         &__answer{
             padding-left: 0.75rem;
