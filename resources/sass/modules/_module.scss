@@ -49,6 +49,12 @@
         text-align: center;
     }
 }
+.module__progressBar {
+    margin-top: 3.3rem;
+    @include media-breakpoint-up(md){
+        margin-top: 0;
+    }
+}
 
 .module__progressBar.vue-progress-path path {
     stroke-width: 25;
