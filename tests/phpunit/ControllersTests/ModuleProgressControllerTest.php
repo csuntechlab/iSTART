@@ -6,15 +6,20 @@ namespace Tests\ControllersTests;
 
 use App\Contracts\ModuleProgressContract;
 use App\Http\Controllers\ModuleProgressController;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\Request;
 use Mockery;
 use Tests\TestCase;
 use Illuminate\Validation\ValidationException;
-
+use Illuminate\Support\Facades\Queue;
+use App\Models\ModuleProgress;
+use App\Jobs\SendReminderModuleEmail;
 class ModuleProgressControllerTest extends TestCase
 {
     public $utility;
     public $ModuleProgressController;
+
+    use DatabaseMigrations;
 
     public function setUp()
     {
@@ -196,7 +201,20 @@ class ModuleProgressControllerTest extends TestCase
 
         $this->ModuleProgressController->setModuleProgress($request);
     }
+    /**
+     * @test
+     */
+    public function moduleComplete_sends_email_to_user_5_days_after_module_complete()
+    {
+        $data = ['user_id' => 'members:000022575'];
+        factory(ModuleProgress::class)->make(['user_id' => 'members:000022575'])
+            ->save();
 
-    
+        $moduleComplete = ModuleProgress::find($data['user_id']);
+        //dd($data['user_id']);
+        Queue::fake();
+        SendReminderModuleEmail::dispatch($moduleComplete);
+        Queue::assertPushed(SendReminderModuleEmail::class);
+    }
     
 }

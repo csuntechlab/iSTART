@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mbendandour
- * Date: 3/29/19
- * Time: 10:18 AM
- */
 
 namespace App\Mail;
 
@@ -13,8 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-
-class UserCompletesModuleEmail extends Mailable
+class StudentRemovedFromStudyAdminEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,11 +16,11 @@ class UserCompletesModuleEmail extends Mailable
      *
      * @return void
      */
-    public $userCompletesModuleEmail;
+    public $studentRemovedFromStudyAdminEmail;
 
-    public function __construct($userCompletesModuleEmail)
+    public function __construct($studentRemovedFromStudyAdminEmail)
     {
-        $this->userCompletesModuleEmail = $userCompletesModuleEmail;
+        $this->studentRemovedFromStudyAdminEmail = $studentRemovedFromStudyAdminEmail;
     }
 
     /**
@@ -37,6 +30,6 @@ class UserCompletesModuleEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.UserCompletesModuleEmail');
+        return $this->view('mail.StudentRemovedFromStudyAdminEmail');
     }
 }

@@ -3,19 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Contracts\StudentRemovedFromStudyContract;
+use App\Contracts\StudentRemovedFromStudyAdminEmailContract;
 
 class StudentRemovedFromStudyController extends Controller
 {
-    protected $studentRemovedFromStudyUtility;
+    protected $studentRemovedFromStudyAdminEmailUtility;
 
-    public function __construct(StudentRemovedFromStudyContract $studentRemovedFromStudyUtility)
+    public function __construct(StudentRemovedFromStudyAdminEmailContract $studentRemovedFromStudyAdminEmailUtility)
     {
-        $this->studentRemovedFromStudyUtility = $studentRemovedFromStudyUtility;
+        $this->studentRemovedFromStudyAdminEmailUtility = $studentRemovedFromStudyAdminEmailUtility;
     }
-
-    public function sendStudentRemovedMail()
+    public function sendStudentRemovedFromStudyAdmin()
     {
-        return $this->studentRemovedFromStudyUtility->sendStudentRemovedMail();
+        return $this->studentRemovedFromStudyAdminEmailUtility->sendStudentRemovedFromStudyAdmin();
     }
 }
