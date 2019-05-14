@@ -9,35 +9,47 @@ export const alcoholSlide = {
             header: 'What you shouldn\'t take drugs',
             description: 'Flip over all cards to continue.',
             cards: {
-              1: {
+              card1: {
                 show: false,
-                img: {
-                  src: 'images/thumbnail/test.jpg',
-                  alt: 'city with palmtrees',
-                  caption: 'California Sunshine'
+                front: {
+                  img: {
+                    src: 'images/thumbnail/test.jpg',
+                    alt: 'city with palmtrees',
+                    caption: 'California Sunshine'
+                  },
+                  question: null
                 },
-                question: null,
-                description: 'Don\'t do drugs.'
+                back: {
+                  description: 'Don\'t do drugs.'
+                }
               },
-              2: {
+              card2: {
                 show: false,
-                img: {
-                  src: null,
-                  alt: null,
-                  caption: null
+                front: {
+                  img: {
+                    src: null,
+                    alt: null,
+                    caption: null
+                  },
+                  question: 'Why you shouldn\'t do drugs?'
                 },
-                question: 'Why you shouldn\'t do drugs?',
-                description: 'Drugs are bad.'
+                back: {
+                  description: 'Drugs are bad.'
+                }
               },
-              3: {
+              card3: {
                 show: false,
-                img: {
-                  src: 'images/thumbnail/alcohol_thumbnail.jpg',
-                  alt: 'luxury alcohol with glass',
-                  caption: 'Alcohol with shots of whiskey'
+                front: {
+                  img: {
+                    src: 'images/thumbnail/alcohol_thumbnail.jpg',
+                    alt: 'luxury alcohol with glass',
+                    caption: 'Alcohol with shots of whiskey'
+                  },
+                  question: null
                 },
-                question: null,
-                description: 'Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up. Testing word wrap when container fills up.'
+                back: {
+                  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac pretium tortor, vitae aliquam urna. Vivamus commodo suscipit risus, sed sagittis tellus. Nam at tortor cursus, semper risus ac, lacinia odio. Morbi vitae mollis diam.'
+                }
               }
             }
           }
