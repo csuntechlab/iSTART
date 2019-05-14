@@ -1,8 +1,15 @@
 .card-flip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%;
+  &-description {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+  }
 
   &__card {
     display: inline-block;
