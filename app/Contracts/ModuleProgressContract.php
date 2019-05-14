@@ -7,4 +7,5 @@ interface ModuleProgressContract
     public function getModuleProgress($data): array;
 
     public function setModuleProgress($data);
+
 }

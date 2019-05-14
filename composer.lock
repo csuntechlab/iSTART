@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbdba3d936493a96fc70ad0c4c441072",
+    "content-hash": "5721e672ab836bf4286e789469cde58c",
     "packages": [
         {
             "name": "csun-metalab/laravel-directory-authentication",
@@ -428,6 +428,61 @@
                 "parser"
             ],
             "time": "2018-03-08T01:11:30+00:00"
+        },
+        {
+            "name": "faisalman/simple-excel-php",
+            "version": "v0.3.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/faisalman/simple-excel-php.git",
+                "reference": "c392d9ee34cce210f034c9a9ef814f635320351c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/faisalman/simple-excel-php/zipball/c392d9ee34cce210f034c9a9ef814f635320351c",
+                "reference": "c392d9ee34cce210f034c9a9ef814f635320351c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "SimpleExcel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Faisal Salman",
+                    "email": "fyzlman@gmail.com",
+                    "homepage": "http://faisalman.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily parse / convert / write between Microsoft Excel XML / CSV / TSV / HTML / JSON / etc formats",
+            "homepage": "http://faisalman.github.com/simple-excel-php",
+            "keywords": [
+                "converter",
+                "csv",
+                "document",
+                "excel",
+                "html",
+                "json",
+                "parser",
+                "spreadsheet",
+                "tsv",
+                "writer",
+                "xml"
+            ],
+            "time": "2013-03-21T19:48:38+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -1725,6 +1780,56 @@
                 "promise"
             ],
             "time": "2016-01-26T13:27:02+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
         },
         {
             "name": "psr/container",
@@ -3175,7 +3280,7 @@
             "keywords": [
                 "ldap"
             ],
-            "time": "2013-02-04T07:37:38+00:00"
+            "time": "2013-02-04 07:37:38"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
