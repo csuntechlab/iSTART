@@ -11,7 +11,7 @@ class InfoFromModuleEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $infoFromModuleEmail;
+    public $infoFromModuleEmail;
 
     public function __construct($infoFromModuleEmail)
     {
