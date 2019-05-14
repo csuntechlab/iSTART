@@ -24,6 +24,7 @@ Route::get('/sendCompleteModuleMailTest','UserCompletesModuleEmailController@sen
 Route::get('/sendStudentRemovedEmailAdmin','StudentRemovedFromStudyController@sendStudentRemovedFromStudyAdmin');
 Route::get('/sendCompleteModuleMailAdminTest','UserCompletesModuleEmailController@sendMailToAdmin');
 Route::get('/sendCompleteModuleMailStudentTest','UserCompletesModuleEmailController@sendMailToStudent');
+Route::post('/sendModuleInfoMail', 'InfoFromModuleEmailController@sendModuleInfo');
 
 Route::get('/sendMailTest','MailController@sendMail');
 

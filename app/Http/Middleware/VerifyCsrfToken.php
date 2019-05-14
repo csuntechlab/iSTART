@@ -22,5 +22,6 @@ class VerifyCsrfToken extends Middleware
         '/loginVerification',
         '/submitGoodParticipants',
         '/getReminder',
+        '/sendModuleInfoMail'
     ];
 }
