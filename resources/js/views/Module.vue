@@ -1,7 +1,8 @@
 <template>
-  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
+  <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <info-template></info-template>
+    <info-template v-if="slide_type === 'info'"></info-template>
+    <quiz-template v-if="slide_type === 'quiz'"></quiz-template>
     <module-footer></module-footer>
   </div>
 </template>
@@ -10,16 +11,18 @@
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import infoTemplate from './../components/modules/templates/infoTemplate'
-
+import quizTemplate from './../components/modules/templates/quizTemplate'
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    infoTemplate
+    infoTemplate,
+    quizTemplate
   },
   data () {
     return {
+      slide_type: 'info',
       windowWidth: 0,
       sizeOfContainer: 0
     }

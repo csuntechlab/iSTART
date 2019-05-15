@@ -34,5 +34,14 @@ class ParticipantService implements ParticipantContract
 
 
     }
+
+    public function removeUserFromParticipantsTable($user) {
+        $userParticipant = Participant::where('user_id', $user['user_id'])->first();
+
+        if( $userParticipant != null){
+            $userParticipant->delete();
+        }
+
+    }
 }
 

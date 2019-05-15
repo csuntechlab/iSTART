@@ -6,14 +6,14 @@
           <h1 class="module-info__header">Tips for drinking responsibly</h1>
         </div>
       </div>
-      <div v-if="content.images" class="row">
-        <div class="module-info__photoComponent">
+      <div v-if="content.images" class="row justify-content-md-center">
+        <!-- <div class="module-info__photoComponent"> -->
           <info-photo v-for="(element, index) in content.images"
             :image="element"
             :key="index"
             :imageSize="Object.keys(content.images).length">
           </info-photo>
-        </div>
+        <!-- </div> -->
       </div>
       <div class="row">
         <div class="col-12">
@@ -28,8 +28,8 @@
   </div>
 </template>
 <script>
-import infoContent from './infoContent'
-import infoPhoto from './infoPhoto'
+import infoContent from './info/infoContent'
+import infoPhoto from './info/infoPhoto'
 export default {
   components: {
     infoContent,
@@ -46,59 +46,47 @@ export default {
         },
         0: {
           paragraph: 'Dont Drink',
-          icon: {
-            'c': 'fab fa-accessible-icon', 'l': 'accessible-icon'
-          }
+          icon: 'fab fa-accessible-icon'
         },
         1: {
           paragraph: 'Stop drinking',
-          icon: {
-            'c': 'fas fa-glass-martini', 'l': 'glass-martini'
-          }
+          icon: 'fas fa-glass-martini'
         },
         2: {
           paragraph: 'Drinking is bad',
-          icon: {
-            'c': 'fas fa-glass-whiskey', 'l': 'glass-whiskey'
-          }
+          icon: 'fas fa-glass-whiskey'
         },
         3: {
           paragraph: 'Drinking and driving is bad',
-          icon: {
-            'c': 'fas fa-beer', 'l': 'beer'
-          }
+          icon: 'fas fa-beer'
         },
         4: {
           paragraph: 'Dawg why you drinking',
-          icon: {
-            'c': 'fas fa-dizzy', 'l': 'dizzy'
-          }
+          icon: 'fas fa-dizzy'
         },
         5: {
           paragraph: 'Getting your BAC levels above 0.8 can get you a ticket',
-          icon: {
-            'c': 'fas fa-dizzy', 'l': 'dizzy'
-          }
+          icon: 'fas fa-dizzy'
         },
         6: {
           paragraph: 'Ya mama gon be mad',
-          icon: {
-            'c': 'fas fa-dizzy', 'l': 'dizzy'
-          }
+          icon: 'fas fa-dizzy'
         },
         7: {
           paragraph: '1 beer is equivalent to a shot of tequila',
-          icon: {
-            'c': 'fas fa-dizzy', 'l': 'dizzy'
-          }
+          icon: 'fas fa-dizzy'
         },
         8: {
           paragraph: 'Always have a DD if you drinking',
-          icon: {
-            'c': 'fas fa-dizzy', 'l': 'dizzy'
-          }
+          icon: 'fas fa-dizzy'
         },
         9: {
+          paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
+        },
+        10: {
+          paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
+        },
+        11: {
           paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
         }
       }
