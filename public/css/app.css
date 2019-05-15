@@ -12529,6 +12529,67 @@ a.text-dark:focus {
   margin-top: 0.75rem;
 }
 
+.video-template__title {
+  font-family: "Arial", sans-serif;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.video-template__title > * {
+  padding: 0.5rem 2rem;
+  margin: 0;
+}
+
+.video-template__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video-template__video * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 760px;
+  width: 100%;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+@media (max-width: 767.98px) {
+  .video-template__video * {
+    height: 360px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .video-template__video * {
+    height: 245px;
+  }
+}
+
+.video-template__caption {
+  margin-top: 1rem;
+}
+
+.video-template__caption > * {
+  display: block;
+  font-size: 1.15rem;
+  padding: 0.5rem 2rem;
+}
+
 .vue-progress-path .progress {
   stroke: #1374CD;
 }

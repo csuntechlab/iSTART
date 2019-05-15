@@ -1,0 +1,46 @@
+.video-template {
+  &__title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+
+    & > * {
+      padding: 0.5rem 2rem;
+      margin: 0;
+    }
+  }
+
+  &__video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 760px;
+      width: 100%;
+      min-height: 200px;
+      min-width: 200px;
+
+      @include media-breakpoint-down(sm) {
+        height: 360px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        height: 245px;
+      }
+    }
+  }
+
+  &__caption {
+    margin-top: 1rem;
+
+    & > * {
+      display: block;
+      font-size: 1.15rem;
+      padding: 0.5rem 2rem;
+    }
+  }
+}
