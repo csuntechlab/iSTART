@@ -1,7 +1,8 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <quiz-template></quiz-template>
+    <quiz-survey-template v-if="slide_type=== 'quizSurvey'"></quiz-survey-template>
+    <quiz-template v-if="slide_type === 'quiz'"></quiz-template>
     <module-footer></module-footer>
   </div>
 </template>
@@ -10,17 +11,20 @@
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import quizSurveyTemplate from './../components/modules/templates/quizSurveyTemplate'
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    quizTemplate
+    quizTemplate,
+    quizSurveyTemplate
   },
   data () {
     return {
       windowWidth: 0,
-      sizeOfContainer: 0
+      sizeOfContainer: 0,
+      slide_type: 'quizSurvey'
     }
   },
   created () {
