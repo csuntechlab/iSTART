@@ -1,4 +1,5 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
+
 import Login from './../../../../resources/js/views/Login.vue'
 import Vuex from 'vuex'
 import 'jest-extended'
@@ -12,14 +13,19 @@ describe('Login.vue', () => {
       User: {
         getters: {
           correctLoginInfo: () => null,
-          loginIsLoading: ()=>false
+          loginIsLoading: () => false
         }
       }
     }
   })
 
   it('should receive user input when user types in form', () => {
-    const wrapper = shallowMount(Login, { store, localVue })
+    const wrapper = shallowMount(Login, { store,
+      localVue,
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
+    })
     const userCredentials = 'gj2210'
     const inputArray = wrapper.findAll('.form-control')
     inputArray.at(0).setValue(userCredentials)
