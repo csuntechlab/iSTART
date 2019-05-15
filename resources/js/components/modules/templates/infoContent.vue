@@ -1,7 +1,6 @@
 <template>
   <span>
-    <img class="module-info__img" v-if="image" :src="image" alt="">
-    <p class="module-info__sentence"><i :class="icon.c"></i> {{ paragraph }}</p>
+    <p class="module-info__sentence"><i v-if="icons" :class="icons"></i> {{ paragraph }}</p>
   </span>
 </template>
 
@@ -10,8 +9,15 @@ export default {
   name: 'infoContent',
   props: [
     'paragraph',
-    'icon',
-    'image'
-  ]
+    'icon'
+  ],
+  data () {
+    return {
+      icons: null
+    }
+  },
+  mounted () {
+    this.icons = this.icon.c
+  }
 }
 </script>

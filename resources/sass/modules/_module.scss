@@ -1,7 +1,7 @@
 .module{
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
-
+    margin-bottom: 4rem;
     &__header{
         margin-top: -2px;
     }

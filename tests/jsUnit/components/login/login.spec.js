@@ -12,7 +12,7 @@ describe('Login.vue', () => {
       User: {
         getters: {
           correctLoginInfo: () => null,
-          loginIsLoading: ()=>false
+          loginIsLoading: () => false
         }
       }
     }
