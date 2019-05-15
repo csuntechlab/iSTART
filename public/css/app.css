@@ -12560,12 +12560,6 @@ a.text-dark:focus {
   margin-top: 1.85rem;
 }
 
-.module-info__photoComponent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .module-info__sentence {
   font-size: 1rem;
 }

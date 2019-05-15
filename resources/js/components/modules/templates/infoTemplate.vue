@@ -7,13 +7,11 @@
         </div>
       </div>
       <div v-if="content.images" class="row justify-content-md-center">
-        <!-- <div class="module-info__photoComponent"> -->
-          <info-photo v-for="(element, index) in content.images"
-            :image="element"
-            :key="index"
-            :imageSize="Object.keys(content.images).length">
-          </info-photo>
-        <!-- </div> -->
+        <info-photo v-for="(element, index) in content.images"
+          :image="element"
+          :key="index"
+          :imageSize="Object.keys(content.images).length">
+        </info-photo>
       </div>
       <div class="row">
         <div class="col-12">
@@ -30,10 +28,14 @@
 <script>
 import infoContent from './info/infoContent'
 import infoPhoto from './info/infoPhoto'
+import { mapActions } from 'vuex'
 export default {
   components: {
     infoContent,
     infoPhoto
+  },
+  created () {
+    this.proceedAndContinue()
   },
   data () {
     return {
@@ -90,6 +92,16 @@ export default {
           paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
         }
       }
+    }
+  },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+    proceedAndContinue () {
+      setTimeout(function () { this.allowUserToContinue(true) }.bind(this), 5000)
     }
   }
 }
