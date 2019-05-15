@@ -1,11 +1,13 @@
 
-import Vue from 'vue';
-import VueProgress from 'vue-progress-path';
-import App from './App.vue';
-import router from './router';
-import store from './store/index.js';
+import Vue from 'vue'
+import VueProgress from 'vue-progress-path'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import App from './App.vue'
+import router from './router'
+import store from './store/index.js'
 
 Vue.use(VueProgress)
+Vue.use(VueYouTubeEmbed)
 
 Vue.config.productionTip = false
 
