@@ -1,5 +1,5 @@
 <template>
-  <div class="module-info">
+  <div class="module-info mb-5">
     <div class="container">
       <div class="row mt-3">
         <div class="col-12">
@@ -10,7 +10,7 @@
         <info-photo v-for="(element, index) in content.images"
           :image="element"
           :key="index"
-          :imageSize="Object.keys(content.images).length">
+          :imageCount="Object.keys(content.images).length">
         </info-photo>
       </div>
       <div class="row">

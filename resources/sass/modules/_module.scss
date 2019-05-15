@@ -1,19 +1,11 @@
 .module{
     overflow-x: hidden;
     height: 100vh;
-    margin-bottom: 4rem;
     &__header{
         margin-top: -2px;
-    }
-    &-content{
-        height: calc(100vh - 9rem);
-        @include media-breakpoint-down(sm){
-            height: calc(100vh - 6.5rem);
-            padding-bottom: 25px;
-        }
-    }
-    @include media-breakpoint-down(sm){
-        margin-bottom: 4rem;
+        z-index: 1;
+        position: sticky;
+        top: 0;
     }
     &__footerText{
         color: $secondaryColor;
