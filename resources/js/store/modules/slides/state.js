@@ -1,6 +1,6 @@
 export default {
   slides: {
-    slideID: null,
-    hasUserSelectedAnOption: false
+    isUserAbleToProceed: false,
+    slide_type: null
   }
 }

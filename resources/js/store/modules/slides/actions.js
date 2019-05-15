@@ -1,5 +1,5 @@
 export default {
-  toggleContent ({ commit }, payload) {
-    commit('SHOWS_OR_HIDES_CONTENT', payload)
+  allowUserToContinue ({ commit }, payload) {
+    commit('ENABLE_OR_DISABLE_CONTINUE', payload)
   }
 }

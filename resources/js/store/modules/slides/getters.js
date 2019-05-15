@@ -1,3 +1,3 @@
 export default {
-  displayContent: state => state.slides.hasUserSelectedAnOption
+  displayContent: state => state.slides.isUserAbleToProceed
 }

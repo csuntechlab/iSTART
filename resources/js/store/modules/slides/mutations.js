@@ -1,5 +1,5 @@
 export default {
-  SHOWS_OR_HIDES_CONTENT (state, payload) {
-    state.slides.hasUserSelectedAnOption = payload
+  ENABLE_OR_DISABLE_CONTINUE (state, payload) {
+    state.slides.isUserAbleToProceed = payload
   }
 }

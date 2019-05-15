@@ -12603,10 +12603,6 @@ a.text-dark:focus {
   font-weight: 500;
 }
 
-.module-quiz__option--preventSelection {
-  pointer-events: none;
-}
-
 .module-quiz__selection {
   width: 25px;
   background-color: #2699fb;

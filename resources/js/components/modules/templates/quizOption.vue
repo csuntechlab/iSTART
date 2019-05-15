@@ -1,6 +1,6 @@
 <template>
   <div class="col-sm-5 col-12">
-    <div v-on:click="newSlide()" :class="disableBlockSelection" class="module-quiz__option">
+    <div v-on:click="newSlide()" class="module-quiz__option">
       <div v-if="displayContent && selectedCard > 0" class="transition-350ms module-quiz__selection module-quiz__selection--img">
         <i v-if="optionID == answer" class="fas fa-check-circle module-quiz__icon"></i>
         <i v-else-if="selectedCard > 0" class="fas fa-times-circle module-quiz__icon"></i>
@@ -36,22 +36,16 @@ export default {
       [
         'displayContent'
       ]
-    ),
-    disableBlockSelection () {
-      if (this.selectedCard < 1 && this.displayContent === true) {
-        return 'module-quiz__option--preventSelection'
-      }
-      return null
-    }
+    )
   },
   methods: {
     ...mapActions(
       [
-        'toggleContent'
+        'allowUserToContinue'
       ]
     ),
     newSlide: function () {
-      this.toggleContent(true)
+      this.allowUserToContinue(true)
       this.selectedCard++
     }
   }

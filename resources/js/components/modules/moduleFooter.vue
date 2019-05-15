@@ -43,14 +43,14 @@ export default {
   methods: {
     ...mapActions(
       [
-        'toggleContent'
+        'allowUserToContinue'
       ]
     ),
     handleWidthResize () {
       this.width = window.innerWidth
     },
     proceedAndHideContent: function () {
-      this.toggleContent(false)
+      this.allowUserToContinue(false)
       this.current_slide += 1
     }
   },
@@ -60,4 +60,5 @@ export default {
     }
   }
 }
+
 </script>
