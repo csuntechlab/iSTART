@@ -1,24 +1,29 @@
 <template>
-  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
+  <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <module-content></module-content>
+    <quiz-template v-if="content_type === 'quiz'"></quiz-template>
+    <video-template v-if="content_type === 'video'"></video-template>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
-import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import quizTemplate from './../components/modules/templates/quizTemplate'
+import videoTemplate from './../components/modules/templates/videoTemplate'
+
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    moduleContent
+    quizTemplate,
+    videoTemplate
   },
   data () {
     return {
+      content_type: 'video',
       windowWidth: 0,
       sizeOfContainer: 0
     }
