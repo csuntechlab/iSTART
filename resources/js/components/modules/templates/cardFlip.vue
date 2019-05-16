@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { alcoholSlide } from './../data/alcoholSlide.js'
 
 export default {
@@ -40,10 +41,16 @@ export default {
   },
 
   methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+
     updateCount (number, item) {
       this.cardFlipCount += number
       if (this.cardFlipCount === Object.keys(this.slides.slide1.content.cards).length) {
-        // call continue action
+        this.allowUserToContinue(true)
       }
     }
   }

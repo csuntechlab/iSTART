@@ -1,26 +1,30 @@
 <template>
-  <div class="module" ref="moduleContainer" :class="checkWindowWidth">
+  <div ref="moduleContainer" :class="checkWindowWidth">
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <module-content></module-content>
+    <quiz-template v-if="content_type === 'quiz'"></quiz-template>
+    <card-flip v-if="content_type === 'cardFlip'"></card-flip>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
 import moduleHeader from './../components/modules/moduleHeader'
-import moduleContent from './../components/modules/moduleContent'
 import moduleFooter from './../components/modules/moduleFooter'
+import quizTemplate from './../components/modules/templates/quizTemplate'
+import cardFlip from './../components/modules/templates/cardFlip'
 
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    moduleContent
+    quizTemplate,
+    cardFlip
   },
 
   data () {
     return {
+      content_type: 'cardFlip',
       windowWidth: 0,
       sizeOfContainer: 0
     }
