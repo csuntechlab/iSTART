@@ -1,4 +1,7 @@
 .introSlide {
+  max-height: calc(100vh - 5.25rem);
+  overflow: hidden;
+  
   &__image-container {
     height: calc(50vh - 3.3rem);
     margin-top: -8px;

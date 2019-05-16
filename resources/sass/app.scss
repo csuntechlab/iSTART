@@ -23,7 +23,9 @@
 @import "modules/page";
 @import "modules/control";
 @import "modules/cookies-notification";
-@import "modules/templates/introduction";
 
+//Module templates
+@import "modules/templates/quiz";
+@import "modules/templates/introduction";
 //Components
 @import "components/progress";
