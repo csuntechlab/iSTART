@@ -1,5 +1,5 @@
 <template>
-  <div class="video-template row">
+  <div class="video-template mb-5 row">
     <div class="video-template__title col-12">
       <h1>Binge Drinking</h1>
     </div>
