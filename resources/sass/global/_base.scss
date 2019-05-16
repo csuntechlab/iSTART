@@ -4,13 +4,13 @@ body {
     }
 
 }
+
 .main-wrapper {
     margin-top: 3.3rem;
     z-index: 0;
     width: 100%;
 }
 
-.container--desktop{
-        background-color: $white;
-        height: 100%;
+.container {
+    background-color: $white; 
 }

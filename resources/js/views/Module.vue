@@ -1,6 +1,8 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
+    <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
+    <intro-slide v-if="contentType === 'intro'"></intro-slide>
     <quiz-template v-if="content_type === 'quiz'"></quiz-template>
     <card-flip v-if="content_type === 'cardFlip'"></card-flip>
     <module-footer></module-footer>
@@ -8,16 +10,20 @@
 </template>
 
 <script>
+import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import cardFlip from './../components/modules/templates/cardFlip'
 
 export default {
   name: 'Module',
   components: {
+    Navbar,
     moduleHeader,
     moduleFooter,
+    introSlide,
     quizTemplate,
     cardFlip
   },
@@ -26,7 +32,8 @@ export default {
     return {
       content_type: 'cardFlip',
       windowWidth: 0,
-      sizeOfContainer: 0
+      sizeOfContainer: 0,
+      contentType: 'introTemplate'
     }
   },
 
@@ -42,7 +49,7 @@ export default {
   computed: {
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
-        return 'container--desktop container module'
+        return 'container module'
       } else {
         return 'module'
       }
