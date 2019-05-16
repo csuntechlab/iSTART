@@ -1,6 +1,7 @@
 export default {
   slides: {
     isUserAbleToProceed: false,
-    slide_type: null
+    slide_type: null,
+    responses: []
   }
 }

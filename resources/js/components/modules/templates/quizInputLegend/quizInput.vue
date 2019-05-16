@@ -5,6 +5,7 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'quizInput',
   props: [
@@ -15,6 +16,13 @@ export default {
     return {
       response: this.user_response
     }
+  },
+  methods: {
+    ...mapActions(
+      [
+        'getUserResponse'
+      ]
+    )
   }
 }
 </script>
