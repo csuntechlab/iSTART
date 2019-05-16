@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
     <p> {{ question }} </p>
-    <input v-model="response" class="module-quizSurvey__label" type="text"/>
+    <input v-model="user_response" class="module-quizInput__label" type="text"/>
   </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default {
   ],
   data () {
     return {
-      response: this.user_response
+      response: null
     }
   },
   methods: {

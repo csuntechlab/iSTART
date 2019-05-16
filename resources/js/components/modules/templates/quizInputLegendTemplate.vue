@@ -1,16 +1,22 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <quiz-legend></quiz-legend>
+  <div class="module-quizInputLegened">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-12">
+          <quiz-legend v-for="(element, index) in slides.questions"
+            :height="250"
+            :width="250"
+            :key="index"
+          ></quiz-legend>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <quiz-input v-for="(element, index) in slides.questions"
-        :key="index"
-        :question="element.question"
-        :user_response="element.response"
-        ></quiz-input>
+      <div class="row">
+        <quiz-input v-for="(element, index) in slides.questions"
+          :key="index"
+          :question="element.question"
+          :user_response="element.response"
+          ></quiz-input>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +24,7 @@
 import quizInput from './quizInputLegend/quizInput'
 import quizLegend from './quizInputLegend/quizLegend'
 export default {
-  name: 'quiz',
+  name: 'quizInputLegend',
   components: {
     quizInput,
     quizLegend

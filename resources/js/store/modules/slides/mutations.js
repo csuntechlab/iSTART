@@ -3,6 +3,7 @@ export default {
     state.slides.isUserAbleToProceed = payload
   },
   PASS_USER_RESPONSES_TO_PIE_CHART (state, payload) {
-    state.slides.responses = payload
+    state.slides.quizInput.responses = payload.responses
+    state.slides.quizInput.isDataEntered = payload.booleanValue
   }
 }

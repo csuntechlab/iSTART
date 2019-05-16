@@ -5,7 +5,6 @@ import Module from './views/Module.vue'
 // import Error from './views/Error.vue'
 import Schedule from './views/Schedule.vue'
 import Admin from './views/Admin.vue'
-
 export default [
   {
     path: '*'

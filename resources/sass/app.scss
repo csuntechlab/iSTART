@@ -23,9 +23,11 @@
 @import "modules/page";
 @import "modules/control";
 @import "modules/cookies-notification";
+
 //Module templates
+@import "modules/templates/introduction";
 @import "modules/templates/quiz";
-@import "modules/templates/quizSurvey";
+@import "modules/templates/quizInputLegend";
 
 //Components
 @import "components/progress";

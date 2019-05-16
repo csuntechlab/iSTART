@@ -1,10 +1,7 @@
 .module{
     overflow-x: hidden;
     height: 100vh;
-    @include media-breakpoint-down(sm){
-        margin-bottom: 4rem;
-    }
-
+    padding: 0;
     &__header{
         margin-top: -2px;
     }
@@ -42,17 +39,19 @@
             padding-bottom: 15px;
         }
     }
-    &__progressBar{
-        @include media-breakpoint-up(md){
-            margin-left: -15px;
-        }
-    }
     &__progress{
         font-size: 1rem;
         color: white;
         font-weight: 1000;
         margin-top: -20px;
+        margin-bottom: 0;
         text-align: center;
+    }
+}
+.module__progressBar {
+    margin-top: 3.3rem;
+    @include media-breakpoint-up(md){
+        margin-top: 0;
     }
 }
 

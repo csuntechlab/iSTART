@@ -11,14 +11,18 @@ export default {
           datasets: [
             {
               label: 'Data One',
-              backgroundColor: '#FF0000',
+              backgroundColor: [
+                '#FF0000',
+                '#F0F0F0'
+              ],
               data: [40, 20]
             }
           ]
         }
       },
       options: {
-        responsive: true
+        responsive: false,
+        maintainAspectRatio: false
       }
     }
   },
