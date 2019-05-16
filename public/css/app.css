@@ -12047,28 +12047,30 @@ a.text-dark:focus {
 }
 
 .module {
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
+}
+
+@media (max-width: 767.98px) {
+  .module {
+    margin-bottom: 4rem;
+  }
 }
 
 .module__header {
   margin-top: -2px;
 }
 
-.module-content {
-  background-color: red;
-  height: calc(100vh - 9rem);
-}
-
-@media (max-width: 767.98px) {
-  .module-content {
-    height: calc(100vh - 6.5rem);
-    padding-bottom: 25px;
-  }
-}
-
 .module__footerText {
   color: whitesmoke;
+}
+
+@media (min-width: 768px) {
+  .module__footerText {
+    width: 10rem;
+    height: 2.25rem;
+    border-radius: 0.4rem;
+  }
 }
 
 .module__footerText--left {
@@ -12077,6 +12079,9 @@ a.text-dark:focus {
 
 .module__footerText--right {
   margin-right: 2rem;
+  outline: inherit;
+  border: none;
+  background: none;
 }
 
 .module-footer__background {
@@ -12116,6 +12121,12 @@ a.text-dark:focus {
 
 .module__progressBar.vue-progress-path path {
   stroke-width: 25;
+}
+
+@media (min-width: 576px) {
+  .module__progressBar.vue-progress-path path {
+    stroke-width: 30;
+  }
 }
 
 .dashboard {
@@ -12527,6 +12538,90 @@ a.text-dark:focus {
 
 .multiChoiceSurvey__option {
   border: solid;
+}
+
+.module-quiz {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 2.25rem;
+  color: #2699fb;
+}
+
+.module-quiz__header {
+  padding-right: 2.75rem;
+}
+
+.module-quiz__header-font {
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .module-quiz__header-font {
+    font-size: 0.9rem;
+  }
+}
+
+.module-quiz__body {
+  margin-top: 2rem;
+}
+
+.module-quiz__icon {
+  margin-left: 4.25px;
+  margin-right: 4.25px;
+  margin-top: 15px;
+  color: whitesmoke;
+}
+
+.module-quiz__img {
+  height: auto;
+  margin-top: 7px;
+  margin-left: 7px;
+  height: auto;
+  max-width: 90%;
+}
+
+.module-quiz__option {
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
+  border: 2.5px solid #2699fb;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  .module-quiz__option {
+    margin-bottom: 1rem;
+  }
+}
+
+.module-quiz__option--generic {
+  font-weight: 500;
+}
+
+.module-quiz__selection {
+  width: 25px;
+  background-color: #2699fb;
+  margin-left: -21px;
+  margin-top: -12.25px;
+}
+
+.module-quiz__text {
+  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.module-quiz__answer {
+  padding-left: 0.75rem;
 }
 
 .vue-progress-path .progress {

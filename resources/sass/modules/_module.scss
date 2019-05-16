@@ -1,27 +1,29 @@
 
 .module{
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
+    @include media-breakpoint-down(sm){
+        margin-bottom: 4rem;
+    }
 
     &__header{
         margin-top: -2px;
     }
-    &-content{
-        background-color:red;
-        height: calc(100vh - 9rem);
-        @include media-breakpoint-down(sm){
-            height: calc(100vh - 6.5rem);
-            padding-bottom: 25px;
-        }
-    }
     &__footerText{
         color: $secondaryColor;
-
+        @include media-breakpoint-up(md){
+            width: 10rem;
+            height: 2.25rem;
+            border-radius: 0.4rem;
+        }
         &--left{
             margin-left: 2rem;
         }
         &--right{
             margin-right: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
         }
     }
     &-footer{
@@ -57,4 +59,7 @@
 
 .module__progressBar.vue-progress-path path {
     stroke-width: 25;
+    @include media-breakpoint-up(sm){
+        stroke-width: 30;
+    }
 }
