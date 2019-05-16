@@ -1,6 +1,15 @@
 .multiChoiceSurvey {
-  &__option {
-    border: solid;
+  &__question {
+    font-size: 2rem;
+    color: $primaryColor;
+    margin-bottom: 3rem;
   }
+  &__text {
+    font-size: 1rem;
+    padding: 1rem 1rem 1.5rem 1.5rem;
+    color: $primaryColor--dark;
+    font-weight: bold;
+
+  } 
   
 }

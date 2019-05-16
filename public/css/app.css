@@ -11710,9 +11710,9 @@ a.text-dark:focus {
   width: 100%;
 }
 
-.container--desktop {
+.container {
+  min-height: calc(100vh - 3.3rem);
   background-color: whitesmoke;
-  height: 100%;
 }
 
 .navbar {
@@ -11768,7 +11768,7 @@ a.text-dark:focus {
   pointer-events: none;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   height: 100%;
   width: 100%;
 }
@@ -11777,6 +11777,7 @@ a.text-dark:focus {
   .navbar-wrapper {
     position: -webkit-sticky;
     position: sticky;
+    height: initial;
   }
 }
 
@@ -12049,12 +12050,7 @@ a.text-dark:focus {
 .module {
   overflow-x: hidden;
   height: 100vh;
-}
-
-@media (max-width: 767.98px) {
-  .module {
-    margin-bottom: 4rem;
-  }
+  padding: 0;
 }
 
 .module__header {
@@ -12105,18 +12101,23 @@ a.text-dark:focus {
   }
 }
 
-@media (min-width: 768px) {
-  .module__progressBar {
-    margin-left: -15px;
-  }
-}
-
 .module__progress {
   font-size: 1rem;
   color: white;
   font-weight: 1000;
   margin-top: -20px;
+  margin-bottom: 0;
   text-align: center;
+}
+
+.module__progressBar {
+  margin-top: 3.3rem;
+}
+
+@media (min-width: 768px) {
+  .module__progressBar {
+    margin-top: 0;
+  }
 }
 
 .module__progressBar.vue-progress-path path {
@@ -12536,10 +12537,6 @@ a.text-dark:focus {
   margin-top: 0.75rem;
 }
 
-.multiChoiceSurvey__option {
-  border: solid;
-}
-
 .module-quiz {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -12622,6 +12619,120 @@ a.text-dark:focus {
 
 .module-quiz__answer {
   padding-left: 0.75rem;
+}
+
+.introSlide {
+  max-height: calc(100vh - 5.25rem);
+  overflow: hidden;
+}
+
+.introSlide__image-container {
+  height: calc(50vh - 3.3rem);
+  margin-top: -8px;
+}
+
+@media (min-width: 768px) {
+  .introSlide__image-container {
+    height: 60vh;
+  }
+}
+
+.introSlide__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .introSlide__image {
+    width: 100%;
+  }
+}
+
+.introSlide__content-wrapper {
+  position: relative;
+  height: calc(50vh - 3.3rem);
+  bottom: 0;
+  z-index: 1;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #395871;
+}
+
+@media (min-width: 768px) {
+  .introSlide__content-wrapper {
+    padding: 1rem 2rem 4rem 4rem;
+    height: 40vh;
+  }
+}
+
+@media (min-width: 576px) {
+  .introSlide__title-container {
+    margin-right: 2rem;
+  }
+}
+
+.introSlide__title {
+  color: whitesmoke;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .introSlide__title {
+    text-align: center;
+    font-size: 3rem;
+    padding-left: 0;
+  }
+}
+
+.introSlide__description {
+  color: whitesmoke;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .introSlide__description {
+    font-size: 0.8rem;
+  }
+}
+
+.introSlide__start-btn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-radius: 0;
+  height: 3.3rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .introSlide__start-btn {
+    position: initial;
+    border-radius: 4px;
+    height: initial;
+  }
+}
+
+.introSlide__button-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.multiChoiceSurvey__question {
+  font-size: 2rem;
+  color: #2699fb;
+  margin-bottom: 3rem;
+}
+
+.multiChoiceSurvey__text {
+  font-size: 1rem;
+  padding: 1rem 1rem 1.5rem 1.5rem;
+  color: #2297fb;
+  font-weight: bold;
 }
 
 .vue-progress-path .progress {

@@ -1,11 +1,19 @@
 <template>
   <div class="multiChoiceSurvey">
-    <h1 class="multiChoiceSurvey__Question m-2">{{question}}</h1>
-    <div class="row multiChoiceSurvey__option-container m-2" >
-      <div class="multiChoiceSurvey__option col-12 col-sm-3"  v-for="(choice, index) in choices" :key="index">
-        <h2 class="multiChoiceSurvey__text">{{choice}}, {{index}}  = {{index % 2}}</h2>
+    <h1 class="multiChoiceSurvey__question ml-4 mr-4 mt-4 mb-4">{{question}}</h1>
+    <div class="row multiChoiceSurvey__option-container justify-content-center m-2" >
+      <div v-for="(choice, index) in choices" :key="index" class="col-12 col-sm-5">
+        <div class="">
+          <div class="module-quiz__option">
+            <h2 class="multiChoiceSurvey__text p-6">{{choice}}, {{index}}
+            </h2>
+          </div>
+          
+        </div>
+        </div>
+
       </div>
-      <div v-if="index%2 ===0" class="d-none d-sm-block col col-md-2"></div>
+      
     </div>
   </div>
 </template>
