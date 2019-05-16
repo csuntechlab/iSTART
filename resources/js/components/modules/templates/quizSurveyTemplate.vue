@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
+      <pie></pie>
+    </div>
+    <div class="row">
       <quiz-survey-question v-for="(element, index) in slides.questions"
         :key="index"
         :question="element"
@@ -9,8 +12,10 @@
   </div>
 </template>
 <script>
+import { Pie } from 'vue-chartjs'
 import quizSurveyQuestion from './quizSurvey/quizSurveyQuestion'
 export default {
+  extends: Pie,
   name: 'quizSurveyTemplate',
   components: {
     quizSurveyQuestion

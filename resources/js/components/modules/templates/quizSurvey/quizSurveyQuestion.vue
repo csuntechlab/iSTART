@@ -1,7 +1,7 @@
 <template>
-  <div class="col-12">
-    <h1> {{ question }} </h1>
-    <input v-model="response" type="text"/>
+  <div class="mb-4 ml-1 col-11">
+    <p> {{ question }} </p>
+    <input v-model="response" class="module-quizSurvey__label" type="text"/>
   </div>
 </template>
 <script>

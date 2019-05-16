@@ -12620,6 +12620,14 @@ a.text-dark:focus {
   padding-left: 0.75rem;
 }
 
+.module-quizSurvey__label {
+  border-radius: 7.5px;
+  border-color: #2699fb;
+  width: 100%;
+  padding-bottom: 3px;
+  background-color: whitesmoke;
+}
+
 .vue-progress-path .progress {
   stroke: #1374CD;
 }
