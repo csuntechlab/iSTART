@@ -1,11 +1,12 @@
 
 import Vue from 'vue';
-import VueProgress from 'vue-progress-path';
-import App from './App.vue';
-import router from './router';
-import store from './store/index.js';
-
+import VueProgress from 'vue-progress-path'
+import App from './App.vue'
+import router from './router'
+import store from './store/index.js'
+import { Pie } from 'vue-chartjs'
 Vue.use(VueProgress)
+Vue.use(Pie)
 
 Vue.config.productionTip = false
 
