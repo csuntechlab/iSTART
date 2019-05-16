@@ -10,7 +10,6 @@
 
 <script>
 import Navbar from './../components/global/Navbar'
-import moduleContent from './../components/modules/moduleContent'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import introSlide from './../components/modules/templates/IntroSlide'
@@ -20,7 +19,6 @@ export default {
   components: {
     moduleHeader,
     moduleFooter,
-    moduleContent,
     Navbar,
     introSlide,
     quizTemplate
