@@ -11,5 +11,11 @@
     font-weight: bold;
 
   } 
+  &__option-container {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 3.3rem;
+    }
+    
+  }
   
 }

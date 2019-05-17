@@ -8,7 +8,7 @@
     <div class="multiChoiceSurveyResults__link-container">
       <ul>
         <li v-for="(url, index) in links" :key="index" class="multiChoiceSurveyResults__link" >
-            <a :href="url"> Visit this example link</a>
+            <a :href="url" target="_blank"> Visit this example link</a>
         </li>
       </ul>
     </div>
@@ -20,8 +20,15 @@
   
 </template>
 <script>
+import {mapActions, mapGetters} from 'vuex'
+import { setTimeout } from 'timers';
 export default {
   name: 'MultiChoiceSurveyResults',
+  mounted() {
+    setTimeout(()=>{
+      this.allowUserToContinue(true)
+    }, 5000)
+  },
   data() {
     return {
       links: [
@@ -30,6 +37,13 @@ export default {
         'https://www.metalab.csun.edu/'
       ]
     }
+  },
+  methods: {
+    ...mapActions(
+        [
+          'allowUserToContinue'
+        ]
+      ),
   }
 }
 </script>

@@ -34,7 +34,7 @@ export default {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'multiChoiceSurveyResults'
+      contentType: 'multiChoiceSurvey'
     }
   },
   created () {
