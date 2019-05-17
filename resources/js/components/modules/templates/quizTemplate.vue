@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import quizOption from './quizOption'
+import quizOption from './quiz/quizOption'
 export default {
   name: 'quizTemplate',
   components: {

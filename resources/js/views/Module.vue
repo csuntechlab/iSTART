@@ -2,7 +2,8 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <intro-slide v-if="contentType==='intro'"></intro-slide>
+    <intro-template v-if="contentType==='intro'"></intro-template>
+    <info-template v-if="contentType === 'info'"></info-template>
     <quiz-template v-if="content_type === 'quiz'"></quiz-template>
     <video-template v-if="content_type === 'video'"></video-template>
     <module-footer></module-footer>
@@ -13,7 +14,8 @@
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
-import introSlide from './../components/modules/templates/IntroSlide'
+import infoTemplate from './../components/modules/templates/infoTemplate'
+import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 
@@ -23,7 +25,8 @@ export default {
     Navbar,
     moduleHeader,
     moduleFooter,
-    introSlide,
+    introTemplate,
+    infoTemplate,
     quizTemplate,
     videoTemplate
   },
@@ -32,7 +35,7 @@ export default {
       content_type: 'video',
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'introTemplate'
+      contentType: 'infoTemplate'
     }
   },
   created () {
