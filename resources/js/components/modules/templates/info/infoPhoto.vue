@@ -13,11 +13,14 @@ export default {
   computed: {
     determineColSize: function () {
       if (this.imageCount > 2) {
-        return 'col-lg-4 col-md-8 col-12'
+        return 'col-lg-4 col-md-6 col-12'
       } else if (this.imageCount === 2) {
         return 'col-lg-6 col-12'
       } else {
         return 'col-12'
+      }
+      if (this.imageCount > 3) {
+        return 'col-12 col-md-6'
       }
     }
   }

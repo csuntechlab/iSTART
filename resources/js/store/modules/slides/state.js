@@ -1,6 +1,6 @@
 export default {
   slides: {
-    isUserAbleToProceed: false,
-    slide_type: null
-  }
+  },
+  slide_index: 0,
+  isUserAbleToProceed: false
 }
