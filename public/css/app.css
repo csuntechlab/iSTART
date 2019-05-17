@@ -11715,6 +11715,10 @@ a.text-dark:focus {
   background-color: whitesmoke;
 }
 
+.blue-text {
+  color: #2699fb;
+}
+
 .navbar {
   background-color: #2699fb;
   color: whitesmoke;
@@ -12733,6 +12737,54 @@ a.text-dark:focus {
   padding: 0.5rem 1rem 1.5rem 1.5rem;
   color: #2297fb;
   font-weight: bold;
+}
+
+.multiChoiceSurveyResults {
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .multiChoiceSurveyResults {
+    padding: 3rem 2rem 10rem 2rem;
+  }
+}
+
+.multiChoiceSurveyResults__heading {
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2297fb;
+}
+
+@media (min-width: 768px) {
+  .multiChoiceSurveyResults__heading {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.multiChoiceSurveyResults__link {
+  color: #2699fb;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .multiChoiceSurveyResults__link {
+    font-size: 2rem;
+  }
+}
+
+.multiChoiceSurveyResults__mail {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2297fb;
+}
+
+@media (min-width: 768px) {
+  .multiChoiceSurveyResults__mail {
+    font-size: 2rem;
+  }
 }
 
 .vue-progress-path .progress {

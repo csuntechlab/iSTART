@@ -1,19 +1,21 @@
 <template>
   <div class="multiChoiceSurveyResults">
-    <p>
-      Based on your 3 answers here is tailored motivational/educational 
+    <h2 class="multiChoiceSurveyResults__heading">
+      Based on your 3 answers here is tailored motivational and/or educational 
       advice to follow.
-    </p>
-    <p>
       These are also resources to check out based off your 3 answers.
-    </p>
+    </h2>
     <div class="multiChoiceSurveyResults__link-container">
       <ul>
-        <li v-for="(url, index) in links" :key="index" >
-          <a :href="url"  > Visit this example link</a>
+        <li v-for="(url, index) in links" :key="index" class="multiChoiceSurveyResults__link" >
+            <a :href="url"> Visit this example link</a>
         </li>
       </ul>
     </div>
+    <h2 class="multiChoiceSurveyResults__mail">
+      <i class="fas fa-envelope"></i>
+      Email these results to yourself
+    </h2>
   </div>
   
 </template>
