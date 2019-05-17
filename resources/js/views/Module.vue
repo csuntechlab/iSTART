@@ -1,16 +1,20 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
+    <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <info-template v-if="slide_type === 'info'"></info-template>
-    <quiz-template v-if="slide_type === 'quiz'"></quiz-template>
-    <module-footer></module-footer>
+    <info-template v-if="contentType === 'infoTemplate'"></info-template>
+    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
+    <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
+    <module-footer v-if="contentType!=='introTemplate'"></module-footer>
   </div>
 </template>
 
 <script>
+import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import infoTemplate from './../components/modules/templates/infoTemplate'
+import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 export default {
   name: 'Module',
@@ -18,13 +22,15 @@ export default {
     moduleHeader,
     moduleFooter,
     infoTemplate,
+    Navbar,
+    introSlide,
     quizTemplate
   },
   data () {
     return {
-      slide_type: 'info',
       windowWidth: 0,
-      sizeOfContainer: 0
+      sizeOfContainer: 0,
+      contentType: 'infoTemplate'
     }
   },
   created () {
@@ -37,7 +43,7 @@ export default {
   computed: {
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
-        return 'container--desktop container module'
+        return 'container module'
       } else {
         return 'module'
       }
