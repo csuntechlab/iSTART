@@ -1,5 +1,9 @@
 .module-quizInput{
     &__label{
+        @include media-breakpoint-up(md){
+            border-radius: 2px;
+            border: 1.7px solid $primaryColor;
+        }
         border-radius: 7.5px;
         border-color: $primaryColor;
         width: 100%;

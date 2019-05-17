@@ -12730,6 +12730,13 @@ a.text-dark:focus {
   background-color: whitesmoke;
 }
 
+@media (min-width: 768px) {
+  .module-quizInput__label {
+    border-radius: 2px;
+    border: 1.7px solid #2699fb;
+  }
+}
+
 .vue-progress-path .progress {
   stroke: #1374CD;
 }

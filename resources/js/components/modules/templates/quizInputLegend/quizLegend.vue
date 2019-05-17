@@ -3,11 +3,14 @@ import { Pie } from 'vue-chartjs'
 export default {
   name: 'quizLegend',
   extends: Pie,
+  props: [
+    'response'
+  ],
   data () {
     return {
       chartdata: {
         datacollection: {
-          labels: ['January', 'February'],
+          labels: [this.response],
           datasets: [
             {
               label: 'Data One',

@@ -18,7 +18,6 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'quizOption',
   props: [
-
     'optionID',
     'image',
     'option',
