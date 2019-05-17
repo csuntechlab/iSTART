@@ -16,16 +16,16 @@
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">
-        </div>  
+        </div>
       </div>
     </div>
   </div>
-  
+
 </template>
 <script>
 export default {
   name: 'IntroSlide',
-  data() {
+  data () {
     return {
       moduleTitle: 'Alcohol',
       moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',

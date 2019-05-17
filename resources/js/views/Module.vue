@@ -2,6 +2,7 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
+    <info-template v-if="contentType === 'infoTemplate'"></info-template>
     <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
@@ -12,6 +13,7 @@
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 export default {
@@ -19,6 +21,7 @@ export default {
   components: {
     moduleHeader,
     moduleFooter,
+    infoTemplate,
     Navbar,
     introSlide,
     quizTemplate
@@ -27,7 +30,7 @@ export default {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'introTemplate'
+      contentType: 'infoTemplate'
     }
   },
   created () {
