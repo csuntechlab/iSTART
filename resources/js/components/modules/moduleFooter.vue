@@ -36,14 +36,16 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'displayContent'
+        'displayContent',
+        'quizInputCount'
       ]
     )
   },
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue'
+        'allowUserToContinue',
+        'getUserResponses'
       ]
     ),
     handleWidthResize () {

@@ -1,11 +1,11 @@
 <template>
   <div class="mb-4 ml-1 col-11">
     <p> {{ question }} </p>
-    <input v-model="user_response" class="module-quizInput__label" type="text"/>
+    <input @keydown.tab="userHasEnteredData" v-model="response" class="module-quizInput__label" type="text"/>
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'quizInput',
   props: [
@@ -14,15 +14,28 @@ export default {
   ],
   data () {
     return {
-      response: null
+      response: null,
+      counter: 0
     }
+  },
+  computed: {
+    ...mapGetters(
+      [
+        'amountOfResponses'
+      ]
+    )
   },
   methods: {
     ...mapActions(
       [
-        'getUserResponse'
+        'getUserResponses'
       ]
-    )
+    ),
+    userHasEnteredData () {
+      if (this.response) {
+        if (this.amountOfResponses <= this.question.length) { this.getUserResponses({ responses: this.response, counter: this.counter += 1 }) }
+      }
+    }
   }
 }
 </script>

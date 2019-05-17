@@ -1,3 +1,5 @@
 export default {
-  displayContent: state => state.slides.isUserAbleToProceed
+  displayContent: state => state.slides.isUserAbleToProceed,
+  quizInputCount: state => state.slides.quizInput.counter,
+  amountOfResponses: state => state.slides.quizInput.responses.length
 }

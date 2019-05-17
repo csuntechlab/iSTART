@@ -1,8 +1,8 @@
 <template>
   <div class="module-quizInputLegened">
     <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-12">
+      <div class="row justify-content-center">
+        <div v-if="slides.questions.length == 4" class="col-6 col-md-12">
           <quiz-legend v-for="(element, index) in slides.questions"
             :height="250"
             :width="250"
