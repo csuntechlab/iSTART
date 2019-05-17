@@ -2,6 +2,7 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
+    <info-template v-if="contentType === 'infoTemplate'"></info-template>
     <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
     <multi-choice-survey v-if="contentType==='multiChoiceSurvey'"></multi-choice-survey>
@@ -16,6 +17,7 @@ import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
+import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
@@ -24,6 +26,7 @@ export default {
   components: {
     moduleHeader,
     moduleFooter,
+    infoTemplate,
     Navbar,
     introSlide,
     quizTemplate,
@@ -34,7 +37,8 @@ export default {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'multiChoiceSurvey'
+      contentType: 'multiChoiceSurvey',
+      contentType: 'infoTemplate'
     }
   },
   created () {

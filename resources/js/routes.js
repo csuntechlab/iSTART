@@ -32,6 +32,8 @@ export default [
     name: 'Module',
     component: Module,
     meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+    // please leave the comment below for development purposes
+    // meta: { title: 'iSTART | Modules' }
   },
   {
     path: '/schedule',
@@ -44,11 +46,5 @@ export default [
     name: 'Admin',
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-  },
-  {
-    path: '/z',
-    name: 'test',
-    component: Module,
-    meta: { title: 'iSTART | testing'}
-  },
+  }
 ]
