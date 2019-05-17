@@ -2,10 +2,11 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <intro-slide v-if="contentType==='intro'"></intro-slide>
+    <info-template v-if="contentType === 'infoTemplate'"></info-template>
     <quiz-input-legend-template v-if="contentType=== 'quizInputLegend'"></quiz-input-legend-template>
-    <quiz-template v-if="contentType === 'quiz'"></quiz-template>
-    <module-footer v-if="contentType!=='intro'"></module-footer>
+    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
+    <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
+    <module-footer v-if="contentType!=='introTemplate'"></module-footer>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import quizInputLegendTemplate from './../components/modules/templates/quizInputLegendTemplate'
@@ -23,6 +25,7 @@ export default {
     moduleFooter,
     quizTemplate,
     quizInputLegendTemplate,
+    infoTemplate,
     Navbar,
     introSlide
   },
