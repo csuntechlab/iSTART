@@ -3,6 +3,7 @@
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <intro-slide v-if="contentType === 'intro'"></intro-slide>
+    <info-template v-if="contentType === 'info'"></info-template>
     <quiz-template v-if="content_type === 'quiz'"></quiz-template>
     <card-flip v-if="content_type === 'cardFlip'"></card-flip>
     <module-footer></module-footer>
@@ -13,6 +14,7 @@
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import cardFlip from './../components/modules/templates/cardFlip'
@@ -24,6 +26,7 @@ export default {
     moduleHeader,
     moduleFooter,
     introSlide,
+    infoTemplate,
     quizTemplate,
     cardFlip
   },
@@ -33,7 +36,7 @@ export default {
       content_type: 'cardFlip',
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'introTemplate'
+      contentType: 'infoTemplate'
     }
   },
 

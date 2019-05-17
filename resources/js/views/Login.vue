@@ -32,6 +32,8 @@
                 <div v-if="correctLoginInfo===false" class="invalid-feedback mt-0 mb-2 text-center">Login failed. Make sure you have the correct access rights.</div>
                 <div class="form-group text-center">
                   <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
+                  <!-- please leave comment below for development purposes -->
+                  <!-- <router-link to="/module">Modules</router-link> -->
                 </div>
               </div>
             </form>
