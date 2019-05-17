@@ -15,6 +15,7 @@
           :key="index"
           :question="element.question"
           :user_response="element.response"
+          :questionLength="slides.questions.length"
           ></quiz-input>
       </div>
     </div>

@@ -10,7 +10,8 @@ export default {
   name: 'quizInput',
   props: [
     'question',
-    'user_response'
+    'user_response',
+    'questionLength'
   ],
   data () {
     return {
@@ -33,7 +34,9 @@ export default {
     ),
     userHasEnteredData () {
       if (this.response) {
-        if (this.amountOfResponses <= this.question.length) { this.getUserResponses({ responses: this.response, counter: this.counter += 1 }) }
+        if (this.amountOfResponses <= this.questionLength) {
+          this.getUserResponses({ responses: this.response, counter: this.counter += 1 })
+        }
       }
     }
   }
