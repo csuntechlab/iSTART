@@ -5,6 +5,7 @@
     <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
     <multi-choice-survey v-if="contentType==='multiChoiceSurvey'"></multi-choice-survey>
+    <multi-choice-survey-results v-if="contentType==='multiChoiceSurveyResults'"></multi-choice-survey-results>
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
     
   </div>
@@ -17,6 +18,7 @@ import moduleFooter from './../components/modules/moduleFooter'
 import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 export default {
   name: 'Module',
   components: {
@@ -25,13 +27,14 @@ export default {
     Navbar,
     introSlide,
     quizTemplate,
-    multiChoiceSurvey
+    multiChoiceSurvey,
+    multiChoiceSurveyResults
   },
   data () {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'multiChoiceSurvey'
+      contentType: 'multiChoiceSurveyResults'
     }
   },
   created () {

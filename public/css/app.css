@@ -12723,14 +12723,14 @@ a.text-dark:focus {
 }
 
 .multiChoiceSurvey__question {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #2699fb;
   margin-bottom: 3rem;
 }
 
 .multiChoiceSurvey__text {
   font-size: 1rem;
-  padding: 1rem 1rem 1.5rem 1.5rem;
+  padding: 0.5rem 1rem 1.5rem 1.5rem;
   color: #2297fb;
   font-weight: bold;
 }
