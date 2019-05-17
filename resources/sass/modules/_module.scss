@@ -1,6 +1,6 @@
 .module{
     overflow-x: hidden;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0;
     &__header{
         margin-top: -2px;

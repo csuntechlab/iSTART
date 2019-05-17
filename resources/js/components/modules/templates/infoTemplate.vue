@@ -44,7 +44,8 @@ export default {
         {
           0: 'images/thumbnail/alcohol_thumbnail.jpg',
           1: 'images/thumbnail/alcohol_thumbnail.jpg',
-          2: 'images/thumbnail/alcohol_thumbnail.jpg'
+          2: 'images/thumbnail/alcohol_thumbnail.jpg',
+          3: 'images/thumbnail/alcohol_thumbnail.jpg'
         },
         0: {
           paragraph: 'Dont Drink',
@@ -89,7 +90,7 @@ export default {
           paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
         },
         11: {
-          paragraph: 'Always have a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
+          paragraph: 'Always have <br> a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
         }
       }
     }

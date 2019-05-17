@@ -1,6 +1,8 @@
 <template>
   <span>
-    <p class="module-info__sentence"><i v-if="icon" :class="icon"></i> {{ paragraph }}</p>
+    <p class="module-info__sentence"><i v-if="icon" :class="icon"></i>
+    <span v-html="paragraph"></span>
+    </p>
   </span>
 </template>
 
