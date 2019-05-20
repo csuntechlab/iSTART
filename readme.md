@@ -8,7 +8,7 @@ See the application in action by visiting the [home page](https://sandbox.csun.e
 
 ## Installation
 
-To install this application please refer to the official [Laravel website](https://laravel.com/docs/5.0).
+To install this application please refer to the official [Laravel website](https://laravel.com/docs/5.7).
 
 ## License
 
