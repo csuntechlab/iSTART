@@ -1,0 +1,65 @@
+.module-quiz{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 2.25rem;
+    color: $primaryColor;
+    &__header{
+        padding-right: 2.75rem;
+    }
+    &__header-font{
+        font-weight: 600;
+        @include media-breakpoint-down(sm){
+            font-size: 0.90rem;
+        }
+    }
+    &__body{
+        margin-top: 2rem;
+    }
+    &__icon{
+        margin-left: 4.25px;
+        margin-right:4.25px;
+        margin-top: 15px;
+        color: $white;
+    }
+    &__img{
+        height: auto;
+        margin-top: 7px;
+        margin-left: 7px;
+        height: auto;
+        max-width: 90%;
+    }
+    &__option{
+        padding-left: 1.25rem;
+        padding-top: 0.75rem;
+        border: 2.5px solid $primaryColor;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+        display: flex;
+        height: auto;
+        width: 100%;
+        margin-bottom: 3rem;
+        @include media-breakpoint-down(md){
+            margin-bottom: 1rem;
+        }
+        cursor: pointer;
+        &--generic{
+            font-weight: 500;
+        }
+    }
+    &__selection{
+        width: 25px;
+        background-color: $primaryColor;
+        margin-left: -21px;
+        margin-top: -12.25px;
+    }
+    &__text{
+        padding-top: 0.75rem;
+        padding-left: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    &__answer{
+        padding-left: 0.75rem;
+    }
+}

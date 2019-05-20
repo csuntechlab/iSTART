@@ -1,26 +1,28 @@
 .module{
-    overflow: hidden;
-    height: 100vh;
-
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0;
     &__header{
         margin-top: -2px;
-    }
-    &-content{
-        background-color:red;
-        height: calc(100vh - 9rem);
-        @include media-breakpoint-down(sm){
-            height: calc(100vh - 6.5rem);
-            padding-bottom: 25px;
-        }
+        z-index: 1;
+        position: sticky;
+        top: 0;
     }
     &__footerText{
         color: $secondaryColor;
-
+        @include media-breakpoint-up(md){
+            width: 10rem;
+            height: 2.25rem;
+            border-radius: 0.4rem;
+        }
         &--left{
             margin-left: 2rem;
         }
         &--right{
             margin-right: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
         }
     }
     &-footer{
@@ -40,20 +42,25 @@
             padding-bottom: 15px;
         }
     }
-    &__progressBar{
-        @include media-breakpoint-up(md){
-            margin-left: -15px;
-        }
-    }
     &__progress{
         font-size: 1rem;
         color: white;
         font-weight: 1000;
         margin-top: -20px;
+        margin-bottom: 0;
         text-align: center;
+    }
+}
+.module__progressBar {
+    margin-top: 3.3rem;
+    @include media-breakpoint-up(md){
+        margin-top: 0;
     }
 }
 
 .module__progressBar.vue-progress-path path {
     stroke-width: 25;
+    @include media-breakpoint-up(sm){
+        stroke-width: 30;
+    }
 }

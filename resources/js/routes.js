@@ -5,7 +5,6 @@ import Module from './views/Module.vue'
 // import Error from './views/Error.vue'
 import Schedule from './views/Schedule.vue'
 import Admin from './views/Admin.vue'
-
 export default [
   {
     path: '*'
@@ -33,6 +32,8 @@ export default [
     name: 'Module',
     component: Module,
     meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+    // please leave the comment below for development purposes
+    // meta: { title: 'iSTART | Modules' }
   },
   {
     path: '/schedule',
