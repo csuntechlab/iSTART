@@ -37,8 +37,7 @@ export default {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'multiChoiceSurvey',
-      contentType: 'infoTemplate'
+      contentType: 'multiChoiceSurveyResults',
     }
   },
   created () {

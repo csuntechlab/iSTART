@@ -12,10 +12,10 @@
         </li>
       </ul>
     </div>
-    <h2 class="multiChoiceSurveyResults__mail">
+    <a @click="emailSurveyResults" class="multiChoiceSurveyResults__mail">
       <i class="fas fa-envelope"></i>
       Email these results to yourself
-    </h2>
+    </a>
   </div>
   
 </template>
@@ -41,9 +41,19 @@ export default {
   methods: {
     ...mapActions(
         [
-          'allowUserToContinue'
+          'allowUserToContinue',
         ]
       ),
+    emailSurveyResults() {
+      this.emailSurveyResults(this.links)
+    }
+  }, 
+  computed: { 
+    ...mapGetters(
+      [
+        'SurveyResultLinks'
+      ]
+    )
   }
 }
 </script>
