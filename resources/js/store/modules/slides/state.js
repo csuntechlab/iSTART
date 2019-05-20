@@ -2,7 +2,7 @@ export default {
   slides: {
     isUserAbleToProceed: false,
     slide_type: null, 
-    links: [
+    surveyResultLinks: [
       'https://www.metalab.csun.edu/',
       'https://www.metalab.csun.edu/',
       'https://www.metalab.csun.edu/'

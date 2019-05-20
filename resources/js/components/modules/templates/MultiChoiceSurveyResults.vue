@@ -7,15 +7,15 @@
     </h2>
     <div class="multiChoiceSurveyResults__link-container">
       <ul>
-        <li v-for="(url, index) in links" :key="index" class="multiChoiceSurveyResults__link" >
+        <li v-for="(url, index) in surveyResultLinks" :key="index" class="multiChoiceSurveyResults__link" >
             <a :href="url" target="_blank"> Visit this example link</a>
         </li>
       </ul>
     </div>
-    <a @click="emailSurveyResults" class="multiChoiceSurveyResults__mail">
+    <h2 @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail">
       <i class="fas fa-envelope"></i>
       Email these results to yourself
-    </a>
+    </h2>
   </div>
   
 </template>
@@ -29,29 +29,21 @@ export default {
       this.allowUserToContinue(true)
     }, 5000)
   },
-  data() {
-    return {
-      links: [
-        'https://www.metalab.csun.edu/',
-        'https://www.metalab.csun.edu/',
-        'https://www.metalab.csun.edu/'
-      ]
-    }
-  },
   methods: {
     ...mapActions(
         [
           'allowUserToContinue',
+          'emailSurveyResults'
         ]
       ),
-    emailSurveyResults() {
-      this.emailSurveyResults(this.links)
+    sendUserSurveyResults() {
+      this.emailSurveyResults(this.surveyResultLinks)
     }
   }, 
   computed: { 
     ...mapGetters(
       [
-        'SurveyResultLinks'
+        'surveyResultLinks'
       ]
     )
   }

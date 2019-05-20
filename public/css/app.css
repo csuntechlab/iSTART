@@ -12820,6 +12820,7 @@ a.text-dark:focus {
 }
 
 .multiChoiceSurveyResults__mail {
+  cursor: pointer;
   margin-top: 3rem;
   font-size: 1.2rem;
   font-weight: bold;
