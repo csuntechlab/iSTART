@@ -23,5 +23,6 @@ class VerifyCsrfToken extends Middleware
         '/submitGoodParticipants',
         '/removeParticipant',
         '/getReminder',
+        '/sendModuleInfoMail'
     ];
 }
