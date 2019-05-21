@@ -46,10 +46,5 @@ export default [
     name: 'Admin',
     component: Admin,
     meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-  }, 
-  {
-    path: '/z',
-    name: 'Tes',
-    component: Module,
   }
 ]
