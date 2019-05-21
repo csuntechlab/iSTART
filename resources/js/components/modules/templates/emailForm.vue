@@ -9,8 +9,8 @@
         <textarea 
         class="emailForm__text-area form-control" 
         placeholder="i.e. I would like to go hiking with my friends on weekend mornings and I can do this by drinking less on Friday nights"
+        v-model="wellnessGoal"
         ></textarea>
-
         <h2 @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail">
           <i class="fas fa-envelope"></i>
           Email these results to yourself
@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       drug: 'alcohol',
+      wellnessGoal: ''
     }
   },
   mounted() {
@@ -41,7 +42,8 @@ export default {
         ]
       ),
     sendUserSurveyResults() {
-      this.emailSurveyResults(this.surveyResultLinks)
+      var formattedWellnessResults = `<p>${this.wellnessGoal}</p>`
+      this.emailSurveyResults(formattedWellnessResults)
     }
   }, 
   computed: { 
