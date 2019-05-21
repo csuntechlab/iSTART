@@ -7,7 +7,6 @@ export default {
     return SlidesAPI.emailSurveyResultsAPI(payload)
     .then(
       response => {
-        console.log(response)
         commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', true)
       })
     .catch(

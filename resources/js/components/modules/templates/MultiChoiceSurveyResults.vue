@@ -1,5 +1,12 @@
 <template>
   <div class="multiChoiceSurveyResults">
+    <div v-if="surveyResultsEmailWasSubmitted===true" class="alert alert-success transition-350ms">
+      <strong>Success!</strong> Email was successfully sent
+    </div>
+    <div v-if="surveyResultsEmailWasSubmitted===false" class="alert alert-danger transition-350ms">
+      <strong>Failure. </strong> An error has occured 
+    </div>
+
     <h2 class="multiChoiceSurveyResults__heading">
       Based on your 3 answers here is tailored motivational and/or educational 
       advice to follow.
@@ -43,7 +50,8 @@ export default {
   computed: { 
     ...mapGetters(
       [
-        'surveyResultLinks'
+        'surveyResultLinks',
+        'surveyResultsEmailWasSubmitted'
       ]
     )
   }

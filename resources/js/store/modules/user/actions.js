@@ -47,12 +47,10 @@ export default {
   async submitGoodParticipants({commit}, payload) {
     return UserAPI.submitGoodParticipantsAPI(payload).then(
       response => {
-        console.log(response.data)
         commit('PARTICIPANTS_WERE_SUBMITTED', true)
       }
     ).catch(
       failure => {
-        console.log('this is not meant to fully work just yet, everything will be wired up on STR-55. Once it is wired up, the user will receive a message saying the users were submitted')
         console.error(failure)
         commit('PARTICIPANTS_WERE_SUBMITTED', false)
       }
