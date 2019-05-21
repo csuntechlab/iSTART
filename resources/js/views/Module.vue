@@ -3,9 +3,10 @@
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <info-template v-if="contentType === 'infoTemplate'"></info-template>
-    <quiz-input-legend-template v-if="contentType=== 'quizInputLegend'"></quiz-input-legend-template>
-    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
+    <quiz-input-template v-if="contentType=== 'quizInputTemplate'"></quiz-input-template>
+    <pie-chart-template v-if="contentType ==='pieChartTemplate'"></pie-chart-template>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
+    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
   </div>
 </template>
@@ -17,23 +18,25 @@ import moduleFooter from './../components/modules/moduleFooter'
 import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
-import quizInputLegendTemplate from './../components/modules/templates/quizInputLegendTemplate'
+import quizInputTemplate from './../components/modules/templates/quizInputTemplate'
+import pieChartTemplate from './../components/modules/templates/pieChartTemplate'
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
     quizTemplate,
-    quizInputLegendTemplate,
+    quizInputTemplate,
     infoTemplate,
     Navbar,
-    introSlide
+    introSlide,
+    pieChartTemplate
   },
   data () {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'quizInputLegend'
+      contentType: 'pieChartTemplate'
     }
   },
   created () {
