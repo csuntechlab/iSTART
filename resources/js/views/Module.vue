@@ -5,6 +5,7 @@
     <info-template v-if="contentType === 'infoTemplate'"></info-template>
     <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
+    <email-form v-if="contentType==='emailForm'"></email-form>
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
   </div>
 </template>
@@ -16,6 +17,7 @@ import moduleFooter from './../components/modules/moduleFooter'
 import infoTemplate from './../components/modules/templates/infoTemplate'
 import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import emailForm from './../components/modules/templates/emailForm'
 export default {
   name: 'Module',
   components: {
@@ -24,13 +26,14 @@ export default {
     infoTemplate,
     Navbar,
     introSlide,
-    quizTemplate
+    quizTemplate,
+    emailForm
   },
   data () {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'infoTemplate'
+      contentType: 'emailForm'
     }
   },
   created () {

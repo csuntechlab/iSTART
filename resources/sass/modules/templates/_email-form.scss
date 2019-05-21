@@ -1,0 +1,12 @@
+.emailForm {
+  padding: 3rem 2rem 0rem 2rem;
+  @include media-breakpoint-up(md) {
+    padding: 3rem 2rem 10rem 2rem;
+  }
+  textarea {
+    height: 30vh;
+    @include media-breakpoint-up(md) {
+      margin-top: 10vh;
+    }
+  }
+}
