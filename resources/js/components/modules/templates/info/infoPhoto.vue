@@ -17,7 +17,7 @@ export default {
       } else if (this.imageCount === 2) {
         return 'col-lg-6 col-6'
       } else {
-        return 'col-12'
+        return 'col-12 text-center'
       }
     }
   }

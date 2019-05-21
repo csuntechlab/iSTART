@@ -51,7 +51,7 @@ const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s22_01.jpg'
+        0: 'images/alcoholModule/alcohol_s22_01.PNG'
       },
       paragraph: null
     },
