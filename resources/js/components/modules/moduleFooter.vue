@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'moduleFooter',
   data () {
@@ -33,9 +33,15 @@ export default {
     window.removeEventListener('resize', this.handleWidthResize)
   },
   computed: {
+    ...mapState(
+      {
+        amountOfSlides: state => state.Slides.slides
+      }
+    ),
     ...mapGetters(
       [
-        'displayContent'
+        'displayContent',
+        'slideNumber'
       ]
     )
   },
@@ -49,19 +55,23 @@ export default {
       this.width = window.innerWidth
     },
     goBack: function () {
-      let payload = {
-        isAbleToProceed: true,
-        slide_index: this.current_slide -= 1
+      if (this.current_slide > -1) {
+        let payload = {
+          isAbleToProceed: true,
+          slide_index: this.current_slide -= 1
+        }
+        this.allowUserToContinue(payload)
       }
-      this.allowUserToContinue(payload)
     },
     proceedAndHideContent: function () {
+      // if(this.current_slide < Object.keys(this.amountOfSlides).length + 1){
       let payload = {
         isAbleToProceed: false,
         slide_index: this.current_slide += 1
       }
       this.allowUserToContinue(payload)
     }
+    // }
   },
   mounted () {
     window.onresize = () => {

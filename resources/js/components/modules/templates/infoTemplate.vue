@@ -3,17 +3,18 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-12">
-          <h1 class="module-info__header"> {{ current_slide(slideNumber).header }}</h1>
+          <h1 class="module-info__header"> {{ current_slide(slideNumber).header.title }}</h1>
+          <p v-if="current_slide(slideNumber).header.text"> {{ current_slide(slideNumber).header.text }}</p>
         </div>
       </div>
-      <div v-if="current_slide(slideNumber).content.images" class="row justify-content-md-center">
+      <div v-if="current_slide(slideNumber).content.images &&current_slide(slideNumber).format.images ==='top'" class="row mt-3 justify-content-md-center">
         <info-photo v-for="(element, index) in current_slide(slideNumber).content.images"
           :image="element"
           :key="index"
           :imageCount="Object.keys(current_slide(slideNumber).content.images).length">
         </info-photo>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         <div v-if="current_slide(slideNumber).content.paragraph" class="col-12">
           <info-content v-for="(element, index) in current_slide(slideNumber).content.paragraph"
             :key="index"
@@ -21,6 +22,13 @@
             :icon="element.icon">
           </info-content>
         </div>
+      </div>
+      <div v-if="current_slide(slideNumber).format.images && current_slide(slideNumber).format.images ==='bottom'" class="row mt-3 justify-content-md-center">
+        <info-photo v-for="(element, index) in current_slide(slideNumber).content.images"
+          :image="element"
+          :key="index"
+          :imageCount="Object.keys(current_slide(slideNumber).content.images).length">
+        </info-photo>
       </div>
     </div>
   </div>
@@ -34,19 +42,49 @@ export default {
     infoContent,
     infoPhoto
   },
-  updated () {
-    console.log('sup')
-    this.proceedAndContinue()
+  watch: {
+    slideNumber (newValue, old) {
+      if (this.slideNumber > 0) {
+        this.proceedAndContinue()
+      }
+    }
+  },
+  created () {
+    if (this.slideNumber < 1) {
+      this.proceedAndContinue()
+    }
+  },
+  computed: {
+    ...mapState(
+      {
+        slideNumber: state => state.Slides.slide_index
+      }
+    ),
+    ...mapGetters(
+      [
+        'current_slide'
+      ]
+    )
+  },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+    proceedAndContinue () {
+      setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber }) }.bind(this), 5000)
+    }
   },
   data () {
     return {
       content: {
         images:
         {
-          0: 'images/thumbnail/alcohol_thumbnail.jpg',
-          1: 'images/thumbnail/alcohol_thumbnail.jpg',
-          2: 'images/thumbnail/alcohol_thumbnail.jpg',
-          3: 'images/thumbnail/alcohol_thumbnail.jpg'
+          0: 'images/thumbnail/alcohol_s19_01.jpg',
+          1: 'images/thumbnail/alcohol_s19_02.jpg',
+          2: 'images/thumbnail/alcohol_s19_03.jpg',
+          3: 'images/thumbnail/alcohol_s19_04.jpg'
         },
         0: {
           paragraph: 'Dont Drink',
@@ -93,35 +131,6 @@ export default {
         11: {
           paragraph: 'Always have <br> a DD if you drinking Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quidem beatae qui tempores voluptates nesciunt quaerat similique eum ratione omnis non veniam dolorem est accusamus aliquid quo, alias obcaecati iure.'
         }
-      }
-    }
-  },
-  computed: {
-    ...mapState(
-      {
-        slideNumber: state => state.Slides.slide_index
-      }
-    ),
-    ...mapGetters(
-      [
-        'current_slide'
-      ]
-    )
-  },
-  methods: {
-    ...mapActions(
-      [
-        'allowUserToContinue'
-      ]
-    ),
-    proceedAndContinue () {
-      let payload = {
-        isAbleToProceed: true,
-        slide_index: this.slideNumber
-      }
-      if (this.current_slide) {
-        console.log('new slide: ', this.current_slide)
-        setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber }) }.bind(this), 5000)
       }
     }
   }

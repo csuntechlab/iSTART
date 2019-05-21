@@ -4,7 +4,6 @@ export default {
   },
   ENABLE_OR_DISABLE_CONTENT (state, payload) {
     state.isUserAbleToProceed = payload
-    console.log('state.isUserAbleToProceed: ', state.isUserAbleToProceed )
   },
   ITERATE_THROUGH_CONTENT (state, payload) {
     state.slide_index = payload
