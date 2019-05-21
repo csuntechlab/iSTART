@@ -36,7 +36,7 @@ export default {
     return {
       windowWidth: 0,
       sizeOfContainer: 0,
-      contentType: 'pieChartTemplate'
+      contentType: 'quizInputTemplate'
     }
   },
   created () {
