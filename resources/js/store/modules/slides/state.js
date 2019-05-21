@@ -1,5 +1,4 @@
 export default {
-  slides: {
     isUserAbleToProceed: false,
     slide_type: null, 
     surveyResultLinks: [
@@ -8,5 +7,4 @@ export default {
       'https://www.metalab.csun.edu/'
     ],
     surveyResultsEmailWasSubmitted: null
-  }
 }
