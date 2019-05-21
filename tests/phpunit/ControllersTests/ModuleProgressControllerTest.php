@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Queue;
 use App\Jobs\SendNewModuleEmail;
 use Illuminate\Support\Carbon;
 use App\Models\ModuleProgress;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-
-use Illuminate\Support\Facades\Queue;
-use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 class ModuleProgressControllerTest extends TestCase
 {
@@ -219,7 +215,6 @@ class ModuleProgressControllerTest extends TestCase
             ->save();
         $moduleComplete = ModuleProgress::find($data['user_id']);
 
-        //dd($data['user_id']);
         Queue::fake();
 
 
@@ -232,14 +227,14 @@ class ModuleProgressControllerTest extends TestCase
     /**
      * @test
      */
-    public function moduleComplete_sends_email_to_user_5_days_after_module_complete()
+    public function moduleComplete_sends_email_to_user_2_days_before_module_deadline()
     {
         $data = ['user_id' => 'members:000022575'];
         factory(ModuleProgress::class)->make(['user_id' => 'members:000022575'])
             ->save();
 
         $moduleComplete = ModuleProgress::find($data['user_id']);
-        //dd($data['user_id']);
+
         Queue::fake();
         SendReminderModuleEmail::dispatch($moduleComplete);
         Queue::assertPushed(SendReminderModuleEmail::class);
