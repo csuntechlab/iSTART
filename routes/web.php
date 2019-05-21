@@ -25,6 +25,7 @@ Route::get('/sendCompleteModuleMailStudentTest','UserCompletesModuleEmailControl
 Route::post('/sendModuleInfoMail', 'InfoFromModuleEmailController@sendModuleInfo');
 
 Route::get('/sendMailTest','MailController@sendMail');
+Route::get('/sendStudentRemovedEmail', 'StudentRemovedFromStudyController@sendStudentRemovedMail');
 
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
 Route::get('/getModuleProgress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
