@@ -21,6 +21,10 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/loginVerification',
         '/submitGoodParticipants',
-        '/newModuleAvailable'
+        '/newModuleAvailable',
+        '/submitGoodParticipants',
+        '/removeParticipant',
+        '/getReminder',
+        '/sendModuleInfoMail'
     ];
 }

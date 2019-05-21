@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Events\ModulesEvent;
 use App\Models\ModuleProgress;
+use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
 use App\Jobs\SendNewModuleEmail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
+use App\Models\ModuleProgress;
+
 class ModuleProgressController extends Controller
 {
     protected $moduleProgressUtility = null;
@@ -64,4 +68,16 @@ class ModuleProgressController extends Controller
         return 'true';
     }
 
+    public function remindUserofModule(Request $request){
+
+
+        $user = $request->all();
+        $moduleInfo = ModuleProgress::find($user['user_id']);
+
+        $this->dispatch(new SendReminderModuleEmail($moduleInfo));
+
+
+        return 'true';
+
+    }
 }
