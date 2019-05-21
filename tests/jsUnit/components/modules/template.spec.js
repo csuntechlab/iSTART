@@ -7,10 +7,7 @@ const state = {
 }
 
 describe('slideStore/actions/allowUserToContinue', () => {
-  let payload = {
-    isAbleToProceed: false,
-    slide_index: 1
-  }
+
   it('should commit to ENABLE_OR_DISABLE_CONTINUE mutation when action is called', () => {
     let commit = jest.fn()
     slideStore.actions.allowUserToContinue({ commit }, true)
