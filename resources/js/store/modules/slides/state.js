@@ -1,6 +1,5 @@
 export default {
-  slides: {
-  },
+  importedJSONSlides: {},
   slide_index: 0,
   isUserAbleToProceed: false
 }

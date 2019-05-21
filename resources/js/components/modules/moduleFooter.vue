@@ -35,7 +35,7 @@ export default {
   computed: {
     ...mapState(
       {
-        amountOfSlides: state => state.Slides.slides
+        amountOfSlides: state => state.Slides.importedJSONSlides
       }
     ),
     ...mapGetters(
@@ -62,16 +62,19 @@ export default {
         }
         this.allowUserToContinue(payload)
       }
+      if (this.current_slide === -1) {
+        this.$router.push('/')
+      }
     },
     proceedAndHideContent: function () {
-      // if(this.current_slide < Object.keys(this.amountOfSlides).length + 1){
       let payload = {
         isAbleToProceed: false,
         slide_index: this.current_slide += 1
       }
-      this.allowUserToContinue(payload)
+      if (this.slideNumber < Object.keys(this.amountOfSlides).length - 1) {
+        this.allowUserToContinue(payload)
+      }
     }
-    // }
   },
   mounted () {
     window.onresize = () => {

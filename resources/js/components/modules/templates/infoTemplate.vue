@@ -44,12 +44,12 @@ export default {
   },
   watch: {
     slideNumber (newValue, old) {
-      if (this.slideNumber > 0) {
+      if (this.slideNumber > -1 && this.slideNumber < Object.keys(this.slides).length - 1) {
         this.proceedAndContinue()
       }
     }
   },
-  created () {
+  mounted () {
     if (this.slideNumber < 1) {
       this.proceedAndContinue()
     }
@@ -57,7 +57,8 @@ export default {
   computed: {
     ...mapState(
       {
-        slideNumber: state => state.Slides.slide_index
+        slideNumber: state => state.Slides.slide_index,
+        slides: state => state.Slides.importedJSONSlides
       }
     ),
     ...mapGetters(

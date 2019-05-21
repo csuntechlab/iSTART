@@ -1,7 +1,7 @@
 import slideStore from './../../../../resources/js/store/modules/slides/'
 import 'jest-extended'
 const state = {
-  slides: {},
+  importedJSONSlides: {},
   slide_index: 0,
   isUserAbleToProceed: false
 }
@@ -64,6 +64,6 @@ describe('slideStore/actions/getSlideInfo', () => {
   it('should fill the state when slides is mudated to GET_SLIDE_INFO_FROM_JSON action is called', () => {
 
     slideStore.mutations.GET_SLIDE_INFO_FROM_JSON(slideState, slides)
-    expect(slideState.slides).toEqual(slides)
+    expect(slideState.importedJSONSlides).toEqual(slides)
   })
 })
