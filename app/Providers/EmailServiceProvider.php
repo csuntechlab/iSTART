@@ -20,5 +20,9 @@ class EmailServiceProvider extends ServiceProvider
             'App\Contracts\UserRunningOutOfTimeEmailContract',
             'App\Services\UserRunningOutOfTimeEmailService'
         );
+        $this->app->bind(
+            'App\Contracts\InfoFromModuleEmailContract',
+            'App\Services\InfoFromModuleEmailService'
+        );
     }
 }
