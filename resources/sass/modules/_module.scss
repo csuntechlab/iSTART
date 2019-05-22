@@ -30,6 +30,9 @@
         }
         &--left{
             margin-left: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
         }
         &--right {
             margin-right: 2rem;
