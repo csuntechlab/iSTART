@@ -2,10 +2,11 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <info-template v-if="contentType === 'infoTemplate'"></info-template>
-    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
-    <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
-    <module-footer v-if="contentType!=='introTemplate'"></module-footer>
+    <intro-template v-if="contentType==='intro'"></intro-template>
+    <info-template v-if="contentType === 'info'"></info-template>
+    <quiz-template v-if="content_type === 'quiz'"></quiz-template>
+    <video-template v-if="content_type === 'video'"></video-template>
+    <module-footer></module-footer>
   </div>
 </template>
 
@@ -14,22 +15,26 @@ import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
 import infoTemplate from './../components/modules/templates/infoTemplate'
-import introSlide from './../components/modules/templates/IntroSlide'
+import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import videoTemplate from './../components/modules/templates/videoTemplate'
 import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+
 import { mapActions } from 'vuex'
 export default {
   name: 'Module',
   components: {
+    Navbar,
     moduleHeader,
     moduleFooter,
+    introTemplate,
     infoTemplate,
-    Navbar,
-    introSlide,
-    quizTemplate
+    quizTemplate,
+    videoTemplate
   },
   data () {
     return {
+      content_type: 'video',
       windowWidth: 0,
       sizeOfContainer: 0,
       contentType: 'infoTemplate'
