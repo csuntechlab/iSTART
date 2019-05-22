@@ -3,8 +3,10 @@
     <div class="video-template__title col-12">
       <h1>Binge Drinking</h1>
     </div>
-    <div class="video-template__video col-12">
-      <youtube :video-id="videoId" player-width="100%" @ended="newSlide" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
+    <div class="col-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <youtube :video-id="videoId" player-width="100%" @ended="newSlide" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
+      </div>
     </div>
     <div class="video-template__caption col-12">
       <caption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus risus vitae ullamcorper fringilla. Donec consectetur neque quam.</caption>
