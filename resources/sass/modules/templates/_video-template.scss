@@ -10,30 +10,6 @@
     }
   }
 
-  &__video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & * {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 760px;
-      width: 100%;
-      min-height: 200px;
-      min-width: 200px;
-
-      @include media-breakpoint-down(sm) {
-        height: 360px;
-      }
-
-      @include media-breakpoint-down(xs) {
-        height: 245px;
-      }
-    }
-  }
-
   &__caption {
     margin-top: 1rem;
 
