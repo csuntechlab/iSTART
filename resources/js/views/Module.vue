@@ -6,11 +6,13 @@
     <info-template v-if="contentType === 'info'"></info-template>
     <quiz-template v-if="content_type === 'quiz'"></quiz-template>
     <video-template v-if="content_type === 'video'"></video-template>
+    <card-flip-template v-if="content_type === 'cardFlip'"></card-flip-template>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
@@ -18,9 +20,10 @@ import infoTemplate from './../components/modules/templates/infoTemplate'
 import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import videoTemplate from './../components/modules/templates/videoTemplate'
+import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
+
 import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
-import { mapActions } from 'vuex'
 export default {
   name: 'Module',
   components: {
@@ -30,16 +33,19 @@ export default {
     introTemplate,
     infoTemplate,
     quizTemplate,
-    videoTemplate
+    videoTemplate,
+    cardFlipTemplate
   },
+
   data () {
     return {
-      content_type: 'video',
+      content_type: 'cardFlip',
       windowWidth: 0,
       sizeOfContainer: 0,
       contentType: 'infoTemplate'
     }
   },
+
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
@@ -47,9 +53,11 @@ export default {
       this.getSlideInfo(alcoholModuleSlides)
     }
   },
+
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
   },
+
   computed: {
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
@@ -59,6 +67,7 @@ export default {
       }
     }
   },
+
   methods: {
     ...mapActions(
       [
@@ -69,6 +78,7 @@ export default {
       this.windowWidth = window.innerWidth
     }
   },
+
   mounted () {
     if (this.$refs.moduleContainer) {
       this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
