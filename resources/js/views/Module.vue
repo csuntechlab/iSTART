@@ -18,7 +18,9 @@ import infoTemplate from './../components/modules/templates/infoTemplate'
 import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import videoTemplate from './../components/modules/templates/videoTemplate'
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
+import { mapActions } from 'vuex'
 export default {
   name: 'Module',
   components: {
@@ -41,6 +43,9 @@ export default {
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
+    if (alcoholModuleSlides) {
+      this.getSlideInfo(alcoholModuleSlides)
+    }
   },
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
@@ -55,6 +60,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions(
+      [
+        'getSlideInfo'
+      ]
+    ),
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }
