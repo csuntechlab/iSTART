@@ -17,13 +17,15 @@ export default {
   data () {
     return {
       response: null,
-      counter: 0
+      counter: 0,
+      current_slide_number: 0
     }
   },
   computed: {
     ...mapGetters(
       [
-        'amountOfResponses'
+        'amountOfResponses',
+        ''
       ]
     )
   },
@@ -40,7 +42,12 @@ export default {
           this.getUserResponses({ responses: this.response, counter: this.counter += 1 })
         }
         if (this.amountOfResponses === this.questionLength) {
-          this.allowUserToContinue(true)
+          let payload = {
+            isAbleToProceed: true,
+            slide_index: this.current_slide_number += 1,
+            slide_type: 'pie'
+          }
+          this.allowUserToContinue(payload)
         }
       }
     }

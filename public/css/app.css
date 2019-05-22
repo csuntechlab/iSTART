@@ -12075,6 +12075,9 @@ a.text-dark:focus {
 
 .module__footerText--left {
   margin-left: 2rem;
+  outline: inherit;
+  border: none;
+  background: none;
 }
 
 .module__footerText--right {

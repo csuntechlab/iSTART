@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row mt-5 mb-5 justify-content-center">
         <div class="col-6 col-md-12">
-          <quiz-legend v-for="(element, index) in userResponse"
+          <quiz-legend v-for="(element, index) in userResponses"
             :height="250"
             :width="250"
             :key="index"
@@ -24,11 +24,7 @@ export default {
   },
   data () {
     return {
-      userResponse: [
-        10,
-        20,
-        39
-      ]
+      userResponse: this.userResponses
     }
   },
   computed: {

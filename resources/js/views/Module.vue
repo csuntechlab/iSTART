@@ -2,9 +2,9 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <info-template v-if="contentType === 'infoTemplate'"></info-template>
-    <quiz-input-template v-if="contentType=== 'quizInputTemplate'"></quiz-input-template>
-    <pie-chart-template v-if="contentType ==='pieChartTemplate'"></pie-chart-template>
+    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
+    <quiz-input-template v-if="slide_type=== 'quizInput'"></quiz-input-template>
+    <pie-chart-template v-if="slide_type ==='pie'"></pie-chart-template>
     <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
     <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
@@ -20,6 +20,8 @@ import introSlide from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import quizInputTemplate from './../components/modules/templates/quizInputTemplate'
 import pieChartTemplate from './../components/modules/templates/pieChartTemplate'
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+import { mapActions, mapGetters, mapState } from 'vuex'
 export default {
   name: 'Module',
   components: {
@@ -42,11 +44,25 @@ export default {
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
+    if (alcoholModuleSlides) {
+      this.getSlideInfo(alcoholModuleSlides)
+    }
   },
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
   },
   computed: {
+    ...mapState(
+      {
+        slide_type: state => state.Slides.slide_type
+      }
+    ),
+    ...mapGetters(
+      [
+        'current_slide',
+        'slideNumber'
+      ]
+    ),
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'
@@ -56,6 +72,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions(
+      [
+        'getSlideInfo'
+      ]
+    ),
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }

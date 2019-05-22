@@ -50,7 +50,6 @@ export default {
   },
   methods: {
     submitGoodParticipants () {
-      console.log(this.categorizedParticipants.good)
       this.$store.dispatch('submitGoodParticipants', this.categorizedParticipants.good)
     },
     participantsWillNotBeSubmitted () {

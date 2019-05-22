@@ -1,11 +1,11 @@
 export default {
-  slides: {},
+  importedJSONSlides: {},
+  slide_index: 0,
+  slide_type: 'quizInput',
   isUserAbleToProceed: false,
-  slide_type: null,
   quizInput: {
     counter: 0,
     isDataEntered: false,
     responses: []
   }
-  
 }
