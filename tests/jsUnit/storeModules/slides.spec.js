@@ -6,10 +6,10 @@ jest.mock('./../../../resources/js/api/slides')
 
 //VUEX action testing
 describe('slideStore/actions/allowUserToContinue', () => {
-  it('should commit to ENABLE_OR_DISABLE_CONTINUE mutation when action is called', () => {
+  it('should commit to ENABLE_OR_DISABLE_CONTENT mutation when action is called', () => {
     let commit = jest.fn()
     slidesStore.actions.allowUserToContinue({ commit }, true)
-    expect(commit).toHaveBeenCalledWith('ENABLE_OR_DISABLE_CONTINUE', true)
+    expect(commit).toHaveBeenCalled()
   })
 })
 
