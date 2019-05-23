@@ -1,15 +1,39 @@
-const alcoholModuleSlides = {
-  //slide 1 and 2 (combined to fit the design)
-  // 0: {
-  //   slide_type: 'intro', 
-  //   moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
-  //   moduleTitle: 'Alcohol',
-  //   goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",
-  //   definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
-  //   estimatedCompletion: '15 minutes',
-  // },
-  // slide 19
+export const alcoholModuleSlides = {
+  // slide 1 and 2 (combined to fit the design)
   0: {
+    slide_type: 'intro', 
+    moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
+    moduleTitle: 'Alcohol',
+    goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",
+    definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
+    estimatedCompletion: '15 minutes',
+  },
+  // slide 14
+  1: {
+    slide_type: 'video',
+    header: {
+      title: 'What type of drinker is Sarah?',
+      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.'
+    },
+    content: {
+      video_id: 'JfsqxIEQk6U',
+      caption: null
+    }
+  },
+  // slide 16
+  2: {
+    slide_type: 'video',
+    header: {
+      title: 'Binge Drinking',
+      text: 'Please watch the video below.'
+    },
+    content: {
+      video_id: '5jNEVGj6gS0',
+      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+    }
+  },
+  // slide 19
+  3: {
     slide_type: 'informational',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -32,7 +56,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 21
-  2: {
+  4: {
     slide_type: 'informational',
     header: {
       title: 'Better Sleep',
@@ -52,7 +76,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 22
-  3: {
+  5: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -69,7 +93,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 23
-  4: {
+  6: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -92,7 +116,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 24
-  5: {
+  7: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',

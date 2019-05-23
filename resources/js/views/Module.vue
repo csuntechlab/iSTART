@@ -2,17 +2,19 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <intro-template v-if="contentType==='intro'"></intro-template>
-    <info-template v-if="contentType === 'info'"></info-template>
-    <quiz-template v-if="contentType === 'quiz'"></quiz-template>
-    <video-template v-if="contentType === 'video'"></video-template>
-    <card-flip-template v-if="contentType === 'cardFlip'"></card-flip-template>
-    <module-footer v-if="contentType !== 'intro'"></module-footer>
+    <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
+    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
+    <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
+    <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
+    <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
+    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+
+import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
@@ -21,8 +23,6 @@ import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
-
-import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
 export default {
   name: 'Module',
@@ -39,10 +39,9 @@ export default {
 
   data () {
     return {
-      // content_type: 'cardFlip',
+      contentType: 'video',
       windowWidth: 0,
-      sizeOfContainer: 0,
-      contentType: 'infoTemplate'
+      sizeOfContainer: 0
     }
   },
 
@@ -59,6 +58,19 @@ export default {
   },
 
   computed: {
+    ...mapState(
+      {
+        slideNumber: state => state.Slides.slide_index,
+        slides: state => state.Slides.importedJSONSlides
+      }
+    ),
+
+    ...mapGetters(
+      [
+        'current_slide'
+      ]
+    ),
+
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'

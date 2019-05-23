@@ -8,7 +8,7 @@
     <div class="row introSlide__content-wrapper">
       <div class="introSlide__title-container col-12 col-md-3">
         <h1 class="introSlide__title">{{current_slide(slideNumber).moduleTitle}}</h1>
-        <button class="btn btn-primary introSlide__start-btn">Start</button>
+        <button @click="goForward" class="btn btn-primary introSlide__start-btn">Start</button>
       </div>
       <div class="col-12 col-md-8">
         <p class="introSlide__description mb-2"> 
@@ -39,7 +39,7 @@ export default {
       moduleTitle: 'Alcohol',
       moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',
       estimatedCompletion: '10',
-      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg'
+      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
     }
   },
   computed: {
@@ -55,6 +55,16 @@ export default {
       ]
     )
   },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+    goForward() {
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber+1 })
+    }
+  }
 
 }
 </script>
