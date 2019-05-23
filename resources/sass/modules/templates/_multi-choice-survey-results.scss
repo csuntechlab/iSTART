@@ -9,25 +9,25 @@
     font-weight: bold;
     color: $primaryColor--dark;
     @include media-breakpoint-up(md) {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 6rem;
     }
   }
   &__link {
     color: $primaryColor;
     font-size: 1.2rem;
+    text-decoration: underline;
     @include media-breakpoint-up(md) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   &__mail {
     cursor: pointer;
     margin-top: 3rem;
     font-size: 1.2rem;
-    font-weight: bold;
     color: $primaryColor--dark;
     @include media-breakpoint-up(md) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 }

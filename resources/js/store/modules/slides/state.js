@@ -6,5 +6,7 @@ export default {
       'https://www.metalab.csun.edu/',
       'https://www.metalab.csun.edu/'
     ],
-    surveyResultsEmailWasSubmitted: null
+    surveyResultsEmailWasSubmitted: null,
+    importedJSONSlides: {},
+    slide_index: 0,
 }
