@@ -240,4 +240,5 @@ class ModuleProgressControllerTest extends TestCase
         Queue::assertPushed(SendReminderModuleEmail::class);
     }
     
+    
 }

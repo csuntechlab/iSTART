@@ -7,9 +7,7 @@ use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
-use App\Jobs\SendNewModuleEmail;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Carbon;
+
 
 
 class ModuleProgressController extends Controller
@@ -57,15 +55,16 @@ class ModuleProgressController extends Controller
     public function moduleComplete(Request $request){
 
         $user = $request->all();
-        $moduleComplete = ModuleProgress::find($user['user_id']);
+        if($user['user_id']) {
 
-        $job = (new SendNewModuleEmail($moduleComplete))
-            ->delay(Carbon::now()->addSeconds(env('MODULE_COMPLETION')));
-        $this->dispatch($job);
+            $this->moduleProgressUtility->moduleComplete($user);
 
+        }else{
 
-        return 'true';
-    }
+            return null;
+        }
+
+        }
 
     public function remindUserofModule(Request $request){
 
