@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+
 import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
@@ -21,8 +23,6 @@ import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
-
-import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
 export default {
   name: 'Module',
