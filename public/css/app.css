@@ -12967,6 +12967,7 @@ a.text-dark:focus {
   cursor: pointer;
   margin-top: 3rem;
   font-size: 1.2rem;
+  text-decoration: underline;
   color: #2297fb;
 }
 
