@@ -8,6 +8,7 @@
           :question="element.question"
           :user_response="element.response"
           :questionLength="Object.keys(slides.questions).length"
+          :needInputLabel="true"
           ></quiz-input>
       </div>
     </div>

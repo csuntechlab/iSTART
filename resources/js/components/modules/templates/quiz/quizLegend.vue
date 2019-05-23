@@ -1,10 +1,17 @@
+<template>
+  <div>
+    <p>{{ question }}</p>
+    <canvas height="250" width="250" ref="canvas"></canvas>
+  </div>
+</template>
 <script>
 import { Pie } from 'vue-chartjs'
 export default {
   name: 'quizLegend',
   extends: Pie,
   props: [
-    'response'
+    'response',
+    'question'
   ],
   data () {
     return {
@@ -24,7 +31,7 @@ export default {
         }
       },
       options: {
-        responsive: true,
+        responsive: false,
         maintainAspectRatio: false
       }
     }

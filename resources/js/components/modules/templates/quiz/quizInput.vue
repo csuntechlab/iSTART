@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
     <p>{{ questionIndex }}. {{ question }} </p>
-    <input @keydown.tab="userHasEnteredData" v-model="response" class="module-quizInput__label" type="text"/>
+    <input v-if="needInputLabel === true" @keydown.tab="userHasEnteredData" v-model="response" class="module-quizInput__label" type="text"/>
   </div>
 </template>
 <script>
@@ -12,7 +12,8 @@ export default {
     'question',
     'user_response',
     'questionLength',
-    'questionIndex'
+    'questionIndex',
+    'needInputLabel'
   ],
   data () {
     return {

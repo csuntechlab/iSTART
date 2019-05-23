@@ -10,7 +10,6 @@
     <module-footer v-if="contentType!=='introTemplate'"></module-footer>
   </div>
 </template>
-
 <script>
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
