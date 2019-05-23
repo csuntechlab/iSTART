@@ -17,9 +17,9 @@
         placeholder="i.e. I would like to go hiking with my friends on weekend mornings and I can do this by drinking less on Friday nights"
         v-model="wellnessGoal"
         ></textarea>
-        <h2 @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail">
+        <h2 v-if="wellnessGoal.length > 0" @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail transition-350ms">
           <i class="fas fa-envelope"></i>
-          Email these results to yourself
+          Email this goal to yourself
         </h2>
       </div>
     </form>
