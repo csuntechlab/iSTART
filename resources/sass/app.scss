@@ -24,10 +24,17 @@
 @import "modules/control";
 @import "modules/cookies-notification";
 
-//Modules templates
+// Templates
+@import "modules/templates/introduction";
 @import "modules/templates/informational";
 @import "modules/templates/quiz";
 @import "modules/templates/introduction";
 @import "modules/templates/email-form";
+@import "modules/templates/multi-choice-survey";
+@import "modules/templates/multi-choice-survey-results";
+@import "modules/templates/video-template";
+@import "modules/templates/card-flip";
+
+
 //Components
 @import "components/progress";

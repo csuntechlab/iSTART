@@ -1,5 +1,11 @@
 <template>
   <div class="emailForm">
+    <div v-if="surveyResultsEmailWasSubmitted===true" class="alert alert-success transition-350ms">
+      <strong>Success!</strong> Email was successfully sent
+    </div>
+    <div v-if="surveyResultsEmailWasSubmitted===false" class="alert alert-danger transition-350ms">
+      <strong>Failure. </strong> An error has occured 
+    </div>
     <h2 class="emailForm__heading">
       Set a wellness goal that you would like to achieve and progress while 
       reducing your {{drug}} consumption:
@@ -31,7 +37,7 @@ export default {
   },
   mounted() {
     setTimeout(()=>{
-      this.allowUserToContinue(true)
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
     }, 5000)
   },
   methods: {

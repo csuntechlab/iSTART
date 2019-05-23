@@ -2,10 +2,10 @@
   <div class="module-footer__background">
     <div class="row">
       <div :class="width >= 768 ? 'text-right' : 'text-left'" class="col-6">
-        <router-link :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'" to="/"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</router-link>
+        <button @click="goBack()" :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</button>
       </div>
       <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'">
+        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText transition-350ms' : 'module__footerText module__footerText--right text-right transition-350ms'">
             Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
         </button>
         <button  v-else :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" disabled>
@@ -16,13 +16,12 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'moduleFooter',
   data () {
     return {
       width: 0,
-      isDisabled: true,
       current_slide: 0
     }
   },
@@ -34,9 +33,15 @@ export default {
     window.removeEventListener('resize', this.handleWidthResize)
   },
   computed: {
+    ...mapState(
+      {
+        amountOfSlides: state => state.Slides.importedJSONSlides
+      }
+    ),
     ...mapGetters(
       [
-        'displayContent'
+        'displayContent',
+        'slideNumber'
       ]
     )
   },
@@ -49,9 +54,26 @@ export default {
     handleWidthResize () {
       this.width = window.innerWidth
     },
+    goBack: function () {
+      if (this.current_slide > -1) {
+        let payload = {
+          isAbleToProceed: true,
+          slide_index: this.current_slide -= 1
+        }
+        this.allowUserToContinue(payload)
+      }
+      if (this.current_slide === -1) {
+        this.$router.push('/')
+      }
+    },
     proceedAndHideContent: function () {
-      this.allowUserToContinue(false)
-      this.current_slide += 1
+      let payload = {
+        isAbleToProceed: false,
+        slide_index: this.current_slide += 1
+      }
+      if (this.slideNumber < Object.keys(this.amountOfSlides).length - 1) {
+        this.allowUserToContinue(payload)
+      }
     }
   },
   mounted () {

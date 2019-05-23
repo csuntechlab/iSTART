@@ -1,6 +1,12 @@
 export default {
-  slides: {
     isUserAbleToProceed: false,
-    slide_type: null
-  }
+    slide_type: null, 
+    surveyResultLinks: [
+      'https://www.metalab.csun.edu/',
+      'https://www.metalab.csun.edu/',
+      'https://www.metalab.csun.edu/'
+    ],
+    surveyResultsEmailWasSubmitted: null,
+    importedJSONSlides: {},
+    slide_index: 0,
 }
