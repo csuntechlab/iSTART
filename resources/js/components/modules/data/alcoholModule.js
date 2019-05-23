@@ -1,4 +1,13 @@
 const alcoholModuleSlides = {
+  //slide 1 and 2 (combined to fit the design)
+  // 0: {
+  //   slide_type: 'intro', 
+  //   moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
+  //   moduleTitle: 'Alcohol',
+  //   goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",
+  //   definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
+  //   estimatedCompletion: '15 minutes',
+  // },
   // slide 19
   0: {
     slide_type: 'informational',
@@ -23,7 +32,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 21
-  1: {
+  2: {
     slide_type: 'informational',
     header: {
       title: 'Better Sleep',
@@ -43,7 +52,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 22
-  2: {
+  3: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -60,7 +69,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 23
-  3: {
+  4: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -83,7 +92,7 @@ const alcoholModuleSlides = {
     }
   },
   // slide 24
-  4: {
+  5: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',

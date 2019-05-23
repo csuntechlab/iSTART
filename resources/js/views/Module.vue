@@ -4,10 +4,10 @@
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <intro-template v-if="contentType==='intro'"></intro-template>
     <info-template v-if="contentType === 'info'"></info-template>
-    <quiz-template v-if="content_type === 'quiz'"></quiz-template>
-    <video-template v-if="content_type === 'video'"></video-template>
-    <card-flip-template v-if="content_type === 'cardFlip'"></card-flip-template>
-    <module-footer></module-footer>
+    <quiz-template v-if="contentType === 'quiz'"></quiz-template>
+    <video-template v-if="contentType === 'video'"></video-template>
+    <card-flip-template v-if="contentType === 'cardFlip'"></card-flip-template>
+    <module-footer v-if="contentType !== 'intro'"></module-footer>
   </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
 
   data () {
     return {
-      content_type: 'cardFlip',
+      // content_type: 'cardFlip',
       windowWidth: 0,
       sizeOfContainer: 0,
       contentType: 'infoTemplate'
