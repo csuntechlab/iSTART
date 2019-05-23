@@ -133,7 +133,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  5: {
+  7: {
     slide_type: 'informational',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -154,7 +154,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  6: {
+  8: {
     slide_type: 'informational',
     header: {
       title: 'Healthy Alternatives',
@@ -173,7 +173,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  7: {
+  9: {
     slide_type: 'informational',
     header: {
       title: 'Physical Activities',
@@ -193,7 +193,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  8: {
+  10: {
     slide_type: 'informational',
     header: {
       title: 'Social Activities',
@@ -215,7 +215,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  9: {
+  11: {
     slide_type: 'informational',
     header: {
       title: null,
