@@ -2,19 +2,21 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <intro-template v-if="contentType==='intro'"></intro-template>
-    <info-template v-if="contentType === 'info'"></info-template>
-    <quiz-template v-if="contentType === 'quiz'"></quiz-template>
-    <video-template v-if="contentType === 'video'"></video-template>
-    <card-flip-template v-if="contentType === 'cardFlip'"></card-flip-template>
-    <multi-choice-survey v-if="contentType==='multiChoiceSurvey'"></multi-choice-survey>
-    <multi-choice-survey-results v-if="contentType==='multiChoiceSurveyResults'"></multi-choice-survey-results>
+    <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
+    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
+    <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
+    <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
+    <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
+    <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
+    <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
     <module-footer></module-footer>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+
+import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
@@ -25,7 +27,6 @@ import quizTemplate from './../components/modules/templates/quizTemplate'
 import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
-import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
 export default {
   name: 'Module',
@@ -45,9 +46,9 @@ export default {
 
   data () {
     return {
+      contentType: 'video',
       windowWidth: 0,
-      sizeOfContainer: 0,
-      contentType: 'multiChoiceSurvey',
+      sizeOfContainer: 0
     }
   },
 
@@ -64,6 +65,19 @@ export default {
   },
 
   computed: {
+    ...mapState(
+      {
+        slideNumber: state => state.Slides.slide_index,
+        slides: state => state.Slides.importedJSONSlides
+      }
+    ),
+
+    ...mapGetters(
+      [
+        'current_slide'
+      ]
+    ),
+
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'

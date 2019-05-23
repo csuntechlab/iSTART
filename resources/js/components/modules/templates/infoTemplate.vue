@@ -44,13 +44,13 @@ export default {
   },
   watch: {
     slideNumber (newValue, old) {
-      if (this.slideNumber > -1 && this.slideNumber < Object.keys(this.slides).length - 1) {
+      if (this.mountedCounter >= 1 && this.slideNumber > -1 && this.slideNumber < Object.keys(this.slides).length - 1) {
         this.proceedAndContinue()
       }
     }
   },
   mounted () {
-    if (this.slideNumber < 1) {
+    if (this.mountedCounter < 1) {
       this.proceedAndContinue()
     }
   },
@@ -74,11 +74,13 @@ export default {
       ]
     ),
     proceedAndContinue () {
+      this.mountedCounter += 1
       setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber }) }.bind(this), 5000)
     }
   },
   data () {
     return {
+      mountedCounter: 0,
       content: {
         images:
         {
