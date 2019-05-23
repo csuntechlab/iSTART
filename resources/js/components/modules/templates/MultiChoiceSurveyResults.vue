@@ -4,11 +4,11 @@
       <strong>Success!</strong> Email was successfully sent
     </div>
     <div v-if="surveyResultsEmailWasSubmitted===false" class="alert alert-danger transition-350ms">
-      <strong>Failure. </strong> An error has occured 
+      <strong>Failure. </strong> An error has occured
     </div>
 
     <h2 class="multiChoiceSurveyResults__heading">
-      Based on your 3 answers here is tailored motivational and/or educational 
+      Based on your 3 answers here is tailored motivational and/or educational
       advice to follow.
       These are also resources to check out based off your 3 answers.
     </h2>
@@ -24,30 +24,30 @@
       Email these results to yourself
     </h2>
   </div>
-  
+
 </template>
 <script>
-import {mapActions, mapGetters} from 'vuex'
-import { setTimeout } from 'timers';
+import { mapActions, mapGetters } from 'vuex'
+import { setTimeout } from 'timers'
 export default {
   name: 'MultiChoiceSurveyResults',
-  mounted() {
-    setTimeout(()=>{
+  mounted () {
+    setTimeout(() => {
       this.allowUserToContinue(true)
     }, 5000)
   },
   methods: {
     ...mapActions(
-        [
-          'allowUserToContinue',
-          'emailSurveyResults'
-        ]
-      ),
-    sendUserSurveyResults() {
+      [
+        'allowUserToContinue',
+        'emailSurveyResults'
+      ]
+    ),
+    sendUserSurveyResults () {
       this.emailSurveyResults(this.surveyResultLinks)
     }
-  }, 
-  computed: { 
+  },
+  computed: {
     ...mapGetters(
       [
         'surveyResultLinks',
