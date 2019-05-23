@@ -1,0 +1,34 @@
+.multiChoiceSurveyResults {  
+  padding: 3rem 2rem 0rem 2rem;
+  @include media-breakpoint-up(md) {
+    padding: 3rem 2rem 10rem 2rem;
+  }
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $primaryColor--dark;
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+      margin-bottom: 6rem;
+    }
+  }
+  &__link {
+    color: $primaryColor;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+  }
+  &__mail {
+    cursor: pointer;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: $primaryColor--dark;
+    @include media-breakpoint-up(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
