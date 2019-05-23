@@ -7,6 +7,8 @@
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
     <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
     <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
+    <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
+    <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
     <module-footer></module-footer>
   </div>
 </template>
@@ -18,9 +20,11 @@ import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
 import infoTemplate from './../components/modules/templates/infoTemplate'
 import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
 
@@ -32,7 +36,10 @@ export default {
     moduleFooter,
     introTemplate,
     infoTemplate,
+    Navbar,
     quizTemplate,
+    multiChoiceSurvey,
+    multiChoiceSurveyResults,
     videoTemplate,
     cardFlipTemplate
   },
