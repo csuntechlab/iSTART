@@ -7,7 +7,7 @@
           <p v-if="current_slide(slideNumber).header.text"> {{ current_slide(slideNumber).header.text }}</p>
         </div>
       </div>
-      <div v-if="current_slide(slideNumber).content.images &&current_slide(slideNumber).format.images ==='top'" class="row mt-3 justify-content-md-center">
+      <div v-if="current_slide(slideNumber).content.images && current_slide(slideNumber).format.images ==='top'" class="row mt-3 justify-content-md-center">
         <info-photo v-for="(element, index) in current_slide(slideNumber).content.images"
           :image="element"
           :key="index"

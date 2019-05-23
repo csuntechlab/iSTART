@@ -33,7 +33,6 @@ import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate
 export default {
   name: 'Module',
   components: {
-    Navbar,
     moduleHeader,
     moduleFooter,
     introTemplate,
@@ -92,9 +91,15 @@ export default {
   methods: {
     ...mapActions(
       [
-        'getSlideInfo'
+        'getSlideInfo',
+        'allowUserToContinue'
       ]
     ),
+
+    proceedAndContinue () {
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
+    },
+
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }
@@ -104,9 +109,16 @@ export default {
     if (this.$refs.moduleContainer) {
       this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
     }
+
     window.onresize = () => {
       if (this.$refs.moduleContainer) {
         this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+      }
+    }
+
+    document.onkeyup = (e) => {
+      if (process.env.NODE_ENV === 'development' && e.ctrlKey && e.altKey && e.shiftKey && e.which === 13) {
+        this.proceedAndContinue()
       }
     }
   }
