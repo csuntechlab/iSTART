@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
+use App\Mail\NewModuleAvailable;
 use App\Models\ModuleProgress;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Mail\GenericEmail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 class SendNewModuleEmail implements ShouldQueue
@@ -36,7 +36,7 @@ class SendNewModuleEmail implements ShouldQueue
     {
         $mail = $this->user;
 
-        Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($mail));
+        Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($mail));
 
 
     }
