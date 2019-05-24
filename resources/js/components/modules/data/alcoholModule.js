@@ -1,7 +1,7 @@
 export const alcoholModuleSlides = {
   // slide 14
   0: {
-    slide_type: 'video',
+    slide_type: 'emailForm',
     header: {
       title: 'What type of drinker is Sarah?',
       text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.'

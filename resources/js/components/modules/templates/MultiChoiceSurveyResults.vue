@@ -38,13 +38,18 @@ export default {
   },
   methods: {
     ...mapActions(
-      [
-        'allowUserToContinue',
-        'emailSurveyResults'
-      ]
-    ),
-    sendUserSurveyResults () {
-      this.emailSurveyResults(this.surveyResultLinks)
+        [
+          'allowUserToContinue',
+          'emailSurveyResults'
+        ]
+      ),
+    sendUserSurveyResults() {
+      var links = '<ul>'
+      for (var i = 0; i < this.surveyResultLinks.length; i++) {
+        links +=(`<li><a href=${this.surveyResultLinks[i]} target=_blank>${this.surveyResultLinks[i]}</a></li>`)
+      }
+      links +=('</ul>')
+      this.emailSurveyResults(links)
     }
   },
   computed: {
