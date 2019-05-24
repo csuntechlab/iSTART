@@ -2,17 +2,25 @@
   <div class="introSlide">
     <div class="row introSlide__image-container">
       <div class="col-12 p-0">
-        <img class="introSlide__image" v-bind:src="moduleImage">
+        <img class="introSlide__image" v-bind:src="current_slide(slideNumber).moduleImage">
       </div>
     </div>
     <div class="row introSlide__content-wrapper">
       <div class="introSlide__title-container col-12 col-md-3">
-        <h1 class="introSlide__title">{{moduleTitle}}</h1>
-        <button class="btn btn-primary introSlide__start-btn">Start</button>
+        <h1 class="introSlide__title">{{current_slide(slideNumber).moduleTitle}}</h1>
+        <button @click="goForward" class="btn btn-primary introSlide__start-btn">Start</button>
       </div>
       <div class="col-12 col-md-8">
-        <p class="introSlide__description mb-2">{{moduleInfo}}</p>
-        <p class="introSlide__description">Estimated Completion time: {{estimatedCompletion}}</p>
+        <p class="introSlide__description mb-2">
+          <strong>Goal: </strong>
+          {{current_slide(slideNumber).goal}}
+        </p>
+        <p class="introSlide__description mb-2">
+          <strong>definition: </strong>
+          {{current_slide(slideNumber).definition}}
+        </p>
+
+        <p class="introSlide__description">Estimated Completion time: {{current_slide(slideNumber).estimatedCompletion}}</p>
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">
@@ -23,6 +31,7 @@
 
 </template>
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   name: 'IntroSlide',
   data () {
@@ -32,6 +41,30 @@ export default {
       estimatedCompletion: '10',
       moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg'
     }
+  },
+  computed: {
+    ...mapState(
+      {
+        slideNumber: state => state.Slides.slide_index,
+        slides: state => state.Slides.importedJSONSlides
+      }
+    ),
+    ...mapGetters(
+      [
+        'current_slide'
+      ]
+    )
+  },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+    goForward () {
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber + 1 })
+    }
   }
+
 }
 </script>

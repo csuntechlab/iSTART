@@ -8,4 +8,7 @@ interface ModuleProgressContract
 
     public function setModuleProgress($data);
 
+    public function moduleComplete($data);
+
+
 }

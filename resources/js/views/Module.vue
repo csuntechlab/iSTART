@@ -7,9 +7,10 @@
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
     <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
     <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
+    <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>
     <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
     <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
-    <module-footer></module-footer>
+    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurv
 import infoTemplate from './../components/modules/templates/infoTemplate'
 import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import emailForm from './../components/modules/templates/emailForm'
 import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import videoTemplate from './../components/modules/templates/videoTemplate'
 import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
@@ -36,6 +38,7 @@ export default {
     introTemplate,
     infoTemplate,
     Navbar,
+    emailForm,
     quizTemplate,
     multiChoiceSurvey,
     multiChoiceSurveyResults,
@@ -45,7 +48,6 @@ export default {
 
   data () {
     return {
-      contentType: 'video',
       windowWidth: 0,
       sizeOfContainer: 0
     }
