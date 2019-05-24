@@ -1,7 +1,16 @@
 export const alcoholModuleSlides = {
-  // slide 14
+  // slide 1 and 2 (combined to fit the design)
   0: {
-    slide_type: 'emailForm',
+    slide_type: 'intro', 
+    moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
+    moduleTitle: 'Alcohol',
+    goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",
+    definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
+    estimatedCompletion: '15 minutes',
+  },
+  // slide 14
+  1: {
+    slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
       text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.'
@@ -12,7 +21,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  1: {
+  2: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -24,7 +33,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  2: {
+  3: {
     slide_type: 'informational',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -47,7 +56,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 21
-  3: {
+  4: {
     slide_type: 'informational',
     header: {
       title: 'Better Sleep',
@@ -67,7 +76,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  4: {
+  5: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -84,7 +93,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  5: {
+  6: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -107,7 +116,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  6: {
+  7: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
