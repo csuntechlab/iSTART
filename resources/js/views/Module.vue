@@ -2,37 +2,55 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
     <quiz-input-template v-if="slide_type=== 'quizInput'"></quiz-input-template>
     <pie-chart-template v-if="slide_type ==='pie'"></pie-chart-template>
-    <quiz-template v-if="contentType==='quizTemplate'"></quiz-template>
-    <intro-slide v-if="contentType==='introTemplate'"></intro-slide>
-    <module-footer v-if="contentType!=='introTemplate'"></module-footer>
+    <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
+    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
+    <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
+    <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
+    <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
+    <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>
+    <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
+    <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
+    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
   </div>
 </template>
 <script>
+import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+
+import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import moduleHeader from './../components/modules/moduleHeader'
 import moduleFooter from './../components/modules/moduleFooter'
+import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
 import infoTemplate from './../components/modules/templates/infoTemplate'
-import introSlide from './../components/modules/templates/IntroSlide'
+import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
 import quizInputTemplate from './../components/modules/templates/quizInputTemplate'
 import pieChartTemplate from './../components/modules/templates/pieChartTemplate'
-import alcoholModuleSlides from './../components/modules/data/alcoholModule'
-import { mapActions, mapGetters, mapState } from 'vuex'
+import emailForm from './../components/modules/templates/emailForm'
+import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
+import videoTemplate from './../components/modules/templates/videoTemplate'
+import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
+
 export default {
   name: 'Module',
   components: {
     moduleHeader,
     moduleFooter,
-    quizTemplate,
     quizInputTemplate,
+    pieChartTemplate,
+    introTemplate,
     infoTemplate,
     Navbar,
-    introSlide,
-    pieChartTemplate
+    emailForm,
+    quizTemplate,
+    multiChoiceSurvey,
+    multiChoiceSurveyResults,
+    videoTemplate,
+    cardFlipTemplate
   },
+
   data () {
     return {
       windowWidth: 0,
@@ -40,6 +58,7 @@ export default {
       contentType: 'quizInputTemplate'
     }
   },
+
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
@@ -47,9 +66,11 @@ export default {
       this.getSlideInfo(alcoholModuleSlides)
     }
   },
+
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
   },
+
   computed: {
     ...mapState(
       {
@@ -70,23 +91,38 @@ export default {
       }
     }
   },
+
   methods: {
     ...mapActions(
       [
-        'getSlideInfo'
+        'getSlideInfo',
+        'allowUserToContinue'
       ]
     ),
+
+    proceedAndContinue () {
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null })
+    },
+
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }
   },
+
   mounted () {
     if (this.$refs.moduleContainer) {
       this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
     }
+
     window.onresize = () => {
       if (this.$refs.moduleContainer) {
         this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
+      }
+    }
+
+    document.onkeyup = (e) => {
+      if (process.env.NODE_ENV === 'development' && e.ctrlKey && e.altKey && e.shiftKey && e.which === 13) {
+        this.proceedAndContinue()
       }
     }
   }

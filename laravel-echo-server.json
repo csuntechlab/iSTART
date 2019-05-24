@@ -4,14 +4,14 @@
         "database": "redis",
         "databaseConfig": {
                 "redis": {
-                        "host": "redis",
+                        "host": "0.0.0.0",
                         "port": "6379",
                         "db": "0"
                 }
         },
         "devMode": true,
         "host": null,
-        "port": "80",
+        "port": "6001",
         "protocol": "http",
         "socketio": {}
 }

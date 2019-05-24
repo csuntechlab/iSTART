@@ -5,7 +5,7 @@
         <button @click="goBack()" :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</button>
       </div>
       <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'">
+        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText transition-350ms' : 'module__footerText module__footerText--right text-right transition-350ms'">
             Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
         </button>
         <button  v-else :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" disabled>
@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       width: 0,
-      current_slide: 0
+      current_slide: 1
     }
   },
   created () {
@@ -71,7 +71,8 @@ export default {
     proceedAndHideContent: function () {
       let payload = {
         isAbleToProceed: false,
-        slide_index: this.current_slide += 1
+        slide_index: this.current_slide += 1,
+        slide_type: null
       }
       if (this.slideNumber < Object.keys(this.amountOfSlides).length - 1) {
         this.allowUserToContinue(payload)

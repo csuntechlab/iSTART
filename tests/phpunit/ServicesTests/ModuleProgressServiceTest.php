@@ -93,4 +93,15 @@ class ModuleProgressSerivceTest extends TestCase
 
         $this->assertDatabaseHas('module_progresses', $post_data);
     }
+    /**
+     * @test
+     */
+    public function check_if_user_has_a_module_that_exists(){
+
+        $data = ['user_id' => 'members:000022575'];
+        $moduleComplete = ModuleProgress::find($data['user_id']);
+
+        $this->assertNull($moduleComplete);
+
+    }
 }

@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       chartdata: {
-        datacollection1: {
+        userData: {
           labels: ['Your Response'],
           datasets: [
             {
@@ -24,7 +24,7 @@ export default {
             }
           ]
         },
-        datacollection2: {
+        sourcesData: {
           labels: ['Sources'],
           datasets: [
             {
@@ -60,10 +60,10 @@ export default {
   },
   mounted () {
     if (this.chartId === 'one') {
-      this.renderChart(this.chartdata.datacollection1, this.options1)
+      this.renderChart(this.chartdata.userData, this.options1)
     }
     if (this.chartId === 'two') {
-      this.renderChart(this.chartdata.datacollection2, this.options2)
+      this.renderChart(this.chartdata.sourcesData, this.options2)
     }
   }
 }

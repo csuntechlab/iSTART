@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
-use Illuminate\Support\Facades\Log;
-use App\Models\ModuleProgress;
+
+
 
 class ModuleProgressController extends Controller
 {
@@ -50,6 +52,19 @@ class ModuleProgressController extends Controller
 
         $this->moduleProgressUtility->getModuleProgress($data);
     }
+    public function moduleComplete(Request $request){
+
+        $user = $request->all();
+        if($user['user_id']) {
+
+            $this->moduleProgressUtility->moduleComplete($user);
+
+        }else{
+
+            return null;
+        }
+
+        }
 
     public function remindUserofModule(Request $request){
 

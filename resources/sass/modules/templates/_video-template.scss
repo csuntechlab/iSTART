@@ -1,0 +1,22 @@
+.video-template {
+  &__title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+
+    & > * {
+      padding: 0.5rem 2rem;
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    margin-top: 1rem;
+
+    & > * {
+      display: block;
+      font-size: 1.15rem;
+      padding: 0.5rem 2rem;
+    }
+  }
+}

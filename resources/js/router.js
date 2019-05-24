@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  base: process.env.BASE_URL,
+  base: process.env.BASE_URL
 })
 
 export default router

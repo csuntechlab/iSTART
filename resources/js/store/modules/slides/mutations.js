@@ -14,5 +14,8 @@ export default {
   },
   ITERATE_THROUGH_CONTENT (state, payload) {
     state.slide_index = payload
+  },
+  SURVEY_RESULTS_EMAIL_WAS_SUBMITTED(state, payload) {
+    state.surveyResultsEmailWasSubmitted = payload
   }
 }

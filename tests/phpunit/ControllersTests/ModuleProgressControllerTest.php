@@ -8,16 +8,20 @@ use App\Contracts\ModuleProgressContract;
 use App\Http\Controllers\ModuleProgressController;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\Request;
+use Illuminate\Queue\Jobs\Job;
 use Mockery;
 use Tests\TestCase;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Queue;
+use App\Jobs\SendNewModuleEmail;
+use Illuminate\Support\Carbon;
 use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 class ModuleProgressControllerTest extends TestCase
 {
     public $utility;
     public $ModuleProgressController;
+    use DatabaseMigrations;
 
     use DatabaseMigrations;
 
@@ -209,12 +213,32 @@ class ModuleProgressControllerTest extends TestCase
         $data = ['user_id' => 'members:000022575'];
         factory(ModuleProgress::class)->make(['user_id' => 'members:000022575'])
             ->save();
+        $moduleComplete = ModuleProgress::find($data['user_id']);
+
+        Queue::fake();
+
+
+
+       SendNewModuleEmail::dispatch($moduleComplete);
+
+
+        Queue::assertPushed(SendNewModuleEmail::class);
+    }
+    /**
+     * @test
+     */
+    public function moduleComplete_sends_email_to_user_2_days_before_module_deadline()
+    {
+        $data = ['user_id' => 'members:000022575'];
+        factory(ModuleProgress::class)->make(['user_id' => 'members:000022575'])
+            ->save();
 
         $moduleComplete = ModuleProgress::find($data['user_id']);
-        //dd($data['user_id']);
+
         Queue::fake();
         SendReminderModuleEmail::dispatch($moduleComplete);
         Queue::assertPushed(SendReminderModuleEmail::class);
     }
+    
     
 }

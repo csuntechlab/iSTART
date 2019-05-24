@@ -1,13 +1,27 @@
+
 .module{
     overflow-x: hidden;
     min-height: 100vh;
     padding: 0;
+    
     &__header{
         margin-top: -2px;
         z-index: 1;
         position: sticky;
         top: 0;
     }
+
+    &-content {
+        overflow: auto;
+        height: calc(100vh - 9rem);
+        width: 100%;
+
+        @include media-breakpoint-down(sm){
+            height: calc(100vh - 6.5rem);
+            padding-bottom: 25px;
+        }
+    }
+    
     &__footerText{
         color: $secondaryColor;
         @include media-breakpoint-up(md){
@@ -21,23 +35,23 @@
             border: none;
             background: none;
         }
-        &--right{
+        &--right {
             margin-right: 2rem;
             outline: inherit;
             border: none;
             background: none;
         }
     }
-    &-footer{
-        &__background{
-            @include media-breakpoint-down(sm){
+    &-footer {
+        &__background {
+            @include media-breakpoint-down(sm) {
                 position: fixed;
                 width: 100%;
                 bottom: 0;
                 left: 0;
                 padding-top:10px;
             }
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(md) {
                 background-color: $secondaryColor;
 
             }
@@ -45,6 +59,7 @@
             padding-bottom: 15px;
         }
     }
+    
     &__progress{
         font-size: 1rem;
         color: white;

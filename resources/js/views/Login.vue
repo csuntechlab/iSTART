@@ -36,7 +36,6 @@
                   <!-- <router-link to="/module">Modules</router-link> -->
                 </div>
               </div>
-              <router-link to="/module"> Modules </router-link>
             </form>
           </div>
         </div>
