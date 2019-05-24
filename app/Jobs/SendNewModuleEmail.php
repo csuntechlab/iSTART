@@ -36,8 +36,15 @@ class SendNewModuleEmail implements ShouldQueue
     {
         $mail = $this->user;
 
-        Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($mail));
+        if((env('APP_ENV') === 'production')) {
 
+            Mail::to($mail['email'])->send(new NewModuleAvailable($mail));
+
+        } else {
+
+            Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($mail));
+
+        }
 
     }
 
