@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <p>{{ question }}</p>
-    <canvas height="250" width="250" ref="canvas"></canvas>
-  </div>
-</template>
 <script>
 import { Pie } from 'vue-chartjs'
 export default {
@@ -11,33 +5,66 @@ export default {
   extends: Pie,
   props: [
     'response',
-    'question'
+    'chartId',
+    'sources'
   ],
   data () {
     return {
       chartdata: {
-        datacollection: {
-          labels: ['Your Response', 'Sources'],
+        datacollection1: {
+          labels: ['Your Response'],
           datasets: [
             {
               label: 'Data One',
               backgroundColor: [
-                '#FF0000',
-                '#F0F0F0'
+                '#3861D1',
+                '00FF00'
               ],
-              data: [30, this.response]
+              data: [this.response, 100 - this.response]
+            }
+          ]
+        },
+        datacollection2: {
+          labels: ['Sources'],
+          datasets: [
+            {
+              label: 'Data One',
+              backgroundColor: [
+                '#3376C6',
+                '#DEDEDE',
+                '#2E2A32',
+                '#BCB287'
+              ],
+              data: [this.sources, 100 - this.sources]
             }
           ]
         }
       },
-      options: {
-        responsive: false,
-        maintainAspectRatio: false
+      options1: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: false,
+          text: this.question
+        }
+      },
+      options2: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+          display: false,
+          text: this.question
+        }
       }
     }
   },
   mounted () {
-    this.renderChart(this.chartdata.datacollection, this.options)
+    if (this.chartId === 'one') {
+      this.renderChart(this.chartdata.datacollection1, this.options1)
+    }
+    if (this.chartId === 'two') {
+      this.renderChart(this.chartdata.datacollection2, this.options2)
+    }
   }
 }
 </script>

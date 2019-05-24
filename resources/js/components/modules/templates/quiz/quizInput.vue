@@ -1,7 +1,8 @@
 <template>
   <div class="mb-4 ml-1 col-11">
     <p>{{ questionIndex }}. {{ question }} </p>
-    <input v-if="needInputLabel === true" @keydown.tab="userHasEnteredData" v-model="response" class="module-quizInput__label" type="text"/>
+    <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @keydown.tab="userHasEnteredData"  class="module-quizInput__label"/>
+    <p class="module-quizInput__validate module-quizInput__validate--red" v-if="hasUserEnteredDataProperly === false"> You must enter your respones in numbers from: 0 - 100 </p>
   </div>
 </template>
 <script>
@@ -19,7 +20,8 @@ export default {
     return {
       response: null,
       counter: 0,
-      current_slide_number: 0
+      current_slide_number: 0,
+      hasUserEnteredDataProperly: null
     }
   },
   computed: {
@@ -38,9 +40,12 @@ export default {
       ]
     ),
     userHasEnteredData () {
-      if (this.response) {
+      var parseResponse = parseInt(this.response)
+      console.log(typeof (parseResponse))
+      if (typeof (parseResponse) === 'number' && parseResponse > -1 && parseResponse < 100) {
+        this.hasUserEnteredDataProperly = true
         if (this.amountOfResponses <= this.questionLength - 1) {
-          this.getUserResponses({ responses: this.response, counter: this.counter += 1 })
+          this.getUserResponses({ responses: parseResponse, counter: this.counter += 1 })
         }
         if (this.amountOfResponses === this.questionLength) {
           let payload = {
@@ -50,6 +55,8 @@ export default {
           }
           this.allowUserToContinue(payload)
         }
+      } else {
+        this.hasUserEnteredDataProperly = false
       }
     }
   }

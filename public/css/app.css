@@ -12752,6 +12752,10 @@ a.text-dark:focus {
   margin: 0;
 }
 
+.module-quizInput__text {
+  font-size: 1rem;
+}
+
 .module-quizInput__label {
   border-radius: 7.5px;
   border-color: #2699fb;
@@ -12765,6 +12769,24 @@ a.text-dark:focus {
     border-radius: 2px;
     border: 1.7px solid #2699fb;
   }
+}
+
+.module-quizInput__validate {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+  .module-quizInput__validate {
+    font-size: 0.9rem;
+  }
+}
+
+.module-quizInput__validate--red {
+  color: red;
+}
+
+.module-quizInput__validate--green {
+  color: green;
 }
 
 .vue-progress-path .progress {
