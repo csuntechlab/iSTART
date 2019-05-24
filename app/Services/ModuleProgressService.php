@@ -3,6 +3,10 @@
 namespace App\Services;
 use App\Models\ModuleProgress;
 use App\Contracts\ModuleProgressContract;
+use App\Jobs\SendNewModuleEmail;
+use Illuminate\Support\Carbon;
+use App\Jobs\SendReminderModuleEmail;
+use Illuminate\Http\Request;
 
 
 class ModuleProgressService implements ModuleProgressContract
@@ -35,6 +39,22 @@ class ModuleProgressService implements ModuleProgressContract
                 'max_page' => $data['max_page']
             ]
         );
+    }
+
+    public function moduleComplete($data){
+
+        $user = $data['user_id'];
+        $moduleComplete = ModuleProgress::find($user);
+
+        if($moduleComplete == null){
+
+            return null;
+        }
+
+        $job = (new SendNewModuleEmail($moduleComplete))
+            ->delay(Carbon::now()->addSeconds(env('MODULE_COMPLETION')));
+            dispatch($job);
+
     }
 
 }
