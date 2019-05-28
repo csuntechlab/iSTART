@@ -39,7 +39,8 @@ export default {
       moduleTitle: 'Alcohol',
       moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',
       estimatedCompletion: '10',
-      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg'
+      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
+      slide_index_counter: 0
     }
   },
   computed: {
@@ -62,7 +63,7 @@ export default {
       ]
     ),
     goForward () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber + 1 })
+      this.allowUserToContinue({ isAbleToProceed: false, slide_index: this.slide_index_counter + 1 })
     }
   }
 
