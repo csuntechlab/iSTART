@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
     <p>{{ questionIndex }}. {{ question }} </p>
-    <input :disabled="responseCounter > 0" id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @keydown.enter="userHasEnteredData" class="module-quizInput__label"/>
+    <input :disabled="responseCounter > 0" id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" v-on:blur="userHasEnteredData" class="module-quizInput__label"/>
     <p class="module-quizInput__validate module-quizInput__validate--red" v-if="hasUserEnteredDataProperly === false"> You must enter your respones in numbers from: 0 - 100 </p>
   </div>
 </template>
@@ -33,9 +33,6 @@ export default {
       ]
     )
   },
-  mounted () {
-    this.userHasEnteredData()
-  },
   methods: {
     ...mapActions(
       [
@@ -45,7 +42,6 @@ export default {
     ),
     userHasEnteredData () {
       var parseResponse = parseInt(this.response)
-      console.log(typeof (parseResponse))
       if (parseResponse !== null && typeof (parseResponse) === 'number' && parseResponse > -1 && parseResponse < 100) {
         this.hasUserEnteredDataProperly = true
         this.getUserResponses({ index: this.questionIndex - 1, responses: parseResponse, counter: this.responseCounter += 1 })

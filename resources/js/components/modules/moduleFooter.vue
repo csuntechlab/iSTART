@@ -41,7 +41,6 @@ export default {
     ...mapGetters(
       [
         'displayContent',
-        'quizInputCount',
         'slideNumber'
       ]
     )
@@ -49,8 +48,7 @@ export default {
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue',
-        'getUserResponses'
+        'allowUserToContinue'
       ]
     ),
     handleWidthResize () {
@@ -71,8 +69,7 @@ export default {
     proceedAndHideContent: function () {
       let payload = {
         isAbleToProceed: false,
-        slide_index: this.current_slide += 1,
-        slide_type: null
+        slide_index: this.current_slide += 1
       }
       if (this.slideNumber < Object.keys(this.amountOfSlides).length - 1) {
         this.allowUserToContinue(payload)
