@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import quizLegend from './../templates/quiz/quizLegend'
 export default {
   name: 'pieChartTemplate',
@@ -50,9 +50,23 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'userResponses'
+        'userResponses',
+        'slideNumber'
       ]
     )
+  },
+  mounted () {
+    this.proceedAndContinue()
+  },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue'
+      ]
+    ),
+    proceedAndContinue () {
+      setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null }) }.bind(this), 5000)
+    }
   }
 }
 </script>

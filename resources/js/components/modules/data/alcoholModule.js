@@ -1,7 +1,7 @@
 export const alcoholModuleSlides = {
   // slide 1 and 2 (combined to fit the design)
   0: {
-    slide_type: 'intro', 
+    slide_type: 'intro',
     moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
     moduleTitle: 'Alcohol',
     goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",

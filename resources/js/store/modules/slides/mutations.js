@@ -1,6 +1,6 @@
 export default {
   PASS_USER_RESPONSES_TO_PIE_CHART (state, payload) {
-    state.quizInput.responses.push(payload.responses)
+    state.quizInput.responses[payload.index] = payload.responses
     state.quizInput.counter += payload.counter
   },
   CHANGE_SLIDE_TYPE (state, payload) {

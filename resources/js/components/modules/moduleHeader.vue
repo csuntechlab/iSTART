@@ -1,7 +1,7 @@
 <template>
   <div class="module__header">
     <loading-progress class="module__progressBar"
-      :progress="module.progress"
+      :progress="this.slideNumber/this.amountOfSlides"
       :size="getProgressBarSize"
       :shape="module.shape"
       :height="getProgressBarHeight"
@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'moduleHeader',
   props: [
@@ -28,12 +29,19 @@ export default {
   },
   created () {
     window.addEventListener('resize', this.resizeWidth)
+    console.log('slideNumber: ', this.slideNumber)
     this.resizeWidth()
   },
   destroyed () {
     window.removeEventListener('resize', this.resizeWidth)
   },
   computed: {
+    ...mapGetters(
+      [
+        'slideNumber',
+        'amountOfSlides'
+      ]
+    ),
     getProgressBarSize () {
       if (this.size_of_container < 720) {
         return this.windowWidth

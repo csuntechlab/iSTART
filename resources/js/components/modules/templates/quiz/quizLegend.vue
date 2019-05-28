@@ -12,7 +12,7 @@ export default {
     return {
       chartdata: {
         userData: {
-          labels: ['Your Response'],
+          labels: ['You said:'],
           datasets: [
             {
               label: 'Data One',
@@ -25,7 +25,7 @@ export default {
           ]
         },
         sourcesData: {
-          labels: ['Sources'],
+          labels: ['Survey Results:'],
           datasets: [
             {
               label: 'Data One',
@@ -41,6 +41,9 @@ export default {
         }
       },
       options1: {
+        tooltips: {
+          enabled: false
+        },
         responsive: true,
         maintainAspectRatio: false,
         title: {
@@ -49,6 +52,9 @@ export default {
         }
       },
       options2: {
+        tooltips: {
+          enabled: false
+        },
         responsive: true,
         maintainAspectRatio: false,
         title: {
