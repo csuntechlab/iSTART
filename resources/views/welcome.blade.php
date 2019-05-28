@@ -7,7 +7,7 @@
         <meta name="idle-timeout" content="{{ env('IDLE_TIMEOUT')}}">
 
         <title>iSTART</title>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600,700,800" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     </head>
     <body>

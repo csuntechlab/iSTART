@@ -1,6 +1,5 @@
 .video-template {
-  &__title {
-    font-family: 'Arial', sans-serif;
+  &__header {
     font-size: 1.15rem;
     margin-bottom: 1rem;
 
@@ -8,6 +7,10 @@
       padding: 0.5rem 2rem;
       margin: 0;
     }
+  }
+
+  &__title {
+    font-weight: 700;
   }
 
   &__caption {
