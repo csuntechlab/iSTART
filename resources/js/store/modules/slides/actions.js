@@ -3,6 +3,11 @@ export default {
   getSlideInfo ({ commit }, payload) {
     commit('GET_SLIDE_INFO_FROM_JSON', payload)
   },
+
+  updateCard ({ commit }, payload) {
+    commit('UPDATE_CARD', payload)
+  },
+
   allowUserToContinue ({ commit }, payload) {
     commit('ENABLE_OR_DISABLE_CONTENT', payload.isAbleToProceed)
     if (payload.slide_index > -1) {
@@ -15,18 +20,18 @@ export default {
   getUserResponses ({ commit }, payload) {
     commit('PASS_USER_RESPONSES_TO_PIE_CHART', payload)
   },
-  async emailSurveyResults({commit}, payload) {
+
+  async emailSurveyResults ({ commit }, payload) {
     return SlidesAPI.emailSurveyResultsAPI(payload)
-    .then(
-      response => {
-        commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', true)
-      })
-    .catch(
-      failure=> {
-        console.error(failure)
-        commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', false)
-        
-      }
-    )
+      .then(
+        response => {
+          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', true)
+        })
+      .catch(
+        failure => {
+          console.error(failure)
+          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', false)
+        }
+      )
   }
 }

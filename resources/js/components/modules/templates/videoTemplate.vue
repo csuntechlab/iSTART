@@ -1,7 +1,7 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
-    <div class="video-template__title col-12">
-      <h1>{{ current_slide(slideNumber).header.title }}</h1>
+    <div class="video-template__header col-12">
+      <h1 class="video-template__title">{{ current_slide(slideNumber).header.title }}</h1>
       <p>{{ current_slide(slideNumber).header.text }}</p>
     </div>
     <div class="video-template__video col-12 col-md-10">
