@@ -227,26 +227,6 @@ export const alcoholModuleSlides = {
       images: 'carousel'
     }
   },
-  // slide 21
-  5: {
-    slide_type: 'informational',
-    header: {
-      title: 'Better Sleep',
-      text: null
-    },
-    content: {
-      images: {
-        0: 'images/alcoholModule/alcohol_s21_01.jpg'
-      },
-      paragraph: {
-        0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night. ',
-        1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
-      }
-    },
-    format: {
-      images: 'bottom'
-    }
-  },
   // slide 22
   7: {
     slide_type: 'informational',

@@ -1,5 +1,6 @@
 .module-info{
     margin-top: 2.5rem;
+    padding-bottom: 1.5rem;
     z-index: 0;
 
     &__header{
@@ -21,6 +22,8 @@
     }
 
     &__carousel {
+        padding-bottom: 3rem;
+
         &-item {
             height: 25rem;
 
@@ -28,6 +31,11 @@
                 object-fit: contain;
                 height: 100%;
             }
+        }
+
+        &-button {
+            color: $primaryColor;
+            font-size: 2.5rem;
         }
     }
 }
