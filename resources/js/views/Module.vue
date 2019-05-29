@@ -1,7 +1,10 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
-    <module-header :size_of_container="sizeOfContainer"></module-header>
+    <quiz-input-template v-if="slideNumber !== 2 && slide_type=== 'quizInput'"></quiz-input-template>
+    <pie-chart-template v-if="slideNumber === 2"></pie-chart-template>
+    <module-footer></module-footer>
+    <!-- <module-header :size_of_container="sizeOfContainer"></module-header>
     <quiz-input-template v-if="slide_type=== 'quizInput'"></quiz-input-template>
     <pie-chart-template v-if="slide_type ==='pie'"></pie-chart-template>
     <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
@@ -12,7 +15,7 @@
     <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>
     <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
     <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
-    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
+    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer> -->
   </div>
 </template>
 <script>
