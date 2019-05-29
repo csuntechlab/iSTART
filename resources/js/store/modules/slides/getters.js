@@ -1,8 +1,7 @@
 export default {
   displayContent: state => state.isUserAbleToProceed,
   quizInputCount: state => state.quizInput.counter,
-  amountOfResponses: state => Object.keys(state.quizInput.responses).length,
-  userResponses: state => state.quizInput.responses,
+  userResponses: state => index=> state.quizInput.responses[index],
   surveyResultLinks: state => state.surveyResultLinks,
   surveyResultsEmailWasSubmitted: state => state.surveyResultsEmailWasSubmitted,
   slideNumber: state => state.slide_index,

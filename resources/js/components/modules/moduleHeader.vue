@@ -29,7 +29,6 @@ export default {
   },
   created () {
     window.addEventListener('resize', this.resizeWidth)
-    console.log('slideNumber: ', this.slideNumber)
     this.resizeWidth()
   },
   destroyed () {

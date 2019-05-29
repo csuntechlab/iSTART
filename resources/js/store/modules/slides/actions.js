@@ -13,11 +13,9 @@ export default {
     if (payload.slide_index > -1) {
       commit('ITERATE_THROUGH_CONTENT', payload.slide_index)
     }
-    if (payload.slide_type) {
-      commit('CHANGE_SLIDE_TYPE', payload.slide_type)
-    }
   },
   getUserResponses ({ commit }, payload) {
+    if(typeof(payload.responses) === 'number' && payload.responses > -1 && payload.responses < 100)
     commit('PASS_USER_RESPONSES_TO_PIE_CHART', payload)
   },
 
