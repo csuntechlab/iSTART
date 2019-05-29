@@ -19,11 +19,71 @@
 </template>
 <script>
 import quizInput from './../templates/quiz/quizInput'
-import { mapGetters } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 export default {
   name: 'quizInputTemplate',
   components: {
     quizInput
+  },
+  watch:{
+    responseFromState:{
+      handler(newValue, oldValue){
+        console.log('in the water')
+        console.log('here: ', newValue)
+      },
+      deep: true
+    }
+  },
+  updated(){
+    console.log('updated')
+  },
+  computed: {
+    ...mapState(
+      {
+        responseFromState: state => state.Slides.responses
+      }
+    ),
+    ...mapGetters(
+      [
+        'displayContent',
+        'userResponses',
+        'userValidity'
+      ]
+    )
+  },
+  methods: {
+    ...mapActions(
+      [
+        'allowUserToContinue',
+        'getUserResponses'
+      ]
+    ),
+    enableContinueButton(){
+      console.log('in enable')
+      if(Object.keys(this.responseFromState).length === Object.keys(this.slides.questions).length){
+        for(var i = 0; i< Object.keys(this.slides.questions).length; i++){
+          if(typeof(this.userValidity(i)) !== 'undefined' ){
+            console.log('index: ', i, 'userValidity(i).valid: ', this.userValidity(i))
+            if(this.userValidity(i) === false){
+              console.log('index: ', i, 'userValidity(i) is false: ', this.userValidity(i))
+              let payload = {
+                isAbleToProceed: false,
+                slide_index: this.slideNumber
+              }
+              this.allowUserToContinue(payload)
+            } else {
+              let payload = {
+                isAbleToProceed: true,
+                slide_index: this.slideNumber
+              }
+              this.allowUserToContinue(payload)
+            }
+          } else {
+            return null
+          }
+        }//end for
+      }
+    }//end enableContinueButtion()
   },
   data () {
     return {
@@ -49,13 +109,5 @@ export default {
       }
     }
   },
-  computed: {
-    ...mapGetters(
-      [
-        'displayContent',
-        'userResponses'
-      ]
-    )
-  }
 }
 </script>

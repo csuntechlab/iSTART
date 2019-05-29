@@ -15,7 +15,6 @@ export default {
     }
   },
   getUserResponses ({ commit }, payload) {
-    if(typeof(payload.responses) === 'number' && payload.responses > -1 && payload.responses < 100)
     commit('PASS_USER_RESPONSES_TO_PIE_CHART', payload)
   },
 

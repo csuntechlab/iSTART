@@ -1,7 +1,6 @@
 export default {
   PASS_USER_RESPONSES_TO_PIE_CHART (state, payload) {
-    state.quizInput.responses[payload.index] = payload.responses
-    state.quizInput.counter += payload.counter
+    state.responses[payload.index] = payload
   },
   CHANGE_SLIDE_TYPE (state, payload) {
     state.slide_type = payload
@@ -9,7 +8,6 @@ export default {
   GET_SLIDE_INFO_FROM_JSON (state, payload) {
     state.importedJSONSlides = payload
   },
-
   UPDATE_CARD (state, payload) {
     state.importedJSONSlides[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
   },
