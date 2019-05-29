@@ -11,15 +11,15 @@
         <button @click="goForward" class="btn btn-primary introSlide__start-btn">Start</button>
       </div>
       <div class="col-12 col-md-8">
-        <p class="introSlide__description mb-2"> 
+        <p class="introSlide__description mb-2">
           <strong>Goal: </strong>
           {{current_slide(slideNumber).goal}}
         </p>
         <p class="introSlide__description mb-2">
-          <strong>definition: </strong>  
+          <strong>definition: </strong>
           {{current_slide(slideNumber).definition}}
         </p>
-        
+
         <p class="introSlide__description">Estimated Completion time: {{current_slide(slideNumber).estimatedCompletion}}</p>
       </div>
       <div class="row introSlide__button-wrapper">
@@ -40,6 +40,7 @@ export default {
       moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',
       estimatedCompletion: '10',
       moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
+      slide_index_counter: 0
     }
   },
   computed: {
@@ -61,8 +62,8 @@ export default {
         'allowUserToContinue'
       ]
     ),
-    goForward() {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber+1 })
+    goForward () {
+      this.allowUserToContinue({ isAbleToProceed: false, slide_index: this.slide_index_counter + 1 })
     }
   }
 
