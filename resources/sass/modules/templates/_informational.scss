@@ -1,18 +1,33 @@
 .module-info{
     margin-top: 2.5rem;
     z-index: 0;
+
     &__header{
         font-weight: bold
     }
+
     &__body{
         margin-top: 1.85rem;
     }
+
     &__sentence{
         font-size: 1rem;
     }
+
     &__img{
         height: auto;
         max-width: 100%;
         margin-bottom: 1.85rem;
+    }
+
+    &__carousel {
+        &-item {
+            height: 25rem;
+
+            & > * {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
     }
 }

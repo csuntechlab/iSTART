@@ -1,12 +1,12 @@
 export const alcoholModuleSlides = {
   // slide 1 and 2 (combined to fit the design)
   0: {
-    slide_type: 'intro', 
+    slide_type: 'intro',
     moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
     moduleTitle: 'Alcohol',
-    goal: "In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.",
+    goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
     definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
-    estimatedCompletion: '15 minutes',
+    estimatedCompletion: '15 minutes'
   },
   // slide 14
   1: {
@@ -55,8 +55,36 @@ export const alcoholModuleSlides = {
       images: 'bottom'
     }
   },
-  // slide 21
+  // slide 20
   4: {
+    slide_type: 'informational',
+    header: {
+      title: 'Reduced Calorie Intake',
+      text: null
+    },
+    content: {
+      images: {
+        0: 'images/alcoholModule/alcohol_s20_01.png',
+        1: 'images/alcoholModule/alcohol_s20_02.png',
+        2: 'images/alcoholModule/alcohol_s20_03.png',
+        3: 'images/alcoholModule/alcohol_s20_04.png',
+        4: 'images/alcoholModule/alcohol_s20_05.png',
+        5: 'images/alcoholModule/alcohol_s20_06.png',
+        6: 'images/alcoholModule/alcohol_s20_07.png',
+        7: 'images/alcoholModule/alcohol_s20_08.png',
+        8: 'images/alcoholModule/alcohol_s20_09.png'
+      },
+      paragraph: {
+        0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
+      }
+    },
+    format: {
+      images: 'carousel'
+    }
+  },
+  // slide 21
+  5: {
     slide_type: 'informational',
     header: {
       title: 'Better Sleep',
@@ -76,7 +104,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  5: {
+  6: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -93,7 +121,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  6: {
+  7: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -116,7 +144,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  7: {
+  8: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -142,7 +170,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  7: {
+  9: {
     slide_type: 'informational',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -163,7 +191,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  8: {
+  10: {
     slide_type: 'informational',
     header: {
       title: 'Healthy Alternatives',
@@ -182,7 +210,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  9: {
+  11: {
     slide_type: 'informational',
     header: {
       title: 'Physical Activities',
@@ -202,7 +230,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  10: {
+  12: {
     slide_type: 'informational',
     header: {
       title: 'Social Activities',
@@ -224,7 +252,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  11: {
+  13: {
     slide_type: 'informational',
     header: {
       title: null,

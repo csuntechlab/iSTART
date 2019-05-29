@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       width: 0,
-      current_slide: 0
+      current_slide: 1
     }
   },
   created () {
