@@ -405,7 +405,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
           position: null
-        }, 
+        },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
