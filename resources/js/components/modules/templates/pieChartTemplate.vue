@@ -12,13 +12,13 @@
           </div>
           <div :key="index + '-chart1'" class="col-6 mt-1">
             <quiz-legend chart-id="one"
-              :response="userResponses[index].response"
+              :response="userResponses(index)"
               :sources="sources[index]"
             ></quiz-legend>
           </div>
           <div :key="index + '-chart2'" class="col-6 mt-1">
             <quiz-legend chart-id="two"
-              :response="userResponses[index].response"
+              :response="userResponses(index)"
               :sources="sources[index]"
             ></quiz-legend>
           </div>

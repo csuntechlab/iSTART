@@ -31,8 +31,13 @@ export default {
       [
         'userResponses',
         'userValidity',
-        'slideNumber',
+        'slideNumber'
       ]
+    ),
+    ...mapState(
+      {
+        responseFromState: state => state.Slides.responses
+      }
     )
   },
   methods: {
@@ -42,13 +47,13 @@ export default {
         'allowUserToContinue'
       ]
     ),
-    validateInput($event){
-      var enteredValue = $event.target.value.replace(/^[0-9\s\+]+$/,'')
+    validateInput ($event) {
+      var enteredValue = $event.target.value.replace(/^[0-9\\s\\+]+$/, '')
       if (enteredValue === '') {
         this.storeInputIntoState()
       } else {
         this.isInputValid = false
-        this.getUserResponses({index: this.questionIndex - 1, response: $event.target.value, valid: this.isInputValid})
+        this.getUserResponses({ index: this.questionIndex - 1, response: $event.target.value, valid: this.isInputValid })
       }
     },
     storeInputIntoState () {
@@ -57,7 +62,32 @@ export default {
         this.isInputValid = true
         this.getUserResponses({ index: this.questionIndex - 1, response: this.parseResponse, valid: this.isInputValid })
       }
+      this.enableContinueButton()
     },
+    enableContinueButton () {
+      let flagHasOccurred = false
+      if (Object.keys(this.responseFromState).length === this.questionLength) {
+        for (let i = 0; i < this.questionLength; i++) {
+          if (typeof (this.userValidity(i)) !== 'undefined') {
+            if (this.userValidity(i) === false) {
+              flagHasOccurred = true
+              let payload = {
+                isAbleToProceed: false,
+                slide_index: this.slideNumber
+              }
+              this.allowUserToContinue(payload)
+            }
+            if (this.userValidity(i) === true && this.isInputValid === true && flagHasOccurred === false) {
+              let payload = {
+                isAbleToProceed: true,
+                slide_index: this.slideNumber
+              }
+              this.allowUserToContinue(payload)
+            }
+          }
+        }// end for
+      }
+    }// end enableContinueButtion()
   }
 }
 </script>
