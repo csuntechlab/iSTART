@@ -57,7 +57,7 @@
             }
 
             &-text {
-                font-weight: bold;
+                font-weight: normal;
             }
         }
     }
@@ -118,7 +118,6 @@
         &__header {
             color: $black;
             text-align: left;
-            font-family: 'Arial', sans-serif;
             font-size: 1.5rem;
             font-weight: bold;
             width: 100%;
@@ -141,6 +140,7 @@
         &__description {
             color: $black;
             text-align: left;
+            font-weight: normal;
             font-size: 1rem;
             padding: 0 1rem;
             margin-bottom: 0.75rem;
