@@ -8,8 +8,39 @@ export const alcoholModuleSlides = {
     definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
     estimatedCompletion: '15 minutes'
   },
-  // slide 13
+  // slide 6
   1: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: null,
+          alt: null,
+          position: 'top'
+        }
+      },
+      questions: {
+        0: {
+          question: 'Why?',
+          options: {
+            0: {
+              img: {
+                src: null,
+                alt: null
+              },
+              text: 'huh?'
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 13
+  2: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -68,7 +99,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  2: {
+  3: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -80,7 +111,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  3: {
+  4: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -92,7 +123,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  4: {
+  5: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -177,7 +208,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  5: {
+  6: {
     slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -200,7 +231,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 21
-  6: {
+  7: {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
@@ -220,7 +251,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  7: {
+  8: {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
@@ -237,7 +268,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  8: {
+  9: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -260,7 +291,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  9: {
+  10: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -286,7 +317,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  10: {
+  11: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -317,7 +348,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  11: {
+  12: {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -338,7 +369,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  12: {
+  13: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -357,7 +388,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
@@ -377,7 +408,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
@@ -398,7 +429,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  15: {
+  16: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -443,7 +474,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  16: {
+  17: {
     slide_type: 'info',
     header: {
       title: null,
