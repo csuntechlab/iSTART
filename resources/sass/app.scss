@@ -1,34 +1,32 @@
-@import "global/variables";
-
 // Libraries & Frameworks
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import '../../node_modules/vue-progress-path/dist/vue-progress-path.css';
 
-
 // Global
-@import "global/helpers";
+@import "global/variables";
 @import "global/layout";
-@import "global/navbar";
+@import "global/helpers";
 
 // Modules
+@import "modules/navbar";
 @import "modules/error";
 @import "modules/login";
-@import "modules/module";
+@import "modules/cookies-notification";
 @import "modules/dashboard";
+@import "modules/module";
 @import "modules/schedule";
 @import "modules/page";
-@import "modules/control";
-@import "modules/cookies-notification";
 @import "modules/progress";
+@import "modules/control";
 @import "modules/forms";
 
 // Templates
-@import "modules/templates/introduction";
-@import "modules/templates/informational";
-@import "modules/templates/quiz";
-@import "modules/templates/introduction";
-@import "modules/templates/email-form";
-@import "modules/templates/multi-choice-survey";
-@import "modules/templates/multi-choice-survey-results";
-@import "modules/templates/video-template";
-@import "modules/templates/card-flip";
+@import "templates/introduction";
+@import "templates/informational";
+@import "templates/quiz";
+@import "templates/introduction";
+@import "templates/email-form";
+@import "templates/multi-choice-survey";
+@import "templates/multi-choice-survey-results";
+@import "templates/video-template";
+@import "templates/card-flip";
