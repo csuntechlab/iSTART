@@ -8,7 +8,27 @@
     box-sizing: border-box;
 }
 
+html, body {
+    font-size: 16px;
+}
+
+body {
+    @include media-breakpoint-up(md) {
+        background-color: $backgroundColor;
+    }
+}
+
 .navbar-laravel {
     background-color: $secondaryColor;
     box-shadow: 0 2px 4px $black--04;
+}
+
+.main-wrapper {
+    margin-top: 3.3rem;
+    z-index: 0;
+    width: 100%;
+}
+
+.container {
+    background-color: $white; 
 }

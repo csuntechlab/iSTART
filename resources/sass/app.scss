@@ -8,10 +8,7 @@
 // Global
 @import "global/helpers";
 @import "global/layout";
-@import "global/base";
 @import "global/navbar";
-@import "global/buttons";
-@import "global/forms";
 
 // Modules
 @import "modules/error";
@@ -22,6 +19,8 @@
 @import "modules/page";
 @import "modules/control";
 @import "modules/cookies-notification";
+@import "modules/progress";
+@import "modules/forms";
 
 // Templates
 @import "modules/templates/introduction";
@@ -33,7 +32,3 @@
 @import "modules/templates/multi-choice-survey-results";
 @import "modules/templates/video-template";
 @import "modules/templates/card-flip";
-
-
-//Components
-@import "components/progress";

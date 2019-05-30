@@ -23,3 +23,11 @@
 .body--overflow-hidden {
 	overflow: hidden;
 }
+
+.btn {
+	font-weight: 700;
+
+	&:hover {
+			box-shadow: inset 0 0 50px 50px $black--20;
+	}
+}
