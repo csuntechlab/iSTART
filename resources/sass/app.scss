@@ -7,18 +7,18 @@
 @import "global/layout";
 @import "global/helpers";
 
-// Modules
-@import "modules/navbar";
-@import "modules/error";
-@import "modules/login";
-@import "modules/cookies-notification";
-@import "modules/dashboard";
-@import "modules/module";
-@import "modules/schedule";
-@import "modules/page";
-@import "modules/progress";
-@import "modules/control";
-@import "modules/forms";
+// Components
+@import "components/navbar";
+@import "components/error";
+@import "components/login";
+@import "components/cookies-notification";
+@import "components/dashboard";
+@import "components/module";
+@import "components/schedule";
+@import "components/page";
+@import "components/progress";
+@import "components/control";
+@import "components/forms";
 
 // Templates
 @import "templates/introduction";
