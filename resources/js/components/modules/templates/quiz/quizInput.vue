@@ -67,7 +67,7 @@ export default {
     enableContinueButton () {
       let flagHasOccurred = false
       if (Object.keys(this.responseFromState).length === this.questionLength) {
-        for (let i = 0; i < this.questionLength; i++) {
+        for (let i = 0; i < this.questionLength; ++i) {
           if (typeof (this.userValidity(i)) !== 'undefined') {
             if (this.userValidity(i) === false) {
               flagHasOccurred = true
