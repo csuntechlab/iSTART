@@ -1,12 +1,14 @@
 <template>
   <div class="mb-4 ml-1 col-11">
       <p>{{ questionIndex }}. {{ question }} </p>
-      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event)" class="module-quizInput__label"/>
+      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm()" class="module-quizInput__label"/>
       <p class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</p>
   </div>
 </template>
+
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'quizInput',
   props: [
@@ -16,6 +18,7 @@ export default {
     'questionIndex',
     'needInputLabel'
   ],
+
   data () {
     return {
       response: this.user_response,
@@ -26,6 +29,7 @@ export default {
       parseResponse: null
     }
   },
+
   computed: {
     ...mapGetters(
       [
@@ -40,6 +44,7 @@ export default {
       }
     )
   },
+
   methods: {
     ...mapActions(
       [
@@ -47,47 +52,54 @@ export default {
         'allowUserToContinue'
       ]
     ),
+
     validateInput ($event) {
-      var enteredValue = $event.target.value.replace(/^[0-9\\s\\+]+$/, '')
+      let enteredValue = $event.target.value.replace(/^[0-9\\s\\+]+$/, '')
       if (enteredValue === '') {
+        this.isInputValid = true
         this.storeInputIntoState()
       } else {
         this.isInputValid = false
         this.getUserResponses({ index: this.questionIndex - 1, response: $event.target.value, valid: this.isInputValid })
       }
     },
+
     storeInputIntoState () {
       this.parseResponse = parseInt(this.response)
-      if (this.parseResponse !== null && Number.isInteger(this.parseResponse) && this.parseResponse > -1 && this.parseResponse < 101) {
-        this.isInputValid = true
+      if (Number.isInteger(this.parseResponse) && this.parseResponse > -1 && this.parseResponse < 101) {
         this.getUserResponses({ index: this.questionIndex - 1, response: this.parseResponse, valid: this.isInputValid })
       }
-      this.enableContinueButton()
     },
-    enableContinueButton () {
-      let flagHasOccurred = false
-      if (Object.keys(this.responseFromState).length === this.questionLength) {
+
+    validateForm () {
+      // Check if all inputs have been filled before checking question data
+      if (parseInt(Object.keys(this.responseFromState).length) === parseInt(this.questionLength)) {
         for (let i = 0; i < this.questionLength; ++i) {
-          if (typeof (this.userValidity(i)) !== 'undefined') {
-            if (this.userValidity(i) === false) {
-              flagHasOccurred = true
-              let payload = {
-                isAbleToProceed: false,
-                slide_index: this.slideNumber
-              }
-              this.allowUserToContinue(payload)
+          if (this.responseFromState[i].valid === true) {
+            let payload = {
+              isAbleToProceed: true,
+              slide_index: this.slideNumber
             }
-            if (this.userValidity(i) === true && this.isInputValid === true && flagHasOccurred === false) {
-              let payload = {
-                isAbleToProceed: true,
-                slide_index: this.slideNumber
-              }
-              this.allowUserToContinue(payload)
+            this.allowUserToContinue(payload)
+          } else {
+            let payload = {
+              isAbleToProceed: false,
+              slide_index: this.slideNumber
             }
+            this.allowUserToContinue(payload)
+
+            // If it doesn't meet requirement, exit loop
+            break
           }
-        }// end for
+        }
+      } else {
+        let payload = {
+          isAbleToProceed: false,
+          slide_index: this.slideNumber
+        }
+        this.allowUserToContinue(payload)
       }
-    }// end enableContinueButtion()
+    }
   }
 }
 </script>
