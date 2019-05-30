@@ -33,15 +33,18 @@
     </div>
   </div>
 </template>
+
 <script>
-import infoContent from './info/infoContent'
-import infoPhoto from './info/infoPhoto'
+import InfoContent from './info/InfoContent'
+import InfoPhoto from './info/InfoPhoto'
+
 import { mapState, mapGetters, mapActions } from 'vuex'
 export default {
   components: {
-    infoContent,
-    infoPhoto
+    InfoContent,
+    InfoPhoto
   },
+
   watch: {
     slideNumber (newValue, old) {
       if (this.mountedCounter >= 1 && this.slideNumber > -1 && this.slideNumber < Object.keys(this.slides).length - 1) {
@@ -49,11 +52,13 @@ export default {
       }
     }
   },
+
   mounted () {
     if (this.mountedCounter < 1) {
       this.proceedAndContinue()
     }
   },
+
   computed: {
     ...mapState(
       {
@@ -67,6 +72,7 @@ export default {
       ]
     )
   },
+
   methods: {
     ...mapActions(
       [
@@ -78,6 +84,7 @@ export default {
       setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber }) }.bind(this), 5000)
     }
   },
+
   data () {
     return {
       mountedCounter: 0,

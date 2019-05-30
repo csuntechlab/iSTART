@@ -178,7 +178,7 @@ export const alcoholModuleSlides = {
   },
   // slide 19
   5: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
       text: null
@@ -201,7 +201,7 @@ export const alcoholModuleSlides = {
   },
   // slide 21
   6: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Better Sleep',
       text: null
@@ -221,7 +221,7 @@ export const alcoholModuleSlides = {
   },
   // slide 22
   7: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
       text: null
@@ -238,7 +238,7 @@ export const alcoholModuleSlides = {
   },
   // slide 23
   8: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
       text: null
@@ -261,7 +261,7 @@ export const alcoholModuleSlides = {
   },
   // slide 24
   9: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
@@ -318,7 +318,7 @@ export const alcoholModuleSlides = {
   },
   // slide 26
   11: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
       text: null
@@ -339,7 +339,7 @@ export const alcoholModuleSlides = {
   },
   // slide 28
   12: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
       text: null
@@ -358,7 +358,7 @@ export const alcoholModuleSlides = {
   },
   // slide 29
   13: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Physical Activities',
       text: null
@@ -378,7 +378,7 @@ export const alcoholModuleSlides = {
   },
   // slide 30
   14: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Social Activities',
       text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!'
@@ -444,7 +444,7 @@ export const alcoholModuleSlides = {
   },
   // slide 33
   16: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: null,
       text: null

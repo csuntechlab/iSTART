@@ -3,7 +3,7 @@
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
-    <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
+    <info-template v-if="current_slide(slideNumber).slide_type === 'info'"></info-template>
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
     <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
     <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
@@ -19,31 +19,31 @@ import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
 import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
-import moduleHeader from './../components/modules/moduleHeader'
-import moduleFooter from './../components/modules/moduleFooter'
-import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
-import infoTemplate from './../components/modules/templates/infoTemplate'
-import introTemplate from './../components/modules/templates/IntroSlide'
-import quizTemplate from './../components/modules/templates/quizTemplate'
-import emailForm from './../components/modules/templates/emailForm'
-import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
-import videoTemplate from './../components/modules/templates/videoTemplate'
-import cardFlipTemplate from './../components/modules/templates/cardFlipTemplate'
+import ModuleHeader from './../components/modules/ModuleHeader'
+import ModuleFooter from './../components/modules/ModuleFooter'
+import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
+import InfoTemplate from './../components/modules/templates/InfoTemplate'
+import IntroTemplate from './../components/modules/templates/IntroSlide'
+import QuizTemplate from './../components/modules/templates/QuizTemplate'
+import EmailForm from './../components/modules/templates/EmailForm'
+import MultiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
+import VideoTemplate from './../components/modules/templates/VideoTemplate'
+import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate'
 
 export default {
   name: 'Module',
   components: {
-    moduleHeader,
-    moduleFooter,
-    introTemplate,
-    infoTemplate,
+    ModuleHeader,
+    ModuleFooter,
+    IntroTemplate,
+    InfoTemplate,
     Navbar,
-    emailForm,
-    quizTemplate,
-    multiChoiceSurvey,
-    multiChoiceSurveyResults,
-    videoTemplate,
-    cardFlipTemplate
+    EmailForm,
+    QuizTemplate,
+    MultiChoiceSurvey,
+    MultiChoiceSurveyResults,
+    VideoTemplate,
+    CardFlipTemplate
   },
 
   data () {

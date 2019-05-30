@@ -20,12 +20,13 @@
 </template>
 
 <script>
-import quizOption from './quiz/quizOption'
+import QuizOption from './quiz/QuizOption'
 export default {
   name: 'quizTemplate',
   components: {
-    quizOption
+    QuizOption
   },
+
   data () {
     return {
       optionsObject: {
