@@ -1,6 +1,9 @@
 <template>
-  <div :class="determineColSize">
-    <img class="module-info__img" :src="image" alt="">
+  <div :class="[
+  (image.position === 'top' ? 'module-info__img--top' : ''),
+  (image.position === 'bottom' ? 'module-info__img--bottom' : ''),
+  'module-info__img-align', determineColSize]">
+    <img class="module-info__img" :src="image.src" :alt="image.alt">
   </div>
 </template>
 <script>
