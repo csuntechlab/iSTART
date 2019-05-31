@@ -17,18 +17,22 @@
             :paragraph="element"
             :icon="element.icon">
           </info-content>
+          <info-carousel v-if="current_slide(slideNumber).format ==='carousel'" :images="current_slide(slideNumber).content.carousel"></info-carousel>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
-import infoContent from './info/infoContent'
-import infoPhoto from './info/infoPhoto'
 import { mapState, mapGetters, mapActions } from 'vuex'
+import infoContent from './info/infoContent'
+import infoCarousel from './info/infoCarousel'
+import infoPhoto from './info/infoPhoto'
 
 export default {
   components: {
+    infoCarousel,
     infoContent,
     infoPhoto
   },

@@ -101,29 +101,8 @@ export const alcoholModuleSlides = {
       }
     }
   },
-  // slide 17
-  5: {
-    slide_type: 'informational',
-    header: {
-      title: 'Dependency',
-      text: null
-    },
-    content: {
-      images: {
-        0: {
-          src: 'images/alcoholModule/alcohol_s17_01.png',
-          alt: 'muppets wasted on couch',
-          position: 'bottom'
-        }
-      },
-      paragraph: {
-        0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
-        1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
-      }
-    }
-  },
   // slide 13
-  6: {
+  5: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -182,7 +161,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  7: {
+  6: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -194,7 +173,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  8: {
+  7: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -203,6 +182,27 @@ export const alcoholModuleSlides = {
     content: {
       video_id: '5jNEVGj6gS0',
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+    }
+  },
+  // slide 17
+  8: {
+    slide_type: 'informational',
+    header: {
+      title: 'Dependency',
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s17_01.png',
+          alt: 'muppets wasted on couch',
+          position: 'bottom'
+        }
+      },
+      paragraph: {
+        0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
+        1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
+      }
     }
   },
   // slide 18
@@ -326,8 +326,70 @@ export const alcoholModuleSlides = {
       }
     }
   },
-  // slide 21
+  // slide 20
   11: {
+    slide_type: 'informational',
+    header: {
+      title: 'Reduced Calorie Intake',
+      text: null
+    },
+    content: {
+      carousel: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s20_01.png',
+          alt: 'gin and tonic',
+          position: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s20_02.png',
+          alt: 'beer',
+          position: null
+        },
+        2: {
+          src: 'images/alcoholModule/alcohol_s20_03.png',
+          alt: 'red wine',
+          position: null
+        },
+        3: {
+          src: 'images/alcoholModule/alcohol_s20_04.png',
+          alt: 'cosmo',
+          position: null
+        },
+        4: {
+          src: 'images/alcoholModule/alcohol_s20_05.png',
+          alt: 'margarita',
+          position: null
+        },
+        5: {
+          src: 'images/alcoholModule/alcohol_s20_06.png',
+          alt: 'piña colada',
+          position: null
+        },
+        6: {
+          src: 'images/alcoholModule/alcohol_s20_07.png',
+          alt: 'mojito',
+          position: null
+        },
+        7: {
+          src: 'images/alcoholModule/alcohol_s20_08.png',
+          alt: '80 proof spirits',
+          position: null
+        },
+        8: {
+          src: 'images/alcoholModule/alcohol_s20_09.png',
+          alt: 'white wine',
+          position: null
+        }
+      },
+      paragraph: {
+        0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
+      }
+    },
+    format: 'carousel'
+  },
+  // slide 21
+  12: {
     slide_type: 'informational',
     header: {
       title: 'Better Sleep',
@@ -342,13 +404,13 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph: {
-        0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night. ',
-        1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
+        0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
       }
     }
   },
   // slide 22
-  12: {
+  13: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -366,7 +428,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  13: {
+  14: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -386,7 +448,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  14: {
+  15: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -417,7 +479,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  15: {
+  16: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -448,7 +510,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  16: {
+  17: {
     slide_type: 'informational',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -470,7 +532,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  17: {
+  18: {
     slide_type: 'informational',
     header: {
       title: 'Healthy Alternatives',
@@ -486,7 +548,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  18: {
+  19: {
     slide_type: 'informational',
     header: {
       title: 'Physical Activities',
@@ -507,7 +569,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  19: {
+  20: {
     slide_type: 'informational',
     header: {
       title: 'Social Activities',
@@ -533,7 +595,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  20: {
+  21: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -578,7 +640,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  21: {
+  22: {
     slide_type: 'informational',
     header: {
       title: null,

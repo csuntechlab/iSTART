@@ -23,3 +23,8 @@
 .body--overflow-hidden {
 	overflow: hidden;
 }
+
+// Carousel Color Overide
+.carousel-indicators li {
+  background-color: $primaryColor !important;
+}
