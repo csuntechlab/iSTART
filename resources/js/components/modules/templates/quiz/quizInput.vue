@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
       <p>{{ questionIndex }}. {{ question }} </p>
-      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm()" class="module-quizInput__label"/>
+      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/>
       <p class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</p>
   </div>
 </template>
@@ -56,8 +56,13 @@ export default {
     validateInput ($event) {
       let enteredValue = $event.target.value.replace(/^[0-9\\s\\+]+$/, '')
       if (enteredValue === '') {
-        this.isInputValid = true
-        this.storeInputIntoState()
+        if (this.checkForEmptyInput($event)) {
+          this.isInputValid = false
+          this.preventContinue()
+        } else {
+          this.isInputValid = true
+          this.storeInputIntoState()
+        }
       } else {
         this.isInputValid = false
         this.getUserResponses({ index: this.questionIndex - 1, response: $event.target.value, valid: this.isInputValid })
@@ -71,33 +76,44 @@ export default {
       }
     },
 
-    validateForm () {
+    allowContinue () {
+      let payload = {
+        isAbleToProceed: true,
+        slide_index: this.slideNumber
+      }
+      this.allowUserToContinue(payload)
+    },
+
+    preventContinue () {
+      let payload = {
+        isAbleToProceed: false,
+        slide_index: this.slideNumber
+      }
+      this.allowUserToContinue(payload)
+    },
+
+    checkForEmptyInput ($event) {
+      if ($event.target.value === null || $event.target.value === 'undefined' || $event.target.value === '') {
+        return true
+      } else {
+        return false
+      }
+    },
+
+    validateForm ($event) {
       // Check if all inputs have been filled before checking question data
       if (parseInt(Object.keys(this.responseFromState).length) === parseInt(this.questionLength)) {
         for (let i = 0; i < this.questionLength; ++i) {
           if (this.responseFromState[i].valid === true) {
-            let payload = {
-              isAbleToProceed: true,
-              slide_index: this.slideNumber
-            }
-            this.allowUserToContinue(payload)
+            this.allowContinue()
           } else {
-            let payload = {
-              isAbleToProceed: false,
-              slide_index: this.slideNumber
-            }
-            this.allowUserToContinue(payload)
-
-            // If it doesn't meet requirement, exit loop
+            this.preventContinue()
+            // If not valid, exit loop
             break
           }
         }
       } else {
-        let payload = {
-          isAbleToProceed: false,
-          slide_index: this.slideNumber
-        }
-        this.allowUserToContinue(payload)
+        this.preventContinue()
       }
     }
   }

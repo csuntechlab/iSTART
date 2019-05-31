@@ -18,7 +18,7 @@ export default {
               label: 'Data One',
               backgroundColor: [
                 '#3861D1',
-                '#00FF00'
+                '#DEDEDE'
               ],
               data: [this.response, 100 - this.response]
             }

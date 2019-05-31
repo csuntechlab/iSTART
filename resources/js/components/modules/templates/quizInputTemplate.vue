@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row mt-5 mb-5">
         <div class="col-12">
-          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values and press ENTER to successfully enter your response</p>
+          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values 0 to 100.</p>
         </div>
         <quiz-input v-for="(element, index) in slides.questions"
           :key="index"

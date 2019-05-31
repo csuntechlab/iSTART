@@ -15,6 +15,7 @@
     <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
   </div>
 </template>
+
 <script>
 import alcoholModuleSlides from './../components/modules/data/alcoholModule'
 
