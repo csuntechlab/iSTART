@@ -5,27 +5,34 @@
         <h1 class="module-quiz__header-font">{{ current_slide(slideNumber).header.title }}</h1>
       </div>
     </div>
-    <div class="row mt-4 justify-content-center">
-
-      <quiz-option  v-for="(element, id)  in current_slide(slideNumber).content.questions"
-        :image="element.image"
-        :option="element.option"
-        :correct_answer="element.correct_answer"
-        :key="id"
-        :optionID="id">
-      </quiz-option>
+    <div class="row">
+      <p v-if="current_slide(slideNumber).header.text"> {{ current_slide(slideNumber).header.text }}</p>
+      <info-photo v-for="(element, id) in current_slide(slideNumber).content.images"
+        :key="`${id}-${element.id}`"
+        :image="element"
+        :imageCount="Object.keys(current_slide(slideNumber).content.images).length">
+      </info-photo>
+      <quiz-question  v-for="(element, id) in current_slide(slideNumber).content.questions"
+        :object="element"
+        :options="element.options"
+        :slideNumber="slideNumber"
+        :index="id"
+        :key="id">
+      </quiz-question>
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
-import QuizOption from './quiz/QuizOption'
+import QuizQuestion from './quiz/QuizQuestion'
+import InfoPhoto from './info/InfoPhoto'
 
 export default {
-  components: [
-    QuizOption
-  ],
+  components: {
+    QuizQuestion,
+    InfoPhoto
+  },
 
   computed: {
     ...mapState(
@@ -46,11 +53,7 @@ export default {
       [
         'allowUserToContinue'
       ]
-    ),
-
-    proceedAndContinue () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
-    }
+    )
   }
 }
 </script>

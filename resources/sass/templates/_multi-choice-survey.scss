@@ -1,7 +1,5 @@
 .multiChoiceSurvey {
-
   &__option {
-    @extend .module-quiz__option;
     height: 100%;
     &--selected {
       height: 100%;

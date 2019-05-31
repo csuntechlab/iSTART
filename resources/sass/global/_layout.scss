@@ -13,6 +13,8 @@ html, body {
 }
 
 body {
+    background-color: $body-bg;
+    
     @include media-breakpoint-up(md) {
         background-color: $backgroundColor;
     }

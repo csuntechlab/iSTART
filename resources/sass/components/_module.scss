@@ -1,8 +1,12 @@
 
-.module{
+.module {
     overflow-x: hidden;
     min-height: 100vh;
     padding: 0;
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 3.2rem;
+    }
     
     &__header{
         margin-top: -2px;
@@ -63,7 +67,7 @@
     &__progress{
         font-size: 1rem;
         color: white;
-        font-weight: 1000;
+        font-weight: normal;
         margin-top: -20px;
         margin-bottom: 0;
         text-align: center;

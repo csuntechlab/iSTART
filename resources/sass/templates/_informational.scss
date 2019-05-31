@@ -10,9 +10,34 @@
     &__sentence{
         font-size: 1rem;
     }
-    &__img{
+    &__img {
         height: auto;
         max-width: 100%;
         margin-bottom: 1.85rem;
+
+        &-align {
+            margin: 0 auto;
+        }
+
+        &--top {
+            order: -1;
+        }
+
+        &--bottom {
+            order: 100;
+        }
+
+        &--half {
+            @include media-breakpoint-up(md) {
+                max-width: 768px;
+                width: 50%;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
     }
 }

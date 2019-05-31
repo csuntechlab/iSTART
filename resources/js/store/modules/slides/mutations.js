@@ -7,6 +7,10 @@ export default {
     state.importedJSONSlides[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
   },
 
+  UPDATE_RESPONSE (state, payload) {
+    state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].showResponse = true
+  },
+
   ENABLE_OR_DISABLE_CONTENT (state, payload) {
     state.isUserAbleToProceed = payload
   },

@@ -18,21 +18,155 @@ export const alcoholModuleSlides = {
     content: {
       images: {
         0: {
-          src: null,
-          alt: null,
-          position: 'top'
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
         }
       },
       questions: {
         0: {
-          question: 'Why?',
+          showResponse: false,
+          question: 'Taking two shots of tequila is the same as which of the following?',
           options: {
             0: {
+              isAnswer: false,
+              text: 'Four cans of beer (12oz each)',
               img: {
                 src: null,
                 alt: null
               },
-              text: 'huh?'
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              text: 'Three cans of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            },
+            2: {
+              isAnswer: true,
+              text: 'Two cans of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'You are correct!!! one standard shot (1.5oz) is the same as one can of beer (12oz)',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              text: 'One can of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 7
+  2: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: null,
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Let’s see what you think - which of these pours of Whiskey in a 7oz glass is a standard drink size?',
+          options: {
+            0: {
+              isAnswer: true,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_01.png',
+                alt: 'glass filled with alcohol one fith\'s of container'
+              },
+              response: {
+                text: '1.5oz<br>Great job! This is one standard drink – 1.5 oz of 40% liquor!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_02.png',
+                alt: 'glass filled with alcohol two fith\'s of container'
+              },
+              response: {
+                text: '2oz<br>Good try, but this is more than one standard drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_03.png',
+                alt: 'glass filled with alcohol two fourth\'s of container'
+              },
+              response: {
+                text: '3oz<br>Nice guess, but actually, this is the same as two standard drinks!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_04.png',
+                alt: 'glass filled with alcohol three fourth\'s of container'
+              },
+              response: {
+                text: '4.5oz<br>Whoa, hold your horses there!<br>This is actually 4.5 oz – and that equals <u>three</u> standard drinks!!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
             }
           }
         }
@@ -40,7 +174,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 13
-  2: {
+  3: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -99,7 +233,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  3: {
+  4: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -111,7 +245,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  4: {
+  5: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -123,7 +257,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  5: {
+  6: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -208,7 +342,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  6: {
+  7: {
     slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -216,22 +350,39 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s19_01.jpg',
-        1: 'images/alcoholModule/alcohol_s19_02.jpg',
-        2: 'images/alcoholModule/alcohol_s19_03.jpg',
-        3: 'images/alcoholModule/alcohol_s19_04.jpg'
+        0: {
+          src: 'images/alcoholModule/alcohol_s19_01.jpg',
+          alt: 'one dollar bills',
+          position: null,
+          width: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s19_02.jpg',
+          alt: 'person body turned and tilted head staring',
+          position: null,
+          width: null
+        },
+        2: {
+          src: 'images/alcoholModule/alcohol_s19_03.jpg',
+          alt: 'person with shades smiling at camera',
+          position: null,
+          width: null
+        },
+        3: {
+          src: 'images/alcoholModule/alcohol_s19_04.jpg',
+          alt: 'person covering eyes with strawberries smiling',
+          position: null,
+          width: null
+        }
       },
       paragraph: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 21
-  7: {
+  8: {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
@@ -239,19 +390,21 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s21_01.jpg'
+        0: {
+          src: 'images/alcoholModule/alcohol_s21_01.jpg',
+          alt: 'person sleeping on couch with comfy blanket',
+          position: 'bottom',
+          width: null
+        }
       },
       paragraph: {
         0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night. ',
         1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 22
-  8: {
+  9: {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
@@ -259,16 +412,18 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s22_01.PNG'
+        0: {
+          src: 'images/alcoholModule/alcohol_s22_01.PNG',
+          alt: 'alcohol infographic on being a factor for academic problems',
+          position: null,
+          width: null
+        }
       },
       paragraph: null
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 23
-  9: {
+  10: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -285,13 +440,10 @@ export const alcoholModuleSlides = {
         6: 'Share your plan with those you plan on going out with...',
         7: '...and always look out for each other'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 24
-  10: {
+  11: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -299,25 +451,32 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s24_01.jpg',
-        1: 'images/alcoholModule/alcohol_s24_02.jpg'
+        0: {
+          src: 'images/alcoholModule/alcohol_s24_01.jpg',
+          alt: 'no alcohol sticker',
+          position: null,
+          width: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s24_02.jpg',
+          alt: 'no sign',
+          position: null,
+          width: null
+        }
       },
       paragraph: {
-        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3>',
-        1: 'Thanks, but I’ve got a ton of work to do later.',
-        2: 'No thanks, I’m taking medication that I cannot drink with.',
-        3: 'I’m driving tonight.” (You can also offer to be the designated driver!',
-        4: 'I’d rather get a soda, thanks.',
-        5: 'I have a game/practice tomorrow.',
-        6: 'I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!'
+        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3><ul>',
+        1: '<li>Thanks, but I’ve got a ton of work to do later.</li>',
+        2: '<li>No thanks, I’m taking medication that I cannot drink with.</li>',
+        3: '<li>I’m driving tonight.” (You can also offer to be the designated driver!</li>',
+        4: '<li>I’d rather get a soda, thanks.</li>',
+        5: '<li>I have a game/practice tomorrow.</li>',
+        6: '<li>I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</li><ul>'
       }
-    },
-    format: {
-      images: 'top'
     }
   },
   // slide 25
-  11: {
+  12: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -348,7 +507,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  12: {
+  13: {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -356,20 +515,22 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s26_01.png'
+        0: {
+          src: 'images/alcoholModule/alcohol_s26_01.png',
+          alt: 'wine infographic cartoon',
+          position: 'bottom',
+          width: null
+        }
       },
       paragraph: {
         0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
         1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
         2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 28
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -382,13 +543,10 @@ export const alcoholModuleSlides = {
         1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
         2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 29
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
@@ -396,19 +554,21 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s29_01.jpg'
+        0: {
+          src: 'images/alcoholModule/alcohol_s29_01.jpg',
+          alt: 'two people running next to a lake',
+          position: 'bottom',
+          width: null
+        }
       },
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 30
-  15: {
+  16: {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
@@ -416,20 +576,27 @@ export const alcoholModuleSlides = {
     },
     content: {
       images: {
-        0: 'images/alcoholModule/alcohol_s30_01.jpg',
-        1: 'images/alcoholModule/alcohol_s30_02.jpg'
+        0: {
+          src: 'images/alcoholModule/alcohol_s30_01.jpg',
+          alt: 'friends holding each other on top of a hill',
+          position: null,
+          width: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s30_02.jpg',
+          alt: 'people putting hands in the middle for teamwork',
+          position: 'bottom',
+          width: null
+        }
       },
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
       }
-    },
-    format: {
-      images: 'bottom'
     }
   },
   // slide 31
-  16: {
+  17: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -474,7 +641,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  17: {
+  18: {
     slide_type: 'info',
     header: {
       title: null,
