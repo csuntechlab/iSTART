@@ -259,7 +259,7 @@ export const alcoholModuleSlides = {
       text: null
     },
     content: {
-      paragraph: {
+      list: {
         0: 'Eat before you drink.',
         1: 'Snack while you drink.',
         2: 'For every alcoholic drink that you consume, have a glass of water in between.',
@@ -275,7 +275,7 @@ export const alcoholModuleSlides = {
   9: {
     slide_type: 'informational',
     header: {
-      title: 'Responsible Drinking Checklist',
+      title: 'Rethink Your Drink!',
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
     },
     content: {
@@ -292,14 +292,14 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph: {
-        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3><ul>',
-        1: '<li>Thanks, but I’ve got a ton of work to do later.</li>',
-        2: '<li>No thanks, I’m taking medication that I cannot drink with.</li>',
-        3: '<li>I’m driving tonight.” (You can also offer to be the designated driver!</li>',
-        4: '<li>I’d rather get a soda, thanks.</li>',
-        5: '<li>I have a game/practice tomorrow.</li>',
-        6: '<li>I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</li><ul>'
-      }
+        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3>',
+        1: 'Thanks, but I’ve got a ton of work to do later.',
+        2: 'No thanks, I’m taking medication that I cannot drink with.',
+        3: 'I’m driving tonight.” (You can also offer to be the designated driver!',
+        4: 'I’d rather get a soda, thanks.',
+        5: 'I have a game/practice tomorrow.',
+        6: 'I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!'
+      },
     }
   },
   // slide 25

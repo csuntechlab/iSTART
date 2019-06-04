@@ -17,6 +17,13 @@
             :paragraph="element"
             :icon="element.icon">
           </info-content>
+          <ul>
+            <info-list v-for="(element, index) in current_slide(slideNumber).content.list"
+              :key="`${index}-${element.id}`"
+              :listItem="element"
+              >
+            </info-list>
+          </ul>
         </div>
       </div>
     </div>
@@ -25,12 +32,14 @@
 <script>
 import infoContent from './info/infoContent'
 import infoPhoto from './info/infoPhoto'
+import infoList from './info/infoList'
 import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
     infoContent,
-    infoPhoto
+    infoPhoto,
+    infoList
   },
   watch: {
     slideNumber (newValue, old) {
