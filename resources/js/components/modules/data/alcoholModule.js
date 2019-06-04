@@ -525,8 +525,16 @@ export const alcoholModuleSlides = {
       }
     }
   },
+  // slide  32
+  17:{
+    slide_type: 'emailForm',
+    header:{
+      title:null,
+      text:null
+    },
+  },
   // slide 33
-  17: {
+  18: {
     slide_type: 'informational',
     header: {
       title: null,
