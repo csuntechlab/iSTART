@@ -479,8 +479,70 @@ export const alcoholModuleSlides = {
       }
     }
   },
-  // slide 21
+  // slide 20
   9: {
+    slide_type: 'info',
+    header: {
+      title: 'Reduced Calorie Intake',
+      text: null
+    },
+    content: {
+      carousel: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s20_01.png',
+          alt: 'gin and tonic',
+          position: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s20_02.png',
+          alt: 'beer',
+          position: null
+        },
+        2: {
+          src: 'images/alcoholModule/alcohol_s20_03.png',
+          alt: 'red wine',
+          position: null
+        },
+        3: {
+          src: 'images/alcoholModule/alcohol_s20_04.png',
+          alt: 'cosmo',
+          position: null
+        },
+        4: {
+          src: 'images/alcoholModule/alcohol_s20_05.png',
+          alt: 'margarita',
+          position: null
+        },
+        5: {
+          src: 'images/alcoholModule/alcohol_s20_06.png',
+          alt: 'piña colada',
+          position: null
+        },
+        6: {
+          src: 'images/alcoholModule/alcohol_s20_07.png',
+          alt: 'mojito',
+          position: null
+        },
+        7: {
+          src: 'images/alcoholModule/alcohol_s20_08.png',
+          alt: '80 proof spirits',
+          position: null
+        },
+        8: {
+          src: 'images/alcoholModule/alcohol_s20_09.png',
+          alt: 'white wine',
+          position: null
+        }
+      },
+      paragraph: {
+        0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
+      }
+    },
+    format: 'carousel'
+  },
+  // slide 21
+  10: {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
@@ -496,13 +558,13 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph: {
-        0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night. ',
+        0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night.',
         1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
       }
     }
   },
   // slide 22
-  10: {
+  11: {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
@@ -521,7 +583,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  11: {
+  12: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -541,7 +603,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  12: {
+  13: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -574,7 +636,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  13: {
+  14: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -605,7 +667,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -628,7 +690,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 27
-  15: {
+  16: {
     slide_type: 'quiz',
     header: {
       title: null,
@@ -718,7 +780,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  16: {
+  17: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -734,7 +796,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  17: {
+  18: {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
@@ -756,7 +818,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  18: {
+  19: {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
@@ -784,7 +846,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  19: {
+  20: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -829,7 +891,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  20: {
+  21: {
     slide_type: 'info',
     header: {
       title: null,
