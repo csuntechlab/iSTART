@@ -15,6 +15,7 @@
       <quiz-question  v-for="(element, id) in current_slide(slideNumber).content.questions"
         :object="element"
         :options="element.options"
+        :answer="element.answer"
         :slideNumber="slideNumber"
         :index="id"
         :key="id">

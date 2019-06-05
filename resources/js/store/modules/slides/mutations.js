@@ -8,7 +8,10 @@ export default {
   },
 
   UPDATE_RESPONSE (state, payload) {
-    state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].showResponse = true
+    let question = state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
+    let option = state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
+    question.showResponse = true
+    option.show = true
   },
 
   ENABLE_OR_DISABLE_CONTENT (state, payload) {

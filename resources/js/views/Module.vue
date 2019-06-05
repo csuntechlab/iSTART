@@ -117,7 +117,7 @@ export default {
     }
 
     document.onkeyup = (e) => {
-      if (process.env.NODE_ENV === 'development' && e.ctrlKey && e.altKey && e.shiftKey && e.which === 13) {
+      if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') && e.shiftKey && e.which === 192) {
         this.proceedAndContinue()
       }
     }

@@ -31,6 +31,7 @@ export const alcoholModuleSlides = {
           options: {
             0: {
               isAnswer: false,
+              show: false,
               text: 'Four cans of beer (12oz each)',
               img: {
                 src: null,
@@ -46,6 +47,7 @@ export const alcoholModuleSlides = {
             },
             1: {
               isAnswer: false,
+              show: false,
               text: 'Three cans of beer (12oz each)',
               img: {
                 src: null,
@@ -61,6 +63,7 @@ export const alcoholModuleSlides = {
             },
             2: {
               isAnswer: true,
+              show: false,
               text: 'Two cans of beer (12oz each)',
               img: {
                 src: null,
@@ -76,6 +79,7 @@ export const alcoholModuleSlides = {
             },
             3: {
               isAnswer: false,
+              show: false,
               text: 'One can of beer (12oz each)',
               img: {
                 src: null,
@@ -110,6 +114,7 @@ export const alcoholModuleSlides = {
           options: {
             0: {
               isAnswer: true,
+              show: false,
               text: null,
               img: {
                 src: 'images/alcoholModule/alcohol_s07_01.png',
@@ -125,6 +130,7 @@ export const alcoholModuleSlides = {
             },
             1: {
               isAnswer: false,
+              show: false,
               text: null,
               img: {
                 src: 'images/alcoholModule/alcohol_s07_02.png',
@@ -140,6 +146,7 @@ export const alcoholModuleSlides = {
             },
             2: {
               isAnswer: false,
+              show: false,
               text: null,
               img: {
                 src: 'images/alcoholModule/alcohol_s07_03.png',
@@ -155,6 +162,7 @@ export const alcoholModuleSlides = {
             },
             3: {
               isAnswer: false,
+              show: false,
               text: null,
               img: {
                 src: 'images/alcoholModule/alcohol_s07_04.png',
@@ -244,8 +252,98 @@ export const alcoholModuleSlides = {
       caption: null
     }
   },
-  // slide 16
+  // slide 15
   5: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'After hearing about Sarah’s week, identify which kind of drinker Sarah is.',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Moderate drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Alcoholic',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'Binge drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: true,
+              show: false,
+              text: 'Heavy drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 16
+  6: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -257,7 +355,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  6: {
+  7: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -342,7 +440,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  7: {
+  8: {
     slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -382,7 +480,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 21
-  8: {
+  9: {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
@@ -404,7 +502,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  9: {
+  10: {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
@@ -423,7 +521,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  10: {
+  11: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -443,7 +541,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  11: {
+  12: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -476,7 +574,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  12: {
+  13: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -507,7 +605,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -529,8 +627,98 @@ export const alcoholModuleSlides = {
       }
     }
   },
+  // slide 27
+  15: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friends house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: '1 hour',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: '2 hours',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: '3 hour',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: true,
+              show: false,
+              text: 'Uncertain, Melita should take an Uber or get a ride with a designated driver!',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   // slide 28
-  14: {
+  16: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -546,7 +734,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  15: {
+  17: {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
@@ -568,7 +756,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  16: {
+  18: {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
@@ -596,7 +784,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  17: {
+  19: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -641,7 +829,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  18: {
+  20: {
     slide_type: 'info',
     header: {
       title: null,
