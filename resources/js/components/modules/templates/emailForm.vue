@@ -7,9 +7,13 @@
       <strong>Failure. </strong> An error has occured
     </div>
     <h2 class="emailForm__heading">
-      Set a wellness goal that you would like to achieve and progress while
-      reducing your {{drug}} consumption:
+      {{current_slide(slideNumber).header.title}}
     </h2>
+    <info-content v-for="(element, index) in current_slide(slideNumber).content.paragraph"
+            :key="index"
+            :paragraph="element"
+            :icon="element.icon">
+    </info-content>
     <form>
       <div class="form-group">
         <textarea
@@ -28,7 +32,11 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { setTimeout } from 'timers'
+import infoContent from './info/infoContent'
 export default {
+  components: {
+    infoContent
+  },
   data () {
     return {
       drug: 'alcohol',
@@ -39,6 +47,7 @@ export default {
     setTimeout(() => {
       this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
     }, 5000)
+    console.log(this.current_slide[17])
   },
   methods: {
     ...mapActions(
@@ -56,7 +65,9 @@ export default {
     ...mapGetters(
       [
         'surveyResultLinks',
-        'surveyResultsEmailWasSubmitted'
+        'surveyResultsEmailWasSubmitted',
+        'current_slide',
+        'slideNumber'
       ]
     )
   }
