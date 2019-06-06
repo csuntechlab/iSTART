@@ -12692,7 +12692,7 @@ a.text-dark:focus {
 }
 
 .module-info__sentence {
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .module-info__img {
@@ -12727,6 +12727,11 @@ a.text-dark:focus {
           flex-flow: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.module-info__content-text {
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .module-info__carousel {
