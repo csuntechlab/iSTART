@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-12">
-          <h1 class="module-info__header"> {{ current_slide(slideNumber).header.title }}</h1>
+          <h1 class="module-info__header">{{ current_slide(slideNumber).header.title }}</h1>
         </div>
         <div class="module-info__content col-12">
-          <p v-if="current_slide(slideNumber).header.text"> {{ current_slide(slideNumber).header.text }}</p>
+          <h2 class="module-info__content-text" v-if="current_slide(slideNumber).header.text" v-html="current_slide(slideNumber).header.text"></h2>
           <info-photo v-for="(element, index) in current_slide(slideNumber).content.images"
             :key="index"
             :image="element"
@@ -28,19 +28,24 @@
               </info-list>
             </ul>
           </div>
+          <info-carousel v-if="current_slide(slideNumber).format ==='carousel'" :images="current_slide(slideNumber).content.carousel"></info-carousel>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+
 import infoContent from './info/infoContent'
+import infoCarousel from './info/infoCarousel'
 import infoPhoto from './info/infoPhoto'
 import infoList from './info/infoList'
 import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
+    infoCarousel,
     infoContent,
     infoPhoto,
     infoList
