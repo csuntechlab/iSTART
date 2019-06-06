@@ -17,13 +17,17 @@
             :paragraph="element"
             :icon="element.icon">
           </info-content>
-          <ul v-if="current_slide(slideNumber).content.list !== null">
-            <info-list v-for="(element, index) in current_slide(slideNumber).content.list"
-              :key="`${index}-${element.id}`"
-              :listItem="element"
-              >
-            </info-list>
-          </ul>
+          <div v-if="current_slide(slideNumber).content.list !== null">
+            <h2 v-if="current_slide(slideNumber).content.list.title !== null">
+              <strong>{{ current_slide(slideNumber).content.list.title }}</strong>
+            </h2>
+            <ul>
+              <info-list v-for="(element, index) in current_slide(slideNumber).content.list"
+                :key="`${index}-${element.id}`"
+                :listItem="element">
+              </info-list>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

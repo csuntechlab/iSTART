@@ -209,7 +209,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
-      }
+      },
+      list: null
     }
   },
   // slide 21
@@ -230,7 +231,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night. ',
         1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
-      }
+      },
+      list: null
     }
   },
   // slide 22
@@ -248,7 +250,8 @@ export const alcoholModuleSlides = {
           position: null
         }
       },
-      paragraph: null
+      paragraph: null,
+      list: null
     }
   },
   // slide 23
@@ -291,14 +294,14 @@ export const alcoholModuleSlides = {
           position: null
         }
       },
-      paragraph: {
-        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3>',
-        1: 'Thanks, but I’ve got a ton of work to do later.',
-        2: 'No thanks, I’m taking medication that I cannot drink with.',
-        3: 'I’m driving tonight.” (You can also offer to be the designated driver!',
-        4: 'I’d rather get a soda, thanks.',
-        5: 'I have a game/practice tomorrow.',
-        6: 'I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!'
+      list: {
+        title: 'If you are offered a drink, here are ways to say no:',
+        0: '\"Thanks, but I’ve got a ton of work to do later.\"',
+        1: '\"No thanks, I’m taking medication that I cannot drink with.\"',
+        2: '\"I’m driving tonight.\" (<i>You can also offer to be the designated driver!</i>)',
+        3: '\"I’d rather get a soda, thanks.\"',
+        4: '\"I have a game/practice tomorrow.\"',
+        5: '\"I’m OK for now!\" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
       },
     }
   },
@@ -352,7 +355,8 @@ export const alcoholModuleSlides = {
         0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
         1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
         2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
-      }
+      },
+      list: null
     }
   },
   // slide 28
@@ -368,7 +372,8 @@ export const alcoholModuleSlides = {
         0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
         1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
         2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
-      }
+      },
+      list: null
     }
   },
   // slide 29
@@ -389,7 +394,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
-      }
+      },
+      list: null
     }
   },
   // slide 30
@@ -415,7 +421,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-      }
+      },
+      list: null
     }
   },
   // slide 31
@@ -460,7 +467,8 @@ export const alcoholModuleSlides = {
             description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety. It can also improve your balance, flexibility and physical strength!'
           }
         }
-      }
+      },
+      list: null
     }
   },
   // slide 33
@@ -475,7 +483,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: '<div style="text-align: center;"><b style="font-size: 2rem;">Thank you for completing this module! </b></div>',
         1: '<div style="text-align: center;"><b style="font-size: 2rem;">Your next module will be available in 5 days. You will receive an email notification from iSTART.</b></div>'
-      }
+      },
+      list: null
     },
     format: {
       images: 'bottom'
