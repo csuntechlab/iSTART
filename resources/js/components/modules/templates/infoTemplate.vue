@@ -17,7 +17,7 @@
             :paragraph="element"
             :icon="element.icon">
           </info-content>
-          <ul>
+          <ul v-if="current_slide(slideNumber).content.list !== null">
             <info-list v-for="(element, index) in current_slide(slideNumber).content.list"
               :key="`${index}-${element.id}`"
               :listItem="element"
