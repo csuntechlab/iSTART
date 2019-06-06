@@ -47,7 +47,6 @@ export default {
     setTimeout(() => {
       this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
     }, 5000)
-    console.log(this.current_slide[17])
   },
   methods: {
     ...mapActions(
