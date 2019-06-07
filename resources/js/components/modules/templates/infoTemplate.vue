@@ -17,6 +17,17 @@
             :paragraph="element"
             :icon="element.icon">
           </info-content>
+          <div v-if="current_slide(slideNumber).content.list !== null">
+            <h2 v-if="current_slide(slideNumber).content.list.title !== null">
+              <strong>{{ current_slide(slideNumber).content.list.title }}</strong>
+            </h2>
+            <ul>
+              <info-list v-for="(element, index) in current_slide(slideNumber).content.list.list_element"
+                :key="`${index}`"
+                :listItem="element">
+              </info-list>
+            </ul>
+          </div>
           <info-carousel v-if="current_slide(slideNumber).format ==='carousel'" :images="current_slide(slideNumber).content.carousel"></info-carousel>
         </div>
       </div>
@@ -25,16 +36,19 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+
 import infoContent from './info/infoContent'
 import infoCarousel from './info/infoCarousel'
 import infoPhoto from './info/infoPhoto'
+import infoList from './info/infoList'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
     infoCarousel,
     infoContent,
-    infoPhoto
+    infoPhoto,
+    infoList
   },
   watch: {
     slideNumber (newValue, old) {
