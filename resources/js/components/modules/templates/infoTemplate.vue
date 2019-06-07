@@ -50,6 +50,13 @@ export default {
     infoPhoto,
     infoList
   },
+
+  data () {
+    return {
+      mountedCounter: 0
+    }
+  },
+
   watch: {
     slideNumber (newValue, old) {
       if (this.mountedCounter >= 1 && this.slideNumber > -1 && this.slideNumber < Object.keys(this.slides).length - 1) {
@@ -57,11 +64,13 @@ export default {
       }
     }
   },
+
   mounted () {
     if (this.mountedCounter < 1) {
       this.proceedAndContinue()
     }
   },
+
   computed: {
     ...mapState(
       {
@@ -75,6 +84,7 @@ export default {
       ]
     )
   },
+
   methods: {
     ...mapActions(
       [
@@ -84,11 +94,6 @@ export default {
     proceedAndContinue () {
       this.mountedCounter += 1
       setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber }) }.bind(this), 5000)
-    }
-  },
-  data () {
-    return {
-      mountedCounter: 0
     }
   }
 }

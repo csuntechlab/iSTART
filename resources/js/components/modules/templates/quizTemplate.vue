@@ -8,13 +8,15 @@
       </div>
     </div>
     <div class="row mt-4 justify-content-center">
-      <quiz-option  v-for="(element, id)  in optionsObject"
-        :image="element.image"
-        :option="element.option"
-        :correct_answer="element.correct_answer"
-        :key="id"
-        :optionID="id">
-      </quiz-option>
+      <form type="submit">
+        <quiz-option  v-for="(element, id)  in optionsObject"
+          :image="element.image"
+          :option="element.option"
+          :correct_answer="element.correct_answer"
+          :key="id"
+          :optionID="id">
+        </quiz-option>
+      </form>
     </div>
   </div>
 </template>

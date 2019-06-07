@@ -20,7 +20,6 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'moduleContent',
-
   computed: {
     ...mapState(
       {
@@ -43,7 +42,7 @@ export default {
     ),
 
     proceedAndContinue () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null })
     }
   }
 }

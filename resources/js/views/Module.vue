@@ -2,6 +2,8 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
+    <quiz-input-template v-if="slide_type=== 'quizInput'"></quiz-input-template>
+    <pie-chart-template v-if="slide_type ==='pie'"></pie-chart-template>
     <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
     <info-template v-if="current_slide(slideNumber).slide_type === 'informational'"></info-template>
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
@@ -25,6 +27,8 @@ import multiChoiceSurvey from './../components/modules/templates/MultiChoiceSurv
 import infoTemplate from './../components/modules/templates/infoTemplate'
 import introTemplate from './../components/modules/templates/IntroSlide'
 import quizTemplate from './../components/modules/templates/quizTemplate'
+import quizInputTemplate from './../components/modules/templates/quizInputTemplate'
+import pieChartTemplate from './../components/modules/templates/pieChartTemplate'
 import emailForm from './../components/modules/templates/emailForm'
 import multiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import videoTemplate from './../components/modules/templates/videoTemplate'
@@ -35,6 +39,8 @@ export default {
   components: {
     moduleHeader,
     moduleFooter,
+    quizInputTemplate,
+    pieChartTemplate,
     introTemplate,
     infoTemplate,
     Navbar,
@@ -49,7 +55,8 @@ export default {
   data () {
     return {
       windowWidth: 0,
-      sizeOfContainer: 0
+      sizeOfContainer: 0,
+      contentType: 'quizInputTemplate'
     }
   },
 
@@ -68,17 +75,15 @@ export default {
   computed: {
     ...mapState(
       {
-        slideNumber: state => state.Slides.slide_index,
-        slides: state => state.Slides.importedJSONSlides
+        slide_type: state => state.Slides.slide_type
       }
     ),
-
     ...mapGetters(
       [
-        'current_slide'
+        'current_slide',
+        'slideNumber'
       ]
     ),
-
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'
@@ -97,7 +102,7 @@ export default {
     ),
 
     proceedAndContinue () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
+      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null })
     },
 
     getWindowWidth () {

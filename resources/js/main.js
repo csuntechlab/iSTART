@@ -1,11 +1,12 @@
-
-import Vue from 'vue'
+import Vue from 'vue';
 import VueProgress from 'vue-progress-path'
-import VueYouTubeEmbed from 'vue-youtube-embed'
 import App from './App.vue'
 import router from './router'
 import store from './store/index.js'
+import { Pie } from 'vue-chartjs'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 
+Vue.use(Pie)
 Vue.use(VueProgress)
 Vue.use(VueYouTubeEmbed)
 

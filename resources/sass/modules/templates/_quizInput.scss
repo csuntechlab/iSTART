@@ -1,0 +1,28 @@
+.module-quizInput{
+    &__text{
+        font-size: 1rem;
+    }
+    &__label{
+        @include media-breakpoint-up(md){
+            border-radius: 2px;
+            border: 1.7px solid $primaryColor;
+        }
+        border-radius: 7.5px;
+        border-color: $primaryColor;
+        width: 100%;
+        padding-bottom: 3px;
+        background-color: $secondaryColor;
+    }
+    &__validate{
+        @include media-breakpoint-down(sm){
+            font-size: 0.90rem;
+        }
+        font-size:1.2rem;
+        &--red{
+            color: red;
+        }
+        &--green{
+            color: green;
+        }
+    }
+}
