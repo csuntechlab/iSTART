@@ -1,4 +1,4 @@
-const emailSurveyResultsAPI = jest.fn(()=> Promise.resolve);
+const emailSurveyResultsAPI = jest.fn(() => Promise.resolve)
 
 export default {
   emailSurveyResultsAPI
