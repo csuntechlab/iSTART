@@ -42,7 +42,16 @@ export default {
       },
       options1: {
         tooltips: {
-          enabled: false
+          enabled: true,
+          callbacks: {
+            label: function (tooltipItem, data) {
+              if (tooltipItem.index === 0) {
+                return data.labels[0] + data.datasets[0].data[tooltipItem.index] + '%'
+              } else {
+                return 'Other'
+              }
+            }
+          }
         },
         responsive: true,
         maintainAspectRatio: false,
@@ -53,7 +62,16 @@ export default {
       },
       options2: {
         tooltips: {
-          enabled: false
+          enabled: true,
+          callbacks: {
+            label: function (tooltipItem, data) {
+              if (tooltipItem.index === 0) {
+                return data.labels[0] + data.datasets[0].data[tooltipItem.index] + '%'
+              } else {
+                return 'Other'
+              }
+            }
+          }
         },
         responsive: true,
         maintainAspectRatio: false,
