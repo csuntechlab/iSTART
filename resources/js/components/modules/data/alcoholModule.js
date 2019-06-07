@@ -8,8 +8,105 @@ export const alcoholModuleSlides = {
     definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
     estimatedCompletion: '15 minutes'
   },
-  // slide 13
+  // slide 3
   1: {
+    slide_type: 'informational',
+    header: {
+      title: null,
+      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s03_01.png',
+          alt: 'percentage infographic',
+          position: null
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s03_02.png',
+          alt: 'tequila not equal red wine not equal beer',
+          position: 'bottom'
+        }
+      },
+      paragraph: {
+        0: '<em><b>Different types of beer, wine,</b> and liquor <b>can have differing alcohol percentages</b>.</em>'
+      },
+      list: null
+    }
+  },
+  // slide 4
+  2: {
+    slide_type: 'informational',
+    header: {
+      title: 'Standard Drink Sizes',
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s04_01.png',
+          alt: 'drink sizes comparison',
+          position: null
+        },
+      },
+      paragraph: {
+        0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
+        1: '<i>That\'s a <b>HUGE</b> difference!</i>'
+      },
+      list: null
+    }
+  },
+  // slide 5
+  3: {
+    slide_type: 'informational',
+    header: {
+      title: 'Fun Fact!',
+      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s05_01.png',
+          alt: 'drink sizes comparison',
+          position: 'top'
+        },
+        1: {
+          src: 'images/alcoholModule/alcohol_s05_02.png',
+          alt: 'drink sizes comparison',
+          position: null
+        }
+      },
+      paragraph: {
+        0: 'How much do you pour in your drink? The next time you\'re at a party, remember to use the lines on the cup!'
+      },
+      list: null
+    }
+  },
+  // slide 10
+  4: {
+    slide_type: 'informational',
+    header: {
+      title: 'Drinking isn\'t as common as you think.',
+      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s10_01.jpg',
+          alt: 'friends on beach cooking marshmallows',
+          position: 'bottom'
+        }
+      },
+      paragraph: {
+        0: 'College students often assume that the majority of students drink alcohol.',
+        1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used in the last month.',
+        2: 'Don’t be misled! These types of assumptions often lead other college students to use alcohol more heavily.'
+      },
+      list: null
+    }
+  },
+  // slide 13
+  5: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -64,11 +161,12 @@ export const alcoholModuleSlides = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac pretium tortor, vitae aliquam urna. Vivamus commodo suscipit risus, sed sagittis tellus. Nam at tortor cursus, semper risus ac, lacinia odio. Morbi vitae mollis diam.'
           }
         }
-      }
+      },
+      list: null
     }
   },
   // slide 14
-  2: {
+  6: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -80,7 +178,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  3: {
+  7: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -91,8 +189,30 @@ export const alcoholModuleSlides = {
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
+  // slide 17
+  8: {
+    slide_type: 'informational',
+    header: {
+      title: 'Dependency',
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s17_01.png',
+          alt: 'muppets wasted on couch',
+          position: 'bottom'
+        }
+      },
+      paragraph: {
+        0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
+        1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
+      },
+      list: null
+    }
+  },
   // slide 18
-  4: {
+  9: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -173,11 +293,12 @@ export const alcoholModuleSlides = {
             description: '<b><em>25% of students report</em></b> serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
         }
-      }
+      },
+      list: null
     }
   },
   // slide 19
-  5: {
+  10: {
     slide_type: 'informational',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -209,11 +330,12 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
-      }
+      },
+      list: null
     }
   },
   // slide 20
-  6: {
+  11: {
     slide_type: 'informational',
     header: {
       title: 'Reduced Calorie Intake',
@@ -270,15 +392,16 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
         1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
-      }
+      },
+      list: null
     },
     format: 'carousel'
   },
   // slide 21
-  7: {
+  12: {
     slide_type: 'informational',
     header: {
-      title: 'Reduced Calorie Intake',
+      title: 'Better Sleep',
       text: null
     },
     content: {
@@ -292,11 +415,12 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
         1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
-      }
+      },
+      list: null
     }
   },
   // slide 22
-  8: {
+  13: {
     slide_type: 'informational',
     header: {
       title: 'Better Academic Performance',
@@ -310,34 +434,38 @@ export const alcoholModuleSlides = {
           position: null
         }
       },
-      paragraph: null
+      paragraph: null,
+      list: null
     }
   },
   // slide 23
-  9: {
+  14: {
     slide_type: 'informational',
     header: {
       title: 'Responsible Drinking Checklist',
       text: null
     },
     content: {
-      paragraph: {
-        0: 'Eat before you drink.',
-        1: 'Snack while you drink.',
-        2: 'For every alcoholic drink that you consume, have a glass of water in between.',
-        3: 'Know how much you\'re drinking!',
-        4: 'Review what a standard drink is',
-        5: 'Make a plan! Before drinking, decide how much you plan to drink and commit.',
-        6: 'Share your plan with those you plan on going out with...',
-        7: '...and always look out for each other'
+      list: {
+        title: null,
+        list_element: [
+          'Eat before you drink.',
+          'Snack while you drink.',
+          'For every alcoholic drink that you consume, have a glass of water in between.',
+          'Know how much you\'re drinking!',
+          'Review what a standard drink is',
+          'Make a plan! Before drinking, decide how much you plan to drink and commit.',
+          'Share your plan with those you plan on going out with...',
+          '...and always look out for each other'
+        ]
       }
     }
   },
   // slide 24
-  10: {
+  15: {
     slide_type: 'informational',
     header: {
-      title: 'Responsible Drinking Checklist',
+      title: 'Rethink Your Drink!',
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
     },
     content: {
@@ -353,19 +481,21 @@ export const alcoholModuleSlides = {
           position: null
         }
       },
-      paragraph: {
-        0: '<h3><b>If you are offered a drink, here are ways to say no:</b></h3><ul>',
-        1: '<li>Thanks, but I’ve got a ton of work to do later.</li>',
-        2: '<li>No thanks, I’m taking medication that I cannot drink with.</li>',
-        3: '<li>I’m driving tonight.” (You can also offer to be the designated driver!</li>',
-        4: '<li>I’d rather get a soda, thanks.</li>',
-        5: '<li>I have a game/practice tomorrow.</li>',
-        6: '<li>I’m OK for now!” (You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</li><ul>'
-      }
+      list: {
+        title: 'If you are offered a drink, here are ways to say no:',
+        list_element: [
+          '\"Thanks, but I’ve got a ton of work to do later.\"',
+          '\"No thanks, I’m taking medication that I cannot drink with.\"',
+          '\"I’m driving tonight.\" (<i>You can also offer to be the designated driver!</i>)',
+          '\"I’d rather get a soda, thanks.\"',
+          '\"I have a game/practice tomorrow.\"',
+          '\"I’m OK for now!\" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+        ]
+      },
     }
   },
   // slide 25
-  11: {
+  16: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -396,7 +526,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  12: {
+  17: {
     slide_type: 'informational',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -414,11 +544,12 @@ export const alcoholModuleSlides = {
         0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
         1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
         2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
-      }
+      },
+      list: null
     }
   },
   // slide 28
-  13: {
+  18: {
     slide_type: 'informational',
     header: {
       title: 'Healthy Alternatives',
@@ -430,11 +561,12 @@ export const alcoholModuleSlides = {
         0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
         1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
         2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
-      }
+      },
+      list: null
     }
   },
   // slide 29
-  14: {
+  19: {
     slide_type: 'informational',
     header: {
       title: 'Physical Activities',
@@ -451,11 +583,12 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
-      }
+      },
+      list: null
     }
   },
   // slide 30
-  15: {
+  20: {
     slide_type: 'informational',
     header: {
       title: 'Social Activities',
@@ -477,11 +610,12 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-      }
+      },
+      list: null
     }
   },
   // slide 31
-  16: {
+  21: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -522,11 +656,12 @@ export const alcoholModuleSlides = {
             description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety. It can also improve your balance, flexibility and physical strength!'
           }
         }
-      }
+      },
+      list: null
     }
   },
   // slide 33
-  17: {
+  22: {
     slide_type: 'informational',
     header: {
       title: null,
@@ -537,7 +672,8 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: '<div style="text-align: center;"><b style="font-size: 2rem;">Thank you for completing this module! </b></div>',
         1: '<div style="text-align: center;"><b style="font-size: 2rem;">Your next module will be available in 5 days. You will receive an email notification from iSTART.</b></div>'
-      }
+      },
+      list: null
     },
     format: {
       images: 'bottom'
