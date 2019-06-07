@@ -22,8 +22,8 @@
               <strong>{{ current_slide(slideNumber).content.list.title }}</strong>
             </h2>
             <ul>
-              <info-list v-for="(element, index) in current_slide(slideNumber).content.list"
-                :key="`${index}-${element.id}`"
+              <info-list v-for="(element, index) in current_slide(slideNumber).content.list.list_element"
+                :key="`${index}`"
                 :listItem="element">
               </info-list>
             </ul>

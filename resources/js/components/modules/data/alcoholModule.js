@@ -447,14 +447,17 @@ export const alcoholModuleSlides = {
     },
     content: {
       list: {
-        0: 'Eat before you drink.',
-        1: 'Snack while you drink.',
-        2: 'For every alcoholic drink that you consume, have a glass of water in between.',
-        3: 'Know how much you\'re drinking!',
-        4: 'Review what a standard drink is',
-        5: 'Make a plan! Before drinking, decide how much you plan to drink and commit.',
-        6: 'Share your plan with those you plan on going out with...',
-        7: '...and always look out for each other'
+        title: null,
+        list_element: [
+          'Eat before you drink.',
+          'Snack while you drink.',
+          'For every alcoholic drink that you consume, have a glass of water in between.',
+          'Know how much you\'re drinking!',
+          'Review what a standard drink is',
+          'Make a plan! Before drinking, decide how much you plan to drink and commit.',
+          'Share your plan with those you plan on going out with...',
+          '...and always look out for each other'
+        ]
       }
     }
   },
@@ -480,12 +483,14 @@ export const alcoholModuleSlides = {
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
-        0: '\"Thanks, but I’ve got a ton of work to do later.\"',
-        1: '\"No thanks, I’m taking medication that I cannot drink with.\"',
-        2: '\"I’m driving tonight.\" (<i>You can also offer to be the designated driver!</i>)',
-        3: '\"I’d rather get a soda, thanks.\"',
-        4: '\"I have a game/practice tomorrow.\"',
-        5: '\"I’m OK for now!\" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+        list_element: [
+          '\"Thanks, but I’ve got a ton of work to do later.\"',
+          '\"No thanks, I’m taking medication that I cannot drink with.\"',
+          '\"I’m driving tonight.\" (<i>You can also offer to be the designated driver!</i>)',
+          '\"I’d rather get a soda, thanks.\"',
+          '\"I have a game/practice tomorrow.\"',
+          '\"I’m OK for now!\" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+        ]
       },
     }
   },
