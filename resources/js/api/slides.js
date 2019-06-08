@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 export default {
-emailSurveyResultsAPI(payload) {
-  return axios.post('sendModuleInfoMail', {
-    module_data: payload
+  emailSurveyResultsAPI (payload) {
+    return axios.post('send-module-info-mail', {
+      module_data: payload
     })
   }
 }

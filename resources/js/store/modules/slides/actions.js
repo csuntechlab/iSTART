@@ -18,6 +18,9 @@ export default {
       commit('ITERATE_THROUGH_CONTENT', payload.slide_index)
     }
   },
+  getUserResponses ({ commit }, payload) {
+    commit('PASS_USER_RESPONSES_TO_PIE_CHART', payload)
+  },
 
   async emailSurveyResults ({ commit }, payload) {
     return SlidesAPI.emailSurveyResultsAPI(payload)

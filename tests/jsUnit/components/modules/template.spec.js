@@ -7,7 +7,6 @@ const state = {
 }
 
 describe('slideStore/actions/allowUserToContinue', () => {
-
   it('should commit to ENABLE_OR_DISABLE_CONTINUE mutation when action is called', () => {
     let commit = jest.fn()
     slideStore.actions.allowUserToContinue({ commit }, true)
@@ -62,7 +61,6 @@ describe('slideStore/actions/getSlideInfo', () => {
     expect(commit).toHaveBeenCalledWith('GET_SLIDE_INFO_FROM_JSON', slides)
   })
   it('should fill the state when slides is mudated to GET_SLIDE_INFO_FROM_JSON action is called', () => {
-
     slideStore.mutations.GET_SLIDE_INFO_FROM_JSON(slideState, slides)
     expect(slideState.importedJSONSlides).toEqual(slides)
   })
