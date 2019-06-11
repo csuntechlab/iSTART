@@ -1,9 +1,17 @@
 <template>
-  <div :class="[
-  (image.position === 'top' ? 'module-info__img--top' : ''),
-  (image.position === 'bottom' ? 'module-info__img--bottom' : ''),
-  'module-info__img-align', determineColSize]">
-    <img class="module-info__img" :src="image.src" :alt="image.alt">
+  <div class="row" :class="[
+    (image.x_position === 'left' ? 'justify-content-start' : ''),
+    (image.x_position === 'center' ? 'justify-content-center' : ''),
+    (image.x_position === 'right' ? 'justify-content-end' : ''),
+    (!image.x_position ? 'justify-content-center': '')
+    ]"
+  >
+    <div :class="[
+    (image.y_position === 'top' ? 'module-info__img--top' : ''),
+    (image.y_position === 'bottom' ? 'module-info__img--bottom' : ''),
+    '', determineColSize]">
+      <img class="module-info__img" :src="image.src" :alt="image.alt">
+    </div>
   </div>
 </template>
 <script>

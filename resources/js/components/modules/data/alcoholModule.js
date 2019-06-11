@@ -20,12 +20,12 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
-          position: null
+          y_position: 'top',
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
           alt: 'tequila not equal red wine not equal beer',
-          position: 'bottom'
+          y_position: 'bottom',
         }
       },
       paragraph: {
@@ -46,7 +46,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
-          position: null
+          y_position: null
         },
       },
       paragraph: {
@@ -68,12 +68,12 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          position: 'top'
+          y_position: 'top'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
-          position: null
+          y_position: null
         }
       },
       paragraph: {
@@ -94,7 +94,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
           alt: 'friends on beach cooking marshmallows',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -201,7 +201,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -309,22 +309,22 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
           alt: 'one dollar bills',
-          position: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          position: null
+          y_position: null
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          position: null
+          y_position: null
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          position: null
+          y_position: null
         }
       },
       paragraph: {
@@ -346,47 +346,47 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s20_01.png',
           alt: 'gin and tonic',
-          position: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s20_02.png',
           alt: 'beer',
-          position: null
+          y_position: null
         },
         2: {
           src: 'images/alcoholModule/alcohol_s20_03.png',
           alt: 'red wine',
-          position: null
+          y_position: null
         },
         3: {
           src: 'images/alcoholModule/alcohol_s20_04.png',
           alt: 'cosmo',
-          position: null
+          y_position: null
         },
         4: {
           src: 'images/alcoholModule/alcohol_s20_05.png',
           alt: 'margarita',
-          position: null
+          y_position: null
         },
         5: {
           src: 'images/alcoholModule/alcohol_s20_06.png',
           alt: 'piña colada',
-          position: null
+          y_position: null
         },
         6: {
           src: 'images/alcoholModule/alcohol_s20_07.png',
           alt: 'mojito',
-          position: null
+          y_position: null
         },
         7: {
           src: 'images/alcoholModule/alcohol_s20_08.png',
           alt: '80 proof spirits',
-          position: null
+          y_position: null
         },
         8: {
           src: 'images/alcoholModule/alcohol_s20_09.png',
           alt: 'white wine',
-          position: null
+          y_position: null
         }
       },
       paragraph: {
@@ -409,7 +409,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -431,7 +431,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
-          position: null
+          y_position: null
         }
       },
       paragraph: null,
@@ -473,12 +473,12 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s24_01.jpg',
           alt: 'no alcohol sticker',
-          position: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'no sign',
-          position: null
+          y_position: null
         }
       },
       list: {
@@ -537,7 +537,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -577,7 +577,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s29_01.jpg',
           alt: 'two people running next to a lake',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -599,12 +599,12 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          position: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
