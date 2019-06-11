@@ -10,7 +10,7 @@ export const alcoholModuleSlides = {
   },
   // slide 3
   1: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: null,
       text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>'
@@ -36,7 +36,7 @@ export const alcoholModuleSlides = {
   },
   // slide 4
   2: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Standard Drink Sizes',
       text: null
@@ -47,7 +47,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
           position: null
-        },
+        }
       },
       paragraph: {
         0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
@@ -58,7 +58,7 @@ export const alcoholModuleSlides = {
   },
   // slide 5
   3: {
-    slide_type: 'informational',
+    slide_type: 'info',
     header: {
       title: 'Fun Fact!',
       text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
@@ -82,9 +82,182 @@ export const alcoholModuleSlides = {
       list: null
     }
   },
-  // slide 10
+  // slide 6
   4: {
-    slide_type: 'informational',
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Taking two shots of tequila is the same as which of the following?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Four cans of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Three cans of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            },
+            2: {
+              isAnswer: true,
+              show: false,
+              text: 'Two cans of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'You are correct!!! one standard shot (1.5oz) is the same as one can of beer (12oz)',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'One can of beer (12oz each)',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                img: {
+                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  alt: 'alcohol comparison'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 7
+  5: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: null,
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Let’s see what you think - which of these pours of Whiskey in a 7oz glass is a standard drink size?',
+          options: {
+            0: {
+              isAnswer: true,
+              show: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_01.png',
+                alt: 'glass filled with alcohol one fith\'s of container'
+              },
+              response: {
+                text: '1.5oz<br>Great job! This is one standard drink – 1.5 oz of 40% liquor!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_02.png',
+                alt: 'glass filled with alcohol two fith\'s of container'
+              },
+              response: {
+                text: '2oz<br>Good try, but this is more than one standard drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_03.png',
+                alt: 'glass filled with alcohol two fourth\'s of container'
+              },
+              response: {
+                text: '3oz<br>Nice guess, but actually, this is the same as two standard drinks!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: null,
+              img: {
+                src: 'images/alcoholModule/alcohol_s07_04.png',
+                alt: 'glass filled with alcohol three fourth\'s of container'
+              },
+              response: {
+                text: '4.5oz<br>Whoa, hold your horses there!<br>This is actually 4.5 oz – and that equals <u>three</u> standard drinks!!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 10
+  6: {
+    slide_type: 'info',
     header: {
       title: 'Drinking isn\'t as common as you think.',
       text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
@@ -106,7 +279,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 13
-  5: {
+  7: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -166,7 +339,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  6: {
+  8: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -177,8 +350,98 @@ export const alcoholModuleSlides = {
       caption: null
     }
   },
+  // slide 15
+  9: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'After hearing about Sarah’s week, identify which kind of drinker Sarah is.',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Moderate drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Alcoholic',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'Binge drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: true,
+              show: false,
+              text: 'Heavy drinker',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   // slide 16
-  7: {
+  10: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -190,8 +453,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 17
-  8: {
-    slide_type: 'informational',
+  11: {
+    slide_type: 'info',
     header: {
       title: 'Dependency',
       text: null
@@ -212,7 +475,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  9: {
+  12: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -298,8 +561,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  10: {
-    slide_type: 'informational',
+  13: {
+    slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
       text: null
@@ -309,22 +572,26 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
           alt: 'one dollar bills',
-          position: null
+          position: null,
+          width: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          position: null
+          position: null,
+          width: null
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          position: null
+          position: null,
+          width: null
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          position: null
+          position: null,
+          width: null
         }
       },
       paragraph: {
@@ -335,8 +602,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 20
-  11: {
-    slide_type: 'informational',
+  14: {
+    slide_type: 'info',
     header: {
       title: 'Reduced Calorie Intake',
       text: null
@@ -398,8 +665,8 @@ export const alcoholModuleSlides = {
     format: 'carousel'
   },
   // slide 21
-  12: {
-    slide_type: 'informational',
+  15: {
+    slide_type: 'info',
     header: {
       title: 'Better Sleep',
       text: null
@@ -409,19 +676,19 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
-          position: 'bottom'
+          position: 'bottom',
+          width: null
         }
       },
       paragraph: {
-        0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
-        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
-      },
-      list: null
+        0: 'While drinking may help us fall asleep, it actually leads to a lowered quality of sleep throughout the night.',
+        1: 'Drinking can block restorative sleep (known as REM sleep), cause increased bathroom trips during the night, and ultimately lead to restless sleep.'
+      }
     }
   },
   // slide 22
-  13: {
-    slide_type: 'informational',
+  16: {
+    slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
       text: null
@@ -431,7 +698,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
-          position: null
+          position: null,
+          width: null
         }
       },
       paragraph: null,
@@ -439,8 +707,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  14: {
-    slide_type: 'informational',
+  17: {
+    slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
       text: null
@@ -462,8 +730,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  15: {
-    slide_type: 'informational',
+  18: {
+    slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
@@ -473,29 +741,31 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s24_01.jpg',
           alt: 'no alcohol sticker',
-          position: null
+          position: null,
+          width: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'no sign',
-          position: null
+          position: null,
+          width: null
         }
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
         list_element: [
-          '\"Thanks, but I’ve got a ton of work to do later.\"',
-          '\"No thanks, I’m taking medication that I cannot drink with.\"',
-          '\"I’m driving tonight.\" (<i>You can also offer to be the designated driver!</i>)',
-          '\"I’d rather get a soda, thanks.\"',
-          '\"I have a game/practice tomorrow.\"',
-          '\"I’m OK for now!\" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+          '"Thanks, but I’ve got a ton of work to do later."',
+          '"No thanks, I’m taking medication that I cannot drink with."',
+          '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
+          '"I’d rather get a soda, thanks."',
+          '"I have a game/practice tomorrow."',
+          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
         ]
-      },
+      }
     }
   },
   // slide 25
-  16: {
+  19: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -526,8 +796,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  17: {
-    slide_type: 'informational',
+  20: {
+    slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
       text: null
@@ -537,7 +807,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          position: 'bottom'
+          position: 'bottom',
+          width: null
         }
       },
       paragraph: {
@@ -548,9 +819,99 @@ export const alcoholModuleSlides = {
       list: null
     }
   },
+  // slide 27
+  21: {
+    slide_type: 'quiz',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s06_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: 'half'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friends house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: '1 hour',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: '2 hours',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: '3 hour',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: true,
+              show: false,
+              text: 'Uncertain, Melita should take an Uber or get a ride with a designated driver!',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   // slide 28
-  18: {
-    slide_type: 'informational',
+  22: {
+    slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
       text: null
@@ -566,8 +927,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  19: {
-    slide_type: 'informational',
+  23: {
+    slide_type: 'info',
     header: {
       title: 'Physical Activities',
       text: null
@@ -577,7 +938,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s29_01.jpg',
           alt: 'two people running next to a lake',
-          position: 'bottom'
+          position: 'bottom',
+          width: null
         }
       },
       paragraph: {
@@ -588,8 +950,8 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  20: {
-    slide_type: 'informational',
+  24: {
+    slide_type: 'info',
     header: {
       title: 'Social Activities',
       text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!'
@@ -599,12 +961,14 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          position: null
+          position: null,
+          width: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          position: 'bottom'
+          position: 'bottom',
+          width: null
         }
       },
       paragraph: {
@@ -615,7 +979,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  21: {
+  25: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -661,22 +1025,22 @@ export const alcoholModuleSlides = {
     }
   },
   // slide  32
-  22:{
+  26: {
     slide_type: 'emailForm',
-    header:{
-      title:'Create your own wellness goal!',
-      text:null
+    header: {
+      title: 'Create your own wellness goal!',
+      text: null
     },
-    content:{
-      paragraph:{
-        0:'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!',
-        1:'For example, \"Next week I will plan to drink one fewer drink than normal when I go out with friends.\" Or, \"I\'ll work out at least once next week!\" ',
+    content: {
+      paragraph: {
+        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!',
+        1: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week!"'
       }
     }
   },
   // slide 33
-  23: {
-    slide_type: 'informational',
+  27: {
+    slide_type: 'info',
     header: {
       title: null,
       text: null

@@ -3,7 +3,9 @@
   (image.position === 'top' ? 'module-info__img--top' : ''),
   (image.position === 'bottom' ? 'module-info__img--bottom' : ''),
   'module-info__img-align', determineColSize]">
-    <img class="module-info__img" :src="image.src" :alt="image.alt">
+    <img :class="[
+    (image.width === 'half' ? 'module-info__img--half' : ''),
+    'module-info__img']" :src="image.src" :alt="image.alt">
   </div>
 </template>
 <script>

@@ -32,10 +32,10 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { setTimeout } from 'timers'
-import infoContent from './info/infoContent'
+import InfoContent from './info/InfoContent'
 export default {
   components: {
-    infoContent
+    InfoContent
   },
   data () {
     return {

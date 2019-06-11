@@ -1,0 +1,87 @@
+.module-quiz{
+    margin: 2rem 1.5rem;
+
+    &__question {
+        margin-bottom: 2rem;
+
+        & > * {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__header{
+        padding-right: 2.75rem;
+    }
+
+    &__header-font{
+        font-weight: 700;
+        
+        @include media-breakpoint-down(sm){
+            font-size: 0.90rem;
+        }
+    }
+
+    &__option {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        cursor: pointer;
+        border: 2px solid $primaryColor;
+        border-radius: 4px;
+        height: 100%;
+
+        &-container {
+            margin: 0.5rem 0;
+        }
+
+        &-indicator {
+            background-color: $primaryColor;
+            display: none;
+            padding: 1rem 0.1rem 0 0;
+            width: 2rem;
+
+            &--active {
+                display: inline-flex;
+                justify-content: center;
+            }
+
+            & > * {
+                color: $white;
+            }
+        }
+
+        &-content {
+            display: inline-flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0.75rem 1rem;
+
+            &--active {
+                width: calc(100% - 2rem);
+            }
+
+            & img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__response {
+        display: none;
+        font-style: italic;
+        margin-top: 1rem;
+
+        &--active {
+            display: block;
+        }
+
+        &-image {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    }
+}

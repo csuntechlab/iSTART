@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'infoContent',
   props: [
     'paragraph',
     'icon'

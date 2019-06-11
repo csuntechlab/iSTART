@@ -36,19 +36,18 @@
 </template>
 
 <script>
-
-import infoContent from './info/infoContent'
-import infoCarousel from './info/infoCarousel'
-import infoPhoto from './info/infoPhoto'
-import infoList from './info/infoList'
 import { mapState, mapGetters, mapActions } from 'vuex'
+import InfoContent from './info/InfoContent'
+import InfoCarousel from './info/InfoCarousel'
+import InfoPhoto from './info/InfoPhoto'
+import InfoList from './info/InfoList'
 
 export default {
   components: {
-    infoCarousel,
-    infoContent,
-    infoPhoto,
-    infoList
+    InfoCarousel,
+    InfoContent,
+    InfoPhoto,
+    InfoList
   },
 
   data () {
