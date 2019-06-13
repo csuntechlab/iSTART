@@ -1,17 +1,35 @@
 <template>
-  <div class="row" :class="[
-    (image.x_position === 'left' ? 'justify-content-start' : ''),
-    (image.x_position === 'center' ? 'justify-content-center' : ''),
-    (image.x_position === 'right' ? 'justify-content-end' : ''),
-    (!image.x_position ? 'justify-content-center': '')
+  <div class="row"
+    :class="[
+      (image.x_position === 'left' ? 'justify-content-start' : ''),
+      (image.x_position === 'center' ? 'justify-content-center' : ''),
+      (image.x_position === 'right' ? 'justify-content-end' : ''),
+      (!image.x_position ? 'justify-content-center': '')
     ]"
   >
-    <div :class="[
-    (image.y_position === 'top' ? 'module-info__img--top' : ''),
-    (image.y_position === 'bottom' ? 'module-info__img--bottom' : ''),
-    '', determineColSize]">
+    <p v-if="image.caption_y_position == 'top'" style="width:100%"
+      :class="[
+        (image.caption_text_align === 'left' ? 'text-left' : ''),
+        (image.caption_text_align === 'center' ? 'text-center' : ''),
+        (image.caption_text_align === 'right' ? 'text-right' : ''),
+        (!image.caption_text_align ? 'text-left' : '')
+      ]
+    ">
+        {{ image.caption }}
+      </p>
+    <div :class="[determineColSize]">
       <img class="module-info__img" :src="image.src" :alt="image.alt">
     </div>
+    <p v-if="image.caption_y_position == 'bottom'" style="width:100%"
+      :class="[
+        (image.caption_text_align === 'left' ? 'text-left' : ''),
+        (image.caption_text_align === 'center' ? 'text-center' : ''),
+        (image.caption_text_align === 'right' ? 'text-right' : ''),
+        (!image.caption_text_align ? 'text-left' : '')
+      ]
+    ">
+        {{ image.caption }}
+      </p>
   </div>
 </template>
 <script>
@@ -23,12 +41,10 @@ export default {
   ],
   computed: {
     determineColSize: function () {
-      if (this.imageCount > 2) {
-        return 'col-lg-6 col-md-6 col-6'
-      } else if (this.imageCount === 2) {
-        return 'col-lg-6 col-6'
+      if (this.imageCount >= 2) {
+        return 'col-sm-6 col-12'
       } else {
-        return 'col-12 text-center'
+        return 'col-12'
       }
     }
   }

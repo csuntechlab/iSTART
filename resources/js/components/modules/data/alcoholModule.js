@@ -26,10 +26,10 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s03_02.png',
           alt: 'tequila not equal red wine not equal beer',
           y_position: 'bottom',
+          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages',
+          caption_y_position: 'top',
+          caption_text_align: 'center'
         }
-      },
-      paragraph: {
-        0: '<em><b>Different types of beer, wine,</b> and liquor <b>can have differing alcohol percentages</b>.</em>'
       },
       list: null
     }
