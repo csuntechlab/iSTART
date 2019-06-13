@@ -26,8 +26,6 @@ export const alcoholModuleSlides = {
           alt: 'tequila not equal red wine not equal beer',
           y_position: 'bottom',
           caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages',
-          img_size: 'full'
-          // caption_y_position: 'top',
         }
       },
       list: null
@@ -66,8 +64,8 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
-          alt: 'drink sizes comparison',
-          y_position: 'top'
+          alt: 'clip art of brain',
+          img_size: 'quarter'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',

@@ -49,6 +49,8 @@ export default {
         return 'col-4'
       } else if (this.image.img_size === 'quarter') {
         return 'col-3'
+      } else if (this.image.img_size === 'sixth') {
+        return 'col-2'
       } else {
         return 'col-md-6 col-12'
       }
