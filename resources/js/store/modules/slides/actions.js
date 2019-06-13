@@ -8,11 +8,18 @@ export default {
     commit('UPDATE_CARD', payload)
   },
 
+  updateResponse ({ commit }, payload) {
+    commit('UPDATE_RESPONSE', payload)
+  },
+
   allowUserToContinue ({ commit }, payload) {
     commit('ENABLE_OR_DISABLE_CONTENT', payload.isAbleToProceed)
     if (payload.slide_index > -1) {
       commit('ITERATE_THROUGH_CONTENT', payload.slide_index)
     }
+  },
+  getUserResponses ({ commit }, payload) {
+    commit('PASS_USER_RESPONSES_TO_PIE_CHART', payload)
   },
 
   async emailSurveyResults ({ commit }, payload) {

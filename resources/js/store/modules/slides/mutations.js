@@ -1,10 +1,22 @@
 export default {
+  PASS_USER_RESPONSES_TO_PIE_CHART (state, payload) {
+    state.responses[payload.index] = payload
+  },
+  CHANGE_SLIDE_TYPE (state, payload) {
+    state.slide_type = payload
+  },
   GET_SLIDE_INFO_FROM_JSON (state, payload) {
     state.importedJSONSlides = payload
   },
-
   UPDATE_CARD (state, payload) {
     state.importedJSONSlides[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
+  },
+
+  UPDATE_RESPONSE (state, payload) {
+    let question = state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
+    let option = state.importedJSONSlides[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
+    question.showResponse = true
+    option.show = true
   },
 
   ENABLE_OR_DISABLE_CONTENT (state, payload) {

@@ -1,40 +1,32 @@
-@import "global/variables";
-
 // Libraries & Frameworks
-@import url("https://fonts.googleapis.com/css?family=Nunito");
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import '../../node_modules/vue-progress-path/dist/vue-progress-path.css';
 
-
 // Global
-@import "global/helpers";
+@import "global/variables";
 @import "global/layout";
-@import "global/base";
-@import "global/navbar";
-@import "global/buttons";
-@import "global/forms";
+@import "global/helpers";
 
-// Modules
-@import "modules/error";
-@import "modules/login";
-@import "modules/module";
-@import "modules/dashboard";
-@import "modules/schedule";
-@import "modules/page";
-@import "modules/control";
-@import "modules/cookies-notification";
+// Components
+@import "components/navbar";
+@import "components/error";
+@import "components/login";
+@import "components/cookies-notification";
+@import "components/dashboard";
+@import "components/module";
+@import "components/schedule";
+@import "components/page";
+@import "components/progress";
+@import "components/control";
+@import "components/forms";
 
 // Templates
-@import "modules/templates/introduction";
-@import "modules/templates/informational";
-@import "modules/templates/quiz";
-@import "modules/templates/introduction";
-@import "modules/templates/email-form";
-@import "modules/templates/multi-choice-survey";
-@import "modules/templates/multi-choice-survey-results";
-@import "modules/templates/video-template";
-@import "modules/templates/card-flip";
-
-
-//Components
-@import "components/progress";
+@import "templates/introduction";
+@import "templates/informational";
+@import "templates/quiz";
+@import "templates/introduction";
+@import "templates/email-form";
+@import "templates/multi-choice-survey";
+@import "templates/multi-choice-survey-results";
+@import "templates/video-template";
+@import "templates/card-flip";

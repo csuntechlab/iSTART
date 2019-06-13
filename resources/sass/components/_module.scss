@@ -1,0 +1,88 @@
+
+.module {
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding: 0;
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 3.2rem;
+    }
+    
+    &__header{
+        margin-top: -2px;
+        z-index: 1;
+        position: sticky;
+        top: 0;
+    }
+
+    &-content {
+        overflow: auto;
+        height: calc(100vh - 9rem);
+        width: 100%;
+
+        @include media-breakpoint-down(sm){
+            height: calc(100vh - 6.5rem);
+            padding-bottom: 25px;
+        }
+    }
+    
+    &__footerText{
+        color: $secondaryColor;
+        @include media-breakpoint-up(md){
+            width: 10rem;
+            height: 2.25rem;
+            border-radius: 0.4rem;
+        }
+        &--left{
+            margin-left: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
+        }
+        &--right {
+            margin-right: 2rem;
+            outline: inherit;
+            border: none;
+            background: none;
+        }
+    }
+    &-footer {
+        &__background {
+            @include media-breakpoint-down(sm) {
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                padding-top:10px;
+            }
+            @include media-breakpoint-up(md) {
+                background-color: $secondaryColor;
+
+            }
+            background-color: $primaryColor;
+            padding-bottom: 15px;
+        }
+    }
+    
+    &__progress{
+        font-size: 1rem;
+        color: white;
+        font-weight: normal;
+        margin-top: -20px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+.module__progressBar {
+    margin-top: 3.3rem;
+    @include media-breakpoint-up(md){
+        margin-top: 0;
+    }
+}
+
+.module__progressBar.vue-progress-path path {
+    stroke-width: 25;
+    @include media-breakpoint-up(sm){
+        stroke-width: 30;
+    }
+}

@@ -1,0 +1,56 @@
+.error {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1.5rem 3rem;
+
+    &-code > * {
+        font-size: 12rem;
+    }
+
+    &-message > * {
+        font-size: 2rem;
+    }
+
+    &-return {
+        margin-top: 1rem;
+
+        & > * {
+            background: none;
+            border: none;
+            display: inline-block;
+            outline: 2px solid $black;
+            padding: 0.5rem;
+        }
+
+        &:hover > * {
+            background-color: $grey--lighter;
+        }
+
+        // Tag Overides
+        & * {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        & button {
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &-code > * {
+            font-size: 6rem;
+        }
+
+        &-message > * {
+            font-size: 1.25rem;
+        }
+
+        &-return {
+            & * {
+                font-size: 1rem;
+            }
+        }
+    }
+}
