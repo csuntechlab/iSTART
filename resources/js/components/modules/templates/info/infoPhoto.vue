@@ -52,7 +52,7 @@ export default {
       } else if (this.image.img_size === 'sixth') {
         return 'col-2'
       } else {
-        return 'col-md-6 col-12'
+        return 'col-md-4 col-12'
       }
     }
   }
