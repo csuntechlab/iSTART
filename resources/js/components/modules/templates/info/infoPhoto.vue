@@ -7,20 +7,20 @@
       (!image.x_position ? 'justify-content-center': '')
     ]"
   >
-    <p v-if="image.caption_y_position == 'top'" style="width:100%"
-      :class="[
+    <div v-if="image.caption_y_position == 'top' || !image.caption_y_position" class="col-12">
+      <p :class="[
         (image.caption_text_align === 'left' ? 'text-left' : ''),
         (image.caption_text_align === 'center' ? 'text-center' : ''),
         (image.caption_text_align === 'right' ? 'text-right' : ''),
         (!image.caption_text_align ? 'text-left' : '')
-      ]
-    ">
+      ]">
         {{ image.caption }}
       </p>
+    </div>
     <div :class="[determineColSize]">
       <img class="module-info__img" :src="image.src" :alt="image.alt">
     </div>
-    <p v-if="image.caption_y_position == 'bottom'" style="width:100%"
+    <p v-if="image.caption_y_position == 'bottom'"
       :class="[
         (image.caption_text_align === 'left' ? 'text-left' : ''),
         (image.caption_text_align === 'center' ? 'text-center' : ''),
@@ -28,8 +28,8 @@
         (!image.caption_text_align ? 'text-left' : '')
       ]
     ">
-        {{ image.caption }}
-      </p>
+      {{ image.caption }}
+    </p>
   </div>
 </template>
 <script>
@@ -41,10 +41,16 @@ export default {
   ],
   computed: {
     determineColSize: function () {
-      if (this.imageCount >= 2) {
-        return 'col-sm-6 col-12'
-      } else {
+      if (this.image.img_size === 'full') {
         return 'col-12'
+      } else if (this.image.img_size === 'half') {
+        return 'col-6'
+      } else if (this.image.img_size === 'third') {
+        return 'col-4'
+      } else if (this.image.img_size === 'quarter') {
+        return 'col-3'
+      } else {
+        return 'col-md-6 col-12'
       }
     }
   }

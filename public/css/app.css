@@ -12685,7 +12685,7 @@ a.text-dark:focus {
 
 .module-info__img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 1.85rem;
 }
 

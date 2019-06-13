@@ -20,15 +20,14 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
-          y_position: 'top',
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
           alt: 'tequila not equal red wine not equal beer',
           y_position: 'bottom',
           caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages',
-          caption_y_position: 'top',
-          caption_text_align: 'center'
+          img_size: 'full'
+          // caption_y_position: 'top',
         }
       },
       list: null
