@@ -255,8 +255,46 @@ export const alcoholModuleSlides = {
       }
     }
   },
-  // slide 10
+  // slide 8
   6: {
+    slide_type: 'inputComparison',
+    header: {
+      title: 'What’s your guess?',
+      text: null
+    },
+    content: {
+      questions: {
+        0: {
+          question: 'What percent of CSUN students do you think used alcohol in the last 30 days?',
+          response: null,
+          input: null,
+          answer: 49
+        },
+        1: {
+          question: 'What percent of CSUN students do you think had more than 5 drinks in one sitting in the last 30 days?',
+          response: null,
+          input: null,
+          answer: 18
+        },
+        2: {
+          question: 'What percent of CSUN students do you think drove after drinking any alcohol in the last 30 days?',
+          response: null,
+          input: null,
+          answer: 11
+        }
+      }
+    }
+  },
+  // slide 9
+  7: {
+    slide_type: 'inputPieChart',
+    header: {
+      title: 'What’s your guess?',
+      text: null
+    }
+  },
+  // slide 10
+  8: {
     slide_type: 'info',
     header: {
       title: 'Drinking isn\'t as common as you think.',
@@ -279,7 +317,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 13
-  7: {
+  9: {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
@@ -339,7 +377,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  8: {
+  10: {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
@@ -351,7 +389,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 15
-  9: {
+  11: {
     slide_type: 'quiz',
     header: {
       title: null,
@@ -441,7 +479,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  10: {
+  12: {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
@@ -453,7 +491,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 17
-  11: {
+  13: {
     slide_type: 'info',
     header: {
       title: 'Dependency',
@@ -475,7 +513,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  12: {
+  14: {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
@@ -561,7 +599,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  13: {
+  15: {
     slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
@@ -602,7 +640,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 20
-  14: {
+  16: {
     slide_type: 'info',
     header: {
       title: 'Reduced Calorie Intake',
@@ -665,7 +703,7 @@ export const alcoholModuleSlides = {
     format: 'carousel'
   },
   // slide 21
-  15: {
+  17: {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
@@ -687,7 +725,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  16: {
+  18: {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
@@ -707,7 +745,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  17: {
+  19: {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
@@ -730,7 +768,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  18: {
+  20: {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
@@ -765,7 +803,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  19: {
+  21: {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
@@ -796,7 +834,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  20: {
+  22: {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
@@ -820,7 +858,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 27
-  21: {
+  23: {
     slide_type: 'quiz',
     header: {
       title: null,
@@ -910,7 +948,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  22: {
+  24: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -927,7 +965,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  23: {
+  25: {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
@@ -950,7 +988,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  24: {
+  26: {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
@@ -979,7 +1017,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  25: {
+  27: {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
@@ -1025,7 +1063,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide  32
-  26: {
+  28: {
     slide_type: 'emailForm',
     header: {
       title: 'Create your own wellness goal!',
@@ -1039,7 +1077,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  27: {
+  29: {
     slide_type: 'info',
     header: {
       title: null,
