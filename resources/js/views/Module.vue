@@ -2,11 +2,11 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <quiz-input-template v-if="current_slide(slideNumber).slide_type === 'quizInput'"></quiz-input-template>
-    <pie-chart-template v-if="current_slide(slideNumber).slide_type === 'pie'"></pie-chart-template>
     <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
     <info-template v-if="current_slide(slideNumber).slide_type === 'info'"></info-template>
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
+    <quiz-input-template v-if="current_slide(slideNumber).slide_type === 'quizInput'"></quiz-input-template>
+    <pie-chart-template v-if="current_slide(slideNumber).slide_type === 'pieResults'"></pie-chart-template>
     <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
     <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
     <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>

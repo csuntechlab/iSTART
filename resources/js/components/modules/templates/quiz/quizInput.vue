@@ -1,8 +1,8 @@
 <template>
   <div class="mb-4 ml-1 col-11">
       <p>{{ questionIndex }}. {{ question }} </p>
-      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/>
-      <p class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</p>
+      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event);" class="module-quizInput__label"/>
+      <em class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</em>
   </div>
 </template>
 
@@ -101,6 +101,7 @@ export default {
     },
 
     validateForm ($event) {
+      console.log(this.questionLength, this.responseFromState)
       // Check if all inputs have been filled before checking question data
       if (parseInt(Object.keys(this.responseFromState).length) === parseInt(this.questionLength)) {
         for (let i = 0; i < this.questionLength; ++i) {

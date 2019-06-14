@@ -12,7 +12,7 @@ export default {
     return {
       chartdata: {
         userData: {
-          labels: ['You said:'],
+          labels: ['You said: ' + this.response + '%'],
           datasets: [
             {
               label: 'Data One',
@@ -25,7 +25,7 @@ export default {
           ]
         },
         sourcesData: {
-          labels: ['Survey Results:'],
+          labels: ['Survey Results: ' + this.sources + '%'],
           datasets: [
             {
               label: 'Data One',
@@ -46,7 +46,7 @@ export default {
           callbacks: {
             label: function (tooltipItem, data) {
               if (tooltipItem.index === 0) {
-                return data.labels[0] + data.datasets[0].data[tooltipItem.index] + '%'
+                return data.labels[0]
               } else {
                 return 'Other'
               }
@@ -66,7 +66,7 @@ export default {
           callbacks: {
             label: function (tooltipItem, data) {
               if (tooltipItem.index === 0) {
-                return data.labels[0] + data.datasets[0].data[tooltipItem.index] + '%'
+                return data.labels[0]
               } else {
                 return 'Other'
               }

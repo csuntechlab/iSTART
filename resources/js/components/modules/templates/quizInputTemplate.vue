@@ -3,23 +3,26 @@
     <div class="container">
       <div class="row mt-5 mb-5">
         <div class="col-12">
+          <h1>{{ current_slide(slideNumber).header.title }}</h1>
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values 0 to 100.</p>
         </div>
-        <quiz-input v-for="(element, index) in slides.questions"
+        <quiz-input v-for="(element, index) in current_slide(slideNumber).content.questions"
           :key="index"
           :questionIndex="parseInt(index)+1"
           :question="element.question"
           :user_response="element.response"
-          :questionLength="Object.keys(slides.questions).length"
+          :questionLength="Object.keys(current_slide(slideNumber).content.questions).length"
           :needInputLabel="true"
           ></quiz-input>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import quizInput from './../templates/quiz/quizInput'
 import { mapState, mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'quizInputTemplate',
   components: {
@@ -28,14 +31,17 @@ export default {
   computed: {
     ...mapState(
       {
-        responseFromState: state => state.Slides.responses
+        responseFromState: state => state.Slides.responses,
+        slideNumber: state => state.Slides.slide_index,
+        slides: state => state.Slides.importedJSONSlides
       }
     ),
     ...mapGetters(
       [
         'displayContent',
         'userResponses',
-        'userValidity'
+        'userValidity',
+        'current_slide'
       ]
     )
   },
@@ -46,30 +52,6 @@ export default {
         'getUserResponses'
       ]
     )
-  },
-  data () {
-    return {
-      slides: {
-        questions: {
-          0: {
-            question: 'What percent of female US College Students drink MORE than you in a typical week?',
-            response: null
-          },
-          1: {
-            question: 'What percent of female US College Students drink MORE than you in a typical week?',
-            response: null
-          },
-          2: {
-            question: 'What percent of female US College Students drink MORE than you in a typical week?',
-            response: null
-          },
-          3: {
-            question: 'What percent of female US College Students drink MORE than you in a typical week?',
-            response: null
-          }
-        }
-      }
-    }
   }
 }
 </script>
