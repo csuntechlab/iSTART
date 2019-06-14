@@ -20,6 +20,9 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
+          mobile_size: 'full',
+          tablet_size: 'quarter',
+          desktop_size: 'third'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
@@ -65,12 +68,11 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'clip art of brain',
-          img_size: 'quarter'
+          size: 'quarter'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
-          y_position: null
         }
       },
       paragraph: {
