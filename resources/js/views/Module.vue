@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import alcoholModuleSlides from './../components/modules/data/alcoholModule'
+import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 
 import { mapActions, mapGetters, mapState } from 'vuex'
 import Navbar from './../components/global/Navbar'
