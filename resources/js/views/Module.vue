@@ -5,8 +5,8 @@
     <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
     <info-template v-if="current_slide(slideNumber).slide_type === 'info'"></info-template>
     <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
-    <quiz-input-template v-if="current_slide(slideNumber).slide_type === 'quizInput'"></quiz-input-template>
-    <pie-chart-template v-if="current_slide(slideNumber).slide_type === 'pieResults'"></pie-chart-template>
+    <input-comparison-template v-if="current_slide(slideNumber).slide_type === 'inputComparison'"></input-comparison-template>
+    <input-pie-chart-template v-if="current_slide(slideNumber).slide_type === 'inputPieChart'"></input-pie-chart-template>
     <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
     <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
     <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>
@@ -27,12 +27,12 @@ import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurv
 import InfoTemplate from './../components/modules/templates/InfoTemplate'
 import IntroTemplate from './../components/modules/templates/IntroSlide'
 import QuizTemplate from './../components/modules/templates/QuizTemplate'
-import quizInputTemplate from './../components/modules/templates/quizInputTemplate'
+import InputComparisonTemplate from './../components/modules/templates/InputComparisonTemplate'
+import InputPieChartTemplate from './../components/modules/templates/InputPieChartTemplate'
 import EmailForm from './../components/modules/templates/EmailForm'
 import MultiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import VideoTemplate from './../components/modules/templates/VideoTemplate'
 import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate'
-import pieChartTemplate from './../components/modules/templates/pieChartTemplate'
 
 export default {
   name: 'Module',
@@ -41,8 +41,8 @@ export default {
     ModuleFooter,
     IntroTemplate,
     InfoTemplate,
-    quizInputTemplate,
-    pieChartTemplate,
+    InputComparisonTemplate,
+    InputPieChartTemplate,
     Navbar,
     EmailForm,
     QuizTemplate,

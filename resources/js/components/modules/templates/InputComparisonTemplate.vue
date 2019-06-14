@@ -6,28 +6,28 @@
           <h1>{{ current_slide(slideNumber).header.title }}</h1>
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values 0 to 100.</p>
         </div>
-        <quiz-input v-for="(element, index) in current_slide(slideNumber).content.questions"
+        <input-response v-for="(element, index) in current_slide(slideNumber).content.questions"
           :key="index"
           :questionIndex="parseInt(index)+1"
           :question="element.question"
           :user_response="element.response"
           :questionLength="Object.keys(current_slide(slideNumber).content.questions).length"
-          :needInputLabel="true"
-          ></quiz-input>
+          :needInputLabel="true">
+        </input-response>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import quizInput from './../templates/quiz/quizInput'
 import { mapState, mapActions, mapGetters } from 'vuex'
+import InputResponse from './../templates/input/InputResponse'
 
 export default {
-  name: 'quizInputTemplate',
   components: {
-    quizInput
+    InputResponse
   },
+
   computed: {
     ...mapState(
       {
@@ -36,6 +36,7 @@ export default {
         slides: state => state.Slides.importedJSONSlides
       }
     ),
+
     ...mapGetters(
       [
         'displayContent',
@@ -45,6 +46,7 @@ export default {
       ]
     )
   },
+
   methods: {
     ...mapActions(
       [

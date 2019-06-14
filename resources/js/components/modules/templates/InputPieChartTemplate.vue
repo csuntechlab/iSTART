@@ -11,29 +11,30 @@
             <p class="module-quizInput__text">{{ element.question }}</p>
           </div>
           <div :key="index + '-chart1'" class="col-6 mt-1">
-            <quiz-legend chart-id="one"
+            <input-pie-chart-legend chart-id="one"
               :response="userResponses(index)"
-              :sources="element.answer"
-            ></quiz-legend>
+              :sources="element.answer">
+            </input-pie-chart-legend>
           </div>
           <div :key="index + '-chart2'" class="col-6 mt-1">
-            <quiz-legend chart-id="two"
+            <input-pie-chart-legend chart-id="two"
               :response="userResponses(index)"
-              :sources="element.answer"
-            ></quiz-legend>
+              :sources="element.answer">
+            </input-pie-chart-legend>
           </div>
         </template>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex'
-import quizLegend from './../templates/quiz/quizLegend'
+import InputPieChartLegend from './../templates/input/InputPieChartLegend'
+
 export default {
-  name: 'pieChartTemplate',
   components: {
-    quizLegend
+    InputPieChartLegend
   },
 
   computed: {

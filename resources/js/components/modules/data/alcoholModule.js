@@ -257,7 +257,7 @@ export const alcoholModuleSlides = {
   },
   // slide 8
   6: {
-    slide_type: 'quizInput',
+    slide_type: 'inputComparison',
     header: {
       title: 'What’s your guess?',
       text: null
@@ -287,7 +287,7 @@ export const alcoholModuleSlides = {
   },
   // slide 9
   7: {
-    slide_type: 'pieResults',
+    slide_type: 'inputPieChart',
     header: {
       title: 'What’s your guess?',
       text: null

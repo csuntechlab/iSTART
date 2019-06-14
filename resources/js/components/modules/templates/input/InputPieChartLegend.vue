@@ -1,7 +1,6 @@
 <script>
 import { Pie } from 'vue-chartjs'
 export default {
-  name: 'quizLegend',
   extends: Pie,
   props: [
     'response',

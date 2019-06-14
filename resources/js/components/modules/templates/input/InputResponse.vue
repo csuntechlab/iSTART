@@ -10,7 +10,6 @@
 import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
-  name: 'quizInput',
   props: [
     'question',
     'user_response',
@@ -69,34 +68,18 @@ export default {
       }
     },
 
-    storeInputIntoState () {
-      this.parseResponse = parseInt(this.response)
-      if (Number.isInteger(this.parseResponse) && this.parseResponse > -1 && this.parseResponse < 101) {
-        this.getUserResponses({ index: this.questionIndex - 1, response: this.parseResponse, valid: this.isInputValid })
-      }
-    },
-
-    allowContinue () {
-      let payload = {
-        isAbleToProceed: true,
-        slide_index: this.slideNumber
-      }
-      this.allowUserToContinue(payload)
-    },
-
-    preventContinue () {
-      let payload = {
-        isAbleToProceed: false,
-        slide_index: this.slideNumber
-      }
-      this.allowUserToContinue(payload)
-    },
-
     checkForEmptyInput ($event) {
       if ($event.target.value === null || $event.target.value === 'undefined' || $event.target.value === '') {
         return true
       } else {
         return false
+      }
+    },
+
+    storeInputIntoState () {
+      this.parseResponse = parseInt(this.response)
+      if (Number.isInteger(this.parseResponse) && this.parseResponse > -1 && this.parseResponse < 101) {
+        this.getUserResponses({ index: this.questionIndex - 1, response: this.parseResponse, valid: this.isInputValid })
       }
     },
 
@@ -116,6 +99,22 @@ export default {
       } else {
         this.preventContinue()
       }
+    },
+
+    allowContinue () {
+      let payload = {
+        isAbleToProceed: true,
+        slide_index: this.slideNumber
+      }
+      this.allowUserToContinue(payload)
+    },
+
+    preventContinue () {
+      let payload = {
+        isAbleToProceed: false,
+        slide_index: this.slideNumber
+      }
+      this.allowUserToContinue(payload)
     }
   }
 }
