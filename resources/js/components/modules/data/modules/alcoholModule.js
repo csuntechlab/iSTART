@@ -291,9 +291,6 @@ export const alcoholModuleSlides = {
     header: {
       title: 'What’s your guess?',
       text: null
-    },
-    content: {
-
     }
   },
   // slide 10
