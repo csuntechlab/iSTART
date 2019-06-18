@@ -59,7 +59,6 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Fun Fact!',
-      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
     },
     content: {
       images: {
@@ -72,6 +71,7 @@ export const alcoholModuleSlides = {
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
+          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
         }
       },
       paragraph: {
