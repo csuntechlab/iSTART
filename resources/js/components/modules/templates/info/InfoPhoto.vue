@@ -66,8 +66,7 @@ export default {
         ['quarter', '-3'],
         ['sixth', '-2']
       ])
-      // var setWidth = ''
-      console.log(imageSizes.get(this.image.mobile_size))
+      var setWidth = ''
       var setSizes = {
         'size': this.image.size || '',
         'mobile_size': this.image.mobile_size || '',
@@ -76,9 +75,20 @@ export default {
       }
       const declearedSizes = Object.values(setSizes)
       for (var i = 0; i <= declearedSizes.length; i++) {
-        console.log(declearedSizes[i])
-        console.log(imageSizes.get(declearedSizes[i]))
+        if (i === 0 && declearedSizes[i] !== '') {
+          setWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
+        }
+        if (i === 1 && declearedSizes[i] !== '') {
+          setWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
+        }
+        if (i === 2 && declearedSizes[i] !== '') {
+          setWidth += 'col-md' + imageSizes.get(declearedSizes[i]) + ' '
+        }
+        if (i === 3 && declearedSizes[i] !== '') {
+          setWidth += 'col-lg' + imageSizes.get(declearedSizes[i]) + ' '
+        }
       }
+      console.log(setWidth)
     }
   }
 }

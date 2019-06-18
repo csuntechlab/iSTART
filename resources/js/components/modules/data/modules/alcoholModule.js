@@ -22,7 +22,7 @@ export const alcoholModuleSlides = {
           alt: 'percentage infographic',
           mobile_size: 'half',
           tablet_size: 'quarter',
-          desktop_size: '1/3'
+          desktop_size: 'sixth'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
