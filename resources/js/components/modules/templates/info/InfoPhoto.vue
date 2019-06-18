@@ -18,7 +18,7 @@
       </p>
     </div>
     <div :class="[determineColSize]">
-      <img @click="checkMap" class="module-info__img" :src="image.src" :alt="image.alt">
+      <img class="module-info__img" :src="image.src" :alt="image.alt">
     </div>
     <p v-if="image.caption_y_position == 'bottom'"
       :class="[
@@ -50,13 +50,13 @@ export default {
         return defaultSize
       }
       let imageSizes = new Map([
-        ['full', '-12'],
+        ['1', '-12'],
         ['5/6', '-10'],
         ['2/3', '-8'],
-        ['half', '-6'],
+        ['1/2', '-6'],
         ['1/3', '-4'],
-        ['quarter', '-3'],
-        ['sixth', '-2']
+        ['1/4', '-3'],
+        ['1/6', '-2']
       ])
       var setWidth = ''
       var setSizes = {
@@ -80,7 +80,7 @@ export default {
           setWidth += 'col-lg' + imageSizes.get(declearedSizes[i]) + ' '
         }
       }
-      return setWidth
+      return setWidth.trim()
     }
   }
 }

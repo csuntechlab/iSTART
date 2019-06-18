@@ -20,8 +20,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
-          mobile_size: 'half',
-          tablet_size: 'quarter',
+          mobile_size: '1/2',
+          tablet_size: '1/4',
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
@@ -66,7 +66,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'clip art of brain',
-          size: 'quarter'
+          mobile_size: '1/3',
+          tablet_size: '1/6'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',
@@ -91,8 +92,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
-          position: 'top',
-          width: 'half'
+          size: '1/2'
         }
       },
       questions: {
@@ -398,7 +398,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
           position: 'top',
-          width: 'half'
+          width: '1/2'
         }
       },
       questions: {
@@ -728,7 +728,9 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
-          y_position: null
+          mobile_size: '5/6',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       },
       paragraph: null,
@@ -858,7 +860,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
           position: 'top',
-          width: 'half'
+          width: '1/2'
         }
       },
       questions: {
