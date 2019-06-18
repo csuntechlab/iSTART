@@ -40,23 +40,15 @@ export default {
   ],
   computed: {
     determineColSize: function () {
-      if (this.image.size === 'full') {
-        return 'col-12'
-      } else if (this.image.size === 'half') {
-        return 'col-6'
-      } else if (this.image.size === 'third') {
-        return 'col-4'
-      } else if (this.image.size === 'quarter') {
-        return 'col-3'
-      } else if (this.image.size === 'sixth') {
-        return 'col-2'
-      } else {
-        return 'col-lg-6 col-md-8 col-10'
+      var defaultSize = 'col-lg-6 col-md-8 col-10'
+      if (
+        !this.image.size &&
+        !this.image.mobile_size &&
+        !this.image.tablet_size &&
+        !this.image.desktop_size
+      ) {
+        return defaultSize
       }
-    }
-  },
-  methods: {
-    checkMap: function () {
       let imageSizes = new Map([
         ['full', '-12'],
         ['5/6', '-10'],
@@ -88,7 +80,7 @@ export default {
           setWidth += 'col-lg' + imageSizes.get(declearedSizes[i]) + ' '
         }
       }
-      console.log(setWidth)
+      return setWidth
     }
   }
 }
