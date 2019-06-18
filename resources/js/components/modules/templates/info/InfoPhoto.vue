@@ -51,20 +51,34 @@ export default {
       } else if (this.image.size === 'sixth') {
         return 'col-2'
       } else {
-        return 'col-lg-6 col-md-8 col-12'
+        return 'col-lg-6 col-md-8 col-10'
       }
     }
   },
   methods: {
     checkMap: function () {
       let imageSizes = new Map([
-        ['full', '-12'], ['half', '-6'], ['third', '-4'], ['quarter', '-3']
+        ['full', '-12'],
+        ['5/6', '-10'],
+        ['2/3', '-8'],
+        ['half', '-6'],
+        ['1/3', '-4'],
+        ['quarter', '-3'],
+        ['sixth', '-2']
       ])
-      // let setWidth = '';
-      console.log(imageSizes)
+      // var setWidth = ''
       console.log(imageSizes.get(this.image.mobile_size))
-      console.log(imageSizes.get(this.image.tablet_size))
-      console.log(imageSizes.get(this.image.desktop_size))
+      var setSizes = {
+        'size': this.image.size || '',
+        'mobile_size': this.image.mobile_size || '',
+        'tablet_size': this.image.tablet_size || '',
+        'desktop_size': this.image.desktop_size || ''
+      }
+      const declearedSizes = Object.values(setSizes)
+      for (var i = 0; i <= declearedSizes.length; i++) {
+        console.log(declearedSizes[i])
+        console.log(imageSizes.get(declearedSizes[i]))
+      }
     }
   }
 }
