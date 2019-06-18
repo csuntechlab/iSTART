@@ -12448,9 +12448,9 @@ body {
 
 .module__progress {
   font-size: 1rem;
-  color: white;
+  color: whitesmoke;
   font-weight: normal;
-  margin-top: -20px;
+  margin-top: -25px;
   margin-bottom: 0;
   text-align: center;
 }
@@ -12894,6 +12894,43 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 1rem;
+}
+
+.module-quizInput__text {
+  font-size: 1rem;
+}
+
+.module-quizInput__label {
+  border-radius: 7.5px;
+  border-color: #2699fb;
+  width: 100%;
+  padding-bottom: 3px;
+  background-color: whitesmoke;
+}
+
+@media (min-width: 768px) {
+  .module-quizInput__label {
+    border-radius: 2px;
+    border: 1.7px solid #2699fb;
+  }
+}
+
+.module-quizInput__validate {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+  .module-quizInput__validate {
+    font-size: 0.9rem;
+  }
+}
+
+.module-quizInput__validate--red {
+  color: red;
+}
+
+.module-quizInput__validate--green {
+  color: green;
 }
 
 .introSlide {
