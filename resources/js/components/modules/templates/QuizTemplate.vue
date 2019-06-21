@@ -5,7 +5,7 @@
         <h1 class="module-quiz__header-font">{{ currentSlideData.header.title }}</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="col-12">
       <p v-if="currentSlideData.header.text"> {{ currentSlideData.header.text }}</p>
       <info-photo v-for="(element, id) in currentSlideData.content.images"
         :key="`${id}-${element.id}`"

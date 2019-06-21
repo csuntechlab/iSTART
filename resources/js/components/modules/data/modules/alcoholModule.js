@@ -20,16 +20,14 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
-          position: null
+          mobile_size: '1/2',
+          tablet_size: '1/4',
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
           alt: 'tequila not equal red wine not equal beer',
-          position: 'bottom'
+          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages',
         }
-      },
-      paragraph: {
-        0: '<em><b>Different types of beer, wine,</b> and liquor <b>can have differing alcohol percentages</b>.</em>'
       },
       list: null
     }
@@ -46,8 +44,8 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
-          position: null
-        }
+          y_position: null
+        },
       },
       paragraph: {
         0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
@@ -61,19 +59,19 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Fun Fact!',
-      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
     },
     content: {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
-          alt: 'drink sizes comparison',
-          position: 'top'
+          alt: 'clip art of brain',
+          mobile_size: '1/3',
+          tablet_size: '1/6'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
-          position: null
+          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
         }
       },
       paragraph: {
@@ -94,8 +92,9 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
-          position: 'top',
-          width: 'half'
+          mobile_size: '2/3',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       },
       questions: {
@@ -305,7 +304,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
           alt: 'friends on beach cooking marshmallows',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -402,7 +401,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
           position: 'top',
-          width: 'half'
+          width: '1/2'
         }
       },
       questions: {
@@ -504,7 +503,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
-          position: 'bottom'
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -608,30 +607,26 @@ export const alcoholModuleSlides = {
       text: null
     },
     content: {
-      images: {
+      image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
           alt: 'one dollar bills',
-          position: null,
-          width: null
+          caption: 'Save money'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          position: null,
-          width: null
+          caption: 'Clearer skin'
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          position: null,
-          width: null
+          caption: 'Better mood'
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          position: null,
-          width: null
+          caption: 'Reduce risk of disease'
         }
       },
       paragraph: {
@@ -653,47 +648,47 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s20_01.png',
           alt: 'gin and tonic',
-          position: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s20_02.png',
           alt: 'beer',
-          position: null
+          y_position: null
         },
         2: {
           src: 'images/alcoholModule/alcohol_s20_03.png',
           alt: 'red wine',
-          position: null
+          y_position: null
         },
         3: {
           src: 'images/alcoholModule/alcohol_s20_04.png',
           alt: 'cosmo',
-          position: null
+          y_position: null
         },
         4: {
           src: 'images/alcoholModule/alcohol_s20_05.png',
           alt: 'margarita',
-          position: null
+          y_position: null
         },
         5: {
           src: 'images/alcoholModule/alcohol_s20_06.png',
           alt: 'piña colada',
-          position: null
+          y_position: null
         },
         6: {
           src: 'images/alcoholModule/alcohol_s20_07.png',
           alt: 'mojito',
-          position: null
+          y_position: null
         },
         7: {
           src: 'images/alcoholModule/alcohol_s20_08.png',
           alt: '80 proof spirits',
-          position: null
+          y_position: null
         },
         8: {
           src: 'images/alcoholModule/alcohol_s20_09.png',
           alt: 'white wine',
-          position: null
+          y_position: null
         }
       },
       paragraph: {
@@ -716,8 +711,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
-          position: 'bottom',
-          width: null
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -738,8 +732,9 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
-          position: null,
-          width: null
+          mobile_size: '5/6',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       },
       paragraph: null,
@@ -777,18 +772,14 @@ export const alcoholModuleSlides = {
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
     },
     content: {
-      images: {
+      image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s24_01.jpg',
           alt: 'no alcohol sticker',
-          position: null,
-          width: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'no sign',
-          position: null,
-          width: null
         }
       },
       list: {
@@ -847,8 +838,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          position: 'bottom',
-          width: null
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -872,7 +862,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
           position: 'top',
-          width: 'half'
+          width: '1/2'
         }
       },
       questions: {
@@ -978,8 +968,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s29_01.jpg',
           alt: 'two people running next to a lake',
-          position: 'bottom',
-          width: null
+          y_position: 'bottom'
         }
       },
       paragraph: {
@@ -1001,14 +990,12 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          position: null,
-          width: null
+          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          position: 'bottom',
-          width: null
+          y_position: 'bottom'
         }
       },
       paragraph: {
