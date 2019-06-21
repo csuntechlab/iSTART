@@ -6,7 +6,7 @@
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
         <div @click="showResponse(optionIndex)" class="module-quiz__option">
-          <div v-if="displayContent" :class="[(object.showResponse ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
+          <div :class="[(object.showResponse ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
             <i :class="[(element.isAnswer ? 'fa-check-circle' : 'fa-times-circle'), 'fa']"></i>
           </div>
 
@@ -42,7 +42,7 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'displayContent'
+        'currentSlideNumber'
       ]
     )
   },
@@ -51,13 +51,13 @@ export default {
     ...mapActions(
       [
         'updateResponse',
-        'allowUserToContinue'
+        'enableContinue'
       ]
     ),
 
     showResponse (optionIndex) {
-      this.updateResponse({ currentSlideIndex: parseInt(this.slideNumber), currentQuestionIndex: parseInt(this.index), currentOptionIndex: parseInt(optionIndex) })
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber })
+      this.updateResponse({ currentSlideIndex: parseInt(this.currentSlideNumber), currentQuestionIndex: parseInt(this.index), currentOptionIndex: parseInt(optionIndex) })
+      this.enableContinue()
     }
   }
 }

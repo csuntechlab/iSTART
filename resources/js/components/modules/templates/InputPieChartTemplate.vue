@@ -6,7 +6,7 @@
         </div>
       </div>
       <div class="row mt-3 justify-content-center">
-        <template v-for="(element, index) in current_slide(slideNumber-1).content.questions">
+        <template v-for="(element, index) in getSlideData(currentSlideNumber-1).content.questions">
           <div :key="index" class="col-12 mt-5 mb-2">
             <p class="module-quizInput__text">{{ element.question }}</p>
           </div>
@@ -29,44 +29,24 @@
 </template>
 
 <script>
-import { mapGetters, mapActions, mapState } from 'vuex'
+import { mapGetters } from 'vuex'
+import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
 import InputPieChartLegend from './../templates/input/InputPieChartLegend'
 
 export default {
+  mixins: [awaitTimeBeforeContinue],
   components: {
     InputPieChartLegend
   },
 
   computed: {
-    ...mapState(
-      {
-        slideNumber: state => state.Slides.slide_index,
-        slides: state => state.Slides.importedJSONSlides
-      }
-    ),
-
     ...mapGetters(
       [
         'userResponses',
-        'slideNumber',
-        'current_slide'
+        'getSlideData',
+        'currentSlideNumber'
       ]
     )
-  },
-
-  mounted () {
-    this.proceedAndContinue()
-  },
-
-  methods: {
-    ...mapActions(
-      [
-        'allowUserToContinue'
-      ]
-    ),
-    proceedAndContinue () {
-      setTimeout(function () { this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null }) }.bind(this), 5000)
-    }
   }
 }
 </script>

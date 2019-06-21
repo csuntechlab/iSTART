@@ -7,7 +7,7 @@
       (!image.x_position ? 'justify-content-center': '')
     ]"
   >
-    <div v-if="image.caption_y_position == 'top' || !image.caption_y_position" class="col-12">
+    <div v-if="image.caption_y_position == 'top' || (!image.caption_y_position && image.caption)" class="col-12">
       <p :class="[
         (image.caption_text_align === 'left' ? 'text-left' : ''),
         (image.caption_text_align === 'center' ? 'text-center' : ''),
@@ -20,7 +20,7 @@
     <div :class="[determineColSize]">
       <img class="module-info__img" :src="image.src" :alt="image.alt">
     </div>
-    <p v-if="image.caption_y_position == 'bottom'"
+    <p v-if="image.caption_y_position == 'bottom' && image.caption"
       :class="[
         (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
         (image.caption_text_align === 'center' ? 'text-center' : ''),
@@ -33,7 +33,6 @@
 </template>
 <script>
 export default {
-  name: 'infoPhoto',
   props: [
     'image',
     'imageCount'

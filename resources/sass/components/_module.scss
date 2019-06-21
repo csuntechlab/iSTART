@@ -26,41 +26,32 @@
         }
     }
     
-    &__footerText{
-        color: $secondaryColor;
-        @include media-breakpoint-up(md){
-            width: 10rem;
-            height: 2.25rem;
-            border-radius: 0.4rem;
-        }
-        &--left{
-            margin-left: 2rem;
-            outline: inherit;
-            border: none;
-            background: none;
-        }
-        &--right {
-            margin-right: 2rem;
-            outline: inherit;
-            border: none;
-            background: none;
-        }
-    }
     &-footer {
-        &__background {
-            @include media-breakpoint-down(sm) {
-                position: fixed;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                padding-top:10px;
-            }
-            @include media-breakpoint-up(md) {
-                background-color: $secondaryColor;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 2rem;
 
+        &__item {
+            text-align: center;
+            margin: 0 2rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            & {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
             }
-            background-color: $primaryColor;
-            padding-bottom: 15px;
+
+            &__item {
+                margin: 0 1rem;
+            }
+
+            &__button {
+                margin-top: 1rem;
+            }
         }
     }
     

@@ -92,7 +92,9 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s06_01.png',
           alt: 'quiz',
-          size: '1/2'
+          mobile_size: '2/3',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       },
       questions: {
@@ -366,7 +368,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac pretium tortor, vitae aliquam urna. Vivamus commodo suscipit risus, sed sagittis tellus. Nam at tortor cursus, semper risus ac, lacinia odio. Morbi vitae mollis diam.'
+            description: 'For women, 4 or more drinks on one occasion or 8 or more drinks over the course of 1 week. For men, 5 or more drinks at 1 time or 15 or more drinks over the course of 1 week. Heavy drinking is measured over a week.'
           }
         }
       },
@@ -382,6 +384,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       video_id: 'JfsqxIEQk6U',
+      video_length: 30000 + 5000,
       caption: null
     }
   },
@@ -484,6 +487,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       video_id: '5jNEVGj6gS0',
+      video_length: 122400 + 5000,
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
