@@ -13288,3 +13288,14 @@ body {
   width: 100%;
 }
 
+.image-grid__wrapper {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.image-grid__img {
+  width: 100%;
+  max-width: 25rem;
+}
+

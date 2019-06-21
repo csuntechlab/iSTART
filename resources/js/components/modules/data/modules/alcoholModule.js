@@ -603,26 +603,28 @@ export const alcoholModuleSlides = {
       text: null
     },
     content: {
-      images: {
+      image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
           alt: 'one dollar bills',
-          y_position: null
+          y_align: 'top',
+          caption: 'Save Money'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          y_position: null
+          y_align: 'center',
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          y_position: null
+          y_align: 'bottom',
+          caption: 'Better Mood'
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          y_position: null
+          caption: 'Reduce Risk of Disease'
         }
       },
       paragraph: {
@@ -768,16 +770,14 @@ export const alcoholModuleSlides = {
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
     },
     content: {
-      images: {
+      image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s24_01.jpg',
           alt: 'no alcohol sticker',
-          y_position: null
         },
         1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'no sign',
-          y_position: null
         }
       },
       list: {

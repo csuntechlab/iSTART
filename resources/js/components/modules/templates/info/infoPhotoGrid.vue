@@ -1,35 +1,30 @@
 <template>
     <div class="row"
-    :class="[
-        (image_grid.x_position === 'left' ? 'justify-content-start' : ''),
-        (image_grid.x_position === 'center' ? 'justify-content-center' : ''),
-        (image_grid.x_position === 'right' ? 'justify-content-end' : ''),
-        (!image_grid.x_position ? 'justify-content-center': '')
+        v-bind:class="[
+            (alignment === 'left' ? 'justify-content-start' : ''),
+            (alignment === 'center' || !alignment ? 'justify-content-center' : ''),
+            (alignment === 'right' ? 'justify-content-end' : ''),
     ]"
     >
-    <div v-if="image_grid.caption_y_position == 'top' || !image_grid.caption_y_position" class="col-12">
-        <p :class="[
-            (image_grid.caption_text_align === 'left' ? 'text-left' : ''),
-            (image_grid.caption_text_align === 'center' ? 'text-center' : ''),
-            (image_grid.caption_text_align === 'right' ? 'text-right' : ''),
-            (!image_grid.caption_text_align ? 'text-left' : '')
-        ]">
-            {{ image_grid.caption }}
-        </p>
-    </div>
-    <div class="col-6" v-for="(item, alt) in image_grid" :key="alt">
-        <img class="module-info__img" :src="item.src" :alt="item.alt">
-    </div>
-    <p
-        v-if="image_grid.caption_y_position == 'bottom'"
-        :class="[
-            (image_grid.caption_text_align === 'left' || !image_grid.caption_text_align ? 'text-left' : ''),
-            (image_grid.caption_text_align === 'center' ? 'text-center' : ''),
-            (image_grid.caption_text_align === 'right' ? 'text-right' : ''),
-        ]"
-    >
-        {{ image_grid.caption }}
-    </p>
+        <div
+            class="col-6 image-grid__wrapper"
+            v-for="(item, alt) in image_grid"
+            :key="alt"
+            v-bind="item"
+            v-bind:class="[
+                (item.y_align === 'top' ? 'align-self-start' : ''),
+                (item.y_align === 'center' || !item.y_align ? 'align-self-center' : ''),
+                (item.y_align === 'bottom' ? 'align-self-end' : '')
+            ]"
+        >
+            <figcaption v-if="item.caption_y_position === 'top' || (!item.caption_y_position && item.caption)">
+                {{ item.caption }}
+            </figcaption>
+            <img class="image-grid__img" :src="item.src" :alt="item.alt">
+            <figcaption v-if="item.caption_y_position === 'bottom' && item.caption">
+                {{ item.caption }}
+            </figcaption>
+        </div>
     </div>
 </template>
 
@@ -37,7 +32,8 @@
 export default {
   name: 'infoPhotoGrid',
   props: [
-    'image_grid'
+    'image_grid',
+    'alignment'
   ]
 }
 </script>

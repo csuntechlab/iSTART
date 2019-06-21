@@ -16,9 +16,15 @@
         </div>
         <info-photo v-for="(element, index) in current_slide(slideNumber).content.images"
           :key="index"
-          :image="element"
-          :imageCount="Object.keys(current_slide(slideNumber).content.images)">
+          :image="element">
         </info-photo>
+        <info-photo-grid
+          v-if="current_slide(slideNumber).content.image_grid"
+          :image_grid="(current_slide(slideNumber).content.image_grid)"
+          :alignment="current_slide(slideNumber).content.image_grid_alignment"
+          :item_y_alignment="current_slide(slideNumber).content.y_align"
+        >
+        </info-photo-grid>
         <info-content v-for="(element, index) in current_slide(slideNumber).content.paragraph"
           :key="`${index}-${element.id}`"
           :paragraph="element"
@@ -46,6 +52,7 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import InfoContent from './info/InfoContent'
 import InfoCarousel from './info/InfoCarousel'
 import InfoPhoto from './info/InfoPhoto'
+import InfoPhotoGrid from './info/InfoPhotoGrid'
 import InfoList from './info/InfoList'
 
 export default {
@@ -53,6 +60,7 @@ export default {
     InfoCarousel,
     InfoContent,
     InfoPhoto,
+    InfoPhotoGrid,
     InfoList
   },
 
