@@ -6,7 +6,6 @@ export default {
   enableContinue: false,
   enableBack: false,
 
-  isUserAbleToProceed: false,
   responses: {},
   surveyResultLinks: [
     'https://www.metalab.csun.edu/',

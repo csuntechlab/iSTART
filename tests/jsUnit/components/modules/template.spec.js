@@ -1,29 +1,20 @@
 import slideStore from './../../../../resources/js/store/modules/slides/'
 import 'jest-extended'
+
 const state = {
-  importedJSONSlides: {},
-  slide_index: 0,
-  isUserAbleToProceed: false
+  JSONSlideDatas: {},
+  currentSlideNumber: 0
 }
 
-describe('slideStore/actions/allowUserToContinue', () => {
-  it('should commit to ENABLE_OR_DISABLE_CONTINUE mutation when action is called', () => {
-    let commit = jest.fn()
-    slideStore.actions.allowUserToContinue({ commit }, true)
-    expect(commit).toHaveBeenCalled()
-  })
-  it('should commit ENABLE_OR_DISABLE_CONTINUE mutation to equal true when action is called', () => {
-    slideStore.mutations.ENABLE_OR_DISABLE_CONTENT(state, true)
-    expect(state.isUserAbleToProceed).toBeTrue()
-  })
-  it('should commit ENABLE_OR_DISABLE_CONTINUE mutation to equal false when action is called', () => {
-    slideStore.mutations.ENABLE_OR_DISABLE_CONTENT(state, false)
-    expect(state.isUserAbleToProceed).toBeFalse()
+describe('should check for module functionality', () => {
+  it('should call ENABLE_CONTINUE mutation and check state to be true', () => {
+    slideStore.mutations.ENABLE_CONTINUE(state)
+    expect(state.enableContinue).toBeTrue()
   })
 
-  it('should commit to ITERATE_THROUGH_CONTENT mutation when action is called', () => {
-    slideStore.mutations.ITERATE_THROUGH_CONTENT(state, 1)
-    expect(state.slide_index).toEqual(1)
+  it('should commit SET_SLIDE_CONTENT_VISIBILITY mutation to equal true when action is called', () => {
+    slideStore.mutations.SET_SLIDE_CONTENT_VISIBILITY(state, true)
+    expect(state.slideContentVisibility).toBeTrue()
   })
 })
 
@@ -55,13 +46,13 @@ describe('slideStore/actions/getSlideInfo', () => {
       }
     }
   }
-  it('should commit to GET_SLIDE_INFO_FROM_JSON mutation when action is called', () => {
+  it('should commit to STORE_JSON_IN_STATE mutation when action is called', () => {
     let commit = jest.fn()
-    slideStore.actions.getSlideInfo({ commit }, slides)
-    expect(commit).toHaveBeenCalledWith('GET_SLIDE_INFO_FROM_JSON', slides)
+    slideStore.actions.storeJSONInState({ commit }, slides)
+    expect(commit).toHaveBeenCalledWith('STORE_JSON_IN_STATE', slides)
   })
   it('should fill the state when slides is mudated to GET_SLIDE_INFO_FROM_JSON action is called', () => {
-    slideStore.mutations.GET_SLIDE_INFO_FROM_JSON(slideState, slides)
-    expect(slideState.importedJSONSlides).toEqual(slides)
+    slideStore.mutations.STORE_JSON_IN_STATE(slideState, slides)
+    expect(slideState.JSONSlideData).toEqual(slides)
   })
 })
