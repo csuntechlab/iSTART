@@ -25,6 +25,12 @@ export default {
     }, this.currentSlideData.content.video_length)
   },
 
+  updated () {
+    setTimeout(() => {
+      this.allowContinue()
+    }, this.currentSlideData.content.video_length)
+  },
+
   computed: {
     ...mapGetters(
       [

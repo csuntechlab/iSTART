@@ -68,7 +68,7 @@ export default {
     },
 
     checkForVisitedSlide () {
-      if (this.currentSlideNumber < (this.latestSlideNumber)) {
+      if (this.currentSlideNumber < this.latestSlideNumber) {
         this.enableContinue()
       }
     },

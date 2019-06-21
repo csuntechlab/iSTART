@@ -1,8 +1,15 @@
 import { mapActions } from 'vuex'
 
-let allottedTime = 10000
 export const awaitTimeBeforeContinue = {
   mounted () {
+    let allottedTime = 8000
+    setTimeout(() => {
+      this.allowContinue()
+    }, allottedTime)
+  },
+
+  updated () {
+    let allottedTime = 8000
     setTimeout(() => {
       this.allowContinue()
     }, allottedTime)
