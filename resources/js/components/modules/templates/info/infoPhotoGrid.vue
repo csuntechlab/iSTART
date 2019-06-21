@@ -1,10 +1,10 @@
 <template>
     <div class="row"
         v-bind:class="[
-            (alignment === 'left' ? 'justify-content-start' : ''),
-            (alignment === 'center' || !alignment ? 'justify-content-center' : ''),
-            (alignment === 'right' ? 'justify-content-end' : ''),
-    ]"
+            (content_alignment === 'left' ? 'justify-content-start' : ''),
+            (content_alignment === 'center' || !content_alignment ? 'justify-content-center' : ''),
+            (content_alignment === 'right' ? 'justify-content-end' : ''),
+        ]"
     >
         <div
             class="col-6 image-grid__wrapper"
@@ -12,9 +12,9 @@
             :key="alt"
             v-bind="item"
             v-bind:class="[
-                (item.y_align === 'top' ? 'align-self-start' : ''),
-                (item.y_align === 'center' || !item.y_align ? 'align-self-center' : ''),
-                (item.y_align === 'bottom' ? 'align-self-end' : '')
+                (item.image_y_align === 'top' ? 'align-self-start' : ''),
+                (item.image_y_align === 'center' || !item.image_y_align ? 'align-self-center' : ''),
+                (item.image_y_align === 'bottom' ? 'align-self-end' : '')
             ]"
         >
             <figcaption v-if="item.caption_y_position === 'top' || (!item.caption_y_position && item.caption)">
@@ -33,7 +33,7 @@ export default {
   name: 'infoPhotoGrid',
   props: [
     'image_grid',
-    'alignment'
+    'content_alignment'
   ]
 }
 </script>

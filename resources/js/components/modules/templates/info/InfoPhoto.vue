@@ -58,7 +58,7 @@ export default {
         ['1/4', '-3'],
         ['1/6', '-2']
       ])
-      var setWidth = ''
+      var createdWidth = ''
       var setSizes = {
         'size': this.image.size || '',
         'mobile_size': this.image.mobile_size || '',
@@ -68,19 +68,19 @@ export default {
       const declearedSizes = Object.values(setSizes)
       for (var i = 0; i <= declearedSizes.length; i++) {
         if (i === 0 && declearedSizes[i] !== '') {
-          setWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
+          createdWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
         }
         if (i === 1 && declearedSizes[i] !== '') {
-          setWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
+          createdWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
         }
         if (i === 2 && declearedSizes[i] !== '') {
-          setWidth += 'col-md' + imageSizes.get(declearedSizes[i]) + ' '
+          createdWidth += 'col-md' + imageSizes.get(declearedSizes[i]) + ' '
         }
         if (i === 3 && declearedSizes[i] !== '') {
-          setWidth += 'col-lg' + imageSizes.get(declearedSizes[i]) + ' '
+          createdWidth += 'col-lg' + imageSizes.get(declearedSizes[i]) + ' '
         }
       }
-      return setWidth.trim()
+      return createdWidth.trim()
     }
   }
 }

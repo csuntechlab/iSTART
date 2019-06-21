@@ -607,24 +607,22 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
           alt: 'one dollar bills',
-          y_align: 'top',
-          caption: 'Save Money'
+          caption: 'Save money'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          y_align: 'center',
+          caption: 'Clearer skin'
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          y_align: 'bottom',
-          caption: 'Better Mood'
+          caption: 'Better mood'
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          caption: 'Reduce Risk of Disease'
+          caption: 'Reduce risk of disease'
         }
       },
       paragraph: {

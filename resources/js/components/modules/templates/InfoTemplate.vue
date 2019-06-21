@@ -21,8 +21,7 @@
         <info-photo-grid
           v-if="current_slide(slideNumber).content.image_grid"
           :image_grid="(current_slide(slideNumber).content.image_grid)"
-          :alignment="current_slide(slideNumber).content.image_grid_alignment"
-          :item_y_alignment="current_slide(slideNumber).content.y_align"
+          :content_alignment="current_slide(slideNumber).content.image_grid_align_content"
         >
         </info-photo-grid>
         <info-content v-for="(element, index) in current_slide(slideNumber).content.paragraph"
