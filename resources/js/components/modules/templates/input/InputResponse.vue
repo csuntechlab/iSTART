@@ -47,8 +47,9 @@ export default {
   methods: {
     ...mapActions(
       [
-        'getUserResponses',
-        'allowUserToContinue'
+        'enableContinue',
+        'disableContinue',
+        'getUserResponses'
       ]
     ),
 
@@ -57,7 +58,7 @@ export default {
       if (enteredValue === '') {
         if (this.checkForEmptyInput($event)) {
           this.isInputValid = false
-          this.preventContinue()
+          this.disableContinue()
         } else {
           this.isInputValid = true
           this.storeInputIntoState()
@@ -84,37 +85,28 @@ export default {
     },
 
     validateForm ($event) {
-      console.log(this.questionLength, this.responseFromState)
       // Check if all inputs have been filled before checking question data
       if (parseInt(Object.keys(this.responseFromState).length) === parseInt(this.questionLength)) {
         for (let i = 0; i < this.questionLength; ++i) {
           if (this.responseFromState[i].valid === true) {
-            this.allowContinue()
+            this.enableContinue()
           } else {
-            this.preventContinue()
+            this.disableContinue()
             // If not valid, exit loop
             break
           }
         }
       } else {
-        this.preventContinue()
+        this.disableContinue()
       }
     },
 
     allowContinue () {
-      let payload = {
-        isAbleToProceed: true,
-        slide_index: this.slideNumber
-      }
-      this.allowUserToContinue(payload)
+      this.enableContinue()
     },
 
     preventContinue () {
-      let payload = {
-        isAbleToProceed: false,
-        slide_index: this.slideNumber
-      }
-      this.allowUserToContinue(payload)
+      this.disableContinue()
     }
   }
 }

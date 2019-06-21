@@ -1,35 +1,34 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
     <div class="video-template__header col-12">
-      <h1 class="video-template__title">{{ current_slide(slideNumber).header.title }}</h1>
-      <p>{{ current_slide(slideNumber).header.text }}</p>
+      <h1 class="video-template__title">{{ currentSlideData.header.title }}</h1>
+      <p>{{ currentSlideData.header.text }}</p>
     </div>
     <div class="video-template__video col-12 col-md-10">
       <div class="embed-responsive embed-responsive-16by9">
-        <youtube :video-id="current_slide(slideNumber).content.video_id" player-width="100%" @ended="proceedAndContinue" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
+        <youtube :video-id="currentSlideData.content.video_id" player-width="100%" @ended="allowContinue" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
       </div>
     </div>
     <div class="video-template__caption col-12">
-      <caption>{{ current_slide(slideNumber).content.caption }}</caption>
+      <caption>{{ currentSlideData.content.caption }}</caption>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  name: 'moduleContent',
+  mounted () {
+    setTimeout(() => {
+      this.allowContinue()
+    }, this.currentSlideData.content.video_length)
+  },
+
   computed: {
-    ...mapState(
-      {
-        slideNumber: state => state.Slides.slide_index,
-        slides: state => state.Slides.importedJSONSlides
-      }
-    ),
     ...mapGetters(
       [
-        'current_slide'
+        'currentSlideData'
       ]
     )
   },
@@ -37,12 +36,12 @@ export default {
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue'
+        'enableContinue'
       ]
     ),
 
-    proceedAndContinue () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null })
+    allowContinue () {
+      this.enableContinue()
     }
   }
 }

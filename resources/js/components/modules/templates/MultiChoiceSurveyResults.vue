@@ -28,18 +28,22 @@
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import { setTimeout } from 'timers'
+import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
+
 export default {
-  name: 'MultiChoiceSurveyResults',
-  mounted () {
-    setTimeout(() => {
-      this.allowUserToContinue(true)
-    }, 5000)
+  mixins: [awaitTimeBeforeContinue],
+  computed: {
+    ...mapGetters(
+      [
+        'surveyResultLinks',
+        'surveyResultsEmailWasSubmitted'
+      ]
+    )
   },
+
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue',
         'emailSurveyResults'
       ]
     ),
@@ -51,14 +55,6 @@ export default {
       links += ('</ul>')
       this.emailSurveyResults(links)
     }
-  },
-  computed: {
-    ...mapGetters(
-      [
-        'surveyResultLinks',
-        'surveyResultsEmailWasSubmitted'
-      ]
-    )
   }
 }
 </script>
