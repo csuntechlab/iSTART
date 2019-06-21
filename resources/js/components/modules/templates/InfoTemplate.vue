@@ -51,7 +51,7 @@ import { mapState, mapGetters, mapActions } from 'vuex'
 import InfoContent from './info/InfoContent'
 import InfoCarousel from './info/InfoCarousel'
 import InfoPhoto from './info/InfoPhoto'
-import InfoPhotoGrid from './info/InfoPhotoGrid'
+import InfoPhotoGrid from './info/infoPhotoGrid'
 import InfoList from './info/InfoList'
 
 export default {
