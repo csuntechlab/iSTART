@@ -4,15 +4,15 @@
     min-height: 100vh;
     padding: 0;
 
-    @include media-breakpoint-down(sm) {
-        padding-bottom: 3.2rem;
-    }
-    
     &__header{
         margin-top: -2px;
         z-index: 1;
         position: sticky;
         top: 0;
+    }
+
+    &__content {
+        min-height: calc(100vh - 8.25rem);
     }
 
     &-content {
@@ -36,21 +36,63 @@
         &__item {
             text-align: center;
             margin: 0 2rem;
+
+            &-right {
+                position: relative;
+            }
+        }
+
+        &__tooltip {
+            background-color: rgba(45, 45, 45, 0.8);
+            color: $white;
+            text-align: left;
+            width: calc(100% + 5rem);
+            border-radius: 8px;
+            display: block;
+            position: absolute;
+            bottom: 125%;
+            right: -28%;
+            padding: 0.5rem 1rem;
+
+            &.hidden {
+                display: none;
+            }
         }
 
         @include media-breakpoint-down(sm) {
             & {
+                background-color: $primaryColor;
                 width: 100%;
-                position: absolute;
+                justify-content: initial;
+                position: sticky;
                 bottom: 0;
+                margin: 0;
+                padding: 0;
             }
 
             &__item {
-                margin: 0 1rem;
+                margin: 0;
+
+                &-left {
+                    position: relative;
+                    left: 0;
+                }
+    
+                &-right {
+                    position: absolute;
+                    right: 0;
+                }
+
+                & .button {
+                    box-shadow: none;
+                    border-radius: 0;
+                    padding: 1rem 1.5rem;
+                }
             }
 
-            &__button {
-                margin-top: 1rem;
+            &__tooltip {
+                bottom: 115%;
+                right: 5%;
             }
         }
     }
