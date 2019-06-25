@@ -40,6 +40,7 @@
             </info-list>
           </ul>
         </div>
+        <info-photo-list></info-photo-list>
         <info-carousel class="col-12" v-if="currentSlideData.format ==='carousel'" :images="currentSlideData.content.carousel"></info-carousel>
       </div>
     </div>
@@ -54,6 +55,7 @@ import InfoCarousel from './info/InfoCarousel'
 import InfoPhoto from './info/InfoPhoto'
 import InfoPhotoGrid from './info/infoPhotoGrid'
 import InfoList from './info/InfoList'
+import InfoPhotoList from './info/InfoPhotoList'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
@@ -62,7 +64,8 @@ export default {
     InfoContent,
     InfoPhoto,
     InfoPhotoGrid,
-    InfoList
+    InfoList,
+    InfoPhotoList
   },
 
   computed: {
