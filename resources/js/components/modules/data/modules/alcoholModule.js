@@ -2,11 +2,13 @@ export const alcoholModuleSlides = {
   // slide 1 and 2 (combined to fit the design)
   0: {
     slide_type: 'intro',
-    moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
-    moduleTitle: 'Alcohol',
-    goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
-    definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
-    estimatedCompletion: '15 minutes'
+    content: {
+      title: 'Alcohol',
+      background_image: 'images/thumbnail/alcohol_thumbnail.jpg',
+      goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
+      definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
+      estimated_completion: '15 minutes'
+    },
   },
   // slide 3
   1: {
