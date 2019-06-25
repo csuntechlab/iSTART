@@ -1,16 +1,20 @@
 <template>
-  <div class="module-footer">
-    <span v-if="checkForStart()" class="module-footer__item">
+  <footer class="module-footer">
+    <span v-if="checkForStart()" class="module-footer__item-left module-footer__item">
       <button @click="slideBack" class="module-footer__button button button-primary">Back</button>
     </span>
-    <span v-if="checkForEnd()" class="module-footer__item">
+    <span v-if="checkForEnd()" class="module-footer__item-right module-footer__item">
       <button v-if="isContinueButtonEnabled" @click="slideForward" class="module-footer__button button button-primary">Continue</button>
-      <button v-else class="module-footer__button button button-primary--disabled">Continue</button>
+
+      <div v-else>
+        <div id="tooltip" class="module-footer__tooltip hidden">{{ currentSlideData.header.tooltip }}</div>
+        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled">Continue</button>
+      </div>
     </span>
-    <span v-else class="module-footer__item">
+    <span v-else class="module-footer__right module-footer__item-right">
       <button @click="returnToDashboard" class="module-footer__button button button-primary">Return to Dashboard</button>
     </span>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -22,6 +26,7 @@ export default {
       [
         'isContinueButtonEnabled',
         'isBackButtonEnabled',
+        'currentSlideData',
         'currentSlideNumber',
         'latestSlideNumber',
         'totalSlides'
@@ -75,6 +80,14 @@ export default {
 
     returnToDashboard () {
       this.$router.push({ name: 'Dashboard' })
+    },
+
+    showTooltip () {
+      document.getElementById('tooltip').classList.remove('hidden')
+    },
+
+    hideTooltip () {
+      document.getElementById('tooltip').classList.add('hidden')
     }
   }
 }

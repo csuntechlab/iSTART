@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from 'vue'
 import VueProgress from 'vue-progress-path'
 import App from './App.vue'
 import router from './router'

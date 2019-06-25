@@ -1,5 +1,5 @@
 <template>
-  <div class="module__header">
+  <header class="module__header">
     <loading-progress class="module__progressBar"
       :progress="latestSlideNumber/(totalSlides - 1)"
       :size="getProgressBarSize"
@@ -8,7 +8,7 @@
       :width="getProgressBarSize"
     />
     <h1 class="module__progress">{{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}% </h1>
-  </div>
+  </header>
 </template>
 
 <script>
