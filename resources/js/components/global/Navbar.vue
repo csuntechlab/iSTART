@@ -11,7 +11,7 @@
     </div>
   <div id="dropdown" class="navbar-dropdown transition-350ms">
     <div class="navbar-nav navbar-dropdown-list">
-      <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown-list__divider">
+      <router-link v-show="!isAdminUser" to="/" class="navbar-dropdown__divider">
         <div @click="closeNavigation" class="navbar-dropdown__item">
           <span class="nav-link">DASHBOARD</span>
         </div>
