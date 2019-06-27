@@ -2,7 +2,7 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <div v-if="isSlideContentVisible">
+    <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'"></intro-template>
       <info-template v-if="currentSlideData.slide_type === 'info'"></info-template>
       <quiz-template v-if="currentSlideData.slide_type === 'quiz'"></quiz-template>
@@ -13,7 +13,7 @@
       <email-form v-if="currentSlideData.slide_type==='emailForm'"></email-form>
       <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
       <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
-    </div>
+    </main>
     <module-footer v-if="currentSlideData.slide_type !== 'intro'">></module-footer>
   </div>
 </template>

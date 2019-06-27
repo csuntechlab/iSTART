@@ -13,7 +13,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: null,
-      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>'
+      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -21,12 +22,12 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
           mobile_size: '1/2',
-          tablet_size: '1/4',
+          tablet_size: '1/4'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
           alt: 'tequila not equal red wine not equal beer',
-          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages',
+          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
         }
       },
       list: null
@@ -37,7 +38,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Standard Drink Sizes',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -45,7 +47,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
           y_position: null
-        },
+        }
       },
       paragraph: {
         0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
@@ -59,6 +61,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Fun Fact!',
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -85,7 +88,8 @@ export const alcoholModuleSlides = {
     slide_type: 'quiz',
     header: {
       title: null,
-      text: null
+      text: null,
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: {
@@ -176,7 +180,8 @@ export const alcoholModuleSlides = {
     slide_type: 'quiz',
     header: {
       title: null,
-      text: null
+      text: null,
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: null,
@@ -259,7 +264,8 @@ export const alcoholModuleSlides = {
     slide_type: 'inputComparison',
     header: {
       title: 'What’s your guess?',
-      text: null
+      text: null,
+      tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
       questions: {
@@ -289,7 +295,8 @@ export const alcoholModuleSlides = {
     slide_type: 'inputPieChart',
     header: {
       title: 'What’s your guess?',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     }
   },
   // slide 10
@@ -297,7 +304,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Drinking isn\'t as common as you think.',
-      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
+      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -320,7 +328,8 @@ export const alcoholModuleSlides = {
     slide_type: 'cardFlip',
     header: {
       title: 'Drinking categories',
-      text: null
+      text: null,
+      tooltip: 'Flip all cards to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -380,7 +389,8 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
-      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.'
+      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
+      tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: 'JfsqxIEQk6U',
@@ -393,7 +403,8 @@ export const alcoholModuleSlides = {
     slide_type: 'quiz',
     header: {
       title: null,
-      text: null
+      text: null,
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: {
@@ -483,7 +494,8 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
-      text: 'Please watch the video below.'
+      text: 'Please watch the video below.',
+      tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: '5jNEVGj6gS0',
@@ -496,7 +508,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Dependency',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -518,7 +531,8 @@ export const alcoholModuleSlides = {
     slide_type: 'cardFlip',
     header: {
       title: 'Don\'t become a statistic!',
-      text: 'Flip the cards below to find out some statistics about alcohol use on college campuses.'
+      text: 'Flip the cards below to find out some statistics about alcohol use on college campuses.',
+      tooltip: 'Flip all to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -604,7 +618,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Health benefits of drinking responsibly',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       image_grid: {
@@ -641,7 +656,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Reduced Calorie Intake',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       carousel: {
@@ -704,7 +720,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Better Sleep',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -725,7 +742,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Better Academic Performance',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -746,7 +764,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Responsible Drinking Checklist',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       list: {
@@ -769,17 +788,18 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
-      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!'
+      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!',
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s24_01.jpg',
-          alt: 'no alcohol sticker',
+          alt: 'no alcohol sticker'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
-          alt: 'no sign',
+          alt: 'no sign'
         }
       },
       list: {
@@ -800,7 +820,8 @@ export const alcoholModuleSlides = {
     slide_type: 'cardFlip',
     header: {
       title: 'Should I take an Uber?',
-      text: null
+      text: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -831,7 +852,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Sobering Up Takes Time!',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -854,7 +876,8 @@ export const alcoholModuleSlides = {
     slide_type: 'quiz',
     header: {
       title: null,
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -944,7 +967,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: null,
@@ -961,7 +985,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Physical Activities',
-      text: null
+      text: null,
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -983,7 +1008,8 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Social Activities',
-      text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!'
+      text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!',
+      tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -1010,7 +1036,8 @@ export const alcoholModuleSlides = {
     slide_type: 'cardFlip',
     header: {
       title: 'Mind-Body Activities',
-      text: null
+      text: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -1056,7 +1083,8 @@ export const alcoholModuleSlides = {
     slide_type: 'emailForm',
     header: {
       title: 'Create your own wellness goal!',
-      text: null
+      text: null,
+      tooltip: null
     },
     content: {
       paragraph: {
