@@ -11,8 +11,10 @@
     </div>
   </div>
 </template>
+
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
+
 export default {
   name: 'MultipleChoiceSurvey',
   data () {
@@ -27,23 +29,16 @@ export default {
         ]
     }
   },
-  computed: {
-    ...mapGetters(
-      [
-        'displayContent'
-      ]
-    )
-  },
   methods: {
     ...mapActions(
       [
 
-        'allowUserToContinue'
+        'enableContinue'
       ]
     ),
     enableContinue (index) {
       this.currentChoiceIndex = index
-      this.allowUserToContinue(true)
+      this.enableContinue()
     }
   }
 }

@@ -1,0 +1,11 @@
+.image-grid{
+    &__wrapper{
+        text-align: center;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    &__img{
+        width: 100%;
+        max-width: 25rem;
+    }
+}

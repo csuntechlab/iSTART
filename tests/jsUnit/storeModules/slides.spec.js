@@ -5,14 +5,6 @@ import slidesAPI from './../../../resources/js/api/slides'
 jest.mock('./../../../resources/js/api/slides')
 
 // VUEX action testing
-describe('slideStore/actions/allowUserToContinue', () => {
-  it('should commit to ENABLE_OR_DISABLE_CONTENT mutation when action is called', () => {
-    let commit = jest.fn()
-    slidesStore.actions.allowUserToContinue({ commit }, true)
-    expect(commit).toHaveBeenCalled()
-  })
-})
-
 describe('slidesStore/actions/emailUserResults', () => {
   it('should commit to SURVEY_RESULTS_EMAIL_WAS_SUBMITTED and mock a POST when action is called', async () => {
     const payload = [

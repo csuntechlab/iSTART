@@ -2,25 +2,25 @@
   <div class="introSlide">
     <div class="row introSlide__image-container">
       <div class="col-12 p-0">
-        <img class="introSlide__image" v-bind:src="current_slide(slideNumber).moduleImage">
+        <img class="introSlide__image" v-bind:src="currentSlideData.moduleImage">
       </div>
     </div>
     <div class="row introSlide__content-wrapper">
       <div class="introSlide__title-container col-12 col-md-3">
-        <h1 class="introSlide__title">{{current_slide(slideNumber).moduleTitle}}</h1>
+        <h1 class="introSlide__title">{{currentSlideData.moduleTitle}}</h1>
         <button @click="goForward" class="btn btn-primary introSlide__start-btn">Start</button>
       </div>
       <div class="col-12 col-md-8">
         <p class="introSlide__description mb-2">
           <strong>Goal: </strong>
-          {{current_slide(slideNumber).goal}}
+          {{currentSlideData.goal}}
         </p>
         <p class="introSlide__description mb-2">
           <strong>definition: </strong>
-          {{current_slide(slideNumber).definition}}
+          {{currentSlideData.definition}}
         </p>
 
-        <p class="introSlide__description">Estimated Completion time: {{current_slide(slideNumber).estimatedCompletion}}</p>
+        <p class="introSlide__description">Estimated Completion time: {{currentSlideData.estimatedCompletion}}</p>
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">
@@ -28,42 +28,29 @@
       </div>
     </div>
   </div>
-
 </template>
+
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
-  name: 'IntroSlide',
-  data () {
-    return {
-      moduleTitle: 'Alcohol',
-      moduleInfo: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness and how you can choose to drink responsibly and make healthier choices.',
-      estimatedCompletion: '10',
-      moduleImage: 'images/thumbnail/alcohol_thumbnail.jpg',
-      slide_index_counter: 0
-    }
-  },
   computed: {
-    ...mapState(
-      {
-        slideNumber: state => state.Slides.slide_index,
-        slides: state => state.Slides.importedJSONSlides
-      }
-    ),
     ...mapGetters(
       [
-        'current_slide'
+        'currentSlideData'
       ]
     )
   },
+
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue'
+        'navigateFromSlide'
       ]
     ),
+
     goForward () {
-      this.allowUserToContinue({ isAbleToProceed: false, slide_index: this.slide_index_counter + 1 })
+      this.navigateFromSlide('forward')
     }
   }
 

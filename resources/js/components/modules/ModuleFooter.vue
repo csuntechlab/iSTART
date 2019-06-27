@@ -1,84 +1,93 @@
 <template>
-  <div class="module-footer__background">
-    <div class="row">
-      <div :class="width >= 768 ? 'text-right' : 'text-left'" class="col-6">
-        <button @click="goBack()" :class="width >= 768 ? 'btn btn-primary mr-3 module__footerText' : 'module__footerText module__footerText--left text-left'"><i v-if="width<=768" class="fas fa-chevron-left"></i> Go Back</button>
+  <footer class="module-footer">
+    <span v-if="checkForStart()" class="module-footer__item-left module-footer__item">
+      <button @click="slideBack" class="module-footer__button button button-primary">Back</button>
+    </span>
+    <span v-if="checkForEnd()" class="module-footer__item-right module-footer__item">
+      <button v-if="isContinueButtonEnabled" @click="slideForward" class="module-footer__button button button-primary">Continue</button>
+
+      <div v-else>
+        <div id="tooltip" class="module-footer__tooltip hidden">{{ currentSlideData.header.tooltip }}</div>
+        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled">Continue</button>
       </div>
-      <div :class="width>= 768 ? 'text-left' : 'text-right'" class="col-6">
-        <button  v-if="displayContent" @click="proceedAndHideContent()" :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText transition-350ms' : 'module__footerText module__footerText--right text-right transition-350ms'">
-            Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
-        </button>
-        <button  v-else :class="width >= 768 ? 'btn btn-primary ml-3 module__footerText' : 'module__footerText module__footerText--right text-right'" disabled>
-            Continue <i v-if="width<=768" class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
+    </span>
+    <span v-else class="module-footer__right module-footer__item-right">
+      <button @click="returnToDashboard" class="module-footer__button button button-primary">Return to Dashboard</button>
+    </span>
+  </footer>
 </template>
+
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
-  name: 'moduleFooter',
-  data () {
-    return {
-      width: 0,
-      current_slide: 1
-    }
-  },
-  created () {
-    window.addEventListener('resize', this.handleWidthResize)
-    this.handleWidthResize()
-  },
-  destroyed () {
-    window.removeEventListener('resize', this.handleWidthResize)
-  },
   computed: {
-    ...mapState(
-      {
-        amountOfSlides: state => state.Slides.importedJSONSlides
-      }
-    ),
     ...mapGetters(
       [
-        'displayContent',
-        'slideNumber'
+        'isContinueButtonEnabled',
+        'isBackButtonEnabled',
+        'currentSlideData',
+        'currentSlideNumber',
+        'latestSlideNumber',
+        'totalSlides'
       ]
     )
   },
+
   methods: {
     ...mapActions(
       [
-        'allowUserToContinue'
+        'navigateFromSlide',
+        'resetSlideNavigation',
+        'enableContinue'
       ]
     ),
-    handleWidthResize () {
-      this.width = window.innerWidth
+
+    slideForward () {
+      this.resetSlideNavigation()
+      this.navigateFromSlide('forward')
+      this.checkForVisitedSlide()
     },
-    goBack: function () {
-      if (this.current_slide > -1) {
-        let payload = {
-          isAbleToProceed: true,
-          slide_index: this.current_slide -= 1
-        }
-        this.allowUserToContinue(payload)
-      }
-      if (this.current_slide === -1) {
-        this.$router.push('/')
+
+    slideBack () {
+      this.resetSlideNavigation()
+      this.navigateFromSlide('back')
+      this.checkForVisitedSlide()
+    },
+
+    checkForStart () {
+      if (this.currentSlideNumber === 0) {
+        this.enableContinue()
+        return false
+      } else {
+        return true
       }
     },
-    proceedAndHideContent: function () {
-      let payload = {
-        isAbleToProceed: false,
-        slide_index: this.current_slide += 1
+
+    checkForEnd () {
+      if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        return false
+      } else {
+        return true
       }
-      if (this.slideNumber < Object.keys(this.amountOfSlides).length - 1) {
-        this.allowUserToContinue(payload)
+    },
+
+    checkForVisitedSlide () {
+      if (this.currentSlideNumber < this.latestSlideNumber) {
+        this.enableContinue()
       }
-    }
-  },
-  mounted () {
-    window.onresize = () => {
-      this.width = window.innerWidth
+    },
+
+    returnToDashboard () {
+      this.$router.push({ name: 'Dashboard' })
+    },
+
+    showTooltip () {
+      document.getElementById('tooltip').classList.remove('hidden')
+    },
+
+    hideTooltip () {
+      document.getElementById('tooltip').classList.add('hidden')
     }
   }
 }

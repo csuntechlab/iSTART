@@ -1,14 +1,16 @@
 export default {
-  importedJSONSlides: {},
-  slide_index: 0,
-  slide_type: 'quizInput',
-  isUserAbleToProceed: false,
+  JSONSlideData: {},
+  currentSlideNumber: 0,
+  latestSlideNumber: 0,
+  slideContentVisibility: false,
+  enableContinue: false,
+  enableBack: false,
+
   responses: {},
   surveyResultLinks: [
     'https://www.metalab.csun.edu/',
     'https://www.metalab.csun.edu/',
     'https://www.metalab.csun.edu/'
   ],
-  surveyResultsEmailWasSubmitted: null,
-  importedJSONSlides: {},
+  surveyResultsEmailWasSubmitted: null
 }

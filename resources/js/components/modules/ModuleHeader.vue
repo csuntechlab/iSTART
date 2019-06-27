@@ -1,14 +1,14 @@
 <template>
-  <div class="module__header">
+  <header class="module__header">
     <loading-progress class="module__progressBar"
-      :progress="this.slideNumber/(this.amountOfSlides - 1)"
+      :progress="latestSlideNumber/(totalSlides - 1)"
       :size="getProgressBarSize"
       :shape="module.shape"
       :height="getProgressBarHeight"
       :width="getProgressBarSize"
     />
-    <h1 class="module__progress">{{ Math.floor((this.slideNumber/(this.amountOfSlides - 1)) * 100) }}% </h1>
-  </div>
+    <h1 class="module__progress">{{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}% </h1>
+  </header>
 </template>
 
 <script>
@@ -47,8 +47,8 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'slideNumber',
-        'amountOfSlides'
+        'latestSlideNumber',
+        'totalSlides'
       ]
     ),
 

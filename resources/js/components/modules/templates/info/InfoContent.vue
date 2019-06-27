@@ -1,7 +1,9 @@
 <template>
-<div class="col-12">
-  <p v-if="paragraph" v-html="paragraph"></p>
-</div>
+  <div class="row">
+    <div class="col-12">
+      <p v-if="paragraph" v-html="paragraph"></p>
+    </div>
+  </div>
 </template>
 
 <script>

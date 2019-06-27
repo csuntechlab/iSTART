@@ -2,24 +2,26 @@
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar></Navbar>
     <module-header :size_of_container="sizeOfContainer"></module-header>
-    <intro-template v-if="current_slide(slideNumber).slide_type === 'intro'"></intro-template>
-    <info-template v-if="current_slide(slideNumber).slide_type === 'info'"></info-template>
-    <quiz-template v-if="current_slide(slideNumber).slide_type === 'quiz'"></quiz-template>
-    <input-comparison-template v-if="current_slide(slideNumber).slide_type === 'inputComparison'"></input-comparison-template>
-    <input-pie-chart-template v-if="current_slide(slideNumber).slide_type === 'inputPieChart'"></input-pie-chart-template>
-    <video-template v-if="current_slide(slideNumber).slide_type === 'video'"></video-template>
-    <card-flip-template v-if="current_slide(slideNumber).slide_type === 'cardFlip'"></card-flip-template>
-    <email-form v-if="current_slide(slideNumber).slide_type==='emailForm'"></email-form>
-    <multi-choice-survey v-if="current_slide(slideNumber).slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
-    <multi-choice-survey-results v-if="current_slide(slideNumber).slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
-    <module-footer v-if="current_slide(slideNumber).slide_type !== 'intro'"></module-footer>
+    <main v-if="isSlideContentVisible" class="module__content">
+      <intro-template v-if="currentSlideData.slide_type === 'intro'"></intro-template>
+      <info-template v-if="currentSlideData.slide_type === 'info'"></info-template>
+      <quiz-template v-if="currentSlideData.slide_type === 'quiz'"></quiz-template>
+      <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'"></input-comparison-template>
+      <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'"></input-pie-chart-template>
+      <video-template v-if="currentSlideData.slide_type === 'video'"></video-template>
+      <card-flip-template v-if="currentSlideData.slide_type === 'cardFlip'"></card-flip-template>
+      <email-form v-if="currentSlideData.slide_type==='emailForm'"></email-form>
+      <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
+      <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
+    </main>
+    <module-footer v-if="currentSlideData.slide_type !== 'intro'">></module-footer>
   </div>
 </template>
 
 <script>
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 
-import { mapActions, mapGetters, mapState } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import ModuleHeader from './../components/modules/ModuleHeader'
 import ModuleFooter from './../components/modules/ModuleFooter'
@@ -35,7 +37,6 @@ import VideoTemplate from './../components/modules/templates/VideoTemplate'
 import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate'
 
 export default {
-  name: 'Module',
   components: {
     ModuleHeader,
     ModuleFooter,
@@ -55,16 +56,17 @@ export default {
   data () {
     return {
       windowWidth: 0,
-      sizeOfContainer: 0,
-      contentType: 'quizInputTemplate'
+      sizeOfContainer: 0
     }
   },
 
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
+
     if (alcoholModuleSlides) {
-      this.getSlideInfo(alcoholModuleSlides)
+      this.storeJSONInState(alcoholModuleSlides)
+      this.setSlideContentVisibility(true)
     }
   },
 
@@ -73,17 +75,13 @@ export default {
   },
 
   computed: {
-    ...mapState(
-      {
-        slide_type: state => state.Slides.slide_type
-      }
-    ),
     ...mapGetters(
       [
-        'current_slide',
-        'slideNumber'
+        'currentSlideData',
+        'isSlideContentVisible'
       ]
     ),
+
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'
@@ -96,14 +94,12 @@ export default {
   methods: {
     ...mapActions(
       [
-        'getSlideInfo',
-        'allowUserToContinue'
+        'storeJSONInState',
+        'setSlideContentVisibility',
+        'navigateFromSlide',
+        'navigateToSlide'
       ]
     ),
-
-    proceedAndContinue () {
-      this.allowUserToContinue({ isAbleToProceed: true, slide_index: this.slideNumber, slide_type: null })
-    },
 
     getWindowWidth () {
       this.windowWidth = window.innerWidth
@@ -122,8 +118,22 @@ export default {
     }
 
     document.onkeyup = (e) => {
-      if ((process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') && e.shiftKey && e.which === 192) {
-        this.proceedAndContinue()
+      if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
+        // Shift + Tilde = Set slide index
+        if (e.shiftKey && e.which === 192) {
+          let responseAsSlideNumber = parseInt(prompt('Please enter the slide index you want to visit'))
+          this.navigateToSlide(responseAsSlideNumber)
+        }
+
+        // Shift + Right Arrow = Go forward 1 slide
+        if (e.shiftKey && e.which === 39) {
+          this.navigateFromSlide('forward')
+        }
+
+        // Shift + Left Arrow = Go back 1 slide
+        if (e.shiftKey && e.which === 37) {
+          this.navigateFromSlide('back')
+        }
       }
     }
   }
