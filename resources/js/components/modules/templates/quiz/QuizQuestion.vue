@@ -6,11 +6,11 @@
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
         <div @click="showResponse(optionIndex)" class="module-quiz__option">
-          <div :class="[(object.showResponse ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
+          <div v-if="object.showResponse" :class="[(object.options[optionIndex].show ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
             <i :class="[(element.isAnswer ? 'fa-check-circle' : 'fa-times-circle'), 'fa']"></i>
           </div>
 
-          <div :class="[(object.showResponse ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
+          <div :class="[(object.options[optionIndex].show ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
             <img :src="element.img.src" :alt="element.img.alt">
             <div v-html="element.text"></div>
 
