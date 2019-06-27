@@ -18,7 +18,7 @@
       <div class="form-group">
         <textarea
         class="emailForm__text-area form-control"
-        placeholder="i.e. I would like to go hiking with my friends on weekend mornings and I can do this by drinking less on Friday nights"
+        placeholder="e.g. I would like to go hiking with my friends on weekend mornings and I can do this by drinking less on Friday nights"
         v-model="wellnessGoal"
         ></textarea>
         <h2 v-if="wellnessGoal.length > 0" @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail transition-350ms">

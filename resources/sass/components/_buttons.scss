@@ -7,7 +7,6 @@
   min-width: 8rem;
   padding: 0.5rem 1.5rem;
   transition: 350ms;
-  opacity: 1;
 
   &-primary {
     background-color: $primaryColor;
@@ -16,7 +15,6 @@
     &--disabled {
       background-color: $primaryColor;
       color: $white;
-      pointer-events: none;
       cursor: initial !important;
       opacity: 0.6;
     }
