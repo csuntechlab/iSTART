@@ -13,9 +13,11 @@
     bottom: 0;
     background-color: $introSlide--backgroundColor;
     padding: 2rem 0;
-    @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
-      padding: 0;
-      padding: 1rem 0;
+    @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 1rem;
+      padding-bottom: 3rem;
     }
   }
   &__title-container { 
