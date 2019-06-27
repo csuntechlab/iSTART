@@ -1,26 +1,26 @@
 <template>
-  <div class="introSlide">
-    <div class="row introSlide__image-container">
-      <div class="col-12 p-0">
-        <img class="introSlide__image" v-bind:src="currentSlideData.moduleImage">
-      </div>
+  <div class="introSlide col-12">
+    <div class="row introSlide__image-container" :style="'background-image: url(' + currentSlideData.content.background_image + ')'">
     </div>
     <div class="row introSlide__content-wrapper">
-      <div class="introSlide__title-container col-12 col-md-3">
-        <h1 class="introSlide__title">{{currentSlideData.moduleTitle}}</h1>
-        <button @click="goForward" class="btn btn-primary introSlide__start-btn">Start</button>
+      <div class="introSlide__title-container col-12 col-md-4">
+        <h1 class="introSlide__title">
+          {{currentSlideData.content.title}}
+        </h1>
+        <button @click="goForward" class="btn btn-primary introSlide__start-btn">
+          Start
+        </button>
       </div>
       <div class="col-12 col-md-8">
-        <p class="introSlide__description mb-2">
+        <p class="introSlide__description">
           <strong>Goal: </strong>
-          {{currentSlideData.goal}}
+          {{currentSlideData.content.goal}}
         </p>
-        <p class="introSlide__description mb-2">
-          <strong>definition: </strong>
-          {{currentSlideData.definition}}
+        <p class="introSlide__description">
+          <strong>Definition: </strong>
+          {{currentSlideData.content.definition}}
         </p>
-
-        <p class="introSlide__description">Estimated Completion time: {{currentSlideData.estimatedCompletion}}</p>
+        <p class="introSlide__description">Estimated Completion time: {{currentSlideData.content.estimated_completion}}</p>
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">
