@@ -41,6 +41,7 @@
           </ul>
         </div>
         <info-photo-list
+          v-if="currentSlideData.content.photo_list"
           :listItems="currentSlideData.content.photo_list"
         >
         </info-photo-list>
