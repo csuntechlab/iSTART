@@ -13306,3 +13306,22 @@ body {
   max-width: 25rem;
 }
 
+.photo-list {
+  padding-left: 0;
+}
+
+.photo-list__list-item {
+  list-style: none;
+  padding: 0.5rem 0;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+

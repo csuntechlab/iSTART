@@ -1,51 +1,41 @@
 <template>
-    <ul id="image-list">
-        <li>Hi</li>
-        <li>Hi</li>
-        <li>{{title}}</li>
+    <ul class="photo-list">
+      <li
+        v-for="listItem in listItems" :key="listItem.text"
+        class="photo-list__list-item"
+        :class="'photo-list__list-item--' + listItems.indexOf(listItem)">
+        {{listItem.text}}
+      </li>
     </ul>
 </template>
 
 <script>
 export default {
   name: 'InfoPhotoList',
-  data () {
-    return {
-      title: 'hello',
-      photoList: {
-        // 0: {
-        //   text: 'Eat before you drink.',
-        //   image: 'images/alcoholModule/alcohol_s23_01.jpg',
-        // },
-        // 1: {
-        //   text: 'Snack on Food.',
-        //   image: 'images/alcoholModule/alcohol_s23_02.jpg',
-        // },
-        // 2: {
-        //   text: 'Snack on Food.',
-        //   emoji: '🧐',
-        // },
-        src: 'images/alcoholModule/alcohol_s23_01.jpg',
-        emoji: '🍿'
-      }
-    }
-  },
+  props: ['listItems'],
   methods: {
     applyTest () {
       let nodeId = 'head'
       let getHeadTag = document.querySelector(nodeId)
-      console.log(getHeadTag)
       let style = document.createElement('style')
       getHeadTag.append(style)
       style.type = 'text/css'
-      let cssRule = `
-        li:before { content: '` + this.photoList.emoji + `';
-        display: inline-block;
-        height: 1.25rem;
-        width: 1.25rem;
-        background-size: cover;`
+      let cssRule = ''
+      for (var i = 0; i < this.listItems.length; i++) {
+        cssRule += `
+        .photo-list__list-item--` + i.toString() + `:before {
+          content: '';
+          background-image: url(` + this.listItems[i].src + `);
+          display: inline-block;
+          height: 4rem;
+          min-width: 4rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-right: 1rem;
+        }`
+      }
       style.innerHTML = cssRule
-
       // if (!style) {
       //   style.id = nodeId;
       //   style.type = 'text/css'

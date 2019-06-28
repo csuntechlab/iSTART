@@ -7,7 +7,7 @@ export const alcoholModuleSlides = {
       background_image: 'images/thumbnail/alcohol_thumbnail.jpg',
       goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
       definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
-      estimated_completion: '15 minutes'
+      estimated_completion: '15 minutes',
     },
   },
   // slide 3
@@ -31,8 +31,7 @@ export const alcoholModuleSlides = {
           alt: 'tequila not equal red wine not equal beer',
           caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
         }
-      },
-      list: null
+      }
     }
   },
   // slide 4
@@ -772,17 +771,41 @@ export const alcoholModuleSlides = {
     content: {
       list: {
         title: null,
-        list_element: [
-          'Eat before you drink.',
-          'Snack while you drink.',
-          'For every alcoholic drink that you consume, have a glass of water in between.',
-          'Know how much you\'re drinking!',
-          'Review what a standard drink is',
-          'Make a plan! Before drinking, decide how much you plan to drink and commit.',
-          'Share your plan with those you plan on going out with...',
-          '...and always look out for each other'
-        ]
-      }
+      },
+      photo_list: [
+        {
+          src: 'images/alcoholModule/alcohol_s23_01.jpg',
+          text: 'Eat before you drink.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_02.jpg',
+          text: 'Snack while you drink.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_03.jpg',
+          text: 'For every alcoholic drink that you consume, have a glass of water in between.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_04.jpg',
+          text: 'Know how much you’re drinking!'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_05.jpg',
+          text: 'Review what a standard drink is.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_06.jpg',
+          text: 'Make a plan! Before drinking, decide how much you plan to drink and commit.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_07.jpg',
+          text: 'Share your plan with those you plan on going out with…'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_08.jpg',
+          text: '…and always look out for each other.'
+        }
+      ]
     }
   },
   // slide 24

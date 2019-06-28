@@ -29,7 +29,7 @@
           :paragraph="element"
           :icon="element.icon">
         </info-content>
-        <div v-if="currentSlideData.content.list !== null">
+        <div v-if="currentSlideData.content.list">
           <h2 v-if="currentSlideData.content.list.title !== null">
             <strong>{{ currentSlideData.content.list.title }}</strong>
           </h2>
@@ -40,7 +40,11 @@
             </info-list>
           </ul>
         </div>
-        <info-photo-list></info-photo-list>
+        <info-photo-list
+          :listItems="currentSlideData.content.photo_list"
+        >
+        </info-photo-list>
+        <p></p>
         <info-carousel class="col-12" v-if="currentSlideData.format ==='carousel'" :images="currentSlideData.content.carousel"></info-carousel>
       </div>
     </div>

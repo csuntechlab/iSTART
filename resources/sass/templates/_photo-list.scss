@@ -1,0 +1,11 @@
+.photo-list{
+    padding-left: 0;
+    &__list-item{
+        list-style: none;
+        padding: .5rem 0;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
