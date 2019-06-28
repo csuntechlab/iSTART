@@ -31,7 +31,21 @@ export const alcoholModuleSlides = {
           alt: 'tequila not equal red wine not equal beer',
           caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
         }
-      }
+      },
+      photo_list: [
+        {
+          src: 'images/alcoholModule/alcohol_s23_01.jpg',
+          text: 'Eat before you drink.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_02.jpg',
+          text: 'Snack while you drink.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_03.jpg',
+          text: 'For every alcoholic drink that you consume, have a glass of water in between.'
+        }
+      ],
     }
   },
   // slide 4

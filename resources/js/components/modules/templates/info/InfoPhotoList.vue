@@ -14,40 +14,45 @@ export default {
   name: 'InfoPhotoList',
   props: ['listItems'],
   methods: {
-    applyTest () {
+    applyCSSForInfoList () {
       let nodeId = 'head'
       let getHeadTag = document.querySelector(nodeId)
       let style = document.createElement('style')
       getHeadTag.append(style)
       style.type = 'text/css'
-      let cssRule = ''
-      for (var i = 0; i < this.listItems.length; i++) {
-        cssRule += `
-        .photo-list__list-item--` + i.toString() + `:before {
-          content: '';
-          background-image: url(` + this.listItems[i].src + `);
-          display: inline-block;
-          height: 4rem;
-          min-width: 4rem;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          margin-right: 1rem;
-        }`
+      let cssImageRule = ''
+      let cssDependentRule = ''
+      let getPhotoList = this.listItems
+      for (var i = 0; i < getPhotoList.length; i++) {
+        cssDependentRule +=
+          `.photo-list__list-item--` + i.toString() + `:before {
+            background-image: url(` + getPhotoList[i].src + `);
+          }`
+        if ((getPhotoList.length - 1) === i) {
+          cssImageRule += `
+            .photo-list__list-item--` + i.toString() + `:before {
+              content: '';
+              display: inline-block;
+              height: 4rem;
+              min-width: 4rem;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              margin-right: 1rem;
+            }`
+        } else {
+          cssImageRule += `
+            .photo-list__list-item--` + i.toString() + `:before,`
+        }
       }
-      style.innerHTML = cssRule
-      // if (!style) {
-      //   style.id = nodeId;
-      //   style.type = 'text/css'
-      //   this.$el.appendChild(style)
-      // }
+      style.innerHTML = cssImageRule + cssDependentRule
     }
   },
   mounted: function () {
-    this.applyTest()
+    this.applyCSSForInfoList()
   },
   beforeUpdate: function () {
-    this.applyTest()
+    this.applyCSSForInfoList()
   }
 }
 </script>
