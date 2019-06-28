@@ -29,7 +29,7 @@
           :paragraph="element"
           :icon="element.icon">
         </info-content>
-        <div v-if="currentSlideData.content.list !== null">
+        <div v-if="currentSlideData.content.list">
           <h2 v-if="currentSlideData.content.list.title !== null">
             <strong>{{ currentSlideData.content.list.title }}</strong>
           </h2>
@@ -40,6 +40,12 @@
             </info-list>
           </ul>
         </div>
+        <info-photo-list
+          v-if="currentSlideData.content.photo_list"
+          :listItems="currentSlideData.content.photo_list"
+        >
+        </info-photo-list>
+        <p></p>
         <info-carousel class="col-12" v-if="currentSlideData.format ==='carousel'" :images="currentSlideData.content.carousel"></info-carousel>
       </div>
     </div>
@@ -54,6 +60,7 @@ import InfoCarousel from './info/InfoCarousel'
 import InfoPhoto from './info/InfoPhoto'
 import InfoPhotoGrid from './info/infoPhotoGrid'
 import InfoList from './info/InfoList'
+import InfoPhotoList from './info/InfoPhotoList'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
@@ -62,7 +69,8 @@ export default {
     InfoContent,
     InfoPhoto,
     InfoPhotoGrid,
-    InfoList
+    InfoList,
+    InfoPhotoList
   },
 
   computed: {
