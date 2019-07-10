@@ -3,7 +3,11 @@
     <navbar></navbar>
     <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
-    <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
+    <!--
+      Removed until infrastructure is set up
+      <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
+    -->
+    <ComparisonGroup></ComparisonGroup>
     <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
   </div>
 </template>
