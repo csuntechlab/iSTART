@@ -399,12 +399,12 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
-      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
+      text: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: 'JfsqxIEQk6U',
-      video_length: 30000 + 5000,
+      video_length: (30000/2) + 5000,
       caption: null
     }
   },
@@ -439,7 +439,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -455,7 +455,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -471,7 +471,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -487,7 +487,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'You are correct! Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -504,12 +504,12 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
-      text: 'Please watch the video below.',
+      text: 'Watch the video below to learn about binge drinking.',
       tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: '5jNEVGj6gS0',
-      video_length: 122400 + 5000,
+      video_length: (122400/2) + 5000,
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
