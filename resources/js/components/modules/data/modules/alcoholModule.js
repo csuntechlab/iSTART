@@ -32,21 +32,7 @@ export const alcoholModuleSlides = {
           alt: 'tequila not equal red wine not equal beer',
           caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
         }
-      },
-      photo_list: [
-        {
-          src: 'images/alcoholModule/alcohol_s23_01.jpg',
-          text: 'Eat before you drink.'
-        },
-        {
-          src: 'images/alcoholModule/alcohol_s23_02.jpg',
-          text: 'Snack while you drink.'
-        },
-        {
-          src: 'images/alcoholModule/alcohol_s23_03.jpg',
-          text: 'For every alcoholic drink that you consume, have a glass of water in between.'
-        }
-      ]
+      }
     }
   },
   // slide 4
@@ -404,7 +390,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       video_id: 'JfsqxIEQk6U',
-      video_length: (30000/2) + 5000,
+      video_length: (30000 / 2) + 5000,
       caption: null
     }
   },
@@ -509,7 +495,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       video_id: '5jNEVGj6gS0',
-      video_length: (122400/2) + 5000,
+      video_length: (122400 / 2) + 5000,
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
