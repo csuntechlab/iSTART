@@ -4,6 +4,15 @@
         font-size: 1rem;
     }
 
+    &__form {
+        width: 100%;
+
+        & > * {
+            width: 100%;
+            margin: 0 auto 2rem auto !important;
+        }
+    }
+
     &__label {
         @include media-breakpoint-up(md) {
             border-radius: 2px;

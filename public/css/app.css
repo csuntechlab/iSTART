@@ -12946,6 +12946,15 @@ body {
   font-size: 1rem;
 }
 
+.module-quizInput__form {
+  width: 100%;
+}
+
+.module-quizInput__form > * {
+  width: 100%;
+  margin: 0 auto 2rem auto !important;
+}
+
 .module-quizInput__label {
   border-radius: 7.5px;
   border-color: #2699fb;

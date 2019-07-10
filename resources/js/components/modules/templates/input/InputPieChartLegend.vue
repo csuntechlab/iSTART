@@ -24,15 +24,13 @@ export default {
           ]
         },
         sourcesData: {
-          labels: ['Survey Results: ' + this.sources + '%'],
+          labels: ['Actual Percentage: ' + this.sources + '%'],
           datasets: [
             {
               label: 'Data One',
               backgroundColor: [
                 '#3376C6',
-                '#DEDEDE',
-                '#2E2A32',
-                '#BCB287'
+                '#DEDEDE'
               ],
               data: [this.sources, 100 - this.sources]
             }
@@ -47,7 +45,7 @@ export default {
               if (tooltipItem.index === 0) {
                 return data.labels[0]
               } else {
-                return 'Other'
+                return false
               }
             }
           }
@@ -67,7 +65,7 @@ export default {
               if (tooltipItem.index === 0) {
                 return data.labels[0]
               } else {
-                return 'Other'
+                return false
               }
             }
           }
