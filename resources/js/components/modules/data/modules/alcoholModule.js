@@ -7,8 +7,8 @@ export const alcoholModuleSlides = {
       background_image: 'images/thumbnail/alcohol_thumbnail.jpg',
       goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
       definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
-      estimated_completion: '15 minutes',
-    },
+      estimated_completion: '15 minutes'
+    }
   },
   // slide 3
   1: {
@@ -24,7 +24,8 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'percentage infographic',
           mobile_size: '1/2',
-          tablet_size: '1/4'
+          tablet_size: '1/3',
+          desktop_size: '1/4'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s03_02.png',
@@ -68,14 +69,8 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
-          alt: 'clip art of brain',
-          mobile_size: '1/3',
-          tablet_size: '1/6'
-        },
-        1: {
-          src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
+          caption: 'The lines on a solo cup tell you how much to pour for each drink.'
         }
       },
       paragraph: {
@@ -264,8 +259,8 @@ export const alcoholModuleSlides = {
   6: {
     slide_type: 'inputComparison',
     header: {
-      title: 'What’s your guess?',
-      text: null,
+      title: 'Your Guess vs. Actual Percentage',
+      text: 'Let’s see how you answered compared to the actual percent from the CSUN National College Health Assessment survey.',
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
@@ -305,7 +300,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Drinking isn\'t as common as you think.',
-      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
+      text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
@@ -318,7 +313,7 @@ export const alcoholModuleSlides = {
       },
       paragraph: {
         0: 'College students often assume that the majority of students drink alcohol.',
-        1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used in the last month.',
+        1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used alcohol at all in the last month.',
         2: 'Don’t be misled! These types of assumptions often lead other college students to use alcohol more heavily.'
       },
       list: null
@@ -334,9 +329,9 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: 'Have you ever seen anyone drink more than what they can handle? Have you seen this individual do that more than once?',
-        1: 'It might be important to be aware of what the different categories of drinking are.',
-        2: '<b>Flip the cards to see.</b>'
+        0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
+        1: 'It’s important to be aware of the different drinking categories.',
+        2: '<b>Flip the cards below to learn  of each.</b>'
       },
       cards: {
         0: {
@@ -390,12 +385,12 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
-      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
+      text: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: 'JfsqxIEQk6U',
-      video_length: 30000 + 5000,
+      video_length: (30000 / 2) + 5000,
       caption: null
     }
   },
@@ -430,7 +425,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -446,7 +441,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -462,7 +457,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'Nice try, but Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -478,7 +473,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'For women, a heavy drinker is defined as someone having four or more drinks on one occasion or eight or more drinks over the course of one week.',
+                text: 'You are correct! Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -495,12 +490,12 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'Binge Drinking',
-      text: 'Please watch the video below.',
+      text: 'Watch the video below to learn about binge drinking.',
       tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: '5jNEVGj6gS0',
-      video_length: 122400 + 5000,
+      video_length: (122400 / 2) + 5000,
       caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
@@ -537,7 +532,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: '<b>Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.<b>'
+        0: 'Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
@@ -551,7 +546,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Out of the students who drink, <b><em>half will binge drink multiple times</em></b> before they graduate.'
+            description: 'Out of the students who drink, half will binge drink multiple times before they graduate.'
           }
         },
         1: {
@@ -565,7 +560,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Drunken students are responsible for <b><em>97,000</em></b> sexual assaults every year.'
+            description: 'Drunken students are responsible for 97,000 sexual assaults every year.'
           }
         },
         2: {
@@ -573,13 +568,13 @@ export const alcoholModuleSlides = {
           front: {
             img: {
               src: 'images/alcoholModule/alcohol_s18_03.png',
-              alt: '5 shadows of people standing straight',
+              alt: 'frustrated person staring at his laptop',
               caption: null
             },
             question: null
           },
           back: {
-            description: '<b><em>Four out of every five</em></b> students drink while enrolled at university.'
+            description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
         },
         3: {
@@ -593,21 +588,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Universities report <b><em>690,000</em></b> alcohol related student assaults annually.'
-          }
-        },
-        4: {
-          show: false,
-          front: {
-            img: {
-              src: 'images/alcoholModule/alcohol_s18_05.png',
-              alt: 'frustrated person staring at his laptop',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: '<b><em>25% of students report</em></b> serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
+            description: 'Universities report 690,000 alcohol related student assaults annually.'
           }
         }
       },
@@ -770,7 +751,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       list: {
-        title: null,
+        title: null
       },
       photo_list: [
         {

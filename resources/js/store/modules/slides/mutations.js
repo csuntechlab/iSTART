@@ -44,7 +44,7 @@ export default {
   },
 
   DISABLE_CONTINUE (state) {
-    state.enableContinue = true
+    state.enableContinue = false
   },
 
   ENABLE_BACK (state) {

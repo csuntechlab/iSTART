@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
-      <p>{{ questionIndex }}. {{ question }} </p>
-      <input id="response" name="response" v-model="response" type="number" min="0" max="100" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event);" class="module-quizInput__label"/>
+      <p class="module-quizInput__text">{{ questionIndex }}. {{ question }}</p>
+      <input id="response" name="response" v-model="response" type="text" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/>
       <em class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</em>
   </div>
 </template>
@@ -54,26 +54,53 @@ export default {
     ),
 
     validateInput ($event) {
-      let enteredValue = $event.target.value.replace(/^[0-9\\s\\+]+$/, '')
+      let target = $event.target.value
+      let enteredValue = target.replace(/^[0-9\\s\\+]+$/, '')
+
+      // If input is number continue else input is invalid
       if (enteredValue === '') {
-        if (this.checkForEmptyInput($event)) {
+        // Check if input is NOT valid
+        if (this.checkIfInputNotValid(target)) {
           this.isInputValid = false
-          this.disableContinue()
+          this.displayInputNotValid(target)
         } else {
           this.isInputValid = true
           this.storeInputIntoState()
         }
       } else {
+        this.disableContinue()
         this.isInputValid = false
-        this.getUserResponses({ index: this.questionIndex - 1, response: $event.target.value, valid: this.isInputValid })
+        this.displayInputNotValid(target)
       }
     },
 
-    checkForEmptyInput ($event) {
-      if ($event.target.value === null || $event.target.value === 'undefined' || $event.target.value === '') {
+    displayInputNotValid (target) {
+      this.getUserResponses({ index: this.questionIndex - 1, response: target, valid: this.isInputValid })
+    },
+
+    checkIfInputNotValid (target) {
+      if (this.checkIfInputNil(target) || this.checkIfInputNotInRange(target)) {
+        this.disableContinue()
+        return true
+      } else {
+        this.enableContinue()
+        return false
+      }
+    },
+
+    checkIfInputNil (target) {
+      if (target === null || target === 'undefined' || target === '') {
         return true
       } else {
         return false
+      }
+    },
+
+    checkIfInputNotInRange (target) {
+      if (parseInt(target) >= 0 && parseInt(target) <= 100) {
+        return false
+      } else {
+        return true
       }
     },
 
@@ -99,14 +126,6 @@ export default {
       } else {
         this.disableContinue()
       }
-    },
-
-    allowContinue () {
-      this.enableContinue()
-    },
-
-    preventContinue () {
-      this.disableContinue()
     }
   }
 }
