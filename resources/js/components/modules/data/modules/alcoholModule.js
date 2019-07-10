@@ -83,14 +83,8 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
-          alt: 'clip art of brain',
-          mobile_size: '1/3',
-          tablet_size: '1/6'
-        },
-        1: {
-          src: 'images/alcoholModule/alcohol_s05_02.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.'
+          caption: 'The lines on a solo cup tell you how much to pour for each drink.'
         }
       },
       paragraph: {
