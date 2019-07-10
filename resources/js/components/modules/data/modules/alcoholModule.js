@@ -343,9 +343,9 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: 'Have you ever seen anyone drink more than what they can handle? Have you seen this individual do that more than once?',
-        1: 'It might be important to be aware of what the different categories of drinking are.',
-        2: '<b>Flip the cards to see.</b>'
+        0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
+        1: 'It’s important to be aware of the different drinking categories.',
+        2: '<b>Flip the cards below to learn  of each.</b>'
       },
       cards: {
         0: {
