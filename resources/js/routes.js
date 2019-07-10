@@ -25,7 +25,8 @@ export default [
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
+    // meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Dashboard' }
   },
   {
     path: '/module',
@@ -38,12 +39,14 @@ export default [
     path: '/schedule',
     name: 'Schedule',
     component: Schedule,
-    meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
+    // meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Schedule' }
   },
   {
     path: '/admin',
     name: 'Admin',
     component: Admin,
-    meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
+    // meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
+    meta: { title: 'iSTART | Admin' }
   }
 ]
