@@ -314,7 +314,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Drinking isn\'t as common as you think.',
-      text: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
+      text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
@@ -327,7 +327,7 @@ export const alcoholModuleSlides = {
       },
       paragraph: {
         0: 'College students often assume that the majority of students drink alcohol.',
-        1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used in the last month.',
+        1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used alcohol at all in the last month.',
         2: 'Don’t be misled! These types of assumptions often lead other college students to use alcohol more heavily.'
       },
       list: null
