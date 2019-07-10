@@ -12942,6 +12942,7 @@ body {
 }
 
 .module-quizInput__text {
+  font-weight: bold;
   font-size: 1rem;
 }
 

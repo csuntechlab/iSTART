@@ -1,9 +1,11 @@
-.module-quizInput{
-    &__text{
+.module-quizInput {
+    &__text {
+        font-weight: bold;
         font-size: 1rem;
     }
-    &__label{
-        @include media-breakpoint-up(md){
+
+    &__label {
+        @include media-breakpoint-up(md) {
             border-radius: 2px;
             border: 1.7px solid $primaryColor;
         }
@@ -13,15 +15,16 @@
         padding-bottom: 3px;
         background-color: $secondaryColor;
     }
-    &__validate{
-        @include media-breakpoint-down(sm){
+
+    &__validate {
+        @include media-breakpoint-down(sm) {
             font-size: 0.90rem;
         }
         font-size:1.2rem;
-        &--red{
+        &--red {
             color: red;
         }
-        &--green{
+        &--green {
             color: green;
         }
     }

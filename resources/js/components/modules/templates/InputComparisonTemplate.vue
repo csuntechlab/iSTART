@@ -6,14 +6,16 @@
           <h1>{{ currentSlideData.header.title }}</h1>
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values 0 to 100.</p>
         </div>
-        <input-response v-for="(element, index) in currentSlideData.content.questions"
-          :key="index"
-          :questionIndex="parseInt(index)+1"
-          :question="element.question"
-          :user_response="element.response"
-          :questionLength="Object.keys(currentSlideData.content.questions).length"
-          :needInputLabel="true">
-        </input-response>
+        <form novalidate="true">
+          <input-response v-for="(element, index) in currentSlideData.content.questions"
+            :key="index"
+            :questionIndex="parseInt(index)+1"
+            :question="element.question"
+            :user_response="element.response"
+            :questionLength="Object.keys(currentSlideData.content.questions).length"
+            :needInputLabel="true">
+          </input-response>
+        </form>
       </div>
     </div>
   </div>
