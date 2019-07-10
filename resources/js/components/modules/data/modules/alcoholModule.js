@@ -546,7 +546,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: '<b>Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.<b>'
+        0: 'Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
@@ -560,7 +560,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Out of the students who drink, <b><em>half will binge drink multiple times</em></b> before they graduate.'
+            description: 'Out of the students who drink, half will binge drink multiple times before they graduate.'
           }
         },
         1: {
@@ -574,7 +574,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Drunken students are responsible for <b><em>97,000</em></b> sexual assaults every year.'
+            description: 'Drunken students are responsible for 97,000 sexual assaults every year.'
           }
         },
         2: {
@@ -582,13 +582,13 @@ export const alcoholModuleSlides = {
           front: {
             img: {
               src: 'images/alcoholModule/alcohol_s18_03.png',
-              alt: '5 shadows of people standing straight',
+              alt: 'frustrated person staring at his laptop',
               caption: null
             },
             question: null
           },
           back: {
-            description: '<b><em>Four out of every five</em></b> students drink while enrolled at university.'
+            description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
         },
         3: {
@@ -602,21 +602,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Universities report <b><em>690,000</em></b> alcohol related student assaults annually.'
-          }
-        },
-        4: {
-          show: false,
-          front: {
-            img: {
-              src: 'images/alcoholModule/alcohol_s18_05.png',
-              alt: 'frustrated person staring at his laptop',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: '<b><em>25% of students report</em></b> serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
+            description: 'Universities report 690,000 alcohol related student assaults annually.'
           }
         }
       },
