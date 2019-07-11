@@ -532,7 +532,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: 'Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.'
+        0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
@@ -568,6 +568,20 @@ export const alcoholModuleSlides = {
           front: {
             img: {
               src: 'images/alcoholModule/alcohol_s18_03.png',
+              alt: '2 shadows of people',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Universities report 690,000 alcohol related student assaults annually.'
+          }
+        },
+        3: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/alcoholModule/alcohol_s18_04.png',
               alt: 'frustrated person staring at his laptop',
               caption: null
             },
@@ -577,20 +591,6 @@ export const alcoholModuleSlides = {
             description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
         },
-        3: {
-          show: false,
-          front: {
-            img: {
-              src: 'images/alcoholModule/alcohol_s18_04.png',
-              alt: '2 shadows of people',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: 'Universities report 690,000 alcohol related student assaults annually.'
-          }
-        }
       },
       list: null
     }
@@ -832,7 +832,7 @@ export const alcoholModuleSlides = {
     content: {
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
-        1: 'It\'s ok to drink, just don\t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
+        1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
         2: '<b>Flip the card below to read about drunk driving in California</b>'
       },
       cards: {
