@@ -787,6 +787,11 @@ export const alcoholModuleSlides = {
         {
           src: 'images/alcoholModule/alcohol_s23_08.jpg',
           text: '…and always look out for each other.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_10.png',
+          text: 'And remember DON\'T DRINK AND DRIVE!',
+          warning: true
         }
       ]
     }

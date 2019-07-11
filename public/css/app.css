@@ -13344,3 +13344,7 @@ body {
           justify-content: flex-start;
 }
 
+.photo-list__list-item--red-text {
+  color: #e3342f;
+}
+
