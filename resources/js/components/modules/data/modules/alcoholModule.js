@@ -599,7 +599,7 @@ export const alcoholModuleSlides = {
   15: {
     slide_type: 'info',
     header: {
-      title: 'Health benefits of drinking responsibly',
+      title: 'Benefits of Drinking Responsibly',
       text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
@@ -607,30 +607,29 @@ export const alcoholModuleSlides = {
       image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
-          alt: 'one dollar bills',
-          caption: 'Save money'
+          alt: 'One dollar bills',
+          caption: 'Save Money'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          caption: 'Clearer skin'
+          caption: 'Clearer Skin'
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          caption: 'Better mood'
+          caption: 'Better Mood'
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          caption: 'Reduce risk of disease'
+          caption: 'Reduce Risk of Disease'
         }
       },
-      paragraph: {
+      paragraph_top: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
       },
-      list: null
     }
   },
   // slide 20
