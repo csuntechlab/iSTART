@@ -701,7 +701,7 @@ export const alcoholModuleSlides = {
   17: {
     slide_type: 'info',
     header: {
-      title: 'Better Sleep',
+      title: 'Sleep Quality',
       text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
