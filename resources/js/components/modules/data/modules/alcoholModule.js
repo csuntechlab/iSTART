@@ -737,7 +737,9 @@ export const alcoholModuleSlides = {
           desktop_size: '1/3'
         }
       },
-      paragraph: null,
+      paragraph_top: {
+        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
+      },
       list: null
     }
   },
