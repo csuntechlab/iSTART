@@ -690,7 +690,8 @@ export const alcoholModuleSlides = {
       },
       paragraph: {
         0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
-        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.',
+        2: 'Scroll through the carousel below to see the calorie count for different drinks.'
       },
       list: null
     },
