@@ -1116,8 +1116,8 @@ export const alcoholModuleSlides = {
     content: {
       images: null,
       paragraph: {
-        0: '<div style="text-align: center;"><b style="font-size: 2rem;">Thank you for completing this module! </b></div>',
-        1: '<div style="text-align: center;"><b style="font-size: 2rem;">Your next module will be available in 5 days. You will receive an email notification from iSTART.</b></div>'
+        0: 'Thank you for completing this module!',
+        1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
       },
       list: null
     },
