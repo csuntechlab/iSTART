@@ -1030,17 +1030,16 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          y_position: null
+          caption: 'Did you know, the Student Recreation Center has an Outdoor Adventures program?'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          y_position: 'bottom'
+          caption: 'links to social activities are in the resources tab.'
         }
       },
       paragraph: {
-        0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
-        1: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
+        0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
       },
       list: null
     }
