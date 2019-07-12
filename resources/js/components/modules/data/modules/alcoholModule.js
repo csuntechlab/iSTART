@@ -1095,15 +1095,15 @@ export const alcoholModuleSlides = {
   28: {
     slide_type: 'emailForm',
     header: {
-      title: 'Create your own wellness goal!',
+      title: 'Create Your Own Wellness Goal!',
       text: null,
       tooltip: null
     },
     content: {
       paragraph: {
-        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!',
-        1: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week!"'
-      }
+        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
+      },
+      textAreaPlaceHolder: 'For example, \"Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \"I\'ll work out at least once next week!\"'
     }
   },
   // slide 33
