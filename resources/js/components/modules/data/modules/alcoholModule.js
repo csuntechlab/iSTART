@@ -877,7 +877,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
         1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
-        2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
+        2: 'A general rule is that it will burn off about 1 standard drink per 1 to 1 ½ hours.'
       },
       list: null
     }
