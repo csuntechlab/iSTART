@@ -980,11 +980,16 @@ export const alcoholModuleSlides = {
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
-      images: null,
       paragraph: {
         0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
         1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
         2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
+      },
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s28_01.jpg',
+          alt: 'People jumping on the beach.',
+        }
       },
       list: null
     }
