@@ -805,15 +805,11 @@ export const alcoholModuleSlides = {
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
-      image_grid: {
+      images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s24_01.jpg',
-          alt: 'no alcohol sticker'
-        },
-        1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
-          alt: 'no sign'
-        }
+          alt: 'No Sign'
+        },
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
@@ -823,7 +819,9 @@ export const alcoholModuleSlides = {
           '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
           '"I’d rather get a soda, thanks."',
           '"I have a game/practice tomorrow."',
-          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
+          '"I’d rather get a soda"',
+          '"They have really great mocktails (non-alcoholic cocktails) that I’d like to try."'
         ]
       }
     }

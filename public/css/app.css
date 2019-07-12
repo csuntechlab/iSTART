@@ -12805,7 +12805,7 @@ body {
 
 .module-info__content-text {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .module-info__carousel {
