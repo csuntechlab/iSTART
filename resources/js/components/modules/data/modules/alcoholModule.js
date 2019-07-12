@@ -838,7 +838,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
-        2: '<b>Flip the card below to read about drunk driving in California</b>'
+        2: 'Flip the card below to read about drunk driving in California'
       },
       cards: {
         0: {
@@ -852,7 +852,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: '<b>Drunk Driving in California</b><ul><li>It is illegal to drink with a Blood Alcohol Concentration (BAC) level above .08% in California (and in all states).</li><li>However, a <b>BAC below .08% does not mean</b> that it is safe or legal to drive - you can still risk a DUI.</li><li>There is a <b>ZERO TOLERANCE</b> policy if you are <b>under 21</b>. Any amount of alcohol in your blood can lead to a DUI.</li></ul>'
+            description: '<ul style="text-align:left;"><li>It’s illegal to drink with a Blood Alcohol Concentration (BAC) level above 0.08% in all states.</li><li>There is a ZERO tolerance policy if under age 21. Any amount of alcohol in your blood can lead to a DUI.</li><li>Getting a DUI can cost on average close to $7,000. Not to mention a suspended license, traffic school, possible jail time, and difficulty getting a job!</li></ul>'
           }
         }
       }
