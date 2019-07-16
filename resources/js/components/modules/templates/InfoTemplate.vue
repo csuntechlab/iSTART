@@ -14,11 +14,15 @@
             <h2 class="module-info__content-text" v-if="currentSlideData.header.text" v-html="currentSlideData.header.text"></h2>
           </div>
         </div>
-        <template v-for="(element, index) in currentSlideData.content">
+        <template v-for="(element, currentSlideIndex) in currentSlideData.content">
           <info-paragraph
-            :key="`${index}`"
-            v-if="currentSlideData.content[`${index}`].content_type === 'paragraph'"
-            :paragraph="currentSlideData.content[`${index}`].paragraph"/>
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].content_type === 'paragraph'"
+            :paragraph="currentSlideData.content[`${currentSlideIndex}`].paragraph"/>
+          <info-photo
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].content_type === 'image'"
+            :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
         <!-- <info-photo v-for="(element, index) in currentSlideData.content.images"
           :key="index"
@@ -61,7 +65,7 @@ import { mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
 import InfoParagraph from './info/InfoParagraph'
 // import InfoCarousel from './info/InfoCarousel'
-// import InfoPhoto from './info/InfoPhoto'
+import InfoPhoto from './info/InfoPhoto'
 // import InfoPhotoGrid from './info/infoPhotoGrid'
 // import InfoList from './info/InfoList'
 // import InfoPhotoList from './info/InfoPhotoList'
@@ -70,8 +74,8 @@ export default {
   mixins: [awaitTimeBeforeContinue],
   components: {
     // InfoCarousel,
-    InfoParagraph
-    // InfoPhoto,
+    InfoParagraph,
+    InfoPhoto
     // InfoPhotoGrid,
     // InfoList,
     // InfoPhotoList

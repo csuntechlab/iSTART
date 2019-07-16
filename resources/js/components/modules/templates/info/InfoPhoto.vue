@@ -34,18 +34,17 @@
 <script>
 export default {
   props: [
-    'image',
-    'imageCount'
+    'image'
   ],
   computed: {
     determineColSize: function () {
-      var defaultSize = 'col-lg-6 col-md-8 col-10'
       if (
         !this.image.size &&
         !this.image.mobile_size &&
         !this.image.tablet_size &&
         !this.image.desktop_size
       ) {
+        let defaultSize = 'col-lg-6 col-md-8 col-10'
         return defaultSize
       }
       let imageSizes = new Map([
