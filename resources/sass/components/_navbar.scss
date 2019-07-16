@@ -109,11 +109,8 @@
         }
         &__divider {
             &:focus *,:hover *{
-                border-bottom: 2px solid black;   
+                border-bottom: 2px solid $white;   
             }
-            // &:hover *{
-            //     border-bottom: 2px solid black; 
-            // }
             &:not(:nth-child(1)) {
                 border-top: 1px solid $primaryColor--medium;
                 @include media-breakpoint-up(md) {
