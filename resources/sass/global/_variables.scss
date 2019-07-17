@@ -15,7 +15,7 @@ $line-height-base: 1.6;
 
 // Colors
 $indigo: #6574cd;
-$purple: #7d63a3;
+// $purple: #7d63a3;
 $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
@@ -37,7 +37,7 @@ $primaryColor--20: rgba($primaryColor, 0.2);
 $backgroundColor: rgb(231,242,247);
 $introSlide--backgroundColor: rgb(70, 79, 98);
 
-$secondaryColor: $white;
+$secondaryColor: #612570;
 $secondaryColor--lighter: lighten($secondaryColor, 0.4);
 $secondaryColor--light: lighten($secondaryColor, 0.6);
 $secondaryColor--medium: lighten($secondaryColor, 0.8);

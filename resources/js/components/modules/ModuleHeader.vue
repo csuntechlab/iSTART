@@ -7,7 +7,7 @@
       :height="getProgressBarHeight"
       :width="getProgressBarSize"
     />
-    <h1 class="module__progress">{{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}% </h1>
+    <h1 class="module__progress" style="color: black">{{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}% </h1>
   </header>
 </template>
 
@@ -24,7 +24,8 @@ export default {
       windowWidth: 0,
       module: {
         shape: 'line',
-        height: 26
+        height: 26,
+        color: 'green'
       }
     }
   },

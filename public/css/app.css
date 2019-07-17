@@ -11680,7 +11680,7 @@ body {
 }
 
 .navbar-laravel {
-  background-color: whitesmoke;
+  background-color: #612570;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
@@ -11988,7 +11988,7 @@ body {
     font-size: 2.25rem;
     text-align: left;
     background-color: #3771dc;
-    color: whitesmoke;
+    color: #612570;
   }
 }
 
@@ -12199,7 +12199,7 @@ body {
 }
 
 .dashboard-module__info {
-  background-color: #f7f7f7;
+  background-color: whitesmoke;
   min-height: 100%;
 }
 
@@ -12569,7 +12569,11 @@ body {
 }
 
 .vue-progress-path .progress {
-  stroke: #1374CD;
+  stroke: #6f42c1;
+}
+
+.vue-progress-path .background {
+  stroke: #F1F0FA;
 }
 
 .loginForm .vue-progress-path {
@@ -12752,6 +12756,7 @@ body {
 
 .module-info__header {
   font-weight: bold;
+  color: #4A5D6E;
 }
 
 .module-info__body {
@@ -12960,7 +12965,7 @@ body {
   border-color: #3771dc;
   width: 100%;
   padding-bottom: 3px;
-  background-color: whitesmoke;
+  background-color: #612570;
 }
 
 @media (min-width: 768px) {
