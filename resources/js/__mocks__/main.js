@@ -5,7 +5,7 @@ import store from './../store/index.js'
 export function beforeEach (to, from, next) {
   if (to.meta.requiresAuth) {
     if (!store.getters.correctLoginInfo) {
-      next({ path: '/login' })
+      next({ path: '/module' })
     } else if (store.getters.user.isAdmin && to.meta.adminAuth) {
       next()
     } else if (!(store.getters.user.isAdmin) && to.meta.userAuth) {
