@@ -143,7 +143,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'You are correct!!! one standard shot (1.5oz) is the same as one can of beer (12oz)',
+                text: '<b>You are correct!!!</b> One standard shot (1.5oz) is the same as one can of beer (12oz)',
                 img: {
                   src: null,
                   alt: null
@@ -159,7 +159,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</Nice> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.jpg',
                   alt: 'alcohol comparison'
@@ -195,7 +195,7 @@ export const alcoholModuleSlides = {
                 alt: 'glass filled with alcohol one fith\'s of container'
               },
               response: {
-                text: '1.5oz<br>Great job! This is one standard drink – 1.5 oz of 40% liquor!',
+                text: '1.5oz<br><b>Great job!</b> This is one standard drink – 1.5 oz of 40% liquor!',
                 img: {
                   src: null,
                   alt: null

@@ -14,27 +14,40 @@
     }
 
     &__label {
+        border-radius: 7.5px;
+        border-color: $primaryColor;
+        text-align: center;
+        min-width: 4rem;
+        width: 10%;
+        padding-bottom: 3px;
+        background-color: $secondaryColor;
+
         @include media-breakpoint-up(md) {
             border-radius: 2px;
             border: 1.7px solid $primaryColor;
         }
-        border-radius: 7.5px;
-        border-color: $primaryColor;
-        width: 100%;
-        padding-bottom: 3px;
-        background-color: $secondaryColor;
+    }
+
+    &__percent-indicator {
+        font-weight: bold;
+        margin: 0 0.5rem;
     }
 
     &__validate {
-        @include media-breakpoint-down(sm) {
-            font-size: 0.90rem;
-        }
-        font-size:1.2rem;
+        font-size: 1.2rem;
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+
         &--red {
             color: red;
         }
         &--green {
             color: green;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 0.90rem;
         }
     }
 }
