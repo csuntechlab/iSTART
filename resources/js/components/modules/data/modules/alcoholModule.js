@@ -15,7 +15,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: null,
-      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
+      text: 'Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.',
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
@@ -805,7 +805,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
-      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!',
+      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…<b>YOU</b> are in control!',
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
@@ -825,7 +825,7 @@ export const alcoholModuleSlides = {
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
           '"I’d rather get a soda"',
-          '"They have really great mocktails (non-alcoholic cocktails) that I’d like to try."'
+          '"They have really great mocktails (<i>non-alcoholic cocktails</i>) that I’d like to try."'
         ]
       }
     }
@@ -906,7 +906,7 @@ export const alcoholModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
+          question: '<b>Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?</b>',
           options: {
             0: {
               isAnswer: false,
@@ -1017,7 +1017,7 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph: {
-        0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
+        0: 'Our bodies produce the same hormone (<i>known as dopamine</i>) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
       },
       list: null
