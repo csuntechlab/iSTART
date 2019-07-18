@@ -62,6 +62,10 @@ export default {
     commit('UPDATE_CARD', payload)
   },
 
+  updateCardCount ({ commit }, payload) {
+    commit('UPDATE_CARD_COUNT', payload)
+  },
+
   updateResponse ({ commit }, payload) {
     commit('UPDATE_RESPONSE', payload)
   },
