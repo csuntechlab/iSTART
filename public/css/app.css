@@ -11670,13 +11670,7 @@ body {
 }
 
 body {
-  background-color: #F5F5F5;
-}
-
-@media (min-width: 768px) {
-  body {
-    background-color: #e7f2f7;
-  }
+  background-color: #FAFAFA;
 }
 
 .navbar-laravel {
@@ -11692,7 +11686,7 @@ body {
 }
 
 .container {
-  background-color: whitesmoke;
+  background-color: 1px solid #CECECE;
 }
 
 /*
@@ -11738,7 +11732,7 @@ body {
 
 .navbar {
   background-color: #3771dc;
-  color: whitesmoke;
+  color: white;
   margin: auto;
   padding: 0.3rem 1rem;
 }
@@ -11781,7 +11775,7 @@ body {
     padding: 0.5rem;
     font-size: 2.25rem;
     text-align: left;
-    color: whitesmoke;
+    color: white;
   }
 }
 
@@ -11809,7 +11803,7 @@ body {
 .navbar__button {
   background: none;
   border: none;
-  color: whitesmoke;
+  color: white;
   font-size: 1.65rem;
   margin-left: 0.8rem;
 }
@@ -11872,7 +11866,7 @@ body {
 }
 
 .navbar-dropdown__item > * {
-  color: whitesmoke;
+  color: white;
 }
 
 .navbar-dropdown a.navbar-dropdown__divider {
@@ -11881,7 +11875,7 @@ body {
 
 .navbar-dropdown__divider:focus *,
 .navbar-dropdown__divider :hover * {
-  border-bottom: 2px solid whitesmoke;
+  border-bottom: 2px solid white;
 }
 
 .navbar-dropdown__divider:not(:nth-child(1)) {
@@ -11965,7 +11959,7 @@ body {
 }
 
 .login {
-  background-color: whitesmoke;
+  background-color: white;
   min-height: calc(100vh - 3.3rem);
   margin-top: 3.3rem;
 }
@@ -11988,7 +11982,7 @@ body {
     font-size: 2.25rem;
     text-align: left;
     background-color: #3771dc;
-    color: #612570;
+    color: white;
   }
 }
 
@@ -12084,7 +12078,7 @@ body {
 }
 
 .dashboard {
-  background-color: whitesmoke;
+  background-color: white;
   position: relative;
   padding: 0;
 }
@@ -12101,7 +12095,7 @@ body {
 
 .dashboard-notification {
   padding: 0.5rem 1rem;
-  background-color: whitesmoke;
+  background-color: white;
   color: #191919;
   -webkit-box-shadow: 0 4px 8px 0 rgba(55, 113, 220, 0.2);
           box-shadow: 0 4px 8px 0 rgba(55, 113, 220, 0.2);
@@ -12199,7 +12193,7 @@ body {
 }
 
 .dashboard-module__info {
-  background-color: whitesmoke;
+  background-color: white;
   min-height: 100%;
 }
 
@@ -12227,11 +12221,11 @@ body {
 @media (max-width: 767.98px) {
   .dashboard-module__header {
     background-color: rgba(0, 0, 0, 0.6);
-    color: whitesmoke;
+    color: white;
   }
 
   .dashboard-module__header:hover {
-    color: whitesmoke;
+    color: white;
   }
 }
 
@@ -12356,7 +12350,7 @@ body {
 @media (min-width: 768px) {
   .dashboard-module__status {
     background-color: #3771dc;
-    color: whitesmoke;
+    color: white;
     display: inline-block;
     font-size: 1.15rem;
     width: 50%;
@@ -12379,6 +12373,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   padding: 0;
+  border: 1px solid #CECECE;
 }
 
 .module__header {
@@ -12433,7 +12428,7 @@ body {
 
 .module-footer__tooltip {
   background-color: rgba(45, 45, 45, 0.8);
-  color: whitesmoke;
+  color: white;
   text-align: left;
   width: calc(100% + 5rem);
   border-radius: 8px;
@@ -12491,7 +12486,7 @@ body {
 
 .module__progress {
   font-size: 1rem;
-  color: whitesmoke;
+  color: white;
   font-weight: normal;
   margin-top: -25px;
   margin-bottom: 0;
@@ -12660,12 +12655,12 @@ body {
 
 .button-primary {
   background-color: #3771dc;
-  color: whitesmoke;
+  color: white;
 }
 
 .button-primary--disabled {
   background-color: #3771dc;
-  color: whitesmoke;
+  color: white;
   cursor: initial !important;
   opacity: 0.6;
 }
@@ -12710,7 +12705,7 @@ body {
 }
 
 .introSlide__title {
-  color: whitesmoke;
+  color: white;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
@@ -12723,7 +12718,7 @@ body {
 }
 
 .introSlide__description {
-  color: whitesmoke;
+  color: white;
   font-size: 1rem;
 }
 
@@ -12810,7 +12805,7 @@ body {
 
 .module-info__content-text {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .module-info__carousel {
@@ -12895,7 +12890,7 @@ body {
 }
 
 .module-quiz__option-indicator > * {
-  color: whitesmoke;
+  color: white;
 }
 
 .module-quiz__option-content {
@@ -12965,7 +12960,7 @@ body {
   border-color: #3771dc;
   width: 100%;
   padding-bottom: 3px;
-  background-color: #612570;
+  background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -13027,7 +13022,7 @@ body {
 }
 
 .introSlide__title {
-  color: whitesmoke;
+  color: white;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
@@ -13040,7 +13035,7 @@ body {
 }
 
 .introSlide__description {
-  color: whitesmoke;
+  color: white;
   font-size: 1rem;
 }
 
@@ -13224,7 +13219,7 @@ body {
 }
 
 .card-flip__paragraph {
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .card-flip__card {
@@ -13300,7 +13295,7 @@ body {
 
 .card-flip__card-back {
   background-color: #3771dc;
-  color: whitesmoke;
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -13347,5 +13342,9 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.photo-list__list-item--red-text {
+  color: #e3342f;
 }
 

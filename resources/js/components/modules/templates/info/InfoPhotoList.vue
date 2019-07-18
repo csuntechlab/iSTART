@@ -3,7 +3,10 @@
       <li
         v-for="listItem in listItems" :key="listItem.text"
         class="photo-list__list-item"
-        :class="'photo-list__list-item--' + listItems.indexOf(listItem)">
+        :class="[
+          ('photo-list__list-item--' + listItems.indexOf(listItem)),
+          (listItem.warning ? 'photo-list__list-item--red-text' : '')
+        ]">
         {{listItem.text}}
       </li>
     </ul>
@@ -56,3 +59,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .red-text{
+    color: red;
+  }
+</style>

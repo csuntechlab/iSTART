@@ -5,8 +5,7 @@
 */
 
 // Body
-//previous body-bg: #f8fafc
-$body-bg: #F5F5F5;
+$body-bg: #FAFAFA;
 $inputBorder: rgb(188,224,253);
 // Typography
 $font-family-sans-serif: "Open Sans", sans-serif;
@@ -22,7 +21,9 @@ $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
-$white: rgb(245, 245, 245);
+$white: white;
+
+$border-color: #CECECE;
 
 $primaryColor: rgb(55, 113, 220);
 $primaryColor--lighter: lighten($primaryColor, 0.4);

@@ -532,7 +532,7 @@ export const alcoholModuleSlides = {
     },
     content: {
       paragraph: {
-        0: 'Drinking irresponsibly can <em>negatively</em> affect your health, your relationships, your academic performance, and your future.'
+        0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
@@ -568,6 +568,20 @@ export const alcoholModuleSlides = {
           front: {
             img: {
               src: 'images/alcoholModule/alcohol_s18_03.png',
+              alt: '2 shadows of people',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Universities report 690,000 alcohol related student assaults annually.'
+          }
+        },
+        3: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/alcoholModule/alcohol_s18_04.png',
               alt: 'frustrated person staring at his laptop',
               caption: null
             },
@@ -577,20 +591,6 @@ export const alcoholModuleSlides = {
             description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
         },
-        3: {
-          show: false,
-          front: {
-            img: {
-              src: 'images/alcoholModule/alcohol_s18_04.png',
-              alt: '2 shadows of people',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: 'Universities report 690,000 alcohol related student assaults annually.'
-          }
-        }
       },
       list: null
     }
@@ -599,7 +599,7 @@ export const alcoholModuleSlides = {
   15: {
     slide_type: 'info',
     header: {
-      title: 'Health benefits of drinking responsibly',
+      title: 'Benefits of Drinking Responsibly',
       text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
@@ -607,30 +607,29 @@ export const alcoholModuleSlides = {
       image_grid: {
         0: {
           src: 'images/alcoholModule/alcohol_s19_01.jpg',
-          alt: 'one dollar bills',
-          caption: 'Save money'
+          alt: 'One dollar bills',
+          caption: 'Save Money'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s19_02.jpg',
           alt: 'person body turned and tilted head staring',
-          caption: 'Clearer skin'
+          caption: 'Clearer Skin'
         },
         2: {
           src: 'images/alcoholModule/alcohol_s19_03.jpg',
           alt: 'person with shades smiling at camera',
-          caption: 'Better mood'
+          caption: 'Better Mood'
         },
         3: {
           src: 'images/alcoholModule/alcohol_s19_04.jpg',
           alt: 'person covering eyes with strawberries smiling',
-          caption: 'Reduce risk of disease'
+          caption: 'Reduce Risk of Disease'
         }
       },
-      paragraph: {
+      paragraph_top: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
       },
-      list: null
     }
   },
   // slide 20
@@ -691,7 +690,8 @@ export const alcoholModuleSlides = {
       },
       paragraph: {
         0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
-        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.'
+        1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.',
+        2: 'Scroll through the carousel below to see the calorie count for different drinks.'
       },
       list: null
     },
@@ -701,7 +701,7 @@ export const alcoholModuleSlides = {
   17: {
     slide_type: 'info',
     header: {
-      title: 'Better Sleep',
+      title: 'Sleep Quality',
       text: null,
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
@@ -737,7 +737,9 @@ export const alcoholModuleSlides = {
           desktop_size: '1/3'
         }
       },
-      paragraph: null,
+      paragraph_top: {
+        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
+      },
       list: null
     }
   },
@@ -785,6 +787,11 @@ export const alcoholModuleSlides = {
         {
           src: 'images/alcoholModule/alcohol_s23_08.jpg',
           text: '…and always look out for each other.'
+        },
+        {
+          src: 'images/alcoholModule/alcohol_s23_10.png',
+          text: 'And remember DON\'T DRINK AND DRIVE!',
+          warning: true
         }
       ]
     }
@@ -798,15 +805,11 @@ export const alcoholModuleSlides = {
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
-      image_grid: {
+      images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s24_01.jpg',
-          alt: 'no alcohol sticker'
-        },
-        1: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
-          alt: 'no sign'
-        }
+          alt: 'No Sign'
+        },
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
@@ -816,7 +819,9 @@ export const alcoholModuleSlides = {
           '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
           '"I’d rather get a soda, thanks."',
           '"I have a game/practice tomorrow."',
-          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
+          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
+          '"I’d rather get a soda"',
+          '"They have really great mocktails (non-alcoholic cocktails) that I’d like to try."'
         ]
       }
     }
@@ -832,8 +837,8 @@ export const alcoholModuleSlides = {
     content: {
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
-        1: 'It\'s ok to drink, just don\t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
-        2: '<b>Flip the card below to read about drunk driving in California</b>'
+        1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
+        2: 'Flip the card below to read about drunk driving in California'
       },
       cards: {
         0: {
@@ -847,7 +852,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: '<b>Drunk Driving in California</b><ul><li>It is illegal to drink with a Blood Alcohol Concentration (BAC) level above .08% in California (and in all states).</li><li>However, a <b>BAC below .08% does not mean</b> that it is safe or legal to drive - you can still risk a DUI.</li><li>There is a <b>ZERO TOLERANCE</b> policy if you are <b>under 21</b>. Any amount of alcohol in your blood can lead to a DUI.</li></ul>'
+            description: '<ul style="text-align:left;"><li>It’s illegal to drink with a Blood Alcohol Concentration (BAC) level above 0.08% in all states.</li><li>There is a ZERO tolerance policy if under age 21. Any amount of alcohol in your blood can lead to a DUI.</li><li>Getting a DUI can cost on average close to $7,000. Not to mention a suspended license, traffic school, possible jail time, and difficulty getting a job!</li></ul>'
           }
         }
       }
@@ -872,7 +877,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
         1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
-        2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
+        2: 'A general rule is that it will burn off about 1 standard drink per 1 to 1 ½ hours.'
       },
       list: null
     }
@@ -881,9 +886,7 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: null,
-      text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      title: "Melita\'s night out",
     },
     content: {
       images: {
@@ -897,12 +900,12 @@ export const alcoholModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friends house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
+          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
           options: {
             0: {
               isAnswer: false,
               show: false,
-              text: '1 hour',
+              text: '1 hours',
               img: {
                 src: null,
                 alt: null
@@ -932,9 +935,9 @@ export const alcoholModuleSlides = {
               }
             },
             2: {
-              isAnswer: false,
+              isAnswer: true,
               show: false,
-              text: '3 hour',
+              text: '3 hours',
               img: {
                 src: null,
                 alt: null
@@ -977,11 +980,16 @@ export const alcoholModuleSlides = {
       tooltip: 'Wait 8 seconds to proceed to the next slide'
     },
     content: {
-      images: null,
       paragraph: {
         0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
         1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
         2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
+      },
+      images: {
+        0: {
+          src: 'images/alcoholModule/alcohol_s28_01.jpg',
+          alt: 'People jumping on the beach.',
+        }
       },
       list: null
     }
@@ -1022,17 +1030,16 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          y_position: null
+          caption: 'Did you know, the Student Recreation Center has an Outdoor Adventures program?'
         },
         1: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          y_position: 'bottom'
+          caption: 'links to social activities are in the resources tab.'
         }
       },
       paragraph: {
-        0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
-        1: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
+        0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
       },
       list: null
     }
@@ -1088,15 +1095,15 @@ export const alcoholModuleSlides = {
   28: {
     slide_type: 'emailForm',
     header: {
-      title: 'Create your own wellness goal!',
+      title: 'Create Your Own Wellness Goal!',
       text: null,
       tooltip: null
     },
     content: {
       paragraph: {
-        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!',
-        1: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week!"'
-      }
+        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
+      },
+      textAreaPlaceHolder: 'For example, \"Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \"I\'ll work out at least once next week!\"'
     }
   },
   // slide 33
@@ -1109,8 +1116,8 @@ export const alcoholModuleSlides = {
     content: {
       images: null,
       paragraph: {
-        0: '<div style="text-align: center;"><b style="font-size: 2rem;">Thank you for completing this module! </b></div>',
-        1: '<div style="text-align: center;"><b style="font-size: 2rem;">Your next module will be available in 5 days. You will receive an email notification from iSTART.</b></div>'
+        0: 'Thank you for completing this module!',
+        1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
       },
       list: null
     },

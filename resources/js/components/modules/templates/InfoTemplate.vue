@@ -14,6 +14,9 @@
             <h2 class="module-info__content-text" v-if="currentSlideData.header.text" v-html="currentSlideData.header.text"></h2>
           </div>
         </div>
+        <p v-for="paragraphs_top in currentSlideData.content.paragraph_top" :key="paragraphs_top">
+          {{ paragraphs_top }}
+        </p>
         <info-photo v-for="(element, index) in currentSlideData.content.images"
           :key="index"
           :image="element">
@@ -45,7 +48,6 @@
           :listItems="currentSlideData.content.photo_list"
         >
         </info-photo-list>
-        <p></p>
         <info-carousel class="col-12" v-if="currentSlideData.format ==='carousel'" :images="currentSlideData.content.carousel"></info-carousel>
       </div>
     </div>
