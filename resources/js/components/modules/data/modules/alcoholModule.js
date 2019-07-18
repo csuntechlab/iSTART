@@ -16,7 +16,7 @@ export const alcoholModuleSlides = {
     header: {
       title: null,
       text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -41,7 +41,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Standard Drink Sizes',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -63,7 +63,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Fun Fact!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -292,7 +292,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'What’s your guess?',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
   // slide 10
@@ -301,7 +301,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Drinking isn\'t as common as you think.',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -505,7 +505,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Dependency',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -601,7 +601,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Benefits of Drinking Responsibly',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       image_grid: {
@@ -638,7 +638,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Reduced Calorie Intake',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       carousel: {
@@ -703,7 +703,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Sleep Quality',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -725,7 +725,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Better Academic Performance',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -749,7 +749,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Responsible Drinking Checklist',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       list: {
@@ -802,7 +802,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Rethink Your Drink!',
       text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -864,7 +864,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Sobering Up Takes Time!',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -977,7 +977,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Healthy Alternatives',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -1000,7 +1000,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Physical Activities',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -1023,7 +1023,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Social Activities',
       text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
