@@ -16,7 +16,7 @@ export const alcoholModuleSlides = {
     header: {
       title: null,
       text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -41,7 +41,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Standard Drink Sizes',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -63,7 +63,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Fun Fact!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -292,7 +292,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Your Guess vs. Actual Percentage',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
   // slide 10
@@ -301,7 +301,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Drinking isn\'t as common as you think.',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -328,6 +328,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
         1: 'It’s important to be aware of the different drinking categories.',
@@ -505,7 +507,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Dependency',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -531,6 +533,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
@@ -590,7 +594,7 @@ export const alcoholModuleSlides = {
           back: {
             description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
-        },
+        }
       },
       list: null
     }
@@ -601,7 +605,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Benefits of Drinking Responsibly',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       image_grid: {
@@ -629,7 +633,7 @@ export const alcoholModuleSlides = {
       paragraph_top: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
-      },
+      }
     }
   },
   // slide 20
@@ -638,7 +642,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Reduced Calorie Intake',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       carousel: {
@@ -703,7 +707,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Sleep Quality',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -725,7 +729,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Better Academic Performance',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -738,7 +742,7 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph_top: {
-        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
+        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.'
       },
       list: null
     }
@@ -749,7 +753,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Responsible Drinking Checklist',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       list: {
@@ -801,15 +805,15 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
-      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…YOU are in control!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…<b>YOU</b> are in control!',
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'No Sign'
-        },
+        }
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
@@ -821,7 +825,7 @@ export const alcoholModuleSlides = {
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
           '"I’d rather get a soda"',
-          '"They have really great mocktails (non-alcoholic cocktails) that I’d like to try."'
+          '"They have really great mocktails (<i>non-alcoholic cocktails</i>) that I’d like to try."'
         ]
       }
     }
@@ -835,6 +839,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
@@ -864,7 +870,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Sobering Up Takes Time!',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -900,7 +906,7 @@ export const alcoholModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
+          question: '<b>Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?</b>',
           options: {
             0: {
               isAnswer: false,
@@ -977,7 +983,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Healthy Alternatives',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       paragraph: {
@@ -988,7 +994,7 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s28_01.jpg',
-          alt: 'People jumping on the beach.',
+          alt: 'People jumping on the beach.'
         }
       },
       list: null
@@ -1000,7 +1006,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Physical Activities',
       text: null,
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -1011,7 +1017,7 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph: {
-        0: 'Our bodies produce the same hormone (known as dopamine) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
+        0: 'Our bodies produce the same hormone (<i>known as dopamine</i>) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
         1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
       },
       list: null
@@ -1023,7 +1029,7 @@ export const alcoholModuleSlides = {
     header: {
       title: 'Social Activities',
       text: 'Hanging out with friends can be super fun, even without alcohol. Going out to the movies, meeting up for an amazing sunset hike; or checking out the latest art show can be equally memorable!',
-      tooltip: 'Wait 8 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       images: {
@@ -1053,6 +1059,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'By practicing mindfulness and yoga you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Connecting with your mind and body can also help you cope with difficult emotions, instead of pushing them away through, for example, drinking.',

@@ -7,6 +7,8 @@ export default {
       text: null // Type: string; Optional, piece of text after title
     },
     content: {
+      cards_flipped: false, // Type: number; required
+      card_flip_count: 0, // Type: number; Required
       paragraph: {
         0: 'Have you ever seen anyone drink more than what they can handle? Have you seen this individual do that more than once?' // Type: string; Optional
       },
@@ -37,6 +39,8 @@ export default {
       text: null
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: ''
       },
