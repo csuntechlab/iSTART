@@ -58,6 +58,16 @@ export default {
     state.JSONSlideData[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
   },
 
+  UPDATE_CARD_COUNT (state, payload) {
+    let totalCardCount = Object.keys(state.JSONSlideData[payload.currentSlideIndex].content.cards).length
+    state.JSONSlideData[payload.currentSlideIndex].content.card_flip_count += payload.number
+
+    if (state.JSONSlideData[payload.currentSlideIndex].content.card_flip_count === totalCardCount) {
+      state.JSONSlideData[payload.currentSlideIndex].content.cards_flipped = true
+      state.enableContinue = true
+    }
+  },
+
   UPDATE_RESPONSE (state, payload) {
     let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
     let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
