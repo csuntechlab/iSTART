@@ -1,12 +1,16 @@
 <template>
-    <ul class="photo-list">
-      <li
-        v-for="listItem in listItems" :key="listItem.text"
-        class="photo-list__list-item"
-        :class="'photo-list__list-item--' + listItems.indexOf(listItem)">
-        {{listItem.text}}
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-12">
+      <ul class="photo-list">
+        <li
+          v-for="listItem in listItems" :key="listItem.text"
+          class="photo-list__list-item"
+          :class="'photo-list__list-item--' + listItems.indexOf(listItem)">
+          {{listItem.text}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
