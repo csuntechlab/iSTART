@@ -328,6 +328,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
         1: 'It’s important to be aware of the different drinking categories.',
@@ -531,6 +533,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
@@ -590,7 +594,7 @@ export const alcoholModuleSlides = {
           back: {
             description: '25% of students report serious academic consequences of alcohol abuse, including poor grades, suspension, and expulsion.'
           }
-        },
+        }
       },
       list: null
     }
@@ -629,7 +633,7 @@ export const alcoholModuleSlides = {
       paragraph_top: {
         0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
         1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
-      },
+      }
     }
   },
   // slide 20
@@ -738,7 +742,7 @@ export const alcoholModuleSlides = {
         }
       },
       paragraph_top: {
-        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
+        0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.'
       },
       list: null
     }
@@ -809,7 +813,7 @@ export const alcoholModuleSlides = {
         0: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'No Sign'
-        },
+        }
       },
       list: {
         title: 'If you are offered a drink, here are ways to say no:',
@@ -835,6 +839,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
@@ -886,7 +892,7 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: "Melita\'s night out",
+      title: "Melita's night out"
     },
     content: {
       images: {
@@ -988,7 +994,7 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s28_01.jpg',
-          alt: 'People jumping on the beach.',
+          alt: 'People jumping on the beach.'
         }
       },
       list: null
@@ -1053,6 +1059,8 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      cards_flipped: false,
+      card_flip_count: 0,
       paragraph: {
         0: 'By practicing mindfulness and yoga you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Connecting with your mind and body can also help you cope with difficult emotions, instead of pushing them away through, for example, drinking.',
@@ -1103,7 +1111,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
       },
-      textAreaPlaceHolder: 'For example, \"Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \"I\'ll work out at least once next week!\"'
+      textAreaPlaceHolder: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week!"'
     }
   },
   // slide 33
