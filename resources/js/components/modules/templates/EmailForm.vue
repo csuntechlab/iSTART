@@ -15,7 +15,7 @@
       :icon="element.icon">
     </info-content>
     <form>
-      <div class="form-group">
+      <div class="emailForm__text-area-container">
         <textarea
         class="emailForm__text-area form-control"
         :placeholder="currentSlideData.content.textAreaPlaceHolder"
