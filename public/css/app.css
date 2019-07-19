@@ -13173,6 +13173,7 @@ body {
 .video-template__header {
   font-size: 1.15rem;
   margin-bottom: 1rem;
+  color: #4A5D6E;
 }
 
 .video-template__header > * {
@@ -13216,6 +13217,7 @@ body {
 
 .card-flip__header {
   font-weight: 700;
+  color: #4A5D6E;
 }
 
 .card-flip__paragraph {
