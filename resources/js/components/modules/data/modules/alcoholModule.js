@@ -147,7 +147,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'You are correct!!! one standard shot (1.5oz) is the same as one can of beer (12oz)',
+                text: '<b>You are correct!!!</b> One standard shot (1.5oz) is the same as one can of beer (12oz)',
                 img: {
                   src: null,
                   alt: null
@@ -163,7 +163,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</Nice> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.jpg',
                   alt: 'alcohol comparison'
@@ -199,7 +199,7 @@ export const alcoholModuleSlides = {
                 alt: 'glass filled with alcohol one fith\'s of container'
               },
               response: {
-                text: '1.5oz<br>Great job! This is one standard drink – 1.5 oz of 40% liquor!',
+                text: '1.5oz<br><b>Great job!</b> This is one standard drink – 1.5 oz of 40% liquor!',
                 img: {
                   src: null,
                   alt: null
@@ -294,7 +294,7 @@ export const alcoholModuleSlides = {
   7: {
     slide_type: 'inputPieChart',
     header: {
-      title: 'What’s your guess?',
+      title: 'Your Guess vs. Actual Percentage',
       text: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -479,7 +479,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'You are correct! Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
+                text: '<b>You are correct!</b> Sarah is considered a heavy drinker, since she had 4 or more drinks in one night, or 8 or more drinks over the course of the week.',
                 img: {
                   src: null,
                   alt: null
@@ -663,23 +663,23 @@ export const alcoholModuleSlides = {
       1: {
         carousel: {
           0: {
-            src: 'images/alcoholModule/alcohol_s20_01.png',
-            alt: 'gin and tonic',
-            y_position: null
-          },
-          1: {
             src: 'images/alcoholModule/alcohol_s20_02.png',
             alt: 'beer',
             y_position: null
           },
-          2: {
+          1: {
             src: 'images/alcoholModule/alcohol_s20_03.png',
             alt: 'red wine',
             y_position: null
           },
+          2: {
+            src: 'images/alcoholModule/alcohol_s20_09.png',
+            alt: 'white wine',
+            y_position: null
+          },
           3: {
-            src: 'images/alcoholModule/alcohol_s20_04.png',
-            alt: 'cosmo',
+            src: 'images/alcoholModule/alcohol_s20_07.png',
+            alt: 'mojito',
             y_position: null
           },
           4: {
@@ -688,23 +688,23 @@ export const alcoholModuleSlides = {
             y_position: null
           },
           5: {
+            src: 'images/alcoholModule/alcohol_s20_01.png',
+            alt: 'gin and tonic',
+            y_position: null
+          },
+          6: {
             src: 'images/alcoholModule/alcohol_s20_06.png',
             alt: 'piña colada',
             y_position: null
           },
-          6: {
-            src: 'images/alcoholModule/alcohol_s20_07.png',
-            alt: 'mojito',
-            y_position: null
-          },
           7: {
-            src: 'images/alcoholModule/alcohol_s20_08.png',
-            alt: '80 proof spirits',
+            src: 'images/alcoholModule/alcohol_s20_04.png',
+            alt: 'cosmo',
             y_position: null
           },
           8: {
-            src: 'images/alcoholModule/alcohol_s20_09.png',
-            alt: 'white wine',
+            src: 'images/alcoholModule/alcohol_s20_08.png',
+            alt: '80 proof spirits',
             y_position: null
           }
         }
@@ -850,7 +850,7 @@ export const alcoholModuleSlides = {
   21: {
     slide_type: 'cardFlip',
     header: {
-      title: 'Should I take an Uber?',
+      title: 'Should I take a Uber?',
       text: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -909,7 +909,7 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: "Melita's night out"
+      title: "Melita's night out"
     },
     content: {
       images: {
@@ -923,7 +923,7 @@ export const alcoholModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: '<b>Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?</b>',
+          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
           options: {
             0: {
               isAnswer: false,
@@ -1131,7 +1131,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
       },
-      textAreaPlaceHolder: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week!"'
+      textAreaPlaceHolder: 'For example... \n "Next week I will plan to drink one fewer drink than normal when I go out with friends."; \n or, "I\'ll work out at least once next week!"'
     }
   },
   // // slide 33
