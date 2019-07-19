@@ -613,6 +613,12 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
+        paragraph: {
+          0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
+          1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
+        }
+      },
+      1: {
         image_grid: {
           0: {
             src: 'images/alcoholModule/alcohol_s19_01.jpg',
@@ -634,12 +640,6 @@ export const alcoholModuleSlides = {
             alt: 'person covering eyes with strawberries smiling',
             caption: 'Reduce Risk of Disease'
           }
-        }
-      },
-      1: {
-        paragraph: {
-          0: 'Drinking in moderation is important for a healthy mind and body. Cutting back how much or how often we drink can make a big difference!',
-          1: 'If you drink several days a week, know that alcohol-free days can be beneficial!'
         }
       }
     }
