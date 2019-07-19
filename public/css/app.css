@@ -12805,7 +12805,7 @@ body {
 
 .module-info__content-text {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .module-info__carousel {
@@ -13219,7 +13219,7 @@ body {
 }
 
 .card-flip__paragraph {
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .card-flip__card {
@@ -13342,5 +13342,9 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.photo-list__list-item--red-text {
+  color: #e3342f;
 }
 

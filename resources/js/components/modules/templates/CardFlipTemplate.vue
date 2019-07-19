@@ -32,12 +32,6 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  data () {
-    return {
-      cardFlipCount: 0
-    }
-  },
-
   computed: {
     ...mapGetters(
       [
@@ -47,11 +41,20 @@ export default {
     )
   },
 
+  mounted () {
+    this.checkIfCardsFlipped()
+  },
+
+  updated () {
+    this.checkIfCardsFlipped()
+  },
+
   methods: {
     ...mapActions(
       [
         'enableContinue',
-        'updateCard'
+        'updateCard',
+        'updateCardCount'
       ]
     ),
 
@@ -60,8 +63,13 @@ export default {
     },
 
     updateCount (number, item) {
-      this.cardFlipCount += number
-      if (this.cardFlipCount === Object.keys(this.currentSlideData.content.cards).length) {
+      this.updateCardCount({ currentSlideIndex: parseInt(this.currentSlideNumber), number: parseInt(number) })
+    },
+
+    checkIfCardsFlipped () {
+      let isAllCardsFlipped = this.currentSlideData.content.cards_flipped
+
+      if (isAllCardsFlipped) {
         this.enableContinue()
       }
     }
