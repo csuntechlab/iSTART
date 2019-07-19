@@ -11,7 +11,7 @@ export default {
     return {
       chartdata: {
         userData: {
-          labels: ['You said: ' + this.response + '%'],
+          labels: ['Your Guess: ' + this.response + '%'],
           datasets: [
             {
               label: 'Data One',

@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 ml-1 col-11">
       <p class="module-quizInput__text">{{ questionIndex }}. {{ question }}</p>
-      <input id="response" name="response" v-model="response" type="text" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/>
+      <input id="response" name="response" v-model="response" type="text" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
       <em class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</em>
   </div>
 </template>

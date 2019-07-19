@@ -6,8 +6,11 @@
         </div>
       </div>
       <div class="row mt-3 justify-content-center">
+        <div class="module-quizInput__header col-12">
+          <h1>{{ currentSlideData.header.title }}</h1>
+        </div>
         <template v-for="(element, index) in getSlideData(currentSlideNumber-1).content.questions">
-          <div :key="index" class="col-12 mt-5 mb-2">
+          <div :key="index" class="module-quizInput__question col-12 mb-2">
             <p class="module-quizInput__text">{{ element.question }}</p>
           </div>
           <div :key="index + '-chart1'" class="col-6 mt-1">
@@ -44,7 +47,8 @@ export default {
       [
         'userResponses',
         'getSlideData',
-        'currentSlideNumber'
+        'currentSlideNumber',
+        'currentSlideData'
       ]
     )
   }
