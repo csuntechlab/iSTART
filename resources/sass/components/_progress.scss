@@ -1,6 +1,9 @@
 .vue-progress-path .progress{
-    stroke: #1374CD;
+  stroke: $purple;
+}
 
+.vue-progress-path .background {
+  stroke: #F1F0FA;
 }
 
 .loginForm .vue-progress-path{

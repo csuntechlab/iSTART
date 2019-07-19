@@ -5,8 +5,7 @@
 */
 
 // Body
-//previous body-bg: #f8fafc
-$body-bg: #F5F5F5;
+$body-bg: #FAFAFA;
 $inputBorder: rgb(188,224,253);
 // Typography
 $font-family-sans-serif: "Open Sans", sans-serif;
@@ -15,16 +14,19 @@ $line-height-base: 1.6;
 
 // Colors
 $indigo: #6574cd;
-$purple: #7d63a3;
+// $purple: #7d63a3;
 $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
-$white: rgb(245, 245, 245);
+$white: white;
 
-$primaryColor: rgb(38,153,251);
+$border-color: #CECECE;
+$heading-color: #4A5D6E;
+
+$primaryColor: rgb(55, 113, 220);
 $primaryColor--lighter: lighten($primaryColor, 0.4);
 $primaryColor--light: lighten($primaryColor, 0.6);
 $primaryColor--medium: rgb(16, 109, 188);
@@ -35,9 +37,9 @@ $primaryColor--60: rgba($primaryColor, 0.6);
 $primaryColor--40: rgba($primaryColor, 0.4);
 $primaryColor--20: rgba($primaryColor, 0.2);
 $backgroundColor: rgb(231,242,247);
-$introSlide--backgroundColor: rgb(57,88,113);
+$introSlide--backgroundColor: rgb(70, 79, 98);
 
-$secondaryColor: $white;
+$secondaryColor: #612570;
 $secondaryColor--lighter: lighten($secondaryColor, 0.4);
 $secondaryColor--light: lighten($secondaryColor, 0.6);
 $secondaryColor--medium: lighten($secondaryColor, 0.8);

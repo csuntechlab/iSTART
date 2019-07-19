@@ -3,6 +3,7 @@
     overflow-x: hidden;
     min-height: 100vh;
     padding: 0;
+    border: 1px solid #CECECE;
 
     &__header{
         margin-top: -2px;
@@ -25,7 +26,6 @@
             padding-bottom: 25px;
         }
     }
-    
     &-footer {
         display: flex;
         flex-flow: row;
