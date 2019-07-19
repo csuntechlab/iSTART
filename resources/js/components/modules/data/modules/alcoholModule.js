@@ -892,7 +892,7 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: "Melita\'s night out",
+      title: "Melita's night out"
     },
     content: {
       images: {
@@ -906,7 +906,7 @@ export const alcoholModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: '<b>Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?</b>',
+          question: 'Melita goes out with her friends to celebrate finishing finals. Between 6pm and 10pm she has already had two beers at her friend\'s house, and another three mojitos at the club. How long will it take Melita to sober up before driving home?',
           options: {
             0: {
               isAnswer: false,
