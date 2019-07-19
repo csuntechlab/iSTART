@@ -9,13 +9,13 @@
     <h2 class="emailForm__heading">
       {{currentSlideData.header.title}}
     </h2>
-    <info-content v-for="(element, index) in currentSlideData.content.paragraph"
+    <!-- <info-content v-for="(element, index) in currentSlideData.content.paragraph"
       :key="index"
       :paragraph="element"
       :icon="element.icon">
-    </info-content>
+    </info-content> -->
     <form>
-      <div class="form-group">
+      <div class="emailForm__text-area-container">
         <textarea
         class="emailForm__text-area form-control"
         :placeholder="currentSlideData.content.textAreaPlaceHolder"
@@ -32,13 +32,13 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
-import InfoContent from './info/InfoContent'
+// import InfoParagraph from './info/InfoParagraph'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
-  components: {
-    InfoContent
-  },
+  // components: {
+  //   InfoParagraph
+  // },
 
   data () {
     return {

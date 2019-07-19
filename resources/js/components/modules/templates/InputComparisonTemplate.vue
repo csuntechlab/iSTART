@@ -1,10 +1,10 @@
 <template>
   <div class="module-quizInput">
-    <div class="container">
-      <div class="row mt-5 mb-5">
+    <div class="container mt-5">
+      <h1>{{ currentSlideData.header.title }}</h1>
+      <div class="row mb-5">
         <div class="col-12">
-          <h1>{{ currentSlideData.header.title }}</h1>
-          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsones using numerical values 0 to 100.</p>
+          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsone using numerical values 0 to 100.</p>
         </div>
         <form class="module-quizInput__form" novalidate="true">
           <input-response v-for="(element, index) in currentSlideData.content.questions"

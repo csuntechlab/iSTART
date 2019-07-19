@@ -12941,6 +12941,19 @@ body {
   margin-top: 1rem;
 }
 
+.module-quizInput__header {
+  width: 100%;
+  margin: 3rem 0 1rem 0;
+}
+
+.module-quizInput__question {
+  margin-top: 3rem;
+}
+
+.module-quizInput__question:nth-child(2) {
+  margin-top: 0;
+}
+
 .module-quizInput__text {
   font-weight: bold;
   font-size: 1rem;
@@ -12958,7 +12971,9 @@ body {
 .module-quizInput__label {
   border-radius: 7.5px;
   border-color: #3771dc;
-  width: 100%;
+  text-align: center;
+  min-width: 4rem;
+  width: 10%;
   padding-bottom: 3px;
   background-color: white;
 }
@@ -12970,14 +12985,16 @@ body {
   }
 }
 
-.module-quizInput__validate {
-  font-size: 1.2rem;
+.module-quizInput__percent-indicator {
+  font-weight: bold;
+  margin: 0 0.5rem;
 }
 
-@media (max-width: 767.98px) {
-  .module-quizInput__validate {
-    font-size: 0.9rem;
-  }
+.module-quizInput__validate {
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 .module-quizInput__validate--red {
@@ -12986,6 +13003,12 @@ body {
 
 .module-quizInput__validate--green {
   color: green;
+}
+
+@media (max-width: 767.98px) {
+  .module-quizInput__validate {
+    font-size: 0.9rem;
+  }
 }
 
 .introSlide__image-container {
@@ -13074,10 +13097,8 @@ body {
   height: 30vh;
 }
 
-@media (min-width: 768px) {
-  .emailForm textarea {
-    margin-top: 10vh;
-  }
+.emailForm__text-area-container {
+  margin-top: 1rem;
 }
 
 .multiChoiceSurvey__option {

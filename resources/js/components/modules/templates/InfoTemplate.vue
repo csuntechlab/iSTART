@@ -14,41 +14,33 @@
             <h2 class="module-info__content-text" v-if="currentSlideData.header.text" v-html="currentSlideData.header.text"></h2>
           </div>
         </div>
-        <p v-for="paragraphs_top in currentSlideData.content.paragraph_top" :key="paragraphs_top">
-          {{ paragraphs_top }}
-        </p>
-        <info-photo v-for="(element, index) in currentSlideData.content.images"
-          :key="index"
-          :image="element">
-        </info-photo>
-        <info-photo-grid
-          v-if="currentSlideData.content.image_grid"
-          :image_grid="(currentSlideData.content.image_grid)"
-          :content_alignment="currentSlideData.content.image_grid_align_content"
-        >
-        </info-photo-grid>
-        <info-content v-for="(element, index) in currentSlideData.content.paragraph"
-          :key="`${index}-${element.id}`"
-          :paragraph="element"
-          :icon="element.icon">
-        </info-content>
-        <div v-if="currentSlideData.content.list">
-          <h2 v-if="currentSlideData.content.list.title !== null">
-            <strong>{{ currentSlideData.content.list.title }}</strong>
-          </h2>
-          <ul>
-            <info-list v-for="(element, index) in currentSlideData.content.list.list_element"
-              :key="`${index}`"
-              :listItem="element">
-            </info-list>
-          </ul>
-        </div>
-        <info-photo-list
-          v-if="currentSlideData.content.photo_list"
-          :listItems="currentSlideData.content.photo_list"
-        >
-        </info-photo-list>
-        <info-carousel class="col-12" v-if="currentSlideData.format ==='carousel'" :images="currentSlideData.content.carousel"></info-carousel>
+        <template v-for="(element, currentSlideIndex) in currentSlideData.content">
+          <info-paragraph
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].paragraph"
+            :paragraph="currentSlideData.content[`${currentSlideIndex}`].paragraph"/>
+          <info-photo
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].image"
+            :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
+          <info-photo-grid
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].image_grid"
+            :image_grid="currentSlideData.content[`${currentSlideIndex}`].image_grid"
+            :content_alignment="currentSlideData.content[`${currentSlideIndex}`].image_grid_align_content"/>
+          <info-photo-list
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].photo_list"
+            :listItems="currentSlideData.content[`${currentSlideIndex}`].photo_list"/>
+          <info-carousel
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].carousel"
+            :images="currentSlideData.content[`${currentSlideIndex}`].carousel"/>
+          <info-list
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].list_element"
+            :listItems="currentSlideData.content[`${currentSlideIndex}`].list_element"/>
+        </template>
       </div>
     </div>
   </div>
@@ -57,7 +49,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
-import InfoContent from './info/InfoContent'
+import InfoParagraph from './info/InfoParagraph'
 import InfoCarousel from './info/InfoCarousel'
 import InfoPhoto from './info/InfoPhoto'
 import InfoPhotoGrid from './info/infoPhotoGrid'
@@ -68,7 +60,7 @@ export default {
   mixins: [awaitTimeBeforeContinue],
   components: {
     InfoCarousel,
-    InfoContent,
+    InfoParagraph,
     InfoPhoto,
     InfoPhotoGrid,
     InfoList,
