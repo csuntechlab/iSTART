@@ -34,8 +34,7 @@
 <script>
 export default {
   props: [
-    'image',
-    'imageCount'
+    'image'
   ],
   computed: {
     determineColSize: function () {
