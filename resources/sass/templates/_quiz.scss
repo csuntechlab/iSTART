@@ -3,9 +3,8 @@
 
     &__question {
         margin-bottom: 2rem;
-
         & > * {
-            font-size: 1.5rem;
+            @extend %default-copy;
         }
     }
 

@@ -1,7 +1,6 @@
 .module-quizInput {
     &__header {
-        width: 100%;
-        margin: 3rem 0 1rem 0;
+        @extend %default-heading;
     }
 
     &__question {
@@ -13,8 +12,7 @@
     }
 
     &__text {
-        font-weight: bold;
-        font-size: 1rem;
+        @extend %default-copy;
     }
 
     &__form {

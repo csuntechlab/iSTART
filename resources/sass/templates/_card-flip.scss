@@ -13,12 +13,11 @@
   }
 
   &__header {
-    font-weight: 700;
-    color: $heading-color;
+    @extend %default-heading;
   }
 
   &__paragraph {
-    font-weight: normal;
+    @extend %default-copy;
   }
 
   &__card {

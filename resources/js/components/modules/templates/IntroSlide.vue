@@ -7,9 +7,6 @@
         <h1 class="introSlide__title">
           {{currentSlideData.content.title}}
         </h1>
-        <button @click="goForward" class="btn btn-primary introSlide__start-btn">
-          Start
-        </button>
       </div>
       <div class="col-12 col-md-8">
         <p class="introSlide__description">
@@ -21,6 +18,9 @@
           {{currentSlideData.content.definition}}
         </p>
         <p class="introSlide__description">Estimated Completion time: {{currentSlideData.content.estimated_completion}}</p>
+        <button @click="goForward" class="btn btn-primary introSlide__start-btn">
+          Start
+        </button>
       </div>
       <div class="row introSlide__button-wrapper">
         <div class="col-12 p-0">

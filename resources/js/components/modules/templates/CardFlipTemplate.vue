@@ -2,8 +2,8 @@
 <div class="card-flip">
   <section class="card-flip-description container">
     <h1 class="card-flip__header">{{ currentSlideData.header.title }}</h1>
-    <div class="card-flip__paragraph" v-for="(item, index) in currentSlideData.content.paragraph" :key="index">
-      <p v-html="item"></p>
+    <div v-for="(item, index) in currentSlideData.content.paragraph" :key="index">
+      <p v-html="item" class="card-flip__paragraph"></p>
     </div>
     <em>{{ currentSlideData.header.text }}</em>
   </section>

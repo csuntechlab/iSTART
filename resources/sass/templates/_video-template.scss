@@ -11,15 +11,19 @@
   }
 
   &__title {
-    font-weight: 700;
+    @extend %default-heading;
+  }
+
+  &__sub-heading{
+    @extend %default-copy;
   }
 
   &__caption {
     margin-top: 1rem;
 
     & > * {
+      @extend %default-copy;
       display: block;
-      font-size: 1.15rem;
       padding: 0.5rem 2rem;
     }
   }

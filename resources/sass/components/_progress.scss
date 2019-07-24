@@ -1,9 +1,10 @@
-.vue-progress-path .progress{
-  stroke: $purple;
-}
-
-.vue-progress-path .background {
-  stroke: #F1F0FA;
+.vue-progress-path{
+  .progress{
+    stroke: $purple;
+  }
+  .background{
+    stroke: #F1F0FA;
+  }
 }
 
 .loginForm .vue-progress-path{
@@ -14,8 +15,5 @@
   @include media-breakpoint-up(md) {
     top:35%;
     transform: translate(-50%);
-  }
-  .progress {
-    stroke: $primaryColor;
   }
 }
