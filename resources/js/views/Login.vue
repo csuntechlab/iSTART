@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="container container--desktop login">
+  <div class="login-container">
+    <div class="container login">
       <div class="row">
         <h1 class="login__title transition-350ms">iSTART</h1>
       </div>

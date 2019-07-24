@@ -51,14 +51,14 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
           y_position: null
-        },
+        }
       },
       1: {
         paragraph: {
           0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
           1: 'That\'s a HUGE difference!'
-        },
-      },
+        }
+      }
     }
   },
   // slide 5
@@ -74,12 +74,12 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
           caption: 'The lines on a solo cup tell you how much to pour for each drink.'
-        },
+        }
       },
       1: {
         paragraph: {
           0: 'How much do you pour in your drink? The next time you\'re at a party, remember to use the lines on the cup!'
-        },
+        }
       }
     }
   },
@@ -313,14 +313,14 @@ export const alcoholModuleSlides = {
           0: 'College students often assume that the majority of students drink alcohol.',
           1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used alcohol at all in the last month.',
           2: 'Don’t be misled! These types of assumptions often lead other college students to use alcohol more heavily.'
-        },
+        }
       },
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
           alt: 'friends on beach cooking marshmallows',
           y_position: 'bottom'
-        },
+        }
       }
     }
   },
@@ -519,13 +519,13 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
           y_position: 'bottom'
-        },
+        }
       },
       1: {
         paragraph: {
           0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
           1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
-        },
+        }
       }
     }
   },
@@ -658,7 +658,7 @@ export const alcoholModuleSlides = {
           0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
           1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.',
           2: 'Scroll through the carousel below to see the calorie count for different drinks.'
-        },
+        }
       },
       1: {
         carousel: {
@@ -709,7 +709,7 @@ export const alcoholModuleSlides = {
           }
         }
       }
-    },
+    }
   },
   // slide 21
   17: {
@@ -725,7 +725,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
           y_position: 'bottom'
-        },
+        }
       },
       1: {
         paragraph: {
@@ -747,16 +747,16 @@ export const alcoholModuleSlides = {
       0: {
         paragraph: {
           0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.'
-        },
+        }
       },
       1: {
         image: {
-            src: 'images/alcoholModule/alcohol_s22_01.PNG',
-            alt: 'alcohol infographic on being a factor for academic problems',
-            mobile_size: '5/6',
-            tablet_size: '1/2',
-            desktop_size: '1/3'
-        },
+          src: 'images/alcoholModule/alcohol_s22_01.PNG',
+          alt: 'alcohol infographic on being a factor for academic problems',
+          mobile_size: '5/6',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
       }
     }
   },
@@ -825,7 +825,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'No Sign'
-        },
+        }
       },
       1: {
         paragraph: {
@@ -894,7 +894,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
           y_position: 'bottom'
-        },
+        }
       },
       1: {
         paragraph: {
@@ -909,7 +909,9 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: "Melita's night out"
+      title: "Melita's night out",
+      text: null,
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: {
@@ -1008,13 +1010,13 @@ export const alcoholModuleSlides = {
           0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
           1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
           2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
-        },
+        }
       },
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s28_01.jpg',
           alt: 'People jumping on the beach.'
-        },
+        }
       }
     }
   },
@@ -1030,7 +1032,7 @@ export const alcoholModuleSlides = {
       0: {
         image: {
           src: 'images/alcoholModule/alcohol_s29_01.jpg',
-          alt: 'two people running next to a lake',
+          alt: 'two people running next to a lake'
         }
       },
       1: {
@@ -1058,16 +1060,16 @@ export const alcoholModuleSlides = {
         }
       },
       1: {
-        image: {          
+        image: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
           caption: 'links to social activities are in the resources tab.'
-        },
+        }
       },
       2: {
         paragraph: {
           0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-        },
+        }
       }
     }
   },
@@ -1146,7 +1148,7 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Thank you for completing this module!',
           1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
-        },
+        }
       }
     },
     format: {
