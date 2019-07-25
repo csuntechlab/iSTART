@@ -12,33 +12,26 @@
     }
 
     &-notification {
-        padding: 0.5rem 1rem;
-        background-color: $white;
-        color: $black;
-        box-shadow: 0 4px 8px 0 $primaryColor--20;
-
+        padding: 1rem;
+        background-color: #EFEFEF;
+        border-radius: .5rem;
+        line-height: 1.25;
+        margin-top: 1rem;
         @include media-breakpoint-down(sm) {
-            margin-top: 3.3rem;
+            margin-top: 4.5rem;
         }
-
-        & * {
-        font-size: 1rem;
-        transition: 350ms;
-
-            @include media-breakpoint-up(sm) {
-                & {
-                    font-size: 1.15rem;
-                }
-            }
-        }
-
         &__message {
-            &-container {
-                display: inline-block;
-            }
-
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4A5D6E;
+            margin: 0;
             &-date {
-                color: $primaryColor;
+                color: #354A5C;
+                font-weight: 300;
+                margin: 0;
+                b {
+                    font-weight: bold;
+                }
             }
         }
 

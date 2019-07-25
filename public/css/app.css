@@ -12116,37 +12116,34 @@ body {
 }
 
 .dashboard-notification {
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: #191919;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(55, 113, 220, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(55, 113, 220, 0.2);
+  padding: 1rem;
+  background-color: #EFEFEF;
+  border-radius: 0.5rem;
+  line-height: 1.25;
+  margin-top: 1rem;
 }
 
 @media (max-width: 767.98px) {
   .dashboard-notification {
-    margin-top: 3.3rem;
+    margin-top: 4.5rem;
   }
 }
 
-.dashboard-notification * {
-  font-size: 1rem;
-  -webkit-transition: 350ms;
-  transition: 350ms;
-}
-
-@media (min-width: 576px) {
-  .dashboard-notification * {
-    font-size: 1.15rem;
-  }
-}
-
-.dashboard-notification__message-container {
-  display: inline-block;
+.dashboard-notification__message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4A5D6E;
+  margin: 0;
 }
 
 .dashboard-notification__message-date {
-  color: #3771dc;
+  color: #354A5C;
+  font-weight: 300;
+  margin: 0;
+}
+
+.dashboard-notification__message-date b {
+  font-weight: bold;
 }
 
 .dashboard-notification__schedule-button {
