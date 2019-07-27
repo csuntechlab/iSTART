@@ -25,8 +25,8 @@
         (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
         (image.caption_text_align === 'center' ? 'text-center' : ''),
         (image.caption_text_align === 'right' ? 'text-right' : ''),
-      ]
-    ">
+      ]"
+    >
       {{ image.caption }}
     </p>
   </div>

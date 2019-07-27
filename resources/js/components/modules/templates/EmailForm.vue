@@ -6,14 +6,12 @@
     <div v-if="surveyResultsEmailWasSubmitted===false" class="alert alert-danger transition-350ms">
       <strong>Failure. </strong> An error has occured
     </div>
-    <h2 class="emailForm__heading">
-      {{currentSlideData.header.title}}
-    </h2>
-    <!-- <info-content v-for="(element, index) in currentSlideData.content.paragraph"
-      :key="index"
-      :paragraph="element"
-      :icon="element.icon">
-    </info-content> -->
+    <h1 class="emailForm__heading">
+      {{ currentSlideData.header.title }}
+    </h1>
+    <p>
+      {{ currentSlideData.header.text }}
+    </p>
     <form>
       <div class="emailForm__text-area-container">
         <textarea
@@ -32,13 +30,9 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
-// import InfoParagraph from './info/InfoParagraph'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
-  // components: {
-  //   InfoParagraph
-  // },
 
   data () {
     return {

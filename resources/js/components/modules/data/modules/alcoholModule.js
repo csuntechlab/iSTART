@@ -14,25 +14,25 @@ export const alcoholModuleSlides = {
   1: {
     slide_type: 'info',
     header: {
-      title: null,
-      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
+      title: 'What\'s in a drink?',
+      text: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       0: {
-        image: {
-          src: 'images/alcoholModule/alcohol_s03_01.png',
-          alt: 'percentage infographic',
-          mobile_size: '1/2',
-          tablet_size: '1/3',
-          desktop_size: '1/4'
+        paragraph: {
+          0: 'Do you know how much alcohol is in your drink?',
+          1: 'Many college students  are surprised  to learn what counts as a drink.',
+          2: 'Different types of beer,wine, and liquorcan havediffering alcohol percentages.'
         }
       },
       1: {
         image: {
-          src: 'images/alcoholModule/alcohol_s03_02.png',
-          alt: 'tequila not equal red wine not equal beer',
-          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
+          src: 'images/alcoholModule/alcohol_s03_01.jpg',
+          alt: 'percentage infographic',
+          mobile_size: '1/2',
+          tablet_size: '1/3',
+          desktop_size: '1/4'
         }
       }
     }
@@ -131,7 +131,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.jpg',
                   alt: 'alcohol comparison'
@@ -163,7 +163,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</Nice> one can of beer (12oz)',
+                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.jpg',
                   alt: 'alcohol comparison'
@@ -295,7 +295,7 @@ export const alcoholModuleSlides = {
     slide_type: 'inputPieChart',
     header: {
       title: 'Your Guess vs. Actual Percentage',
-      text: null,
+      text: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
@@ -502,7 +502,7 @@ export const alcoholModuleSlides = {
     content: {
       video_id: '5jNEVGj6gS0',
       video_length: (122400 / 2) + 5000,
-      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drinks in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
   // slide 17
@@ -523,7 +523,7 @@ export const alcoholModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
+          0: 'For some students, alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
           1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
         }
       }
@@ -555,7 +555,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Out of the students who drink, half will binge drink multiple times before they graduate.'
+            description: '50% will binge drink multiple times before they graduate.'
           }
         },
         1: {
@@ -623,22 +623,34 @@ export const alcoholModuleSlides = {
           0: {
             src: 'images/alcoholModule/alcohol_s19_01.jpg',
             alt: 'One dollar bills',
-            caption: 'Save Money'
+            caption: 'Save Money',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           1: {
             src: 'images/alcoholModule/alcohol_s19_02.jpg',
             alt: 'person body turned and tilted head staring',
-            caption: 'Clearer Skin'
+            caption: 'Clearer Skin',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           2: {
             src: 'images/alcoholModule/alcohol_s19_03.jpg',
             alt: 'person with shades smiling at camera',
-            caption: 'Better Mood'
+            caption: 'Better Mood',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           3: {
             src: 'images/alcoholModule/alcohol_s19_04.jpg',
             alt: 'person covering eyes with strawberries smiling',
-            caption: 'Reduce Risk of Disease'
+            caption: 'Reduce Risk of Disease',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           }
         }
       }
@@ -817,7 +829,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
-      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…<b>YOU</b> are in control!',
+      text: 'Have you ever been offered a drink that you didn\'t want, but were afraid to refuse?',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -829,7 +841,7 @@ export const alcoholModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'If you are offered a drink, here are ways to say no:'
+          0: 'If you find yourself in this situation, here are some ways to say no:'
         }
       },
       2: {
@@ -840,7 +852,6 @@ export const alcoholModuleSlides = {
           '"I’d rather get a soda, thanks."',
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
-          '"I’d rather get a soda"',
           '"They have really great mocktails (<i>non-alcoholic cocktails</i>) that I’d like to try."'
         ]
       }
@@ -850,7 +861,7 @@ export const alcoholModuleSlides = {
   21: {
     slide_type: 'cardFlip',
     header: {
-      title: 'Should I take a Uber?',
+      title: 'Should I take an Uber?',
       text: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -859,7 +870,7 @@ export const alcoholModuleSlides = {
       card_flip_count: 0,
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
-        1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
+        1: 'It\'s okay to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
         2: 'Flip the card below to read about drunk driving in California'
       },
       cards: {
@@ -890,17 +901,20 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
-        image: {
-          src: 'images/alcoholModule/alcohol_s26_01.png',
-          alt: 'wine infographic cartoon',
-          y_position: 'bottom'
-        }
-      },
-      1: {
         paragraph: {
           0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
           1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
           2: 'A general rule is that it will burn off about 1 standard drink per 1 to 1 ½ hours.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/alcoholModule/alcohol_s26_01.png',
+          alt: 'wine infographic cartoon',
+          y_position: 'bottom',
+          mobile_size: '1/2',
+          tablet_size: '1/3',
+          desktop_size: '1/4'
         }
       }
     }
@@ -1085,8 +1099,8 @@ export const alcoholModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'By practicing mindfulness and yoga you can improve mood, reduce stress, and enhance focus and attention.',
-        1: 'Connecting with your mind and body can also help you cope with difficult emotions, instead of pushing them away through, for example, drinking.',
+        0: 'By practicing mindfulness and yoga, you can improvemood, reduce stress, and enhance focus and attention.',
+        1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
         2: '<b>Flip the cards below</b>'
       },
       cards: {
@@ -1126,14 +1140,11 @@ export const alcoholModuleSlides = {
     slide_type: 'emailForm',
     header: {
       title: 'Create Your Own Wellness Goal!',
-      text: null,
+      text: 'Now is a great time to set a wellness goal topractice responsible drinking; or if you don\'t drink, then to improveyour overallhealth!',
       tooltip: null
     },
     content: {
-      paragraph: {
-        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
-      },
-      textAreaPlaceHolder: 'For example... \n "Next week I will plan to drink one fewer drink than normal when I go out with friends."; \n or, "I\'ll work out at least once next week!"'
+      textAreaPlaceHolder: 'For example, "Next week I will plan to drinkone fewer drink than normal when I go outwith friends." Or, \n "I\'ll work outat least once next week for 30 minutes!"'
     }
   },
   // // slide 33

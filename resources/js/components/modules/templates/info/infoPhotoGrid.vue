@@ -18,11 +18,11 @@
             ]"
         >
             <figcaption v-if="item.caption_y_position === 'top' || (!item.caption_y_position && item.caption)">
-                {{ item.caption }}
+                <b>{{ item.caption }}</b>
             </figcaption>
             <img class="image-grid__img" :src="item.src" :alt="item.alt">
             <figcaption v-if="item.caption_y_position === 'bottom' && item.caption">
-                {{ item.caption }}
+                <b>{{ item.caption }}</b>
             </figcaption>
         </div>
     </div>
