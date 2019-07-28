@@ -1,5 +1,6 @@
 export default {
   JSONSlideData: {},
+  currentModule: null,
   currentSlideNumber: 0,
   latestSlideNumber: 0,
   slideContentVisibility: false,

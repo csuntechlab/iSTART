@@ -1,4 +1,8 @@
 export default {
+  SET_CURRENT_MODULE (state, payload) {
+    state.currentModule = payload
+  },
+
   NAVIGATE_FROM_SLIDE (state, payload) {
     state.slideContentVisibility = false
 

@@ -1,6 +1,11 @@
 import SlidesAPI from './../../../api/slides'
 
 export default {
+  // Sets current module
+  setCurrentModule ({ commit }, payload) {
+    commit('SET_CURRENT_MODULE', payload)
+  },
+
   // Used to navigate slides (back) or (forward) from a given slide
   navigateFromSlide ({ commit }, payload) {
     commit('NAVIGATE_FROM_SLIDE', payload)
