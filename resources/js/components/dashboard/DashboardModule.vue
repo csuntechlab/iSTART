@@ -76,13 +76,12 @@ export default {
             completed: false,
             status: this.checkCompletionStatus(0),
             date: '4 days left to complete'
-          },
-          description: 'Alcohol, I feel fuzzy'
+          }
         },
 
         marijuana: {
           name: 'Marijuana',
-          image: 'images/thumbnail/test.jpg',
+          image: 'https://s3.amazonaws.com/uchealth-wp-uploads/wp-content/uploads/sites/6/2018/09/19033848/Marijuana-plant-Getty-photo-sized.jpg',
           altText: 'marijuana substance',
           completion: {
             progress: 50,

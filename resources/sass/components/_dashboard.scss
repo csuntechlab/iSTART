@@ -57,7 +57,11 @@
 
     &-module {
         margin-bottom: 1rem;
-
+        @include media-breakpoint-down(sm) {
+            overflow: hidden;
+            border-radius: .5rem;
+            box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);
+        }
         & * {
             font-weight: bold;
         }
@@ -69,6 +73,10 @@
         &__overview {
             height: 100%;
             position: relative;
+            @include media-breakpoint-down(sm) {
+                overflow: hidden;
+                height: 7rem;
+            }
 
             &-wrapper {
                 @include media-breakpoint-up(md) {
@@ -85,25 +93,31 @@
             overflow: hidden;
             height: 100%;
             max-width: 36rem;
+            border-radius: .5rem;
+            box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);
 
             @include media-breakpoint-down(sm) {
-                max-height: 8.5rem;
+                box-shadow: none;
+                border-radius: 0;
             }
 
             &-image {
                 object-fit: cover;
                 height: 100%;
                 width: 100%;
+                @include media-breakpoint-down(sm) {
+                    height: auto;
+                    transform: translateY(-25%);
+                }
             }
         }
 
         &__info {
-            background-color: $white;
             min-height: 100%;
 
             @include media-breakpoint-down(sm) {
                 background-color: rgba(0, 0, 0, 0);
-                margin-top: -2.4rem;
+                margin-top: -2.2rem;
                 padding: 0;
             }
         }
@@ -121,7 +135,7 @@
             }
 
             @include media-breakpoint-down(sm) {
-                background-color:$black--60;
+                background-color:$black--50;
                 color: $white;
 
                 &:hover {

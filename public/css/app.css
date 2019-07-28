@@ -12167,6 +12167,15 @@ body {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 767.98px) {
+  .dashboard-module {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0.05rem 0.05rem 6px rgba(0, 0, 0, 0.5);
+            box-shadow: 0.05rem 0.05rem 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
 .dashboard-module * {
   font-weight: bold;
 }
@@ -12178,6 +12187,13 @@ body {
 .dashboard-module__overview {
   height: 100%;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-module__overview {
+    overflow: hidden;
+    height: 7rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12196,11 +12212,16 @@ body {
   overflow: hidden;
   height: 100%;
   max-width: 36rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.05rem 0.05rem 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.05rem 0.05rem 6px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 767.98px) {
   .dashboard-module__thumbnail {
-    max-height: 8.5rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
   }
 }
 
@@ -12211,15 +12232,22 @@ body {
   width: 100%;
 }
 
+@media (max-width: 767.98px) {
+  .dashboard-module__thumbnail-image {
+    height: auto;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
 .dashboard-module__info {
-  background-color: white;
   min-height: 100%;
 }
 
 @media (max-width: 767.98px) {
   .dashboard-module__info {
     background-color: rgba(0, 0, 0, 0);
-    margin-top: -2.4rem;
+    margin-top: -2.2rem;
     padding: 0;
   }
 }
@@ -12239,7 +12267,7 @@ body {
 
 @media (max-width: 767.98px) {
   .dashboard-module__header {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
   }
 
