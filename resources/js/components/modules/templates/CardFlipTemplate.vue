@@ -20,7 +20,7 @@
           </section>
         </div>
         <div class="card-flip__card-back">
-          <h1 v-html="item.back.description"></h1>
+          <p v-html="item.back.description"></p>
         </div>
       </div>
     </div>

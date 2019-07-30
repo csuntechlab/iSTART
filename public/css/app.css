@@ -13234,6 +13234,10 @@ body {
   height: 100%;
   max-width: 20rem;
   margin: 0 auto;
+  border: 0.1rem #CECECE solid;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
 }
 
 .card-flip__card--active {
@@ -13252,7 +13256,7 @@ body {
 
 .card-flip__card-front,
 .card-flip__card-back {
-  background-color: #e7f2f7;
+  background-color: white;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   text-align: center;
@@ -13269,7 +13273,7 @@ body {
   min-height: 8.5rem;
   height: 100%;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 2rem;
 }
 
 .card-flip__card-front figure,
@@ -13283,7 +13287,9 @@ body {
 
 .card-flip__card-front *,
 .card-flip__card-back * {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 500;
 }
 
 .card-flip__card-front {
@@ -13291,8 +13297,8 @@ body {
 }
 
 .card-flip__card-back {
-  background-color: #3771dc;
-  color: white;
+  background-color: #F4F4F4;
+  color: #354A5C;
   position: absolute;
   top: 0;
   left: 0;
