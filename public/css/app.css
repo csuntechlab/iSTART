@@ -12246,7 +12246,6 @@ body {
 
 @media (max-width: 767.98px) {
   .dashboard-module__info {
-    background-color: rgba(0, 0, 0, 0);
     margin-top: -2.2rem;
     padding: 0;
   }
@@ -12294,92 +12293,49 @@ body {
 }
 
 .dashboard-module__progress {
-  width: 50px;
-  padding-top: 25px;
-  margin-top: -10px;
-  padding-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-  .dashboard-module__progress {
-    padding-top: 27px;
-    margin-top: -20px;
-    padding-bottom: 0;
-  }
+  position: relative;
 }
 
 .dashboard-module__progress-text {
-  margin-bottom: -1.55rem;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .dashboard-module__progress-text {
-    margin-top: 0rem;
-    margin-bottom: -1.45rem;
-    padding-top: 10px;
-  }
-}
-
-.dashboard-module__progress-text--md {
-  margin-left: 4.25px;
-}
-
-.dashboard-module__progress-text--lg {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 0.9rem;
-  margin-left: 2.25px;
 }
 
 .dashboard-module__loader {
-  width: 2.75rem !important;
-  height: 2.75rem !important;
-  margin-left: -1.5625rem;
-  margin-top: -3.03125rem;
-}
-
-@media (min-width: 768px) {
-  .dashboard-module__loader {
-    margin-top: -3.34375rem;
-    width: 4.15rem !important;
-    height: 4.15rem !important;
-  }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  stroke-linecap: round;
 }
 
 .dashboard-module__date {
-  display: block;
+  text-align: left;
   font-size: 1rem;
-  margin-top: 0.72rem;
-}
-
-@media screen and (max-width: 344px) {
-  .dashboard-module__date {
-    font-size: 0.7rem;
-  }
+  margin: 0;
+  padding: 0 0.75rem;
 }
 
 .dashboard-module__body {
   color: #191919;
-  padding: 0.4rem 0;
-  padding-bottom: 0.7rem;
+  padding: 0 0.75rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767.98px) {
   .dashboard-module__body {
-    margin: 0;
-    padding-bottom: 1.5rem;
+    background-color: #FCF8FF;
+    min-height: 5rem;
   }
 }
 
 .dashboard-module__status {
   color: #191919;
-  margin-right: 0.25rem;
-}
-
-@media screen and (max-width: 344px) {
-  .dashboard-module__status {
-    font-size: 0.8rem;
-    margin-right: 0.1rem;
-  }
 }
 
 .dashboard-module__status-circle {
