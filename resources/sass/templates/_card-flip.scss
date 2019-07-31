@@ -13,12 +13,11 @@
   }
 
   &__header {
-    font-weight: 700;
-    color: $heading-color;
+    @extend %default-heading;
   }
 
   &__paragraph {
-    font-weight: normal;
+    @extend %default-copy;
   }
 
   &__card {
@@ -33,6 +32,9 @@
       height: 100%;
       max-width: 20rem;
       margin: 0 auto;
+      border: .1rem $border-color solid;
+      border-radius: 0.2rem;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, .16);
     }
 
     &--active {
@@ -49,7 +51,7 @@
     }
 
     &-front, &-back {
-      background-color: $backgroundColor;
+      background-color: $white;
       backface-visibility: hidden;
       text-align: center;
       display: flex;
@@ -59,8 +61,7 @@
       min-height: 8.5rem;
       height: 100%;
       width: 100%;
-      padding: 0.75rem 1rem;
-
+      padding: 2rem;
       & figure, & figcaption {
         font-size: 1rem;
         text-align: center;
@@ -68,7 +69,9 @@
       }
 
       * {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        line-height: 1.35;
+        font-weight: 500;
       }
     }
 
@@ -77,8 +80,8 @@
     }
 
     &-back {
-      background-color: $primaryColor;
-      color: $white;
+      background-color: $back-of-card;
+      color: $copy-color;
       position: absolute;
       top: 0;
       left: 0;

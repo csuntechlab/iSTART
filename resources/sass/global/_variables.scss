@@ -11,6 +11,8 @@ $inputBorder: rgb(188,224,253);
 $font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$heading-color: #4A5D6E;
+$copy-color: #354A5C;
 
 // Colors
 $indigo: #6574cd;
@@ -22,9 +24,13 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $white: white;
-
 $border-color: #CECECE;
-$heading-color: #4A5D6E;
+
+$magnolia:#FCF8FF;
+$mauve: #B999FF;
+$back-of-card: #F4F4F4;
+$gallery: #EFEFEF;
+$link-water: #EDEBFA;
 
 $primaryColor: rgb(55, 113, 220);
 $primaryColor--lighter: lighten($primaryColor, 0.4);
@@ -69,6 +75,7 @@ $black--dark: rgb(0, 0, 0);
 $black--darker: darken($black--dark, 0.4);
 $black--80: rgba(0, 0, 0, 0.8);
 $black--60: rgba(0, 0, 0, 0.6);
+$black--50: rgba(0, 0, 0, 0.5);
 $black--40: rgba(0, 0, 0, 0.4);
 $black--20: rgba(0, 0, 0, 0.2);
 $black--04: rgba(0, 0, 0, 0.04);
@@ -77,3 +84,6 @@ $theme-colors: (
     "primary": $primaryColor,
     "secondary": $secondaryColor
 );
+
+//Box Shadows
+$apply-box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);

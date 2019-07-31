@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard-module-wrap mt-5">
+    <div class="dashboard-module-wrap mt-3">
       <div class="dashboard-module text-center col-12" v-for="(item, index) in modules" :key="index">
         <router-link to="/module">
           <div class="row">
@@ -19,26 +19,25 @@
                 {{item.description}}
               </div>
 
-              <div class="dashboard-module__body row align-items-center">
-                <div class="col-2 text-left">
+              <div class="dashboard-module__body row no-gutters align-items-center">
+                <div class="col-2">
                   <div class="dashboard-module__progress">
-                    <p class="dashboard-module__progress-text"
-                    :class="item.completion.progress.toString().length <= 2 ?
-                    'dashboard-module__progress-text--sm' :
-                    'dashboard-module__progress-text--lg'">{{ item.completion.progress }}%
+                    <p class="dashboard-module__progress-text">
+                      {{ item.completion.progress }}%
                     </p>
-                    <loading-progress class="dashboard-module__loader"
+                    <loading-progress
+                      class="dashboard-module__loader"
                       :progress="item.completion.progress/100"
                       :size="size"
                       :shape="shape.circle"
                     />
                   </div>
                 </div>
-                <div class="col-6 col-md-10 text-left">
-                  <span class="dashboard-module__date ml-3">
+                <div class="col-6 col-md-10">
+                  <p class="dashboard-module__date">
                     {{ item.completion.date}}
                     <i v-if="item.completion.completed" class="dashboard-module__status-circle fas fa-check-circle"></i>
-                  </span>
+                  </p>
                 </div>
                 <div class="dashboard-module__status-wrapper col-4 col-md-12">
                   <span v-if="!item.completion.completed" class="dashboard-module__status">{{item.completion.status}}</span>
@@ -76,8 +75,7 @@ export default {
             completed: false,
             status: this.checkCompletionStatus(0),
             date: '4 days left to complete'
-          },
-          description: 'Alcohol, I feel fuzzy'
+          }
         },
 
         marijuana: {
@@ -85,7 +83,7 @@ export default {
           image: 'images/thumbnail/test.jpg',
           altText: 'marijuana substance',
           completion: {
-            progress: 50,
+            progress: 64,
             completed: false,
             status: this.checkCompletionStatus(50),
             date: 'Available until: 00/00/00'

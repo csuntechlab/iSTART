@@ -6,6 +6,9 @@
     }
     &__img{
         width: 100%;
-        max-width: 25rem;
+        max-width: 18rem;
+    }
+    &__caption{
+        @extend %default-copy;
     }
 }
