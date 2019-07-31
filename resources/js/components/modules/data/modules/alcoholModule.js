@@ -14,25 +14,25 @@ export const alcoholModuleSlides = {
   1: {
     slide_type: 'info',
     header: {
-      title: null,
-      text: '<b>Many college students are surprised to learn what counts as a drink -- the amount of liquid in your glass, can, or bottle <em>doesn\'t always match up to the alcoholic content of your drink</em>.</b>',
+      title: 'What\'s in a drink?',
+      text: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       0: {
-        image: {
-          src: 'images/alcoholModule/alcohol_s03_01.png',
-          alt: 'percentage infographic',
-          mobile_size: '1/2',
-          tablet_size: '1/3',
-          desktop_size: '1/4'
+        paragraph: {
+          0: 'Do you know how much alcohol is in your drink?',
+          1: 'Many college students  are surprised  to learn what counts as a drink.',
+          2: 'Different types of beer, wine, and liquor can have differing alcohol percentages.'
         }
       },
       1: {
         image: {
-          src: 'images/alcoholModule/alcohol_s03_02.png',
-          alt: 'tequila not equal red wine not equal beer',
-          caption: 'Different types of beer, wine, and liquor can have differing alcohol percentages'
+          src: 'images/alcoholModule/alcohol_s03_01.png',
+          alt: 'alcohol comparison',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       }
     }
@@ -51,14 +51,14 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
           y_position: null
-        },
+        }
       },
       1: {
         paragraph: {
           0: 'As shown in the graphic above, drinking one 12oz beer is equal to taking a 1.5oz shot of tequila. This is because hard liquor has a greater percent of alcohol (about 40%) than beer (about 5%).',
           1: 'That\'s a HUGE difference!'
-        },
-      },
+        }
+      }
     }
   },
   // slide 5
@@ -73,13 +73,16 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup tell you how much to pour for each drink.'
-        },
+          caption: 'The lines on a solo cup tell you how much to pour for each drink.',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
       },
       1: {
         paragraph: {
           0: 'How much do you pour in your drink? The next time you\'re at a party, remember to use the lines on the cup!'
-        },
+        }
       }
     }
   },
@@ -95,7 +98,7 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s06_01.png',
-          alt: 'quiz',
+          alt: 'alcohol comparison',
           mobile_size: '2/3',
           tablet_size: '1/2',
           desktop_size: '1/3'
@@ -117,7 +120,7 @@ export const alcoholModuleSlides = {
               response: {
                 text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -131,9 +134,9 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -163,9 +166,9 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</Nice> one can of beer (12oz)',
+                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -295,7 +298,7 @@ export const alcoholModuleSlides = {
     slide_type: 'inputPieChart',
     header: {
       title: 'Your Guess vs. Actual Percentage',
-      text: null,
+      text: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
@@ -313,14 +316,14 @@ export const alcoholModuleSlides = {
           0: 'College students often assume that the majority of students drink alcohol.',
           1: 'However, <b>nearly half of students</b> reported having never used alcohol or not used alcohol at all in the last month.',
           2: 'Don’t be misled! These types of assumptions often lead other college students to use alcohol more heavily.'
-        },
+        }
       },
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
           alt: 'friends on beach cooking marshmallows',
           y_position: 'bottom'
-        },
+        }
       }
     }
   },
@@ -502,7 +505,7 @@ export const alcoholModuleSlides = {
     content: {
       video_id: '5jNEVGj6gS0',
       video_length: (122400 / 2) + 5000,
-      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drink in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drinks in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
     }
   },
   // slide 17
@@ -519,13 +522,13 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
           y_position: 'bottom'
-        },
+        }
       },
       1: {
         paragraph: {
-          0: 'For some students alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
+          0: 'For some students, alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
           1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
-        },
+        }
       }
     }
   },
@@ -555,7 +558,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Out of the students who drink, half will binge drink multiple times before they graduate.'
+            description: '50% will binge drink multiple times before they graduate.'
           }
         },
         1: {
@@ -623,22 +626,34 @@ export const alcoholModuleSlides = {
           0: {
             src: 'images/alcoholModule/alcohol_s19_01.jpg',
             alt: 'One dollar bills',
-            caption: 'Save Money'
+            caption: 'Save Money',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           1: {
             src: 'images/alcoholModule/alcohol_s19_02.jpg',
             alt: 'person body turned and tilted head staring',
-            caption: 'Clearer Skin'
+            caption: 'Clearer Skin',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           2: {
             src: 'images/alcoholModule/alcohol_s19_03.jpg',
             alt: 'person with shades smiling at camera',
-            caption: 'Better Mood'
+            caption: 'Better Mood',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           },
           3: {
             src: 'images/alcoholModule/alcohol_s19_04.jpg',
             alt: 'person covering eyes with strawberries smiling',
-            caption: 'Reduce Risk of Disease'
+            caption: 'Reduce Risk of Disease',
+            mobile_size: '2/3',
+            tablet_size: '1/2',
+            desktop_size: '1/3'
           }
         }
       }
@@ -658,7 +673,7 @@ export const alcoholModuleSlides = {
           0: 'A cold beer or fruity cocktail might be tasty when out with friends, but those liquid calories add up. Just one 12-ounce beer has about 150 calories, and fruity cocktails are loaded with sugar (some as much as 490!).',
           1: 'Alcohol also slows down our ability to digest food, which can actually contribute to over-eating and weight gain.',
           2: 'Scroll through the carousel below to see the calorie count for different drinks.'
-        },
+        }
       },
       1: {
         carousel: {
@@ -709,7 +724,7 @@ export const alcoholModuleSlides = {
           }
         }
       }
-    },
+    }
   },
   // slide 21
   17: {
@@ -725,7 +740,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
           y_position: 'bottom'
-        },
+        }
       },
       1: {
         paragraph: {
@@ -747,16 +762,16 @@ export const alcoholModuleSlides = {
       0: {
         paragraph: {
           0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.'
-        },
+        }
       },
       1: {
         image: {
-            src: 'images/alcoholModule/alcohol_s22_01.PNG',
-            alt: 'alcohol infographic on being a factor for academic problems',
-            mobile_size: '5/6',
-            tablet_size: '1/2',
-            desktop_size: '1/3'
-        },
+          src: 'images/alcoholModule/alcohol_s22_01.PNG',
+          alt: 'alcohol infographic on being a factor for academic problems',
+          mobile_size: '5/6',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
       }
     }
   },
@@ -817,7 +832,7 @@ export const alcoholModuleSlides = {
     slide_type: 'info',
     header: {
       title: 'Rethink Your Drink!',
-      text: 'Many people tend to worry about how people will react to them if they refuse a drink at a party or other social settings. But remember…<b>YOU</b> are in control!',
+      text: 'Have you ever been offered a drink that you didn\'t want, but were afraid to refuse?',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -825,11 +840,11 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s24_02.jpg',
           alt: 'No Sign'
-        },
+        }
       },
       1: {
         paragraph: {
-          0: 'If you are offered a drink, here are ways to say no:'
+          0: 'If you find yourself in this situation, here are some ways to say no:'
         }
       },
       2: {
@@ -840,7 +855,6 @@ export const alcoholModuleSlides = {
           '"I’d rather get a soda, thanks."',
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
-          '"I’d rather get a soda"',
           '"They have really great mocktails (<i>non-alcoholic cocktails</i>) that I’d like to try."'
         ]
       }
@@ -850,7 +864,7 @@ export const alcoholModuleSlides = {
   21: {
     slide_type: 'cardFlip',
     header: {
-      title: 'Should I take a Uber?',
+      title: 'Should I take an Uber?',
       text: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -859,7 +873,7 @@ export const alcoholModuleSlides = {
       card_flip_count: 0,
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
-        1: 'It\'s ok to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
+        1: 'It\'s okay to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
         2: 'Flip the card below to read about drunk driving in California'
       },
       cards: {
@@ -890,17 +904,20 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
-        image: {
-          src: 'images/alcoholModule/alcohol_s26_01.png',
-          alt: 'wine infographic cartoon',
-          y_position: 'bottom'
-        },
-      },
-      1: {
         paragraph: {
           0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
           1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
           2: 'A general rule is that it will burn off about 1 standard drink per 1 to 1 ½ hours.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/alcoholModule/alcohol_s26_01.png',
+          alt: 'wine infographic cartoon',
+          y_position: 'bottom',
+          mobile_size: '1/2',
+          tablet_size: '1/3',
+          desktop_size: '1/4'
         }
       }
     }
@@ -909,7 +926,9 @@ export const alcoholModuleSlides = {
   23: {
     slide_type: 'quiz',
     header: {
-      title: "Melita's night out"
+      title: "Melita's night out",
+      text: null,
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: {
@@ -934,7 +953,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -950,7 +969,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -958,7 +977,7 @@ export const alcoholModuleSlides = {
               }
             },
             2: {
-              isAnswer: true,
+              isAnswer: false,
               show: false,
               text: '3 hours',
               img: {
@@ -966,7 +985,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -982,7 +1001,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>Correct!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -1008,13 +1027,13 @@ export const alcoholModuleSlides = {
           0: 'Sometimes we drink to feel connected with friends, to numb emotions and thoughts, or deal with stress.',
           1: 'But drinking isn\'t the only way to make us feel good or help us tackle life\'s challenges! ',
           2: 'There are many healthy alternatives to boost health and wellness. Research shows physical, mental and social activities can improve our overall wellness.'
-        },
+        }
       },
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s28_01.jpg',
           alt: 'People jumping on the beach.'
-        },
+        }
       }
     }
   },
@@ -1030,7 +1049,7 @@ export const alcoholModuleSlides = {
       0: {
         image: {
           src: 'images/alcoholModule/alcohol_s29_01.jpg',
-          alt: 'two people running next to a lake',
+          alt: 'two people running next to a lake'
         }
       },
       1: {
@@ -1058,16 +1077,16 @@ export const alcoholModuleSlides = {
         }
       },
       1: {
-        image: {          
+        image: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          caption: 'links to social activities are in the resources tab.'
-        },
+          caption: 'Links to social activities are in the resources tab.'
+        }
       },
       2: {
         paragraph: {
           0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-        },
+        }
       }
     }
   },
@@ -1083,8 +1102,8 @@ export const alcoholModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'By practicing mindfulness and yoga you can improve mood, reduce stress, and enhance focus and attention.',
-        1: 'Connecting with your mind and body can also help you cope with difficult emotions, instead of pushing them away through, for example, drinking.',
+        0: 'By practicing mindfulness and yoga, you can improvemood, reduce stress, and enhance focus and attention.',
+        1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
         2: '<b>Flip the cards below</b>'
       },
       cards: {
@@ -1099,7 +1118,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Through mindfulness you pay attention to the present moment and sensations you might usually ignore. You can learn to accept unpleasant sensations, thoughts, and feelings as temporary.'
+            description: 'Through mindfulness you pay attention to the present moment and sensations you might usually ignore.'
           }
         },
         1: {
@@ -1113,7 +1132,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety. It can also improve your balance, flexibility and physical strength!'
+            description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety.'
           }
         }
       }
@@ -1124,14 +1143,11 @@ export const alcoholModuleSlides = {
     slide_type: 'emailForm',
     header: {
       title: 'Create Your Own Wellness Goal!',
-      text: null,
+      text: 'Now is a great time to set a wellness goal topractice responsible drinking; or if you don\'t drink, then to improveyour overallhealth!',
       tooltip: null
     },
     content: {
-      paragraph: {
-        0: 'Now is a great time to set a wellness goal to practice responsible drinking, or just  improve your overall health!'
-      },
-      textAreaPlaceHolder: 'For example... \n "Next week I will plan to drink one fewer drink than normal when I go out with friends."; \n or, "I\'ll work out at least once next week!"'
+      textAreaPlaceHolder: 'For example, "Next week I will plan to drinkone fewer drink than normal when I go outwith friends." Or, \n "I\'ll work outat least once next week for 30 minutes!"'
     }
   },
   // // slide 33
@@ -1146,7 +1162,7 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Thank you for completing this module!',
           1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
-        },
+        }
       }
     },
     format: {

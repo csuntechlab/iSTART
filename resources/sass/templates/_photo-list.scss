@@ -10,5 +10,6 @@
         &--red-text{
             color: $red;
         }
+        @extend %default-copy;
     }
 }

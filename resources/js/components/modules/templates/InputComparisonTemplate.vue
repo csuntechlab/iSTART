@@ -1,7 +1,7 @@
 <template>
   <div class="module-quizInput">
     <div class="container mt-5">
-      <h1>{{ currentSlideData.header.title }}</h1>
+      <h1 class="module-quizInput__header">{{ currentSlideData.header.title }}</h1>
       <div class="row mb-5">
         <div class="col-12">
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsone using numerical values 0 to 100.</p>

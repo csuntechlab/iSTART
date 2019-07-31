@@ -1,18 +1,18 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
-    <Navbar></Navbar>
+    <Navbar/>
     <module-header :size_of_container="sizeOfContainer"></module-header>
     <main v-if="isSlideContentVisible" class="module__content">
-      <intro-template v-if="currentSlideData.slide_type === 'intro'"></intro-template>
-      <info-template v-if="currentSlideData.slide_type === 'info'"></info-template>
-      <quiz-template v-if="currentSlideData.slide_type === 'quiz'"></quiz-template>
-      <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'"></input-comparison-template>
-      <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'"></input-pie-chart-template>
-      <video-template v-if="currentSlideData.slide_type === 'video'"></video-template>
-      <card-flip-template v-if="currentSlideData.slide_type === 'cardFlip'"></card-flip-template>
-      <email-form v-if="currentSlideData.slide_type==='emailForm'"></email-form>
-      <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'"></multi-choice-survey>
-      <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'"></multi-choice-survey-results>
+      <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
+      <info-template v-if="currentSlideData.slide_type === 'info'" :key="currentSlideNumber"></info-template>
+      <quiz-template v-if="currentSlideData.slide_type === 'quiz'" :key="currentSlideNumber"></quiz-template>
+      <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'" :key="currentSlideNumber"></input-comparison-template>
+      <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'" :key="currentSlideNumber"></input-pie-chart-template>
+      <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"></video-template>
+      <card-flip-template v-if="currentSlideData.slide_type === 'cardFlip'" :key="currentSlideNumber"></card-flip-template>
+      <email-form v-if="currentSlideData.slide_type==='emailForm'" :key="currentSlideNumber"></email-form>
+      <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'" :key="currentSlideNumber"></multi-choice-survey>
+      <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
     </main>
     <module-footer v-if="currentSlideData.slide_type !== 'intro'">></module-footer>
   </div>
@@ -84,6 +84,7 @@ export default {
     ...mapGetters(
       [
         'currentSlideData',
+        'currentSlideNumber',
         'isSlideContentVisible',
         'getCurrentModule'
       ]

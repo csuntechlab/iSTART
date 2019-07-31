@@ -10,6 +10,7 @@
         font-size: 4rem;
         width: 100%;        
         color: $primaryColor;
+
         @include media-breakpoint-up(md) {
             margin-top: -3.3rem;
             padding: .5rem;
@@ -22,6 +23,16 @@
         }
     }
     @include media-breakpoint-down(sm) {
+        & {
+            background-color: $white;
+            height: 100vh;
+            margin-top: 0;
+
+            &-container {
+                background-color: $white;
+            }
+        }
+
         &__title {
             margin-top: 6rem;
             margin-bottom: 2rem;
@@ -44,14 +55,17 @@
         -webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
         transition: 0.2s;
     }
+
     &__label {
         color: $primaryColor--dark;
         font-weight: 700;
     }
+
     &__title{ 
         display: none;
 
     }
+
     @include media-breakpoint-up(md) {
         margin-top: 5rem;
         margin-bottom: 3rem; 

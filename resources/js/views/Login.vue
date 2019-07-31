@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="container container--desktop login">
+  <div class="login-container">
+    <div class="container login">
       <div class="row">
         <h1 class="login__title transition-350ms">iSTART</h1>
       </div>
@@ -31,7 +31,7 @@
                 <!-- <div v-if="submitted && !userInfoForm.password" class="invalid-feedback">Please Enter your password</div> -->
                 <div v-if="correctLoginInfo===false" class="invalid-feedback mt-0 mb-2 text-center">Login failed. Make sure you have the correct access rights.</div>
                 <div class="form-group text-center">
-                  <button type="submit" @click.prevent="submitForm" class="btn btn-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
+                  <button type="submit" @click.prevent="submitForm" class="btn button-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
                 </div>
               </div>
             </form>

@@ -18,12 +18,17 @@
       </router-link>
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar-dropdown__divider">
         <div class="navbar-dropdown__item" @click="closeNavigation">
-          <span class="nav-link">SCHEDULE</span>
+          <span class="nav-link">ABOUT</span>
         </div>
       </router-link>
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar-dropdown__divider">
         <div class="navbar-dropdown__item" @click="closeNavigation">
           <span class="nav-link">RESOURCES</span>
+        </div>
+      </router-link>
+      <router-link v-show="!isAdminUser" to="/schedule" class="navbar-dropdown__divider">
+        <div class="navbar-dropdown__item" @click="closeNavigation">
+          <span class="nav-link">CONTACT US</span>
         </div>
       </router-link>
       <router-link to="/logout" class="navbar-dropdown__divider">

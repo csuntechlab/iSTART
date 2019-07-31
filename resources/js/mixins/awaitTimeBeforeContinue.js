@@ -1,18 +1,30 @@
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export const awaitTimeBeforeContinue = {
+  computed: {
+    ...mapGetters(
+      [
+        'isSlideContentVisible'
+      ]
+    )
+  },
+
+  data () {
+    return {
+      contentTimer: null
+    }
+  },
+
   mounted () {
-    let allottedTime = 5000
-    setTimeout(() => {
-      this.allowContinue()
-    }, allottedTime)
+    this.setTimeToContinue()
   },
 
   updated () {
-    let allottedTime = 5000
-    setTimeout(() => {
-      this.allowContinue()
-    }, allottedTime)
+    this.setTimeToContinue()
+  },
+
+  destroyed () {
+    this.clearTimeToContiue()
   },
 
   methods: {
@@ -21,6 +33,18 @@ export const awaitTimeBeforeContinue = {
         'enableContinue'
       ]
     ),
+
+    setTimeToContinue () {
+      const allottedTime = 5000
+
+      this.contentTimer = setTimeout(() => {
+        this.allowContinue()
+      }, allottedTime)
+    },
+
+    clearTimeToContiue () {
+      clearTimeout(this.contentTimer)
+    },
 
     allowContinue () {
       this.enableContinue()
