@@ -26,6 +26,7 @@ export default {
       [
         'isContinueButtonEnabled',
         'isBackButtonEnabled',
+        'isSlideContentVisible',
         'currentSlideData',
         'currentSlideNumber',
         'latestSlideNumber',
@@ -39,19 +40,24 @@ export default {
       [
         'navigateFromSlide',
         'resetSlideNavigation',
+        'setSlideContentVisibility',
         'enableContinue'
       ]
     ),
 
     slideForward () {
+      this.setSlideContentVisibility(false)
       this.resetSlideNavigation()
       this.navigateFromSlide('forward')
+      this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
     },
 
     slideBack () {
+      this.setSlideContentVisibility(false)
       this.resetSlideNavigation()
       this.navigateFromSlide('back')
+      this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
     },
 

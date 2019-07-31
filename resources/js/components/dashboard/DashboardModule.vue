@@ -80,7 +80,7 @@ export default {
 
         marijuana: {
           name: 'Marijuana',
-          image: 'images/thumbnail/test.jpg',
+          image: 'images/thumbnail/marijuana_thumbnail.jpg',
           altText: 'marijuana substance',
           completion: {
             progress: 64,
@@ -93,7 +93,7 @@ export default {
 
         tobacco: {
           name: 'Tobacco',
-          image: 'images/thumbnail/test.jpg',
+          image: 'images/thumbnail/nicotine_thumbnail.jpg',
           altText: 'tobacco substance',
           completion: {
             progress: 100,
