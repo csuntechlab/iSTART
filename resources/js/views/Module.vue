@@ -20,6 +20,7 @@
 
 <script>
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
+import test from './../components/modules/data/modules/test'
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
@@ -64,9 +65,14 @@ export default {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
 
-    if (alcoholModuleSlides) {
+    if (this.getCurrentModule === 'Alcohol') {
       this.storeJSONInState(alcoholModuleSlides)
       this.setSlideContentVisibility(true)
+    } else if (this.getCurrentModule === 'Marijuana') {
+      this.storeJSONInState(test)
+      this.setSlideContentVisibility(true)
+    } else {
+      this.$router.push({ name: 'Dashboard' })
     }
   },
 
@@ -79,7 +85,8 @@ export default {
       [
         'currentSlideData',
         'currentSlideNumber',
-        'isSlideContentVisible'
+        'isSlideContentVisible',
+        'getCurrentModule'
       ]
     ),
 

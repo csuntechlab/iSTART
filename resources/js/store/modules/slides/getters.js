@@ -3,6 +3,7 @@ export default {
   isContinueButtonEnabled: state => state.enableContinue,
   isBackButtonEnabled: state => state.enableBack,
 
+  getCurrentModule: state => state.currentModule,
   getSlideData: state => index => state.JSONSlideData[index], // Gets specified slide data
   currentSlideData: state => state.JSONSlideData[state.currentSlideNumber], // Gets current slide data
   currentSlideNumber: state => state.currentSlideNumber,
