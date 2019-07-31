@@ -23,10 +23,10 @@
         &__message {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #4A5D6E;
+            color: $heading-color;
             margin: 0;
             &-date {
-                color: #354A5C;
+                color: $copy-color;
                 font-weight: 300;
                 margin: 0;
                 b {
@@ -60,7 +60,7 @@
         @include media-breakpoint-down(sm) {
             overflow: hidden;
             border-radius: .5rem;
-            box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);
+            box-shadow: $apply-box-shadow;
         }
         & * {
             font-weight: bold;
@@ -94,7 +94,7 @@
             height: 100%;
             max-width: 36rem;
             border-radius: .5rem;
-            box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);
+            box-shadow: $apply-box-shadow;
 
             @include media-breakpoint-down(sm) {
                 box-shadow: none;
@@ -186,7 +186,7 @@
 
         &__body {
             color: $black;
-            padding: 0 .75rem;
+            padding: .5rem .75rem;
             @include media-breakpoint-down(sm) {
                 background-color: $magnolia;
                 min-height: 5rem;

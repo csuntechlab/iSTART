@@ -11,6 +11,8 @@ $inputBorder: rgb(188,224,253);
 $font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$heading-color: #4A5D6E;
+$copy-color: #354A5C;
 
 // Colors
 $indigo: #6574cd;
@@ -22,12 +24,11 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $white: white;
-
 $border-color: #CECECE;
-$heading-color: #4A5D6E;
-$copy-color: #354A5C;
 
 $magnolia:#FCF8FF;
+$mauve: #B999FF;
+$back-of-card: #F4F4F4;
 
 $primaryColor: rgb(55, 113, 220);
 $primaryColor--lighter: lighten($primaryColor, 0.4);
@@ -81,3 +82,6 @@ $theme-colors: (
     "primary": $primaryColor,
     "secondary": $secondaryColor
 );
+
+//Box Shadows
+$apply-box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);

@@ -18,7 +18,7 @@
           {{currentSlideData.content.definition}}
         </p>
         <p class="introSlide__description">Estimated Completion time: {{currentSlideData.content.estimated_completion}}</p>
-        <button @click="goForward" class="btn btn-primary introSlide__start-btn">
+        <button @click="goForward" class="btn button-primary introSlide__start-btn">
           Start
         </button>
       </div>

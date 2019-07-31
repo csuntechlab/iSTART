@@ -80,7 +80,7 @@ export default {
 
         marijuana: {
           name: 'Marijuana',
-          image: 'https://s3.amazonaws.com/uchealth-wp-uploads/wp-content/uploads/sites/6/2018/09/19033848/Marijuana-plant-Getty-photo-sized.jpg',
+          image: 'images/thumbnail/test.jpg',
           altText: 'marijuana substance',
           completion: {
             progress: 64,

@@ -12324,7 +12324,7 @@ body {
 
 .dashboard-module__body {
   color: #191919;
-  padding: 0 0.75rem;
+  padding: 0.5rem 0.75rem;
 }
 
 @media (max-width: 767.98px) {
@@ -12489,7 +12489,7 @@ body {
 
 .module__progress {
   font-size: 1rem;
-  color: black;
+  color: #191919;
   font-weight: bold;
   margin-top: -25px;
   margin-bottom: 0;
@@ -12592,7 +12592,7 @@ body {
 
 .control-group {
   height: calc(100vh - 3.3rem);
-  background-color: #F5F5F5;
+  background-color: #CECECE;
 }
 
 .control-group__body {
@@ -13100,8 +13100,6 @@ body {
   padding-left: 1.25rem;
   padding-top: 0.75rem;
   margin-bottom: 3rem;
-  -webkit-box-shadow: 0px 0px 0px 4px #2699fb inset;
-          box-shadow: 0px 0px 0px 4px #2699fb inset;
 }
 
 @media (max-width: 991.98px) {

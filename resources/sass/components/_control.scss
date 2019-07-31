@@ -1,6 +1,6 @@
 .control-group{
     height: calc(100vh - 3.3rem);
-    background-color: #F5F5F5;
+    background-color: $border-color;
     &__body{
         box-shadow: 0px 3.5px 4px $primaryColor--lighter;
         min-height: calc(100vh - 17.5rem);
