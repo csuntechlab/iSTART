@@ -23,16 +23,16 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Do you know how much alcohol is in your drink?',
           1: 'Many college students  are surprised  to learn what counts as a drink.',
-          2: 'Different types of beer,wine, and liquorcan havediffering alcohol percentages.'
+          2: 'Different types of beer, wine, and liquor can have differing alcohol percentages.'
         }
       },
       1: {
         image: {
-          src: 'images/alcoholModule/alcohol_s03_01.jpg',
-          alt: 'percentage infographic',
+          src: 'images/alcoholModule/alcohol_s03_01.png',
+          alt: 'alcohol comparison',
           mobile_size: '1/2',
-          tablet_size: '1/3',
-          desktop_size: '1/4'
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       }
     }
@@ -73,7 +73,10 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup tell you how much to pour for each drink.'
+          caption: 'The lines on a solo cup tell you how much to pour for each drink.',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
         }
       },
       1: {
@@ -95,7 +98,7 @@ export const alcoholModuleSlides = {
       images: {
         0: {
           src: 'images/alcoholModule/alcohol_s06_01.png',
-          alt: 'quiz',
+          alt: 'alcohol comparison',
           mobile_size: '2/3',
           tablet_size: '1/2',
           desktop_size: '1/3'
@@ -117,7 +120,7 @@ export const alcoholModuleSlides = {
               response: {
                 text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -133,7 +136,7 @@ export const alcoholModuleSlides = {
               response: {
                 text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -165,7 +168,7 @@ export const alcoholModuleSlides = {
               response: {
                 text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
-                  src: 'images/alcoholModule/alcohol_s06_02.jpg',
+                  src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
                 }
               }
@@ -950,7 +953,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -966,7 +969,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -974,7 +977,7 @@ export const alcoholModuleSlides = {
               }
             },
             2: {
-              isAnswer: true,
+              isAnswer: false,
               show: false,
               text: '3 hours',
               img: {
@@ -982,7 +985,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -998,7 +1001,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>It is uncertain, she should not get behind the wheel tonight!</b> Many factors influence the Blood Alcohol Concentration (BAC) in her blood at this time: her weight, gender and amount of food she has eaten. The Mojitos she drank at the club were probably more than the standard serving size too. Keep that in mind when you buy a mixed drink!',
+                text: '<b>Correct!</b> Blood Alcohol Concentration (BAC) can depend on weight, gender and amount of food eaten.',
                 img: {
                   src: null,
                   alt: null
@@ -1077,7 +1080,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s30_02.jpg',
           alt: 'people putting hands in the middle for teamwork',
-          caption: 'links to social activities are in the resources tab.'
+          caption: 'Links to social activities are in the resources tab.'
         }
       },
       2: {
@@ -1115,7 +1118,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Through mindfulness you pay attention to the present moment and sensations you might usually ignore. You can learn to accept unpleasant sensations, thoughts, and feelings as temporary.'
+            description: 'Through mindfulness you pay attention to the present moment and sensations you might usually ignore.'
           }
         },
         1: {
@@ -1129,7 +1132,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety. It can also improve your balance, flexibility and physical strength!'
+            description: 'According to the Mayo Clinic, yoga can help you relax and manage stress and anxiety.'
           }
         }
       }
