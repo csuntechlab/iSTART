@@ -26,10 +26,11 @@
   &__title {
     color: $white;
     font-weight: 700;
-    font-size: 1.75rem;
+    font-size: 3.3rem;
     text-align: center;
     @media only screen and (max-width: map-get($grid-breakpoints, md)) {
       text-align: left;
+      font-size: 1.75rem;
     }
   }
   &__description {
@@ -41,7 +42,11 @@
     width: 10.5rem;
     border-radius: 0.5rem;
     height: 3.3rem;
+    background: $white;
+    color: $black;
     @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+      background-color: $primaryColor;
+      color: $white;
       position: fixed;
       left: 0;
       bottom: 0;
