@@ -7,7 +7,7 @@
       </div>
 
       <div class="d-flex flex-column justify-content-center align-items-center col-12 col-sm-3">
-        <button v-if="this.checkForCookiesEnabled()" class="cookies-notification__button-accept btn btn-primary btn-lg" @click="confirmCookiesPolicy">Accept</button>
+        <button v-if="this.checkForCookiesEnabled()" class="cookies-notification__button-accept btn button-primary btn-lg" @click="confirmCookiesPolicy">Accept</button>
         <em v-else>Enable Cookies!</em>
       </div>
     </div>

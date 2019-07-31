@@ -34,5 +34,18 @@
 
 // Carousel Color Overide
 .carousel-indicators li {
-  background-color: $primaryColor !important;
+	background-color: $primaryColor !important;
+}
+
+%default-copy {
+	color: $copy-color;
+	font-weight: 300;
+	font-size: 1.15rem;
+	line-height: 1.5rem;
+}
+
+%default-heading{
+	font-weight: bold;
+	color: $heading-color;
+	font-size: 1.75rem;
 }

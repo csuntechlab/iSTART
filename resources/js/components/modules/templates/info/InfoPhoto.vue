@@ -1,34 +1,43 @@
 <template>
-  <div class="row"
-    :class="[
-      (image.x_position === 'left' ? 'justify-content-start' : ''),
-      (image.x_position === 'center' ? 'justify-content-center' : ''),
-      (image.x_position === 'right' ? 'justify-content-end' : ''),
-      (!image.x_position ? 'justify-content-center': '')
-    ]"
-  >
-    <div v-if="image.caption_y_position == 'top' || (!image.caption_y_position && image.caption)" class="col-12">
-      <p :class="[
-        (image.caption_text_align === 'left' ? 'text-left' : ''),
-        (image.caption_text_align === 'center' ? 'text-center' : ''),
-        (image.caption_text_align === 'right' ? 'text-right' : ''),
-        (!image.caption_text_align ? 'text-left' : '')
-      ]">
-        {{ image.caption }}
-      </p>
+  <div class="row">
+    <div class="col-12">
+      <figure>
+        <figcaption
+          v-if="image.caption"
+          class="module-info__copy"
+          :class="[
+            (image.caption_text_align === 'left' ? 'text-left' : ''),
+            (image.caption_text_align === 'center' ? 'text-center' : ''),
+            (image.caption_text_align === 'right' ? 'text-right' : ''),
+            (!image.caption_text_align ? 'text-left' : '')
+          ]
+        ">
+          {{ image.caption }}
+        </figcaption>
+        <div class="row"
+          :class="[
+            (image.x_position === 'left' ? 'justify-content-start' : ''),
+            (image.x_position === 'center' ? 'justify-content-center' : ''),
+            (image.x_position === 'right' ? 'justify-content-end' : ''),
+            (!image.x_position ? 'justify-content-center': '')
+        ]">
+          <div :class="[determineColSize]">
+            <img class="module-info__img" :src="image.src" :alt="image.alt">
+          </div>
+        </div>
+        <figcaption
+          v-if="image.caption_y_position == 'bottom' && image.caption"
+          class="module-info__copy"
+          :class="[
+            (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
+            (image.caption_text_align === 'center' ? 'text-center' : ''),
+            (image.caption_text_align === 'right' ? 'text-right' : ''),
+          ]"
+        >
+          {{ image.caption }}
+        </figcaption>
+      </figure>
     </div>
-    <div :class="[determineColSize]">
-      <img class="module-info__img" :src="image.src" :alt="image.alt">
-    </div>
-    <p v-if="image.caption_y_position == 'bottom' && image.caption"
-      :class="[
-        (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
-        (image.caption_text_align === 'center' ? 'text-center' : ''),
-        (image.caption_text_align === 'right' ? 'text-right' : ''),
-      ]"
-    >
-      {{ image.caption }}
-    </p>
   </div>
 </template>
 <script>
@@ -44,7 +53,7 @@ export default {
         !this.image.tablet_size &&
         !this.image.desktop_size
       ) {
-        let defaultSize = 'col-lg-6 col-md-8 col-10'
+        let defaultSize = 'col-lg-6 col-md-7 col-12'
         return defaultSize
       }
       let imageSizes = new Map([

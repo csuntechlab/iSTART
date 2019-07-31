@@ -35,7 +35,7 @@
       </table>
       <h2>Would you like submit the good participants?</h2>
       <button class="btn btn-danger" @click="participantsWillNotBeSubmitted">No</button>
-      <button class="btn btn-primary" @click="submitGoodParticipants">Yes</button>
+      <button class="btn button-primary" @click="submitGoodParticipants">Yes</button>
     </div>
   </div>
 </template>

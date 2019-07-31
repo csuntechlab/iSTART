@@ -3,7 +3,7 @@
     overflow-x: hidden;
     min-height: 100vh;
     padding: 0;
-    border: 1px solid #CECECE;
+    border: 1px solid $border-color;
 
     &__header{
         margin-top: -2px;
@@ -99,15 +99,15 @@
     
     &__progress{
         font-size: 1rem;
-        color: $white;
-        font-weight: normal;
+        color: $black;
+        font-weight: bold;
         margin-top: -25px;
         margin-bottom: 0;
         text-align: center;
     }
 }
 .module__progressBar {
-    margin-top: 3.3rem;
+    margin-top: 3.45rem;
     @include media-breakpoint-up(md){
         margin-top: 0;
     }

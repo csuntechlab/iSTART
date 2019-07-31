@@ -1,8 +1,10 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
     <div class="video-template__header col-12">
-      <h1 class="video-template__title">{{ currentSlideData.header.title }}</h1>
-      <p>{{ currentSlideData.header.text }}</p>
+      <h1 class="video-template__title">
+        {{ currentSlideData.header.title }}
+      </h1>
+      <p class="video-template__sub-heading">{{ currentSlideData.header.text }}</p>
     </div>
     <div class="video-template__video col-12 col-md-10">
       <div class="embed-responsive embed-responsive-16by9">
