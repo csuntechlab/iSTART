@@ -73,7 +73,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup tell you how much to pour for each drink.',
+          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
           mobile_size: '1/2',
           tablet_size: '1/2',
           desktop_size: '1/3'
@@ -134,7 +134,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
@@ -166,7 +166,7 @@ export const alcoholModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
+                text: 'Nice try! But remember, one standard shot (1.5oz) <b>is the same as</b> one can of beer (12oz)',
                 img: {
                   src: 'images/alcoholModule/alcohol_s06_02.png',
                   alt: 'alcohol comparison'
@@ -234,7 +234,7 @@ export const alcoholModuleSlides = {
                 alt: 'glass filled with alcohol two fourth\'s of container'
               },
               response: {
-                text: '3oz<br>Nice guess, but actually, this is the same as two standard drinks!',
+                text: '3oz<br>Nice guess, but actually, this is the same as <u>two</u> standard drinks!',
                 img: {
                   src: null,
                   alt: null
@@ -266,7 +266,7 @@ export const alcoholModuleSlides = {
   6: {
     slide_type: 'inputComparison',
     header: {
-      title: 'Your Guess vs. Actual Percentage',
+      title: 'What\'s your guess?',
       text: 'Let’s see how you answered compared to the actual percent from the CSUN National College Health Assessment survey.',
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
@@ -297,7 +297,7 @@ export const alcoholModuleSlides = {
   7: {
     slide_type: 'inputPieChart',
     header: {
-      title: 'Your Guess vs. Actual Percentage',
+      title: 'Here are the answers',
       text: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -339,8 +339,8 @@ export const alcoholModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
-        1: 'It’s important to be aware of the different drinking categories.',
+        0: 'Have you ever seen someone drink more than what they can handle? Have you seen this individual do that more than once?',
+        1: 'It might be important to be aware of what the different categories of drinking are.',
         2: '<b>Flip the cards below to learn  of each.</b>'
       },
       cards: {
@@ -394,7 +394,7 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       title: 'What type of drinker is Sarah?',
-      text: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
+      text: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -610,7 +610,7 @@ export const alcoholModuleSlides = {
   15: {
     slide_type: 'info',
     header: {
-      title: 'Benefits of Drinking Responsibly',
+      title: 'Benefits of drinking responsibly',
       text: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -730,7 +730,7 @@ export const alcoholModuleSlides = {
   17: {
     slide_type: 'info',
     header: {
-      title: 'Sleep Quality',
+      title: 'Better Sleep',
       text: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -760,11 +760,6 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
-        paragraph: {
-          0: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.'
-        }
-      },
-      1: {
         image: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
@@ -854,9 +849,14 @@ export const alcoholModuleSlides = {
           '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
           '"I’d rather get a soda, thanks."',
           '"I have a game/practice tomorrow."',
-          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)',
-          '"They have really great mocktails (<i>non-alcoholic cocktails</i>) that I’d like to try."'
+          '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
         ]
+      },
+      3: {
+        paragraph: {
+          0: '<b>Remember...YOU are in control</b>',
+          1: 'For more help and information regarding this topic, please see the resource in the App menu.'
+        }
       }
     }
   },
@@ -907,7 +907,7 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
           1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
-          2: 'A general rule is that it will burn off about 1 standard drink per 1 to 1 ½ hours.'
+          2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
         }
       },
       1: {
@@ -1047,15 +1047,15 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
-        image: {
-          src: 'images/alcoholModule/alcohol_s29_01.jpg',
-          alt: 'two people running next to a lake'
-        }
-      },
-      1: {
         paragraph: {
           0: 'Our bodies produce the same hormone (<i>known as dopamine</i>) during exercise as we do while drinking. This means that we can get an awesome high from a trip to the gym or a soccer match!',
           1: 'Working out is also a great stress reliever. Try going for a run to relieve stress instead of reaching for a glass. Your mind and body will thank you later on!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/alcoholModule/alcohol_s29_01.jpg',
+          alt: 'two people running next to a lake'
         }
       }
     }
@@ -1073,7 +1073,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s30_01.jpg',
           alt: 'friends holding each other on top of a hill',
-          caption: 'Did you know, the Student Recreation Center has an Outdoor Adventures program?'
+          caption: 'Did you know, the Student Recreation Center has an <b>Outdoor Adventures program</b>?'
         }
       },
       1: {
@@ -1102,7 +1102,7 @@ export const alcoholModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'By practicing mindfulness and yoga, you can improvemood, reduce stress, and enhance focus and attention.',
+        0: 'By practicing mindfulness and yoga, you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
         2: '<b>Flip the cards below</b>'
       },
@@ -1142,15 +1142,15 @@ export const alcoholModuleSlides = {
   28: {
     slide_type: 'emailForm',
     header: {
-      title: 'Create Your Own Wellness Goal!',
-      text: 'Now is a great time to set a wellness goal topractice responsible drinking; or if you don\'t drink, then to improveyour overallhealth!',
+      title: 'Set a wellness goal!',
+      text: 'Now is a great time to set a wellness goal to practice responsible drinking; or if you don\'t drink, then to improve your overall health!',
       tooltip: null
     },
     content: {
       textAreaPlaceHolder: 'For example, "Next week I will plan to drinkone fewer drink than normal when I go outwith friends." Or, \n "I\'ll work outat least once next week for 30 minutes!"'
     }
   },
-  // // slide 33
+  // slide 33
   29: {
     slide_type: 'info',
     header: {
