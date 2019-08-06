@@ -531,7 +531,7 @@ export const nicotineModuleSlides = {
           0: 'Smoke and tobacco products (e-cigs and vape pens!) are not allowed anywhere on CSUN\'s campus; not even in the parking lots or near your favorite picnic table.',
           1: 'CA law also prohibits smoking inside any public building and within 20 feet of any building, anywhere in CA!'
         }
-      },
+      }
     }
   },
   // slide 32
@@ -664,7 +664,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: '<ol style="text-align:left;"><li>Find a quiet, comfortable place to sit or lie down (loosen tight clothing around your abdomen)</li> <li>First, take a normal breath. Then, a deep breath:</li> <li>Steadily & slowly inhale through your nose, filling your belly with air before filling the lungs.</li> <li>Hold this breath for a few seconds., then exhale all your air through the mouth; slowly and steadily as if you are blowing bubbles.</li> <li>Repeat, focusing your mind on your breathing.</li></ol> It might be strange or difficult at first, but practice gets you used to it! Try creating a daily routine.'
+            description: '<ul style="text-align:left;"><li>Find a quiet, comfortable place to sit or lie down (loosen tight clothing around your abdomen)</li> <li>First, take a normal breath. Then, a deep breath:</li> <li>Steadily & slowly inhale through your nose, filling your belly with air before filling the lungs.</li> <li>Hold this breath for a few seconds., then exhale all your air through the mouth; slowly and steadily as if you are blowing bubbles.</li> <li>Repeat, focusing your mind on your breathing.</li></ul> It might be strange or difficult at first, but practice gets you used to it! Try creating a daily routine.'
           }
         }
       }
