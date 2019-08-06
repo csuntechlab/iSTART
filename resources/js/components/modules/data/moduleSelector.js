@@ -31,10 +31,10 @@ export const moduleSelector = {
           },
           description: 'Marijuana'
         },
-        tobacco: {
-          name: 'Tobacco',
+        nicotine: {
+          name: 'Nicotine',
           image: 'images/thumbnail/nicotine_thumbnail.jpg',
-          altText: 'tobacco substance',
+          altText: 'nicotine substance',
           completion: {
             progress: 100,
             completed: true,

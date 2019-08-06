@@ -20,6 +20,7 @@
 
 <script>
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
+import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
 
 import { mapActions, mapGetters } from 'vuex'
@@ -68,6 +69,9 @@ export default {
     let currentModule = this.getCurrentModule
     if (currentModule === 'Alcohol') {
       this.storeJSONInState(alcoholModuleSlides)
+      this.setSlideContentVisibility(true)
+    } else if (currentModule === 'Nicotine') {
+      this.storeJSONInState(nicotineModuleSlides)
       this.setSlideContentVisibility(true)
     } else if (currentModule === 'Marijuana') {
       this.storeJSONInState(marijuanaModuleSlides)

@@ -420,7 +420,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Even small amounts every day can be unsafe! Daily use may greatly harm one\'s health, causing:',
+          0: 'Even small amounts every day can be unsafe! Daily use may greatly harm one\'s health, causing:'
         }
       },
       1: {
@@ -483,7 +483,7 @@ export const marijuanaModuleSlides = {
           0: 'For some students, smoking marijuana socially is part of the typical college experience.',
           1: 'However not everyone uses marijuana in moderation. Some users become dependent, and experience withdrawal symptoms, such as irritability, sleep problems, decreased appetite, and cravings.',
           2: 'Addiction happens when the person can\'t stop using marijuana even though it interferes with daily life.',
-          2: '<b>Swipe to learn about symptoms of addiction.</b>'
+          3: '<b>Swipe to learn about symptoms of addiction.</b>'
         }
       },
       1: {
@@ -658,7 +658,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Although saying “no” can sometimes be awkward, here are some ideas:',
+          0: 'Although saying “no” can sometimes be awkward, here are some ideas:'
         }
       },
       1: {
@@ -679,9 +679,9 @@ export const marijuanaModuleSlides = {
       },
       3: {
         paragraph: {
-          0: 'For more information about refusal skills, please see the resources in the web app menu',
+          0: 'For more information about refusal skills, please see the resources in the web app menu'
         }
-      },
+      }
     }
   },
   // slide 26
@@ -695,7 +695,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Dopamine is known as the “feel-good” hormone. The brain releases it when you use drugs like cannabis.',
+          0: 'Dopamine is known as the “feel-good” hormone. The brain releases it when you use drugs like cannabis.'
         }
       },
       1: {
@@ -707,9 +707,9 @@ export const marijuanaModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Watch out! Long-term marijuana use can actually cause lower dopamine levels in your body over time, which can also cause negative emotions.',
+          0: 'Watch out! Long-term marijuana use can actually cause lower dopamine levels in your body over time, which can also cause negative emotions.'
         }
-      },
+      }
     }
   },
   // slide 27 CARD FLIP
@@ -786,7 +786,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 31
-  23: {
+  25: {
     slide_type: 'info',
     header: {
       title: 'Resources',
@@ -809,7 +809,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 32
-  24: {
+  26: {
     slide_type: 'info',
     header: {
       title: null,
