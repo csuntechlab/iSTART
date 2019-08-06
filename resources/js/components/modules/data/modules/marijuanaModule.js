@@ -348,5 +348,484 @@ export const marijuanaModuleSlides = {
       caption: null
     }
   },
+  // slide 17
+  13: {
+    slide_type: 'cardFlip',
+    header: {
+      title: 'How does marijuana affect the brain?',
+      text: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
+    },
+    content: {
+      cards_flipped: false,
+      card_flip_count: 0,
+      paragraph: {
+        0: 'A high from weed may be fun, but what\'s going on inside your brain?',
+        1: '<b>Flip the cards to learn how marijuana affects the brain.</b>'
+      },
+      cards: {
+        0: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s17_01.jpg',
+              alt: 'puzzle brain',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'REPLACE'
+          }
+        },
+        1: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s17_02.jpg',
+              alt: 'distorted analog clock',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'REPLACE'
+          }
+        },
+        2: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s17_03.png',
+              alt: 'shadow of person fading away',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'REPLACE'
+          }
+        }
+      }
+    }
+  },
+  // slide 18
+  14: {
+    slide_type: 'info',
+    header: {
+      title: 'What are the long-term effects of marijuana use?',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Even small amounts every day can be unsafe! Daily use may greatly harm one\'s health, causing:',
+        }
+      },
+      1: {
+        list_element: [
+          'Feelings of anxiety and paranoia',
+          'Temporary psychosis',
+          'Long-lasting mental disorders like schizophrenia'
+        ]
+      },
+      2: {
+        image: {
+          src: 'images/marijuanaModule/mar_s18_01.png',
+          alt: 'marijuana brain',
+          y_position: 'bottom'
+        }
+      }
+    }
+  },
+  // slide 19
+  15: {
+    slide_type: 'info',
+    header: {
+      title: 'Academic Performance',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'It\'s important to keep those grades up! Don\'t let weed drag you down.',
+          1: 'Research shows that students who smoke weed have worse grades than their nonsmoking peers.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s19_01.jpg',
+          alt: 'student racking brain',
+          y_position: 'bottom'
+        }
+      },
+      2: {
+        paragraph: {
+          0: 'Additionally, those who smoke marijuana daily may be studying at a reduced intellectual level most(or all) of the time.',
+          1: 'Heavy users of marijuana can also have short-term problems with attention, memory, and learning.'
+        }
+      }
+    }
+  },
+  // slide 20
+  16: {
+    slide_type: 'info',
+    header: {
+      title: 'Is marijuana addictive?',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'For some students, smoking marijuana socially is part of the typical college experience.',
+          1: 'However not everyone uses marijuana in moderation. Some users become dependent, and experience withdrawal symptoms, such as irritability, sleep problems, decreased appetite, and cravings.',
+          2: 'Addiction happens when the person can\'t stop using marijuana even though it interferes with daily life.',
+          2: '<b>Swipe to learn about symptoms of addiction.</b>'
+        }
+      },
+      1: {
+        carousel: {
+          0: {
+            src: 'images/marijuanaModule/mar_s20_01.png',
+            alt: 'depression',
+            y_position: null
+          },
+          1: {
+            src: 'images/marijuanaModule/mar_s20_02.png',
+            alt: 'flu-like symptoms',
+            y_position: null
+          },
+          2: {
+            src: 'images/marijuanaModule/mar_s20_03.png',
+            alt: 'anxiety',
+            y_position: null
+          },
+          3: {
+            src: 'images/marijuanaModule/mar_s20_04.png',
+            alt: 'irritability',
+            y_position: null
+          },
+          4: {
+            src: 'images/marijuanaModule/mar_s20_05.png',
+            alt: 'insomnia',
+            y_position: null
+          },
+          5: {
+            src: 'images/marijuanaModule/mar_s20_06.png',
+            alt: 'weight changes',
+            y_position: null
+          }
+        }
+      }
+    }
+  },
+  // slide 21
+  17: {
+    slide_type: 'info',
+    header: {
+      title: 'What\'s legal in California?',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Recently, California became one of the first states to legalize recreational cannabis use (in 2018). But what does that actually mean?',
+          1: 'Let\'s see what CA law says. Then, we\'ll quiz your knowledge!',
+          2: '<b>Swipe the cards below.</b>'
+        }
+      },
+      1: {
+        carousel: {
+          0: {
+            src: 'images/marijuanaModule/mar_s21_01.png',
+            alt: 'age restriction',
+            y_position: null
+          },
+          1: {
+            src: 'images/marijuanaModule/mar_s21_02.png',
+            alt: 'illegal in restricted places',
+            y_position: null
+          },
+          2: {
+            src: 'images/marijuanaModule/mar_s21_03.png',
+            alt: 'cannot possess more than an ounce',
+            y_position: null
+          },
+          3: {
+            src: 'images/marijuanaModule/mar_s21_04.png',
+            alt: 'cannot drive under the influence',
+            y_position: null
+          },
+          4: {
+            src: 'images/marijuanaModule/mar_s21_05.png',
+            alt: 'cannot cross state lines',
+            y_position: null
+          },
+          5: {
+            src: 'images/marijuanaModule/mar_s21_06.png',
+            alt: 'only legal dispensaries can sell',
+            y_position: null
+          }
+        }
+      }
+    }
+  },
+  // slide 22 QUIZ
+  // slide 23
+  18: {
+    slide_type: 'info',
+    header: {
+      title: 'Should I take an Uber?',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Check out the facts below before you decide to use cannabis and drive!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s23_01.png',
+          alt: 'drivers under the influence',
+          y_position: 'bottom'
+        }
+      },
+      2: {
+        paragraph: {
+          0: 'Research shows mixing marijuana and alcohol makes it even more dangerous to drive than alcohol alone.'
+        }
+      }
+    }
+  },
+  // slide 24
+  19: {
+    slide_type: 'info',
+    header: {
+      title: 'Responsible Marijuana Use Checklist',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'For those who choose to use recreational cannabis, here are a few tips to help keep you safe:'
+        }
+      },
+      1: {
+        photo_list: [
+          {
+            src: 'images/marijuanaModule/mar_s24_01.png',
+            text: 'Be wary of high-potency THC and excessive use'
+          },
+          {
+            src: 'images/marijuanaModule/mar_s24_02.png',
+            text: 'Stay away from synthetic cannabis products (they’re dangerous and illegal!)'
+          },
+          {
+            src: 'images/marijuanaModule/mar_s24_03.png',
+            text: 'Don\'t mix marijuana with alcohol!'
+          },
+          {
+            src: 'images/marijuanaModule/mar_s24_04.png',
+            text: 'Don\'t drive while high (it\'s a DUI!)'
+          },
+          {
+            src: 'images/marijuanaModule/mar_s24_05.png',
+            text: 'Lock up & keep away from those under 21 and pets.'
+          },
+          {
+            src: 'images/marijuanaModule/mar_s24_06.png',
+            text: 'Don\'t use if pregnant or have a personal or family history of psychosis.'
+          }
+        ]
+      }
+    }
+  },
+  // slide 25
+  20: {
+    slide_type: 'info',
+    header: {
+      title: 'How to say NO to marijuana.',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Although saying “no” can sometimes be awkward, here are some ideas:',
+        }
+      },
+      1: {
+        list_element: [
+          'No thanks, I’m driving.',
+          'No thanks, I’ve tried it and I didn’t like it.',
+          'No thanks, I’ve quit smoking.',
+          'Thanks anyway, but I want to keep a clear head.',
+          'No thanks, I’m not into drugs.'
+        ]
+      },
+      2: {
+        image: {
+          src: 'images/marijuanaModule/mar_s25_01.png',
+          alt: 'no marijuana',
+          y_position: 'bottom'
+        }
+      },
+      3: {
+        paragraph: {
+          0: 'For more information about refusal skills, please see the resources in the web app menu',
+        }
+      },
+    }
+  },
+  // slide 26
+  21: {
+    slide_type: 'info',
+    header: {
+      title: 'Did you know?',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Dopamine is known as the “feel-good” hormone. The brain releases it when you use drugs like cannabis.',
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s26_01.jpg',
+          alt: 'euphoric emoji',
+          y_position: 'bottom'
+        }
+      },
+      2: {
+        paragraph: {
+          0: 'Watch out! Long-term marijuana use can actually cause lower dopamine levels in your body over time, which can also cause negative emotions.',
+        }
+      },
+    }
+  },
+  // slide 27 CARD FLIP
+  // slide 28
+  22: {
+    slide_type: 'info',
+    header: {
+      title: 'Get enough sunlight',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'You\'re in SoCal! Treat yourself to a bit of sun exposure every day to boost your mood! Take a study break with your friend on the lawn, or go for a quick walk in the Orange Grove.',
+          1: 'And when the weekend comes, try to make time to enjoy the beautiful beaches with some friends. Go surfing, running, or just...RELAX! You deserve it! Don\'t forget sunscreen!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s28_01.png',
+          alt: 'handstand on the beach',
+          y_position: 'bottom'
+        }
+      }
+    }
+  },
+  // slide 29
+  23: {
+    slide_type: 'info',
+    header: {
+      title: 'Mind-Body Wellness',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: '<b>Listen to music</b>: Science provesthat instrumental music increases dopamine in our bodies. So pump up the jam!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s29_01.jpeg',
+          alt: 'person enjoying music',
+          y_position: 'bottom'
+        }
+      },
+      2: {
+        paragraph: {
+          0: '<b>Meditate</b>: have you tried loving-kindness (Metta) meditation? It increases feelings of compassion and activates dopamine. Get your Metta on!',
+          1: 'Check it out in the resources page.'
+        }
+      },
+      3: {
+        image: {
+          src: 'images/marijuanaModule/mar_s29_02.jpeg',
+          alt: 'meditating',
+          y_position: 'bottom'
+        }
+      }
+    }
+  },
+  // slide 30
+  24: {
+    slide_type: 'emailForm',
+    header: {
+      title: 'Set a wellness goal!',
+      text: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ \n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
+      tooltip: null
+    },
+    content: {
+      textAreaPlaceHolder: 'For example, "Next week I will listen to classical music for 10 minutes a day to increase my dopamine levels." Or, \n "Next week I will politely decline using marijuana if a friend asks by saying \'No thanks, I\'m driving\'."'
+    }
+  },
+  // slide 31
+  23: {
+    slide_type: 'info',
+    header: {
+      title: 'Resources',
+      text: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'If you are worried about your own marijuana use, or someone else\'s, you can find different resources and contact info in the app menu!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/marijuanaModule/mar_s31_01.jpg',
+          alt: 'teamwork mountain climbing',
+          y_position: 'bottom'
+        }
+      }
+    }
+  },
+  // slide 32
+  24: {
+    slide_type: 'info',
+    header: {
+      title: null,
+      text: null
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Thank you for completing this module!',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+        }
+      }
+    },
+    format: {
+      images: 'bottom'
+    }
+  }
 }
 export default marijuanaModuleSlides
