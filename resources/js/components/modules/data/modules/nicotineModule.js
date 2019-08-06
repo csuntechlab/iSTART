@@ -352,7 +352,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 20
-  11: {
+  12: {
     slide_type: 'info',
     header: {
       title: 'Be Aware!',
@@ -383,7 +383,7 @@ export const nicotineModuleSlides = {
   },
   // slide 21 & 22 survey?
   // slide 23
-  12: {
+  13: {
     slide_type: 'info',
     header: {
       title: 'Don\'t get stuck in the cycle',
@@ -408,7 +408,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 24
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       title: 'The truth hurts!',
@@ -436,7 +436,7 @@ export const nicotineModuleSlides = {
   // slide 25 ???
   // slide 26 card flip
   // slide 27
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       title: 'Sleep for Success',
@@ -468,7 +468,7 @@ export const nicotineModuleSlides = {
   // slide 28 card flip
   // slide 29 time line card flip
   // slide 30 
-  15: {
+  16: {
     slide_type: 'info',
     header: {
       title: 'How to say "No"',
@@ -504,7 +504,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 31
-  16: {
+  17: {
     slide_type: 'info',
     header: {
       title: 'CSUN Clear the Air!',
@@ -535,7 +535,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 32
-  17: {
+  18: {
     slide_type: 'info',
     header: {
       title: 'Healthy Alternatives',
@@ -561,7 +561,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 33
-  18: {
+  19: {
     slide_type: 'info',
     header: {
       title: 'Shake it off!',
@@ -601,11 +601,11 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'Did you know the Student Recreation Center offers A Boxing Training Program to students for FREE?'
         }
-      },
+      }
     }
   },
   // slide 34
-  19: {
+  20: {
     slide_type: 'info',
     header: {
       title: 'Let off some steam – by talking!',
@@ -637,7 +637,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 35
-  20: {
+  21: {
     slide_type: 'cardFlip',
     header: {
       title: 'Healthy Inhale!',
@@ -671,7 +671,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide  36
-  21: {
+  22: {
     slide_type: 'emailForm',
     header: {
       title: 'Set a Wellness Goal',
@@ -683,7 +683,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 37
-  19: {
+  23: {
     slide_type: 'info',
     header: {
       title: 'Resources',
@@ -708,7 +708,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 38
-  23: {
+  24: {
     slide_type: 'info',
     header: {
       title: null,
