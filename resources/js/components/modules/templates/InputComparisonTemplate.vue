@@ -6,7 +6,7 @@
         <div class="col-12">
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsone using numerical values 0 to 100.</p>
         </div>
-        <form class="module-quizInput__form" novalidate="true">
+        <section class="module-quizInput__form" novalidate="true">
           <input-response v-for="(element, index) in currentSlideData.content.questions"
             :key="index"
             :questionIndex="parseInt(index)+1"
@@ -15,7 +15,7 @@
             :questionLength="Object.keys(currentSlideData.content.questions).length"
             :needInputLabel="true">
           </input-response>
-        </form>
+        </section>
       </div>
     </div>
   </div>

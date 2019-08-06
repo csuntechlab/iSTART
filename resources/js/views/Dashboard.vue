@@ -35,16 +35,6 @@ export default {
     ComparisonGroup,
     InterventionGroup,
     DashboardNotification
-  },
-  data () {
-    return {
-      size: 50,
-      shape: {
-        circle: 'circle',
-        line: 'line'
-      },
-      module_percentage: 0.24
-    }
   }
 }
 </script>
