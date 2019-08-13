@@ -5,9 +5,14 @@
     </div>
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
-        <div @click="showResponse(optionIndex)" class="module-quiz__option">
+        <div @click="showResponse(optionIndex)" class="module-quiz__option interactable-container">
           <div v-if="object.showResponse" :class="[(object.options[optionIndex].show ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
-            <i :class="[(element.isAnswer ? 'fa-check-circle' : 'fa-times-circle'), 'fa']"></i>
+            <div v-if="element.isAnswer" class="module-quiz__option-indicator-container bg-success">
+              <i class="fa fa-check-circle"></i>
+            </div>
+            <div v-else class="module-quiz__option-indicator-container bg-danger">
+              <i class="fa fa-times-circle"></i>
+            </div>
           </div>
 
           <div :class="[(object.options[optionIndex].show ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
