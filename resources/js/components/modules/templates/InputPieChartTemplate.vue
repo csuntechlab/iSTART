@@ -7,8 +7,8 @@
       </div>
       <div class="row mt-3 justify-content-center">
         <div class="module-quizInput__header col-12">
-          <h1>{{ currentSlideData.header.title }}</h1>
-          <h2>{{ currentSlideData.header.text }}</h2>
+          <h1>{{ currentSlideData.header.header }}</h1>
+          <h2>{{ currentSlideData.header.sub_header }}</h2>
         </div>
         <template v-for="(element, index) in getSlideData(currentSlideNumber-1).content.questions">
           <div :key="index" class="module-quizInput__question col-12 mb-2">

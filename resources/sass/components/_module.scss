@@ -26,6 +26,32 @@
             padding-bottom: 25px;
         }
     }
+
+    &-text {
+        line-height: 1.5;
+        
+        &__header {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        &__sub-header {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        &__text {
+            font-weight: normal;
+            font-size: 1.15rem;
+        }
+
+        &__caption {
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.25rem;
+        }
+    }
+
     &-footer {
         display: flex;
         flex-flow: row;

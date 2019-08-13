@@ -1,11 +1,11 @@
 <template>
 <div class="card-flip">
   <section class="card-flip-description container">
-    <h1 class="card-flip__header">{{ currentSlideData.header.title }}</h1>
+    <h1 class="card-flip__header">{{ currentSlideData.header.header }}</h1>
+    <h2>{{ currentSlideData.header.sub_header }}</h2>
     <div v-for="(item, index) in currentSlideData.content.paragraph" :key="index">
       <p v-html="item" class="card-flip__paragraph"></p>
     </div>
-    <em>{{ currentSlideData.header.text }}</em>
   </section>
   <div class="card-flip-content mb-5">
     <div class="card-flip__card col-12 col-md-6 col-lg-4" v-for="(item, index) in currentSlideData.content.cards" :key="index">

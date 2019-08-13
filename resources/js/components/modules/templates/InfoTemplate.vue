@@ -4,14 +4,14 @@
       <div class="col-12">
         <div class="row">
           <div class="col-12">
-            <h1 v-if="currentSlideData.header.title" class="module-info__header">
-              {{ currentSlideData.header.title }}
+            <h1 v-if="currentSlideData.header.header" class="module-info__header module-text module-text__header">
+              {{ currentSlideData.header.header }}
             </h1>
           </div>
         </div>
         <div class="row">
           <div class="module-info__content col-12">
-            <h2 class="module-info__content-text" v-if="currentSlideData.header.text" v-html="currentSlideData.header.text"></h2>
+            <h2 class="module-info__content-text" v-if="currentSlideData.header.sub_header" v-html="currentSlideData.header.sub_header"></h2>
           </div>
         </div>
         <template v-for="(element, currentSlideIndex) in currentSlideData.content">
