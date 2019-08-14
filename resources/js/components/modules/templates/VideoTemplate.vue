@@ -1,10 +1,10 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
     <div class="video-template__header col-12">
-      <h1 class="video-template__title">
+      <h1 class="video-template__title module-text__header">
         {{ currentSlideData.header.header }}
       </h1>
-      <p class="video-template__sub-heading">{{ currentSlideData.header.sub_header }}</p>
+      <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
     </div>
     <div class="video-template__video col-12 col-md-10">
       <div class="embed-responsive embed-responsive-16by9">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="video-template__caption col-12">
-      <caption>{{ currentSlideData.content.caption }}</caption>
+      <caption class="module-text__caption">{{ currentSlideData.content.caption }}</caption>
     </div>
   </div>
 </template>

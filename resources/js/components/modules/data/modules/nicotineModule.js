@@ -711,20 +711,10 @@ export const nicotineModuleSlides = {
   26: {
     slide_type: 'info',
     header: {
-      header: null,
-      sub_header: null
+      header: 'Thank you for completing this module!',
+      sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
-    content: {
-      0: {
-        paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
-        }
-      }
-    },
-    format: {
-      images: 'bottom'
-    }
+    content: null
   }
 }
 export default nicotineModuleSlides

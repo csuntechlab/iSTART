@@ -1,18 +1,17 @@
 <template>
-  <div class="row">
+  <div class="module-info__img-container row">
     <div class="col-12">
       <figure>
         <figcaption
           v-if="image.caption"
-          class="module-info__copy"
+          class="module-text__caption"
           :class="[
             (image.caption_text_align === 'left' ? 'text-left' : ''),
             (image.caption_text_align === 'center' ? 'text-center' : ''),
             (image.caption_text_align === 'right' ? 'text-right' : ''),
             (!image.caption_text_align ? 'text-left' : '')
-          ]
-        ">
-          {{ image.caption }}
+          ]"
+          v-html="image.caption">
         </figcaption>
         <div class="row"
           :class="[
@@ -27,14 +26,13 @@
         </div>
         <figcaption
           v-if="image.caption_y_position == 'bottom' && image.caption"
-          class="module-info__copy"
+          class="module-text__caption"
           :class="[
             (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
             (image.caption_text_align === 'center' ? 'text-center' : ''),
             (image.caption_text_align === 'right' ? 'text-right' : ''),
           ]"
-        >
-          {{ image.caption }}
+          v-html="image.caption">
         </figcaption>
       </figure>
     </div>

@@ -1,14 +1,9 @@
-.module-info{
-    margin-top: 2.5rem;
+.module-info {
     padding-bottom: 1.5rem;
     z-index: 0;
 
     &__header{
         color: $heading-color;
-    }
-
-    &__copy{
-        @extend %default-copy;
     }
 
     &__body{
@@ -19,9 +14,13 @@
         font-size: 1.15rem;
     }
 
-    &__img{
+    &__img {
         height: auto;
         width: 100%;
+
+        &-container {
+            margin: 1rem 0 1rem 0;
+        }
 
         &-align {
             margin: 0 auto;
@@ -47,12 +46,6 @@
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
-
-        &-text {
-            font-size: 1.15rem;
-            font-weight: normal;
-            color: $copy-color;
-        }
     }
 
     &__carousel {

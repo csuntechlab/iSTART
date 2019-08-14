@@ -12,14 +12,6 @@
     width: 100%;
   }
 
-  &__header {
-    @extend %default-heading;
-  }
-
-  &__paragraph {
-    @extend %default-copy;
-  }
-
   &__card {
     display: inline-block;
     overflow: hidden;
@@ -81,7 +73,7 @@
 
     &-back {
       background-color: $back-of-card;
-      color: $copy-color;
+      color: $text-color;
       position: absolute;
       top: 0;
       left: 0;

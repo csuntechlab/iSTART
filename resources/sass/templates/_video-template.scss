@@ -1,8 +1,6 @@
 .video-template {
   &__header {
-    font-size: 1.15rem;
     margin-bottom: 1rem;
-    color: $heading-color;
 
     & > * {
       padding: 0.5rem 2rem;
@@ -10,19 +8,10 @@
     }
   }
 
-  &__title {
-    @extend %default-heading;
-  }
-
-  &__sub-heading{
-    @extend %default-copy;
-  }
-
   &__caption {
     margin-top: 1rem;
 
     & > * {
-      @extend %default-copy;
       display: block;
       padding: 0.5rem 2rem;
     }
