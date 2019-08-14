@@ -32,6 +32,13 @@
 	}
 }
 
+.interactable-container {
+	cursor: pointer;
+	border: 0.1rem $border-color solid;
+  border-radius: 0.35rem;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.16);
+}
+
 // Carousel Color Overide
 .carousel-indicators li {
 	background-color: $primaryColor !important;
