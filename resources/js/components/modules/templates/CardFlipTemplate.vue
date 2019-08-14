@@ -9,8 +9,8 @@
   </section>
   <div class="card-flip-content mb-5">
     <div class="card-flip__card col-12 col-md-6 col-lg-4" v-for="(item, index) in currentSlideData.content.cards" :key="index">
-      <div @click="flipCard(index, item.show); item.show ? updateCount(1) : updateCount(-1)" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper pointer transition-350ms']">
-        <div class="card-flip__card-front">
+      <div @click="flipCard(index, item.show); item.show ? updateCount(1) : updateCount(-1)" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
+        <div class="card-flip__card-front interactable-container">
           <figure v-if="item.front.img.src!=null">
             <figcaption class="card-flip__card-caption">{{item.front.img.caption}}</figcaption>
             <img v-bind:src="item.front.img.src" v-bind:alt="item.front.img.alt" class="card-flip__card-image">
@@ -19,7 +19,7 @@
             {{item.front.question}}
           </section>
         </div>
-        <div class="card-flip__card-back">
+        <div class="card-flip__card-back interactable-container">
           <p v-html="item.back.description"></p>
         </div>
       </div>
