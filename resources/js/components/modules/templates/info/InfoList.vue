@@ -5,7 +5,7 @@
         <li
           v-for="(element, index) in listItems"
           :key="`${index}`"
-          class="module-info__copy"
+          class="module-text__list"
           v-html="listItems[`${index}`]">
         </li>
       </ul>

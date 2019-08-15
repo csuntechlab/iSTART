@@ -5,7 +5,8 @@
         class="photo-list__list-item"
         :class="[
           ('photo-list__list-item--' + listItems.indexOf(listItem)),
-          (listItem.warning ? 'photo-list__list-item--red-text' : '')
+          (listItem.warning ? 'photo-list__list-item--red-text' : ''),
+          'module-text__list'
         ]">
         {{listItem.text}}
       </li>
