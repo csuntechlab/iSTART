@@ -42,8 +42,8 @@
                   </p>
                 </div>
                 <div class="dashboard-module__status-wrapper col-4 col-md-12">
-                  <span v-if="!item.progress.is_complete && !item.progress.is_incomplete" class="dashboard-module__status">Start</span>
-                  <span v-if="item.progress.is_complete || item.progress.is_incomplete" class="dashboard-module__status">Review</span>
+                  <button v-if="!item.progress.is_complete && !item.progress.is_incomplete" class="dashboard-module__status">Start</button>
+                  <button v-if="item.progress.is_complete || item.progress.is_incomplete" class="dashboard-module__status">Review</button>
                   <i v-if="!item.progress.is_complete && !item.progress.is_incomplete" class="dashboard-module__status-indicator fas fa-chevron-right"></i>
                 </div>
               </div>
