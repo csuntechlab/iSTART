@@ -38,7 +38,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'REPLACE'
+            description: 'For recreation use: THC is the main psychoactive component that creates the \'high\'.'
           }
         },
         1: {
@@ -52,7 +52,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'REPLACE'
+            description: 'For medicinal use: CBD is a chemical that may relieve pain with little to no brain impairment'
           }
         }
       }
@@ -377,7 +377,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'REPLACE'
+            description: '<b>Memory Impairment</b><br> THC alters how info is processed in the hippocampus, a part of the brain responsible for memory formation.'
           }
         },
         1: {
@@ -391,7 +391,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'REPLACE'
+            description: '<b>Distortion of Time</b><br> Increased marijuana use can alter blood flow to the cerebellum, which plays a role in our sense of time.'
           }
         },
         2: {
@@ -405,7 +405,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'REPLACE'
+            description: '<b>Increased Risk of Depression</b><br> Research shows smoking weed may raise the risk of depression for young people who have a special serotonin gene.'
           }
         }
       }
@@ -576,9 +576,128 @@ export const marijuanaModuleSlides = {
       }
     }
   },
-  // slide 22 QUIZ
-  // slide 23
+  // slide 22 Question 1
   18: {
+    slide_type: 'quiz',
+    header: {
+      header: null,
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/marijuanaModule/mar_s22_01.png',
+          alt: 'quiz',
+          mobile_size: '2/3',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'You\'re chillin on Venic beach with your friends, and your 24-year old buddy pulls out his marijuana vape pen and starts using it. <i><b>Is that legal?</b></i>',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Yes',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nope!</b> Smoking in a public place is against the law in CA!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: true,
+              show: false,
+              text: 'No',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Corrent,</b> it\'s illegal! Your friend is in a public place. He cannot use it there, per CA law.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 22 Question 2
+  19: {
+    slide_type: 'quiz',
+    header: {
+      header: null,
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/marijuanaModule/mar_s22_01.png',
+          alt: 'quiz',
+          mobile_size: '2/3',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Your friend just turned 21 and went on a weekend trip to Las Vegas to celebrate. She first stopped by a state-licensed dispensary in Los Angeles to purchase recreational pot legally, then she brought it with her to Las Vegas. <i><b>Was that legal?</b></i>',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Yes',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nope!</b> Transporting recreational cannabis of any kind over state lines is against the law in California!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: true,
+              show: false,
+              text: 'No',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Corrent,</b> it\'s illegal! Your friend cannot transport marijuana for recreational use across state borders.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 23
+  20: {
     slide_type: 'info',
     header: {
       header: 'Should I take an Uber?',
@@ -606,7 +725,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 24
-  19: {
+  21: {
     slide_type: 'info',
     header: {
       header: 'Responsible Marijuana Use Checklist',
@@ -646,11 +765,16 @@ export const marijuanaModuleSlides = {
             text: 'Don\'t use if pregnant or have a personal or family history of psychosis.'
           }
         ]
-      }
+      },
+      2: {
+        paragraph: {
+          0: 'As more research becomes available, stay in the know and consult official sources.'
+        }
+      },
     }
   },
   // slide 25
-  20: {
+  22: {
     slide_type: 'info',
     header: {
       header: 'How to say NO to marijuana.',
@@ -687,7 +811,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 26
-  21: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -714,9 +838,69 @@ export const marijuanaModuleSlides = {
       }
     }
   },
-  // slide 27 CARD FLIP
+  // slide 27
+  24: {
+    slide_type: 'cardFlip',
+    header: {
+      header: 'How can we naturally increase dopamine levels?',
+      sub_header: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
+    },
+    content: {
+      card_break: false,
+      cards_flipped: false,
+      card_flip_count: 0,
+      paragraph: {
+        0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of hapiness</b>'
+      },
+      cards: {
+        0: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s27_01.jpg',
+              alt: 'parfait',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Eat a diet rich in protein and probiotics (yogurt!) and reduce saturated fat.'
+          }
+        },
+        1: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s27_02.jpeg',
+              alt: 'sleep',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Get a good night\'s sleep of at least 8 hours! Sleep is a key ingredient for a healthy life!'
+          }
+        },
+        2: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/marijuanaModule/mar_s27_03.jpg',
+              alt: 'exercise',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Exercise regularly with a friend to help reach your goals together!'
+          }
+        }
+      }
+    }
+  },
   // slide 28
-  22: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Get enough sunlight',
@@ -740,7 +924,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 29
-  23: {
+  26: {
     slide_type: 'info',
     header: {
       header: 'Mind-Body Wellness',
@@ -776,7 +960,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 30
-  24: {
+  27: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
@@ -788,7 +972,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 31
-  25: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'Resources',
@@ -811,7 +995,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 32
-  26: {
+  29: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',

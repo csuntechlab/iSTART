@@ -62,9 +62,69 @@ export const nicotineModuleSlides = {
       }
     }
   },
-  // slide 5 CARD FLIP
-  // slide 6
+  // slide 5
   3: {
+    slide_type: 'cardFlip',
+    header: {
+      header: 'What\'s in a cigarette?',
+      sub_header: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
+    },
+    content: {
+      card_break: true,
+      cards_flipped: false,
+      card_flip_count: 0,
+      paragraph: {
+        0: '<b>Flip the cards to see what you\'re smoking.</b>'
+      },
+      cards: {
+        0: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s05_01.png',
+              alt: 'cigarette filter',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Filters are intended to reduce smoke inhaled, but are not that effective!'
+          }
+        },
+        1: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s05_02.png',
+              alt: 'cigarrette',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'This paper has small holes to dilute the toxic chemicals inhaled; but the holes get blocked by your fingers or lips so they don\'t help!'
+          }
+        },
+        2: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s05_03.png',
+              alt: 'cigarrette',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in it\'s hazardous chemicals.'
+          }
+        }
+      }
+    }
+  },
+  // slide 6
+  4: {
     slide_type: 'info',
     header: {
       header: 'What are you smoking?',
@@ -125,7 +185,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 7
-  4: {
+  5: {
     slide_type: 'info',
     header: {
       header: 'Is hookah considered smoking?',
@@ -149,8 +209,161 @@ export const nicotineModuleSlides = {
       }
     }
   },
+  // slide 8
+  6: {
+    slide_type: 'quiz',
+    header: {
+      header: 'Hookah: Fact or Myth?',
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Hookah is less harmful than cigarettes.',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Fact',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nope!</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: true,
+              show: false,
+              text: 'Myth',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Corrent,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 9
+  7: {
+    slide_type: 'quiz',
+    header: {
+      header: 'Hookah: Fact or Myth?',
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'It\'s okay if I just go to a tobaco bar and do not smoke hookah.',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Fact',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nope!</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: true,
+              show: false,
+              text: 'Myth',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Corrent,</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 10
+  8: {
+    slide_type: 'quiz',
+    header: {
+      header: 'Hookah: Fact or Myth?',
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'There are risks from sharing hookah in a group setting.',
+          options: {
+            0: {
+              isAnswer: true,
+              show: false,
+              text: 'Fact',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Correct!</b> If you are sharing the same mouthpiece, you may be at risk for tuberculosis, Hep-C, and oral herpes.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Myth',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nope!</b> If you are sharing the same mouthpiece, you may be at risk for tuberculosis, Hep-C, and oral herpes.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   // slide 11
-  5: {
+  9: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -175,7 +388,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 12
-  6: {
+  10: {
     slide_type: 'info',
     header: {
       header: 'Smokeless Tobacco',
@@ -205,7 +418,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 13
-  7: {
+  11: {
     slide_type: 'info',
     header: {
       header: 'Vaping',
@@ -231,7 +444,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 14
-  8: {
+  12: {
     slide_type: 'info',
     header: {
       header: 'What\'s in vape smoke?',
@@ -250,11 +463,20 @@ export const nicotineModuleSlides = {
           'Ultrafine particles',
           'Cancer causing chemicals'
         ]
+      },
+      2: {
+        image: {
+          src: 'images/nicotineModule/nic_s14_01.png',
+          alt: 'smoke',
+          mobile_size: '5/6',
+          tablet_size: '5/6',
+          desktop_size: '2/3'
+        }
       }
     }
   },
   // slide 15
-  10: {
+  13: {
     slide_type: 'info',
     header: {
       header: 'What\'s in your urine?',
@@ -283,9 +505,115 @@ export const nicotineModuleSlides = {
       }
     }
   },
-  // slide 16 ???
+  // slide 16
+  14: {
+    slide_type: 'quiz',
+    header: {
+      header: 'Kevin\'s Story',
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/nicotineModule/nic_s16_01.jpg',
+          alt: 'quiz',
+          position: 'top',
+          width: '1/2'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Many of Kevin\'s friends on campus smoke Juul. Kevin didn\'t think it could be that bad if his friends were using it all the time, so he decided to buy one.<br> <b>What substances might keving be exposed to while using Juul?</b>',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Nicotine',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Lead',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'Volatile organic compounds',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'Ultrafine particles',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            4: {
+              isAnswer: true,
+              show: false,
+              text: 'All of the above',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Corrent,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   // slide 17
-  11: {
+  15: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -316,7 +644,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 18
-  12: {
+  16: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Here are the answers',
@@ -325,7 +653,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 19
-  13: {
+  17: {
     slide_type: 'info',
     header: {
       header: 'Don\'t be misled!',
@@ -352,7 +680,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 20
-  14: {
+  18: {
     slide_type: 'info',
     header: {
       header: 'Be Aware!',
@@ -383,7 +711,7 @@ export const nicotineModuleSlides = {
   },
   // slide 21 & 22 survey?
   // slide 23
-  15: {
+  19: {
     slide_type: 'info',
     header: {
       header: 'Don\'t get stuck in the cycle',
@@ -408,7 +736,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 24
-  16: {
+  20: {
     slide_type: 'info',
     header: {
       header: 'The truth hurts!',
@@ -433,10 +761,139 @@ export const nicotineModuleSlides = {
       }
     }
   },
-  // slide 25 ???
-  // slide 26 card flip
+  // slide 25
+  21: {
+    slide_type: 'info',
+    header: {
+      header: 'Did you know?',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Nicotine can have serious effects on brain development up until age 25.',
+          1: '<b>Listen to this audio clip.</b>',
+          2: '<a href="https://e-cigarettes.surgeongeneral.gov/media/osh-surgeon-generals-e-cigarette-radio-psa.mp3">Click here to listen to audio clip</a>'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/nicotineModule/nic_s25_01.png',
+          alt: 'cigarette head and suit',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      }
+    }
+  },
+  // slide 26
+  22: {
+    slide_type: 'cardFlip',
+    header: {
+      header: 'Smoke-free Benefits',
+      sub_header: null,
+      tooltip: 'Flip all cards to proceed to the next slide'
+    },
+    content: {
+      card_break: false,
+      cards_flipped: false,
+      card_flip_count: 0,
+      paragraph: {
+        0: 'Being smoke or vape free means the body and mind can function at its best.',
+        1: '<b>Flip the cards to learn the many benefits to being smoke/vape free.</b>'
+      },
+      cards: {
+        0: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_01.png',
+              alt: 'head/face',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Better hearing & vision</li><li>Cleaner mouth</li><li>Clearer skin</li></ul>'
+          }
+        },
+        1: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_02.png',
+              alt: 'heart',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Reduced chance of a blood clot</li><li>Lower cholesterol & blood pressure</li><li>Lowered risk of a heart attack</li></ul>'
+          }
+        },
+        2: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_03.png',
+              alt: 'Lungs',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Stops lung damage</li><li>Prevents emphysema</li></ul>'
+          }
+        },
+        3: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_04.png',
+              alt: 'muscles/bones',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Stronger, healthier muscles</li><li>Stronger bones and lowered risk of fractures</li></ul>'
+          }
+        },
+        4: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_05.png',
+              alt: 'blood/immune system',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Normal white blood cell count</li><li>Proper healing</li><li>Stronger immune system</li></ul>'
+          }
+        },
+        5: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s26_06.png',
+              alt: 'dna',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Lowered risk of cancer</li></ul>'
+          }
+        }
+      }
+    }
+  },
   // slide 27
-  17: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Sleep for Success',
@@ -465,10 +922,191 @@ export const nicotineModuleSlides = {
       }
     }
   },
-  // slide 28 card flip
-  // slide 29 time line card flip
+  // slide 28
+  24: {
+    slide_type: 'quiz',
+    header: {
+      header: null,
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/nicotineModule/nic_s28_01.png',
+          alt: 'quiz',
+          position: 'top',
+          width: '1/2'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Smoking/vaping can cause which of the following?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Weak muscles and bones',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re close!</b> Remember that smoking/vaping can affect all parts of the body and mind.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'Acne',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re close!</b> Remember that smoking/vaping can affect all parts of the body and mind.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'Insomnia',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re close!</b> Remember that smoking/vaping can affect all parts of the body and mind.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'Reduced brain development',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re close!</b> Remember that smoking/vaping can affect all parts of the body and mind.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            4: {
+              isAnswer: true,
+              show: false,
+              text: 'All of the above',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Yes!</b> Smoking/Vaping can affect all parts of the body and mind.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 29
+  25: {
+    slide_type: 'cardFlip',
+    header: {
+      header: 'How does your body heal?',
+      sub_header: null,
+      tooltip: 'Flip all the cards to proceed to the next slide'
+    },
+    content: {
+      card_break: true,
+      cards_flipped: false,
+      card_flip_count: 0,
+      paragraph: {
+        0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking!</b>',
+        1: '<i>(Note: Timeline is not drawn to scale)</i>'
+      },
+      cards: {
+        0: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s29_01.png',
+              alt: '20 minutes to 48 hours after',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon monoxie levels return to normal</li></ul>'
+          }
+        },
+        1: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s29_02.png',
+              alt: '2 weeks to 9 months after',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Risk of heart attack decreases</li><li>Coughing, shortness of breath, and risks of infection reduce</li></ul>'
+          }
+        },
+        2: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s29_03.png',
+              alt: '1 year to 5 years after',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>Risk of heart disease is half that of a current smoker</li><li>Risk of mouth, throat, esophagus, and bladder cancer cut in half</li></ul>'
+          }
+        },
+        3: {
+          show: false,
+          front: {
+            img: {
+              src: 'images/nicotineModule/nic_s29_04.png',
+              alt: '10 years after',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: '<ul><li>The risk of dying from lung cancer is half that of a current smoker</li><li>The risk of cancer decreases</li></ul>'
+          }
+        }
+      }
+    }
+  },
   // slide 30
-  18: {
+  26: {
     slide_type: 'info',
     header: {
       header: 'How to say "No"',
@@ -504,7 +1142,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 31
-  19: {
+  27: {
     slide_type: 'info',
     header: {
       header: 'CSUN Clear the Air!',
@@ -535,7 +1173,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 32
-  20: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -561,7 +1199,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 33
-  21: {
+  29: {
     slide_type: 'info',
     header: {
       header: 'Shake it off!',
@@ -605,7 +1243,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 34
-  22: {
+  30: {
     slide_type: 'info',
     header: {
       header: 'Let off some steam – by talking!',
@@ -637,7 +1275,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 35
-  23: {
+  31: {
     slide_type: 'cardFlip',
     header: {
       header: 'Healthy Inhale!',
@@ -665,14 +1303,14 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: '<ul style="text-align:left;"><li>Find a quiet, comfortable place to sit or lie down (loosen tight clothing around your abdomen)</li> <li>First, take a normal breath. Then, a deep breath:</li> <li>Steadily & slowly inhale through your nose, filling your belly with air before filling the lungs.</li> <li>Hold this breath for a few seconds., then exhale all your air through the mouth; slowly and steadily as if you are blowing bubbles.</li> <li>Repeat, focusing your mind on your breathing.</li></ul> It might be strange or difficult at first, but practice gets you used to it! Try creating a daily routine.'
+            description: '<ul style="text-align:left;"><li> Sit or lie down in a quiet place.​</li><li>First, take a normal breath. Then, a deep breath.</li><li>Slowly inhale through your nose, filling your belly with air before filling the lungs.</li><li>Hold for a few seconds, then exhale all air through the mouth; slowly, as if you are blowing bubbles.</li><li>Repeat a few times, focusing your mind on your breathing.</li></ul>'
           }
         }
       }
     }
   },
-  // slide  36
-  24: {
+  // slide 36
+  32: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a Wellness Goal',
@@ -684,7 +1322,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 37
-  25: {
+  33: {
     slide_type: 'info',
     header: {
       header: 'Resources',
@@ -709,7 +1347,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 38
-  26: {
+  34: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',

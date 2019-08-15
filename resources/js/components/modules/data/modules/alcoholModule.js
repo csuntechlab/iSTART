@@ -357,7 +357,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'Having one or fewer drinks per day for women, and two or fewer drinks per day for men. Typically, moderate drinkers don’t drink to get drunk.'
+            description: 'For gals: 1 < drinks per day.<br> For guys: 2 < drinks per day.'
           }
         },
         1: {
@@ -371,7 +371,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: ' For women, 4 drinks or more in a 2-hour period, and 5 drinks or more for men in a 2-hour period.'
+            description: 'For gals: 4+ drinks in 2hrs.<br> For guys: 5+ drinks in 2hrs.'
           }
         },
         2: {
@@ -385,7 +385,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'For women, 4 or more drinks on one occasion or 8 or more drinks over the course of 1 week. For men, 5 or more drinks at 1 time or 15 or more drinks over the course of 1 week. Heavy drinking is measured over a week.'
+            description: 'For gals 4+ drinks in 1 night, or 8+ drinks over 1 week.<br> For guys: 5+ drinks in 1 night or 15+ drinks over 1 week.'
           }
         }
       }
@@ -520,16 +520,16 @@ export const alcoholModuleSlides = {
     },
     content: {
       0: {
+        paragraph: {
+          0: 'For some students, alcohol use is part of the typical college experience, and many students practice healthy drinking habits by being in control.',
+          1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
+        }
+      },
+      1: {
         image: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
           y_position: 'bottom'
-        }
-      },
-      1: {
-        paragraph: {
-          0: 'For some students, alcohol use is part of the typical college experience; and many students practice healthy drinking habits by being in control.',
-          1: 'However, not everyone who enjoys drinking alcohol stops at just one. Drinking too much alcohol can lead to addiction, alcohol cravings, and in some cases alcohol tolerance and withdrawal.'
         }
       }
     }
@@ -872,7 +872,7 @@ export const alcoholModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
-      card_break: false,
+      card_break: true,
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
@@ -892,7 +892,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: '<ul style="text-align:left;"><li>It’s illegal to drink with a Blood Alcohol Concentration (BAC) level above 0.08% in all states.</li><li>There is a ZERO tolerance policy if under age 21. Any amount of alcohol in your blood can lead to a DUI.</li><li>Getting a DUI can cost on average close to $7,000. Not to mention a suspended license, traffic school, possible jail time, and difficulty getting a job!</li></ul>'
+            description: 'If your Blood Alcohol Concentration (BAC) is above .08%, it is illegal for you to drive. Even if your BAC is below this percentage, you can still risk a DUI.<br> If you are under 21, there is a ZERO TOLERANCE policy - <i>any amount of alcohol in your system will get you a DUI.</i>'
           }
         }
       }
