@@ -1,6 +1,16 @@
 import SlidesAPI from './../../../api/slides'
 
 export default {
+  // Set module data
+  setModuleData ({ commit }, payload) {
+    commit('SET_MODULE_DATA', payload)
+  },
+
+  // Sets index for module data
+  setModuleIndex ({ commit }, payload) {
+    commit('SET_MODULE_INDEX', payload)
+  },
+
   // Sets current module
   setCurrentModule ({ commit }, payload) {
     commit('SET_CURRENT_MODULE', payload)

@@ -57,11 +57,13 @@
 
     &-module {
         margin-bottom: 1rem;
+
         @include media-breakpoint-down(sm) {
             overflow: hidden;
             border-radius: .5rem;
             box-shadow: $apply-box-shadow;
         }
+
         & * {
             font-weight: bold;
         }
@@ -148,7 +150,7 @@
             font-weight: normal;
             font-size: 1rem;
             padding: 0 1rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 2rem;
 
             @include media-breakpoint-down(sm) {
                 color: $black;
@@ -194,11 +196,8 @@
         }
 
         &__status {
-            color: $black;
-
-            &-circle {
-                color: $green;
-            }
+            background: none;
+            border: none;
 
             &-wrapper {
                 text-align: right;
@@ -214,8 +213,15 @@
                 display: inline-block;
                 font-size: 1.15rem;
                 width: 50%;
+                border-color: $primaryColor--lighter;
                 border-radius: 0.5rem;
                 padding: 0.25rem 0.5rem;
+
+                &:focus,
+                &:hover {
+                    background-color: $primaryColor--medium;
+                    border-color: $primaryColor--light;
+                }
 
                 &-wrapper {
                     text-align: center;
