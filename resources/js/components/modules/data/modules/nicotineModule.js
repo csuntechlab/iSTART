@@ -14,8 +14,8 @@ export const nicotineModuleSlides = {
   1: {
     slide_type: 'info',
     header: {
-      title: 'Nicotine',
-      text: null,
+      header: 'Nicotine',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -41,8 +41,8 @@ export const nicotineModuleSlides = {
   2: {
     slide_type: 'info',
     header: {
-      title: 'Cigarettes',
-      text: null,
+      header: 'Cigarettes',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -67,8 +67,8 @@ export const nicotineModuleSlides = {
   3: {
     slide_type: 'info',
     header: {
-      title: 'What are you smoking?',
-      text: null,
+      header: 'What are you smoking?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -128,8 +128,8 @@ export const nicotineModuleSlides = {
   4: {
     slide_type: 'info',
     header: {
-      title: 'Is hookah considered smoking?',
-      text: null,
+      header: 'Is hookah considered smoking?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -153,8 +153,8 @@ export const nicotineModuleSlides = {
   5: {
     slide_type: 'info',
     header: {
-      title: 'Did you know?',
-      text: null,
+      header: 'Did you know?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -178,8 +178,8 @@ export const nicotineModuleSlides = {
   6: {
     slide_type: 'info',
     header: {
-      title: 'Smokeless Tobacco',
-      text: null,
+      header: 'Smokeless Tobacco',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -201,15 +201,15 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: '<b>Don’t be fooled!</b> Even though there\'s no actual smoke, smokeless tobacco can cause just as many problems as other kinds including mouth, tongue, cheek, and gum cancer.'
         }
-      },
+      }
     }
   },
   // slide 13
   7: {
     slide_type: 'info',
     header: {
-      title: 'Vaping',
-      text: null,
+      header: 'Vaping',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -234,8 +234,8 @@ export const nicotineModuleSlides = {
   8: {
     slide_type: 'info',
     header: {
-      title: 'What\'s in vape smoke?',
-      text: null,
+      header: 'What\'s in vape smoke?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -254,11 +254,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 15
-  8: {
+  10: {
     slide_type: 'info',
     header: {
-      title: 'What\'s in your urine?',
-      text: null,
+      header: 'What\'s in your urine?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -280,16 +280,16 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'What\'s even crazier is that they found these chemicals in the pee of those who vaped <b>without</b> nicotine. This could mean that the vaping and heating process is what\'s causing the danger!'
         }
-      },
+      }
     }
   },
   // slide 16 ???
   // slide 17
-  9: {
+  11: {
     slide_type: 'inputComparison',
     header: {
-      title: 'What\'s your guess?',
-      text: null,
+      header: 'What\'s your guess?',
+      sub_header: null,
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
@@ -316,20 +316,20 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 18
-  10: {
+  12: {
     slide_type: 'inputPieChart',
     header: {
-      title: 'Here are the answers',
-      text: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
+      header: 'Here are the answers',
+      sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
   // slide 19
-  11: {
+  13: {
     slide_type: 'info',
     header: {
-      title: 'Don\'t be misled!',
-      text: null,
+      header: 'Don\'t be misled!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -352,11 +352,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 20
-  12: {
+  14: {
     slide_type: 'info',
     header: {
-      title: 'Be Aware!',
-      text: null,
+      header: 'Be Aware!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -378,16 +378,16 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'While vape pens might look cool, they mask how much nicotine we consume. Some can actually deliver nicotine faster than regular cigarettes. This means that we may be ingesting more nicotine and chemicals while vaping!'
         }
-      },
+      }
     }
   },
   // slide 21 & 22 survey?
   // slide 23
-  13: {
+  15: {
     slide_type: 'info',
     header: {
-      title: 'Don\'t get stuck in the cycle',
-      text: null,
+      header: 'Don\'t get stuck in the cycle',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -408,11 +408,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 24
-  14: {
+  16: {
     slide_type: 'info',
     header: {
-      title: 'The truth hurts!',
-      text: null,
+      header: 'The truth hurts!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -436,11 +436,11 @@ export const nicotineModuleSlides = {
   // slide 25 ???
   // slide 26 card flip
   // slide 27
-  15: {
+  17: {
     slide_type: 'info',
     header: {
-      title: 'Sleep for Success',
-      text: null,
+      header: 'Sleep for Success',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -462,17 +462,17 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'Nicotine use may also create other sleep interruptions. Research has shown that nicotine-users spend more time sleeping lightly and less time in deep sleep than non-users.'
         }
-      },
+      }
     }
   },
   // slide 28 card flip
   // slide 29 time line card flip
-  // slide 30 
-  16: {
+  // slide 30
+  18: {
     slide_type: 'info',
     header: {
-      title: 'How to say "No"',
-      text: null,
+      header: 'How to say "No"',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -504,11 +504,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 31
-  17: {
+  19: {
     slide_type: 'info',
     header: {
-      title: 'CSUN Clear the Air!',
-      text: null,
+      header: 'CSUN Clear the Air!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -535,11 +535,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 32
-  18: {
+  20: {
     slide_type: 'info',
     header: {
-      title: 'Healthy Alternatives',
-      text: null,
+      header: 'Healthy Alternatives',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -561,11 +561,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 33
-  19: {
+  21: {
     slide_type: 'info',
     header: {
-      title: 'Shake it off!',
-      text: null,
+      header: 'Shake it off!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -605,11 +605,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 34
-  20: {
+  22: {
     slide_type: 'info',
     header: {
-      title: 'Let off some steam – by talking!',
-      text: null,
+      header: 'Let off some steam – by talking!',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -637,14 +637,15 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 35
-  21: {
+  23: {
     slide_type: 'cardFlip',
     header: {
-      title: 'Healthy Inhale!',
-      text: null,
+      header: 'Healthy Inhale!',
+      sub_header: null,
       tooltip: 'Flip all cards to proceed to the next slide'
     },
     content: {
+      card_break: false,
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
@@ -671,11 +672,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide  36
-  22: {
+  24: {
     slide_type: 'emailForm',
     header: {
-      title: 'Set a Wellness Goal',
-      text: 'Now is a great time to set a wellness goal for reducing stress or anxiety! Or if you use tobacco products (cigs, vape pens, etc.), what next steps can you take to reduce your nicotine use?',
+      header: 'Set a Wellness Goal',
+      sub_header: 'Now is a great time to set a wellness goal for reducing stress or anxiety! Or if you use tobacco products (cigs, vape pens, etc.), what next steps can you take to reduce your nicotine use?',
       tooltip: null
     },
     content: {
@@ -683,11 +684,11 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 37
-  23: {
+  25: {
     slide_type: 'info',
     header: {
-      title: 'Resources',
-      text: null,
+      header: 'Resources',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -708,23 +709,13 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 38
-  24: {
+  26: {
     slide_type: 'info',
     header: {
-      title: null,
-      text: null
+      header: 'Thank you for completing this module!',
+      sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
-    content: {
-      0: {
-        paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
-        }
-      }
-    },
-    format: {
-      images: 'bottom'
-    }
+    content: null
   }
 }
 export default nicotineModuleSlides

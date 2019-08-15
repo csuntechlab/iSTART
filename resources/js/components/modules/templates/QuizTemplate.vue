@@ -2,11 +2,11 @@
   <div class="module-quiz">
     <div class="row">
       <div class="col-12">
-        <h1 class="module-quiz__header-font">{{ currentSlideData.header.title }}</h1>
+        <h1 class="module-text__header">{{ currentSlideData.header.title }}</h1>
       </div>
     </div>
     <div class="col-12">
-      <p v-if="currentSlideData.header.text"> {{ currentSlideData.header.text }}</p>
+      <p v-if="currentSlideData.header.text" class="module-text__text"> {{ currentSlideData.header.text }} </p>
       <info-photo v-for="(element, id) in currentSlideData.content.images"
         :key="`${id}-${element.id}`"
         :image="element"
