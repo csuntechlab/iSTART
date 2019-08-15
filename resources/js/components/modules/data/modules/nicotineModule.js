@@ -645,6 +645,7 @@ export const nicotineModuleSlides = {
       tooltip: 'Flip all cards to proceed to the next slide'
     },
     content: {
+      card_break: false,
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {

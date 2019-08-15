@@ -19,6 +19,7 @@ export const marijuanaModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      card_break: false,
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
@@ -357,6 +358,7 @@ export const marijuanaModuleSlides = {
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
+      card_break: false,
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
