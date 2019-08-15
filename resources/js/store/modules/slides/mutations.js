@@ -1,4 +1,12 @@
 export default {
+  SET_MODULE_DATA (state, payload) {
+    state.moduleData = payload
+  },
+
+  SET_MODULE_INDEX (state, payload) {
+    state.currentModuleIndex = payload
+  },
+
   SET_CURRENT_MODULE (state, payload) {
     state.currentModule = payload
   },
@@ -6,25 +14,37 @@ export default {
   NAVIGATE_FROM_SLIDE (state, payload) {
     state.slideContentVisibility = false
 
+    let moduleData = state.moduleData
+    let currentModuleIndex = state.currentModuleIndex
+    let moduleProgress = moduleData[currentModuleIndex].progress
+
     if (payload === 'back') {
-      state.currentSlideNumber -= 1
+      moduleProgress.current_slide -= 1
     } else if (payload === 'forward') {
-      state.currentSlideNumber += 1
+      moduleProgress.current_slide += 1
     }
 
-    if (state.currentSlideNumber > state.latestSlideNumber) {
-      state.latestSlideNumber = state.currentSlideNumber
+    if (moduleProgress.current_slide > moduleProgress.latest_slide) {
+      moduleProgress.latest_slide = moduleProgress.current_slide
     }
+
+    // Calculate and store slide_percentage as number for module data
+    let totalSlides = Object.keys(state.JSONSlideData).length
+    moduleProgress.slide_percentage = ((moduleProgress.latest_slide / (totalSlides - 1)) * 100).toFixed(2)
 
     state.slideContentVisibility = true
   },
 
   NAVIGATE_TO_SLIDE (state, payload) {
     state.slideContentVisibility = false
-    state.currentSlideNumber = payload
 
-    if (state.currentSlideNumber > state.latestSlideNumber) {
-      state.latestSlideNumber = payload
+    let moduleData = state.moduleData
+    let currentModuleIndex = state.currentModuleIndex
+    let moduleProgress = moduleData[currentModuleIndex].progress
+    moduleProgress.current_slide = payload
+
+    if (moduleProgress.current_slide > moduleProgress.latest_slide) {
+      moduleProgress.latest_slide = payload
     }
 
     state.slideContentVisibility = true
