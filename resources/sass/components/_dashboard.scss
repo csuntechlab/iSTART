@@ -57,8 +57,11 @@
 
     &-module {
         margin-bottom: 1rem;
+        pointer-events: none;
 
         @include media-breakpoint-down(sm) {
+            pointer-events: initial;
+            cursor: pointer;
             overflow: hidden;
             border-radius: .5rem;
             box-shadow: $apply-box-shadow;
@@ -198,6 +201,8 @@
         &__status {
             background: none;
             border: none;
+            pointer-events: initial;
+            cursor: pointer;
 
             &-wrapper {
                 text-align: right;
