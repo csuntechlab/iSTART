@@ -16,17 +16,89 @@
         min-height: calc(100vh - 8.25rem);
     }
 
+    &__wrapper {
+        margin-top: 2rem;
+
+        @include media-breakpoint-up(md) {
+            padding: 0 3rem;
+            margin-top: 1.25rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 6rem;
+        }
+    }
+
     &-content {
         overflow: auto;
         height: calc(100vh - 9rem);
         width: 100%;
 
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             height: calc(100vh - 6.5rem);
             padding-bottom: 25px;
         }
     }
-    
+
+    &-text {
+        &__header {
+            color: $heading-color;
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__sub-header {
+            color: $heading-color;
+            font-weight: normal;
+            font-size: 1.35rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.15rem;
+            }
+        }
+
+        &__text {
+            color: $text-color;
+            font-weight: normal;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.95rem;
+            }
+        }
+
+        &__list {
+            color: $text-color;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__caption {
+            color: $text-color;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+    }
+
     &-footer {
         display: flex;
         flex-flow: row;

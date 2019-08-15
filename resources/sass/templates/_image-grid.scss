@@ -4,11 +4,9 @@
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
+
     &__img{
         width: 100%;
         max-width: 18rem;
-    }
-    &__caption{
-        @extend %default-copy;
     }
 }

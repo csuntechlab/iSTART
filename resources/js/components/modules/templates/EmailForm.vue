@@ -6,20 +6,16 @@
     <div v-if="surveyResultsEmailWasSubmitted===false" class="alert alert-danger transition-350ms">
       <strong>Failure. </strong> An error has occured
     </div>
-    <h1 class="emailForm__heading">
-      {{ currentSlideData.header.title }}
-    </h1>
-    <p>
-      {{ currentSlideData.header.text }}
-    </p>
+    <h1 class="module-text__header">{{ currentSlideData.header.header }}</h1>
+    <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
     <form>
       <div class="emailForm__text-area-container">
         <textarea
-        class="emailForm__text-area form-control"
+        class="module-text__text emailForm__text-area form-control"
         :placeholder="currentSlideData.content.textAreaPlaceHolder"
         v-model="wellnessGoal"
         ></textarea>
-        <h2 v-if="wellnessGoal.length > 0" @click="sendUserSurveyResults" class="multiChoiceSurveyResults__mail transition-350ms">
+        <h2 v-if="wellnessGoal.length > 0" @click="sendUserSurveyResults" class="module-text__text multiChoiceSurveyResults__mail transition-350ms">
           <i class="fas fa-envelope"></i>
           Email this goal to yourself
         </h2>

@@ -1,7 +1,7 @@
 <template>
   <div class="col-12">
     <div class="module-quiz__question">
-      <p>{{ object.question }}</p>
+      <p class="module-text__sub-header">{{ object.question }}</p>
     </div>
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
@@ -16,11 +16,11 @@
           </div>
 
           <div :class="[(object.options[optionIndex].show ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
-            <img :src="element.img.src" :alt="element.img.alt">
-            <div v-html="element.text"></div>
+            <img v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
+            <p v-html="element.text"></p>
 
             <div :class="[(element.show ? 'module-quiz__response--active' : ''), 'module-quiz__response']">
-              <div v-html="element.response.text"></div>
+              <p v-html="element.response.text"></p>
               <div class="module-quiz__response-image">
                 <img :src="element.response.img.src" :alt="element.response.img.alt">
               </div>

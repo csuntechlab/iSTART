@@ -14,8 +14,8 @@ export const marijuanaModuleSlides = {
   1: {
     slide_type: 'cardFlip',
     header: {
-      title: 'Recreation vs. Medicinal Use',
-      text: null,
+      header: 'Recreation vs. Medicinal Use',
+      sub_header: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
@@ -61,8 +61,8 @@ export const marijuanaModuleSlides = {
   2: {
     slide_type: 'info',
     header: {
-      title: 'THC Content Throughout the Years',
-      text: null,
+      header: 'THC Content Throughout the Years',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -85,8 +85,8 @@ export const marijuanaModuleSlides = {
   3: {
     slide_type: 'info',
     header: {
-      title: 'Cannabis Tolerance',
-      text: null,
+      header: 'Cannabis Tolerance',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -110,8 +110,8 @@ export const marijuanaModuleSlides = {
   4: {
     slide_type: 'info',
     header: {
-      title: 'Marijuana Use: Smoking',
-      text: null,
+      header: 'Marijuana Use: Smoking',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -177,8 +177,8 @@ export const marijuanaModuleSlides = {
   5: {
     slide_type: 'info',
     header: {
-      title: 'Marijuana Use: Edibles',
-      text: null,
+      header: 'Marijuana Use: Edibles',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -202,8 +202,8 @@ export const marijuanaModuleSlides = {
   6: {
     slide_type: 'info',
     header: {
-      title: 'Be cautious with edibles.',
-      text: null,
+      header: 'Be cautious with edibles.',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -226,8 +226,8 @@ export const marijuanaModuleSlides = {
   7: {
     slide_type: 'info',
     header: {
-      title: 'Samuel\'s Story',
-      text: null,
+      header: 'Samuel\'s Story',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -257,8 +257,8 @@ export const marijuanaModuleSlides = {
   8: {
     slide_type: 'info',
     header: {
-      title: 'Marijuana Use: Vaping',
-      text: null,
+      header: 'Marijuana Use: Vaping',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -282,8 +282,8 @@ export const marijuanaModuleSlides = {
   9: {
     slide_type: 'inputComparison',
     header: {
-      title: 'What\'s your guess?',
-      text: null,
+      header: 'What\'s your guess?',
+      sub_header: null,
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
@@ -301,8 +301,8 @@ export const marijuanaModuleSlides = {
   10: {
     slide_type: 'inputPieChart',
     header: {
-      title: 'Here are the answers',
-      text: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
+      header: 'Here are the answers',
+      sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
@@ -310,8 +310,8 @@ export const marijuanaModuleSlides = {
   11: {
     slide_type: 'info',
     header: {
-      title: 'Daily Use',
-      text: null,
+      header: 'Daily Use',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -338,8 +338,8 @@ export const marijuanaModuleSlides = {
   12: {
     slide_type: 'video',
     header: {
-      title: 'Risks of Marijuana Use',
-      text: 'Watch this video to learn about the risks of Marijuana use.',
+      header: 'Risks of Marijuana Use',
+      sub_header: 'Watch this video to learn about the risks of Marijuana use.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -352,8 +352,8 @@ export const marijuanaModuleSlides = {
   13: {
     slide_type: 'cardFlip',
     header: {
-      title: 'How does marijuana affect the brain?',
-      text: null,
+      header: 'How does marijuana affect the brain?',
+      sub_header: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
     content: {
@@ -413,8 +413,8 @@ export const marijuanaModuleSlides = {
   14: {
     slide_type: 'info',
     header: {
-      title: 'What are the long-term effects of marijuana use?',
-      text: null,
+      header: 'What are the long-term effects of marijuana use?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -443,8 +443,8 @@ export const marijuanaModuleSlides = {
   15: {
     slide_type: 'info',
     header: {
-      title: 'Academic Performance',
-      text: null,
+      header: 'Academic Performance',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -473,8 +473,8 @@ export const marijuanaModuleSlides = {
   16: {
     slide_type: 'info',
     header: {
-      title: 'Is marijuana addictive?',
-      text: null,
+      header: 'Is marijuana addictive?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -526,8 +526,8 @@ export const marijuanaModuleSlides = {
   17: {
     slide_type: 'info',
     header: {
-      title: 'What\'s legal in California?',
-      text: null,
+      header: 'What\'s legal in California?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -579,8 +579,8 @@ export const marijuanaModuleSlides = {
   18: {
     slide_type: 'info',
     header: {
-      title: 'Should I take an Uber?',
-      text: null,
+      header: 'Should I take an Uber?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -607,8 +607,8 @@ export const marijuanaModuleSlides = {
   19: {
     slide_type: 'info',
     header: {
-      title: 'Responsible Marijuana Use Checklist',
-      text: null,
+      header: 'Responsible Marijuana Use Checklist',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -651,8 +651,8 @@ export const marijuanaModuleSlides = {
   20: {
     slide_type: 'info',
     header: {
-      title: 'How to say NO to marijuana.',
-      text: null,
+      header: 'How to say NO to marijuana.',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -688,8 +688,8 @@ export const marijuanaModuleSlides = {
   21: {
     slide_type: 'info',
     header: {
-      title: 'Did you know?',
-      text: null,
+      header: 'Did you know?',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -717,8 +717,8 @@ export const marijuanaModuleSlides = {
   22: {
     slide_type: 'info',
     header: {
-      title: 'Get enough sunlight',
-      text: null,
+      header: 'Get enough sunlight',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -741,8 +741,8 @@ export const marijuanaModuleSlides = {
   23: {
     slide_type: 'info',
     header: {
-      title: 'Mind-Body Wellness',
-      text: null,
+      header: 'Mind-Body Wellness',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -777,8 +777,8 @@ export const marijuanaModuleSlides = {
   24: {
     slide_type: 'emailForm',
     header: {
-      title: 'Set a wellness goal!',
-      text: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ \n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
+      header: 'Set a wellness goal!',
+      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ \n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
       tooltip: null
     },
     content: {
@@ -789,8 +789,8 @@ export const marijuanaModuleSlides = {
   25: {
     slide_type: 'info',
     header: {
-      title: 'Resources',
-      text: null,
+      header: 'Resources',
+      sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -812,20 +812,10 @@ export const marijuanaModuleSlides = {
   26: {
     slide_type: 'info',
     header: {
-      title: null,
-      text: null
+      header: 'Thank you for completing this module!',
+      sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
-    content: {
-      0: {
-        paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
-        }
-      }
-    },
-    format: {
-      images: 'bottom'
-    }
+    content: null
   }
 }
 export default marijuanaModuleSlides
