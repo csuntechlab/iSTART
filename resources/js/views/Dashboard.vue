@@ -5,8 +5,8 @@
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
     <!--
       USED TO TEST MODULES WITH NO BACKEND ON DEV
+      <ComparisonGroup></ComparisonGroup>
     -->
-    <ComparisonGroup v-if="process.env.NODE_ENV === 'development'"></ComparisonGroup>
     <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
     <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
   </div>
