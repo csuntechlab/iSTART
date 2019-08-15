@@ -4,7 +4,7 @@
       <p
         v-for="(element, index) in paragraph"
         :key="paragraph[`${index}`]"
-        class="module-info__copy"
+        class="module-text__text"
         v-html="paragraph[`${index}`]">
       </p>
     </div>

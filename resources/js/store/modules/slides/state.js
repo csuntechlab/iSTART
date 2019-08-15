@@ -1,8 +1,9 @@
 export default {
+  moduleData: {},
   JSONSlideData: {},
   currentModule: null,
-  currentSlideNumber: 0,
-  latestSlideNumber: 0,
+  currentModuleIndex: 0,
+
   slideContentVisibility: false,
   enableContinue: false,
   enableBack: false,

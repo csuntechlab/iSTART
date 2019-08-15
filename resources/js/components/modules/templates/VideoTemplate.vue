@@ -1,10 +1,8 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
     <div class="video-template__header col-12">
-      <h1 class="video-template__title">
-        {{ currentSlideData.header.title }}
-      </h1>
-      <p class="video-template__sub-heading">{{ currentSlideData.header.text }}</p>
+      <h1 v-if="currentSlideData.header.header !== null" class="video-template__title module-text__header">{{ currentSlideData.header.header }}</h1>
+      <h2 v-if="currentSlideData.header.sub_header !== null" class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
     </div>
     <div class="video-template__video col-12 col-md-10">
       <div class="embed-responsive embed-responsive-16by9">
@@ -12,7 +10,7 @@
       </div>
     </div>
     <div class="video-template__caption col-12">
-      <caption>{{ currentSlideData.content.caption }}</caption>
+      <caption v-if="currentSlideData.content.caption !== null" class="module-text__caption">{{ currentSlideData.content.caption }}</caption>
     </div>
   </div>
 </template>

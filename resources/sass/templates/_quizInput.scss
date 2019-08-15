@@ -1,18 +1,10 @@
 .module-quizInput {
-    &__header {
-        @extend %default-heading;
-    }
-
     &__question {
         margin-top: 3rem;
     }
 
     &__question:nth-child(2) {
         margin-top: 0;
-    }
-
-    &__text {
-        @extend %default-copy;
     }
 
     &__form {
