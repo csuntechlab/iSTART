@@ -16,7 +16,7 @@ export default {
             {
               label: 'Data One',
               backgroundColor: [
-                '#3861D1',
+                '#B999FF',
                 '#DEDEDE'
               ],
               data: [this.response, 100 - this.response]
@@ -29,7 +29,7 @@ export default {
             {
               label: 'Data One',
               backgroundColor: [
-                '#3376C6',
+                '#5CBBE4',
                 '#DEDEDE'
               ],
               data: [this.sources, 100 - this.sources]
