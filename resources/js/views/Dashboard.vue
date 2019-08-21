@@ -1,13 +1,13 @@
 <template>
   <div class="dashboard container">
-    <navbar/>
+    <navbar/>s
     <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
     <!--
-      Removed until infrastructure is set up
-      <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
+      USED TO TEST MODULES WITH NO BACKEND ON DEV
+      <ComparisonGroup></ComparisonGroup>
     -->
-    <ComparisonGroup></ComparisonGroup>
+    <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
     <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
   </div>
 </template>
