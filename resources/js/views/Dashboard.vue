@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard container">
-    <navbar/>s
+    <navbar/>
     <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
     <!--
