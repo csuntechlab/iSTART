@@ -70,7 +70,7 @@ export const marijuanaModuleSlides = {
       0: {
         paragraph: {
           0: 'The level of THC in marijuana is not always the same. It can vary depending on the plant strain, growth, processing, and storage.',
-          1: 'The amount of THC in marijuana has increased over the years. This may mean smoking or ingesting higher THC levelsthan expected, and possibly a more dangerous reaction.'
+          1: 'The amount of THC in marijuana has increased over the years. This may mean smoking or ingesting higher THC levels than expected, and possibly a more dangerous reaction.'
         }
       },
       1: {
@@ -240,7 +240,7 @@ export const marijuanaModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which ofthe following should Sam consider?'
+          0: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which of the following should Sam consider?'
         }
       },
       2: {
@@ -770,7 +770,7 @@ export const marijuanaModuleSlides = {
         paragraph: {
           0: 'As more research becomes available, stay in the know and consult official sources.'
         }
-      },
+      }
     }
   },
   // slide 25
