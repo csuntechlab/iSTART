@@ -4,8 +4,9 @@
       <button @click="slideBack" class="module-footer__button button button-primary">Back</button>
     </span>
     <span v-if="checkForEnd()" class="module-footer__item-right module-footer__item">
-      <button v-if="isContinueButtonEnabled" @click="slideForward" class="module-footer__button button button-primary">Continue</button>
-
+      <button v-if="isContinueButtonEnabled" @click="slideForward" class="module-footer__button button button-primary">
+        Continue
+      </button>
       <div v-else>
         <div id="tooltip" class="module-footer__tooltip hidden">{{ currentSlideData.header.tooltip }}</div>
         <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled">Continue</button>
@@ -51,6 +52,7 @@ export default {
       this.navigateFromSlide('forward')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
+      this.goToTop()
     },
 
     slideBack () {
@@ -59,6 +61,7 @@ export default {
       this.navigateFromSlide('back')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
+      this.goToTop()
     },
 
     checkForStart () {
@@ -94,6 +97,12 @@ export default {
 
     hideTooltip () {
       document.getElementById('tooltip').classList.add('hidden')
+    },
+
+    goToTop () {
+      window.scrollTo({
+        top: 0
+      })
     }
   }
 }
