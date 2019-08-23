@@ -46,7 +46,7 @@
         @include media-breakpoint-down(sm) {
             width: 100%;
             display: block;
-            background: #1E52B3;
+            background: $item-wrapper-background;
             height: 0;
             overflow: hidden;
             transition: all .5s;
@@ -84,7 +84,7 @@
             padding: 1rem;
             text-align: left;
             &:hover{
-                background: #1347AA;
+                background: $item-hover-background;
             }
         }
     }

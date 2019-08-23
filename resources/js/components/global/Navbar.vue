@@ -41,7 +41,6 @@ export default {
 
   data () {
     return {
-      getBodyTag: '',
       isNavOpen: false,
       module_title: 'Alcohol'
     }

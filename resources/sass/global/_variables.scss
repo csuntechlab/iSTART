@@ -13,6 +13,7 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $heading-color: #4A5D6E;
 $text-color: #354A5C;
+$place-holder-text: #4D5966;
 
 // Colors
 $indigo: #6574cd;
@@ -31,7 +32,6 @@ $mauve: #B999FF;
 $back-of-card: #F4F4F4;
 $gallery: #EFEFEF;
 $link-water: #EDEBFA;
-$river-bed: #4D5966;
 
 $primaryColor: rgb(55, 113, 220);
 $primaryColor--lighter: lighten($primaryColor, 0.4);
@@ -85,6 +85,10 @@ $theme-colors: (
     "primary": $primaryColor,
     "secondary": $secondaryColor
 );
+
+//Nav Elements
+$item-wrapper-background: #1E52B3;
+$item-hover-background: #1347AA;
 
 //Box Shadows
 $apply-box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);
