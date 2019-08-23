@@ -6,13 +6,14 @@
 
 // Body
 $body-bg: #FAFAFA;
-$inputBorder: rgb(188,224,253);
+$inputBorder: #CECECE;
 // Typography
 $font-family-sans-serif: "Open Sans", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $heading-color: #4A5D6E;
 $text-color: #354A5C;
+$place-holder-text: #4D5966;
 
 // Colors
 $indigo: #6574cd;
@@ -84,6 +85,10 @@ $theme-colors: (
     "primary": $primaryColor,
     "secondary": $secondaryColor
 );
+
+//Nav Elements
+$item-wrapper-background: #1E52B3;
+$item-hover-background: #1347AA;
 
 //Box Shadows
 $apply-box-shadow: .05rem .05rem 6px rgba(0, 0, 0, 0.5);

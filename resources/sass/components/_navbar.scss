@@ -1,54 +1,22 @@
 
 .navbar{
     background-color: $primaryColor;
-    color: $white;
+    width: 100%;
     margin: auto;
-    padding: 0.3rem 1rem;
-
-    @include media-breakpoint-up(md) {
-        height: 0;
-        padding: 0rem 0.5rem;    
-    }
-    
-    &__menu-toggles {
-        width: 100%;
-        display: flex; 
-        justify-content: space-between;
-        @include media-breakpoint-up(md) {
-            width: auto;    
-        }
-    }
-
-    &__title {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-left: -.8rem;
-        @include media-breakpoint-up(md) {
-            display: flex;
-            margin-left: 0.8rem;
-            padding: .5rem;
-            font-size: 2.25rem;
-            text-align: left;
-
-            color: $white;
-        }
-    }
-
-    &-wrapper {
-        pointer-events: none;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    @include media-breakpoint-down(sm) {
         position: fixed;
         top: 0;
-        z-index: 2;
-        height: 100%;
-        width: 100%;
+        z-index: 100;
+        padding: 0;
+    }
 
-        @include media-breakpoint-up(md) {
-            position: sticky;
-            height: initial;
-        }
-
-        & * {
-            pointer-events: auto;
+    &__logo{
+        width: 5.75rem;
+        @include media-breakpoint-down(sm) {
+            display: none;
         }
     }
 
@@ -57,8 +25,8 @@
         border: none;
         color: $white;
         font-size: 1.65rem;
-        margin-left: 0.8rem;
-
+        padding: 1rem;
+        line-height: 0;
         &:hover {
             color: $grey--lighter;
         }
@@ -66,61 +34,58 @@
             display: none;
         }
     }
-    &__text{
-        font-size: 1.12rem;
-        @include media-breakpoint-up(md){
-            font-size:1.2rem;
-        }
-    }
 
-    &-dropdown{
-        background-color: $primaryColor;
-        overflow: hidden;
-        height: 0;
-        justify-content: flex-end;
+    &__item-wrapper{
+        display: flex;
+        justify-content: space-around;
+        width: 58%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
 
-
-        &--show {
-            padding: 0.5rem 0;
-            height: 100%;
-        }
-
-        &-list {
-            border: 1px solid $primaryColor--medium;
-            @include media-breakpoint-up(md) {
-                flex-direction: row;
-                border: 0;
-                padding-right: 2rem;
-            }
-        }
-
-        &__item {
-            font-size: 1rem;
-            font-weight: normal;
-            padding-left: 2.3rem;
-            padding-top: 0.85rem;
-            padding-bottom: 0.85rem;
-            & > * {
-                color: $white;
-            }
-        }
-        a.navbar-dropdown__divider{
-            text-decoration: none;
-        }
-        &__divider {
-            &:focus *,:hover *{
-                border-bottom: 2px solid $white;   
-            }
-            &:not(:nth-child(1)) {
-                border-top: 1px solid $primaryColor--medium;
-                @include media-breakpoint-up(md) {
-                    border: none;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            display: block;
+            background: $item-wrapper-background;
+            height: 0;
+            overflow: hidden;
+            transition: all .5s;
+            &--active{
+                height: 93vh;
+                .navbar__link{
+                    opacity: 1;
                 }
             }
         }
-        @include media-breakpoint-up(md) {
-            display: flex;
-            height: 3.5rem;
+    }
+
+    &__link{
+        color: $white;
+        padding: 0 .15rem;
+        @include media-breakpoint-down(sm) {
+            opacity: 0;
+            transition: ease-in opacity .5s;
+            transition-delay: .35s;
+        }
+        &:hover {
+            color: $white;
+            @include media-breakpoint-up(md) {
+                border-bottom: .2rem solid $white;
+            }
+        }
+    }
+
+    &__item{
+        text-align: center;
+        font-weight: 600;
+        font-size: .9rem;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+            &:hover{
+                background: $item-hover-background;
+            }
         }
     }
 }

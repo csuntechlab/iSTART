@@ -3,7 +3,8 @@
     <Navbar/>
     <DashboardNotification v-if="user.user_group !=='control'"></DashboardNotification>
     <ControlGroup v-if="user.user_group === 'control'"></ControlGroup>
-    <ComparisonGroup v-if="isDevelopment"></ComparisonGroup>
+    <!-- Development Mode -->
+    <ComparisonGroup v-if="isDevelopmentMode"></ComparisonGroup>
     <ComparisonGroup v-if="user.user_group === 'comparison'"></ComparisonGroup>
     <InterventionGroup v-if="user.user_group === 'intervention'"></InterventionGroup>
   </div>
@@ -23,20 +24,9 @@ export default {
   mixins: [changeRouteTitle],
   computed: {
     ...mapGetters([
-      'user'
+      'user',
+      'isDevelopmentMode'
     ])
-  },
-
-  data () {
-    return {
-      isDevelopment: false
-    }
-  },
-
-  mounted () {
-    if (process.env.NODE_ENV === 'development') {
-      this.isDevelopment = true
-    }
   },
 
   components: {
