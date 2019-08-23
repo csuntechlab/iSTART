@@ -1,14 +1,12 @@
 <template>
   <div class="dashboard container">
-    <navbar/>
-    <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
-    <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
-    <!--
-      USED TO TEST MODULES WITH NO BACKEND ON DEV
-      <ComparisonGroup></ComparisonGroup>
-    -->
-    <ComparisonGroup v-if="this.user.user_group === 'comparison'"></ComparisonGroup>
-    <InterventionGroup v-if="this.user.user_group === 'intervention'"></InterventionGroup>
+    <Navbar/>
+    <DashboardNotification v-if="user.user_group !=='control'"></DashboardNotification>
+    <ControlGroup v-if="user.user_group === 'control'"></ControlGroup>
+    <!-- Development Mode -->
+    <ComparisonGroup v-if="isDevelopmentMode"></ComparisonGroup>
+    <ComparisonGroup v-if="user.user_group === 'comparison'"></ComparisonGroup>
+    <InterventionGroup v-if="user.user_group === 'intervention'"></InterventionGroup>
   </div>
 </template>
 
@@ -26,9 +24,11 @@ export default {
   mixins: [changeRouteTitle],
   computed: {
     ...mapGetters([
-      'user'
+      'user',
+      'isDevelopmentMode'
     ])
   },
+
   components: {
     Navbar,
     ControlGroup,

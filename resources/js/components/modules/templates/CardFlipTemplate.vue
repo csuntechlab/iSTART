@@ -20,7 +20,7 @@
           </section>
         </div>
         <div class="card-flip__card-back interactable-container">
-          <p v-html="item.back.description"></p>
+          <p class="module-text__text" v-html="item.back.description"></p>
         </div>
       </div>
     </div>

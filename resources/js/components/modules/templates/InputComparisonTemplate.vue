@@ -5,7 +5,7 @@
       <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
       <div class="row">
         <div class="col-12">
-          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your respsone using numerical values 0 to 100.</p>
+          <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your response using numerical values 0 to 100.</p>
         </div>
         <section class="module-quizInput__form" novalidate="true">
           <input-response v-for="(element, index) in currentSlideData.content.questions"
