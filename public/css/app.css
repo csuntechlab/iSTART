@@ -11926,7 +11926,6 @@ body {
 }
 
 .login {
-  background-color: white;
   min-height: calc(100vh - 3.3rem);
   margin-top: 3.3rem;
 }
@@ -11955,13 +11954,13 @@ body {
 
 @media (max-width: 767.98px) {
   .login {
-    background-color: white;
+    background-color: #FAFAFA;
     height: 100vh;
     margin-top: 0;
   }
 
   .login-container {
-    background-color: white;
+    background-color: #FAFAFA;
   }
 
   .login__title {
@@ -11970,23 +11969,33 @@ body {
   }
 }
 
+.login__logo {
+  width: 12.5rem;
+}
+
+@media (min-width: 768px) {
+  .login__logo {
+    width: 14.5rem;
+  }
+}
+
 .login ::-webkit-input-placeholder {
-  color: #3972dc;
+  color: #4D5966;
   font-size: 0.75rem;
 }
 
 .login :-ms-input-placeholder {
-  color: #3972dc;
+  color: #4D5966;
   font-size: 0.75rem;
 }
 
 .login ::-ms-input-placeholder {
-  color: #3972dc;
+  color: #4D5966;
   font-size: 0.75rem;
 }
 
 .login ::placeholder {
-  color: #3972dc;
+  color: #4D5966;
   font-size: 0.75rem;
 }
 
@@ -12000,30 +12009,8 @@ body {
 }
 
 .loginForm__label {
-  color: #346fdb;
+  color: #354A5C;
   font-weight: 700;
-}
-
-.loginForm__title {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .loginForm {
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-    padding: 5rem;
-    border-radius: 20px;
-    border: thin solid #3972dc;
-    -webkit-box-shadow: 0 0.75px 2.25px #3972dc;
-            box-shadow: 0 0.75px 2.25px #3972dc;
-  }
-
-  .loginForm__title {
-    display: block;
-    margin-bottom: 1.5rem;
-    color: #346fdb;
-  }
 }
 
 .cookies-notification {
@@ -12681,8 +12668,9 @@ body {
 }
 
 .form-control {
-  border-radius: 15px;
-  border-color: #bce0fd;
+  border-radius: 10px;
+  border-color: #CECECE;
+  padding: 1.45rem 0.85rem;
 }
 
 .button {
