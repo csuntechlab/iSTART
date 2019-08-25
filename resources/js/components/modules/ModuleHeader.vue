@@ -4,10 +4,12 @@
       :progress="latestSlideNumber/(totalSlides - 1)"
       :size="getProgressBarSize"
       :shape="module.shape"
-      :height="getProgressBarHeight"
+      :height="module.height"
       :width="getProgressBarSize"
     />
-    <h1 class="module__progress">{{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}% </h1>
+    <p class="module__percentage">
+      {{ Math.floor((latestSlideNumber/(totalSlides - 1)) * 100) }}%
+    </p>
   </header>
 </template>
 
@@ -24,7 +26,7 @@ export default {
       windowWidth: 0,
       module: {
         shape: 'line',
-        height: 26
+        height: 30
       }
     }
   },
