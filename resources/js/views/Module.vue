@@ -1,7 +1,7 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar/>
-    <module-header></module-header>
+    <module-progress-bar/>
     <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
       <div v-else class="module__wrapper">
@@ -16,7 +16,7 @@
         <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
       </div>
     </main>
-    <module-footer v-if="currentSlideData.slide_type !== 'intro'">></module-footer>
+    <module-footer v-if="currentSlideData.slide_type !== 'intro'"></module-footer>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ import marijuanaModuleSlides from './../components/modules/data/modules/marijuan
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
-import ModuleHeader from './../components/modules/ModuleHeader'
+import ModuleProgressBar from './../components/modules/ModuleProgressBar'
 import ModuleFooter from './../components/modules/ModuleFooter'
 import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
 import InfoTemplate from './../components/modules/templates/InfoTemplate'
@@ -42,7 +42,7 @@ import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate
 
 export default {
   components: {
-    ModuleHeader,
+    ModuleProgressBar,
     ModuleFooter,
     IntroTemplate,
     InfoTemplate,
