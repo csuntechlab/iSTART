@@ -1,7 +1,7 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
     <Navbar/>
-    <module-header :size_of_container="sizeOfContainer"></module-header>
+    <module-header></module-header>
     <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
       <div v-else class="module__wrapper">
@@ -59,8 +59,7 @@ export default {
 
   data () {
     return {
-      windowWidth: 0,
-      sizeOfContainer: 0
+      windowWidth: 0
     }
   },
 
@@ -122,16 +121,6 @@ export default {
   },
 
   mounted () {
-    if (this.$refs.moduleContainer) {
-      this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
-    }
-
-    window.onresize = () => {
-      if (this.$refs.moduleContainer) {
-        this.sizeOfContainer = this.$refs.moduleContainer.clientWidth
-      }
-    }
-
     document.onkeyup = (e) => {
       if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
         // Shift + Tilde = Set slide index
