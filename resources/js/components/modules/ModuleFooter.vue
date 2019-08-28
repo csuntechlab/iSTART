@@ -9,10 +9,12 @@
       </button>
       <div v-else>
         <div id="tooltip" class="module-footer__tooltip hidden">{{ currentSlideData.header.tooltip }}</div>
-        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled">Continue</button>
+        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled">
+          Continue
+        </button>
       </div>
     </span>
-    <span v-else class="module-footer__right module-footer__item-right">
+    <span v-else class="module-footer__item-right module-footer__item">
       <button @click="returnToDashboard" class="module-footer__button button button-primary">Return to Dashboard</button>
     </span>
   </footer>
