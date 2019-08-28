@@ -1,5 +1,5 @@
 <template>
-  <header class="module__header">
+  <header class="module__progressBarWrapper">
     <loading-progress class="module__progressBar"
       :progress="latestSlideNumber/(totalSlides - 1)"
       :shape="module.shape"
