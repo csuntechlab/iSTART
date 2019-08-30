@@ -61,7 +61,8 @@ export default {
         username: '',
         password: ''
       },
-      submitted: false
+      submitted: false,
+      progress: 0
     }
   },
 

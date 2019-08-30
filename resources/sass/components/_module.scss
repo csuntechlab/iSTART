@@ -2,14 +2,15 @@
 .module {
     overflow-x: hidden;
     min-height: 100vh;
-    padding: 0;
     border: 1px solid $border-color;
+    padding: 0;
+    @include media-breakpoint-down(sm) {
+        padding-top: 3.6rem;
+    }
 
-    &__header{
-        margin-top: -2px;
+    &__progressBarWrapper{
         z-index: 1;
-        position: sticky;
-        top: 0;
+        position: relative;
     }
 
     &__content {
@@ -170,25 +171,22 @@
         }
     }
     
-    &__progress{
+    &__percentage{
         font-size: 1rem;
+        line-height: 1;
+        margin: 0;
         color: $black;
         font-weight: bold;
-        margin-top: -25px;
-        margin-bottom: 0;
-        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 }
 .module__progressBar {
-    margin-top: 3.45rem;
-    @include media-breakpoint-up(md){
-        margin-top: 0;
-    }
+    margin: 0;
 }
 
 .module__progressBar.vue-progress-path path {
-    stroke-width: 25;
-    @include media-breakpoint-up(sm){
-        stroke-width: 30;
-    }
+    stroke-width: 30;
 }
