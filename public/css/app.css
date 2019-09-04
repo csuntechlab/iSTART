@@ -12465,6 +12465,10 @@ body {
   position: relative;
 }
 
+.module-footer__item-return {
+  min-width: 12.5rem;
+}
+
 .module-footer__tooltip {
   background-color: rgba(45, 45, 45, 0.8);
   color: white;
@@ -12489,19 +12493,20 @@ body {
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
             justify-content: initial;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+    position: relative;
     margin: 0;
     padding: 0;
+    height: 3.3rem;
   }
 
   .module-footer__item {
     margin: 0;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 
   .module-footer__item-left {
-    position: relative;
+    position: absolute;
     left: 0;
   }
 
@@ -12514,12 +12519,18 @@ body {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0;
-    padding: 1rem 1.5rem;
+    padding: 0;
+    min-width: 4.5rem;
+  }
+
+  .module-footer__item .button-primary:hover {
+    background: none;
   }
 
   .module-footer__tooltip {
-    bottom: 115%;
-    right: 5%;
+    width: calc(100% + 7rem);
+    bottom: 200%;
+    right: 20%;
   }
 }
 
