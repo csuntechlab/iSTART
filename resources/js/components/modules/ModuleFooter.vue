@@ -6,10 +6,12 @@
         Back
       </button>
     </div>
-    <div v-if="checkForEnd()" class="module-footer__item-right module-footer__item">
+    <div v-if="!checkForEnd" class="module-footer__item-right module-footer__item">
       <button v-if="isContinueButtonEnabled" @click="slideForward" class="module-footer__button button button-primary text-left text-md-center">
         Next
-        <!-- <i v-if="this.currentSlideNumber != this.totalSlides - 1" class="fas fa-chevron-right"></i> -->
+        <svg class="svg-inline--fa fa-chevron-right fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+          <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+        </svg>
       </button>
       <div v-else>
         <div id="tooltip" class="module-footer__tooltip hidden">
@@ -20,7 +22,7 @@
         </button>
       </div>
     </div>
-    <div v-else class="module-footer__item-right module-footer__item module-footer__item-return">
+    <div v-if="checkForEnd" class="module-footer__item-right module-footer__item module-footer__item-return">
       <button @click="returnToDashboard" class="module-footer__button button button-primary">
         Return to Dashboard
       </button>
@@ -43,7 +45,14 @@ export default {
         'latestSlideNumber',
         'totalSlides'
       ]
-    )
+    ),
+    checkForEnd () {
+      if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        return true
+      } else {
+        return false
+      }
+    }
   },
 
   methods: {
@@ -77,14 +86,6 @@ export default {
     checkForStart () {
       if (this.currentSlideNumber === 0) {
         this.enableContinue()
-        return false
-      } else {
-        return true
-      }
-    },
-
-    checkForEnd () {
-      if (this.currentSlideNumber === (this.totalSlides - 1)) {
         return false
       } else {
         return true
