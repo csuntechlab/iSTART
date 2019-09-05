@@ -24,6 +24,7 @@
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
+import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
@@ -76,6 +77,9 @@ export default {
       this.setSlideContentVisibility(true)
     } else if (currentModule === 'Marijuana') {
       this.storeJSONInState(marijuanaModuleSlides)
+      this.setSlideContentVisibility(true)
+    } else if (currentModule === 'Prescription Drugs') {
+      this.storeJSONInState(precriptionDrugsSlides)
       this.setSlideContentVisibility(true)
     } else {
       this.$router.push({ name: 'Dashboard' })
