@@ -114,6 +114,9 @@
             &-right {
                 position: relative;
             }
+            &-return{
+                min-width: 12.5rem;
+            }
         }
 
         &__tooltip {
@@ -138,17 +141,18 @@
                 background-color: $primaryColor;
                 width: 100%;
                 justify-content: initial;
-                position: sticky;
-                bottom: 0;
+                position: relative;
                 margin: 0;
                 padding: 0;
+                height: 3.3rem;
             }
 
             &__item {
                 margin: 0;
+                align-self: center;
 
                 &-left {
-                    position: relative;
+                    position: absolute;
                     left: 0;
                 }
     
@@ -160,13 +164,18 @@
                 & .button {
                     box-shadow: none;
                     border-radius: 0;
-                    padding: 1rem 1.5rem;
+                    padding: 0;
+                    min-width: 4.5rem;
+                }
+                & .button-primary:hover {
+                    background: none;
                 }
             }
 
             &__tooltip {
-                bottom: 115%;
-                right: 5%;
+                width: calc(100% + 7rem);
+                bottom: 200%;
+                right: 20%;
             }
         }
     }
