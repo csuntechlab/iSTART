@@ -78,7 +78,7 @@ export const moduleData = {
       completion_status: 'Start',
       completion_date: '00/00/00',
       is_complete: false,
-      is_incomplete: true,
+      is_incomplete: false,
       slide_percentage: 0,
       current_slide: 0,
       latest_slide: 0

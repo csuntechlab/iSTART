@@ -1,6 +1,6 @@
 <template>
 <nav class="navbar">
-  <img class="navbar__logo" src="/images/logos/logo_white.svg" alt="iStart Logo"/>
+  <img class="navbar__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
   <button class="navbar__button" type="button" @click="toggleNavigation">
     <i class="fas fa-bars"></i>
   </button>

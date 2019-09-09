@@ -49,7 +49,7 @@ export const prescriptionDrugsModuleSlides = {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s04_01.png',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s04_01.png',
                             alt: 'Use',
                         },
                         question: null
@@ -62,7 +62,7 @@ export const prescriptionDrugsModuleSlides = {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s04_02.png',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s04_02.png',
                             alt: 'Misuse',
                             caption: null
                         },
@@ -76,7 +76,7 @@ export const prescriptionDrugsModuleSlides = {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s04_03.png',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s04_03.png',
                             alt: 'Abuse',
                             caption: null
                         },
@@ -106,7 +106,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s05_01.png',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s05_01.png',
                     alt: 'Reviewing a notebook',
                 }
             }
@@ -129,7 +129,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s06_01.png',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s06_01.png',
                     alt: 'reading a book',
                 }
             }
@@ -166,7 +166,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s08_01.jpg',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s08_01.jpg',
                     alt: 'getting up from bed stressed',
                 }
             }
@@ -192,22 +192,22 @@ export const prescriptionDrugsModuleSlides = {
             1: {
                 carousel: {
                     0: {
-                        src: 'images/prescriptionDrugsModule/prescription_s09_01.png',
+                        src: 'images/prescriptionDrugsModule/RxDrugs_s09_01.png',
                         alt: 'fatigue, drowsiness, poor concentration, problem with memory',
                         y_position: null
                     },
                     1: {
-                        src: 'images/prescriptionDrugsModule/prescription_s09_02.png',
+                        src: 'images/prescriptionDrugsModule/RxDrugs_s09_02.png',
                         alt: 'dizziness, confusion, nausea',
                         y_position: null
                     },
                     2: {
-                        src: 'images/prescriptionDrugsModule/prescription_s09_03.png',
+                        src: 'images/prescriptionDrugsModule/RxDrugs_s09_03.png',
                         alt: 'unsteady walking, slurred speech',
                         y_position: null
                     },
                     3: {
-                        src: 'images/prescriptionDrugsModule/prescription_s09_04.png',
+                        src: 'images/prescriptionDrugsModule/RxDrugs_s09_04.png',
                         alt: 'slowed breathing',
                         y_position: null
                     },
@@ -232,7 +232,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s10_01.jpg',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s10_01.jpg',
                     alt: 'getting up from bed stressed',
                 }
             }
@@ -315,7 +315,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s14_01.png',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s14_01.png',
                     alt: 'hands reaching for the center',
                 }
             }
@@ -555,7 +555,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s21_01.jpg',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s21_01.jpg',
                     alt: 'a person behind a stack of books',
                 }
             }
@@ -609,7 +609,7 @@ export const prescriptionDrugsModuleSlides = {
             },
             1: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/prescription_s23_01.jpg',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s23_01.jpg',
                     alt: 'an alarm clock in bed',
                 }
             }
@@ -682,14 +682,16 @@ export const prescriptionDrugsModuleSlides = {
             card_flip_count: 0,
             paragraph: {
                 0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
-                1: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON"!'
+                1: 'What if someone wants to use YOUR Rx meds?​Tell them: ',
+                2: '<ul><li>"I can\'t get it refilled easily, and I won\'t be able to stay healthy if I run out​."</li><li>"I\'m on my parents\' insurance, they\'ll wonder why I need to refill it earlier than normal."</li></ul>',
+                3: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON"!'
             },
             cards: {
                 0: {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s26_01.jpg',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s26_01.jpg',
                             alt: 'parfait',
                             caption: null
                         },
@@ -703,7 +705,7 @@ export const prescriptionDrugsModuleSlides = {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s26_02.jpg',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s26_02.jpg',
                             alt: 'sleep',
                             caption: null
                         },
@@ -717,7 +719,7 @@ export const prescriptionDrugsModuleSlides = {
                     show: false,
                     front: {
                         img: {
-                            src: 'images/prescriptionDrugsModule/prescription_s26_03.jpg',
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s26_03.jpg',
                             alt: 'exercise',
                             caption: null
                         },
@@ -726,9 +728,185 @@ export const prescriptionDrugsModuleSlides = {
                     back: {
                         description: 'Offered by a family member? "Thanks for thinking of me, but meds not prescribed to me might have serious side effects!"'
                     }
+                },
+                3: {
+                    show: false,
+                    front: {
+                        img: {
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s26_04.jpg',
+                            alt: 'exercise',
+                            caption: null
+                        },
+                        question: null
+                    },
+                    back: {
+                        description: 'Don\'t forget to ask your doctor: "Is this drug my only option"? "What about the side effects?".'
+                    }
                 }
             }
         }
+    },
+    //Slide 27
+    21: {
+        slide_type: 'info',
+        header: {
+            header: 'Painkiller Alternatives',
+            sub_header: null,
+            tooltip: 'Wait 5 seconds to proceed to the next slide'
+        },
+        content: {
+            0: {
+                paragraph: {
+                    0: 'Most people struggling with opioid addiction got their first opioid Rx to treat a short-term injury or after surgery.',
+                    1: 'To manage pain, opt out of opioids! Some of the options listed below may work better and have fewer risks and side effects.',
+                    2: 'Talk with your healthcare professional about alternatives to opioids:'
+                }
+            },
+            1: {
+                list_element: [
+                    'A combination of acetaminophen (Tylenol) and ibuprofen',
+                    'Naproxen (Aleve)',
+                    'Physical Therapy',
+                    'Exercise',
+                    'Cognitive behavioral therapy',
+                    'Mindfulness-based stress reduction (MBSR)'
+                ]
+            },
+            2: {
+                image: {
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s27_01',
+                    alt: 'hands reaching for the center',
+                }
+            }
+        }
+    },
+    //Slide 28
+    22: {
+        slide_type: 'cardFlip',
+        header: {
+            header: 'Improve your focus and attention',
+            sub_header: null,
+            tooltip: 'Flip all the cards to proceed to the next slide'
+        },
+        content: {
+            card_break: false,
+            cards_flipped: false,
+            card_flip_count: 0,
+            paragraph: {
+                0: 'Taking care of your body physically can do a lot of good.',
+                2: '<b>Flip the cards</b> to learn more.'
+            },
+            cards: {
+                0: {
+                    show: false,
+                    front: {
+                        img: {
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s28_01.jpg',
+                            alt: 'people walking toward the sunset',
+                            caption: null
+                        },
+                        question: null
+                    },
+                    back: {
+                        description: 'Even a short walk can increase focus! Take a brisk walk as a study break. Or join CSUN Walkability Wednesdays for free.  See the resources.'
+                    }
+                },
+                1: {
+                    show: false,
+                    front: {
+                        img: {
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s28_02.jpg',
+                            alt: 'a map of water refill station at CSU Northridge',
+                            caption: null
+                        },
+                        question: null
+                    },
+                    back: {
+                        description: 'Even mild dehydration can hurt your attention and concentration, so drink plenty of water! Check out the water refill station map in the resources.'
+                    }
+                },
+            }
+        }
+    },
+    //Slide 29
+    23: {
+        slide_type: 'info',
+        header: {
+            header: 'Go beyond yourself!',
+            sub_header: null,
+            tooltip: 'Wait 5 seconds to proceed to the next slide'
+        },
+        content: {
+            0: {
+                paragraph: {
+                    0: 'If you\'re in relationships with friends who promote unhealthy behaviors, reach out to others who are supportive and encourage a healthy lifestyle.',
+                    1: 'Or, if you\'re caught up in the stress of your own life, broaden your perspective by volunteering! It helps to do something meaningful for others.',
+                    2: '<b>Unified We Serve</b>, is a volunteer program at CSUN that serves the CSUN and surrounding community.',
+                    3: 'Curious? Find the link in the resources.'
+                }
+            },
+            1: {
+                image: {
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s29_01.jpg',
+                    alt: 'two volunteers taking a selfie',
+                }
+            }
+        }
+    },
+    //Slide 30
+    24: {
+        slide_type: 'cardFlip',
+        header: {
+            header: 'Mind-Body Self-Care',
+            sub_header: null,
+            tooltip: 'Flip all the cards to proceed to the next slide'
+        },
+        content: {
+            card_break: false,
+            cards_flipped: false,
+            card_flip_count: 0,
+            paragraph: {
+                0: 'Helping others is important, but so is helping yourself be your best you! Work on your coping skills, increase focus, reduce stress and anxiety - even manage pain using mindfulness.',
+                2: 'Mindfulness-Based Stress Reduction (MBSR) is one such technique, which has been widely accepted. Courses are offered by respected institutions in L.A.',
+                3: 'Flip the card to read more'
+            },
+            cards: {
+                0: {
+                    show: false,
+                    front: {
+                        img: {
+                            src: 'images/prescriptionDrugsModule/RxDrugs_s30_01.jpg',
+                            alt: 'silhouette mediating',
+                            caption: null
+                        },
+                        question: null
+                    },
+                    back: {
+                        description: '6-8 week MBSR courses are offered online (free and for pay), as well as at UCLA, in the Valley, and by Cedars-Sinai.<br>See the resources!'
+                    }
+                },
+            }
+        }
+    },
+    25: {
+        slide_type: 'emailForm',
+        header: {
+            header: 'Set a wellness goal!',
+            sub_header: 'Now that you\'ve learned some ways to empower yourself to make healthy choices,',
+            tooltip: null
+        },
+        content: {
+            textAreaPlaceHolder: 'For example, “I will start taking a short walk when I study all day" or if you have used Rx meds not prescribed to you and are ready to change: "I will think of 3 ways to refuse if I\'m offered it" or, "I will try an alternative to using Rx meds, like aspirin".'
+        }
+    },
+    // slide 32
+    26: {
+        slide_type: 'info',
+        header: {
+            header: 'Thank you for completing this module!',
+            sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+        },
+        content: null
     }
 }
 export default prescriptionDrugsModuleSlides
