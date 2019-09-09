@@ -416,7 +416,7 @@ export const alcoholModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s06_01.png',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
           position: 'top',
           width: '1/2'

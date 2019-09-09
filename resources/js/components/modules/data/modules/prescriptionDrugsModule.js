@@ -44,6 +44,9 @@ export const prescriptionDrugsModuleSlides = {
             card_break: false,
             cards_flipped: false,
             card_flip_count: 0,
+            paragraph: {
+                0: '<b>Flip the cards</b> below to learn more:',
+            },
             cards: {
                 0: {
                     show: false,
@@ -186,7 +189,7 @@ export const prescriptionDrugsModuleSlides = {
                     0: 'Anti-anxiety meds like Xanax and Valium are highly addictive!',
                     1: 'If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects.Be sure to talk to your doctor about how to come off these meds safely!',
                     2: 'Due to the many uncomfortable and dangerous side effects, if you don’t NEED these medications clinically, it\'s best to avoid them.',
-                    3: 'Swipe to see some common side effects.'
+                    3: '<b>Swipe to see some common side effects.<b>'
                 }
             },
             1: {
@@ -333,7 +336,7 @@ export const prescriptionDrugsModuleSlides = {
         content: {
             images: {
                 0: {
-                    src: 'images/prescriptionDrugsModule/mar_s22_01.png',
+                    src: 'images/global/quiz_graphic.png',
                     alt: 'quiz',
                     mobile_size: '2/3',
                     tablet_size: '1/2',
@@ -370,7 +373,7 @@ export const prescriptionDrugsModuleSlides = {
                                 alt: null
                             },
                             response: {
-                                text: '<b>Corrent,</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy',
+                                text: '<b>Correct!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy',
                                 img: {
                                     src: null,
                                     alt: null
@@ -441,7 +444,7 @@ export const prescriptionDrugsModuleSlides = {
         content: {
             images: {
                 0: {
-                    src: 'images/prescriptionDrugsModule/mar_s22_01.png',
+                    src: 'images/global/quiz_graphic.png',
                     alt: 'quiz',
                     mobile_size: '2/3',
                     tablet_size: '1/2',
@@ -726,7 +729,7 @@ export const prescriptionDrugsModuleSlides = {
                         question: null
                     },
                     back: {
-                        description: 'Offered by a family member? "Thanks for thinking of me, but meds not prescribed to me might have serious side effects!"'
+                        description: 'Offered by a family member? "Thanks for thinking of <u>me</u>, but meds not prescribed to me might have serious side effects!"'
                     }
                 },
                 3: {
@@ -774,8 +777,8 @@ export const prescriptionDrugsModuleSlides = {
             },
             2: {
                 image: {
-                    src: 'images/prescriptionDrugsModule/RxDrugs_s27_01',
-                    alt: 'hands reaching for the center',
+                    src: 'images/prescriptionDrugsModule/RxDrugs_s27_01.png',
+                    alt: 'person deciding on which path to take',
                 }
             }
         }
@@ -892,7 +895,7 @@ export const prescriptionDrugsModuleSlides = {
         slide_type: 'emailForm',
         header: {
             header: 'Set a wellness goal!',
-            sub_header: 'Now that you\'ve learned some ways to empower yourself to make healthy choices,',
+            sub_header: 'Now that you\'ve learned some ways to empower yourself to make healthy choices, write down a goal.',
             tooltip: null
         },
         content: {
