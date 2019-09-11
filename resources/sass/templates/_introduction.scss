@@ -1,12 +1,15 @@
 .introSlide {
   &__image-container {
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 14rem);
+    min-height: 35rem;
+    max-height: 45rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    @include media-breakpoint-down(sm) {
       height: 0;
       padding-top: 78%;
+      min-height: 0;
     }
   }
   &__content-wrapper {

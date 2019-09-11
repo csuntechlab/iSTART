@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard-module-wrap mt-3">
       <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
-        <div @click="setModuleIndex(index); populateModule(index)">
+        <div @click="setModuleIndex(index); populateModule(index); goToTop()">
           <div class="row">
             <div class="dashboard-module__overview-wrapper col-12 col-md-6">
               <div class="dashboard-module__overview row">
@@ -123,6 +123,12 @@ export default {
       } else {
         return 'Continue'
       }
+    },
+
+    goToTop () {
+      window.scrollTo({
+        top: 0
+      })
     }
   }
 }

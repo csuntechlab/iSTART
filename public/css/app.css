@@ -12711,16 +12711,19 @@ body {
 }
 
 .introSlide__image-container {
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 14rem);
+  min-height: 35rem;
+  max-height: 45rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 576px) {
+@media (max-width: 767.98px) {
   .introSlide__image-container {
     height: 0;
     padding-top: 78%;
+    min-height: 0;
   }
 }
 
@@ -13055,16 +13058,19 @@ body {
 }
 
 .introSlide__image-container {
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 14rem);
+  min-height: 35rem;
+  max-height: 45rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 576px) {
+@media (max-width: 767.98px) {
   .introSlide__image-container {
     height: 0;
     padding-top: 78%;
+    min-height: 0;
   }
 }
 
