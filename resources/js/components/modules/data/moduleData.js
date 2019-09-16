@@ -69,7 +69,7 @@ export const moduleData = {
   },
   4: {
     name: 'Prescription Drugs',
-    description: 'Work In Progres...',
+    description: 'A prescription drug (also known as Rx or prescription medication) is a pharmaceutical drug that requires a medical prescription to be legally dispensed.',
     thumbnail: {
       src: 'images/thumbnail/prescription-drugs_thumbnail.jpg',
       alt: 'Pills'
