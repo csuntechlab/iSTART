@@ -1,6 +1,6 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
-    <Navbar/>
+    <Navbar :displayCurrentPage="getCurrentModule"/>
     <module-progress-bar/>
     <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>

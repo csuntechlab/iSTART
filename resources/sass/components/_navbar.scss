@@ -88,4 +88,28 @@
             }
         }
     }
+
+    &__location{
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+        text-align: center;
+        color: $white;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1;
+        align-self: center;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    &__mobile-wrapper{
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+        display: flex;
+        flex: center;
+        width: 100%;
+    }
 }
