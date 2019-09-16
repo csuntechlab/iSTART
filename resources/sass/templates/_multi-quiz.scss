@@ -1,0 +1,38 @@
+.multi-quiz {
+  &-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__question {
+    margin-bottom: 1.15rem;
+  }
+
+  &__input-container {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 2rem;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__input {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.5rem;
+
+    &.active {
+      background-color: $secondaryColor;
+      border-color: $secondaryColor--medium;
+      color: $white;
+    }
+  }
+}

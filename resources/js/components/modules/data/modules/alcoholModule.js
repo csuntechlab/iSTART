@@ -1163,6 +1163,40 @@ export const alcoholModuleSlides = {
       sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
     content: null
+  },
+
+
+  30: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Header',
+      sub_header: null
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
+        }
+      },
+      1: {
+        quiz: {
+          response: null,
+          questions: {
+            0: {
+              question: 'This is a question?',
+              input: {
+                0: {
+                  label: 'Yes'
+                },
+                1: {
+                  label: 'No'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 export default alcoholModuleSlides
