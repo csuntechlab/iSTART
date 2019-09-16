@@ -123,6 +123,11 @@ export default {
 
     for (let i = indexStart; i < indexEnd; i += 1) {
       state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].show = false
+      let input = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].input
+      let inputLength = Object.keys(input).length
+      for (let j = 0; j < inputLength; j += 1) {
+        input[j].selected = false
+      }
     }
   },
 
