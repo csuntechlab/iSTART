@@ -1180,48 +1180,56 @@ export const alcoholModuleSlides = {
       },
       1: {
         quiz: {
-          response: null,
           questions: {
             0: {
               show: true,
               question: 'This is a Question 1?',
+              response: null,
               input: {
                 0: {
                   selected: false,
-                  label: 'Yes'
+                  label: 'Yes',
+                  result: 'Response yes, q1'
                 },
                 1: {
                   selected: false,
                   redirect: true,
-                  label: 'No'
+                  label: 'No',
+                  result: 'Response no, q1'
                 }
               }
             },
             1: {
               show: false,
               question: 'This is Question 2?',
+              response: null,
               input: {
                 0: {
                   selected: false,
-                  label: 'Yes'
+                  label: 'Yes',
+                  result: 'Response yes, q2'
                 },
                 1: {
                   selected: false,
-                  label: 'No'
+                  label: 'No',
+                  result: 'Response no, q2'
                 }
               }
             },
             2: {
               show: false,
               question: 'This is Question 3?',
+              response: null,
               input: {
                 0: {
                   selected: false,
-                  label: 'Yes'
+                  label: 'Yes',
+                  result: 'Response yes, q3'
                 },
                 1: {
                   selected: false,
-                  label: 'No'
+                  label: 'No',
+                  result: 'Response no, q3'
                 }
               }
             }

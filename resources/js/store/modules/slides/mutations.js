@@ -94,6 +94,7 @@ export default {
 
   UPDATE_MULTI_QUIZ_INPUT (state, payload) {
     let questionInput = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input
+    let questionResult = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input[payload.inputIndex].result
 
     // Remove active on all inputs when a new input selected
     let inputLength = Object.keys(questionInput).length
@@ -101,6 +102,7 @@ export default {
       questionInput[i].selected = false
     }
 
+    state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].response = questionResult
     questionInput[payload.inputIndex].selected = true
   },
 
@@ -123,6 +125,7 @@ export default {
 
     for (let i = indexStart; i < indexEnd; i += 1) {
       state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].show = false
+      state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].response = null
       let input = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].input
       let inputLength = Object.keys(input).length
       for (let j = 0; j < inputLength; j += 1) {
