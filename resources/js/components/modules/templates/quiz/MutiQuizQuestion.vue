@@ -36,6 +36,7 @@ export default {
     ...mapActions(
       [
         'enableContinue',
+        'disableContinue',
         'updateMultiQuizInput',
         'showMultiQuizQuestion',
         'enableMultiQuizRedirect'
@@ -59,12 +60,29 @@ export default {
           questionsIndex: parseInt(questionsIndex),
           questionsLength: questionsLength
         })
+
+        let questionResponse = this.quiz.questions[questionsIndex].response
+        if ((questionResponse !== null) || (questionResponse !== 'undefined')) {
+          this.enableContinue()
+        } else {
+          this.disableContinue()
+        }
       } else {
         this.showNextQuestion({
           currentSlideIndex: currentSlideIndex,
           quizIndex: parseInt(quizIndex),
           questionsIndex: parseInt(questionsIndex),
           inputIndex: parseInt(inputIndex) })
+
+        let questions = this.quiz.questions
+        let questionsLength = Object.keys(questions).length
+
+        this.enableContinue()
+        for (let i = 0; i < questionsLength; i += 1) {
+          if ((questions[i].response === null) || (questions[i].response === 'undefined')) {
+            this.disableContinue()
+          }
+        }
       }
     },
 

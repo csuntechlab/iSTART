@@ -1170,7 +1170,8 @@ export const alcoholModuleSlides = {
     slide_type: 'multiQuizQuestion',
     header: {
       header: 'Header',
-      sub_header: null
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
     },
     content: {
       0: {
@@ -1234,6 +1235,22 @@ export const alcoholModuleSlides = {
               }
             }
           }
+        }
+      }
+    }
+  },
+  // ???
+  31: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Header',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
         }
       }
     }
