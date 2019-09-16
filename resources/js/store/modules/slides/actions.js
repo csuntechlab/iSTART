@@ -81,6 +81,18 @@ export default {
     commit('UPDATE_CARD_COUNT', payload)
   },
 
+  updateMultiQuizInput ({ commit }, payload) {
+    commit('UPDATE_MULTI_QUIZ_INPUT', payload)
+  },
+
+  showMultiQuizQuestion ({ commit }, payload) {
+    commit('SHOW_MULTI_QUIZ_QUESTION', payload)
+  },
+
+  enableMultiQuizRedirect ({ commit }, payload) {
+    commit('ENABLE_MULTI_QUIZ_REDIRECT', payload)
+  },
+
   updateResponse ({ commit }, payload) {
     commit('UPDATE_RESPONSE', payload)
   },

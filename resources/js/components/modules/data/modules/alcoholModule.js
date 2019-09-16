@@ -1165,7 +1165,7 @@ export const alcoholModuleSlides = {
     content: null
   },
 
-
+  // ???
   30: {
     slide_type: 'multiQuizQuestion',
     header: {
@@ -1183,12 +1183,44 @@ export const alcoholModuleSlides = {
           response: null,
           questions: {
             0: {
-              question: 'This is a question?',
+              show: true,
+              question: 'This is a Question 1?',
               input: {
                 0: {
+                  selected: false,
                   label: 'Yes'
                 },
                 1: {
+                  selected: false,
+                  redirect: true,
+                  label: 'No'
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'This is Question 2?',
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes'
+                },
+                1: {
+                  selected: false,
+                  label: 'No'
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'This is Question 3?',
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes'
+                },
+                1: {
+                  selected: false,
                   label: 'No'
                 }
               }

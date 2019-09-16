@@ -1,4 +1,6 @@
 .multi-quiz {
+  margin-top: 1rem;
+
   &-container {
     display: flex;
     flex-flow: row;
@@ -8,6 +10,10 @@
 
   &__question {
     margin-bottom: 1.15rem;
+
+    &-container {
+      margin-top: 0.5rem;
+    }
   }
 
   &__input-container {
@@ -28,6 +34,7 @@
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.45rem 0.5rem;
+    transition: 350ms ease-out;
 
     &.active {
       background-color: $secondaryColor;

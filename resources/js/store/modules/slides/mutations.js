@@ -92,6 +92,40 @@ export default {
     }
   },
 
+  UPDATE_MULTI_QUIZ_INPUT (state, payload) {
+    let questionInput = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input
+
+    // Remove active on all inputs when a new input selected
+    let inputLength = Object.keys(questionInput).length
+    for (let i = 0; i < inputLength; i += 1) {
+      questionInput[i].selected = false
+    }
+
+    questionInput[payload.inputIndex].selected = true
+  },
+
+  SHOW_MULTI_QUIZ_QUESTION (state, payload) {
+    let questions = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions
+    let questionIndex = payload.questionsIndex
+    let questionsLength = Object.keys(questions).length
+    let nextQuestionIndex = (questionIndex + 1)
+
+    for (let i = questionIndex; i < questionsLength; i += 1) {
+      if (nextQuestionIndex < questionsLength) {
+        questions[nextQuestionIndex].show = true
+      }
+    }
+  },
+
+  ENABLE_MULTI_QUIZ_REDIRECT (state, payload) {
+    let indexStart = (payload.questionsIndex + 1)
+    let indexEnd = payload.questionsLength
+
+    for (let i = indexStart; i < indexEnd; i += 1) {
+      state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[i].show = false
+    }
+  },
+
   UPDATE_RESPONSE (state, payload) {
     let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
     let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]

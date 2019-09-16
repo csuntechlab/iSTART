@@ -13087,6 +13087,10 @@ body {
   }
 }
 
+.multi-quiz {
+  margin-top: 1rem;
+}
+
 .multi-quiz-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13104,6 +13108,10 @@ body {
 
 .multi-quiz__question {
   margin-bottom: 1.15rem;
+}
+
+.multi-quiz__question-container {
+  margin-top: 0.5rem;
 }
 
 .multi-quiz__input-container {
@@ -13134,6 +13142,8 @@ body {
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.45rem 0.5rem;
+  -webkit-transition: 350ms ease-out;
+  transition: 350ms ease-out;
 }
 
 .multi-quiz__input.active {

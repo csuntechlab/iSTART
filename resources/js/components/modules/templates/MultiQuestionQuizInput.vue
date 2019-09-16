@@ -26,7 +26,8 @@
           <multi-quiz-question
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].quiz"
-            :quiz="currentSlideData.content[`${currentSlideIndex}`].quiz"/>
+            :quiz="currentSlideData.content[`${currentSlideIndex}`].quiz"
+            :quizIndex="currentSlideIndex"/>
         </template>
       </div>
     </div>
