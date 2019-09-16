@@ -14,6 +14,7 @@
         <email-form v-if="currentSlideData.slide_type==='emailForm'" :key="currentSlideNumber"></email-form>
         <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'" :key="currentSlideNumber"></multi-choice-survey>
         <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
+        <final-slide v-if="currentSlideData.slide_type==='finalSlide'"></final-slide>
       </div>
     </main>
     <module-footer v-if="currentSlideData.slide_type !== 'intro'"></module-footer>
@@ -39,6 +40,7 @@ import EmailForm from './../components/modules/templates/EmailForm'
 import MultiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
 import VideoTemplate from './../components/modules/templates/VideoTemplate'
 import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate'
+import FinalSlide from './../components/modules/templates/FinalSlide.vue'
 
 export default {
   components: {
@@ -54,7 +56,8 @@ export default {
     MultiChoiceSurvey,
     MultiChoiceSurveyResults,
     VideoTemplate,
-    CardFlipTemplate
+    CardFlipTemplate,
+    FinalSlide
   },
 
   data () {
