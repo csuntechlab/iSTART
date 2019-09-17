@@ -89,6 +89,14 @@ export default {
     commit('SHOW_MULTI_QUIZ_QUESTION', payload)
   },
 
+  checkMultiQuizAndCriteria ({ commit }, payload) {
+    commit('CHECK_MULTI_QUIZ_AND_CRITERIA', payload)
+  },
+
+  checkMultiQuizOrCriteria ({ commit }, payload) {
+    commit('CHECK_MULTI_QUIZ_OR_CRITERIA', payload)
+  },
+
   enableMultiQuizRedirect ({ commit }, payload) {
     commit('ENABLE_MULTI_QUIZ_REDIRECT', payload)
   },

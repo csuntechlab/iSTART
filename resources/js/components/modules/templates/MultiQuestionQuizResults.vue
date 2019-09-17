@@ -25,10 +25,18 @@
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
         <ul>
-          <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
-            <li v-if="item.response !== null">
-              {{ item.response }}
-            </li>
+          <li v-if="(currentSlideData.header.results.case.andAll === true) && (currentSlideData.header.results.case.isAndMet === true)">
+            {{ currentSlideData.header.results.case.caseResponse }}
+          </li>
+          <li v-else-if="(currentSlideData.header.results.case.orAll === true) && (currentSlideData.header.results.case.isOrMet === true)">
+            {{ currentSlideData.header.results.case.caseResponse }}
+          </li>
+          <div v-else>
+            <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
+              <li v-if="(item.response !== null)">
+                {{ item.response }}
+              </li>
+            </div>
           </div>
         </ul>
       </div>
@@ -62,12 +70,16 @@ export default {
 
   mounted () {
     this.storePreviousSlideData()
+    this.checkAndCase()
+    this.checkOrCase()
   },
 
   methods: {
     ...mapActions(
       [
-        'storeQuizResponses'
+        'storeQuizResponses',
+        'checkMultiQuizAndCriteria',
+        'checkMultiQuizOrCriteria'
       ]
     ),
 
@@ -81,6 +93,16 @@ export default {
             previousSlideData: previousSlideData[i].quiz.questions })
         }
       }
+    },
+
+    checkAndCase () {
+      this.checkMultiQuizAndCriteria({
+        currentSlideIndex: this.currentSlideNumber })
+    },
+
+    checkOrCase () {
+      this.checkMultiQuizOrCriteria({
+        currentSlideIndex: this.currentSlideNumber })
     }
   }
 }

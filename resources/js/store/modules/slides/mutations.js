@@ -134,6 +134,30 @@ export default {
     }
   },
 
+  CHECK_MULTI_QUIZ_AND_CRITERIA (state, payload) {
+    let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
+    let responsesLength = Object.keys(responses).length
+
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.isAndMet = true
+    for (let i = 0; i < responsesLength; i += 1) {
+      if (!responses[i].input[0].selected) {
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.isAndMet = false
+      }
+    }
+  },
+
+  CHECK_MULTI_QUIZ_OR_CRITERIA (state, payload) {
+    let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
+    let responsesLength = Object.keys(responses).length
+
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.isOrMet = false
+    for (let i = 0; i < responsesLength; i += 1) {
+      if (responses[i].input[0].selected) {
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.isOrMet = true
+      }
+    }
+  },
+
   STORE_QUIZ_RESPONSES (state, payload) {
     state.JSONSlideData[payload.currentSlideIndex].header.results.responses = payload.previousSlideData
   },
