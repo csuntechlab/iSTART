@@ -93,6 +93,10 @@ export default {
     commit('ENABLE_MULTI_QUIZ_REDIRECT', payload)
   },
 
+  storeQuizResponses ({ commit }, payload) {
+    commit('STORE_QUIZ_RESPONSES', payload)
+  },
+
   updateResponse ({ commit }, payload) {
     commit('UPDATE_RESPONSE', payload)
   },

@@ -134,6 +134,10 @@ export default {
     }
   },
 
+  STORE_QUIZ_RESPONSES (state, payload) {
+    state.JSONSlideData[payload.currentSlideIndex].header.results.responses = payload.previousSlideData
+  },
+
   UPDATE_RESPONSE (state, payload) {
     let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
     let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]

@@ -24,13 +24,20 @@
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
+        <ul>
+          <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
+            <li v-if="item.response !== null">
+              {{ item.response }}
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
 
 import InfoParagraph from './info/InfoParagraph'
@@ -46,9 +53,35 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'currentSlideData'
+        'currentSlideData',
+        'currentSlideNumber',
+        'getSlideData'
       ]
     )
+  },
+
+  mounted () {
+    this.storePreviousSlideData()
+  },
+
+  methods: {
+    ...mapActions(
+      [
+        'storeQuizResponses'
+      ]
+    ),
+
+    storePreviousSlideData () {
+      let previousSlideData = this.getSlideData(this.currentSlideNumber - 1).content
+      let previousSlideLength = Object.keys(this.getSlideData(this.currentSlideNumber - 1).content).length
+      for (let i = 0; i < previousSlideLength; i += 1) {
+        if (previousSlideData[i].quiz) {
+          this.storeQuizResponses({
+            currentSlideIndex: this.currentSlideNumber,
+            previousSlideData: previousSlideData[i].quiz.questions })
+        }
+      }
+    }
   }
 }
 </script>

@@ -1245,7 +1245,12 @@ export const alcoholModuleSlides = {
     header: {
       header: 'Header',
       sub_header: null,
-      tooltip: 'Wait 5 seconds to proceed to the next slide'
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        andAll: null,
+        orAll: null,
+        responses: null
+      }
     },
     content: {
       0: {
