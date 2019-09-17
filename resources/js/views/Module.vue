@@ -1,7 +1,7 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
-    <Navbar/>
-    <module-progress-bar/>
+    <Navbar />
+    <module-progress-bar />
     <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
       <div v-else class="module__wrapper">
@@ -12,10 +12,19 @@
         <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'" :key="currentSlideNumber"></input-comparison-template>
         <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'" :key="currentSlideNumber"></input-pie-chart-template>
         <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"></video-template>
-        <card-flip-template v-if="currentSlideData.slide_type === 'cardFlip'" :key="currentSlideNumber"></card-flip-template>
+        <card-flip-template
+          v-if="currentSlideData.slide_type === 'cardFlip'"
+          :key="currentSlideNumber"
+        ></card-flip-template>
         <email-form v-if="currentSlideData.slide_type==='emailForm'" :key="currentSlideNumber"></email-form>
-        <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'" :key="currentSlideNumber"></multi-choice-survey>
-        <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
+        <multi-choice-survey
+          v-if="currentSlideData.slide_type ==='multiChoiceSurvey'"
+          :key="currentSlideNumber"
+        ></multi-choice-survey>
+        <multi-choice-survey-results
+          v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'"
+          :key="currentSlideNumber"
+        ></multi-choice-survey-results>
       </div>
     </main>
     <module-footer v-if="currentSlideData.slide_type !== 'intro'"></module-footer>
@@ -26,6 +35,7 @@
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
+import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
@@ -83,6 +93,9 @@ export default {
     } else if (currentModule === 'Marijuana') {
       this.storeJSONInState(marijuanaModuleSlides)
       this.setSlideContentVisibility(true)
+    } else if (currentModule === 'Prescription Drugs') {
+      this.storeJSONInState(precriptionDrugsSlides)
+      this.setSlideContentVisibility(true)
     } else {
       this.$router.push({ name: 'Dashboard' })
     }
@@ -93,14 +106,12 @@ export default {
   },
 
   computed: {
-    ...mapGetters(
-      [
-        'currentSlideData',
-        'currentSlideNumber',
-        'isSlideContentVisible',
-        'getCurrentModule'
-      ]
-    ),
+    ...mapGetters([
+      'currentSlideData',
+      'currentSlideNumber',
+      'isSlideContentVisible',
+      'getCurrentModule'
+    ]),
 
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
@@ -112,14 +123,12 @@ export default {
   },
 
   methods: {
-    ...mapActions(
-      [
-        'storeJSONInState',
-        'setSlideContentVisibility',
-        'navigateFromSlide',
-        'navigateToSlide'
-      ]
-    ),
+    ...mapActions([
+      'storeJSONInState',
+      'setSlideContentVisibility',
+      'navigateFromSlide',
+      'navigateToSlide'
+    ]),
 
     getWindowWidth () {
       this.windowWidth = window.innerWidth
@@ -127,11 +136,16 @@ export default {
   },
 
   mounted () {
-    document.onkeyup = (e) => {
-      if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
+    document.onkeyup = e => {
+      if (
+        process.env.NODE_ENV === 'development' ||
+        process.env.NODE_ENV === 'production'
+      ) {
         // Shift + Tilde = Set slide index
         if (e.shiftKey && e.which === 192) {
-          let responseAsSlideNumber = parseInt(prompt('Please enter the slide index you want to visit'))
+          let responseAsSlideNumber = parseInt(
+            prompt('Please enter the slide index you want to visit')
+          )
           this.navigateToSlide(responseAsSlideNumber)
         }
 
