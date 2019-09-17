@@ -460,7 +460,7 @@ export const alcoholModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'We\'ve talked about opioids in the last module about Rx drugs. Here, we mention heroin that comes from the opum poppy plant. Heroin is super addictive and often used illegally to produce euphoria.'
+          0: 'We\'ve talked about opioids in the last module about Rx drugs. Here, we mention heroin that comes from the opium poppy plant. Heroin is super addictive and often used illegally to produce euphoria.'
         }
       },
       1: {
@@ -479,5 +479,309 @@ export const alcoholModuleSlides = {
       }
     }
   },
+  // slide 16
+  13: {
+    slide_type: 'info',
+    header: {
+      header: 'Synthetic Opioids: Fentanyl',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Unlike heroin, synthetic opioids (such as Fentanyl) are made in labs. Although Fentanyl is prescribed for pain, it is often made illegally and distributed as a street drug in powder or pill form.',
+          1: 'Synthetic opioids are similar to morphine, but are usually 50 to 100 times more potent! This can lead to dangerous and fatal consequences if mixed with other drugs.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s16_01.jpg',
+          alt: 'fentanyl',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      }
+    }
+  },
+  // slide 17
+  14: {
+    slide_type: 'info',
+    header: {
+      header: 'Side Effects of Heroin and Fentanyl',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'People who use heroin or fentanyl over the long term may develop serious side effects.',
+          1: '<b>Swipe the cards below to learn more</b>'
+        }
+      },
+      1: {
+        carousel: {
+          0: {
+            src: 'images/illicitDrugsModule/ill_s17_01.png',
+            alt: 'insomnia',
+            y_position: null
+          },
+          1: {
+            src: 'images/illicitDrugsModule/ill_s17_02.png',
+            alt: 'constipation',
+            y_position: null
+          },
+          2: {
+            src: 'images/illicitDrugsModule/ill_s17_03.png',
+            alt: 'liver disease',
+            y_position: null
+          },
+          3: {
+            src: 'images/illicitDrugsModule/ill_s17_04.png',
+            alt: 'kidney disease',
+            y_position: null
+          },
+          4: {
+            src: 'images/illicitDrugsModule/ill_s17_05.png',
+            alt: 'mental disorders',
+            y_position: null
+          },
+          5: {
+            src: 'images/illicitDrugsModule/ill_s17_06.png',
+            alt: 'nausea & vomiting',
+            y_position: null
+          },
+          6: {
+            src: 'images/illicitDrugsModule/ill_s17_07.png',
+            alt: 'losing conciousness',
+            y_position: null
+          },
+          7: {
+            src: 'images/illicitDrugsModule/ill_s17_08.png',
+            alt: 'severe itching',
+            y_position: null
+          }
+        }
+      }
+    }
+  },
+  // slide 18
+  15: {
+    slide_type: 'video',
+    header: {
+      header: 'The Opioid Epidemic',
+      sub_header: 'You\'ve probably heard about the U.S. opioid epidemic. Watch the quick video below to learn more.',
+      tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
+    },
+    content: {
+      video_id: '23tWiamRf6g',
+      video_length: (60000 / 2) + 5000,
+      caption: null
+    }
+  },
+  // slide 19
+  16: {
+    slide_type: 'info',
+    header: {
+      header: 'Heroin Overdose',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Heroin is no joke! When people overdose from heroin, their breathing often slows or stops. This can lead to a coma, permanent brain damage, or death.',
+          1: '<b>Naloxone</b> is a medicine that can treat an opioid overdose if given right away. If someone you know has overdosed, call 911 first then consider naloxone.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s19_01.jpg',
+          alt: 'naloxone',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      }
+    }
+  },
+  // slide 20
+  17: {
+    slide_type: 'info',
+    header: {
+      header: 'Injection Drug Use, HIV, and Hepatitis',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'People who inject drugs like cocaine & heroin are also at high risk for HIV and Hep-C. This happens from sharing needles or other injection drug use equipment. Or from unprotected sex while under the influence of these drugs.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s20_01.png',
+          alt: 'syringe',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      },
+      2: {
+        paragraph: {
+          0: 'For information about our free HIV/Hep-C rapid testing services on campus, please visit the iSTART website.'
+        }
+      }
+    }
+  },
+  // slide 21
+  18: {
+    slide_type: 'inputComparison',
+    header: {
+      header: 'What\'s your guess?',
+      sub_header: 'During the last 30 days, how many CSUN students do you think used each of the following illicit drugs?',
+      tooltip: 'Fill in the form requirements to proceed to the next slide'
+    },
+    content: {
+      questions: {
+        0: {
+          question: 'MDMA/Ecstasy',
+          response: null,
+          input: null,
+          answer: 1
+        },
+        1: {
+          question: 'Cocaine',
+          response: null,
+          input: null,
+          answer: 1
+        },
+        2: {
+          question: 'Opiates',
+          response: null,
+          input: null,
+          answer: 1
+        }
+      }
+    }
+  },
+  // slide 22
+  19: {
+    slide_type: 'inputPieChart',
+    header: {
+      header: 'Here are the answers',
+      sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    }
+  },
+  // slide 23
+  20: {
+    slide_type: 'info',
+    header: {
+      header: 'It\'s really NOT the norm!',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'If you\'re hanging around people who are using illicit drugs and they say it\'s completely normal, they\'re wrong! It is NOT a common experience for college students to use illicit drugs!'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s23_01.jpg',
+          alt: 'no',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      }
+    }
+  },
+  // slide 24
+  21: {
+    slide_type: 'info',
+    header: {
+      header: 'Peer Pressure',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Have you ever been pressured by peers to take drugs? Below are some ways to help.'
+        }
+      },
+      1: {
+        list_element: [
+          'Prepare yourself ahead of time. Think of how to respond so you know what to say when the time comes.',
+          'If you\'re in an uncomfortable situations, find an excuse to leave.',
+          'Try to surround yourself with people who respect your decision to not use drugs.',
+          'Ask for support from reliable friend or adult if someone is pressuring you to use drugs.'
+        ]
+      },
+      2: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s24_01.jpg',
+          alt: 'peer pressure',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      },
+      3: {
+        paragraph: {
+          0: 'Remember, your health, body, and future belonging to you. Don\'t let others pressure you to do something harmful.'
+        }
+      }
+    }
+  },
+  // slide 25
+  22: {
+    slide_type: 'info',
+    header: {
+      header: 'Be Well!',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'These last few weeks we\'ve introduced many suggestions on how to take care of yourself through mind, body and social connections!',
+          1: 'Now is the time to create healthy habits, think about the future, and the resources that can help get there!',
+          2: 'In the app menu, and on our iSTART website, check out the resources CSUN and the community offer.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s25_01.jpg',
+          alt: 'woman carrying a heart balloon',
+          mobile_size: '1/2',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      }
+    }
+  },
+  // slide 26
+  23: {
+    slide_type: 'info',
+    header: {
+      header: 'Thanks for following along so far!',
+      sub_header: null
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
+          1: 'Asking for help is one of the bravest things you can do! You are strong and not alone.',
+          2: 'And, remember to look out for the next iSTART survey link in your email!'
+        }
+      }
+    }
+  }
 }
 export default alcoholModuleSlides
