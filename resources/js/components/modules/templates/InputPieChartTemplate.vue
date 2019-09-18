@@ -6,13 +6,13 @@
         </div>
       </div>
       <div class="row mt-3 justify-content-center">
-        <div class="col-12">
+        <div class="col-12 mb-3">
           <h1 class="module-text__header">{{ currentSlideData.header.header }}</h1>
           <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
         </div>
         <template v-for="(element, index) in getSlideData(currentSlideNumber-1).content.questions">
           <div :key="index" class="module-quizInput__question col-12 mb-2">
-            <p class="module-text__text">{{ element.question }}</p>
+            <p class="module-text__caption">{{ element.question }}</p>
           </div>
           <div :key="index + '-chart1'" class="col-6 mt-1">
             <input-pie-chart-legend chart-id="one"

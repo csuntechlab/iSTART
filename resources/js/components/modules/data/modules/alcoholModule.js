@@ -1163,6 +1163,107 @@ export const alcoholModuleSlides = {
       sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
     content: null
+  },
+
+  // ???
+  30: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Header',
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
+        }
+      },
+      1: {
+        quiz: {
+          questions: {
+            0: {
+              show: true,
+              question: 'This is a Question 1?',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q1'
+                },
+                1: {
+                  selected: false,
+                  redirect: true,
+                  label: 'No',
+                  result: 'Response no, q1'
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'This is Question 2?',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q2'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q2'
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'This is Question 3?',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q3'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q3'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // ???
+  31: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Header',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        case: {
+          andAll: false,
+          orAll: false,
+          caseResponse: null,
+          isAndMet: false,
+          isOrMet: false
+        },
+        responses: null
+      }
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
+        }
+      }
+    }
   }
 }
 export default alcoholModuleSlides
