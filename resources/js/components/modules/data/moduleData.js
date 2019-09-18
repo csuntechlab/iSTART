@@ -52,7 +52,7 @@ export const moduleData = {
   },
   3: {
     name: 'Illicit Drugs',
-    description: 'Work In Progress...',
+    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
     thumbnail: {
       src: 'images/thumbnail/illicit-drugs_thumbnail.jpg',
       alt: 'Illicit Drugs'
@@ -60,7 +60,7 @@ export const moduleData = {
     progress: {
       completion_status: 'Start',
       completion_date: '00/00/00',
-      is_complete: true,
+      is_complete: false,
       is_incomplete: false,
       slide_percentage: 0,
       current_slide: 0,
@@ -69,7 +69,7 @@ export const moduleData = {
   },
   4: {
     name: 'Prescription Drugs',
-    description: 'A prescription drug (also known as Rx or prescription medication) is a pharmaceutical drug that requires a medical prescription to be legally dispensed.',
+    description: 'A prescription drug is a pharmaceutical drug that requires a medical prescription to be legally dispensed...',
     thumbnail: {
       src: 'images/thumbnail/prescription-drugs_thumbnail.jpg',
       alt: 'Pills'
@@ -78,7 +78,7 @@ export const moduleData = {
       completion_status: 'Start',
       completion_date: '00/00/00',
       is_complete: false,
-      is_incomplete: true,
+      is_incomplete: false,
       slide_percentage: 0,
       current_slide: 0,
       latest_slide: 0

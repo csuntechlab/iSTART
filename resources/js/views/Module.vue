@@ -35,6 +35,7 @@
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
+import illicitDrugsSlides from './../components/modules/data/modules/illicitDrugsModule'
 import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
 
 import { mapActions, mapGetters } from 'vuex'
@@ -92,6 +93,9 @@ export default {
       this.setSlideContentVisibility(true)
     } else if (currentModule === 'Marijuana') {
       this.storeJSONInState(marijuanaModuleSlides)
+      this.setSlideContentVisibility(true)
+    } else if (currentModule === 'Illicit Drugs') {
+      this.storeJSONInState(illicitDrugsSlides)
       this.setSlideContentVisibility(true)
     } else if (currentModule === 'Prescription Drugs') {
       this.storeJSONInState(precriptionDrugsSlides)
