@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard container">
-    <navbar/>
+    <navbar :displayCurrentPage="$route.name"/>
     <DashboardNotification v-if="this.user.user_group !=='control'"></DashboardNotification>
     <ControlGroup v-if="this.user.user_group === 'control'"></ControlGroup>
     <!--
