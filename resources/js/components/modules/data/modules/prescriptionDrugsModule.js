@@ -142,7 +142,7 @@ export const prescriptionDrugsModuleSlides = {
   5: {
     slide_type: 'video',
     header: {
-      header: 'Stimulant Abuse',
+      header: 'Stimulant Abuse',
       sub_header: 'Some students misuse Adderall to study and increase focus. But misusing a medication intended for someone with ADHD can have negative consequences.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
@@ -156,7 +156,7 @@ export const prescriptionDrugsModuleSlides = {
   6: {
     slide_type: 'info',
     header: {
-      header: 'Commonly Abused Rx Drugs: Anti-anxiety meds/Sedatives',
+      header: 'Commonly Abused Rx Drugs: Anti-anxiety meds/Sedatives',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -324,9 +324,120 @@ export const prescriptionDrugsModuleSlides = {
       }
     }
   },
-  // Slide 15-18 -- Self-assessment
-  // Slide 19
+  // slide 15-17
   13: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Many people seek out professional assessments to tell them if they have a problem with prescription drug use and need assistance with it. However, the best judge of whether <b>you</b> are challenged by prescription drug use is <b>you</b>.',
+          1: 'Your answers to the following questions will provide you with the best path for you.'
+        }
+      },
+      1: {
+        quiz: {
+          questions: {
+            0: {
+              show: true,
+              question: 'I sometimes use prescription drugs to get high, feel good or alter my mood.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Remember that using prescription medication to get high is considered abuse, it can be a slippery slope and it can have dangerous consequences.'
+                },
+                1: {
+                  selected: false,
+                  redirect: false,
+                  label: 'No',
+                  result: ''
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'I often use prescription drugs to reduce stress and anxiety of college life.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Your answer indicates that you know you need healthy alternatives to reduce stress and anxiety. The rest of this module offers alternatives that really work.'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: ''
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'I sometimes use prescription drugs so I can fit in socially or excel in sports or academics.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Your answer suggests you know you need to strengthen your self confidence socially, athletically and/or academically.<br> Look for suggestions in the remainder of this module that can effectively strengthen your self-esteem and self-confidence.'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: ''
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 18
+  14: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        case: {
+          yes: {
+            andAll: false,
+            andResponse: '',
+            isAndMet: false,
+            orAll: false,
+            orResponse: '',
+            isOrMet: false
+          },
+          no: {
+            andAll: true,
+            andResponse: 'You\'re use of prescribed meds as directed reflects good judgement.',
+            isAndMet: false,
+            orAll: false,
+            orResponse: '',
+            isOrMet: false
+          }
+        },
+        responses: null
+      }
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Here are the results based off your responses.'
+        }
+      }
+    }
+  },
+  // Slide 19
+  15: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -434,7 +545,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 20
-  14: {
+  16: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -542,7 +653,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 21
-  15: {
+  17: {
     slide_type: 'info',
     header: {
       header: 'Stimulants & Academic Performance',
@@ -565,7 +676,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 22
-  16: {
+  18: {
     slide_type: 'info',
     header: {
       header: 'Create good habits!',
@@ -595,7 +706,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 23
-  17: {
+  19: {
     slide_type: 'info',
     header: {
       header: 'Sleep',
@@ -619,7 +730,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 24
-  18: {
+  20: {
     slide_type: 'video',
     header: {
       header: 'Safe Medication Practices',
@@ -633,7 +744,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 25
-  19: {
+  21: {
     slide_type: 'info',
     header: {
       header: 'Prescription Drugs: Safety Tips',
@@ -672,7 +783,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 26
-  20: {
+  22: {
     slide_type: 'cardFlip',
     header: {
       header: 'How to say "No"',
@@ -750,7 +861,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 27
-  21: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Painkiller Alternatives',
@@ -784,10 +895,10 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 28
-  22: {
+  24: {
     slide_type: 'cardFlip',
     header: {
-      header: 'Improve your focus and attention',
+      header: 'Improve your focus and attention',
       sub_header: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -832,7 +943,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 29
-  23: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Go beyond yourself!',
@@ -857,7 +968,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // Slide 30
-  24: {
+  26: {
     slide_type: 'cardFlip',
     header: {
       header: 'Mind-Body Self-Care',
@@ -891,7 +1002,7 @@ export const prescriptionDrugsModuleSlides = {
       }
     }
   },
-  25: {
+  27: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
@@ -903,7 +1014,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // slide 32
-  26: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',

@@ -31,7 +31,7 @@
           <li v-html="currentSlideData.header.results.case.no.orResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></li>
           <div v-else>
             <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
-              <li v-if="(item.response !== null)" v-html="item.response"></li>
+              <li v-if="(item.response !== null) && (item.response.length !== 0)" v-html="item.response"></li>
             </div>
           </div>
         </ul>

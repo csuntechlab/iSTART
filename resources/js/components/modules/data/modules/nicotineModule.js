@@ -709,9 +709,120 @@ export const nicotineModuleSlides = {
       }
     }
   },
-  // slide 21 & 22 survey?
-  // slide 23
+  // slide 21
   19: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'The best judge of whether <b>you</b> are challenged by tobacco/nicotine use is <b>you</b>.',
+          1: 'Your answers to the following questions will provide you with the best path for you.'
+        }
+      },
+      1: {
+        quiz: {
+          questions: {
+            0: {
+              show: true,
+              question: 'I think I smoke/vape/chew too much.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q1'
+                },
+                1: {
+                  selected: false,
+                  redirect: false,
+                  label: 'No',
+                  result: 'Response no, q1'
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'I\'ve tried to stop smoking but haven\'t been able to stop.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q2'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q2'
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'I smoke/vape/chew to handle my stress and axiety and/or control my weight.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q3'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q3'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 22
+  20: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        case: {
+          yes: {
+            andAll: false,
+            andResponse: '',
+            isAndMet: false,
+            orAll: true,
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to some harmful health outcomes. You already know that your tobacco/nicotine use is unhealthy so perhaps you are ready to consider some healthy alternatives.<br> In the next slides, you\'ll get tips about how you can replace this habit with wellness activities that can make you feel healthy and satisfied. At the end, you are invited to set a health and wellness goal for yourself, so keep that in mind as you go through the rest of the module.',
+            isOrMet: false
+          },
+          no: {
+            andAll: true,
+            andResponse: 'It\'s good to know you\'re not struggling with these issues. To stay on a healthy path, you\'ll learn more about nicotinue use in the following slides.',
+            isAndMet: false,
+            orAll: false,
+            orResponse: '',
+            isOrMet: false
+          }
+        },
+        responses: null
+      }
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Here are the results based off your responses.'
+        }
+      }
+    }
+  },
+  // slide 23
+  21: {
     slide_type: 'info',
     header: {
       header: 'Don\'t get stuck in the cycle',
@@ -736,7 +847,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 24
-  20: {
+  22: {
     slide_type: 'info',
     header: {
       header: 'The truth hurts!',
@@ -762,7 +873,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 25
-  21: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -789,7 +900,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 26
-  22: {
+  24: {
     slide_type: 'cardFlip',
     header: {
       header: 'Smoke-free Benefits',
@@ -893,7 +1004,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 27
-  23: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Sleep for Success',
@@ -923,7 +1034,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 28
-  24: {
+  26: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -1030,7 +1141,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 29
-  25: {
+  27: {
     slide_type: 'cardFlip',
     header: {
       header: 'How does your body heal?',
@@ -1106,7 +1217,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 30
-  26: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'How to say "No"',
@@ -1142,7 +1253,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 31
-  27: {
+  29: {
     slide_type: 'info',
     header: {
       header: 'CSUN Clear the Air!',
@@ -1173,7 +1284,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 32
-  28: {
+  30: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -1199,7 +1310,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 33
-  29: {
+  31: {
     slide_type: 'info',
     header: {
       header: 'Shake it off!',
@@ -1243,7 +1354,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 34
-  30: {
+  32: {
     slide_type: 'info',
     header: {
       header: 'Let off some steam – by talking!',
@@ -1275,7 +1386,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 35
-  31: {
+  33: {
     slide_type: 'cardFlip',
     header: {
       header: 'Healthy Inhale!',
@@ -1310,7 +1421,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 36
-  32: {
+  34: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a Wellness Goal',
@@ -1322,7 +1433,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 37
-  33: {
+  35: {
     slide_type: 'info',
     header: {
       header: 'Resources',
@@ -1347,7 +1458,7 @@ export const nicotineModuleSlides = {
     }
   },
   // slide 38
-  34: {
+  36: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',
