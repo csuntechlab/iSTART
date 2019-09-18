@@ -117,7 +117,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in it\'s hazardous chemicals.'
+            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
@@ -272,7 +272,7 @@ export const nicotineModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'It\'s okay if I just go to a tobaco bar and do not smoke hookah.',
+          question: 'It\'s okay if I just go to a tobacco bar and do not smoke hookah.',
           options: {
             0: {
               isAnswer: false,
@@ -377,7 +377,7 @@ export const nicotineModuleSlides = {
           alt: 'hookah comparison to cigarettes',
           mobile_size: '1/2',
           tablet_size: '1/2',
-          desktop_size: '1/3'
+          desktop_size: '1/2'
         }
       },
       1: {
@@ -525,7 +525,7 @@ export const nicotineModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Many of Kevin\'s friends on campus smoke Juul. Kevin didn\'t think it could be that bad if his friends were using it all the time, so he decided to buy one.<br> <b>What substances might keving be exposed to while using Juul?</b>',
+          question: 'Many of Kevin\'s friends on campus smoke Juul. Kevin didn\'t think it could be that bad if his friends were using it all the time, so he decided to buy one.<br> <b>What substances might kevin be exposed to while using Juul?</b>',
           options: {
             0: {
               isAnswer: false,
@@ -600,7 +600,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                text: '<b>Corrent,</b> All of these toxic things are likely inhaled when using Juul!',
                 img: {
                   src: null,
                   alt: null
@@ -664,7 +664,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'College students often assume that the majority of their peers smoke or vape.',
-          1: 'However, less than 5% of students reported vaping in the last month.',
+          1: 'Only 7% of students reported vaping in the last month',
           2: 'Don\'t be misled—these types of assumptions often lead students to smoke or vape in an attempt to fit in with their peers.'
         }
       },
@@ -728,9 +728,9 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s23_01.png',
           alt: 'nicotine cycle',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          mobile_size: '5/6',
+          tablet_size: '2/3',
+          desktop_size: '2/3'
         }
       }
     }
@@ -774,7 +774,7 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'Nicotine can have serious effects on brain development up until age 25.',
           1: '<b>Listen to this audio clip.</b>',
-          2: '<a href="https://e-cigarettes.surgeongeneral.gov/media/osh-surgeon-generals-e-cigarette-radio-psa.mp3">Click here to listen to audio clip</a>'
+          2: '<a target="_blank" href="https://e-cigarettes.surgeongeneral.gov/media/osh-surgeon-generals-e-cigarette-radio-psa.mp3">Click here to listen to audio clip</a>'
         }
       },
       1: {
