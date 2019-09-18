@@ -7,14 +7,10 @@
       <div v-else class="module__wrapper">
         <info-template v-if="currentSlideData.slide_type === 'info'" :key="currentSlideNumber"></info-template>
         <quiz-template v-if="currentSlideData.slide_type === 'quiz'" :key="currentSlideNumber"></quiz-template>
-        <input-comparison-template
-          v-if="currentSlideData.slide_type === 'inputComparison'"
-          :key="currentSlideNumber"
-        ></input-comparison-template>
-        <input-pie-chart-template
-          v-if="currentSlideData.slide_type === 'inputPieChart'"
-          :key="currentSlideNumber"
-        ></input-pie-chart-template>
+        <multi-question-quiz-input v-if="currentSlideData.slide_type === 'multiQuizQuestion'" :key="currentSlideNumber"></multi-question-quiz-input>
+        <multi-question-quiz-results v-if="currentSlideData.slide_type === 'multiQuizQuestionResults'" :key="currentSlideNumber"></multi-question-quiz-results>
+        <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'" :key="currentSlideNumber"></input-comparison-template>
+        <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'" :key="currentSlideNumber"></input-pie-chart-template>
         <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"></video-template>
         <card-flip-template
           v-if="currentSlideData.slide_type === 'cardFlip'"
@@ -49,6 +45,8 @@ import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurv
 import InfoTemplate from './../components/modules/templates/InfoTemplate'
 import IntroTemplate from './../components/modules/templates/IntroSlide'
 import QuizTemplate from './../components/modules/templates/QuizTemplate'
+import MultiQuestionQuizInput from './../components/modules/templates/MultiQuestionQuizInput'
+import MultiQuestionQuizResults from './../components/modules/templates/MultiQuestionQuizResults'
 import InputComparisonTemplate from './../components/modules/templates/InputComparisonTemplate'
 import InputPieChartTemplate from './../components/modules/templates/InputPieChartTemplate'
 import EmailForm from './../components/modules/templates/EmailForm'
@@ -67,6 +65,8 @@ export default {
     Navbar,
     EmailForm,
     QuizTemplate,
+    MultiQuestionQuizInput,
+    MultiQuestionQuizResults,
     MultiChoiceSurvey,
     MultiChoiceSurveyResults,
     VideoTemplate,

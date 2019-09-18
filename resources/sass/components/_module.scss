@@ -78,6 +78,18 @@
             }
         }
 
+        &__question {
+            color: $text-color;
+            font-weight: bold;
+            font-size: 1.20rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.15rem;
+            }
+        }
+
         &__list {
             color: $text-color;
             font-weight: normal;
