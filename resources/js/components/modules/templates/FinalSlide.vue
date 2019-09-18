@@ -1,9 +1,17 @@
 <template>
-    <h1>Hello</h1>
+  <h1>{{ currentSlideData.header.header }}</h1>
 </template>
 
 <script>
-export default {
+import { mapGetters, mapActions } from 'vuex'
 
+export default {
+  computed: {
+    ...mapGetters(['currentSlideData'])
+  },
+
+  methods: {
+    ...mapActions(['navigateFromSlide'])
+  }
 }
 </script>
