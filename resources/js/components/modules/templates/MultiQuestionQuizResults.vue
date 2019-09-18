@@ -25,10 +25,10 @@
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
         <ul>
-          <li v-html="currentSlideData.header.results.case.yes.caseResponse" v-if="(currentSlideData.header.results.case.yes.andAll === true) && (currentSlideData.header.results.case.yes.isAndMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.no.caseResponse" v-else-if="(currentSlideData.header.results.case.no.andAll === true) && (currentSlideData.header.results.case.no.isAndMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.yes.caseResponse" v-else-if="(currentSlideData.header.results.case.yes.orAll === true) && (currentSlideData.header.results.case.yes.isOrMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.no.caseResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.yes.andResponse" v-if="(currentSlideData.header.results.case.yes.andAll === true) && (currentSlideData.header.results.case.yes.isAndMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.no.andResponse" v-else-if="(currentSlideData.header.results.case.no.andAll === true) && (currentSlideData.header.results.case.no.isAndMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.yes.orResponse" v-else-if="(currentSlideData.header.results.case.yes.orAll === true) && (currentSlideData.header.results.case.yes.isOrMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.no.orResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></li>
           <div v-else>
             <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
               <li v-if="(item.response !== null)" v-html="item.response"></li>

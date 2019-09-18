@@ -414,16 +414,18 @@ export const alcoholModuleSlides = {
         case: {
           yes: {
             andAll: false,
-            orAll: true,
-            caseResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counsler at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            andResponse: '',
             isAndMet: false,
+            orAll: true,
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counsler at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
             isOrMet: false
           },
           no: {
             andAll: true,
-            orAll: false,
-            caseResponse: 'It\'s good to know you\'re not struggling with these issues. To stay on a healthy path, you\'ll learn more about how you can drink responsibly, and try wellness activities that make you feel great without drinking!',
+            andResponse: 'It\'s good to know you\'re not struggling with these issues. To stay on a healthy path, you\'ll learn more about how you can drink responsibly, and try wellness activities that make you feel great without drinking!',
             isAndMet: false,
+            orAll: false,
+            orResponse: '',
             isOrMet: false
           }
         },
