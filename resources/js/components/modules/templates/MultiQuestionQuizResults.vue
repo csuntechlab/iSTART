@@ -25,17 +25,13 @@
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
         <ul>
-          <li v-if="(currentSlideData.header.results.case.andAll === true) && (currentSlideData.header.results.case.isAndMet === true)">
-            {{ currentSlideData.header.results.case.caseResponse }}
-          </li>
-          <li v-else-if="(currentSlideData.header.results.case.orAll === true) && (currentSlideData.header.results.case.isOrMet === true)">
-            {{ currentSlideData.header.results.case.caseResponse }}
-          </li>
+          <li v-html="currentSlideData.header.results.case.yes.caseResponse" v-if="(currentSlideData.header.results.case.yes.andAll === true) && (currentSlideData.header.results.case.yes.isAndMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.no.caseResponse" v-else-if="(currentSlideData.header.results.case.no.andAll === true) && (currentSlideData.header.results.case.no.isAndMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.yes.caseResponse" v-else-if="(currentSlideData.header.results.case.yes.orAll === true) && (currentSlideData.header.results.case.yes.isOrMet === true)"></li>
+          <li v-html="currentSlideData.header.results.case.no.caseResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></li>
           <div v-else>
             <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
-              <li v-if="(item.response !== null)">
-                {{ item.response }}
-              </li>
+              <li v-if="(item.response !== null)" v-html="item.response"></li>
             </div>
           </div>
         </ul>
@@ -78,8 +74,10 @@ export default {
     ...mapActions(
       [
         'storeQuizResponses',
-        'checkMultiQuizAndCriteria',
-        'checkMultiQuizOrCriteria'
+        'checkMultiQuizYesAndCriteria',
+        'checkMultiQuizNoAndCriteria',
+        'checkMultiQuizYesOrCriteria',
+        'checkMultiQuizNoOrCriteria'
       ]
     ),
 
@@ -96,12 +94,16 @@ export default {
     },
 
     checkAndCase () {
-      this.checkMultiQuizAndCriteria({
+      this.checkMultiQuizYesAndCriteria({
+        currentSlideIndex: this.currentSlideNumber })
+      this.checkMultiQuizNoAndCriteria({
         currentSlideIndex: this.currentSlideNumber })
     },
 
     checkOrCase () {
-      this.checkMultiQuizOrCriteria({
+      this.checkMultiQuizYesOrCriteria({
+        currentSlideIndex: this.currentSlideNumber })
+      this.checkMultiQuizNoOrCriteria({
         currentSlideIndex: this.currentSlideNumber })
     }
   }

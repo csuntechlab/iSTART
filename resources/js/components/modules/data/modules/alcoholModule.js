@@ -328,8 +328,118 @@ export const alcoholModuleSlides = {
       }
     }
   },
-  // slide 13
+  // slide 11
   9: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'The best judge of whether you are challenged by drinking is you.',
+          1: 'Answers to the following questions will provide you with the best path for you.'
+        }
+      },
+      1: {
+        quiz: {
+          questions: {
+            0: {
+              show: true,
+              question: 'I drink to feel connected with friends, numb emotions/thoughts and to deal with stress. After drining and partying I regret it.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q1'
+                },
+                1: {
+                  selected: false,
+                  redirect: false,
+                  label: 'No',
+                  result: 'Response no, q1'
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'My drinking is fun but I know it affects my school performance.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q2'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q2'
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'I think I am a heavy drinker.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q3'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q3'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 12
+  10: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        case: {
+          yes: {
+            andAll: false,
+            orAll: true,
+            caseResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counsler at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            isAndMet: false,
+            isOrMet: false
+          },
+          no: {
+            andAll: true,
+            orAll: false,
+            caseResponse: 'It\'s good to know you\'re not struggling with these issues. To stay on a healthy path, you\'ll learn more about how you can drink responsibly, and try wellness activities that make you feel great without drinking!',
+            isAndMet: false,
+            isOrMet: false
+          }
+        },
+        responses: null
+      }
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Here are the results based off your responses.'
+        }
+      }
+    }
+  },
+  // slide 13
+  11: {
     slide_type: 'cardFlip',
     header: {
       header: 'Drinking categories',
@@ -392,7 +502,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 14
-  10: {
+  12: {
     slide_type: 'video',
     header: {
       header: 'What type of drinker is Sarah?',
@@ -406,7 +516,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 15
-  11: {
+  13: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -497,7 +607,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 16
-  12: {
+  14: {
     slide_type: 'video',
     header: {
       header: 'Binge Drinking',
@@ -511,7 +621,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 17
-  13: {
+  15: {
     slide_type: 'info',
     header: {
       header: 'Dependency',
@@ -535,7 +645,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 18
-  14: {
+  16: {
     slide_type: 'cardFlip',
     header: {
       header: 'Don\'t become a statistic!',
@@ -610,7 +720,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 19
-  15: {
+  17: {
     slide_type: 'info',
     header: {
       header: 'Benefits of drinking responsibly',
@@ -663,7 +773,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 20
-  16: {
+  18: {
     slide_type: 'info',
     header: {
       header: 'Reduced Calorie Intake',
@@ -730,7 +840,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 21
-  17: {
+  19: {
     slide_type: 'info',
     header: {
       header: 'Better Sleep',
@@ -754,7 +864,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 22
-  18: {
+  20: {
     slide_type: 'info',
     header: {
       header: 'Better Academic Performance',
@@ -774,7 +884,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 23
-  19: {
+  21: {
     slide_type: 'info',
     header: {
       header: 'Responsible Drinking Checklist',
@@ -826,7 +936,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 24
-  20: {
+  22: {
     slide_type: 'info',
     header: {
       header: 'Rethink Your Drink!',
@@ -864,7 +974,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 25
-  21: {
+  23: {
     slide_type: 'cardFlip',
     header: {
       header: 'Should I take an Uber?',
@@ -899,7 +1009,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 26
-  22: {
+  24: {
     slide_type: 'info',
     header: {
       header: 'Sobering Up Takes Time!',
@@ -927,7 +1037,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 27
-  23: {
+  25: {
     slide_type: 'quiz',
     header: {
       header: "Melita's night out",
@@ -1018,7 +1128,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 28
-  24: {
+  26: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -1042,7 +1152,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 29
-  25: {
+  27: {
     slide_type: 'info',
     header: {
       header: 'Physical Activities',
@@ -1065,7 +1175,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 30
-  26: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'Social Activities',
@@ -1095,7 +1205,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 31
-  27: {
+  29: {
     slide_type: 'cardFlip',
     header: {
       header: 'Mind-Body Activities',
@@ -1144,7 +1254,7 @@ export const alcoholModuleSlides = {
     }
   },
   // slide  32
-  28: {
+  30: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
@@ -1156,114 +1266,13 @@ export const alcoholModuleSlides = {
     }
   },
   // slide 33
-  29: {
+  31: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',
       sub_header: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
     },
     content: null
-  },
-
-  // ???
-  30: {
-    slide_type: 'multiQuizQuestion',
-    header: {
-      header: 'Header',
-      sub_header: null,
-      tooltip: 'Answer the questions to continue to the next slide.'
-    },
-    content: {
-      0: {
-        paragraph: {
-          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-        }
-      },
-      1: {
-        quiz: {
-          questions: {
-            0: {
-              show: true,
-              question: 'This is a Question 1?',
-              response: null,
-              input: {
-                0: {
-                  selected: false,
-                  label: 'Yes',
-                  result: 'Response yes, q1'
-                },
-                1: {
-                  selected: false,
-                  redirect: true,
-                  label: 'No',
-                  result: 'Response no, q1'
-                }
-              }
-            },
-            1: {
-              show: false,
-              question: 'This is Question 2?',
-              response: null,
-              input: {
-                0: {
-                  selected: false,
-                  label: 'Yes',
-                  result: 'Response yes, q2'
-                },
-                1: {
-                  selected: false,
-                  label: 'No',
-                  result: 'Response no, q2'
-                }
-              }
-            },
-            2: {
-              show: false,
-              question: 'This is Question 3?',
-              response: null,
-              input: {
-                0: {
-                  selected: false,
-                  label: 'Yes',
-                  result: 'Response yes, q3'
-                },
-                1: {
-                  selected: false,
-                  label: 'No',
-                  result: 'Response no, q3'
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  // ???
-  31: {
-    slide_type: 'multiQuizQuestionResults',
-    header: {
-      header: 'Header',
-      sub_header: null,
-      tooltip: 'Wait 5 seconds to proceed to the next slide',
-      results: {
-        case: {
-          andAll: false,
-          orAll: false,
-          caseResponse: null,
-          isAndMet: false,
-          isOrMet: false
-        },
-        responses: null
-      }
-    },
-    content: {
-      0: {
-        paragraph: {
-          0: 'Joining a team or an organization can lead to meaningful connections and friendships! The Matador Involvement Center has many options.'
-        }
-      }
-    }
   }
 }
 export default alcoholModuleSlides
