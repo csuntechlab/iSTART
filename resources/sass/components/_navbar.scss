@@ -38,11 +38,13 @@
     &__item-wrapper{
         display: flex;
         justify-content: space-around;
-        width: 58%;
+        width: 50%;
         list-style: none;
         margin: 0;
         padding: 0;
-
+        @include media-breakpoint-down(lg){
+            width: 65%;
+        }
         @include media-breakpoint-down(sm) {
             width: 100%;
             display: block;
@@ -87,5 +89,30 @@
                 background: $item-hover-background;
             }
         }
+    }
+
+    &__location{
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+        text-align: center;
+        color: $white;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1;
+        align-self: center;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 1.25rem;
+    }
+
+    &__mobile-wrapper{
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+        display: flex;
+        flex: center;
+        width: 100%;
     }
 }

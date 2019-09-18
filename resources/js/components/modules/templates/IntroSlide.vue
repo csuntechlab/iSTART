@@ -3,12 +3,12 @@
     <div class="row introSlide__image-container" :style="'background-image: url(' + currentSlideData.content.background_image + ')'">
     </div>
     <div class="row introSlide__content-wrapper">
-      <div class="introSlide__title-container col-12 col-md-4">
+      <div class="introSlide__title-container col-12 col-lg-4">
         <h1 class="introSlide__title">
           {{currentSlideData.content.title}}
         </h1>
       </div>
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-lg-8">
         <p class="introSlide__description">
           <strong>Goal: </strong>
           {{currentSlideData.content.goal}}

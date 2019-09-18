@@ -1,19 +1,25 @@
 .introSlide {
   &__image-container {
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 14rem);
+    min-height: 25rem;
+    max-height: 35rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    @include media-breakpoint-down(md) {
       height: 0;
       padding-top: 78%;
+      min-height: 0;
+    }
+    @include media-breakpoint-only(md) {
+      padding-top: 85%;
     }
   }
   &__content-wrapper {
     bottom: 0;
     background-color: $introSlide--backgroundColor;
     padding: 2rem 0;
-    @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       padding-left: 0;
       padding-right: 0;
       padding-top: 1rem;
@@ -28,7 +34,7 @@
     font-weight: 700;
     font-size: 3.3rem;
     text-align: center;
-    @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       text-align: left;
       font-size: 1.75rem;
     }
@@ -44,7 +50,7 @@
     height: 3.3rem;
     background: $white;
     color: $black;
-    @media only screen and (max-width: map-get($grid-breakpoints, md)) {
+    @include media-breakpoint-down(md) {
       background-color: $primaryColor;
       color: $white;
       position: fixed;
