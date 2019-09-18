@@ -603,6 +603,11 @@ export const alcoholModuleSlides = {
           tablet_size: '1/2',
           desktop_size: '1/3'
         }
+      },
+      2: {
+        paragraph: {
+          0: 'Thankfully, states have passed laws that allow pharmacists to dispense naloxone without a Rx.'
+        }
       }
     }
   },
