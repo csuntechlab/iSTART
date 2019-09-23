@@ -10,37 +10,27 @@
   <ul id="dropdown" class="navbar__item-wrapper" :class="isNavOpen ? 'navbar__item-wrapper--active' : ''">
     <li class="navbar__item">
       <router-link v-show="!isAdminUser" to="/" class="navbar__link">
-        <div>
-          Dashboard
-        </div>
+        Dashboard
       </router-link>
     </li>
     <li class="navbar__item">
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
-        <div>
-          About
-        </div>
+        About
       </router-link>
     </li>
     <li class="navbar__item">
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
-        <div>
-          Resources
-        </div>
+        Resources
       </router-link>
     </li>
     <li class="navbar__item">
       <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
-        <div>
-          Contact Us
-        </div>
+        Contact Us
       </router-link>
     </li>
     <li class="navbar__item">
       <router-link to="/logout" class="navbar__link">
-        <div>
-          Logout
-        </div>
+        Logout
       </router-link>
     </li>
   </ul>
