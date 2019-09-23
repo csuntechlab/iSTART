@@ -19,6 +19,8 @@
 
     &__wrapper {
         margin-top: 2rem;
+        display: flex;
+        justify-content: center;
 
         @include media-breakpoint-up(md) {
             padding: 0 3rem;

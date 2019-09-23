@@ -19,7 +19,7 @@
         <email-form v-if="currentSlideData.slide_type==='emailForm'" :key="currentSlideNumber"></email-form>
         <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'" :key="currentSlideNumber"></multi-choice-survey>
         <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
-        <final-slide v-if="currentSlideData.slide_type==='finalSlide'"></final-slide>
+        <final-slide v-if="currentSlideData.slide_type==='finalSlide'" :key="currentSlideNumber"></final-slide>
       </div>
     </main>
     <module-footer v-if="currentSlideData.slide_type !== 'intro'"></module-footer>

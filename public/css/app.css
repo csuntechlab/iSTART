@@ -12390,6 +12390,12 @@ body {
 
 .module__wrapper {
   margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -13525,5 +13531,37 @@ body {
 
 .photo-list__list-item--red-text {
   color: #e3342f;
+}
+
+.final-slide-card {
+  background: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0rem 0.05rem 5px rgba(0, 0, 0, 0.16);
+          box-shadow: 0rem 0.05rem 5px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  padding: 2rem;
+  margin: 0 1rem;
+  max-width: 32rem;
+  border: 0.1rem #CECECE solid;
+}
+
+.final-slide-card__icon {
+  color: #5CBBE4;
+  font-size: 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.final-slide-card__paragraph {
+  color: #354A5C;
+  font-weight: normal;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .final-slide-card__paragraph {
+    font-size: 0.95rem;
+  }
 }
 
