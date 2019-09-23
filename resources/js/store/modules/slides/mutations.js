@@ -134,26 +134,50 @@ export default {
     }
   },
 
-  CHECK_MULTI_QUIZ_AND_CRITERIA (state, payload) {
+  CHECK_MULTI_QUIZ_YES_AND_CRITERIA (state, payload) {
     let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
     let responsesLength = Object.keys(responses).length
 
-    state.JSONSlideData[payload.currentSlideIndex].header.results.case.isAndMet = true
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.yes.isAndMet = true
     for (let i = 0; i < responsesLength; i += 1) {
       if (!responses[i].input[0].selected) {
-        state.JSONSlideData[payload.currentSlideIndex].header.results.case.isAndMet = false
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.yes.isAndMet = false
       }
     }
   },
 
-  CHECK_MULTI_QUIZ_OR_CRITERIA (state, payload) {
+  CHECK_MULTI_QUIZ_NO_AND_CRITERIA (state, payload) {
     let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
     let responsesLength = Object.keys(responses).length
 
-    state.JSONSlideData[payload.currentSlideIndex].header.results.case.isOrMet = false
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.no.isAndMet = true
+    for (let i = 0; i < responsesLength; i += 1) {
+      if (!responses[i].input[1].selected) {
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.no.isAndMet = false
+      }
+    }
+  },
+
+  CHECK_MULTI_QUIZ_YES_OR_CRITERIA (state, payload) {
+    let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
+    let responsesLength = Object.keys(responses).length
+
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.yes.isOrMet = false
     for (let i = 0; i < responsesLength; i += 1) {
       if (responses[i].input[0].selected) {
-        state.JSONSlideData[payload.currentSlideIndex].header.results.case.isOrMet = true
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.yes.isOrMet = true
+      }
+    }
+  },
+
+  CHECK_MULTI_QUIZ_NO_OR_CRITERIA (state, payload) {
+    let responses = state.JSONSlideData[payload.currentSlideIndex].header.results.responses
+    let responsesLength = Object.keys(responses).length
+
+    state.JSONSlideData[payload.currentSlideIndex].header.results.case.no.isOrMet = false
+    for (let i = 0; i < responsesLength; i += 1) {
+      if (responses[i].input[1].selected) {
+        state.JSONSlideData[payload.currentSlideIndex].header.results.case.no.isOrMet = true
       }
     }
   },

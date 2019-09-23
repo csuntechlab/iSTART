@@ -330,13 +330,120 @@ export const marijuanaModuleSlides = {
       }
     }
   },
-  /*
-    * slide 14
-    * slide 15
-    * SELF REPORTING SECTION NEEDED
-    */
-  // slide 16
+  // slide 14
   12: {
+    slide_type: 'multiQuizQuestion',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Answer the questions to continue to the next slide.'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Many people seek out professional assessments to tell them if they have a problem with prescription drug use and need assistance with it. However, the best judge of whether <u>you</u> are challenged by your marijuana use use <u>you</u>.',
+          1: 'Your answers to the following questions will provide you with the best path for you.'
+        }
+      },
+      1: {
+        quiz: {
+          questions: {
+            0: {
+              show: true,
+              question: 'Lately, my use of marijuana is worrying me.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q1'
+                },
+                1: {
+                  selected: false,
+                  redirect: false,
+                  label: 'No',
+                  result: 'Response no, q1'
+                }
+              }
+            },
+            1: {
+              show: false,
+              question: 'I started using Marijuana for fun but now it\'s hard to stop.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q2'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q2'
+                }
+              }
+            },
+            2: {
+              show: false,
+              question: 'My studies have begun to suffer from my marijuana use.',
+              response: null,
+              input: {
+                0: {
+                  selected: false,
+                  label: 'Yes',
+                  result: 'Response yes, q3'
+                },
+                1: {
+                  selected: false,
+                  label: 'No',
+                  result: 'Response no, q3'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 15
+  13: {
+    slide_type: 'multiQuizQuestionResults',
+    header: {
+      header: 'Self Assessment',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide',
+      results: {
+        case: {
+          yes: {
+            andAll: true,
+            andResponse: 'You are acknowledging to yourself that a healthy change action plan can prevent long-term challenges and problems from continuing your current pattern of mariuana use.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards health.',
+            isAndMet: false,
+            orAll: true,
+            orResponse: 'Your instincts are likely suggesting that you would benefit from making a change in your use of marijuana.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards health.',
+            isOrMet: false
+          },
+          no: {
+            andAll: true,
+            andResponse: 'It\'s good to know you\'re not struggling with these issues. To stay on a healthy path, you\'ll learn more about marijuana use in the following slides.',
+            isAndMet: false,
+            orAll: false,
+            orResponse: '',
+            isOrMet: false
+          }
+        },
+        responses: null
+      }
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Here are the results based off your responses.'
+        }
+      }
+    }
+  },
+  // slide 16
+  14: {
     slide_type: 'video',
     header: {
       header: 'Risks of Marijuana Use',
@@ -350,7 +457,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 17
-  13: {
+  15: {
     slide_type: 'cardFlip',
     header: {
       header: 'How does marijuana affect the brain?',
@@ -412,7 +519,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 18
-  14: {
+  16: {
     slide_type: 'info',
     header: {
       header: 'What are the long-term effects of marijuana use?',
@@ -442,7 +549,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 19
-  15: {
+  17: {
     slide_type: 'info',
     header: {
       header: 'Academic Performance',
@@ -472,7 +579,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 20
-  16: {
+  18: {
     slide_type: 'info',
     header: {
       header: 'Is marijuana addictive?',
@@ -525,7 +632,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 21
-  17: {
+  19: {
     slide_type: 'info',
     header: {
       header: 'What\'s legal in California?',
@@ -577,7 +684,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 22 Question 1
-  18: {
+  20: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -637,7 +744,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 22 Question 2
-  19: {
+  21: {
     slide_type: 'quiz',
     header: {
       header: null,
@@ -697,7 +804,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 23
-  20: {
+  22: {
     slide_type: 'info',
     header: {
       header: 'Should I take an Uber?',
@@ -725,7 +832,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 24
-  21: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Responsible Marijuana Use Checklist',
@@ -774,7 +881,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 25
-  22: {
+  24: {
     slide_type: 'info',
     header: {
       header: 'How to say NO to marijuana.',
@@ -811,7 +918,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 26
-  23: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -839,7 +946,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 27
-  24: {
+  26: {
     slide_type: 'cardFlip',
     header: {
       header: 'How can we naturally increase dopamine levels?',
@@ -900,7 +1007,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 28
-  25: {
+  27: {
     slide_type: 'info',
     header: {
       header: 'Get enough sunlight',
@@ -924,7 +1031,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 29
-  26: {
+  28: {
     slide_type: 'info',
     header: {
       header: 'Mind-Body Wellness',
@@ -960,7 +1067,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 30
-  27: {
+  29: {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
@@ -972,7 +1079,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 31
-  28: {
+  30: {
     slide_type: 'info',
     header: {
       header: 'Resources',
@@ -995,7 +1102,7 @@ export const marijuanaModuleSlides = {
     }
   },
   // slide 32
-  29: {
+  31: {
     slide_type: 'info',
     header: {
       header: 'Thank you for completing this module!',
