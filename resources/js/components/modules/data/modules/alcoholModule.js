@@ -30,9 +30,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s03_01.png',
           alt: 'alcohol comparison',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'informational'
         }
       }
     }
@@ -50,7 +48,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s04_01.png',
           alt: 'drink sizes comparison',
-          y_position: null
+          size: 'informational'
         }
       },
       1: {
@@ -75,9 +73,7 @@ export const alcoholModuleSlides = {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
           caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'informational'
         }
       },
       1: {
@@ -323,7 +319,6 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
           alt: 'friends on beach cooking marshmallows',
-          y_position: 'bottom'
         }
       }
     }
@@ -641,7 +636,6 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
           alt: 'muppets wasted on couch',
-          y_position: 'bottom'
         }
       }
     }
@@ -854,7 +848,6 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
           alt: 'person sleeping on couch with comfy blanket',
-          y_position: 'bottom'
         }
       },
       1: {
@@ -878,9 +871,9 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s22_01.PNG',
           alt: 'alcohol infographic on being a factor for academic problems',
+          size: '1',
           mobile_size: '5/6',
           tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -1030,10 +1023,8 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          y_position: 'bottom',
-          mobile_size: '1/2',
-          tablet_size: '1/3',
-          desktop_size: '1/4'
+          size: '1/2',
+          tablet_size: '1/3'
         }
       }
     }
