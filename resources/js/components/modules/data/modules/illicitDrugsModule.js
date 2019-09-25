@@ -773,20 +773,21 @@ export const alcoholModuleSlides = {
   },
   // slide 26
   23: {
-    slide_type: 'info',
+    slide_type: 'finalSlide',
     header: {
-      header: 'Thanks for following along so far!',
+      header: null,
       sub_header: null
     },
     content: {
       0: {
         paragraph: {
-          0: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
-          1: 'Asking for help is one of the bravest things you can do! You are strong and not alone.',
-          2: 'And, remember to look out for the next iSTART survey link in your email!'
+          0: 'Thanks for following along so far!',
+          1: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
+          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.',
+          3: 'And, remember to look out for the next iSTART survey link in your email!'
         }
       }
     }
-  }
+  },
 }
 export default alcoholModuleSlides
