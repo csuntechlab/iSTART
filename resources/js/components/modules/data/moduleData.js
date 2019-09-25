@@ -51,11 +51,11 @@ export const moduleData = {
     }
   },
   3: {
-    name: 'Illicit Drugs',
-    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
+    name: 'Prescription Drugs',
+    description: 'A prescription drug is a pharmaceutical drug that requires a medical prescription to be legally dispensed...',
     thumbnail: {
-      src: 'images/thumbnail/illicit-drugs_thumbnail.jpg',
-      alt: 'Illicit Drugs'
+      src: 'images/thumbnail/prescription-drugs_thumbnail.jpg',
+      alt: 'Pills'
     },
     progress: {
       completion_status: 'Start',
@@ -68,11 +68,11 @@ export const moduleData = {
     }
   },
   4: {
-    name: 'Prescription Drugs',
-    description: 'A prescription drug is a pharmaceutical drug that requires a medical prescription to be legally dispensed...',
+    name: 'Illicit Drugs',
+    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
     thumbnail: {
-      src: 'images/thumbnail/prescription-drugs_thumbnail.jpg',
-      alt: 'Pills'
+      src: 'images/thumbnail/illicit-drugs_thumbnail.jpg',
+      alt: 'Illicit Drugs'
     },
     progress: {
       completion_status: 'Start',
