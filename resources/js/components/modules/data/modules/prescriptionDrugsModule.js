@@ -319,7 +319,8 @@ export const prescriptionDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/prescriptionDrugsModule/RxDrugs_s14_01.png',
-          alt: 'hands reaching for the center'
+          alt: 'hands reaching for the center',
+          size: 'symbol'
         }
       }
     }
@@ -889,7 +890,8 @@ export const prescriptionDrugsModuleSlides = {
       2: {
         image: {
           src: 'images/prescriptionDrugsModule/RxDrugs_s27_01.png',
-          alt: 'person deciding on which path to take'
+          alt: 'person deciding on which path to take',
+          size: 'symbol'
         }
       }
     }
