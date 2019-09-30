@@ -55,8 +55,12 @@ export default {
         return defaultSize
       }
       if (this.image.size === 'informational') {
-        let informationalSize = 'col-lg-7 col-md-9 col-sm-10 col-12'
+        let informationalSize = 'col-lg-8 col-md-9 col-sm-10 col-12'
         return informationalSize
+      }
+      if (this.image.size === 'symbol' || this.image.size === 'clipart') {
+        let symboleSize = 'col-6 col-md-4'
+        return symboleSize
       }
       let imageSizes = new Map([
         ['1', '-12'],

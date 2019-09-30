@@ -77,7 +77,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s04_01.png',
           alt: 'marijuana bar-graph of rising THC content',
-          y_position: 'bottom'
+          size: 'informational'
         }
       }
     }
@@ -102,7 +102,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s05_01.png',
           alt: 'hands holding money bag',
-          y_position: 'bottom'
+          size: 'clipart'
         }
       }
     }
@@ -194,7 +194,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s07_01.png',
           alt: 'line graph of effects smoked and eaten over hours',
-          y_position: 'bottom'
+          size: 'informational'
         }
       }
     }
@@ -218,7 +218,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s08_01.png',
           alt: 'mind infographic',
-          y_position: 'bottom'
+          size: 'symbol'
         }
       }
     }
@@ -274,7 +274,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s10_01.png',
           alt: 'marijuana vape',
-          y_position: 'bottom'
         }
       }
     }
@@ -325,7 +324,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s13_01.png',
           alt: 'daily marijuana consumption over time',
-          y_position: 'bottom'
+          size: 'informational'
         }
       }
     }
@@ -543,7 +542,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s18_01.png',
           alt: 'marijuana brain',
-          y_position: 'bottom'
+          size: 'symbol'
         }
       }
     }
@@ -567,7 +566,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s19_01.jpg',
           alt: 'student racking brain',
-          y_position: 'bottom'
         }
       },
       2: {
@@ -821,7 +819,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s23_01.png',
           alt: 'drivers under the influence',
-          y_position: 'bottom'
+          size: 'informational'
         }
       },
       2: {
@@ -907,7 +905,7 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s25_01.png',
           alt: 'no marijuana',
-          y_position: 'bottom'
+          size: 'symbol'
         }
       },
       3: {
@@ -935,7 +933,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s26_01.jpg',
           alt: 'euphoric emoji',
-          y_position: 'bottom'
         }
       },
       2: {
@@ -1025,7 +1022,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s28_01.png',
           alt: 'handstand on the beach',
-          y_position: 'bottom'
         }
       }
     }
@@ -1048,7 +1044,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s29_01.jpeg',
           alt: 'person enjoying music',
-          y_position: 'bottom'
         }
       },
       2: {
@@ -1096,7 +1091,6 @@ export const marijuanaModuleSlides = {
         image: {
           src: 'images/marijuanaModule/mar_s31_01.jpg',
           alt: 'teamwork mountain climbing',
-          y_position: 'bottom'
         }
       }
     }

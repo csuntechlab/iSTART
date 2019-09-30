@@ -869,7 +869,7 @@ export const alcoholModuleSlides = {
     content: {
       0: {
         image: {
-          src: 'images/alcoholModule/alcohol_s22_01.PNG',
+          src: 'images/alcoholModule/alcohol_s22_01.png',
           alt: 'alcohol infographic on being a factor for academic problems',
           size: '1',
           mobile_size: '5/6',
@@ -1023,8 +1023,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          size: '1/2',
-          tablet_size: '1/3'
+          size: 'clipart',
         }
       }
     }
