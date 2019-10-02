@@ -75,7 +75,6 @@ export default {
       this.navigateFromSlide('forward')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
-      this.goToTop()
     },
 
     slideBack () {
@@ -84,7 +83,6 @@ export default {
       this.navigateFromSlide('back')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
-      this.goToTop()
     },
 
     checkForStart () {
@@ -99,6 +97,8 @@ export default {
     checkForVisitedSlide () {
       if (this.currentSlideNumber < this.latestSlideNumber) {
         this.enableContinue()
+      } else {
+        window.scrollTo(0, 0)
       }
     },
 
@@ -112,12 +112,6 @@ export default {
 
     hideTooltip () {
       document.getElementById('tooltip').classList.add('hidden')
-    },
-
-    goToTop () {
-      window.scrollTo({
-        top: 0
-      })
     }
   }
 }
