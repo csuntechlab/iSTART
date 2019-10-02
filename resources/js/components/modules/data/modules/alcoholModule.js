@@ -94,11 +94,10 @@ export const alcoholModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s06_01.png',
-          alt: 'alcohol comparison',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          src: 'images/global/quiz_graphic.png',
+          alt: 'quiz',
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -523,10 +522,10 @@ export const alcoholModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s06_01.png',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -1039,10 +1038,10 @@ export const alcoholModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/alcoholModule/alcohol_s06_01.png',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {

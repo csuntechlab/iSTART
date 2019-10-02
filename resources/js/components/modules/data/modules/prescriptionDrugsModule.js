@@ -450,9 +450,8 @@ export const prescriptionDrugsModuleSlides = {
         0: {
           src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -558,9 +557,8 @@ export const prescriptionDrugsModuleSlides = {
         0: {
           src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {

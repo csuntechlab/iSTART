@@ -497,10 +497,10 @@ export const nicotineModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/nicotineModule/nic_s16_01.jpg',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -1011,10 +1011,10 @@ export const nicotineModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/nicotineModule/nic_s28_01.png',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
