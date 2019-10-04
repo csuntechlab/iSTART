@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="video-template__caption col-12">
-      <caption v-if="currentSlideData.content.caption !== null" class="module-text__caption">{{ currentSlideData.content.caption }}</caption>
+      <caption v-if="currentSlideData.content.caption !== null" v-html="currentSlideData.content.caption" class="module-text__caption"></caption>
     </div>
   </div>
 </template>

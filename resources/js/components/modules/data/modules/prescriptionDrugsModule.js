@@ -20,7 +20,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Many students may not even realize that they, or someone they know, are misusing or abusing Rx medications. Did you know that it\'s illegal to use Rx meds without a prescription?',
+          0: 'Many students may not realize that they, or someone they know, are misusing or abusing prescription (Rx) medications.',
           1: 'When used the right way and under a doctor’s supervision, Rx drugs can be a safe and effective treatment. However, when used the wrong way, and without a prescription, Rx drugs can be dangerous.'
         }
       },
@@ -143,13 +143,13 @@ export const prescriptionDrugsModuleSlides = {
     slide_type: 'video',
     header: {
       header: 'Stimulant Abuse',
-      sub_header: 'Some students misuse Adderall to study and increase focus. But misusing a medication intended for someone with ADHD can have negative consequences.',
+      sub_header: 'Some students misuse Adderall to study and increase focus, but misusing a medication intended for someone with ADHD can have negative consequences.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
       video_id: 'TDjluZ-r_pM',
       video_length: (30000 / 2) + 5000,
-      caption: null
+      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
     }
   },
   // Slide 8
@@ -187,7 +187,7 @@ export const prescriptionDrugsModuleSlides = {
       0: {
         paragraph: {
           0: 'Anti-anxiety meds like Xanax and Valium are highly addictive!',
-          1: 'If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects.Be sure to talk to your doctor about how to come off these meds safely!',
+          1: 'If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects. Be sure to talk to your doctor about how to come off these meds safely!',
           2: 'Due to the many uncomfortable and dangerous side effects, if you don’t NEED these medications clinically, it\'s best to avoid them.',
           3: '<b>Swipe to see some common side effects.<b>'
         }
@@ -252,7 +252,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       video_id: 'dbk0Umy_46g',
       video_length: (30000 / 2) + 5000,
-      caption: null
+      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
     }
   },
   // Slide 12
@@ -324,8 +324,116 @@ export const prescriptionDrugsModuleSlides = {
       }
     }
   },
-  // slide 15-17
+  // slide 19, was moved before self-eval
   13: {
+    slide_type: 'quiz',
+    header: {
+      header: null,
+      sub_header: null,
+      tooltip: 'Select an answer to proceed to the next slide'
+    },
+    content: {
+      images: {
+        0: {
+          src: 'images/global/quiz_graphic.png',
+          alt: 'quiz',
+          mobile_size: '2/3',
+          tablet_size: '1/2',
+          desktop_size: '1/3'
+        }
+      },
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Which of the following is NOT an effect of anti-anxiety/sedative abuse?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'Poor coordination and falling',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: true,
+              show: false,
+              text: 'Increased attentiveness and energy',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Correct!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'Mood swings',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'Slowed breathing rate',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            5: {
+              isAnswer: false,
+              show: false,
+              text: 'Addiction',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  // slide 15-17
+  14: {
     slide_type: 'multiQuizQuestion',
     header: {
       header: 'Self-Assessment',
@@ -385,7 +493,7 @@ export const prescriptionDrugsModuleSlides = {
                 0: {
                   selected: false,
                   label: 'Yes',
-                  result: 'Your answer suggests you know you need to strengthen your self confidence socially, athletically and/or academically.<br> Look for suggestions in the remainder of this module that can effectively strengthen your self-esteem and self-confidence.'
+                  result: 'Your answer suggests you know you need to strengthen your self-confidence socially, athletically and/or academically.<br> Look for suggestions in the remainder of this module that can effectively strengthen your self-esteem and self-confidence.'
                 },
                 1: {
                   selected: false,
@@ -400,7 +508,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   // slide 18
-  14: {
+  15: {
     slide_type: 'multiQuizQuestionResults',
     header: {
       header: 'Self-Assessment',
@@ -418,7 +526,7 @@ export const prescriptionDrugsModuleSlides = {
           },
           no: {
             andAll: true,
-            andResponse: 'You\'re use of prescribed meds as directed reflects good judgement.',
+            andResponse: 'Your use of prescribed meds as directed reflects good judgement.',
             isAndMet: false,
             orAll: false,
             orResponse: '',
@@ -432,114 +540,6 @@ export const prescriptionDrugsModuleSlides = {
       0: {
         paragraph: {
           0: 'Here are the results based off your responses.'
-        }
-      }
-    }
-  },
-  // Slide 19
-  15: {
-    slide_type: 'quiz',
-    header: {
-      header: null,
-      sub_header: null,
-      tooltip: 'Select an answer to proceed to the next slide'
-    },
-    content: {
-      images: {
-        0: {
-          src: 'images/global/quiz_graphic.png',
-          alt: 'quiz',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
-        }
-      },
-      questions: {
-        0: {
-          showResponse: false,
-          question: 'Which of the following is NOT an effect of anti-anxiety/sedative abuse?',
-          options: {
-            0: {
-              isAnswer: false,
-              show: false,
-              text: 'Poor coordination and falling',
-              img: {
-                src: null,
-                alt: null
-              },
-              response: {
-                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
-                img: {
-                  src: null,
-                  alt: null
-                }
-              }
-            },
-            1: {
-              isAnswer: true,
-              show: false,
-              text: 'Increased attentiveness and energy',
-              img: {
-                src: null,
-                alt: null
-              },
-              response: {
-                text: '<b>Correct!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy',
-                img: {
-                  src: null,
-                  alt: null
-                }
-              }
-            },
-            2: {
-              isAnswer: false,
-              show: false,
-              text: 'Mood swings',
-              img: {
-                src: null,
-                alt: null
-              },
-              response: {
-                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
-                img: {
-                  src: null,
-                  alt: null
-                }
-              }
-            },
-            3: {
-              isAnswer: false,
-              show: false,
-              text: 'Slowed breathing rate',
-              img: {
-                src: null,
-                alt: null
-              },
-              response: {
-                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
-                img: {
-                  src: null,
-                  alt: null
-                }
-              }
-            },
-            5: {
-              isAnswer: false,
-              show: false,
-              text: 'Addiction',
-              img: {
-                src: null,
-                alt: null
-              },
-              response: {
-                text: '<b>Nice try!</b> Anti-anxiety meds and sedatives are depressants, so they don\'t cause increased attentiveness and energy.',
-                img: {
-                  src: null,
-                  alt: null
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -699,7 +699,7 @@ export const prescriptionDrugsModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Did you know CSUN has a Learning Resource Center with FREE workshops, labs and online tutoring!?',
+          0: 'Did you know CSUN has a Learning Resource Center with FREE workshops, labs and online tutoring?',
           1: 'See the resources in the app menu.'
         }
       }
@@ -740,7 +740,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       video_id: 'C8cxGuEjRhQ',
       video_length: (30000 / 2) + 5000,
-      caption: null
+      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
     }
   },
   // Slide 25
@@ -796,7 +796,7 @@ export const prescriptionDrugsModuleSlides = {
       card_flip_count: 0,
       paragraph: {
         0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
-        1: 'What if someone wants to use YOUR Rx meds?​Tell them: ',
+        1: 'What if someone wants to use YOUR Rx meds? ​Tell them: ',
         2: '<ul><li>"I can\'t get it refilled easily, and I won\'t be able to stay healthy if I run out​."</li><li>"I\'m on my parents\' insurance, they\'ll wonder why I need to refill it earlier than normal."</li></ul>',
         3: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON".'
       },
