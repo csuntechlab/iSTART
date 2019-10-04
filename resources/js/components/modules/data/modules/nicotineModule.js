@@ -248,7 +248,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                text: '<b>Correct,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
                 img: {
                   src: null,
                   alt: null
@@ -299,7 +299,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
+                text: '<b>Correct,</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
                 img: {
                   src: null,
                   alt: null
@@ -600,7 +600,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> All of these toxic things are likely inhaled when using Juul!',
+                text: '<b>Correct,</b> All of these toxic things are likely inhaled when using Juul!',
                 img: {
                   src: null,
                   alt: null

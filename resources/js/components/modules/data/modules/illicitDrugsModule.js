@@ -305,7 +305,7 @@ export const illicitDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Synthetic cannabinoids are illegal in CA. Also, remember that recreational use of natural cannabis is legal in CA only if you\'re over 21.',
+                text: '<b>Correct,</b> Synthetic cannabinoids are illegal in CA. Also, remember that recreational use of natural cannabis is legal in CA only if you\'re over 21.',
                 img: {
                   src: null,
                   alt: null

@@ -731,7 +731,7 @@ export const marijuanaModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> it\'s illegal! Your friend is in a public place. He cannot use it there, per CA law.',
+                text: '<b>Correct,</b> it\'s illegal! Your friend is in a public place. He cannot use it there, per CA law.',
                 img: {
                   src: null,
                   alt: null
@@ -791,7 +791,7 @@ export const marijuanaModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> it\'s illegal! Your friend cannot transport marijuana for recreational use across state borders.',
+                text: '<b>Correct,</b> it\'s illegal! Your friend cannot transport marijuana for recreational use across state borders.',
                 img: {
                   src: null,
                   alt: null
