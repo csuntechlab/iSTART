@@ -334,7 +334,7 @@ export const marijuanaModuleSlides = {
   12: {
     slide_type: 'multiQuizQuestion',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Answer the questions to continue to the next slide.'
     },
@@ -409,7 +409,7 @@ export const marijuanaModuleSlides = {
   13: {
     slide_type: 'multiQuizQuestionResults',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide',
       results: {
