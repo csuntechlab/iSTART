@@ -990,7 +990,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s okay to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
-        2: 'Flip the card below to read about drunk driving in California'
+        2: 'Flip the card below to read about drunk driving in California.'
       },
       cards: {
         0: {
@@ -1221,7 +1221,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'By practicing mindfulness and yoga, you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
-        2: '<b>Flip the cards below</b>'
+        2: '<b>Flip the cards below.</b>'
       },
       cards: {
         0: {

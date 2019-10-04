@@ -24,7 +24,7 @@ export const marijuanaModuleSlides = {
       card_flip_count: 0,
       paragraph: {
         0: 'Let\'s first discuss the two main chemicals that make up the different cannabis strains: THC and CBD.',
-        1: '<b>Flip the cards below to learn more!</b>'
+        1: '<b>Flip the cards below to learn more.</b>'
       },
       cards: {
         0: {
@@ -958,7 +958,7 @@ export const marijuanaModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of hapiness</b>'
+        0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of hapiness.</b>'
       },
       cards: {
         0: {

@@ -45,7 +45,7 @@ export const prescriptionDrugsModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the cards</b> below to learn more:'
+        0: '<b>Flip the cards</b> below to learn more.'
       },
       cards: {
         0: {
@@ -798,7 +798,7 @@ export const prescriptionDrugsModuleSlides = {
         0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
         1: 'What if someone wants to use YOUR Rx meds?​Tell them: ',
         2: '<ul><li>"I can\'t get it refilled easily, and I won\'t be able to stay healthy if I run out​."</li><li>"I\'m on my parents\' insurance, they\'ll wonder why I need to refill it earlier than normal."</li></ul>',
-        3: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON"!'
+        3: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON".'
       },
       cards: {
         0: {
@@ -982,7 +982,7 @@ export const prescriptionDrugsModuleSlides = {
       paragraph: {
         0: 'Helping others is important, but so is helping yourself be your best you! Work on your coping skills, increase focus, reduce stress and anxiety - even manage pain using mindfulness.',
         2: 'Mindfulness-Based Stress Reduction (MBSR) is one such technique, which has been widely accepted. Courses are offered by respected institutions in L.A.',
-        3: 'Flip the card to read more'
+        3: 'Flip the card to read more.'
       },
       cards: {
         0: {

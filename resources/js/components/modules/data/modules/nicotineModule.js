@@ -1153,7 +1153,7 @@ export const nicotineModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking!</b>',
+        0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking.</b>',
         1: '<i>(Note: Timeline is not drawn to scale)</i>'
       },
       cards: {
@@ -1400,7 +1400,7 @@ export const nicotineModuleSlides = {
       paragraph: {
         0: 'Deep breathing, or belly breathing, can reduce stress and anger, improve relaxation and help in overcoming fears.',
         1: 'It can help you reach a state of deep rest. Air comes in through your nose and fully fills your lungs, and the lower belly rises. This type of breathing can slow the heartbeat and help stabilize blood pressure.',
-        2: '<b>Flip the card to learn how to belly breathe</b>'
+        2: '<b>Flip the card to learn how to belly breathe.</b>'
       },
       cards: {
         0: {
