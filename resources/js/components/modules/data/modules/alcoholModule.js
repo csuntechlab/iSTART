@@ -5,7 +5,7 @@ export const alcoholModuleSlides = {
     content: {
       title: 'Alcohol',
       background_image: 'images/thumbnail/alcohol_thumbnail.jpg',
-      goal: 'In this module we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
+      goal: 'In this module, we will discuss what alcohol use among college students looks like, what alcohol dependency is, how it can affect your health and wellness, and how you can choose to drink responsibly and make healthier choices.',
       definition: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer, wine, hard liquor, and other drinks.',
       estimated_completion: '15 minutes'
     }
@@ -326,7 +326,7 @@ export const alcoholModuleSlides = {
   9: {
     slide_type: 'multiQuizQuestion',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Answer the questions to continue to the next slide.'
     },
@@ -334,7 +334,7 @@ export const alcoholModuleSlides = {
       0: {
         paragraph: {
           0: 'The best judge of whether you are challenged by drinking is you.',
-          1: 'Answers to the following questions will provide you with the best path for you.'
+          1: 'Please answer the following questions to figure out the best path for you.'
         }
       },
       1: {
@@ -342,7 +342,7 @@ export const alcoholModuleSlides = {
           questions: {
             0: {
               show: true,
-              question: 'I drink to feel connected with friends, numb emotions/thoughts and to deal with stress. After drining and partying I regret it.',
+              question: 'I drink to feel connected with friends, numb emotions/thoughts and to deal with stress. After drinking and partying I regret it.',
               response: null,
               input: {
                 0: {
@@ -401,7 +401,7 @@ export const alcoholModuleSlides = {
   10: {
     slide_type: 'multiQuizQuestionResults',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide',
       results: {
@@ -411,7 +411,7 @@ export const alcoholModuleSlides = {
             andResponse: '',
             isAndMet: false,
             orAll: true,
-            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counsler at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counselor at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
             isOrMet: false
           },
           no: {
@@ -961,7 +961,7 @@ export const alcoholModuleSlides = {
       },
       3: {
         paragraph: {
-          0: '<b>Remember...YOU are in control</b>',
+          0: '<b>Remember...YOU are in control!</b>',
           1: 'For more help and information regarding this topic, please see the resource in the App menu.'
         }
       }
@@ -982,7 +982,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s okay to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
-        2: 'Flip the card below to read about drunk driving in California'
+        2: 'Flip the card below to read about drunk driving in California.'
       },
       cards: {
         0: {
@@ -1210,7 +1210,7 @@ export const alcoholModuleSlides = {
       paragraph: {
         0: 'By practicing mindfulness and yoga, you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
-        2: '<b>Flip the cards below</b>'
+        2: '<b>Flip the cards below.</b>'
       },
       cards: {
         0: {
@@ -1260,7 +1260,7 @@ export const alcoholModuleSlides = {
   31: {
     slide_type: 'finalSlide',
     header: {
-      header: null,
+      header: null
     },
     content: {
       0: {

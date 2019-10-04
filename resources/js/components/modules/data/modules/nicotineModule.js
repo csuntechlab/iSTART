@@ -5,7 +5,7 @@ export const nicotineModuleSlides = {
     content: {
       title: 'Nicotine',
       background_image: 'images/thumbnail/nicotine_thumbnail.jpg',
-      goal: 'In this module we will discuss nicotine and tobacco use among college students, how nicotine can affect your health and wellness, and how you can make healthier choices regarding nicotine.',
+      goal: 'In this module, we will discuss nicotine and tobacco use among college students, how nicotine can affect your health and wellness, and how you can make healthier choices regarding nicotine.',
       definition: 'Tobacco is a plant grown for its leaves, which are processed into tobacco products. People can smoke, chew, or sniff tobacco. Many tobacco products contain nicotine, which is an addictive chemical.',
       estimated_completion: '15 minutes'
     }
@@ -23,7 +23,7 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'It\'s easy to get hooked. Whether smoked or vaped, nicotine is a powerfully addictive substance. As addictive as cocaine, and even more so than alcohol!',
           1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.',
-          2: 'Even if you don\'t vape or smoke, but you know someone who does, consider this module as a way to stay informed and make healthy choices!'
+          2: 'Nicotine can be just as addictive as cocaine, and even more addictive than alcohol!'
         }
       },
       1: {
@@ -70,7 +70,7 @@ export const nicotineModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the cards to see what you\'re smoking.</b>'
+        0: '<b>Flip the card to see what\'s inside!</b>'
       },
       cards: {
         0: {
@@ -122,7 +122,7 @@ export const nicotineModuleSlides = {
   4: {
     slide_type: 'info',
     header: {
-      header: 'What are you smoking?',
+      header: 'What other ingredients are there in cigarettes?',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -225,7 +225,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nope!</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                text: '<b>Nope!</b> Hookah contains 36x more tar, and 15x more carbon monoxide than cigarettes. Ouch!',
                 img: {
                   src: null,
                   alt: null
@@ -241,7 +241,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                text: '<b>Correct,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
                 img: {
                   src: null,
                   alt: null
@@ -292,7 +292,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
+                text: '<b>Correct,</b> Just being at a tobacco bar exposes you to second hand smoke. Next time opt for a non-smoking bar!',
                 img: {
                   src: null,
                   alt: null
@@ -373,7 +373,7 @@ export const nicotineModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'While hanging out and smoking, hookah can be fun, think twice about how much smoke you inhale; and how much second hand smoke you\'re exposed to!'
+          0: 'While hanging out and smoking, hookah can be fun, think twice about how much smoke you inhale; and how much secondhand smoke you\'re exposed to!'
         }
       }
     }
@@ -418,7 +418,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'Vapes, vaporizers, vape pens, hookah pens, e-cigs, and e-pipes can all have nicotine, just like cigarettes.',
-          1: 'These products use an “e-liquid” that contains nicotine and flavorings. When heated, chemicals are inhaled; making vaping possibly as harmful as smoking, if not more!'
+          1: 'These products use an “e-liquid” that contains nicotine and flavorings. When heated, chemicals are inhaled, making vaping possibly as harmful as smoking, if not more!'
         }
       },
       1: {
@@ -470,7 +470,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'New research from UC San Francisco studied the pee of nearly 100 teens in the Bay Area. They found that e-cig users had significant levels of hazardous chemicals in their pee, like those found in Styrofoam or acids – yuck!'
+          0: 'New research from UC San Francisco studied the urine of nearly 100 teens in the Bay Area. They found that e-cigarette users had significant levels of hazardous chemicals in their urine, similar to those found in Styrofoam or acids - yuck!'
         }
       },
       1: {
@@ -506,7 +506,7 @@ export const nicotineModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Many of Kevin\'s friends on campus smoke Juul. Kevin didn\'t think it could be that bad if his friends were using it all the time, so he decided to buy one.<br> <b>What substances might kevin be exposed to while using Juul?</b>',
+          question: 'Many of Kevin\'s friends on campus are vaping. Kevin didn\'t think it could be that bad if his friends were using it all the time, so he decided to buy a vape pen.<br> <b>What substances might Kevin be exposed to while using e-cigarettes?</b>',
           options: {
             0: {
               isAnswer: false,
@@ -517,7 +517,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when vaping.',
                 img: {
                   src: null,
                   alt: null
@@ -533,7 +533,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when vaping.',
                 img: {
                   src: null,
                   alt: null
@@ -549,7 +549,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when vaping.',
                 img: {
                   src: null,
                   alt: null
@@ -565,7 +565,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when using Juul.',
+                text: '<b>Nice try!</b> All of these toxic things are likely inhaled when vaping.',
                 img: {
                   src: null,
                   alt: null
@@ -581,7 +581,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Corrent,</b> All of these toxic things are likely inhaled when using Juul!',
+                text: '<b>Correct,</b> All of these toxic things are likely inhaled when vaping!',
                 img: {
                   src: null,
                   alt: null
@@ -645,7 +645,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'College students often assume that the majority of their peers smoke or vape.',
-          1: 'Only 7% of students reported vaping in the last month',
+          1: 'Only 7% of students reported vaping in the last month.',
           2: 'Don\'t be misled—these types of assumptions often lead students to smoke or vape in an attempt to fit in with their peers.'
         }
       },
@@ -688,7 +688,7 @@ export const nicotineModuleSlides = {
   19: {
     slide_type: 'multiQuizQuestion',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Answer the questions to continue to the next slide.'
     },
@@ -763,7 +763,7 @@ export const nicotineModuleSlides = {
   20: {
     slide_type: 'multiQuizQuestionResults',
     header: {
-      header: 'Self Assessment',
+      header: 'Self-Assessment',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide',
       results: {
@@ -807,7 +807,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Another reason not to start smoking/vaping is that it\'s so hard to stop! Nicotine dependence results in strong cravings and many unpleasant withdrawal symptoms. Most smokers have to try several times to quit.'
+          0: 'Another reason to refrain from smoking/vaping is that it\'s so hard to stop! Nicotine dependence results in strong cravings and many unpleasant withdrawal symptoms. Most smokers have to try several times to quit.'
         }
       },
       1: {
@@ -831,7 +831,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'For years we\'ve heard the truth about the dangers of smoking cigarettes and second hand smoke: lung cancer, heart disease, stroke, to name a few.',
-          1: 'Now there\'s new research showing the harmful effects of e-cigs and vaping on brain development, the body, and so much more! Know the facts to make healthy choices and help those you love.'
+          1: 'Now there\'s new research showing the harmful effects of e-cigarettes and vaping on brain development, the body, and so much more! Know the facts to make healthy choices and help those you love.'
         }
       },
       1: {
@@ -1120,7 +1120,7 @@ export const nicotineModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking!</b>',
+        0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking.</b>',
         1: '<i>(Note: Timeline is not drawn to scale)</i>'
       },
       cards: {
@@ -1135,7 +1135,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon monoxie levels return to normal</li></ul>'
+            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon monoxide levels return to normal</li></ul>'
           }
         },
         1: {
@@ -1239,7 +1239,7 @@ export const nicotineModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Smoke and tobacco products (e-cigs and vape pens!) are not allowed anywhere on CSUN\'s campus; not even in the parking lots or near your favorite picnic table.',
+          0: 'Smoke and tobacco products (e-cigarettes and vape pens!) are not allowed anywhere on CSUN\'s campus; not even in the parking lots or near your favorite picnic table.',
           1: 'CA law also prohibits smoking inside any public building and within 20 feet of any building, anywhere in CA!'
         }
       }
@@ -1256,8 +1256,8 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Sometimes we use tobacco/nicotine for social reasons, to help cope with stress and anxiety. But smoking/vaping isn\'t the only way to relieve stress or help us tackle life\'s challenges!',
-          1: 'There are many ways to boost health and wellness. Research shows physical, mental and social activities can improve overall wellness (check out the iSTART website for resources!).'
+          0: 'Sometimes we use tobacco/nicotine socially to help us cope with stress and anxiety. However, smoking/vaping isn\'t the only way to relieve stress or help us tackle life\'s challenges!',
+          1: 'There are many ways to boost health and wellness. Research shows physical, mental, and social activities can improve overall wellness (check out the iSTART website for resources!).'
         }
       },
       1: {
@@ -1301,7 +1301,7 @@ export const nicotineModuleSlides = {
       },
       4: {
         paragraph: {
-          0: 'Did you know the Student Recreation Center offers A Boxing Training Program to students for FREE?'
+          0: 'Did you know the Student Recreation Center offers a Boxing Training Program to students for FREE?'
         }
       }
     }
@@ -1350,7 +1350,7 @@ export const nicotineModuleSlides = {
       paragraph: {
         0: 'Deep breathing, or belly breathing, can reduce stress and anger, improve relaxation and help in overcoming fears.',
         1: 'It can help you reach a state of deep rest. Air comes in through your nose and fully fills your lungs, and the lower belly rises. This type of breathing can slow the heartbeat and help stabilize blood pressure.',
-        2: '<b>Flip the card to learn how to belly breathe</b>'
+        2: '<b>Flip the card to learn how to belly breathe.</b>'
       },
       cards: {
         0: {
@@ -1375,7 +1375,7 @@ export const nicotineModuleSlides = {
     slide_type: 'emailForm',
     header: {
       header: 'Set a Wellness Goal',
-      sub_header: 'Now is a great time to set a wellness goal for reducing stress or anxiety! Or if you use tobacco products (cigs, vape pens, etc.), what next steps can you take to reduce your nicotine use?',
+      sub_header: 'Now is a great time to set a wellness goal for reducing stress or anxiety! Or if you use tobacco products (cigarettes, vape pens, etc.), what next steps can you take to reduce your nicotine use?',
       tooltip: null
     },
     content: {
@@ -1409,7 +1409,7 @@ export const nicotineModuleSlides = {
   36: {
     slide_type: 'finalSlide',
     header: {
-      header: null,
+      header: null
     },
     content: {
       0: {
