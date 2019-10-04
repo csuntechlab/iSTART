@@ -56,7 +56,7 @@ export const illicitDrugsModuleSlides = {
       paragraph: {
         0: 'Ecstasy, known as <i>MDMA</i> or <i>molly</i>, is a synthetic drug that acts as a stimulant and hallucinogen.',
         1: 'It is most often abused by teens and college-age young adults, and is mainly taken in pill or powder form while at raves, clubs & concerts.',
-        2: 'Flip the cards below to learn about the side effects of cocaine use.'
+        2: 'Flip the card to learn how ecstasy can affect the body.'
       },
       cards: {
         0: {
@@ -135,14 +135,14 @@ export const illicitDrugsModuleSlides = {
   4: {
     slide_type: 'info',
     header: {
-      header: 'Know what you\'re talking!',
+      header: 'Know what you\'re taking!',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       0: {
         paragraph: {
-          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drugs, and is safe to use, This is FALSE!',
+          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drug, and is safe to use. this is FALSE!',
           1: 'Ecstasy often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all! Also, mixing MDMA with alcohol and other drugs can lead to dangerous side effects and possible accidental overdose.'
         }
       },
