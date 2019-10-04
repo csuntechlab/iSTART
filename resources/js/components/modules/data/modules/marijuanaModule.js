@@ -5,7 +5,7 @@ export const marijuanaModuleSlides = {
     content: {
       title: 'Marijuana',
       background_image: 'images/thumbnail/marijuana_thumbnail.jpg',
-      goal: 'In this module we will discuss what marijuana is, explore common ways that marijuana is used, discuss the long-term and short-term effects of marijuana use, and how you can make healthier choices.',
+      goal: 'In this module, we will discuss what marijuana is, explore common ways that marijuana is used, discuss the long-term and short-term effects of marijuana use, and how you can make healthier choices.',
       definition: 'Cannabis, or marijuana, is a psychoactive drug derived from the Cannabis plant. It contains a mind-altering chemical called THC, responsible for the intoxicating effects (the high) that people seek for recreational purposes.',
       estimated_completion: '15 minutes'
     }

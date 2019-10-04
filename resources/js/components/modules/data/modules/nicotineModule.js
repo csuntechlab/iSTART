@@ -5,7 +5,7 @@ export const nicotineModuleSlides = {
     content: {
       title: 'Nicotine',
       background_image: 'images/thumbnail/nicotine_thumbnail.jpg',
-      goal: 'In this module we will discuss nicotine and tobacco use among college students, how nicotine can affect your health and wellness, and how you can make healthier choices regarding nicotine.',
+      goal: 'In this module, we will discuss nicotine and tobacco use among college students, how nicotine can affect your health and wellness, and how you can make healthier choices regarding nicotine.',
       definition: 'Tobacco is a plant grown for its leaves, which are processed into tobacco products. People can smoke, chew, or sniff tobacco. Many tobacco products contain nicotine, which is an addictive chemical.',
       estimated_completion: '15 minutes'
     }
