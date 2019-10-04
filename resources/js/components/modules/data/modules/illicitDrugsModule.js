@@ -289,7 +289,7 @@ export const illicitDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nope!</b> Synthetic cannabinoids are illegal in CA. But recreational use of natural cannabis is legal in CA if you\'re over 21.',
+                text: '<b>Nope!</b> Synthetic cannabinoids are illegal in CA, but recreational use of natural cannabis is legal in CA if you\'re over 21.',
                 img: {
                   src: null,
                   alt: null
@@ -347,7 +347,7 @@ export const illicitDrugsModuleSlides = {
   10: {
     slide_type: 'cardFlip',
     header: {
-      header: 'Cocaine use and Side Effects',
+      header: 'Cocaine Use and Side Effects',
       sub_header: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -371,7 +371,7 @@ export const illicitDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Smoking: Cough, asthma, and higher risk for infections like pneumonia'
+            description: 'Smoking: Cough, asthma, and higher risk for infections like pneumonia.'
           }
         },
         1: {
@@ -385,7 +385,7 @@ export const illicitDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'By mouth: severe bowel decay from reduced blood flow'
+            description: 'By mouth: severe bowel decay from reduced blood flow.'
           }
         },
         2: {
@@ -399,7 +399,7 @@ export const illicitDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Needle injection: higher risk for HIV, Hep-C, and other blood diseases, & scarring or collapsed veins'
+            description: 'Needle injection: higher risk for HIV, Hep-C, and other blood diseases, & scarring or collapsed veins.'
           }
         },
         3: {
@@ -413,7 +413,7 @@ export const illicitDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing'
+            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
           }
         }
       }
@@ -623,7 +623,7 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'People who inject drugs like cocaine & heroin are also at high risk for HIV and Hep-C. This happens from sharing needles or other injection drug use equipment. Or from unprotected sex while under the influence of these drugs.'
+          0: 'People who inject drugs like cocaine & heroin are also at high risk for HIV and Hep-C. This happens from sharing needles or other injection drug use equipment, as well as from unprotected sex while under the influence of these drugs.'
         }
       },
       1: {
@@ -724,9 +724,9 @@ export const illicitDrugsModuleSlides = {
       1: {
         list_element: [
           'Prepare yourself ahead of time. Think of how to respond so you know what to say when the time comes.',
-          'If you\'re in an uncomfortable situations, find an excuse to leave.',
+          'If you\'re in an uncomfortable situation, find an excuse to leave.',
           'Try to surround yourself with people who respect your decision to not use drugs.',
-          'Ask for support from reliable friend or adult if someone is pressuring you to use drugs.'
+          'Ask for support from a reliable friend or adult if someone is pressuring you to use drugs.'
         ]
       },
       2: {
@@ -740,7 +740,7 @@ export const illicitDrugsModuleSlides = {
       },
       3: {
         paragraph: {
-          0: 'Remember, your health, body, and future belonging to you. Don\'t let others pressure you to do something harmful.'
+          0: 'Remember, your health, body, and your future belongs to you. Don\'t let others pressure you to do something harmful.'
         }
       }
     }
