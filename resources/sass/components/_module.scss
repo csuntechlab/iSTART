@@ -18,17 +18,16 @@
     }
 
     &__wrapper {
-        margin-top: 2rem;
+        padding: 1rem 0;
         display: flex;
         justify-content: center;
 
         @include media-breakpoint-up(md) {
             padding: 0 3rem;
-            margin-top: 1.25rem;
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 0 6rem;
+            padding: 0 10rem;
         }
     }
 
