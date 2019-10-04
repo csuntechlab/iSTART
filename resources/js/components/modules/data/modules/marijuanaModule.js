@@ -14,7 +14,7 @@ export const marijuanaModuleSlides = {
   1: {
     slide_type: 'cardFlip',
     header: {
-      header: 'Recreation vs. Medicinal Use',
+      header: 'Recreational vs. Medicinal Use',
       sub_header: null,
       tooltip: 'Flip all the cards to proceed to the next slide'
     },
@@ -38,7 +38,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'For recreation use: THC is the main psychoactive component that creates the \'high\'.'
+            description: 'For recreational use: THC is the main psychoactive component that creates the \'high\'.'
           }
         },
         1: {
@@ -52,7 +52,7 @@ export const marijuanaModuleSlides = {
             question: null
           },
           back: {
-            description: 'For medicinal use: CBD is a chemical that may relieve pain with little to no brain impairment'
+            description: 'For medicinal use: CBD is a chemical that may relieve pain with little to no brain impairment.'
           }
         }
       }
@@ -70,7 +70,7 @@ export const marijuanaModuleSlides = {
       0: {
         paragraph: {
           0: 'The level of THC in marijuana is not always the same. It can vary depending on the plant strain, growth, processing, and storage.',
-          1: 'The amount of THC in marijuana has increased over the years. This may mean smoking or ingesting higher THC levels than expected, and possibly a more dangerous reaction.'
+          1: 'The amount of THC in marijuana has increased over the years. This means that people using marijuana are smoking or ingesting higher THC levels than expected, which can possibly lead to a more dangerous reaction.L0'
         }
       },
       1: {
@@ -210,7 +210,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Snacking on cannabis gummies might be tasty, but be careful! Over-consuming edible marijuana can lead to marijuana-induced psychosis. This can result in hallucinations, delusions, and extreme anxiety.',
+          0: 'Snacking on cannabis gummies might be tasty, but be careful! Overconsumption of edibles can lead to a marijuana-induced psychosis',
           1: 'If you suspect someone is entering psychosis, call 911. Be careful if the person is acting erratic, and try to stay with them, and if possible, comfort them.'
         }
       },
@@ -341,7 +341,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Many people seek out professional assessments to tell them if they have a problem with prescription drug use and need assistance with it. However, the best judge of whether <u>you</u> are challenged by your marijuana use use <u>you</u>.',
+          0: 'Many people seek out professional assessments to tell them if they have a problem with prescription drug use and need assistance with it. However, the best judge of whether you are challenged by your marijuana use is <em>YOU</em>.',
           1: 'Your answers to the following questions will provide you with the best path for you.'
         }
       },
@@ -416,10 +416,10 @@ export const marijuanaModuleSlides = {
         case: {
           yes: {
             andAll: true,
-            andResponse: 'You are acknowledging to yourself that a healthy change action plan can prevent long-term challenges and problems from continuing your current pattern of mariuana use.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards health.',
+            andResponse: 'You are acknowledging to yourself that a healthy change action plan can prevent long-term challenges and problems from continuing your current pattern of marijuana use.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards a healthier lifestyle.',
             isAndMet: false,
             orAll: true,
-            orResponse: 'Your instincts are likely suggesting that you would benefit from making a change in your use of marijuana.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards health.',
+            orResponse: 'Your instincts are likely suggesting that you would benefit from making a change in your use of marijuana.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan, and other resources available on campus to assist you on your path towards health.',
             isOrMet: false
           },
           no: {
@@ -469,7 +469,7 @@ export const marijuanaModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'A high from weed may be fun, but what\'s going on inside your brain?',
+        0: 'What\'s really going on inside your brain every time you use marijuana?',
         1: '<b>Flip the cards to learn how marijuana affects the brain.</b>'
       },
       cards: {
@@ -572,7 +572,7 @@ export const marijuanaModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Additionally, those who smoke marijuana daily may be studying at a reduced intellectual level most(or all) of the time.',
+          0: 'Additionally, those who smoke marijuana daily may be studying at a reduced intellectual level most (or all) of the time.',
           1: 'Heavy users of marijuana can also have short-term problems with attention, memory, and learning.'
         }
       }
@@ -590,8 +590,8 @@ export const marijuanaModuleSlides = {
       0: {
         paragraph: {
           0: 'For some students, smoking marijuana socially is part of the typical college experience.',
-          1: 'However not everyone uses marijuana in moderation. Some users become dependent, and experience withdrawal symptoms, such as irritability, sleep problems, decreased appetite, and cravings.',
-          2: 'Addiction happens when the person can\'t stop using marijuana even though it interferes with daily life.',
+          1: 'However, not everyone uses marijuana in moderation. Some users become dependent, and experience withdrawal symptoms, such as irritability, sleep problems, decreased appetite, and cravings.',
+          2: 'Addiction happens when the person can\'t stop using marijuana, even though it interferes with his/her daily life.',
           3: '<b>Swipe to learn about symptoms of addiction.</b>'
         }
       },
@@ -704,7 +704,7 @@ export const marijuanaModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'You\'re chillin on Venic beach with your friends, and your 24-year old buddy pulls out his marijuana vape pen and starts using it. <i><b>Is that legal?</b></i>',
+          question: 'You\'re hanging out at Venice beach with your friends, and your 24-year old buddy pulls out his marijuana vape pen and starts using it. Is that legal? <i><b>Is that legal?</b></i>',
           options: {
             0: {
               isAnswer: false,
@@ -715,7 +715,7 @@ export const marijuanaModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nope!</b> Smoking in a public place is against the law in CA!',
+                text: '<b>Nope!</b> Using marijuana in a public place is against the law in CA!',
                 img: {
                   src: null,
                   alt: null
@@ -775,7 +775,7 @@ export const marijuanaModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nope!</b> Transporting recreational cannabis of any kind over state lines is against the law in California!',
+                text: '<b>Nope!</b> Transporting recreational cannabis of any kind over state lines is against the law!',
                 img: {
                   src: null,
                   alt: null
@@ -826,7 +826,7 @@ export const marijuanaModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Research shows mixing marijuana and alcohol makes it even more dangerous to drive than alcohol alone.'
+          0: 'Research shows mixing marijuana and alcohol makes it even more dangerous to drive than after drinking alcohol alone.'
         }
       }
     }
@@ -865,7 +865,7 @@ export const marijuanaModuleSlides = {
           },
           {
             src: 'images/marijuanaModule/mar_s24_05.png',
-            text: 'Lock up & keep away from those under 21 and pets.'
+            text: 'Lock up & keep away from those under 21 and also from your pets.'
           },
           {
             src: 'images/marijuanaModule/mar_s24_06.png',
@@ -884,7 +884,7 @@ export const marijuanaModuleSlides = {
   24: {
     slide_type: 'info',
     header: {
-      header: 'How to say NO to marijuana.',
+      header: 'How can I say NO?',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -912,7 +912,7 @@ export const marijuanaModuleSlides = {
       },
       3: {
         paragraph: {
-          0: 'For more information about refusal skills, please see the resources in the web app menu'
+          0: 'For more information about refusal skills, please see the resources in the web app menu.'
         }
       }
     }
@@ -958,7 +958,7 @@ export const marijuanaModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of hapiness.</b>'
+        0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of happiness.</b>'
       },
       cards: {
         0: {
@@ -1041,7 +1041,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: '<b>Listen to music</b>: Science provesthat instrumental music increases dopamine in our bodies. So pump up the jam!'
+          0: '<b>Listen to music</b>: Science proves that instrumental music increases dopamine in our bodies. So pump up the jam!'
         }
       },
       1: {
@@ -1071,7 +1071,7 @@ export const marijuanaModuleSlides = {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
-      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ \n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
+      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ &nbsp;\n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
       tooltip: null
     },
     content: {
