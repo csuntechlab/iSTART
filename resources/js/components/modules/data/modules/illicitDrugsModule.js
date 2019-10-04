@@ -29,9 +29,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s03_01.jpg',
           alt: 'Woman on cliffslide.',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -150,9 +147,7 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s06_01.jpg',
           alt: 'variations of pills',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '1'
         }
       }
     }
@@ -177,9 +172,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s08_01.jpg',
           alt: 'synthetic marijuana',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -222,9 +214,7 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s09_01.png',
           alt: 'paramedic infographic',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'clipart'
         }
       }
     }
@@ -250,9 +240,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s10_01.jpg',
           alt: 'spice cannabis',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -270,9 +257,6 @@ export const illicitDrugsModuleSlides = {
         0: {
           src: 'images/illicitDrugsModule/ill_s11_01.jpg',
           alt: 'gavel',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       questions: {
@@ -336,9 +320,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s12_01.jpg',
           alt: 'lines of cocaine',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -438,9 +419,7 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s14_01.png',
           alt: 'caution sign',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'symbol'
         }
       },
       2: {
@@ -468,9 +447,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s15_01.jpg',
           alt: 'heroin',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -499,9 +475,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s16_01.jpg',
           alt: 'fentanyl',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -600,9 +573,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s19_01.jpg',
           alt: 'naloxone',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -630,9 +600,7 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s20_01.png',
           alt: 'syringe',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'symbol'
         }
       },
       2: {
@@ -700,9 +668,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s23_01.jpg',
           alt: 'no',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -733,9 +698,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s24_01.jpg',
           alt: 'peer pressure',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       3: {
@@ -765,9 +727,6 @@ export const illicitDrugsModuleSlides = {
         image: {
           src: 'images/illicitDrugsModule/ill_s25_01.jpg',
           alt: 'woman carrying a heart balloon',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
