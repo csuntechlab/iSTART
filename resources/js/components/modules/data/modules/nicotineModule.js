@@ -30,9 +30,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s03_01.png',
           alt: 'no vaping',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'symbol'
         }
       }
     }
@@ -55,9 +53,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s04_01.jpg',
           alt: 'cigarette smoke',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -202,9 +197,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s07_01.png',
           alt: 'hookah',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'clipart'
         }
       }
     }
@@ -375,9 +368,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s11_01.png',
           alt: 'hookah comparison to cigarettes',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/2'
+          size: 'informational'
         }
       },
       1: {
@@ -405,9 +396,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s12_01.png',
           alt: 'smokeless tobacco',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'informational'
         }
       },
       2: {
@@ -436,9 +425,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s13_01.jpg',
           alt: 'vape',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -468,9 +454,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s14_01.png',
           alt: 'smoke',
-          mobile_size: '5/6',
-          tablet_size: '5/6',
-          desktop_size: '2/3'
+          size: 'informational'
         }
       }
     }
@@ -493,9 +477,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s15_01.jpg',
           alt: 'urine',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -516,10 +497,10 @@ export const nicotineModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/nicotineModule/nic_s16_01.jpg',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -672,9 +653,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s19_01.jpg',
           alt: 'sitting in the park',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -697,9 +675,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s20_01.jpg',
           alt: 'no nicotine infographic',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -839,9 +814,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s23_01.png',
           alt: 'nicotine cycle',
-          mobile_size: '5/6',
-          tablet_size: '2/3',
-          desktop_size: '2/3'
+          size: 'informational'
         }
       }
     }
@@ -865,9 +838,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s24_01.jpg',
           alt: 'truth scrabble',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -1021,9 +991,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s27_01.png',
           alt: 'sleep',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -1044,10 +1011,10 @@ export const nicotineModuleSlides = {
     content: {
       images: {
         0: {
-          src: 'images/nicotineModule/nic_s28_01.png',
+          src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          position: 'top',
-          width: '1/2'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -1235,9 +1202,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s30_01.jpg',
           alt: 'offered cigarrette',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -1270,9 +1234,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s31_01.png',
           alt: 'csun clean air',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '1'
         }
       },
       2: {
@@ -1302,9 +1264,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s32_01.jpg',
           alt: 'cliffside',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       }
     }
@@ -1327,9 +1286,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s33_01.png',
           alt: 'dancing',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -1341,9 +1297,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s33_02.jpg',
           alt: 'boxing',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       4: {
@@ -1373,9 +1326,6 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s34_01.png',
           alt: 'lunch table',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
         }
       },
       2: {
@@ -1450,9 +1400,7 @@ export const nicotineModuleSlides = {
         image: {
           src: 'images/nicotineModule/nic_s37_01.png',
           alt: 'hands connecting',
-          mobile_size: '1/2',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: 'clipart'
         }
       }
     }

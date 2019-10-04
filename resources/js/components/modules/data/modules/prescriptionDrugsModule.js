@@ -319,7 +319,8 @@ export const prescriptionDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/prescriptionDrugsModule/RxDrugs_s14_01.png',
-          alt: 'hands reaching for the center'
+          alt: 'hands reaching for the center',
+          size: 'symbol'
         }
       }
     }
@@ -449,9 +450,8 @@ export const prescriptionDrugsModuleSlides = {
         0: {
           src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -557,9 +557,8 @@ export const prescriptionDrugsModuleSlides = {
         0: {
           src: 'images/global/quiz_graphic.png',
           alt: 'quiz',
-          mobile_size: '2/3',
-          tablet_size: '1/2',
-          desktop_size: '1/3'
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
       questions: {
@@ -889,7 +888,8 @@ export const prescriptionDrugsModuleSlides = {
       2: {
         image: {
           src: 'images/prescriptionDrugsModule/RxDrugs_s27_01.png',
-          alt: 'person deciding on which path to take'
+          alt: 'person deciding on which path to take',
+          size: 'symbol'
         }
       }
     }

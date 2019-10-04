@@ -5,7 +5,7 @@
         <div class="col-12">
         </div>
       </div>
-      <div class="row mt-3 justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-12 mb-3">
           <h1 class="module-text__header">{{ currentSlideData.header.header }}</h1>
           <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>

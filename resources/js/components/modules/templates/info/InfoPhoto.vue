@@ -1,5 +1,5 @@
 <template>
-  <div class="module-info__img-container row">
+  <div class="module-info__img-container row no-gutters">
     <div class="col-12">
       <figure>
         <figcaption
@@ -51,14 +51,24 @@ export default {
         !this.image.tablet_size &&
         !this.image.desktop_size
       ) {
-        let defaultSize = 'col-lg-6 col-md-7 col-12'
+        let defaultSize = 'col-lg-7 col-md-9 col-sm-8 col-11'
         return defaultSize
+      }
+      if (this.image.size === 'informational') {
+        let informationalSize = 'col-lg-8 col-md-9 col-sm-10 col-12'
+        return informationalSize
+      }
+      if (this.image.size === 'symbol' || this.image.size === 'clipart') {
+        let symboleSize = 'col-6 col-md-4'
+        return symboleSize
       }
       let imageSizes = new Map([
         ['1', '-12'],
         ['5/6', '-10'],
         ['2/3', '-8'],
+        ['7/12', '-7'],
         ['1/2', '-6'],
+        ['5/12', '-5'],
         ['1/3', '-4'],
         ['1/4', '-3'],
         ['1/6', '-2']
@@ -76,7 +86,7 @@ export default {
           createdWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
         }
         if (i === 1 && declearedSizes[i] !== '') {
-          createdWidth += 'col' + imageSizes.get(declearedSizes[i]) + ' '
+          createdWidth += 'col-sm' + imageSizes.get(declearedSizes[i]) + ' '
         }
         if (i === 2 && declearedSizes[i] !== '') {
           createdWidth += 'col-md' + imageSizes.get(declearedSizes[i]) + ' '
