@@ -340,7 +340,7 @@ export const alcoholModuleSlides = {
       0: {
         paragraph: {
           0: 'The best judge of whether you are challenged by drinking is you.',
-          1: 'Answers to the following questions will provide you with the best path for you.'
+          1: 'Please answer the following questions to figure out the best path for you.'
         }
       },
       1: {
@@ -348,7 +348,7 @@ export const alcoholModuleSlides = {
           questions: {
             0: {
               show: true,
-              question: 'I drink to feel connected with friends, numb emotions/thoughts and to deal with stress. After drining and partying I regret it.',
+              question: 'I drink to feel connected with friends, numb emotions/thoughts and to deal with stress. After drinking and partying I regret it.',
               response: null,
               input: {
                 0: {
@@ -417,7 +417,7 @@ export const alcoholModuleSlides = {
             andResponse: '',
             isAndMet: false,
             orAll: true,
-            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counsler at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counselor at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
             isOrMet: false
           },
           no: {
@@ -969,7 +969,7 @@ export const alcoholModuleSlides = {
       },
       3: {
         paragraph: {
-          0: '<b>Remember...YOU are in control</b>',
+          0: '<b>Remember...YOU are in control!</b>',
           1: 'For more help and information regarding this topic, please see the resource in the App menu.'
         }
       }
