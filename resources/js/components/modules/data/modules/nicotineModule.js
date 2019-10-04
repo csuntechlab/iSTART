@@ -1461,7 +1461,7 @@ export const nicotineModuleSlides = {
   36: {
     slide_type: 'finalSlide',
     header: {
-      header: null,
+      header: null
     },
     content: {
       0: {

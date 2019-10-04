@@ -1017,7 +1017,7 @@ export const prescriptionDrugsModuleSlides = {
   28: {
     slide_type: 'finalSlide',
     header: {
-      header: null,
+      header: null
     },
     content: {
       0: {

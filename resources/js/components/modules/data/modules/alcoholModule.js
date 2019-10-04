@@ -1271,7 +1271,7 @@ export const alcoholModuleSlides = {
   31: {
     slide_type: 'finalSlide',
     header: {
-      header: null,
+      header: null
     },
     content: {
       0: {

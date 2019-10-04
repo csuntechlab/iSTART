@@ -1,4 +1,4 @@
-export const alcoholModuleSlides = {
+export const illicitDrugsModuleSlides = {
   // slide 1 and 2 (combined to fit the design)
   0: {
     slide_type: 'intro',
@@ -788,6 +788,6 @@ export const alcoholModuleSlides = {
         }
       }
     }
-  },
+  }
 }
-export default alcoholModuleSlides
+export default illicitDrugsModuleSlides
