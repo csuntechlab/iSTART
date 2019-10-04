@@ -87,11 +87,11 @@ export default {
 
     checkForStart () {
       if (this.currentSlideNumber === 0) {
-        console.log(true)
         this.enableContinue()
         return false
       } else if (this.currentSlideNumber === 1) {
         window.scrollTo(0, 0)
+        return true
       } else {
         return true
       }
