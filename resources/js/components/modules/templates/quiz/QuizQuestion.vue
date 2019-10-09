@@ -1,7 +1,7 @@
 <template>
   <div class="col-12">
     <div class="module-quiz__question">
-      <p class="module-text__sub-header" v-html="object.question"></p>
+      <p class="module-text__text" v-html="object.question"></p>
     </div>
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
