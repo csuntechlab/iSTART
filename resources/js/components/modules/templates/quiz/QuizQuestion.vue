@@ -20,7 +20,7 @@
             <p v-html="element.text"></p>
 
             <div :class="[(element.show ? 'module-quiz__response--active' : ''), 'module-quiz__response']">
-              <p v-html="element.response.text"></p>
+              <p class="module-text__text" v-html="element.response.text"></p>
               <div class="module-quiz__response-image">
                 <img :src="element.response.img.src" :alt="element.response.img.alt">
               </div>

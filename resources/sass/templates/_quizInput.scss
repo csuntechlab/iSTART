@@ -24,7 +24,6 @@
         width: 2rem;
         padding-bottom: 3px;
         background-color: $white;
-
         @include media-breakpoint-up(md) {
             border-radius: 2px;
             border: 1.7px solid $primaryColor;

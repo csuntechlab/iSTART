@@ -12403,13 +12403,13 @@ body {
 
 @media (min-width: 768px) {
   .module__wrapper {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
   }
 }
 
 @media (min-width: 992px) {
   .module__wrapper {
-    padding: 0 10rem;
+    padding: 1rem 10rem;
   }
 }
 
@@ -12422,7 +12422,6 @@ body {
 @media (max-width: 767.98px) {
   .module-content {
     height: calc(100vh - 6.5rem);
-    padding-bottom: 25px;
   }
 }
 
@@ -12430,7 +12429,7 @@ body {
   color: #4A5D6E;
   font-weight: bold;
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.25;
   margin-bottom: 0.5rem;
 }
 
@@ -12459,12 +12458,12 @@ body {
   font-weight: normal;
   font-size: 1.15rem;
   line-height: 1.5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 767.98px) {
   .module-text__text {
-    font-size: 0.95rem;
+    font-size: 0.97rem;
   }
 }
 
@@ -12891,7 +12890,7 @@ body {
 }
 
 .module-info__img-container {
-  margin: 1rem 0 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .module-info__img-align {
@@ -13048,7 +13047,6 @@ body {
 
 .module-quiz__response {
   display: none;
-  font-style: italic;
   margin-top: 1rem;
 }
 
@@ -13383,7 +13381,7 @@ body {
 }
 
 .video-template__header > * {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   margin: 0;
 }
 
@@ -13393,12 +13391,7 @@ body {
 
 .video-template__caption > * {
   display: block;
-  padding: 0.5rem 2rem;
-}
-
-.card-flip-description {
-  font-size: 1.25rem;
-  margin: 1rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .card-flip-content {

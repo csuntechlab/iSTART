@@ -23,11 +23,11 @@
         justify-content: center;
 
         @include media-breakpoint-up(md) {
-            padding: 0 3rem;
+            padding: 1rem 3rem;
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 0 10rem;
+            padding: 1rem 10rem;
         }
     }
 
@@ -38,7 +38,6 @@
 
         @include media-breakpoint-down(sm) {
             height: calc(100vh - 6.5rem);
-            padding-bottom: 25px;
         }
     }
 
@@ -47,7 +46,7 @@
             color: $heading-color;
             font-weight: bold;
             font-size: 2rem;
-            line-height: 1.5;
+            line-height: 1.25;
             margin-bottom: 0.5rem;
 
             @include media-breakpoint-down(sm) {
@@ -72,10 +71,10 @@
             font-weight: normal;
             font-size: 1.15rem;
             line-height: 1.5;
-            margin-bottom: .5rem;
+            margin-bottom: 1rem;
 
             @include media-breakpoint-down(sm) {
-                font-size: 0.95rem;
+                font-size: .97rem;
             }
         }
 

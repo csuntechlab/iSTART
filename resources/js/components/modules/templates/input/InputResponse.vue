@@ -1,5 +1,5 @@
 <template>
-  <li class="pb-4">
+  <li class="pb-4 col-12">
       <p class="module-text__text"> {{ question }}</p>
       <label class="d-none" :for="'response_' + questionIndex">Input a percentage for {{ question }}</label>
       <input :id="'response_' + questionIndex" name="response" v-model="response" type="text" v-if="needInputLabel === true" @blur="validateInput($event); validateForm($event)" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
