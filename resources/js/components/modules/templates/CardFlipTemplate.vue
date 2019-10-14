@@ -8,7 +8,7 @@
     </div>
   </section>
   <div class="card-flip-content mb-5">
-    <div :class="[(currentSlideData.content.card_break ? 'col-12' : 'col-12 col-md-6 col-lg-4'), 'card-flip__card']" v-for="(item, index) in currentSlideData.content.cards" :key="index">
+    <div :class="[(currentSlideData.content.card_break ? 'col-12' : 'col-12 col-md-6'), 'card-flip__card']" v-for="(item, index) in currentSlideData.content.cards" :key="index">
       <div @click="flipCard(index, item.show); item.show ? updateCount(1) : updateCount(-1)" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
         <div class="card-flip__card-front interactable-container">
           <figure v-if="item.front.img.src !== null">
