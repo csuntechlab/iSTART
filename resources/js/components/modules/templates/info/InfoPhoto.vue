@@ -2,17 +2,6 @@
   <div class="module-info__img-container row no-gutters">
     <div class="col-12">
       <figure>
-        <figcaption
-          v-if="image.caption"
-          class="module-text__caption"
-          :class="[
-            (image.caption_text_align === 'left' ? 'text-left' : ''),
-            (image.caption_text_align === 'center' ? 'text-center' : ''),
-            (image.caption_text_align === 'right' ? 'text-right' : ''),
-            (!image.caption_text_align ? 'text-left' : '')
-          ]"
-          v-html="image.caption">
-        </figcaption>
         <div class="row"
           :class="[
             (image.x_position === 'left' ? 'justify-content-start' : ''),
@@ -21,19 +10,30 @@
             (!image.x_position ? 'justify-content-center': '')
         ]">
           <div :class="[determineColSize]">
+            <figcaption
+              v-if="image.caption"
+              class="module-text__caption"
+              :class="[
+                (image.caption_text_align === 'left' ? 'text-left' : ''),
+                (image.caption_text_align === 'center' ? 'text-center' : ''),
+                (image.caption_text_align === 'right' ? 'text-right' : ''),
+                (!image.caption_text_align ? 'text-left' : '')
+              ]"
+              v-html="image.caption">
+            </figcaption>
             <img class="module-info__img" :src="image.src" :alt="image.alt">
+            <figcaption
+              v-if="image.caption_y_position == 'bottom' && image.caption"
+              class="module-text__caption"
+              :class="[
+                (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
+                (image.caption_text_align === 'center' ? 'text-center' : ''),
+                (image.caption_text_align === 'right' ? 'text-right' : ''),
+              ]"
+              v-html="image.caption">
+            </figcaption>
           </div>
         </div>
-        <figcaption
-          v-if="image.caption_y_position == 'bottom' && image.caption"
-          class="module-text__caption"
-          :class="[
-            (image.caption_text_align === 'left' || !image.caption_text_align ? 'text-left' : ''),
-            (image.caption_text_align === 'center' ? 'text-center' : ''),
-            (image.caption_text_align === 'right' ? 'text-right' : ''),
-          ]"
-          v-html="image.caption">
-        </figcaption>
       </figure>
     </div>
   </div>

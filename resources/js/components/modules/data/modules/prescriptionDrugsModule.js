@@ -149,7 +149,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       video_id: 'TDjluZ-r_pM',
       video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
+      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
     }
   },
   // Slide 8
@@ -252,7 +252,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       video_id: 'dbk0Umy_46g',
       video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
+      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
     }
   },
   // Slide 12
@@ -739,7 +739,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       video_id: 'C8cxGuEjRhQ',
       video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/">generationrx.org</a>'
+      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
     }
   },
   // Slide 25
