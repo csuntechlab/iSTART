@@ -1,5 +1,5 @@
 <template>
-  <div class="emailForm">
+  <div class="emailForm col-12">
     <div v-if="surveyResultsEmailWasSubmitted===true" class="alert alert-success transition-350ms">
       <strong>Success!</strong> Email was successfully sent
     </div>
