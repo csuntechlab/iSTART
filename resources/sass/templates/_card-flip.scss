@@ -70,6 +70,15 @@
       left: 0;
       text-align: center;
       transform: rotateX(-180deg);
+      .module-text__text{
+        margin: 0;
+        width: 80%;
+        ul{
+          margin: 0;
+          padding-left: 1rem;
+          text-align: left;
+        }
+      }
     }
 
     &-caption {
