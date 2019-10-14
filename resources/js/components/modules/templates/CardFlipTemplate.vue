@@ -1,10 +1,14 @@
 <template>
 <div class="card-flip">
-  <section class="card-flip-description container">
-    <h1 v-if="currentSlideData.header.header !== null" class="module-text__header">{{ currentSlideData.header.header }}</h1>
-    <h2 v-if="currentSlideData.header.sub_header !== null" class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
-    <div v-for="(item, index) in currentSlideData.content.paragraph" :key="index">
-      <p v-if="currentSlideData.content.paragraph !== null" v-html="item" class="module-text__text"></p>
+  <section class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 v-if="currentSlideData.header.header !== null" class="module-text__header">{{ currentSlideData.header.header }}</h1>
+        <h2 v-if="currentSlideData.header.sub_header !== null" class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
+      </div>
+      <div class="col-12" v-for="(item, index) in currentSlideData.content.paragraph" :key="index">
+        <p v-if="currentSlideData.content.paragraph !== null" v-html="item" class="module-text__text"></p>
+      </div>
     </div>
   </section>
   <div class="card-flip-content mb-5">
