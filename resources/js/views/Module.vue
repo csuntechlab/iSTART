@@ -4,7 +4,7 @@
     <module-progress-bar/>
     <main v-if="isSlideContentVisible" class="module__content">
       <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
-      <div v-else class="module__wrapper">
+      <div v-else class="module__wrapper col-12">
         <info-template v-if="currentSlideData.slide_type === 'info'" :key="currentSlideNumber"></info-template>
         <quiz-template v-if="currentSlideData.slide_type === 'quiz'" :key="currentSlideNumber"></quiz-template>
         <multi-question-quiz-input v-if="currentSlideData.slide_type === 'multiQuizQuestion'" :key="currentSlideNumber"></multi-question-quiz-input>

@@ -7,16 +7,20 @@
         <div class="col-12">
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your response using numerical values 0 to 100.</p>
         </div>
-        <section class="module-quizInput__form" novalidate="true">
-          <input-response v-for="(element, index) in currentSlideData.content.questions"
-            :key="index"
-            :questionIndex="parseInt(index)+1"
-            :question="element.question"
-            :user_response="element.response"
-            :questionLength="Object.keys(currentSlideData.content.questions).length"
-            :needInputLabel="true">
-          </input-response>
-        </section>
+        <div class="col-12">
+          <form action="">
+            <ol class="module-module-quizInput__form row" novalidate="true">
+              <input-response v-for="(element, index) in currentSlideData.content.questions"
+                :key="index"
+                :questionIndex="parseInt(index)+1"
+                :question="element.question"
+                :user_response="element.response"
+                :questionLength="Object.keys(currentSlideData.content.questions).length"
+                :needInputLabel="true">
+              </input-response>
+            </ol>
+          </form>
+        </div>
       </div>
     </div>
   </div>

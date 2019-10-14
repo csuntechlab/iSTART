@@ -9,9 +9,9 @@
         <youtube :video-id="currentSlideData.content.video_id" player-width="100%" @ended="allowContinue" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
       </div>
     </div>
-    <div class="video-template__caption col-12">
-      <caption v-if="currentSlideData.content.caption !== null" v-html="currentSlideData.content.caption" class="module-text__caption"></caption>
-    </div>
+      <div class="video-template__caption col-12">
+        <caption v-if="currentSlideData.content.caption !== null" v-html="currentSlideData.content.caption" class="module-text__text"></caption>
+      </div>
   </div>
 </template>
 
