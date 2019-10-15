@@ -139,8 +139,8 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drug, and is safe to use. this is FALSE!',
-          1: 'Ecstasy often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all! Also, mixing MDMA with alcohol and other drugs can lead to dangerous side effects and possible accidental overdose.'
+          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drug, and is safe to use. This is FALSE!',
+          1: 'The MDMA sold often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all! Also, mixing MDMA with alcohol and other drugs can lead to dangerous side effects and possible accidental overdose.'
         }
       },
       1: {
@@ -719,7 +719,7 @@ export const illicitDrugsModuleSlides = {
       0: {
         paragraph: {
           0: 'These last few weeks we\'ve introduced many suggestions on how to take care of yourself through mind, body and social connections!',
-          1: 'Now is the time to create healthy habits, think about the future, and the resources that can help get there!',
+          1: 'Now is the time to create healthy habits, think about the future, and the resources that can help you get there!',
           2: 'In the app menu, and on our iSTART website, check out the resources CSUN and the community offer.'
         }
       },
@@ -743,8 +743,7 @@ export const illicitDrugsModuleSlides = {
         paragraph: {
           0: 'Thanks for following along so far!',
           1: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
-          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.',
-          3: 'And, remember to look out for the next iSTART survey link in your email!'
+          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.'
         }
       }
     }
