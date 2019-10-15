@@ -22,8 +22,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'It\'s easy to get hooked. Whether smoked or vaped, nicotine is a powerfully addictive substance. As addictive as cocaine, and even more so than alcohol!',
-          1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.',
-          2: 'Nicotine can be just as addictive as cocaine, and even more addictive than alcohol!'
+          1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.'
         }
       },
       1: {
@@ -46,7 +45,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filler, the paper–even the chemicals!'
+          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filter, the paper–even the chemicals!'
         }
       },
       1: {
@@ -70,7 +69,7 @@ export const nicotineModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: '<b>Flip the card to see what\'s inside!</b>'
+        0: '<b>Flip the cards to see what\'s inside!</b>'
       },
       cards: {
         0: {
@@ -373,7 +372,7 @@ export const nicotineModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'While hanging out and smoking, hookah can be fun, think twice about how much smoke you inhale; and how much secondhand smoke you\'re exposed to!'
+          0: 'While hanging out and smoking hookah can be fun, think twice about how much smoke you inhale; and how much secondhand smoke you\'re exposed to!'
         }
       }
     }
@@ -679,7 +678,8 @@ export const nicotineModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'While vape pens might look cool, they mask how much nicotine we consume. Some can actually deliver nicotine faster than regular cigarettes. This means that we may be ingesting more nicotine and chemicals while vaping!'
+          0: 'While vape pens might look cool, they mask how much nicotine we consume. Some can actually deliver nicotine faster than regular cigarettes. This means that we may be ingesting more nicotine and chemicals while vaping!',
+          1: 'As more research on the effects of vaping becomes available, stay in the know and consult official sources.'
         }
       }
     }
@@ -1135,7 +1135,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon monoxide levels return to normal</li></ul>'
+            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon <u>monoxide</u> levels return to normal</li></ul>'
           }
         },
         1: {
@@ -1330,7 +1330,7 @@ export const nicotineModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more info in the app menu.'
+          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more info in the resources.'
         }
       }
     }
