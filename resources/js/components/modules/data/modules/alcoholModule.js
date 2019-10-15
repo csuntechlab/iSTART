@@ -263,7 +263,7 @@ export const alcoholModuleSlides = {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
-      sub_header: 'Let’s see how you answered compared to the actual percent from the CSUN National College Health Assessment survey.',
+      sub_header: null,
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
