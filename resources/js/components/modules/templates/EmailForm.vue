@@ -7,7 +7,7 @@
       <strong>Failure. </strong> An error has occured
     </div>
     <h1 class="module-text__header">{{ currentSlideData.header.header }}</h1>
-    <h2 class="module-text__sub-header">{{ currentSlideData.header.sub_header }}</h2>
+    <h2 class="module-text__sub-header" v-html="currentSlideData.header.sub_header"></h2>
     <form>
       <div class="emailForm__text-area-container">
         <textarea

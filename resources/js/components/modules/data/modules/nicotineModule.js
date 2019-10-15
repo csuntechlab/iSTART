@@ -22,8 +22,7 @@ export const nicotineModuleSlides = {
       0: {
         paragraph: {
           0: 'It\'s easy to get hooked. Whether smoked or vaped, nicotine is a powerfully addictive substance. As addictive as cocaine, and even more so than alcohol!',
-          1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.',
-          2: 'Nicotine can be just as addictive as cocaine, and even more addictive than alcohol!'
+          1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.'
         }
       },
       1: {
@@ -46,13 +45,13 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filler, the paper–even the chemicals!'
+          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filter, the paper–even the chemicals!'
         }
       },
       1: {
         image: {
           src: 'images/nicotineModule/nic_s04_01.jpg',
-          alt: 'cigarette smoke',
+          alt: 'cigarette smoke'
         }
       }
     }
@@ -69,7 +68,7 @@ export const nicotineModuleSlides = {
       card_break: true,
       cards_flipped: false,
       paragraph: {
-        0: '<b>Flip the card to see what\'s inside!</b>'
+        0: '<b>Flip the cards to see what\'s inside!</b>'
       },
       cards: {
         0: {
@@ -375,7 +374,7 @@ export const nicotineModuleSlides = {
       },
       1: {
         paragraph: {
-          0: 'While hanging out and smoking, hookah can be fun, think twice about how much smoke you inhale; and how much secondhand smoke you\'re exposed to!'
+          0: 'While hanging out and smoking hookah can be fun, think twice about how much smoke you inhale; and how much secondhand smoke you\'re exposed to!'
         }
       }
     }
@@ -426,7 +425,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s13_01.jpg',
-          alt: 'vape',
+          alt: 'vape'
         }
       }
     }
@@ -478,7 +477,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s15_01.jpg',
-          alt: 'urine',
+          alt: 'urine'
         }
       },
       2: {
@@ -630,7 +629,7 @@ export const nicotineModuleSlides = {
   16: {
     slide_type: 'inputPieChart',
     header: {
-      header: 'Here are the answers',
+      header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -654,7 +653,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s19_01.jpg',
-          alt: 'sitting in the park',
+          alt: 'sitting in the park'
         }
       }
     }
@@ -676,12 +675,13 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s20_01.jpg',
-          alt: 'no nicotine infographic',
+          alt: 'no nicotine infographic'
         }
       },
       2: {
         paragraph: {
-          0: 'While vape pens might look cool, they mask how much nicotine we consume. Some can actually deliver nicotine faster than regular cigarettes. This means that we may be ingesting more nicotine and chemicals while vaping!'
+          0: 'While vape pens might look cool, they mask how much nicotine we consume. Some can actually deliver nicotine faster than regular cigarettes. This means that we may be ingesting more nicotine and chemicals while vaping!',
+          1: 'As more research on the effects of vaping becomes available, stay in the know and consult official sources.'
         }
       }
     }
@@ -839,7 +839,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s24_01.jpg',
-          alt: 'truth scrabble',
+          alt: 'truth scrabble'
         }
       }
     }
@@ -997,7 +997,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s27_01.png',
-          alt: 'sleep',
+          alt: 'sleep'
         }
       },
       2: {
@@ -1142,7 +1142,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon monoxide levels return to normal</li></ul>'
+            description: '<ul><li>Heart rate & blood pressure drop</li><li>Carbon <u>monoxide</u> levels return to normal</li></ul>'
           }
         },
         1: {
@@ -1211,7 +1211,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s30_01.jpg',
-          alt: 'offered cigarrette',
+          alt: 'offered cigarrette'
         }
       },
       2: {
@@ -1273,7 +1273,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s32_01.jpg',
-          alt: 'cliffside',
+          alt: 'cliffside'
         }
       }
     }
@@ -1295,7 +1295,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s33_01.png',
-          alt: 'dancing',
+          alt: 'dancing'
         }
       },
       2: {
@@ -1306,7 +1306,7 @@ export const nicotineModuleSlides = {
       3: {
         image: {
           src: 'images/nicotineModule/nic_s33_02.jpg',
-          alt: 'boxing',
+          alt: 'boxing'
         }
       },
       4: {
@@ -1335,12 +1335,12 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s34_01.png',
-          alt: 'lunch table',
+          alt: 'lunch table'
         }
       },
       2: {
         paragraph: {
-          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more info in the app menu.'
+          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more info in the resources.'
         }
       }
     }
@@ -1389,7 +1389,7 @@ export const nicotineModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, "The next time I feel stressed, I will talk with a trusted friend who can help me share my thoughts" Or, \n "Next week I will look at the resources for help on how to reduce vaping"'
+      textAreaPlaceHolder: 'i.e. "The next time I feel stressed, I will talk with a trusted friend who can help me share my thoughts" Or, "Next week I will look at the resources for help on how to reduce vaping"'
     }
   },
   // slide 37

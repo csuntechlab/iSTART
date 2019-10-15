@@ -28,7 +28,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s03_01.jpg',
-          alt: 'Woman on cliffslide.',
+          alt: 'Woman on cliffslide.'
         }
       },
       2: {
@@ -139,8 +139,8 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drug, and is safe to use. this is FALSE!',
-          1: 'Ecstasy often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all! Also, mixing MDMA with alcohol and other drugs can lead to dangerous side effects and possible accidental overdose.'
+          0: 'Not knowing what you swallow can be dangerous! There is a common myth that MDMA is a "pure" drug, and is safe to use. This is FALSE!',
+          1: 'The MDMA sold often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all! Also, mixing MDMA with alcohol and other drugs can lead to dangerous side effects and possible accidental overdose.'
         }
       },
       1: {
@@ -171,7 +171,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s08_01.jpg',
-          alt: 'synthetic marijuana',
+          alt: 'synthetic marijuana'
         }
       },
       2: {
@@ -239,7 +239,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s10_01.jpg',
-          alt: 'spice cannabis',
+          alt: 'spice cannabis'
         }
       }
     }
@@ -256,7 +256,7 @@ export const illicitDrugsModuleSlides = {
       images: {
         0: {
           src: 'images/illicitDrugsModule/ill_s11_01.jpg',
-          alt: 'gavel',
+          alt: 'gavel'
         }
       },
       questions: {
@@ -319,7 +319,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s12_01.jpg',
-          alt: 'lines of cocaine',
+          alt: 'lines of cocaine'
         }
       }
     }
@@ -449,7 +449,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s15_01.jpg',
-          alt: 'heroin',
+          alt: 'heroin'
         }
       },
       2: {
@@ -477,7 +477,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s16_01.jpg',
-          alt: 'fentanyl',
+          alt: 'fentanyl'
         }
       }
     }
@@ -575,7 +575,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s19_01.jpg',
-          alt: 'naloxone',
+          alt: 'naloxone'
         }
       },
       2: {
@@ -648,7 +648,7 @@ export const illicitDrugsModuleSlides = {
   19: {
     slide_type: 'inputPieChart',
     header: {
-      header: 'Here are the answers',
+      header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -670,7 +670,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s23_01.jpg',
-          alt: 'no',
+          alt: 'no'
         }
       }
     }
@@ -700,7 +700,7 @@ export const illicitDrugsModuleSlides = {
       2: {
         image: {
           src: 'images/illicitDrugsModule/ill_s24_01.jpg',
-          alt: 'peer pressure',
+          alt: 'peer pressure'
         }
       },
       3: {
@@ -722,14 +722,14 @@ export const illicitDrugsModuleSlides = {
       0: {
         paragraph: {
           0: 'These last few weeks we\'ve introduced many suggestions on how to take care of yourself through mind, body and social connections!',
-          1: 'Now is the time to create healthy habits, think about the future, and the resources that can help get there!',
+          1: 'Now is the time to create healthy habits, think about the future, and the resources that can help you get there!',
           2: 'In the app menu, and on our iSTART website, check out the resources CSUN and the community offer.'
         }
       },
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s25_01.jpg',
-          alt: 'woman carrying a heart balloon',
+          alt: 'woman carrying a heart balloon'
         }
       }
     }
@@ -746,8 +746,7 @@ export const illicitDrugsModuleSlides = {
         paragraph: {
           0: 'Thanks for following along so far!',
           1: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
-          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.',
-          3: 'And, remember to look out for the next iSTART survey link in your email!'
+          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.'
         }
       }
     }

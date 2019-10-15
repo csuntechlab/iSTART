@@ -72,7 +72,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
+          caption: 'The lines on a solo cup can tell you how much to pour for each drink.',
           size: 'informational'
         }
       },
@@ -263,7 +263,7 @@ export const alcoholModuleSlides = {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
-      sub_header: 'Let’s see how you answered compared to the actual percent from the CSUN National College Health Assessment survey.',
+      sub_header: null,
       tooltip: 'Fill in the form requirements to proceed to the next slide'
     },
     content: {
@@ -293,7 +293,7 @@ export const alcoholModuleSlides = {
   7: {
     slide_type: 'inputPieChart',
     header: {
-      header: 'Here are the answers',
+      header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -317,7 +317,7 @@ export const alcoholModuleSlides = {
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
-          alt: 'friends on beach cooking marshmallows',
+          alt: 'friends on beach cooking marshmallows'
         }
       }
     }
@@ -446,9 +446,9 @@ export const alcoholModuleSlides = {
       card_break: false,
       cards_flipped: false,
       paragraph: {
-        0: 'Have you ever seen someone drink more than what they can handle? Have you seen this individual do that more than once?',
-        1: 'It might be important to be aware of what the different categories of drinking are.',
-        2: '<b>Flip the cards below to learn  of each.</b>'
+        0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
+        1: 'It\'s important to be aware of the different drinking categories.',
+        2: '<b>Flip the cards below to learn of each.</b>'
       },
       cards: {
         0: {
@@ -504,7 +504,7 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       header: 'What type of drinker is Sarah?',
-      sub_header: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
+      sub_header: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -609,7 +609,7 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       header: 'Binge Drinking',
-      sub_header: 'Watch the video below to learn about binge drinking.',
+      sub_header: null,
       tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -636,7 +636,7 @@ export const alcoholModuleSlides = {
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
-          alt: 'muppets wasted on couch',
+          alt: 'muppets wasted on couch'
         }
       }
     }
@@ -843,7 +843,7 @@ export const alcoholModuleSlides = {
   19: {
     slide_type: 'info',
     header: {
-      header: 'Better Sleep',
+      header: 'Sleep Quality',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -851,7 +851,7 @@ export const alcoholModuleSlides = {
       0: {
         image: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
-          alt: 'person sleeping on couch with comfy blanket',
+          alt: 'person sleeping on couch with comfy blanket'
         }
       },
       1: {
@@ -866,8 +866,8 @@ export const alcoholModuleSlides = {
   20: {
     slide_type: 'info',
     header: {
-      header: 'Better Academic Performance',
-      sub_header: null,
+      header: 'Academic Performance',
+      sub_header: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -877,7 +877,7 @@ export const alcoholModuleSlides = {
           alt: 'alcohol infographic on being a factor for academic problems',
           size: '1',
           mobile_size: '5/6',
-          tablet_size: '1/2',
+          tablet_size: '1/2'
         }
       }
     }
@@ -960,6 +960,7 @@ export const alcoholModuleSlides = {
           '"No thanks, I’m taking medication that I cannot drink with."',
           '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
           '"I’d rather get a soda, thanks."',
+          '"They have really great mocktails (non-alcoholic cocktails) that I\'d like to try."',
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
         ]
@@ -1001,7 +1002,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'If your Blood Alcohol Concentration (BAC) is above .08%, it is illegal for you to drive. Even if your BAC is below this percentage, you can still risk a DUI.<br> If you are under 21, there is a ZERO TOLERANCE policy - <i>any amount of alcohol in your system will get you a DUI.</i>'
+            description: '<ul><li>It\'s illegal to drink with a Blood Alcohol Concentration (BAC) level above 0.08% in all states.</li><li>There is a ZERO tolerance policy if under age 21. Any amount of alcohol in your blood can lead to a DUI.</li><li>Getting a DUI can cost on average close to $7,000. Not to mention a suspended license, traffic school, possible jail time, and difficulty getting a job!</li></ul>'
           }
         }
       }
@@ -1020,14 +1021,14 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
           1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
-          2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
+          2: 'A generl rule is that it takes your body about 1-1.5 hours to burn off 1 standard drink.'
         }
       },
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          size: 'clipart',
+          size: 'clipart'
         }
       }
     }
@@ -1254,12 +1255,12 @@ export const alcoholModuleSlides = {
   30: {
     slide_type: 'emailForm',
     header: {
-      header: 'Set a wellness goal!',
+      header: 'Set a Wellness Goal!',
       sub_header: 'Now is a great time to set a wellness goal to practice responsible drinking; or if you don\'t drink, then to improve your overall health!',
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \n "I\'ll work out at least once next week for 30 minutes!"'
+      textAreaPlaceHolder: 'i.e. "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week for 30 minutes!"'
     }
   },
   // slide 33

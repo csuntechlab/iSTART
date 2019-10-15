@@ -798,7 +798,7 @@ export const prescriptionDrugsModuleSlides = {
         0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
         1: 'What if someone wants to use YOUR Rx meds? ​Tell them: ',
         2: '<ul><li>"I can\'t get it refilled easily, and I won\'t be able to stay healthy if I run out​."</li><li>"I\'m on my parents\' insurance, they\'ll wonder why I need to refill it earlier than normal."</li></ul>',
-        3: '<b>Flip the cards</b> to for ways to say "NO" or "HOLD ON".'
+        3: '<b>Flip the cards</b> for ways to say "NO" or "HOLD ON".'
       },
       cards: {
         0: {
@@ -828,7 +828,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Offered by classmate to help study?. "Actually, I just learned that misusing Rx drugs can earn you lower grades. Some water and a walk will help instead!"'
+            description: 'Offered by classmate to help study? "Actually, I just learned that misusing Rx drugs can earn you lower grades. Some water and a walk will help instead!"'
           }
         },
         2: {
@@ -843,7 +843,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Offered by a family member? "Thanks for thinking of <u>me</u>, but meds not prescribed to me might have serious side effects!"'
+            description: 'Offered by a family member? "Thanks for thinking of me, but meds not prescribed to me might have serious side effects!"'
           }
         },
         3: {
@@ -1016,7 +1016,7 @@ export const prescriptionDrugsModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, “I will start taking a short walk when I study all day" or if you have used Rx meds not prescribed to you and are ready to change: "I will think of 3 ways to refuse if I\'m offered it" or, "I will try an alternative to using Rx meds, like aspirin".'
+      textAreaPlaceHolder: 'i.e. “I will start taking a short walk when I study all day" or if you have used Rx meds not prescribed to you and are ready to change: "I will think of 3 ways to refuse if I\'m offered it" or, "I will try an alternative to using Rx meds, like aspirin".'
     }
   },
   // slide 32
@@ -1028,8 +1028,8 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+          0: 'Thank you for completing this module! You will receive another gift card via email within the next few days!',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.'
         }
       }
     }
