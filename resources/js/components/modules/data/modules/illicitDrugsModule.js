@@ -49,7 +49,6 @@ export const illicitDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Ecstasy, known as <i>MDMA</i> or <i>molly</i>, is a synthetic drug that acts as a stimulant and hallucinogen.',
         1: 'It is most often abused by teens and college-age young adults, and is mainly taken in pill or powder form while at raves, clubs & concerts.',
@@ -57,6 +56,7 @@ export const illicitDrugsModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -335,13 +335,13 @@ export const illicitDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Remember, regardless of how you use it, it\'s still cocaine! And if used with other drugs, like opioids or alcohol, the consequences can be very serious and even life-threatening.',
         1: 'Flip the cards below to learn about the side effects of cocaine use.'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -356,6 +356,7 @@ export const illicitDrugsModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -370,6 +371,7 @@ export const illicitDrugsModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -384,6 +386,7 @@ export const illicitDrugsModuleSlides = {
           }
         },
         3: {
+          was_flipped: false,
           show: false,
           front: {
             img: {

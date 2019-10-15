@@ -445,7 +445,6 @@ export const alcoholModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
         1: 'It\'s important to be aware of the different drinking categories.',
@@ -453,6 +452,7 @@ export const alcoholModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -467,6 +467,7 @@ export const alcoholModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -481,6 +482,7 @@ export const alcoholModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -650,12 +652,12 @@ export const alcoholModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -670,6 +672,7 @@ export const alcoholModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -684,6 +687,7 @@ export const alcoholModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -698,6 +702,7 @@ export const alcoholModuleSlides = {
           }
         },
         3: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -979,7 +984,6 @@ export const alcoholModuleSlides = {
     content: {
       card_break: true,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'It\'s time to sober up and look at the facts. Drinking and driving is no joke. The #1 cause of death among college students is car accidents.',
         1: 'It\'s okay to drink, just don\'t get behind the wheel or allow others to drive if they\'ve been drinking. Consider how long it would take to sober up after drinking, or better yet – take an Uber!',
@@ -987,6 +991,7 @@ export const alcoholModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1207,7 +1212,6 @@ export const alcoholModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'By practicing mindfulness and yoga, you can improve mood, reduce stress, and enhance focus and attention.',
         1: 'Rather than using substances, you can cope with difficult emotions by connecting with your mind and body.',
@@ -1215,6 +1219,7 @@ export const alcoholModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1229,6 +1234,7 @@ export const alcoholModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
