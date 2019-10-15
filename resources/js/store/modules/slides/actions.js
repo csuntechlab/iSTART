@@ -113,8 +113,8 @@ export default {
     commit('STORE_QUIZ_RESPONSES', payload)
   },
 
-  updateResponse ({ commit }, payload) {
-    commit('UPDATE_RESPONSE', payload)
+  updateQuizResponse ({ commit }, payload) {
+    commit('UPDATE_QUIZ_RESPONSE', payload)
   },
 
   getUserResponses ({ commit }, payload) {

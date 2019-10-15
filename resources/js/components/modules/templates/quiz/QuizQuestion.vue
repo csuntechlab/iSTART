@@ -55,13 +55,13 @@ export default {
   methods: {
     ...mapActions(
       [
-        'updateResponse',
+        'updateQuizResponse',
         'enableContinue'
       ]
     ),
 
     showResponse (optionIndex) {
-      this.updateResponse({ currentSlideIndex: parseInt(this.currentSlideNumber), currentQuestionIndex: parseInt(this.index), currentOptionIndex: parseInt(optionIndex) })
+      this.updateQuizResponse({ currentSlideIndex: parseInt(this.currentSlideNumber), currentQuestionIndex: parseInt(this.index), currentOptionIndex: parseInt(optionIndex) })
       this.enableContinue()
     }
   }
