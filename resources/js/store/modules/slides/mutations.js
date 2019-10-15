@@ -186,11 +186,11 @@ export default {
     state.JSONSlideData[payload.currentSlideIndex].header.results.responses = payload.previousSlideData
   },
 
-  UPDATE_RESPONSE (state, payload) {
+  UPDATE_QUIZ_RESPONSE (state, payload) {
     let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
     let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
     question.showResponse = true
-    option.show = true
+    option.show = !option.show
   },
 
   SURVEY_RESULTS_EMAIL_WAS_SUBMITTED (state, payload) {
