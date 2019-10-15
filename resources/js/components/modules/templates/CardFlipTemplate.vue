@@ -13,7 +13,7 @@
   </section>
   <div class="card-flip-content mb-5">
     <div :class="[(currentSlideData.content.card_break ? 'col-12' : 'col-12 col-md-6'), 'card-flip__card']" v-for="(item, index) in currentSlideData.content.cards" :key="index">
-      <div @click="flipCard(index, item.show); item.show ? updateCount(1) : updateCount(-1)" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
+      <div @click="flipCard(index, item.show); checkForCardsFlipped()" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
         <div class="card-flip__card-front interactable-container">
           <figure v-if="item.front.img.src !== null">
             <figcaption class="card-flip__card-caption">{{item.front.img.caption}}</figcaption>
@@ -58,7 +58,7 @@ export default {
       [
         'enableContinue',
         'updateCard',
-        'updateCardCount'
+        'checkCardFlips'
       ]
     ),
 
@@ -66,8 +66,8 @@ export default {
       this.updateCard({ currentSlideIndex: parseInt(this.currentSlideNumber), currentCardIndex: parseInt(itemIndex), isFlipped: isFlipped })
     },
 
-    updateCount (number, item) {
-      this.updateCardCount({ currentSlideIndex: parseInt(this.currentSlideNumber), number: parseInt(number) })
+    checkForCardsFlipped () {
+      this.checkCardFlips({ currentSlideIndex: parseInt(this.currentSlideNumber) })
     },
 
     checkIfCardsFlipped () {

@@ -68,12 +68,12 @@ export const nicotineModuleSlides = {
     content: {
       card_break: true,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: '<b>Flip the card to see what\'s inside!</b>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -88,6 +88,7 @@ export const nicotineModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -102,6 +103,7 @@ export const nicotineModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -880,13 +882,13 @@ export const nicotineModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Being smoke or vape free means the body and mind can function at its best.',
         1: '<b>Flip the cards to learn the many benefits to being smoke/vape free.</b>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -901,6 +903,7 @@ export const nicotineModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -915,6 +918,7 @@ export const nicotineModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -929,6 +933,7 @@ export const nicotineModuleSlides = {
           }
         },
         3: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -943,6 +948,7 @@ export const nicotineModuleSlides = {
           }
         },
         4: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -957,6 +963,7 @@ export const nicotineModuleSlides = {
           }
         },
         5: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1118,13 +1125,13 @@ export const nicotineModuleSlides = {
     content: {
       card_break: true,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: '<b>Flip the timecards below to learn about the body\'s healing journey after quitting smoking.</b>',
         1: '<i>(Note: Timeline is not drawn to scale)</i>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1139,6 +1146,7 @@ export const nicotineModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1153,6 +1161,7 @@ export const nicotineModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1167,6 +1176,7 @@ export const nicotineModuleSlides = {
           }
         },
         3: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -1346,7 +1356,6 @@ export const nicotineModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Deep breathing, or belly breathing, can reduce stress and anger, improve relaxation and help in overcoming fears.',
         1: 'It can help you reach a state of deep rest. Air comes in through your nose and fully fills your lungs, and the lower belly rises. This type of breathing can slow the heartbeat and help stabilize blood pressure.',
@@ -1354,6 +1363,7 @@ export const nicotineModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {

@@ -21,13 +21,13 @@ export const marijuanaModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Let\'s first discuss the two main chemicals that make up the different cannabis strains: THC and CBD.',
         1: '<b>Flip the cards below to learn more.</b>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -42,6 +42,7 @@ export const marijuanaModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -466,13 +467,13 @@ export const marijuanaModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'What\'s really going on inside your brain every time you use marijuana?',
         1: '<b>Flip the cards to learn how marijuana affects the brain.</b>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -487,6 +488,7 @@ export const marijuanaModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -501,6 +503,7 @@ export const marijuanaModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -951,12 +954,12 @@ export const marijuanaModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: '<b>Flip the cards below to learn more easy ways to increase dopamine and feelings of happiness.</b>'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -971,6 +974,7 @@ export const marijuanaModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -985,6 +989,7 @@ export const marijuanaModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
