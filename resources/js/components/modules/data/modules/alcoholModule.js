@@ -72,7 +72,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s05_01.png',
           alt: 'drink sizes comparison',
-          caption: 'The lines on a solo cup can tell you how much of each type of drink to pour.',
+          caption: 'The lines on a solo cup can tell you how much to pour for each drink.',
           size: 'informational'
         }
       },
@@ -293,7 +293,7 @@ export const alcoholModuleSlides = {
   7: {
     slide_type: 'inputPieChart',
     header: {
-      header: 'Here are the answers',
+      header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
@@ -447,9 +447,9 @@ export const alcoholModuleSlides = {
       cards_flipped: false,
       card_flip_count: 0,
       paragraph: {
-        0: 'Have you ever seen someone drink more than what they can handle? Have you seen this individual do that more than once?',
-        1: 'It might be important to be aware of what the different categories of drinking are.',
-        2: '<b>Flip the cards below to learn  of each.</b>'
+        0: 'Have you ever seen someone drink more than what they can handle? And do it more than once?',
+        1: 'It\'s important to be aware of the different drinking categories.',
+        2: '<b>Flip the cards below to learn of each.</b>'
       },
       cards: {
         0: {
@@ -502,7 +502,7 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       header: 'What type of drinker is Sarah?',
-      sub_header: 'Watch this video to hear a story about Sarah’s week. Pay attention, because you will be quizzed about her drinking after.',
+      sub_header: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -607,7 +607,7 @@ export const alcoholModuleSlides = {
     slide_type: 'video',
     header: {
       header: 'Binge Drinking',
-      sub_header: 'Watch the video below to learn about binge drinking.',
+      sub_header: null,
       tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
@@ -838,7 +838,7 @@ export const alcoholModuleSlides = {
   19: {
     slide_type: 'info',
     header: {
-      header: 'Better Sleep',
+      header: 'Sleep Quality',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -861,8 +861,8 @@ export const alcoholModuleSlides = {
   20: {
     slide_type: 'info',
     header: {
-      header: 'Better Academic Performance',
-      sub_header: null,
+      header: 'Academic Performance',
+      sub_header: 'Keep your glass empty! You\'ve worked hard to get here, don\'t let drinking impact your college success.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -955,6 +955,7 @@ export const alcoholModuleSlides = {
           '"No thanks, I’m taking medication that I cannot drink with."',
           '"I’m driving tonight." (<i>You can also offer to be the designated driver!</i>)',
           '"I’d rather get a soda, thanks."',
+          '"They have really great mocktails (non-alcoholic cocktails) that I\'d like to try."',
           '"I have a game/practice tomorrow."',
           '"I’m OK for now!" (<i>You can BYOC (bring your own cup) and keep it filled with something other than alcohol!</i>)'
         ]
@@ -996,7 +997,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'If your Blood Alcohol Concentration (BAC) is above .08%, it is illegal for you to drive. Even if your BAC is below this percentage, you can still risk a DUI.<br> If you are under 21, there is a ZERO TOLERANCE policy - <i>any amount of alcohol in your system will get you a DUI.</i>'
+            description: '<ul><li>It\'s illegal to drink with a Blood Alcohol Concentration (BAC) level above 0.08% in all states.</li><li>There is a ZERO tolerance policy if under age 21. Any amount of alcohol in your blood can lead to a DUI.</li><li>Getting a DUI can cost on average close to $7,000. Not to mention a suspended license, traffic school, possible jail time, and difficulty getting a job!</li></ul>'
           }
         }
       }

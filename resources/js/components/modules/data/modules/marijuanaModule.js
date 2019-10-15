@@ -301,7 +301,7 @@ export const marijuanaModuleSlides = {
   10: {
     slide_type: 'inputPieChart',
     header: {
-      header: 'Here are the answers',
+      header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
