@@ -1379,7 +1379,7 @@ export const nicotineModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'i.e. "The next time I feel stressed, I will talk with a trusted friend who can help me share my thoughts" Or, \n "Next week I will look at the resources for help on how to reduce vaping"'
+      textAreaPlaceHolder: 'i.e. "The next time I feel stressed, I will talk with a trusted friend who can help me share my thoughts" Or, "Next week I will look at the resources for help on how to reduce vaping"'
     }
   },
   // slide 37

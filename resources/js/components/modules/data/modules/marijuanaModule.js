@@ -1064,7 +1064,7 @@ export const marijuanaModuleSlides = {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
-      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​&nbsp;Or, \n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
+      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​&nbsp;Or, If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
       tooltip: null
     },
     content: {

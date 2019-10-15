@@ -1254,7 +1254,7 @@ export const alcoholModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'i.e. "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \n "I\'ll work out at least once next week for 30 minutes!"'
+      textAreaPlaceHolder: 'i.e. "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, "I\'ll work out at least once next week for 30 minutes!"'
     }
   },
   // slide 33
