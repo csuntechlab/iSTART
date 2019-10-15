@@ -1010,7 +1010,7 @@ export const prescriptionDrugsModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, “I will start taking a short walk when I study all day" or if you have used Rx meds not prescribed to you and are ready to change: "I will think of 3 ways to refuse if I\'m offered it" or, "I will try an alternative to using Rx meds, like aspirin".'
+      textAreaPlaceHolder: 'i.e. “I will start taking a short walk when I study all day" or if you have used Rx meds not prescribed to you and are ready to change: "I will think of 3 ways to refuse if I\'m offered it" or, "I will try an alternative to using Rx meds, like aspirin".'
     }
   },
   // slide 32

@@ -1068,7 +1068,7 @@ export const marijuanaModuleSlides = {
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, "Next week I will listen to classical music for 10 minutes a day to increase my dopamine levels." Or, \n "Next week I will politely decline using marijuana if a friend asks by saying \'No thanks, I\'m driving\'."'
+      textAreaPlaceHolder: 'i.e. "Next week I will listen to classical music for 10 minutes a day to increase my dopamine levels." Or, \n "Next week I will politely decline using marijuana if a friend asks by saying \'No thanks, I\'m driving\'."'
     }
   },
   // slide 31

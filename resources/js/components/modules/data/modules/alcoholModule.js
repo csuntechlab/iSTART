@@ -1016,7 +1016,7 @@ export const alcoholModuleSlides = {
         paragraph: {
           0: 'Many factors affect how your body absorbs alcohol into the blood - such as how much and how fast you drink, your weight, gender, and if you had food in your stomach.',
           1: 'There is no way to speed up the rate your body metabolizes/gets rid of alcohol after drinking (nope, not that cup of coffee either!).',
-          2: 'A general rule is that it will burn off <b><u>about</u> 1 standard drink per 1 to 1 ½ hours.</b>'
+          2: 'A generl rule is that it takes your body about 1-1.5 hours to burn off 1 standard drink.'
         }
       },
       1: {
@@ -1249,12 +1249,12 @@ export const alcoholModuleSlides = {
   30: {
     slide_type: 'emailForm',
     header: {
-      header: 'Set a wellness goal!',
+      header: 'Set a Wellness Goal!',
       sub_header: 'Now is a great time to set a wellness goal to practice responsible drinking; or if you don\'t drink, then to improve your overall health!',
       tooltip: null
     },
     content: {
-      textAreaPlaceHolder: 'For example, "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \n "I\'ll work out at least once next week for 30 minutes!"'
+      textAreaPlaceHolder: 'i.e. "Next week I will plan to drink one fewer drink than normal when I go out with friends." Or, \n "I\'ll work out at least once next week for 30 minutes!"'
     }
   },
   // slide 33
