@@ -52,7 +52,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s04_01.jpg',
-          alt: 'cigarette smoke',
+          alt: 'cigarette smoke'
         }
       }
     }
@@ -424,7 +424,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s13_01.jpg',
-          alt: 'vape',
+          alt: 'vape'
         }
       }
     }
@@ -476,7 +476,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s15_01.jpg',
-          alt: 'urine',
+          alt: 'urine'
         }
       },
       2: {
@@ -652,7 +652,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s19_01.jpg',
-          alt: 'sitting in the park',
+          alt: 'sitting in the park'
         }
       }
     }
@@ -674,7 +674,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s20_01.jpg',
-          alt: 'no nicotine infographic',
+          alt: 'no nicotine infographic'
         }
       },
       2: {
@@ -837,7 +837,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s24_01.jpg',
-          alt: 'truth scrabble',
+          alt: 'truth scrabble'
         }
       }
     }
@@ -990,7 +990,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s27_01.png',
-          alt: 'sleep',
+          alt: 'sleep'
         }
       },
       2: {
@@ -1201,7 +1201,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s30_01.jpg',
-          alt: 'offered cigarrette',
+          alt: 'offered cigarrette'
         }
       },
       2: {
@@ -1263,7 +1263,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s32_01.jpg',
-          alt: 'cliffside',
+          alt: 'cliffside'
         }
       }
     }
@@ -1285,7 +1285,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s33_01.png',
-          alt: 'dancing',
+          alt: 'dancing'
         }
       },
       2: {
@@ -1296,7 +1296,7 @@ export const nicotineModuleSlides = {
       3: {
         image: {
           src: 'images/nicotineModule/nic_s33_02.jpg',
-          alt: 'boxing',
+          alt: 'boxing'
         }
       },
       4: {
@@ -1325,7 +1325,7 @@ export const nicotineModuleSlides = {
       1: {
         image: {
           src: 'images/nicotineModule/nic_s34_01.png',
-          alt: 'lunch table',
+          alt: 'lunch table'
         }
       },
       2: {

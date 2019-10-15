@@ -273,7 +273,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s10_01.png',
-          alt: 'marijuana vape',
+          alt: 'marijuana vape'
         }
       }
     }
@@ -565,7 +565,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s19_01.jpg',
-          alt: 'student racking brain',
+          alt: 'student racking brain'
         }
       },
       2: {
@@ -930,7 +930,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s26_01.jpg',
-          alt: 'euphoric emoji',
+          alt: 'euphoric emoji'
         }
       },
       2: {
@@ -1019,7 +1019,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s28_01.png',
-          alt: 'handstand on the beach',
+          alt: 'handstand on the beach'
         }
       }
     }
@@ -1041,7 +1041,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s29_01.jpeg',
-          alt: 'person enjoying music',
+          alt: 'person enjoying music'
         }
       },
       2: {
@@ -1088,7 +1088,7 @@ export const marijuanaModuleSlides = {
       1: {
         image: {
           src: 'images/marijuanaModule/mar_s31_01.jpg',
-          alt: 'teamwork mountain climbing',
+          alt: 'teamwork mountain climbing'
         }
       }
     }

@@ -317,7 +317,7 @@ export const alcoholModuleSlides = {
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s10_01.jpg',
-          alt: 'friends on beach cooking marshmallows',
+          alt: 'friends on beach cooking marshmallows'
         }
       }
     }
@@ -634,7 +634,7 @@ export const alcoholModuleSlides = {
       1: {
         image: {
           src: 'images/alcoholModule/alcohol_s17_01.png',
-          alt: 'muppets wasted on couch',
+          alt: 'muppets wasted on couch'
         }
       }
     }
@@ -846,7 +846,7 @@ export const alcoholModuleSlides = {
       0: {
         image: {
           src: 'images/alcoholModule/alcohol_s21_01.jpg',
-          alt: 'person sleeping on couch with comfy blanket',
+          alt: 'person sleeping on couch with comfy blanket'
         }
       },
       1: {
@@ -872,7 +872,7 @@ export const alcoholModuleSlides = {
           alt: 'alcohol infographic on being a factor for academic problems',
           size: '1',
           mobile_size: '5/6',
-          tablet_size: '1/2',
+          tablet_size: '1/2'
         }
       }
     }
@@ -1022,7 +1022,7 @@ export const alcoholModuleSlides = {
         image: {
           src: 'images/alcoholModule/alcohol_s26_01.png',
           alt: 'wine infographic cartoon',
-          size: 'clipart',
+          size: 'clipart'
         }
       }
     }

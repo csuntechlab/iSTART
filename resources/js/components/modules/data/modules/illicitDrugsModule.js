@@ -28,7 +28,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s03_01.jpg',
-          alt: 'Woman on cliffslide.',
+          alt: 'Woman on cliffslide.'
         }
       },
       2: {
@@ -171,7 +171,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s08_01.jpg',
-          alt: 'synthetic marijuana',
+          alt: 'synthetic marijuana'
         }
       },
       2: {
@@ -239,7 +239,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s10_01.jpg',
-          alt: 'spice cannabis',
+          alt: 'spice cannabis'
         }
       }
     }
@@ -256,7 +256,7 @@ export const illicitDrugsModuleSlides = {
       images: {
         0: {
           src: 'images/illicitDrugsModule/ill_s11_01.jpg',
-          alt: 'gavel',
+          alt: 'gavel'
         }
       },
       questions: {
@@ -319,7 +319,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s12_01.jpg',
-          alt: 'lines of cocaine',
+          alt: 'lines of cocaine'
         }
       }
     }
@@ -446,7 +446,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s15_01.jpg',
-          alt: 'heroin',
+          alt: 'heroin'
         }
       },
       2: {
@@ -474,7 +474,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s16_01.jpg',
-          alt: 'fentanyl',
+          alt: 'fentanyl'
         }
       }
     }
@@ -572,7 +572,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s19_01.jpg',
-          alt: 'naloxone',
+          alt: 'naloxone'
         }
       },
       2: {
@@ -667,7 +667,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s23_01.jpg',
-          alt: 'no',
+          alt: 'no'
         }
       }
     }
@@ -697,7 +697,7 @@ export const illicitDrugsModuleSlides = {
       2: {
         image: {
           src: 'images/illicitDrugsModule/ill_s24_01.jpg',
-          alt: 'peer pressure',
+          alt: 'peer pressure'
         }
       },
       3: {
@@ -726,7 +726,7 @@ export const illicitDrugsModuleSlides = {
       1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s25_01.jpg',
-          alt: 'woman carrying a heart balloon',
+          alt: 'woman carrying a heart balloon'
         }
       }
     }
