@@ -43,12 +43,12 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: '<b>Flip the cards</b> below to learn more.'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -62,6 +62,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -76,6 +77,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -792,7 +794,6 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
         1: 'What if someone wants to use YOUR Rx meds? ​Tell them: ',
@@ -801,6 +802,7 @@ export const prescriptionDrugsModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -815,6 +817,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -829,6 +832,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         2: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -843,6 +847,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         3: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -905,13 +910,13 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Taking care of your body physically can do a lot of good.',
         2: '<b>Flip the cards</b> to learn more.'
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -926,6 +931,7 @@ export const prescriptionDrugsModuleSlides = {
           }
         },
         1: {
+          was_flipped: false,
           show: false,
           front: {
             img: {
@@ -978,7 +984,6 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       card_break: false,
       cards_flipped: false,
-      card_flip_count: 0,
       paragraph: {
         0: 'Helping others is important, but so is helping yourself be your best you! Work on your coping skills, increase focus, reduce stress and anxiety - even manage pain using mindfulness.',
         2: 'Mindfulness-Based Stress Reduction (MBSR) is one such technique, which has been widely accepted. Courses are offered by respected institutions in L.A.',
@@ -986,6 +991,7 @@ export const prescriptionDrugsModuleSlides = {
       },
       cards: {
         0: {
+          was_flipped: false,
           show: false,
           front: {
             img: {

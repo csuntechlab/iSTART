@@ -1,3 +1,5 @@
+import { connectableObservableDescriptor } from "rxjs/internal/observable/ConnectableObservable"
+
 export default {
   SET_MODULE_DATA (state, payload) {
     state.moduleData = payload
@@ -80,15 +82,26 @@ export default {
   */
   UPDATE_CARD (state, payload) {
     state.JSONSlideData[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
+
+    let wasCardFlipped = state.JSONSlideData[payload.currentSlideIndex].content.cards[payload.currentCardIndex].was_flipped
+    if (wasCardFlipped === false) {
+      state.JSONSlideData[payload.currentSlideIndex].content.cards[payload.currentCardIndex].was_flipped = true
+    }
   },
 
-  UPDATE_CARD_COUNT (state, payload) {
-    let totalCardCount = Object.keys(state.JSONSlideData[payload.currentSlideIndex].content.cards).length
-    state.JSONSlideData[payload.currentSlideIndex].content.card_flip_count += payload.number
+  CHECK_CARD_FLIPS (state, payload) {
+    let cards = state.JSONSlideData[payload.currentSlideIndex].content.cards
+    let cardsLength = Object.keys(state.JSONSlideData[payload.currentSlideIndex].content.cards).length
 
-    if (state.JSONSlideData[payload.currentSlideIndex].content.card_flip_count === totalCardCount) {
-      state.JSONSlideData[payload.currentSlideIndex].content.cards_flipped = true
-      state.enableContinue = true
+    for (let i = 0; i < cardsLength; i += 1) {
+      if (cards[i].was_flipped === true) {
+        state.JSONSlideData[payload.currentSlideIndex].content.cards_flipped = true
+        state.enableContinue = true
+      } else if (cards[i].was_flipped === false) {
+        state.JSONSlideData[payload.currentSlideIndex].content.cards_flipped = false
+        state.enableContinue = false
+        break
+      }
     }
   },
 

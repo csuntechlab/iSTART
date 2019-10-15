@@ -77,8 +77,8 @@ export default {
     commit('UPDATE_CARD', payload)
   },
 
-  updateCardCount ({ commit }, payload) {
-    commit('UPDATE_CARD_COUNT', payload)
+  checkCardFlips ({ commit }, payload) {
+    commit('CHECK_CARD_FLIPS', payload)
   },
 
   updateMultiQuizInput ({ commit }, payload) {
