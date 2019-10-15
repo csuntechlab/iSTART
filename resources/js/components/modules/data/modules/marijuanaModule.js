@@ -70,7 +70,7 @@ export const marijuanaModuleSlides = {
       0: {
         paragraph: {
           0: 'The level of THC in marijuana is not always the same. It can vary depending on the plant strain, growth, processing, and storage.',
-          1: 'The amount of THC in marijuana has increased over the years. This means that people using marijuana are smoking or ingesting higher THC levels than expected, which can possibly lead to a more dangerous reaction.L0'
+          1: 'The amount of THC in marijuana has increased over the years. This means that people using marijuana are smoking or ingesting higher THC levels than expected, which can possibly lead to a more dangerous reaction.'
         }
       },
       1: {
@@ -210,7 +210,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Snacking on cannabis gummies might be tasty, but be careful! Overconsumption of edibles can lead to a marijuana-induced psychosis',
+          0: 'Snacking on cannabis gummies might be tasty, but be careful! Overconsumption of edibles can lead to a marijuana-induced psychosis.',
           1: 'If you suspect someone is entering psychosis, call 911. Be careful if the person is acting erratic, and try to stay with them, and if possible, comfort them.'
         }
       },
@@ -340,7 +340,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Many people seek out professional assessments to tell them if they have a problem with prescription drug use and need assistance with it. However, the best judge of whether you are challenged by your marijuana use is <em>YOU</em>.',
+          0: 'Many people seek out professional assessments to tell them if they have a problem with marijuana drug use and need assistance with it. However, the best judge of whether you are challenged by your marijuana use is <em>YOU</em>.',
           1: 'Your answers to the following questions will provide you with the best path for you.'
         }
       },
@@ -701,7 +701,7 @@ export const marijuanaModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'You\'re hanging out at Venice beach with your friends, and your 24-year old buddy pulls out his marijuana vape pen and starts using it. Is that legal? <i><b>Is that legal?</b></i>',
+          question: 'You\'re hanging out at Venice beach with your friends, and your 24-year old buddy pulls out his marijuana vape pen and starts using it. <b>Is that legal?</b></i>',
           options: {
             0: {
               isAnswer: false,
@@ -838,7 +838,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'For those who choose to use recreational cannabis, here are a few tips to help keep you safe:'
+          0: 'For those who choose to use recreational cannabis, here are a few tips to help keep you safe.'
         }
       },
       1: {
@@ -1064,7 +1064,7 @@ export const marijuanaModuleSlides = {
     slide_type: 'emailForm',
     header: {
       header: 'Set a wellness goal!',
-      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​ &nbsp;\n Or,\n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
+      sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​&nbsp;Or, \n If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',
       tooltip: null
     },
     content: {
