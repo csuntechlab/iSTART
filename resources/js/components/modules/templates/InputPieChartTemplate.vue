@@ -14,13 +14,13 @@
           <div :key="index" class="module-quizInput__question col-12 mb-2">
             <p class="module-text__caption">{{ element.question }}</p>
           </div>
-          <div :key="index + '-chart1'" class="col-6 mt-1">
+          <div :key="index + '-chart1'" class="col-6 py-1 px-lg-5">
             <input-pie-chart-legend chart-id="one"
               :response="userResponses(index)"
               :sources="element.answer">
             </input-pie-chart-legend>
           </div>
-          <div :key="index + '-chart2'" class="col-6 mt-1">
+          <div :key="index + '-chart2'" class="col-6 py-1 px-lg-5">
             <input-pie-chart-legend chart-id="two"
               :response="userResponses(index)"
               :sources="element.answer">
