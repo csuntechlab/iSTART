@@ -1,5 +1,5 @@
 <template>
-  <div class="module-quiz">
+  <div class="module-quiz col-12">
     <div v-if="currentSlideData.header.header != null" class="row">
       <div class="col-12">
         <h1 class="module-text__header text-center">{{ currentSlideData.header.header }}</h1>
