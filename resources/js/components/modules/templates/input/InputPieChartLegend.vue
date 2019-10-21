@@ -87,7 +87,16 @@ export default {
       this.renderChart(this.chartdata.userData, this.options1)
     }
     if (this.chartId === 'two') {
-      this.renderChart(this.chartdata.sourcesData, this.options2)
+      let getWindowWidth = window.innerWidth
+      if (getWindowWidth <= 350) {
+        let orignalString = this.chartdata.sourcesData.labels[0]
+        let shortenString = orignalString.replace('Percentage:', 'Pct.:')
+        console.log(shortenString)
+        this.chartdata.sourcesData.labels[0] = shortenString
+        this.renderChart(this.chartdata.sourcesData, this.options2)
+      } else {
+        this.renderChart(this.chartdata.sourcesData, this.options2)
+      }
     }
   }
 }
