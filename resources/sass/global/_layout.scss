@@ -13,7 +13,7 @@ html, body {
 
     //Prevent IOS Safari bottom menu bar interfering the UX
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 

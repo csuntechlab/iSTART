@@ -1,5 +1,5 @@
 <template>
-  <div class="module-info mb-5 col-12">
+  <div class="module-info col-12">
     <div class="row">
       <div class="col-12">
         <div class="row">

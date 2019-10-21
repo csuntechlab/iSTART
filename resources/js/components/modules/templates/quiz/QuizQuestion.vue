@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12">
+  <div>
     <div class="module-quiz__question">
       <p class="module-text__text" v-html="object.question"></p>
     </div>
