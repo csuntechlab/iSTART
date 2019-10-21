@@ -91,7 +91,6 @@ export default {
       if (getWindowWidth <= 350) {
         let orignalString = this.chartdata.sourcesData.labels[0]
         let shortenString = orignalString.replace('Percentage:', 'Pct.:')
-        console.log(shortenString)
         this.chartdata.sourcesData.labels[0] = shortenString
         this.renderChart(this.chartdata.sourcesData, this.options2)
       } else {
