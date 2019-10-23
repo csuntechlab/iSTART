@@ -2,11 +2,7 @@
 import { Pie } from 'vue-chartjs'
 export default {
   extends: Pie,
-  props: [
-    'response',
-    'chartId',
-    'sources'
-  ],
+  props: ['response', 'chartId', 'sources'],
   data () {
     return {
       chartdata: {
@@ -15,10 +11,7 @@ export default {
           datasets: [
             {
               label: 'Data One',
-              backgroundColor: [
-                '#B999FF',
-                '#DEDEDE'
-              ],
+              backgroundColor: ['#B999FF', '#DEDEDE'],
               data: [this.response, 100 - this.response]
             }
           ]
@@ -28,10 +21,7 @@ export default {
           datasets: [
             {
               label: 'Data One',
-              backgroundColor: [
-                '#5CBBE4',
-                '#DEDEDE'
-              ],
+              backgroundColor: ['#5CBBE4', '#DEDEDE'],
               data: [this.sources, 100 - this.sources]
             }
           ]
@@ -39,7 +29,6 @@ export default {
       },
       options1: {
         tooltips: {
-          enabled: true,
           callbacks: {
             label: function (tooltipItem, data) {
               if (tooltipItem.index === 0) {
@@ -51,10 +40,17 @@ export default {
           }
         },
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         title: {
           display: false,
           text: this.question
+        },
+        legend: {
+          fullWidth: true,
+          labels: {
+            boxWidth: 10,
+            fontFamily: "'Roboto', 'Arial', sans-serif"
+          }
         }
       },
       options2: {
@@ -71,10 +67,17 @@ export default {
           }
         },
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         title: {
           display: false,
           text: this.question
+        },
+        legend: {
+          fullWidth: false,
+          labels: {
+            boxWidth: 10,
+            fontFamily: "'Roboto', 'Arial', sans-serif"
+          }
         }
       }
     }
@@ -84,7 +87,15 @@ export default {
       this.renderChart(this.chartdata.userData, this.options1)
     }
     if (this.chartId === 'two') {
-      this.renderChart(this.chartdata.sourcesData, this.options2)
+      let getWindowWidth = window.innerWidth
+      if (getWindowWidth <= 350) {
+        let orignalString = this.chartdata.sourcesData.labels[0]
+        let shortenString = orignalString.replace('Percentage:', 'Pct.:')
+        this.chartdata.sourcesData.labels[0] = shortenString
+        this.renderChart(this.chartdata.sourcesData, this.options2)
+      } else {
+        this.renderChart(this.chartdata.sourcesData, this.options2)
+      }
     }
   }
 }
