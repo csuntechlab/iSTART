@@ -12469,14 +12469,14 @@ body {
 .module-text__text {
   color: #354A5C;
   font-weight: normal;
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 767.98px) {
   .module-text__text {
-    font-size: .97rem;
+    font-size: 0.97rem;
   }
 }
 
@@ -12497,14 +12497,14 @@ body {
 .module-text__list {
   color: #354A5C;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 767.98px) {
   .module-text__list {
-    font-size: 0.9rem;
+    font-size: 0.97rem;
   }
 }
 

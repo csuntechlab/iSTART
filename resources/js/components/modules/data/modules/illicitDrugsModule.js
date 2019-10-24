@@ -337,7 +337,7 @@ export const illicitDrugsModuleSlides = {
       cards_flipped: false,
       paragraph: {
         0: 'Remember, regardless of how you use it, it\'s still cocaine! And if used with other drugs, like opioids or alcohol, the consequences can be very serious and even life-threatening.',
-        1: 'Flip the cards below to learn about the side effects of cocaine use.'
+        1: '<b>Flip the cards below</b> to learn the side effects from different uses of cocaine.'
       },
       cards: {
         0: {
@@ -360,6 +360,21 @@ export const illicitDrugsModuleSlides = {
           show: false,
           front: {
             img: {
+              src: 'images/illicitDrugsModule/ill_s13_04.png',
+              alt: 'snorting',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
+          }
+        },
+        2: {
+          was_flipped: false,
+          show: false,
+          front: {
+            img: {
               src: 'images/illicitDrugsModule/ill_s13_02.png',
               alt: 'consuming',
               caption: null
@@ -370,7 +385,7 @@ export const illicitDrugsModuleSlides = {
             description: 'By mouth: severe bowel decay from reduced blood flow.'
           }
         },
-        2: {
+        3: {
           was_flipped: false,
           show: false,
           front: {
@@ -383,21 +398,6 @@ export const illicitDrugsModuleSlides = {
           },
           back: {
             description: 'Needle injection: higher risk for HIV, Hep-C, and other blood diseases, & scarring or collapsed veins.'
-          }
-        },
-        3: {
-          was_flipped: false,
-          show: false,
-          front: {
-            img: {
-              src: 'images/illicitDrugsModule/ill_s13_04.png',
-              alt: 'snorting',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
           }
         }
       }
@@ -723,7 +723,7 @@ export const illicitDrugsModuleSlides = {
         paragraph: {
           0: 'These last few weeks we\'ve introduced many suggestions on how to take care of yourself through mind, body and social connections!',
           1: 'Now is the time to create healthy habits, think about the future, and the resources that can help you get there!',
-          2: 'In the app menu, and on our iSTART website, check out the resources CSUN and the community offer.'
+          2: 'In the App menu, and on our iSTART website, check out the resources CSUN and the community offer.'
         }
       },
       1: {

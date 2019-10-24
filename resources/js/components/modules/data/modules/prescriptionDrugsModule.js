@@ -1002,7 +1002,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: '6-8 week MBSR courses are offered online (free and for pay), as well as at UCLA, in the Valley, and by Cedars-Sinai.<br>See the resources!'
+            description: '6-8 week MBSR courses are offered online (free and for pay), as well as at UCLA, in the Valley, and by Cedars-Sinai.<br>See the resources in the App menu.'
           }
         }
       }
