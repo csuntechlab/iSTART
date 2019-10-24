@@ -411,7 +411,7 @@ export const alcoholModuleSlides = {
             andResponse: '',
             isAndMet: false,
             orAll: true,
-            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes.<br> To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much I drink; never drink and drive; or get help from a counselor at CSUN (<i>see resources</i>).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes. To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much you drink; never drink and drive; or get help from a counselor at CSUN (see resources in App menu).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
             isOrMet: false
           },
           no: {
@@ -463,7 +463,7 @@ export const alcoholModuleSlides = {
             question: null
           },
           back: {
-            description: 'For gals: 1 < drinks per day.<br> For guys: 2 < drinks per day.'
+            description: 'For gals: <1 drink per day.<br> For guys: <2 drinks per day.'
           }
         },
         1: {
@@ -646,14 +646,15 @@ export const alcoholModuleSlides = {
     slide_type: 'cardFlip',
     header: {
       header: 'Don\'t become a statistic!',
-      sub_header: 'Flip the cards below to find out some statistics about alcohol use on college campuses.',
+      sub_header: null,
       tooltip: 'Flip all to proceed to the next slide'
     },
     content: {
       card_break: false,
       cards_flipped: false,
       paragraph: {
-        0: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
+        0: 'Flip the cards below to find out some statistics about alcohol use on college campuses.',
+        1: 'Drinking irresponsibly can negatively affect your health, your relationships, your academic performance, and your future.'
       },
       cards: {
         0: {
@@ -968,7 +969,7 @@ export const alcoholModuleSlides = {
       3: {
         paragraph: {
           0: '<b>Remember...YOU are in control!</b>',
-          1: 'For more help and information regarding this topic, please see the resource in the App menu.'
+          1: 'For more help and information regarding this topic, please see the resources in the App menu.'
         }
       }
     }

@@ -2,7 +2,7 @@
   <div class="multi-quiz">
     <div class="multi-quiz__question-container" v-for="(questionsElement, questionsIndex) in quiz.questions" :key="`${questionsIndex}`">
       <div v-if="questionsElement.show">
-        <div class="multi-quiz__question module-text__question">{{ questionsElement.question }}</div>
+        <div class="multi-quiz__question module-text__question">{{(parseInt(questionsIndex) + 1)}}. {{ questionsElement.question }}</div>
         <div class="multi-quiz-container">
           <div class="multi-quiz__input-container col-12 col-sm-6" v-for="(inputElement, inputIndex) in questionsElement.input" :key="`${inputIndex}`">
             <div @click="processInput(quizIndex, questionsIndex, inputIndex, inputElement.redirect)" :class="[(inputElement.selected ? 'active' : ''), 'multi-quiz__input module-text__text interactable-container']">

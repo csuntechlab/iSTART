@@ -12482,8 +12482,8 @@ body {
 
 .module-text__question {
   color: #354A5C;
-  font-weight: bold;
-  font-size: 1.20rem;
+  font-weight: normal;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }

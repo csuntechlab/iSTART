@@ -24,17 +24,17 @@
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
         </template>
-        <ul>
-          <li v-html="currentSlideData.header.results.case.yes.andResponse" v-if="(currentSlideData.header.results.case.yes.andAll === true) && (currentSlideData.header.results.case.yes.isAndMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.no.andResponse" v-else-if="(currentSlideData.header.results.case.no.andAll === true) && (currentSlideData.header.results.case.no.isAndMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.yes.orResponse" v-else-if="(currentSlideData.header.results.case.yes.orAll === true) && (currentSlideData.header.results.case.yes.isOrMet === true)"></li>
-          <li v-html="currentSlideData.header.results.case.no.orResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></li>
+        <section>
+          <div v-html="currentSlideData.header.results.case.yes.andResponse" v-if="(currentSlideData.header.results.case.yes.andAll === true) && (currentSlideData.header.results.case.yes.isAndMet === true)"></div>
+          <div v-html="currentSlideData.header.results.case.no.andResponse" v-else-if="(currentSlideData.header.results.case.no.andAll === true) && (currentSlideData.header.results.case.no.isAndMet === true)"></div>
+          <div v-html="currentSlideData.header.results.case.yes.orResponse" v-else-if="(currentSlideData.header.results.case.yes.orAll === true) && (currentSlideData.header.results.case.yes.isOrMet === true)"></div>
+          <div v-html="currentSlideData.header.results.case.no.orResponse" v-else-if="(currentSlideData.header.results.case.no.orAll === true) && (currentSlideData.header.results.case.no.isOrMet === true)"></div>
           <div v-else>
             <div class="module-text__list" v-for="(item, id) in currentSlideData.header.results.responses" :key="id">
-              <li v-if="(item.response !== null) && (item.response.length !== 0)" v-html="item.response"></li>
+              <div v-if="(item.response !== null) && (item.response.length !== 0)" v-html="item.response"></div>
             </div>
           </div>
-        </ul>
+        </section>
       </div>
     </div>
   </div>

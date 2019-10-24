@@ -230,7 +230,7 @@ export const marijuanaModuleSlides = {
     header: {
       header: 'Samuel\'s Story',
       sub_header: null,
-      tooltip: 'Wait 5 seconds to proceed to the next slide'
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
       images: {
