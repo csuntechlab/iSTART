@@ -1183,8 +1183,9 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+          0: 'Thanks for completing this module.',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.',
+          2: 'You will receive an email with a $15 Amazon.com gift card within the next couple of days.'
         }
       }
     }

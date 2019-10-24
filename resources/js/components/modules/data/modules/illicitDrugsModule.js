@@ -744,9 +744,9 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thanks for following along so far!',
-          1: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
-          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.'
+          0: 'Thank you for having completed all of the module in this web-app. Now we will ask you to complete a short Exit survey (in SurveyMonkey) in order to receive your $25 Amazon.com gift card.',
+          1: 'To do this instantly, you can access it here: REPLACE-WITH-LINK-TO-SURVEY-MONKEY (it will also be sent to your email).',
+          2: 'Within a few days of completing the exit survey, you will receive your gift card via email.'
         }
       }
     }

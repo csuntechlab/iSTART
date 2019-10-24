@@ -1273,8 +1273,9 @@ export const alcoholModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+          0: 'Thanks for completing this module.',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.',
+          2: 'After you complete the next module, you will receive a $15 Amazon.com gift card via email.'
         }
       }
     }
