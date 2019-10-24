@@ -226,32 +226,108 @@ export const marijuanaModuleSlides = {
   },
   // slide 9
   7: {
-    slide_type: 'info',
+    slide_type: 'quiz',
     header: {
       header: 'Samuel\'s Story',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
-      0: {
-        image: {
+      images: {
+        0: {
           src: 'images/marijuanaModule/mar_s09_01.jpg',
-          alt: 'edible brownies'
+          alt: 'edible brownies',
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
-      1: {
-        paragraph: {
-          0: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which of the following should Sam consider?'
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which of the following should Sam consider?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'He\'s already had 2 beers, so mixing beer and edibles can cause more harmful effects.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'He doesn\'t know how much THC is in the homemade edibles, and could be ingesting higher amounts causing harmful effects.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'If he eats the brownie, it could take up to two hours to feel the effects, causing him to drive home high.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'He\'s never had edibles before, and doesn\'t know how his body will respond.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            4: {
+              isAnswer: true,
+              show: false,
+              text: 'All of the above',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re right!</b> Sam should consider all of these statements in this situation!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
         }
-      },
-      2: {
-        list_element: [
-          'He\'s already had 2 beers, so mixing beer and edibles can cause more harmful effects.',
-          'He doesn\'t know how much THC is in the homemade edibles, and could be ingesting higher amounts causing harmful effects.',
-          'If he eats the brownie, it could take up to two hours to feel the effects, causing him to drive home high.',
-          'He\'s never had edibles before, and doesn\'t know how his body will respond.',
-          '<span class="text-success font-weight-bold">All of the above</span>'
-        ]
       }
     }
   },
