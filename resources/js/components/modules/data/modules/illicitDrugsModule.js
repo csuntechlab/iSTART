@@ -230,13 +230,21 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'In order to avoid synthetic cannabis, you can look for these signs:',
-          1: 'Unlike real cannabis, synthetic cannabis is usually made out of a mix of different plants.',
-          2: 'If you think it smells strange, like strong chemicals, don\'t use it!',
-          3: 'They are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
+          0: 'To help avoid synthetic cannabis, look for these signs:'
         }
       },
       1: {
+        list_element: [
+          'Unlike real cannabis, synthetic cannabis is usually made out of a mix of different plants.',
+          'If you think it smells strange, like strong chemicals, don\'t use it!'
+        ]
+      },
+      2: {
+        paragraph: {
+          0: 'They are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
+        }
+      },
+      3: {
         image: {
           src: 'images/illicitDrugsModule/ill_s10_01.jpg',
           alt: 'spice cannabis'
