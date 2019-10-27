@@ -226,32 +226,108 @@ export const marijuanaModuleSlides = {
   },
   // slide 9
   7: {
-    slide_type: 'info',
+    slide_type: 'quiz',
     header: {
       header: 'Samuel\'s Story',
       sub_header: null,
-      tooltip: 'Wait 5 seconds to proceed to the next slide'
+      tooltip: 'Select an answer to proceed to the next slide'
     },
     content: {
-      0: {
-        image: {
+      images: {
+        0: {
           src: 'images/marijuanaModule/mar_s09_01.jpg',
-          alt: 'edible brownies'
+          alt: 'edible brownies',
+          size: '7/12',
+          tablet_size: '1/2'
         }
       },
-      1: {
-        paragraph: {
-          0: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which of the following should Sam consider?'
+      questions: {
+        0: {
+          showResponse: false,
+          question: 'Over the weekend, Sam goes to a party to hang out with some friends. He has a couple beers and then is offered a homemade brownie that is infused with marijuana. Which of the following should Sam consider?',
+          options: {
+            0: {
+              isAnswer: false,
+              show: false,
+              text: 'He\'s already had 2 beers, so mixing beer and edibles can cause more harmful effects.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            1: {
+              isAnswer: false,
+              show: false,
+              text: 'He doesn\'t know how much THC is in the homemade edibles, and could be ingesting higher amounts causing harmful effects.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            2: {
+              isAnswer: false,
+              show: false,
+              text: 'If he eats the brownie, it could take up to two hours to feel the effects, causing him to drive home high.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            3: {
+              isAnswer: false,
+              show: false,
+              text: 'He\'s never had edibles before, and doesn\'t know how his body will respond.',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>True,</b> however Sam should take ALL of the statements into consideration!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            },
+            4: {
+              isAnswer: true,
+              show: false,
+              text: 'All of the above',
+              img: {
+                src: null,
+                alt: null
+              },
+              response: {
+                text: '<b>You\'re right!</b> Sam should consider all of these statements in this situation!',
+                img: {
+                  src: null,
+                  alt: null
+                }
+              }
+            }
+          }
         }
-      },
-      2: {
-        list_element: [
-          'He\'s already had 2 beers, so mixing beer and edibles can cause more harmful effects.',
-          'He doesn\'t know how much THC is in the homemade edibles, and could be ingesting higher amounts causing harmful effects.',
-          'If he eats the brownie, it could take up to two hours to feel the effects, causing him to drive home high.',
-          'He\'s never had edibles before, and doesn\'t know how his body will respond.',
-          '<span class="text-success font-weight-bold">All of the above</span>'
-        ]
       }
     }
   },
@@ -268,7 +344,7 @@ export const marijuanaModuleSlides = {
         paragraph: {
           0: 'Johns Hopkins University reports that vaping versus smoking marijuana delivers a more powerful punch.',
           1: 'Vaping is like taking big swigs of liquor compared to small sips of beer. Those who vape often don\'t realize how much marijuana they\'re inhaling.',
-          2: 'In other words, vaping may lead to overuse of marijuana, and possibly serious side effects.'
+          2: 'Recent news states that marijuana vaping has been linked to lung injury cases and death. As of October 2019, nearly 1,500 people have been diagnosed with vaping-related lung injury, and over 30 have died. Stay informed!'
         }
       },
       1: {
@@ -419,7 +495,7 @@ export const marijuanaModuleSlides = {
             andResponse: 'You are acknowledging to yourself that a healthy change action plan can prevent long-term challenges and problems from continuing your current pattern of marijuana use.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan and other resources available on campus to assist you on your path towards a healthier lifestyle.',
             isAndMet: false,
             orAll: true,
-            orResponse: 'Your instincts are likely suggesting that you would benefit from making a change in your use of marijuana.<br> As you continue this module you will find alternatives to marijuana use, goals for an action plan, and other resources available on campus to assist you on your path towards health.',
+            orResponse: 'Your instincts are likely suggesting that you would benefit from making a change in your use of marijuana.<br><br> As you continue this module you will find alternatives to marijuana use, goals for an action plan, and other resources available on campus to assist you on your path towards health.',
             isOrMet: false
           },
           no: {
@@ -911,7 +987,7 @@ export const marijuanaModuleSlides = {
       },
       3: {
         paragraph: {
-          0: 'For more information about refusal skills, please see the resources in the web app menu.'
+          0: 'For more information about refusal skills, please see the resources in the App menu.'
         }
       }
     }
@@ -1052,7 +1128,7 @@ export const marijuanaModuleSlides = {
       2: {
         paragraph: {
           0: '<b>Meditate</b>: have you tried loving-kindness (Metta) meditation? It increases feelings of compassion and activates dopamine. Get your Metta on!',
-          1: 'Check it out in the resources page.'
+          1: 'Check it out in the resources App menu.'
         }
       },
       3: {
@@ -1087,7 +1163,7 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'If you are worried about your own marijuana use, or someone else\'s, you can find different resources and contact info in the app menu!'
+          0: 'If you are worried about your own marijuana use, or someone else\'s, you can find different resources and contact info in the App menu!'
         }
       },
       1: {
@@ -1107,8 +1183,9 @@ export const marijuanaModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+          0: 'Thanks for completing this module.',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.',
+          2: 'You will receive an email with a $15 Amazon.com gift card within the next couple of days.'
         }
       }
     }

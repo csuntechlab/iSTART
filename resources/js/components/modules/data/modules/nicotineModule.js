@@ -123,7 +123,7 @@ export const nicotineModuleSlides = {
   4: {
     slide_type: 'info',
     header: {
-      header: 'What other ingredients are there in cigarettes?',
+      header: 'What other ingredients are in cigarettes?',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
@@ -242,7 +242,7 @@ export const nicotineModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Correct,</b> Hookah contains 36x mor tar, and 15x more carbon monoxide than cigarettes. Ouch!',
+                text: '<b>Correct,</b> Hookah contains 36x more tar, and 15x more carbon monoxide than cigarettes. Ouch!',
                 img: {
                   src: null,
                   alt: null
@@ -645,9 +645,8 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'College students often assume that the majority of their peers smoke or vape.',
-          1: 'Only 7% of students reported vaping in the last month.',
-          2: 'Don\'t be misled—these types of assumptions often lead students to smoke or vape in an attempt to fit in with their peers.'
+          0: 'College students often assume that the majority of their peers smoke or vape; but only 7% of students reported vaping in the last month.',
+          1: 'Don\'t be misled—these types of assumptions often lead students to smoke or vape in an attempt to fit in with their peers.'
         }
       },
       1: {
@@ -697,7 +696,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'The best judge of whether <b>you</b> are challenged by tobacco/nicotine use is <b>you</b>.',
+          0: 'The best judge of whether you are challenged by tobacco/nicotine use is you.',
           1: 'Your answers to the following questions will provide you with the best path for you.'
         }
       },
@@ -857,7 +856,7 @@ export const nicotineModuleSlides = {
         paragraph: {
           0: 'Nicotine can have serious effects on brain development up until age 25.',
           1: '<b>Listen to this audio clip.</b>',
-          2: '<a target="_blank" href="https://e-cigarettes.surgeongeneral.gov/media/osh-surgeon-generals-e-cigarette-radio-psa.mp3">Click here to listen to audio clip</a>'
+          2: '<audio class="w-100" controls><source src="https://e-cigarettes.surgeongeneral.gov/media/osh-surgeon-generals-e-cigarette-radio-psa.mp3" type="audio/mp3">You\'re browser does not support an audio player.</audio>'
         }
       },
       1: {
@@ -1340,7 +1339,7 @@ export const nicotineModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more info in the resources.'
+          0: 'If you feel like talking to a professional, you can contact University Counseling Services to request an appointment. See more resources in the App menu.'
         }
       }
     }
@@ -1403,7 +1402,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'If you are concerned about your own, or someone else\'s tobacco or nicotine use, you can find many resources for quitting in the app menu!'
+          0: 'If you are concerned about your own, or someone else\'s tobacco or nicotine use, you can find many resources for quitting in the App menu!'
         }
       },
       1: {
@@ -1424,8 +1423,9 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days. You will receive another gift card after you complete the next module!'
+          0: 'Thanks for completing this module.',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.',
+          2: 'After you complete the next module, you will receive a $15 Amazon.com gift card via email.'
         }
       }
     }

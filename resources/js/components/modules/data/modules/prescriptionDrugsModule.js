@@ -347,7 +347,7 @@ export const prescriptionDrugsModuleSlides = {
       questions: {
         0: {
           showResponse: false,
-          question: 'Which of the following is NOT an effect of anti-anxiety/sedative abuse?',
+          question: 'All of the following are symptoms of anti-anxiety/sedative abuse, EXCEPT?',
           options: {
             0: {
               isAnswer: false,
@@ -495,7 +495,7 @@ export const prescriptionDrugsModuleSlides = {
                 0: {
                   selected: false,
                   label: 'Yes',
-                  result: 'Your answer suggests you know you need to strengthen your self-confidence socially, athletically and/or academically.<br> Look for suggestions in the remainder of this module that can effectively strengthen your self-esteem and self-confidence.'
+                  result: 'Your responses indicate that you know you need healthy alternatives to reduce stress and anxiety. This module offers alternatives that can help you take steps to achieving this goal.'
                 },
                 1: {
                   selected: false,
@@ -577,7 +577,7 @@ export const prescriptionDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> The most commonly combined and consistently deadly substance is alcohol.',
+                text: '<b>Nice try!</b> Mixing any drugs can be super dangerous, but alcohol is the most commonly combined and consistently deadly substance when mixed with Xanax.',
                 img: {
                   src: null,
                   alt: null
@@ -593,7 +593,7 @@ export const prescriptionDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> The most commonly combined and consistently deadly substance is alcohol.',
+                text: '<b>Nice try!</b> Mixing any drugs can be super dangerous, but alcohol is the most commonly combined and consistently deadly substance when mixed with Xanax.',
                 img: {
                   src: null,
                   alt: null
@@ -609,7 +609,7 @@ export const prescriptionDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> The most commonly combined and consistently deadly substance is alcohol.',
+                text: '<b>Nice try!</b> Mixing any drugs can be super dangerous, but alcohol is the most commonly combined and consistently deadly substance when mixed with Xanax.',
                 img: {
                   src: null,
                   alt: null
@@ -641,7 +641,7 @@ export const prescriptionDrugsModuleSlides = {
                 alt: null
               },
               response: {
-                text: '<b>Nice try!</b> The most commonly combined and consistently deadly substance is alcohol.',
+                text: '<b>Nice try!</b> Mixing any drugs can be super dangerous, but alcohol is the most commonly combined and consistently deadly substance when mixed with Xanax.',
                 img: {
                   src: null,
                   alt: null
@@ -701,7 +701,7 @@ export const prescriptionDrugsModuleSlides = {
       2: {
         paragraph: {
           0: 'Did you know CSUN has a Learning Resource Center with FREE workshops, labs and online tutoring?',
-          1: 'See the resources in the app menu.'
+          1: 'See the resources in the Aspp menu.'
         }
       }
     }
@@ -795,8 +795,8 @@ export const prescriptionDrugsModuleSlides = {
       card_break: false,
       cards_flipped: false,
       paragraph: {
-        0: 'You might be offered RX drugs by friends at parties, or while studying. Even by loving family members if you are in pain or distressed. Your doctor might offer them without providing enough information, or discussing alternatives with you. Feel empowered to ask questions!',
-        1: 'What if someone wants to use YOUR Rx meds? ​Tell them: ',
+        0: 'You might be offered Rx drugs by friends or family. Feel empowered to politely decline! Also, don’t be afraid to ask your doctor questions about medication alternatives.',
+        1: 'What if someone wants to use YOUR Rx meds? ​Tell them...',
         2: '<ul><li>"I can\'t get it refilled easily, and I won\'t be able to stay healthy if I run out​."</li><li>"I\'m on my parents\' insurance, they\'ll wonder why I need to refill it earlier than normal."</li></ul>',
         3: '<b>Flip the cards</b> for ways to say "NO" or "HOLD ON".'
       },
@@ -882,7 +882,7 @@ export const prescriptionDrugsModuleSlides = {
       },
       1: {
         list_element: [
-          'A combination of acetaminophen (Tylenol) and ibuprofen',
+          'A combination of Tylenol and Ibuprofen',
           'Naproxen (Aleve)',
           'Physical Therapy',
           'Exercise',
@@ -927,7 +927,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Even a short walk can increase focus! Take a brisk walk as a study break. Or join CSUN Walkability Wednesdays for free.  See the resources.'
+            description: 'Even a short walk can increase focus! Take a brisk walk as a study break. Or join CSUN Walkability Wednesdays for free. See the resources in the App menu.'
           }
         },
         1: {
@@ -942,7 +942,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: 'Even mild dehydration can hurt your attention and concentration, so drink plenty of water! Check out the water refill station map in the resources.'
+            description: 'Even mild dehydration can hurt your attention and concentration, so drink plenty of water! Check out the water refill station map in the resources in the App menu.'
           }
         }
       }
@@ -962,7 +962,7 @@ export const prescriptionDrugsModuleSlides = {
           0: 'If you\'re in relationships with friends who promote unhealthy behaviors, reach out to others who are supportive and encourage a healthy lifestyle.',
           1: 'Or, if you\'re caught up in the stress of your own life, broaden your perspective by volunteering! It helps to do something meaningful for others.',
           2: '<b>Unified We Serve</b>, is a volunteer program at CSUN that serves the CSUN and surrounding community.',
-          3: 'Curious? Find the link in the resources.'
+          3: 'Curious? Find the link in the resources in the App menu.'
         }
       },
       1: {
@@ -1002,7 +1002,7 @@ export const prescriptionDrugsModuleSlides = {
             question: null
           },
           back: {
-            description: '6-8 week MBSR courses are offered online (free and for pay), as well as at UCLA, in the Valley, and by Cedars-Sinai.<br>See the resources!'
+            description: '6-8 week MBSR courses are offered online (free and for pay), as well as at UCLA, in the Valley, and by Cedars-Sinai.<br>See the resources in the App menu.'
           }
         }
       }
@@ -1028,8 +1028,9 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for completing this module! You will receive another gift card via email within the next few days!',
-          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.'
+          0: 'Thanks for completing this module.',
+          1: 'You will receive an email notification from iSTART when the next module becomes available in 5 days.',
+          2: 'You will receive an email with a $15 Amazon.com gift card within the next couple of days.'
         }
       }
     }

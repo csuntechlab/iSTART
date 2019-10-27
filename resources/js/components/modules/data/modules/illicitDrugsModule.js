@@ -230,13 +230,21 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'In order to avoid synthetic cannabis, you can look for these signs:',
-          1: 'Unlike real cannabis, synthetic cannabis is usually made out of a mix of different plants.',
-          2: 'If you think it smells strange, like strong chemicals, don\'t use it!',
-          3: 'They are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
+          0: 'To help avoid synthetic cannabis, look for these signs:'
         }
       },
       1: {
+        list_element: [
+          'Unlike real cannabis, synthetic cannabis is usually made out of a mix of different plants.',
+          'If you think it smells strange, like strong chemicals, don\'t use it!'
+        ]
+      },
+      2: {
+        paragraph: {
+          0: 'They are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
+        }
+      },
+      3: {
         image: {
           src: 'images/illicitDrugsModule/ill_s10_01.jpg',
           alt: 'spice cannabis'
@@ -337,7 +345,7 @@ export const illicitDrugsModuleSlides = {
       cards_flipped: false,
       paragraph: {
         0: 'Remember, regardless of how you use it, it\'s still cocaine! And if used with other drugs, like opioids or alcohol, the consequences can be very serious and even life-threatening.',
-        1: 'Flip the cards below to learn about the side effects of cocaine use.'
+        1: '<b>Flip the cards below</b> to learn the side effects from different uses of cocaine.'
       },
       cards: {
         0: {
@@ -360,6 +368,21 @@ export const illicitDrugsModuleSlides = {
           show: false,
           front: {
             img: {
+              src: 'images/illicitDrugsModule/ill_s13_04.png',
+              alt: 'snorting',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
+          }
+        },
+        2: {
+          was_flipped: false,
+          show: false,
+          front: {
+            img: {
               src: 'images/illicitDrugsModule/ill_s13_02.png',
               alt: 'consuming',
               caption: null
@@ -370,7 +393,7 @@ export const illicitDrugsModuleSlides = {
             description: 'By mouth: severe bowel decay from reduced blood flow.'
           }
         },
-        2: {
+        3: {
           was_flipped: false,
           show: false,
           front: {
@@ -383,21 +406,6 @@ export const illicitDrugsModuleSlides = {
           },
           back: {
             description: 'Needle injection: higher risk for HIV, Hep-C, and other blood diseases, & scarring or collapsed veins.'
-          }
-        },
-        3: {
-          was_flipped: false,
-          show: false,
-          front: {
-            img: {
-              src: 'images/illicitDrugsModule/ill_s13_04.png',
-              alt: 'snorting',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
           }
         }
       }
@@ -723,7 +731,7 @@ export const illicitDrugsModuleSlides = {
         paragraph: {
           0: 'These last few weeks we\'ve introduced many suggestions on how to take care of yourself through mind, body and social connections!',
           1: 'Now is the time to create healthy habits, think about the future, and the resources that can help you get there!',
-          2: 'In the app menu, and on our iSTART website, check out the resources CSUN and the community offer.'
+          2: 'In the App menu, and on our iSTART website, check out the resources CSUN and the community offer.'
         }
       },
       1: {
@@ -744,9 +752,9 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thanks for following along so far!',
-          1: 'If you or someone you know needs help with substances, please visit our resources link in the app and the iSTART website. You can find free hotline numbers, links to counseling services, as well as more facts and information.',
-          2: 'Asking for help is one of the bravest things you can do! You are strong and not alone.'
+          0: 'Thank you for having completed all of the module in this web-app. Now we will ask you to complete a short Exit survey (in SurveyMonkey) in order to receive your $25 Amazon.com gift card.',
+          1: 'To do this instantly, you can access it here: REPLACE-WITH-LINK-TO-SURVEY-MONKEY (it will also be sent to your email).',
+          2: 'Within a few days of completing the exit survey, you will receive your gift card via email.'
         }
       }
     }
