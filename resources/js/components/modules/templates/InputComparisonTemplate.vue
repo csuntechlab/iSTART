@@ -8,7 +8,7 @@
           <p class="module-quizInput__validate--green module-quizInput__validate">Please enter your response using numerical values 0 to 100.</p>
         </div>
         <div class="col-12">
-          <form action="">
+          <form onsubmit="return false">
             <ol class="module-module-quizInput__form row" novalidate="true">
               <input-response v-for="(element, index) in currentSlideData.content.questions"
                 :key="index"
