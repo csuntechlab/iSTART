@@ -13053,6 +13053,7 @@ body {
   max-width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
+  max-height: 12rem;
 }
 
 .module-quiz__response {
