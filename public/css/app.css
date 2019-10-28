@@ -11851,6 +11851,7 @@ body {
 
 .navbar__link:hover {
   color: white;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -11863,10 +11864,12 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 0.9rem;
+  height: 1.25rem;
 }
 
 @media (max-width: 767.98px) {
   .navbar__item {
+    height: auto;
     width: 100%;
     text-align: left;
   }
@@ -13047,7 +13050,7 @@ body {
 }
 
 .module-quiz__option-content img {
-  max-width: 100%;
+  max-width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
 }
