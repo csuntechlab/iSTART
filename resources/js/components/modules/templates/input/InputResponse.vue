@@ -2,7 +2,7 @@
   <li class="pb-4 col-12">
       <p class="module-text__text"> {{ question }}</p>
       <label class="d-none" :for="'response_' + questionIndex">Input a percentage for {{ question }}</label>
-      <input :id="'response_' + questionIndex" name="response" v-model="response" type="text" v-if="needInputLabel === true" @keyup="validateInput($event); validateForm($event)" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
+      <input :id="'response_' + questionIndex" name="response" v-model="response" type="text" v-if="needInputLabel === true" @keyup="validateInput($event); validateForm($event, questionIndex)" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
       <em class="module-quizInput__validate module-quizInput__validate--red" v-if="isInputValid === false"> Your response must range from: 0 - 100</em>
   </li>
 </template>
@@ -112,9 +112,9 @@ export default {
       }
     },
 
-    validateForm ($event) {
+    validateForm ($event, index) {
       // Check if all inputs have been filled before checking question data
-      if (parseInt(Object.keys(this.responseFromState).length) === parseInt(this.questionLength)) {
+      if (index === parseInt(this.questionLength)) {
         for (let i = 0; i < this.questionLength; ++i) {
           if (this.responseFromState[i].valid === true) {
             this.enableContinue()
