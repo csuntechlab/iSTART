@@ -10,11 +10,11 @@
       </div>
       <div class="col-12 col-lg-8">
         <p class="introSlide__description">
-          <strong>Goal: </strong>
+          <strong v-if="currentSlideData.content.goal !== null">Goal: </strong>
           {{currentSlideData.content.goal}}
         </p>
         <p class="introSlide__description">
-          <strong>Definition: </strong>
+          <strong v-if="currentSlideData.content.definition !== null">Definition: </strong>
           {{currentSlideData.content.definition}}
         </p>
         <p class="introSlide__description">Estimated Completion time: {{currentSlideData.content.estimated_completion}}</p>
