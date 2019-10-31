@@ -83,6 +83,23 @@ export const moduleData = {
       current_slide: 0,
       latest_slide: 0
     }
+  },
+  5: {
+    name: 'Comparison',
+    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
+    thumbnail: {
+      src: 'images/thumbnail/comparison-module_thumbnail.jpg',
+      alt: 'Comparison Module'
+    },
+    progress: {
+      completion_status: 'Start',
+      completion_date: '00/00/00',
+      is_complete: false,
+      is_incomplete: false,
+      slide_percentage: 0,
+      current_slide: 0,
+      latest_slide: 0
+    }
   }
 }
 export default moduleData

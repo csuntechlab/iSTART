@@ -32,6 +32,7 @@ import nicotineModuleSlides from './../components/modules/data/modules/nicotineM
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
 import illicitDrugsSlides from './../components/modules/data/modules/illicitDrugsModule'
 import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
+import comparisonModuleSlides from './../components/modules/data/modules/comparisonModule'
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
@@ -96,6 +97,9 @@ export default {
       this.setSlideContentVisibility(true)
     } else if (currentModule === 'Prescription Drugs') {
       this.storeJSONInState(precriptionDrugsSlides)
+      this.setSlideContentVisibility(true)
+    } else if (currentModule === 'Comparison') {
+      this.storeJSONInState(comparisonModuleSlides)
       this.setSlideContentVisibility(true)
     } else {
       this.$router.push({ name: 'Dashboard' })

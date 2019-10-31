@@ -1,5 +1,3 @@
-import { connectableObservableDescriptor } from "rxjs/internal/observable/ConnectableObservable"
-
 export default {
   SET_MODULE_DATA (state, payload) {
     state.moduleData = payload
