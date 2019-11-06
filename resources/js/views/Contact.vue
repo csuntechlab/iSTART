@@ -11,7 +11,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="contact-page__text">Do you have urgent substance-use related questions? You can call theSAMHSA 24/7 hotline:xxx.</p>
+                            <p class="contact-page__text">Do you have urgent substance-use related questions? You can call the <abbr title="Substance Abuse and Mental Health Services Administration">SAMHSA</abbr> 24/7 hotline:xxx.</p>
                             <p class="contact-page__text">If you have <strong>non-urgent</strong> substance-related questions, you can email our Tarzana Treatment Centers counselor confidentially (Use iSTART as subject line): xxxxxxxx</p>
                             <p class="contact-page__text">For non-urgent participation questions: <a href="mailto: iSTART@csun.edu">iSTART@csun.edu</a> or</p>
                             <p class="contact-page__text">For Technical Assistance if you experience problems with the web-app: xxxx</p>
