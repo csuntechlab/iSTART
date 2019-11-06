@@ -14,17 +14,17 @@
       </router-link>
     </li>
     <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
+      <router-link v-show="!isAdminUser" to="/about" class="navbar__link">
         About
       </router-link>
     </li>
     <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
+      <router-link v-show="!isAdminUser" to="/resources" class="navbar__link">
         Resources
       </router-link>
     </li>
     <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/schedule" class="navbar__link">
+      <router-link v-show="!isAdminUser" to="/contact" class="navbar__link">
         Contact Us
       </router-link>
     </li>

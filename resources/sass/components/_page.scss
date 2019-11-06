@@ -17,3 +17,28 @@
     }
   }
 }
+
+.about-page, .resource-page, .contact-page{
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 0;
+  background: $white;
+  &__content{
+    min-height: calc(100vh - 8.25rem);
+    @include media-breakpoint-down(sm) {
+      padding-top: 3rem;
+    }
+  }
+  &__wrapper{
+    @extend %content-wrapper-gutters;
+  }
+  &__header{
+    @extend %default-heading-style-on-white-with-margin;
+  }
+  &__text{
+    @extend %default-copy-text-style-on-white-with-margin;
+    abbr[title]{
+      text-decoration: none;
+    }
+  }
+}
