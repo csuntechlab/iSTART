@@ -11692,11 +11692,96 @@ body {
   background-color: 1px solid #CECECE;
 }
 
+.about-page__header,
+.resource-page__header,
+.contact-page__header {
+  color: #4A5D6E;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .about-page__header,
+  .resource-page__header,
+  .contact-page__header {
+    font-size: 1.8rem;
+  }
+}
+
+.module-text__list,
+.about-page__text,
+.resource-page__text,
+.contact-page__text,
+.module-text__text {
+  color: #354A5C;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 767.98px) {
+  .module-text__list,
+  .about-page__text,
+  .resource-page__text,
+  .contact-page__text,
+  .module-text__text {
+    font-size: 0.97rem;
+  }
+}
+
+.about-page__text,
+.resource-page__text,
+.contact-page__text,
+.module-text__text {
+  margin-bottom: 1rem;
+}
+
+.about-page__wrapper,
+.resource-page__wrapper,
+.contact-page__wrapper,
+.module__wrapper {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .about-page__wrapper,
+  .resource-page__wrapper,
+  .contact-page__wrapper,
+  .module__wrapper {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-page__wrapper,
+  .resource-page__wrapper,
+  .contact-page__wrapper,
+  .module__wrapper {
+    padding: 1rem 10rem;
+  }
+}
+
 /*
 	* What should I put in this file?
 	* This file should only contain css attributes with selectors and events in a global scope
 	* i.e. &--active, scrollbar, media queries, etc.
 */
+
+a {
+  color: #1F53B2;
+}
+
+a:hover {
+  color: #3771dc;
+}
 
 .pointer {
   cursor: pointer;
@@ -11758,6 +11843,7 @@ body {
   .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
     padding: 0;
   }
@@ -11852,6 +11938,7 @@ body {
 
 .navbar__link:hover {
   color: white;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -12395,28 +12482,6 @@ body {
   min-height: calc(100vh - 8.25rem);
 }
 
-.module__wrapper {
-  padding: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .module__wrapper {
-    padding: 1rem 3rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .module__wrapper {
-    padding: 1rem 10rem;
-  }
-}
-
 .module-content {
   overflow: auto;
   height: calc(100vh - 9rem);
@@ -12457,20 +12522,6 @@ body {
   }
 }
 
-.module-text__text {
-  color: #354A5C;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 767.98px) {
-  .module-text__text {
-    font-size: 0.97rem;
-  }
-}
-
 .module-text__question {
   color: #354A5C;
   font-weight: normal;
@@ -12482,20 +12533,6 @@ body {
 @media (max-width: 767.98px) {
   .module-text__question {
     font-size: 1.15rem;
-  }
-}
-
-.module-text__list {
-  color: #354A5C;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 767.98px) {
-  .module-text__list {
-    font-size: 0.97rem;
   }
 }
 
@@ -12677,6 +12714,35 @@ body {
 
 .page-description__info {
   font-size: 1.15rem;
+}
+
+.about-page,
+.resource-page,
+.contact-page {
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding: 0;
+  background: white;
+}
+
+.about-page__content,
+.resource-page__content,
+.contact-page__content {
+  min-height: calc(100vh - 8.25rem);
+}
+
+@media (max-width: 767.98px) {
+  .about-page__content,
+  .resource-page__content,
+  .contact-page__content {
+    padding-top: 3rem;
+  }
+}
+
+.about-page__text abbr[title],
+.resource-page__text abbr[title],
+.contact-page__text abbr[title] {
+  text-decoration: none;
 }
 
 .vue-progress-path .progress {

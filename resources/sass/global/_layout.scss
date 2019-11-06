@@ -36,3 +36,46 @@ body {
     background-color: 1px solid $border-color;
     // box-shadow: 0rem 1rem 1rem rgba(100, 100, 100, 0.3);
 }
+
+%default-heading-style-on-white-with-margin{
+    color: $heading-color;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+    }
+}
+
+
+%default-copy-text-style-on-white {
+    color: $text-color;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 0.97rem;
+    }
+}
+
+%default-copy-text-style-on-white-with-margin{
+    @extend %default-copy-text-style-on-white;
+    margin-bottom: 1rem;
+}
+
+%content-wrapper-gutters{
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+
+	@include media-breakpoint-up(md) {
+		padding: 1rem 3rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 1rem 10rem;
+	}
+}

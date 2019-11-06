@@ -9,6 +9,7 @@
     @include media-breakpoint-down(sm) {
         position: fixed;
         top: 0;
+        left: 0;
         z-index: 100;
         padding: 0;
     }
@@ -78,6 +79,7 @@
 
         &:hover {
             color: $white;
+            text-decoration: none;
             @include media-breakpoint-up(md) {
                 border-bottom: .2rem solid $white;
             }
