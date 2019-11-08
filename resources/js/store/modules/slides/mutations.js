@@ -1,4 +1,5 @@
 export default {
+  // Module Functionality
   SET_MODULE_DATA (state, payload) {
     state.moduleData = payload
   },
@@ -11,6 +12,12 @@ export default {
     state.currentModule = payload
   },
 
+  // Stores Specified Module Into State
+  STORE_JSON_IN_STATE (state, payload) {
+    state.JSONSlideData = payload
+  },
+
+  // Slide Navigation Functionality
   NAVIGATE_FROM_SLIDE (state, payload) {
     state.slideContentVisibility = false
 
@@ -50,14 +57,7 @@ export default {
     state.slideContentVisibility = true
   },
 
-  SET_SLIDE_CONTENT_VISIBILITY (state, payload) {
-    state.slideContentVisibility = payload
-  },
-
-  STORE_JSON_IN_STATE (state, payload) {
-    state.JSONSlideData = payload
-  },
-
+  // Slide Navigation Button States
   RESET_SLIDE_NAVIGATION (state) {
     state.enableContinue = false
     state.enableBack = false
@@ -67,17 +67,25 @@ export default {
     state.enableContinue = true
   },
 
-  DISABLE_CONTINUE (state) {
-    state.enableContinue = false
-  },
-
   ENABLE_BACK (state) {
     state.enableBack = true
   },
 
-  /* Template specific JSON to State changes
-   * Used to store content specific to template into the state
-  */
+  DISABLE_CONTINUE (state) {
+    state.enableContinue = false
+  },
+
+  // Toggles If Slide is Displayed (true/false)
+  SET_SLIDE_CONTENT_VISIBILITY (state, payload) {
+    state.slideContentVisibility = payload
+  },
+
+  // Email Form Template
+  SURVEY_RESULTS_EMAIL_WAS_SUBMITTED (state, payload) {
+    state.surveyResultsEmailWasSubmitted = payload
+  },
+
+  // Card Flip Template
   UPDATE_CARD (state, payload) {
     state.JSONSlideData[payload.currentSlideIndex].content.cards[payload.currentCardIndex].show = !payload.isFlipped
 
@@ -103,12 +111,28 @@ export default {
     }
   },
 
-  // Multi Quiz Input Template
+  // Input Comparison Template
+  UPDATE_INPUT_TO_RESPONDED (state, payload) {
+    state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.questionIndex].hasResponded = payload.hasResponded
+  },
+
+  UPDATE_INPUT_VALIDITY (state, payload) {
+    state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.questionIndex].isValidated = payload.isValidated
+  },
+
+  // Quiz Template
+  UPDATE_QUIZ_RESPONSE (state, payload) {
+    let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
+    let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
+    question.showResponse = true
+    option.show = !option.show
+  },
+
+  // Multi Quiz Question Template
   UPDATE_MULTI_QUIZ_INPUT (state, payload) {
     let questionInput = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input
     let questionResult = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input[payload.inputIndex].result
 
-    // Remove active on all inputs when a new input selected
     let inputLength = Object.keys(questionInput).length
     for (let i = 0; i < inputLength; i += 1) {
       questionInput[i].selected = false
@@ -196,20 +220,5 @@ export default {
 
   STORE_QUIZ_RESPONSES (state, payload) {
     state.JSONSlideData[payload.currentSlideIndex].header.results.responses = payload.previousSlideData
-  },
-
-  UPDATE_QUIZ_RESPONSE (state, payload) {
-    let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]
-    let option = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex].options[payload.currentOptionIndex]
-    question.showResponse = true
-    option.show = !option.show
-  },
-
-  SURVEY_RESULTS_EMAIL_WAS_SUBMITTED (state, payload) {
-    state.surveyResultsEmailWasSubmitted = payload
-  },
-
-  PASS_USER_RESPONSES_TO_PIE_CHART (state, payload) {
-    state.responses[payload.index] = payload
   }
 }

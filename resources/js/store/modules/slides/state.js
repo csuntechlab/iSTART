@@ -8,6 +8,5 @@ export default {
   enableContinue: false,
   enableBack: false,
 
-  responses: {},
   surveyResultsEmailWasSubmitted: null
 }

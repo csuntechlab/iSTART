@@ -10,12 +10,13 @@
         <div class="col-12">
           <form onsubmit="return false">
             <ol class="row" novalidate="true">
-              <input-response v-for="(element, currentSlideIndex) in currentSlideData.content.questions"
-                :key="`${currentSlideIndex}`"
-                :totalQuestions="Object.keys(currentSlideData.content.questions).length"
+              <input-response v-for="(element, index) in currentSlideData.content.questions"
+                :key="`${index}`"
                 :question="element.question"
-                :questionIndex="parseInt(currentSlideIndex) + 1"
-                :userResponse="element.response"
+                :questionIndex="index"
+                :totalQuestions="Object.keys(currentSlideData.content.questions).length"
+                :hasResponded="element.hasResponded"
+                :isValidated="element.isValidated"
                 :object="element">
               </input-response>
             </ol>

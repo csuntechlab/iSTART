@@ -2,39 +2,36 @@
   <li class="pb-4 col-12">
       <p class="module-text__text"> {{ question }}</p>
       <label class="d-none" :for="'question_' + questionIndex">Input a percentage for {{ question }}</label>
-      <input :id="'question_' + questionIndex" name="response" type="text" @keyup="validateInput(questionIndex); validateForm()" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
-      <em class="module-quizInput__validate module-quizInput__validate--red" v-if="hasAnswered && !isValidated">Your response must range from: 0 - 100</em>
+      <input :id="'question_' + questionIndex" v-model="userInput" name="response" type="text" @keyup="checkInput(userInput, hasResponded, questionIndex); validateForm(currentSlideData.content.questions, totalQuestions)" class="module-quizInput__label"/><span class="module-quizInput__percent-indicator">%</span>
+      <em class="module-quizInput__validate module-quizInput__validate--red" v-if="hasResponded && !isValidated">Your response must range from: 0 - 100</em>
   </li>
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   props: [
-    'totalQuestions',
     'questionIndex',
     'question',
-    'userResponse',
+    'totalQuestions',
+    'hasResponded',
+    'isValidated',
     'object'
   ],
 
-  mounted () {
-    console.log(this.object, this.iteration)
+  data () {
+    return {
+      userInput: null
+    }
   },
 
   computed: {
     ...mapGetters(
       [
-        'userResponses',
-        'userValidity',
-        'slideNumber'
+        'currentSlideNumber',
+        'currentSlideData'
       ]
-    ),
-    ...mapState(
-      {
-        responseFromState: state => state.Slides.responses
-      }
     )
   },
 
@@ -42,16 +39,92 @@ export default {
     ...mapActions(
       [
         'enableContinue',
-        'disableContinue'
+        'disableContinue',
+        'updateInputToResponded',
+        'updateInputValidity',
+        'checkIfAllInputsValid'
       ]
     ),
 
-    validateInput (questionIndex) {
-      console.log('validateInput', questionIndex)
+    // Check if user has responded to input
+    checkInput (userInput, hasResponded, questionIndex) {
+      let isInputEmpty = this.checkForEmptyInput(userInput)
+
+      if (isInputEmpty) {
+        this.updateInputToResponded({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          hasResponded: false
+        })
+        this.updateInputValidity({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          isValidated: false
+        })
+      } else {
+        this.updateInputToResponded({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          hasResponded: true
+        })
+        this.validateInput(userInput, questionIndex)
+      }
     },
 
-    validateForm () {
-      console.log('validateForm')
+    checkForEmptyInput (userInput) {
+      if (userInput === null || userInput === 'undefined' || userInput === '') {
+        return true
+      } else {
+        return false
+      }
+    },
+
+    // Check if user input is valid
+    validateInput (userInput, questionIndex) {
+      let isInputValid = this.checkForInputValidity(userInput)
+      if (isInputValid) {
+        this.updateInputValidity({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          isValidated: true
+        })
+      } else {
+        this.updateInputValidity({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          isValidated: false
+        })
+      }
+    },
+
+    checkForInputValidity (userInput) {
+      let input = userInput.replace(/^[0-9\\s\\+]+$/, '')
+      if (input === '') {
+        return this.checkIfInputWithinRange(userInput)
+      } else {
+        return false
+      }
+    },
+
+    checkIfInputWithinRange (userInput) {
+      if (userInput >= 0 && userInput <= 100) {
+        return true
+      } else {
+        return false
+      }
+    },
+
+    // Check if all inputs on form are valid
+    validateForm (questions, totalQuestions) {
+      for (let i = 0; i < totalQuestions; i += 1) {
+        let isValidInput = questions[i].isValidated
+        if (!isValidInput) {
+          this.disableContinue()
+          break
+        } else {
+          this.enableContinue()
+        }
+      }
     }
   }
 }

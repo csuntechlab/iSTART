@@ -74,7 +74,16 @@ export default {
     commit('CHECK_CARD_FLIPS', payload)
   },
 
-  // Normal Quiz Template
+  // Input Comparison Template
+  updateInputToResponded ({ commit }, payload) {
+    commit('UPDATE_INPUT_TO_RESPONDED', payload)
+  },
+
+  updateInputValidity ({ commit }, payload) {
+    commit('UPDATE_INPUT_VALIDITY', payload)
+  },
+
+  // Quiz Template
   updateQuizResponse ({ commit }, payload) {
     commit('UPDATE_QUIZ_RESPONSE', payload)
   },
@@ -86,6 +95,10 @@ export default {
 
   showMultiQuizQuestion ({ commit }, payload) {
     commit('SHOW_MULTI_QUIZ_QUESTION', payload)
+  },
+
+  enableMultiQuizRedirect ({ commit }, payload) {
+    commit('ENABLE_MULTI_QUIZ_REDIRECT', payload)
   },
 
   checkMultiQuizYesAndCriteria ({ commit }, payload) {
@@ -102,10 +115,6 @@ export default {
 
   checkMultiQuizNoOrCriteria ({ commit }, payload) {
     commit('CHECK_MULTI_QUIZ_NO_OR_CRITERIA', payload)
-  },
-
-  enableMultiQuizRedirect ({ commit }, payload) {
-    commit('ENABLE_MULTI_QUIZ_REDIRECT', payload)
   },
 
   storeQuizResponses ({ commit }, payload) {

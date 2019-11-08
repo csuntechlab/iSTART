@@ -88,7 +88,6 @@ export default {
   mounted () {
     this.setModuleData(moduleData)
     this.resetScreenPosition()
-    console.log('mounted')
   },
 
   methods: {
