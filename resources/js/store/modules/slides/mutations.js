@@ -103,6 +103,7 @@ export default {
     }
   },
 
+  // Multi Quiz Input Template
   UPDATE_MULTI_QUIZ_INPUT (state, payload) {
     let questionInput = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input
     let questionResult = state.JSONSlideData[payload.currentSlideIndex].content[payload.quizIndex].quiz.questions[payload.questionsIndex].input[payload.inputIndex].result

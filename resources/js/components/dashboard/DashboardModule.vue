@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard-module-wrap mt-3">
       <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
-        <div @click="setModuleIndex(index); populateModule(index); goToTop()">
+        <div @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
           <div class="row">
             <div class="dashboard-module__overview-wrapper col-12 col-md-6">
               <div class="dashboard-module__overview row">
@@ -86,21 +86,19 @@ export default {
   },
 
   mounted () {
-    this.popluateModuleData(moduleData)
+    this.setModuleData(moduleData)
+    this.resetScreenPosition()
+    console.log('mounted')
   },
 
   methods: {
     ...mapActions(
       [
+        'setModuleData',
         'setCurrentModule',
-        'setModuleIndex',
-        'setModuleData'
+        'setModuleIndex'
       ]
     ),
-
-    popluateModuleData (moduleData) {
-      this.setModuleData(moduleData)
-    },
 
     populateModule (index) {
       this.setCurrentModule(this.getModuleData[index].name)
@@ -125,10 +123,8 @@ export default {
       }
     },
 
-    goToTop () {
-      window.scrollTo({
-        top: 0
-      })
+    resetScreenPosition () {
+      document.getElementById('app').scrollIntoView()
     }
   }
 }
