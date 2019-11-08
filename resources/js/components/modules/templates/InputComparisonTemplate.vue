@@ -9,14 +9,15 @@
         </div>
         <div class="col-12">
           <form onsubmit="return false">
-            <ol class="module-module-quizInput__form row" novalidate="true">
+            <ol class="row" novalidate="true">
               <input-response v-for="(element, index) in currentSlideData.content.questions"
-                :key="index"
-                :questionIndex="parseInt(index)+1"
+                :key="`${index}`"
                 :question="element.question"
-                :user_response="element.response"
-                :questionLength="Object.keys(currentSlideData.content.questions).length"
-                :needInputLabel="true">
+                :questionIndex="index"
+                :totalQuestions="Object.keys(currentSlideData.content.questions).length"
+                :hasResponded="element.hasResponded"
+                :isValidated="element.isValidated"
+                :object="element">
               </input-response>
             </ol>
           </form>
@@ -27,7 +28,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 import InputResponse from './../templates/input/InputResponse'
 
 export default {
@@ -39,14 +40,6 @@ export default {
     ...mapGetters(
       [
         'currentSlideData'
-      ]
-    )
-  },
-
-  methods: {
-    ...mapActions(
-      [
-        'getUserResponses'
       ]
     )
   }

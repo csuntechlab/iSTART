@@ -90,7 +90,7 @@ export default {
         this.enableContinue()
         return false
       } else if (this.currentSlideNumber === 1) {
-        window.scrollTo(0, 0)
+        this.resetScreenPosition()
         return true
       } else {
         return true
@@ -101,8 +101,12 @@ export default {
       if (this.currentSlideNumber < this.latestSlideNumber) {
         this.enableContinue()
       } else {
-        window.scrollTo(0, 0)
+        this.resetScreenPosition()
       }
+    },
+
+    resetScreenPosition () {
+      document.getElementById('app').scrollIntoView()
     },
 
     returnToDashboard () {
