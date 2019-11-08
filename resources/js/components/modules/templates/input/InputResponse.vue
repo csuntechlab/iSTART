@@ -42,7 +42,8 @@ export default {
         'disableContinue',
         'updateInputToResponded',
         'updateInputValidity',
-        'checkIfAllInputsValid'
+        'checkIfAllInputsValid',
+        'storeUserResponse'
       ]
     ),
 
