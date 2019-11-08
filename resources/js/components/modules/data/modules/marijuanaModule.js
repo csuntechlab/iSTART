@@ -366,9 +366,9 @@ export const marijuanaModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used marijuana in the past 30 days?',
-          response: null,
-          input: null,
           answer: 23
         }
       }

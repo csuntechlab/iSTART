@@ -192,21 +192,21 @@ export const comparisonModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used alcohol in the last 30 days?',
-          response: null,
-          input: null,
           answer: 49
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think had more than 5 drinks in one sitting in the last 30 days?',
-          response: null,
-          input: null,
           answer: 18
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think drove after drinking any alcohol in the last 30 days?',
-          response: null,
-          input: null,
           answer: 11
         }
       }
@@ -511,9 +511,9 @@ export const comparisonModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used marijuana in the past 30 days?',
-          response: null,
-          input: null,
           answer: 23
         }
       }
@@ -813,21 +813,21 @@ export const comparisonModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used cigarettes in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used e-cigs/vaped in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used tobacco from a water pipe (Hookah) in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         }
       }
@@ -1136,27 +1136,27 @@ export const comparisonModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Stimulants?',
-          response: null,
-          input: null,
           answer: 9
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Pain Relievers/Opioids?',
-          response: null,
-          input: null,
           answer: 9
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Sedatives/anti-anxiety?',
-          response: null,
-          input: null,
           answer: 12
         },
         3: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Anti-depression?',
-          response: null,
-          input: null,
           answer: 3
         }
       }
@@ -1414,21 +1414,21 @@ export const comparisonModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'MDMA/Ecstasy',
-          response: null,
-          input: null,
           answer: 1
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Cocaine',
-          response: null,
-          input: null,
           answer: 1
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Opiates',
-          response: null,
-          input: null,
           answer: 1
         }
       }

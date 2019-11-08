@@ -605,21 +605,21 @@ export const nicotineModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used cigarettes in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used e-cigs/vaped in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'What percent of CSUN students do you think used tobacco from a water pipe (Hookah) in the last 30 days?',
-          response: null,
-          input: null,
           answer: 7
         }
       }

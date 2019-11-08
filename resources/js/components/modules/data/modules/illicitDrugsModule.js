@@ -632,21 +632,21 @@ export const illicitDrugsModuleSlides = {
     content: {
       questions: {
         0: {
+          hasResponded: false,
+          isValidated: false,
           question: 'MDMA/Ecstasy',
-          response: null,
-          input: null,
           answer: 1
         },
         1: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Cocaine',
-          response: null,
-          input: null,
           answer: 1
         },
         2: {
+          hasResponded: false,
+          isValidated: false,
           question: 'Opiates',
-          response: null,
-          input: null,
           answer: 1
         }
       }

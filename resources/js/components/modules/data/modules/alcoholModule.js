@@ -272,21 +272,18 @@ export const alcoholModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used alcohol in the last 30 days?',
-          input: null,
           answer: 49
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think had more than 5 drinks in one sitting in the last 30 days?',
-          input: null,
           answer: 18
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think drove after drinking any alcohol in the last 30 days?',
-          input: null,
           answer: 11
         }
       }
