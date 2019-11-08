@@ -92,7 +92,7 @@ export default {
         this.storeUserResponse({
           currentSlideIndex: this.currentSlideNumber,
           questionIndex: questionIndex,
-          userResponse: userInput
+          userResponse: Math.round(userInput)
         })
       } else {
         this.updateInputValidity({
@@ -104,7 +104,8 @@ export default {
     },
 
     checkForInputValidity (userInput) {
-      let input = userInput.replace(/^[0-9\\s\\+]+$/, '')
+      let inputWithNoSpace = userInput.trim()
+      let input = inputWithNoSpace.replace(/^[0-9\\s\\+\\.]+$/, '')
       if (input === '') {
         return this.checkIfInputWithinRange(userInput)
       } else {
