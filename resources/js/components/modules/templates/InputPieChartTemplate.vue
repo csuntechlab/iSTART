@@ -16,13 +16,13 @@
           </div>
           <div :key="index + '-chart1'" class="col-6 py-1 px-lg-5">
             <input-pie-chart-legend chart-id="one"
-              :response="userResponses(index)"
+              :response="element.userResponse"
               :sources="element.answer">
             </input-pie-chart-legend>
           </div>
           <div :key="index + '-chart2'" class="col-6 py-1 px-lg-5">
             <input-pie-chart-legend chart-id="two"
-              :response="userResponses(index)"
+              :response="element.userResponse"
               :sources="element.answer">
             </input-pie-chart-legend>
           </div>

@@ -271,24 +271,28 @@ export const prescriptionDrugsModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'Stimulants?',
+          userResponse: null,
           answer: 9
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'Pain Relievers/Opioids?',
+          userResponse: null,
           answer: 9
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'Sedatives/anti-anxiety?',
+          userResponse: null,
           answer: 12
         },
         3: {
           hasResponded: false,
           isValidated: false,
           question: 'Anti-depression?',
+          userResponse: null,
           answer: 3
         }
       }

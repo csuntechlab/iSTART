@@ -83,6 +83,10 @@ export default {
     commit('UPDATE_INPUT_VALIDITY', payload)
   },
 
+  storeUserResponse ({ commit }, payload) {
+    commit('STORE_USER_RESPONSE', payload)
+  },
+
   // Quiz Template
   updateQuizResponse ({ commit }, payload) {
     commit('UPDATE_QUIZ_RESPONSE', payload)

@@ -120,6 +120,10 @@ export default {
     state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.questionIndex].isValidated = payload.isValidated
   },
 
+  STORE_USER_RESPONSE (state, payload) {
+    state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.questionIndex].userResponse = payload.userResponse
+  },
+
   // Quiz Template
   UPDATE_QUIZ_RESPONSE (state, payload) {
     let question = state.JSONSlideData[payload.currentSlideIndex].content.questions[payload.currentQuestionIndex]

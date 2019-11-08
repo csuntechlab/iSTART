@@ -88,6 +88,11 @@ export default {
           questionIndex: questionIndex,
           isValidated: true
         })
+        this.storeUserResponse({
+          currentSlideIndex: this.currentSlideNumber,
+          questionIndex: questionIndex,
+          userResponse: userInput
+        })
       } else {
         this.updateInputValidity({
           currentSlideIndex: this.currentSlideNumber,

@@ -195,18 +195,21 @@ export const comparisonModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used alcohol in the last 30 days?',
+          userResponse: null,
           answer: 49
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think had more than 5 drinks in one sitting in the last 30 days?',
+          userResponse: null,
           answer: 18
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think drove after drinking any alcohol in the last 30 days?',
+          userResponse: null,
           answer: 11
         }
       }
@@ -514,6 +517,7 @@ export const comparisonModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used marijuana in the past 30 days?',
+          userResponse: null,
           answer: 23
         }
       }
@@ -816,18 +820,21 @@ export const comparisonModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used cigarettes in the last 30 days?',
+          userResponse: null,
           answer: 7
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used e-cigs/vaped in the last 30 days?',
+          userResponse: null,
           answer: 7
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'What percent of CSUN students do you think used tobacco from a water pipe (Hookah) in the last 30 days?',
+          userResponse: null,
           answer: 7
         }
       }
@@ -1139,24 +1146,28 @@ export const comparisonModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'Stimulants?',
+          userResponse: null,
           answer: 9
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'Pain Relievers/Opioids?',
+          userResponse: null,
           answer: 9
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'Sedatives/anti-anxiety?',
+          userResponse: null,
           answer: 12
         },
         3: {
           hasResponded: false,
           isValidated: false,
           question: 'Anti-depression?',
+          userResponse: null,
           answer: 3
         }
       }
@@ -1417,18 +1428,21 @@ export const comparisonModuleSlides = {
           hasResponded: false,
           isValidated: false,
           question: 'MDMA/Ecstasy',
+          userResponse: null,
           answer: 1
         },
         1: {
           hasResponded: false,
           isValidated: false,
           question: 'Cocaine',
+          userResponse: null,
           answer: 1
         },
         2: {
           hasResponded: false,
           isValidated: false,
           question: 'Opiates',
+          userResponse: null,
           answer: 1
         }
       }
