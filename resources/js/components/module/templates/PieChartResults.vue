@@ -15,7 +15,7 @@
             <p class="module-text__caption">{{ element.question }}</p>
           </div>
           <div :key="index + '-chart1'" class="col-6 py-1 px-lg-5">
-            <pie-chart-legent chart-id="one"
+            <pie-chart-legend chart-id="one"
               :response="element.userResponse"
               :sources="element.answer"/>
           </div>
