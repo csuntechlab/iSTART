@@ -409,7 +409,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 14
   12: {
-    slide_type: 'selfAssessmen',
+    slide_type: 'selfAssessment',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -484,7 +484,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 15
   13: {
-    slide_type: 'selfAssessmenResults',
+    slide_type: 'selfAssessmentResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,

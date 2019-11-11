@@ -440,7 +440,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // slide 15-17
   14: {
-    slide_type: 'selfAssessmen',
+    slide_type: 'selfAssessment',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -515,7 +515,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // slide 18
   15: {
-    slide_type: 'selfAssessmenResults',
+    slide_type: 'selfAssessmentResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
