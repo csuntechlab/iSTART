@@ -623,7 +623,7 @@ export const illicitDrugsModuleSlides = {
   },
   // slide 21
   18: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'During the last 30 days, how many CSUN students do you think used each of the following illicit drugs?',
@@ -657,7 +657,7 @@ export const illicitDrugsModuleSlides = {
   },
   // slide 22
   19: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',

@@ -1,32 +1,28 @@
 <template>
   <div ref="moduleContainer" :class="checkWindowWidth">
-    <Navbar :displayCurrentPage="getCurrentModule"/>
+    <navbar :displayCurrentPage="getCurrentModule"/>
     <module-progress-bar/>
     <main v-if="isSlideContentVisible" class="module__content">
-      <intro-template v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"></intro-template>
+      <intro-slide v-if="currentSlideData.slide_type === 'intro'" :key="currentSlideNumber"/>
       <div v-else class="module__wrapper">
-        <info-template v-if="currentSlideData.slide_type === 'info'" :key="currentSlideNumber"></info-template>
-        <quiz-template v-if="currentSlideData.slide_type === 'quiz'" :key="currentSlideNumber"></quiz-template>
-        <multi-question-quiz-input v-if="currentSlideData.slide_type === 'multiQuizQuestion'" :key="currentSlideNumber"></multi-question-quiz-input>
-        <multi-question-quiz-results v-if="currentSlideData.slide_type === 'multiQuizQuestionResults'" :key="currentSlideNumber"></multi-question-quiz-results>
-        <input-comparison-template v-if="currentSlideData.slide_type === 'inputComparison'" :key="currentSlideNumber"></input-comparison-template>
-        <input-pie-chart-template v-if="currentSlideData.slide_type === 'inputPieChart'" :key="currentSlideNumber"></input-pie-chart-template>
-        <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"></video-template>
-        <card-flip-template
-          v-if="currentSlideData.slide_type === 'cardFlip'"
-          :key="currentSlideNumber"
-        ></card-flip-template>
-        <email-form v-if="currentSlideData.slide_type==='emailForm'" :key="currentSlideNumber"></email-form>
-        <multi-choice-survey v-if="currentSlideData.slide_type ==='multiChoiceSurvey'" :key="currentSlideNumber"></multi-choice-survey>
-        <multi-choice-survey-results v-if="currentSlideData.slide_type==='multiChoiceSurveyResults'" :key="currentSlideNumber"></multi-choice-survey-results>
-        <final-slide v-if="currentSlideData.slide_type==='finalSlide'" :key="currentSlideNumber"></final-slide>
+        <informational v-if="currentSlideData.slide_type === 'info'" :key="currentSlideNumber"/>
+        <card-flip v-if="currentSlideData.slide_type === 'cardFlip'" :key="currentSlideNumber"/>
+        <quiz v-if="currentSlideData.slide_type === 'quiz'" :key="currentSlideNumber"/>
+        <pie-chart-input v-if="currentSlideData.slide_type === 'pieChartInput'" :key="currentSlideNumber"/>
+        <pie-chart-results v-if="currentSlideData.slide_type === 'pieChartResults'" :key="currentSlideNumber"/>
+        <self-assessment v-if="currentSlideData.slide_type === 'selfAssessment'" :key="currentSlideNumber"/>
+        <self-assessment-results v-if="currentSlideData.slide_type === 'selfAssessmentResults'" :key="currentSlideNumber"/>
+        <wellness-goal v-if="currentSlideData.slide_type==='wellnessGoal'" :key="currentSlideNumber"/>
+        <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"/>
+        <final-slide v-if="currentSlideData.slide_type==='finalSlide'" :key="currentSlideNumber"/>
       </div>
     </main>
-    <module-footer v-if="currentSlideData.slide_type !== 'intro'"></module-footer>
+    <module-footer v-if="currentSlideData.slide_type !== 'intro'"/>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
@@ -34,42 +30,37 @@ import illicitDrugsSlides from './../components/modules/data/modules/illicitDrug
 import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
 import comparisonModuleSlides from './../components/modules/data/modules/comparisonModule'
 
-import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
 import ModuleProgressBar from './../components/module/shared/ModuleProgressBar'
 import ModuleFooter from './../components/module/shared/ModuleFooter'
-import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
-import InfoTemplate from './../components/modules/templates/InfoTemplate'
-import IntroTemplate from './../components/modules/templates/IntroSlide'
-import QuizTemplate from './../components/modules/templates/QuizTemplate'
-import MultiQuestionQuizInput from './../components/modules/templates/MultiQuestionQuizInput'
-import MultiQuestionQuizResults from './../components/modules/templates/MultiQuestionQuizResults'
-import InputComparisonTemplate from './../components/modules/templates/InputComparisonTemplate'
-import InputPieChartTemplate from './../components/modules/templates/InputPieChartTemplate'
-import EmailForm from './../components/modules/templates/EmailForm'
-import MultiChoiceSurveyResults from './../components/modules/templates/MultiChoiceSurveyResults'
-import VideoTemplate from './../components/modules/templates/VideoTemplate'
-import CardFlipTemplate from './../components/modules/templates/CardFlipTemplate'
-import FinalSlide from './../components/modules/templates/FinalSlide.vue'
+import IntroSlide from './../components/module/templates/IntroSlide'
+import FinalSlide from './../components/module/templates/FinalSlide'
+import Informational from './../components/module/templates/Informational'
+import CardFlip from './../components/module/templates/CardFlip'
+import Quiz from './../components/module/templates/Quiz'
+import PieChartInput from './../components/module/templates/PieChartInput'
+import PieChartResults from './../components/module/templates/PieChartResults'
+import SelfAssessment from './../components/module/templates/SelfAssessment'
+import SelfAssessmentResults from './../components/module/templates/SelfAssessmentResults'
+import WellnessGoal from './../components/module/templates/WellnessGoal'
+import VideoTemplate from './../components/module/templates/Video'
 
 export default {
   components: {
+    Navbar,
     ModuleProgressBar,
     ModuleFooter,
-    IntroTemplate,
-    InfoTemplate,
-    InputComparisonTemplate,
-    InputPieChartTemplate,
-    Navbar,
-    EmailForm,
-    QuizTemplate,
-    MultiQuestionQuizInput,
-    MultiQuestionQuizResults,
-    MultiChoiceSurvey,
-    MultiChoiceSurveyResults,
-    VideoTemplate,
-    CardFlipTemplate,
-    FinalSlide
+    IntroSlide,
+    FinalSlide,
+    Informational,
+    CardFlip,
+    Quiz,
+    PieChartInput,
+    PieChartResults,
+    SelfAssessment,
+    SelfAssessmentResults,
+    WellnessGoal,
+    VideoTemplate
   },
 
   data () {

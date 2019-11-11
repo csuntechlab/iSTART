@@ -197,7 +197,7 @@ export const comparisonModuleSlides = {
     }
   },
   7: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -230,7 +230,7 @@ export const comparisonModuleSlides = {
     }
   },
   8: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -530,7 +530,7 @@ export const comparisonModuleSlides = {
     }
   },
   16: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -549,7 +549,7 @@ export const comparisonModuleSlides = {
     }
   },
   17: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -879,7 +879,7 @@ export const comparisonModuleSlides = {
     }
   },
   27: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -912,7 +912,7 @@ export const comparisonModuleSlides = {
     }
   },
   28: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -1206,7 +1206,7 @@ export const comparisonModuleSlides = {
     }
   },
   35: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'What percent of CSUN students do you think took prescription drugs without a prescription/or in a way not prescribed to them in the past year?',
@@ -1246,7 +1246,7 @@ export const comparisonModuleSlides = {
     }
   },
   36: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Here are the results',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -1697,7 +1697,7 @@ export const comparisonModuleSlides = {
     }
   },
   50: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'During the last 30 days, how many CSUN students do you think used each of the following illicit drugs?',
@@ -1730,7 +1730,7 @@ export const comparisonModuleSlides = {
     }
   },
   51: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',

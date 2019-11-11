@@ -596,7 +596,7 @@ export const nicotineModuleSlides = {
   },
   // slide 17
   15: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -630,7 +630,7 @@ export const nicotineModuleSlides = {
   },
   // slide 18
   16: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -690,7 +690,7 @@ export const nicotineModuleSlides = {
   },
   // slide 21
   19: {
-    slide_type: 'multiQuizQuestion',
+    slide_type: 'selfAssessmen',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -765,7 +765,7 @@ export const nicotineModuleSlides = {
   },
   // slide 22
   20: {
-    slide_type: 'multiQuizQuestionResults',
+    slide_type: 'selfAssessmenResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -1384,7 +1384,7 @@ export const nicotineModuleSlides = {
   },
   // slide 36
   34: {
-    slide_type: 'emailForm',
+    slide_type: 'wellnessGoal',
     header: {
       header: 'Set a Wellness Goal',
       sub_header: 'Now is a great time to set a wellness goal for reducing stress or anxiety! Or if you use tobacco products (cigarettes, vape pens, etc.), what next steps can you take to reduce your nicotine use?',

@@ -259,7 +259,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // Slide 12
   10: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'What percent of CSUN students do you think took prescription drugs without a prescription/or in a way not prescribed to them in the past year?',
@@ -300,7 +300,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // Slide 13
   11: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Here are the results',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -440,7 +440,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // slide 15-17
   14: {
-    slide_type: 'multiQuizQuestion',
+    slide_type: 'selfAssessmen',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -515,7 +515,7 @@ export const prescriptionDrugsModuleSlides = {
   },
   // slide 18
   15: {
-    slide_type: 'multiQuizQuestionResults',
+    slide_type: 'selfAssessmenResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -1013,7 +1013,7 @@ export const prescriptionDrugsModuleSlides = {
     }
   },
   27: {
-    slide_type: 'emailForm',
+    slide_type: 'wellnessGoal',
     header: {
       header: 'Set a wellness goal!',
       sub_header: 'Now that you\'ve learned some ways to empower yourself to make healthy choices, write down a goal.',

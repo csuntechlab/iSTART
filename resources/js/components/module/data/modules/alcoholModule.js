@@ -260,7 +260,7 @@ export const alcoholModuleSlides = {
   },
   // slide 8
   6: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -294,7 +294,7 @@ export const alcoholModuleSlides = {
   },
   // slide 9
   7: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -327,7 +327,7 @@ export const alcoholModuleSlides = {
   },
   // slide 11
   9: {
-    slide_type: 'multiQuizQuestion',
+    slide_type: 'selfAssessment',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -402,7 +402,7 @@ export const alcoholModuleSlides = {
   },
   // slide 12
   10: {
-    slide_type: 'multiQuizQuestionResults',
+    slide_type: 'selfAssessmentResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -1257,7 +1257,7 @@ export const alcoholModuleSlides = {
   },
   // slide  32
   30: {
-    slide_type: 'emailForm',
+    slide_type: 'wellnessGoal',
     header: {
       header: 'Set a Wellness Goal!',
       sub_header: 'Now is a great time to set a wellness goal to practice responsible drinking; or if you don\'t drink, then to improve your overall health!',
