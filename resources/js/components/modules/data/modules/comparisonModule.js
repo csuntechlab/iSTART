@@ -859,7 +859,7 @@ export const comparisonModuleSlides = {
           'Cancer causing chemicals'
         ]
       },
-      2:{
+      2: {
         paragraph: {
           0: 'It\'s hard to know what ingredients are inside vape pens and e-cigs. Once those ingredients are heated and ingested, the toxins we are exposed to become even more harmful!'
         }
@@ -1358,7 +1358,7 @@ export const comparisonModuleSlides = {
         paragraph: {
           0: 'Ecstasy, known as MDMA or <i>molly</i>, is a synthetic drug that acts as a stimulant and hallucinogen.',
           1: 'It is most often abused by teens and college-age young adults, and is mainly taken in pill or powder form while at raves, clubs, & concerts.',
-          2: 'Although people believe MDMA is a “pure” and safe drug, the MDMA sold on the street often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all!',
+          2: 'Although people believe MDMA is a “pure” and safe drug, the MDMA sold on the street often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all!'
         }
       },
       1: {
@@ -1441,7 +1441,7 @@ export const comparisonModuleSlides = {
           3: 'Spice, unlike natural cannabis, is NOT legal in California!'
         }
       },
-      1:{
+      1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s08_01.jpg',
           alt: 'synthetic marijuana'
@@ -1497,7 +1497,7 @@ export const comparisonModuleSlides = {
       0: {
         paragraph: {
           0: 'Cocaine is considered one of the top five drugs used at college parties. It is a stimulant drug that can be super addictive and extremely dangerous!',
-          1: 'Be careful! Although using cocaine can cause euphoria, the feeling is short lived (5-30 min!) – and may lead to repeated use and high risk for addiction.',
+          1: 'Be careful! Although using cocaine can cause euphoria, the feeling is short lived (5-30 min!) – and may lead to repeated use and high risk for addiction.'
         }
       },
       1: {
