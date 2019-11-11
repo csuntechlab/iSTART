@@ -707,7 +707,7 @@ export const comparisonModuleSlides = {
             question: null
           },
           back: {
-            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
+            description: 'The filler is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
