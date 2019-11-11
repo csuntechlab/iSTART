@@ -9,7 +9,5 @@ export default {
   currentSlideData: state => state.JSONSlideData[state.moduleData[state.currentModuleIndex].progress.current_slide], // Gets current slide data
   currentSlideNumber: state => state.moduleData[state.currentModuleIndex].progress.current_slide,
   latestSlideNumber: state => state.moduleData[state.currentModuleIndex].progress.latest_slide,
-  totalSlides: state => Object.keys(state.JSONSlideData).length,
-
-  surveyResultsEmailWasSubmitted: state => state.surveyResultsEmailWasSubmitted
+  totalSlides: state => Object.keys(state.JSONSlideData).length
 }

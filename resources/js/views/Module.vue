@@ -36,8 +36,8 @@ import comparisonModuleSlides from './../components/modules/data/modules/compari
 
 import { mapActions, mapGetters } from 'vuex'
 import Navbar from './../components/global/Navbar'
-import ModuleProgressBar from './../components/modules/ModuleProgressBar'
-import ModuleFooter from './../components/modules/ModuleFooter'
+import ModuleProgressBar from './../components/module/shared/ModuleProgressBar'
+import ModuleFooter from './../components/module/shared/ModuleFooter'
 import MultiChoiceSurvey from './../components/modules/templates/MultiChoiceSurvey'
 import InfoTemplate from './../components/modules/templates/InfoTemplate'
 import IntroTemplate from './../components/modules/templates/IntroSlide'
