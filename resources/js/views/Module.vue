@@ -23,12 +23,12 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import alcoholModuleSlides from './../components/modules/data/modules/alcoholModule'
-import nicotineModuleSlides from './../components/modules/data/modules/nicotineModule'
-import marijuanaModuleSlides from './../components/modules/data/modules/marijuanaModule'
-import illicitDrugsSlides from './../components/modules/data/modules/illicitDrugsModule'
-import precriptionDrugsSlides from './../components/modules/data/modules/prescriptionDrugsModule'
-import comparisonModuleSlides from './../components/modules/data/modules/comparisonModule'
+import alcoholModuleSlides from './../components/module/data/modules/alcoholModule'
+import nicotineModuleSlides from './../components/module/data/modules/nicotineModule'
+import marijuanaModuleSlides from './../components/module/data/modules/marijuanaModule'
+import illicitDrugsSlides from './../components/module/data/modules/illicitDrugsModule'
+import precriptionDrugsSlides from './../components/module/data/modules/prescriptionDrugsModule'
+import comparisonModuleSlides from './../components/module/data/modules/comparisonModule'
 
 import Navbar from './../components/global/Navbar'
 import ModuleProgressBar from './../components/module/shared/ModuleProgressBar'

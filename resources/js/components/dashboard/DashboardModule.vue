@@ -57,7 +57,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
-import moduleData from './../modules/data/moduleData'
+import moduleData from './../module/data/moduleData'
 
 export default {
   name: 'DashboardModule',
