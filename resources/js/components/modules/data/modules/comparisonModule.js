@@ -671,13 +671,13 @@ export const comparisonModuleSlides = {
           front: {
             img: {
               src: 'images/nicotineModule/nic_s05_01.png',
-              alt: 'cigarette filler',
+              alt: 'cigarette filter',
               caption: null
             },
             question: null
           },
           back: {
-            description: 'Fillers are intended to reduce smoke inhaled, but are not that effective!'
+            description: 'Filters are intended to reduce smoke inhaled, but are not that effective!'
           }
         },
         1: {
@@ -707,7 +707,7 @@ export const comparisonModuleSlides = {
             question: null
           },
           back: {
-            description: 'The filler is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
+            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
