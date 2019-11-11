@@ -10,6 +10,7 @@ export const comparisonModuleSlides = {
       estimated_completion: '30 minutes'
     }
   },
+  // Alcohol Section
   1: {
     slide_type: 'info',
     header: {
@@ -81,10 +82,23 @@ export const comparisonModuleSlides = {
     }
   },
   4: {
+    slide_type: 'video',
+    header: {
+      header: 'Binge Drinking',
+      sub_header: null,
+      tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
+    },
+    content: {
+      video_id: '5jNEVGj6gS0',
+      video_length: (122400 / 2) + 5000,
+      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drinks in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+    }
+  },
+  5: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of Alcohol',
-      sub_header: 'Have you ever been offered a drink that you didn\'t want, but were afraid to refuse?',
+      sub_header: 'Below are some potential side effects of drinking alcohol.',
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
@@ -104,7 +118,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  5: {
+  6: {
     slide_type: 'cardFlip',
     header: {
       header: 'Don\'t become a statistic!',
@@ -131,7 +145,7 @@ export const comparisonModuleSlides = {
             question: null
           },
           back: {
-            description: '50% will binge drink multiple times before they graduate.'
+            description: '50% of students will binge drink multiple times before they graduate.'
           }
         },
         1: {
@@ -182,7 +196,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  6: {
+  7: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -215,7 +229,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  7: {
+  8: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -223,7 +237,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  8: {
+  9: {
     slide_type: 'info',
     header: {
       header: 'Responsible Drinking Checklist for Alcohol',
@@ -274,7 +288,8 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  9: {
+  // Marijuana Section
+  10: {
     slide_type: 'info',
     header: {
       header: 'Substance 2: Marijuana',
@@ -297,7 +312,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  10: {
+  11: {
     slide_type: 'cardFlip',
     header: {
       header: 'Recreational vs. Medicinal Use',
@@ -345,7 +360,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  11: {
+  12: {
     slide_type: 'cardFlip',
     header: {
       header: 'How does marijuana affect the brain?',
@@ -402,13 +417,13 @@ export const comparisonModuleSlides = {
             question: null
           },
           back: {
-            description: '<b>Increased Risk of Depression</b><br> Research shows smoking weed may raise the risk of depression for young people who have a special serotonin gene.'
+            description: '<b>Increased Risk of Depression</b><br> Research shows that smoking marijuana may raise the risk of depression for young adults who have a special serotonin gene.'
           }
         }
       }
     }
   },
-  12: {
+  13: {
     slide_type: 'info',
     header: {
       header: 'What are the long-term effects of marijuana use?',
@@ -437,7 +452,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       header: 'Academic Performance',
@@ -465,7 +480,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       header: 'What\'s legal in California?',
@@ -499,12 +514,22 @@ export const comparisonModuleSlides = {
             src: 'images/marijuanaModule/mar_s21_05.png',
             alt: 'cannot cross state lines',
             y_position: null
+          },
+          4: {
+            src: 'images/marijuanaModule/mar_s21_01.png',
+            alt: 'age restriction',
+            y_position: null
+          },
+          6: {
+            src: 'images/marijuanaModule/mar_s21_06.png',
+            alt: 'only legal dispensaries can sell',
+            y_position: null
           }
         }
       }
     }
   },
-  15: {
+  16: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -523,7 +548,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  16: {
+  17: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -531,7 +556,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  17: {
+  18: {
     slide_type: 'info',
     header: {
       header: 'Responsible Marijuana Use Checklist',
@@ -548,11 +573,11 @@ export const comparisonModuleSlides = {
         photo_list: [
           {
             src: 'images/marijuanaModule/mar_s24_01.png',
-            text: 'Be wary of high-potency THC and excessive use'
+            text: 'Be wary of high-potency THC and excessive use.'
           },
           {
             src: 'images/marijuanaModule/mar_s24_02.png',
-            text: 'Stay away from synthetic cannabis products (they’re dangerous and illegal!)'
+            text: 'Stay away from synthetic cannabis products (they’re dangerous and illegal!).'
           },
           {
             src: 'images/marijuanaModule/mar_s24_03.png',
@@ -560,7 +585,7 @@ export const comparisonModuleSlides = {
           },
           {
             src: 'images/marijuanaModule/mar_s24_04.png',
-            text: 'Don\'t drive while high (it\'s a DUI!)'
+            text: 'Don\'t drive while high (it\'s a DUI!).'
           },
           {
             src: 'images/marijuanaModule/mar_s24_05.png',
@@ -579,7 +604,8 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  18: {
+  // Nicotine Section
+  19: {
     slide_type: 'info',
     header: {
       header: 'Substance 3: Nicotine',
@@ -597,12 +623,12 @@ export const comparisonModuleSlides = {
       1: {
         paragraph: {
           0: '<b>Definition</b>',
-          1: 'Tobacco is a plant grown for its leaves, which are processed into tobacco products. People can smoke, chew, or sniff tobacco. Many tobacco products contain nicotine, which is an addictive chemical.'
+          1: 'Many tobacco products contain nicotine, which is a chemical that is both harmful and addictive.'
         }
       }
     }
   },
-  19: {
+  20: {
     slide_type: 'info',
     header: {
       header: 'Nicotine',
@@ -612,8 +638,8 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'It\'s easy to get hooked. Whether smoked or vaped, nicotine is a powerfully addictive substance. As addictive as cocaine, and even more so than alcohol!',
-          1: 'It\'s no surprise that nicotine can harm our bodies. The toxic vape smoke we inhale can damage our lungs and heart.'
+          0: 'It\'s easy to get hooked. Whether smoked or vaped, nicotine is a powerfully addictive substance. Believe it or not, it is as addicting as cocaine, and much more addicting than alcohol!',
+          1: 'It\'s no surprise that nicotine can harm our bodies. The smoke that we inhale from vaping or smoking can damage both our lungs and heart.'
         }
       },
       1: {
@@ -625,7 +651,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  20: {
+  21: {
     slide_type: 'cardFlip',
     header: {
       header: 'What\'s in a cigarette?',
@@ -636,7 +662,7 @@ export const comparisonModuleSlides = {
       card_break: true,
       cards_flipped: false,
       paragraph: {
-        0: '<b>Flip the cards to see what\'s inside!</b>'
+        0: '<b>Flip the cards to learn more.</b>'
       },
       cards: {
         0: {
@@ -645,13 +671,13 @@ export const comparisonModuleSlides = {
           front: {
             img: {
               src: 'images/nicotineModule/nic_s05_01.png',
-              alt: 'cigarette filter',
+              alt: 'cigarette filler',
               caption: null
             },
             question: null
           },
           back: {
-            description: 'Filters are intended to reduce smoke inhaled, but are not that effective!'
+            description: 'Fillers are intended to reduce smoke inhaled, but are not that effective!'
           }
         },
         1: {
@@ -660,7 +686,7 @@ export const comparisonModuleSlides = {
           front: {
             img: {
               src: 'images/nicotineModule/nic_s05_02.png',
-              alt: 'cigarrette',
+              alt: 'cigarette',
               caption: null
             },
             question: null
@@ -675,19 +701,19 @@ export const comparisonModuleSlides = {
           front: {
             img: {
               src: 'images/nicotineModule/nic_s05_03.png',
-              alt: 'cigarrette',
+              alt: 'cigarette',
               caption: null
             },
             question: null
           },
           back: {
-            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
+            description: 'The filler is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
     }
   },
-  21: {
+  22: {
     slide_type: 'info',
     header: {
       header: 'What other ingredients are in cigarettes?',
@@ -702,17 +728,52 @@ export const comparisonModuleSlides = {
         }
       },
       1: {
-        image: {
-          src: 'images/comparisonModule/comp_01.png',
-          alt: 'acetone, acetic acid, ammonia, arsenic, butane, cadmium, tar, toluene',
-          mobile_size: '1/2',
-          tablet_size: '2/3',
-          desktop_size: '2/3'
+        carousel: {
+          0: {
+            src: 'images/nicotineModule/nic_s06_01.png',
+            alt: 'acetone',
+            y_position: null
+          },
+          1: {
+            src: 'images/nicotineModule/nic_s06_02.png',
+            alt: 'acetic acid',
+            y_position: null
+          },
+          2: {
+            src: 'images/nicotineModule/nic_s06_03.png',
+            alt: 'ammonia',
+            y_position: null
+          },
+          3: {
+            src: 'images/nicotineModule/nic_s06_04.png',
+            alt: 'arsenic',
+            y_position: null
+          },
+          4: {
+            src: 'images/nicotineModule/nic_s06_05.png',
+            alt: 'butane',
+            y_position: null
+          },
+          5: {
+            src: 'images/nicotineModule/nic_s06_06.png',
+            alt: 'cadmium',
+            y_position: null
+          },
+          6: {
+            src: 'images/nicotineModule/nic_s06_07.png',
+            alt: 'tar',
+            y_position: null
+          },
+          7: {
+            src: 'images/nicotineModule/nic_s06_08.png',
+            alt: 'toluene',
+            y_position: null
+          }
         }
       }
     }
   },
-  22: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'Is hookah considered smoking?',
@@ -722,7 +783,7 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Hookah tobacco exposes people to the addictive chemical nicotine and contains many of the same toxic chemicals that are in cigarettes.'
+          0: 'A lot of people are unaware that hookah exposes people to nicotine and contains many of the same toxic chemicals that are found in cigarettes'
         }
       },
       1: {
@@ -734,7 +795,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  23: {
+  24: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -756,7 +817,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  24: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Vaping',
@@ -778,7 +839,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  25: {
+  26: {
     slide_type: 'info',
     header: {
       header: 'What\'s in vape smoke?',
@@ -788,26 +849,36 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Vape smoke is NOT harmless “water vapor”. While vaping, users breathe and exhale potentially harmful substances: '
+          0: 'The smoke from vaping is NOT just “harmless water vapor'
         }
       },
       1: {
         list_element: [
           'Nicotine',
-          'Ultrafine particles',
+          'Ultra fine particles',
           'Cancer causing chemicals'
         ]
       },
-      2: {
+      2:{
+        paragraph: {
+          0: 'It\'s hard to know what ingredients are inside vape pens and e-cigs. Once those ingredients are heated and ingested, the toxins we are exposed to become even more harmful!'
+        }
+      },
+      3: {
         image: {
           src: 'images/nicotineModule/nic_s14_01.png',
           alt: 'smoke',
           size: 'informational'
         }
+      },
+      4: {
+        paragraph: {
+          0: 'As more research on the effects of vaping becomes available, stay in the know and consult official sources.'
+        }
       }
     }
   },
-  26: {
+  27: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -840,7 +911,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  27: {
+  28: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -848,7 +919,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  28: {
+  29: {
     slide_type: 'cardFlip',
     header: {
       header: 'Smoke-free Benefits',
@@ -956,7 +1027,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  29: {
+  30: {
     slide_type: 'info',
     header: {
       header: 'CSUN Clear the Air!',
@@ -984,7 +1055,8 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  30: {
+  // Prescription Drugs Section
+  31: {
     slide_type: 'info',
     header: {
       header: 'Substance 4: Prescription Drugs',
@@ -1007,7 +1079,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  31: {
+  32: {
     slide_type: 'info',
     header: {
       header: 'What\'s the concern?',
@@ -1029,7 +1101,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  32: {
+  33: {
     slide_type: 'cardFlip',
     header: {
       header: 'Drug Use, Misuse and Abuse',
@@ -1090,7 +1162,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  33: {
+  34: {
     slide_type: 'info',
     header: {
       header: 'Commonly Abused Rx Drugs',
@@ -1133,7 +1205,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  34: {
+  35: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -1173,7 +1245,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  35: {
+  36: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Here are the results',
@@ -1181,7 +1253,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  36: {
+  37: {
     slide_type: 'info',
     header: {
       header: 'Painkiller Alternatives',
@@ -1215,7 +1287,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  37: {
+  38: {
     slide_type: 'info',
     header: {
       header: 'Substance 5: Illicit Drugs',
@@ -1238,7 +1310,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  38: {
+  39: {
     slide_type: 'info',
     header: {
       header: 'Illicit Drug Use in College',
@@ -1256,7 +1328,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  39: {
+  40: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of MDMA/Ecstasy',
@@ -1275,7 +1347,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  40: {
+  41: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of Synthetic Marijuana',
@@ -1312,7 +1384,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  41: {
+  42: {
     slide_type: 'cardFlip',
     header: {
       header: 'Cocaine Use and Side Effects',
@@ -1390,7 +1462,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  42: {
+  43: {
     slide_type: 'info',
     header: {
       header: 'What other ingredients are in cigarettes?',
@@ -1415,7 +1487,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  43: {
+  44: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -1448,7 +1520,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  44: {
+  45: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -1456,7 +1528,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  45: {
+  46: {
     slide_type: 'info',
     header: {
       header: 'Saying "No"',
@@ -1497,7 +1569,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  46: {
+  47: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -1520,7 +1592,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  47: {
+  48: {
     slide_type: 'info',
     header: {
       header: 'Physical Activities',
@@ -1542,7 +1614,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  48: {
+  49: {
     slide_type: 'info',
     header: {
       header: 'Social Activities',
@@ -1576,7 +1648,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  49: {
+  50: {
     slide_type: 'cardFlip',
     header: {
       header: 'Mind-Body Activities',
@@ -1626,7 +1698,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  50: {
+  51: {
     slide_type: 'info',
     header: {
       header: 'Go beyond yourself!',
@@ -1650,7 +1722,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  51: {
+  52: {
     slide_type: 'info',
     header: {
       header: 'Be Well!',
@@ -1672,7 +1744,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  52: {
+  53: {
     slide_type: 'finalSlide',
     header: {
       header: null
