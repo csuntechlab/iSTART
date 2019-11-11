@@ -281,7 +281,7 @@ export const comparisonModuleSlides = {
           },
           {
             src: 'images/alcoholModule/alcohol_s23_10.png',
-            text: 'And remember DON\'T DRINK AND DRIVE!',
+            text: 'And remember, DON\'T DRINK AND DRIVE!',
             warning: true
           }
         ]
@@ -1177,7 +1177,7 @@ export const comparisonModuleSlides = {
       },
       1: {
         list_element: [
-          'Ritalin, Adderal, & Dexedrine',
+          'Ritalin, Adderall, & Dexedrine',
           'College students misuse Rx stimulants to "get in the zone" or pull all night study sessions - a habit that is most likely to begin in college'
         ]
       },
@@ -1238,7 +1238,7 @@ export const comparisonModuleSlides = {
         3: {
           hasResponded: false,
           isValidated: false,
-          question: 'Anti-depression?',
+          question: 'Anti-depressants?',
           userResponse: null,
           answer: 3
         }
@@ -1254,6 +1254,23 @@ export const comparisonModuleSlides = {
     }
   },
   37: {
+    slide_type: 'info',
+    header: {
+      header: 'Side effects of RX Drugs',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: '<b>Stimulants:</b> Ritalin and Adderall are intended to treat ADHD. Repeated use by someone who does NOT have ADHD can increase risk of drug dependency and addiction. Stimulants actually share chemical similarities with Methamphetamine and can cause headaches, increased heart rate, agitation, anxiety and insomnia.',
+          1: '<b>Anti-anxiety meds/Sedatives:</b> Meds like Xanax and Valium are highly addictive. Side effects include drowsiness, confusion, dizziness, nausea, memory impairment, slurred speech and slowed breathing.  If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects.',
+          2: '<b>RX Opioids:</b> Some people might think Rx opioids, such as Oxycontinor Vicodinare safer than alcohol or illegal drugs, but the truth is prescribed opioids can act just like heroin! Repeated use can lead to addiction and dependency, and high use or mixing it with other drugs can cause a person to overdose and stop breathing altogether.'
+        }
+      }
+    }
+  },
+  38: {
     slide_type: 'info',
     header: {
       header: 'Painkiller Alternatives',
@@ -1287,7 +1304,8 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  38: {
+  // Illicit Drugs Section
+  39: {
     slide_type: 'info',
     header: {
       header: 'Substance 5: Illicit Drugs',
@@ -1310,7 +1328,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  39: {
+  40: {
     slide_type: 'info',
     header: {
       header: 'Illicit Drug Use in College',
@@ -1328,7 +1346,31 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  40: {
+  41: {
+    slide_type: 'info',
+    header: {
+      header: 'MDMA/Ecstasy',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Ecstasy, known as MDMA or <i>molly</i>, is a synthetic drug that acts as a stimulant and hallucinogen.',
+          1: 'It is most often abused by teens and college-age young adults, and is mainly taken in pill or powder form while at raves, clubs, & concerts.',
+          2: 'Although people believe MDMA is a “pure” and safe drug, the MDMA sold on the street often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all!',
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s06_01.jpg',
+          alt: 'variations of pills',
+          size: '1'
+        }
+      }
+    }
+  },
+  42: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of MDMA/Ecstasy',
@@ -1337,17 +1379,77 @@ export const comparisonModuleSlides = {
     },
     content: {
       0: {
-        image: {
-          src: 'images/comparisonModule/comp_02.jpg',
-          alt: 'memory impairment, attention impairment, anxiety, aggression, irritability, depression, sleep disturbances',
-          mobile_size: '2/3',
-          tablet_size: '5/6',
-          desktop_size: '2/3'
+        paragraph: {
+          0: 'Ecstasy disrupts the body\'s temperature. In a club where people are constantly dancing, Ecstasy can cause a person to overheat, become dehydrated, & can lead to fatal swelling of the brain.',
+          1: 'Swipe below to learn about other side effects.'
+        }
+      },
+      1: {
+        carousel: {
+          0: {
+            src: 'images/illicitDrugsModule/ill_s05_01.png',
+            alt: 'irritability',
+            y_position: null
+          },
+          1: {
+            src: 'images/illicitDrugsModule/ill_s05_02.png',
+            alt: 'anxiety',
+            y_position: null
+          },
+          2: {
+            src: 'images/illicitDrugsModule/ill_s05_03.png',
+            alt: 'aggression',
+            y_position: null
+          },
+          3: {
+            src: 'images/illicitDrugsModule/ill_s05_04.png',
+            alt: 'depression',
+            y_position: null
+          },
+          4: {
+            src: 'images/illicitDrugsModule/ill_s05_05.png',
+            alt: 'memory impairment',
+            y_position: null
+          },
+          5: {
+            src: 'images/illicitDrugsModule/ill_s05_06.png',
+            alt: 'attention impairment',
+            y_position: null
+          },
+          6: {
+            src: 'images/illicitDrugsModule/ill_s05_07.png',
+            alt: 'sleep disturbances',
+            y_position: null
+          }
         }
       }
     }
   },
-  41: {
+  43: {
+    slide_type: 'info',
+    header: {
+      header: 'Synthetic Marijuana',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Synthetic cannabinoids (also known as Spice or K2) are human-made chemicals that are similar to those in the cannabis plant.',
+          1: 'Don\'t be fooled! While they are often marketed as safer, legal alternatives to marijuana, they are NOT marijuana, and they are NOT safe.',
+          2: 'In fact, the effects can be unpredictable, dangerous, or even life-threatening.',
+          3: 'Spice, unlike natural cannabis, is NOT legal in California!'
+        }
+      },
+      1:{
+        image: {
+          src: 'images/illicitDrugsModule/ill_s08_01.jpg',
+          alt: 'synthetic marijuana'
+        }
+      }
+    }
+  },
+  44: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of Synthetic Marijuana',
@@ -1362,11 +1464,11 @@ export const comparisonModuleSlides = {
       },
       1: {
         list_element: [
-          'severe bleeding',
-          'rapid heart rate',
-          'vomiting',
-          'violent behavior',
-          'suicidal thoughts'
+          'Severe bleeding',
+          'Rapid heart rate',
+          'Vomiting',
+          'Violent behavior',
+          'Suicidal thoughts'
         ]
       },
       2: {
@@ -1384,7 +1486,29 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  42: {
+  45: {
+    slide_type: 'info',
+    header: {
+      header: 'Cocaine',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Cocaine is considered one of the top five drugs used at college parties. It is a stimulant drug that can be super addictive and extremely dangerous!',
+          1: 'Be careful! Although using cocaine can cause euphoria, the feeling is short lived (5-30 min!) – and may lead to repeated use and high risk for addiction.',
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s12_01.jpg',
+          alt: 'lines of cocaine'
+        }
+      }
+    }
+  },
+  46: {
     slide_type: 'cardFlip',
     header: {
       header: 'Cocaine Use and Side Effects',
@@ -1462,32 +1586,117 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  43: {
+  47: {
     slide_type: 'info',
     header: {
-      header: 'What other ingredients are in cigarettes?',
+      header: 'Opioids: Heroin/Fentanyl',
       sub_header: null,
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     },
     content: {
       0: {
         paragraph: {
-          0: 'Unlike the food we eat, cigarettes don\'t label ingredients. Manufacturers may add hundreds of ingredients to a cigarette. These make a cigarette more addictive, and are often toxic!',
-          1: 'Below are some of the things you could be ingesting.'
+          0: 'Heroin is an opioid that comes from the opium poppy plant. It is super addictive and often used illegally to produce euphoria. People usually inject, sniff, snort, or smoke heroin.',
+          1: 'Fentanyl is a synthetic opioid made in labs. It can be prescribed for pain, but is often made illegally and sold as a street drug in powder or pill form.',
+          2: 'Fentanyl is 50 to 100 times more potent than morphine, which can lead to dangerous and fatal consequences!'
         }
       },
       1: {
         image: {
-          src: 'images/comparisonModule/comp_03.png',
-          alt: 'insomnia, liver disease, nausea & vomiting, mental disorder, kidney disease, severe itching, constipation, going on the nod',
-          mobile_size: '1/2',
-          tablet_size: '2/3',
-          desktop_size: '2/3'
+          src: 'images/illicitDrugsModule/ill_s15_01.jpg',
+          alt: 'heroin'
         }
       }
     }
   },
-  44: {
+  48: {
+    slide_type: 'info',
+    header: {
+      header: 'Side Effects of Heroin and Fentanyl',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'People who use heroin or fentanyl over the long term may develop  numerous  side effects.',
+          1: 'Swipe the cards below to learn more'
+        }
+      },
+      1: {
+        carousel: {
+          0: {
+            src: 'images/illicitDrugsModule/ill_s17_01.png',
+            alt: 'insomnia',
+            y_position: null
+          },
+          1: {
+            src: 'images/illicitDrugsModule/ill_s17_02.png',
+            alt: 'constipation',
+            y_position: null
+          },
+          2: {
+            src: 'images/illicitDrugsModule/ill_s17_03.png',
+            alt: 'liver disease',
+            y_position: null
+          },
+          3: {
+            src: 'images/illicitDrugsModule/ill_s17_04.png',
+            alt: 'kidney disease',
+            y_position: null
+          },
+          4: {
+            src: 'images/illicitDrugsModule/ill_s17_05.png',
+            alt: 'mental disorders',
+            y_position: null
+          },
+          5: {
+            src: 'images/illicitDrugsModule/ill_s17_06.png',
+            alt: 'nausea & vomiting',
+            y_position: null
+          },
+          6: {
+            src: 'images/illicitDrugsModule/ill_s17_07.png',
+            alt: 'losing conciousness',
+            y_position: null
+          },
+          7: {
+            src: 'images/illicitDrugsModule/ill_s17_08.png',
+            alt: 'severe itching',
+            y_position: null
+          }
+        }
+      }
+    }
+  },
+  49: {
+    slide_type: 'info',
+    header: {
+      header: 'Injection Drug Use, HIV, and Hepatitis',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'People who inject drugs like cocaine & heroin are also at high risk for HIV and Hep-C. This happens from sharing needles or other injection drug use equipment. Or from unprotected sex while under the influence of these drugs.'
+        }
+      },
+      1: {
+        image: {
+          src: 'images/illicitDrugsModule/ill_s20_01.png',
+          alt: 'syringe',
+          size: 'symbol'
+        }
+      },
+      2: {
+        paragraph: {
+          0: 'For information about our free HIV/Hep-C rapid testing services on campus, please visit the iSTART website.'
+        }
+      }
+    }
+  },
+  50: {
     slide_type: 'inputComparison',
     header: {
       header: 'What\'s your guess?',
@@ -1520,7 +1729,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  45: {
+  51: {
     slide_type: 'inputPieChart',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -1528,7 +1737,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  46: {
+  52: {
     slide_type: 'info',
     header: {
       header: 'Saying "No"',
@@ -1544,7 +1753,7 @@ export const comparisonModuleSlides = {
       1: {
         list_element: [
           '"Thanks, but I\'ve got a ton of work to do later."',
-          '"No thanks, I\'m taking medication that I cannot drink/smoke/cobine other drugs with."',
+          '"No thanks, I\'m taking medication that I cannot drink/smoke/combine other drugs with."',
           '"I\'m drinking tonight. (You can also offer to be the designated driver!)"',
           '"I have a game/practice tomorrow."',
           '"I\'m OK for now!" (For alcohol: you can BYOC (bring your own cup) and keep it filled with something other than alcohol!)',
@@ -1569,7 +1778,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  47: {
+  53: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -1592,7 +1801,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  48: {
+  54: {
     slide_type: 'info',
     header: {
       header: 'Physical Activities',
@@ -1614,7 +1823,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  49: {
+  55: {
     slide_type: 'info',
     header: {
       header: 'Social Activities',
@@ -1648,7 +1857,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  50: {
+  56: {
     slide_type: 'cardFlip',
     header: {
       header: 'Mind-Body Activities',
@@ -1698,7 +1907,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  51: {
+  57: {
     slide_type: 'info',
     header: {
       header: 'Go beyond yourself!',
@@ -1710,7 +1919,7 @@ export const comparisonModuleSlides = {
         paragraph: {
           0: 'If you\'re in relationships with friends who promote unhealthy behaviors, reach out to others who are supportive and encourage a healthy lifestyle.',
           1: 'Or, if you\'re caught up in the stress of your own life, broaden your perspective by volunteering! It helps to do something meaningful for others.',
-          2: '<b>Unified We Serve</b>, is a volunteer program at CSUN that serves the CSUN and surrounding community.',
+          2: '<b>Unified We Serve</b> is a volunteer program at CSUN that serves the CSUN and surrounding community.',
           3: 'Curious? Find the link in the resources in the App menu.'
         }
       },
@@ -1722,7 +1931,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  52: {
+  58: {
     slide_type: 'info',
     header: {
       header: 'Be Well!',
@@ -1744,7 +1953,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  53: {
+  59: {
     slide_type: 'finalSlide',
     header: {
       header: null
@@ -1753,7 +1962,7 @@ export const comparisonModuleSlides = {
       0: {
         paragraph: {
           0: 'Thanks for completing this module.',
-          2: 'You will receive an email from iSTART within the next couple of days with $15 Amazon.com gift card.'
+          2: 'You will receive an email from iSTART within the next couple of days with a $15 Amazon.com gift card.'
         }
       }
     }
