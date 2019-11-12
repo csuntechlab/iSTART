@@ -553,16 +553,20 @@ export const illicitDrugsModuleSlides = {
   },
   // slide 18
   15: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'The Opioid Epidemic',
       sub_header: 'You\'ve probably heard about the U.S. opioid epidemic. Watch the quick video below to learn more.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: '23tWiamRf6g',
-      video_length: (60000 / 2) + 5000,
-      caption: null
+      0: {
+        video: {
+          video_id: '23tWiamRf6g',
+          video_length: (60000 / 2) + 5000,
+          caption: null
+        }
+      }
     }
   },
   // slide 19

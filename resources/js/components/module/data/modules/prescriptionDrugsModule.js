@@ -142,16 +142,20 @@ export const prescriptionDrugsModuleSlides = {
   },
   // Slide 7
   5: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'Stimulant Abuse',
       sub_header: 'Some students misuse Adderall to study and increase focus, but misusing a medication intended for someone with ADHD can have negative consequences.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: 'TDjluZ-r_pM',
-      video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+      0: {
+        video: {
+          video_id: 'TDjluZ-r_pM',
+          video_length: (30000 / 2) + 5000,
+          caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+        }
+      }
     }
   },
   // Slide 8
@@ -245,16 +249,20 @@ export const prescriptionDrugsModuleSlides = {
   },
   // Slide 11
   9: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: ' Opioid Abuse',
       sub_header: 'Some people might think Rx opioids are safer than alcohol or illegal drugs, but the truth is these opioids can act just like heroin!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: 'dbk0Umy_46g',
-      video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+      0: {
+        video: {
+          video_id: 'dbk0Umy_46g',
+          video_length: (30000 / 2) + 5000,
+          caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+        }
+      }
     }
   },
   // Slide 12
@@ -736,16 +744,20 @@ export const prescriptionDrugsModuleSlides = {
   },
   // Slide 24
   20: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'Safe Medication Practices',
       sub_header: 'When it comes to Rx drugs, it is extremely important to practice safe use and to know how to safely store and dispose them.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: 'C8cxGuEjRhQ',
-      video_length: (30000 / 2) + 5000,
-      caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+      0: {
+        video: {
+          video_id: 'C8cxGuEjRhQ',
+          video_length: (30000 / 2) + 5000,
+          caption: 'Credit: <a href="https://www.generationrx.org/" target="_blank">generationrx.org</a>'
+        }
+      }
     }
   },
   // Slide 25

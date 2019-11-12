@@ -15,11 +15,11 @@
           </div>
         </div>
         <template v-for="(element, currentSlideIndex) in currentSlideData.content">
-          <info-paragraph
+          <paragraph
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].paragraph"
             :paragraph="currentSlideData.content[`${currentSlideIndex}`].paragraph"/>
-          <info-photo
+          <photo
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
@@ -37,15 +37,15 @@
 <script>
 import { mapGetters } from 'vuex'
 
-import InfoParagraph from './info/InfoParagraph'
-import InfoPhoto from './info/InfoPhoto'
+import Paragraph from './shared/Paragraph'
+import Photo from './shared/Photo'
 import SelfAssessmentQuestion from './selfAssessment/SelfAssessmentQuestion'
 
 export default {
   components: {
     SelfAssessmentQuestion,
-    InfoParagraph,
-    InfoPhoto
+    Paragraph,
+    Photo
   },
 
   computed: {

@@ -13,7 +13,6 @@
         <self-assessment v-if="currentSlideData.slide_type === 'selfAssessment'" :key="currentSlideNumber"/>
         <self-assessment-results v-if="currentSlideData.slide_type === 'selfAssessmentResults'" :key="currentSlideNumber"/>
         <wellness-goal v-if="currentSlideData.slide_type==='wellnessGoal'" :key="currentSlideNumber"/>
-        <video-template v-if="currentSlideData.slide_type === 'video'" :key="currentSlideNumber"/>
         <final-slide v-if="currentSlideData.slide_type==='finalSlide'" :key="currentSlideNumber"/>
       </div>
     </main>
@@ -43,7 +42,6 @@ import PieChartResults from './../components/module/templates/PieChartResults'
 import SelfAssessment from './../components/module/templates/SelfAssessment'
 import SelfAssessmentResults from './../components/module/templates/SelfAssessmentResults'
 import WellnessGoal from './../components/module/templates/WellnessGoal'
-import VideoTemplate from './../components/module/templates/Video'
 
 export default {
   components: {
@@ -59,8 +57,7 @@ export default {
     PieChartResults,
     SelfAssessment,
     SelfAssessmentResults,
-    WellnessGoal,
-    VideoTemplate
+    WellnessGoal
   },
 
   data () {
