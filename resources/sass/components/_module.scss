@@ -15,6 +15,7 @@
 
     &__content {
         min-height: calc(100vh - 8.25rem);
+        display: flex;
     }
 
     &__wrapper {
