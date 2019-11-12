@@ -1,6 +1,6 @@
 <template>
   <div class="video-template justify-content-center mb-5 row">
-    <div class="video-template__video col-12 col-md-10">
+    <div class="video-template__video col-12 col-md-10 p-0">
       <div class="embed-responsive embed-responsive-16by9">
         <youtube :video-id="video.video_id" player-width="100%" @ended="allowContinue" :player-vars="{autoplay: 1, modestbranding: 1, rel: 0, cc_load_policy: 1, controls: 0, disablekb: 1}"></youtube>
       </div>
