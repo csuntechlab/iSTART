@@ -10,15 +10,14 @@
         <div class="col-12">
           <form onsubmit="return false">
             <ol class="row" novalidate="true">
-              <input-response v-for="(element, index) in currentSlideData.content.questions"
+              <pie-chart-input v-for="(element, index) in currentSlideData.content.questions"
                 :key="`${index}`"
                 :question="element.question"
                 :questionIndex="index"
                 :totalQuestions="Object.keys(currentSlideData.content.questions).length"
                 :hasResponded="element.hasResponded"
                 :isValidated="element.isValidated"
-                :object="element">
-              </input-response>
+                :object="element"/>
             </ol>
           </form>
         </div>
@@ -29,11 +28,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import InputResponse from './../templates/input/InputResponse'
+import PieChartInput from './../templates/pieChart/PieChartInput'
 
 export default {
   components: {
-    InputResponse
+    PieChartInput
   },
 
   computed: {

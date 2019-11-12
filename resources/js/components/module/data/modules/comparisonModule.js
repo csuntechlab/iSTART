@@ -197,7 +197,7 @@ export const comparisonModuleSlides = {
     }
   },
   7: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -230,7 +230,7 @@ export const comparisonModuleSlides = {
     }
   },
   8: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -530,7 +530,7 @@ export const comparisonModuleSlides = {
     }
   },
   16: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -549,7 +549,7 @@ export const comparisonModuleSlides = {
     }
   },
   17: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -707,7 +707,7 @@ export const comparisonModuleSlides = {
             question: null
           },
           back: {
-            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
+            description: 'The filler is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
@@ -859,7 +859,7 @@ export const comparisonModuleSlides = {
           'Cancer causing chemicals'
         ]
       },
-      2:{
+      2: {
         paragraph: {
           0: 'It\'s hard to know what ingredients are inside vape pens and e-cigs. Once those ingredients are heated and ingested, the toxins we are exposed to become even more harmful!'
         }
@@ -879,7 +879,7 @@ export const comparisonModuleSlides = {
     }
   },
   27: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -912,7 +912,7 @@ export const comparisonModuleSlides = {
     }
   },
   28: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -1206,7 +1206,7 @@ export const comparisonModuleSlides = {
     }
   },
   35: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'What percent of CSUN students do you think took prescription drugs without a prescription/or in a way not prescribed to them in the past year?',
@@ -1246,7 +1246,7 @@ export const comparisonModuleSlides = {
     }
   },
   36: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Here are the results',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -1358,7 +1358,7 @@ export const comparisonModuleSlides = {
         paragraph: {
           0: 'Ecstasy, known as MDMA or <i>molly</i>, is a synthetic drug that acts as a stimulant and hallucinogen.',
           1: 'It is most often abused by teens and college-age young adults, and is mainly taken in pill or powder form while at raves, clubs, & concerts.',
-          2: 'Although people believe MDMA is a “pure” and safe drug, the MDMA sold on the street often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all!',
+          2: 'Although people believe MDMA is a “pure” and safe drug, the MDMA sold on the street often contains other drugs like meth, bath salts, amphetamine, and more. In fact, some pills may not contain any MDMA at all!'
         }
       },
       1: {
@@ -1441,7 +1441,7 @@ export const comparisonModuleSlides = {
           3: 'Spice, unlike natural cannabis, is NOT legal in California!'
         }
       },
-      1:{
+      1: {
         image: {
           src: 'images/illicitDrugsModule/ill_s08_01.jpg',
           alt: 'synthetic marijuana'
@@ -1497,7 +1497,7 @@ export const comparisonModuleSlides = {
       0: {
         paragraph: {
           0: 'Cocaine is considered one of the top five drugs used at college parties. It is a stimulant drug that can be super addictive and extremely dangerous!',
-          1: 'Be careful! Although using cocaine can cause euphoria, the feeling is short lived (5-30 min!) – and may lead to repeated use and high risk for addiction.',
+          1: 'Be careful! Although using cocaine can cause euphoria, the feeling is short lived (5-30 min!) – and may lead to repeated use and high risk for addiction.'
         }
       },
       1: {
@@ -1697,7 +1697,7 @@ export const comparisonModuleSlides = {
     }
   },
   50: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: 'During the last 30 days, how many CSUN students do you think used each of the following illicit drugs?',
@@ -1730,7 +1730,7 @@ export const comparisonModuleSlides = {
     }
   },
   51: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compared to the actual percentages from the CSUN National College Health Assessment survey.',

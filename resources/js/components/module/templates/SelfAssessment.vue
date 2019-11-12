@@ -23,7 +23,7 @@
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
-          <multi-quiz-question
+          <self-assessment-question
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].quiz"
             :quiz="currentSlideData.content[`${currentSlideIndex}`].quiz"
@@ -39,13 +39,13 @@ import { mapGetters } from 'vuex'
 
 import InfoParagraph from './info/InfoParagraph'
 import InfoPhoto from './info/InfoPhoto'
-import MultiQuizQuestion from './quiz/MutiQuizQuestion'
+import SelfAssessmentQuestion from './selfAssessment/SelfAssessmentQuestion'
 
 export default {
   components: {
+    SelfAssessmentQuestion,
     InfoParagraph,
-    InfoPhoto,
-    MultiQuizQuestion
+    InfoPhoto
   },
 
   computed: {

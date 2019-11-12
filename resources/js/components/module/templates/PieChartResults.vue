@@ -15,16 +15,14 @@
             <p class="module-text__caption">{{ element.question }}</p>
           </div>
           <div :key="index + '-chart1'" class="col-6 py-1 px-lg-5">
-            <input-pie-chart-legend chart-id="one"
+            <pie-chart-legend chart-id="one"
               :response="element.userResponse"
-              :sources="element.answer">
-            </input-pie-chart-legend>
+              :sources="element.answer"/>
           </div>
           <div :key="index + '-chart2'" class="col-6 py-1 px-lg-5">
-            <input-pie-chart-legend chart-id="two"
+            <pie-chart-legend chart-id="two"
               :response="element.userResponse"
-              :sources="element.answer">
-            </input-pie-chart-legend>
+              :sources="element.answer"/>
           </div>
         </template>
       </div>
@@ -35,12 +33,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
-import InputPieChartLegend from './../templates/input/InputPieChartLegend'
+import PieChartLegend from './../templates/pieChart/PieChartLegend'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
   components: {
-    InputPieChartLegend
+    PieChartLegend
   },
 
   computed: {

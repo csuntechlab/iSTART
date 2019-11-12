@@ -357,7 +357,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 11
   9: {
-    slide_type: 'inputComparison',
+    slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
       sub_header: null,
@@ -377,7 +377,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 12
   10: {
-    slide_type: 'inputPieChart',
+    slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
       sub_header: 'Let’s see how your answers compare to the actual percentages from the CSUN National College Health Assessment survey.',
@@ -409,7 +409,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 14
   12: {
-    slide_type: 'multiQuizQuestion',
+    slide_type: 'selfAssessment',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -484,7 +484,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 15
   13: {
-    slide_type: 'multiQuizQuestionResults',
+    slide_type: 'selfAssessmentResults',
     header: {
       header: 'Self-Assessment',
       sub_header: null,
@@ -1143,7 +1143,7 @@ export const marijuanaModuleSlides = {
   },
   // slide 30
   29: {
-    slide_type: 'emailForm',
+    slide_type: 'wellnessGoal',
     header: {
       header: 'Set a wellness goal!',
       sub_header: 'Now is a great time to set a wellness goal to naturally increase your dopamine!​&nbsp;Or, If you use marijuana, what are some steps that you can take to reduce use, or use more responsibly?',

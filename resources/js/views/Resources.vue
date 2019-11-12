@@ -1,5 +1,5 @@
 <template>
-  <div class="resource-page container">
+    <div class="resource-page container">
         <navbar :displayCurrentPage="$route.name" />
         <main class="resource-page__content">
             <div class="resource-page__wrapper">

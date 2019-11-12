@@ -3,7 +3,6 @@ import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Module from './views/Module.vue'
 // import Error from './views/Error.vue'
-import Schedule from './views/Schedule.vue'
 import About from './views/About.vue'
 import Resources from './views/Resources.vue'
 import Contact from './views/Contact.vue'
@@ -37,13 +36,6 @@ export default [
     component: Module,
     // meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
     meta: { title: 'iSTART | Modules' }
-  },
-  {
-    path: '/schedule',
-    name: 'Schedule',
-    component: Schedule,
-    // meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Schedule' }
   },
   {
     path: '/about',
