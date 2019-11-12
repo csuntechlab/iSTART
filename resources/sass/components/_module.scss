@@ -20,6 +20,7 @@
 
     &__wrapper {
         @extend %content-wrapper-gutters;
+        width: 100%;
     }
 
     &-content {

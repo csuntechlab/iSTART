@@ -15,11 +15,11 @@
           </div>
         </div>
         <template v-for="(element, currentSlideIndex) in currentSlideData.content">
-          <info-paragraph
+          <paragraph
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].paragraph"
             :paragraph="currentSlideData.content[`${currentSlideIndex}`].paragraph"/>
-          <info-photo
+          <photo
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
@@ -44,14 +44,14 @@
 import { mapGetters, mapActions } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
 
-import InfoParagraph from './info/InfoParagraph'
-import InfoPhoto from './info/InfoPhoto'
+import Paragraph from './shared/Paragraph'
+import Photo from './shared/Photo'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
   components: {
-    InfoParagraph,
-    InfoPhoto
+    Paragraph,
+    Photo
   },
 
   computed: {

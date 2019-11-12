@@ -521,16 +521,20 @@ export const marijuanaModuleSlides = {
   },
   // slide 16
   14: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'Risks of Marijuana Use',
       sub_header: 'Watch this video to learn about the risks of Marijuana use.',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: 'fMsypYm9Kho',
-      video_length: (30000 / 2) + 5000,
-      caption: null
+      0: {
+        video: {
+          video_id: 'fMsypYm9Kho',
+          video_length: (30000 / 2) + 5000,
+          caption: null
+        }
+      }
     }
   },
   // slide 17

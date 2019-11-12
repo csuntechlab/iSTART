@@ -8,17 +8,15 @@
     <div class="row">
       <div class="col-12">
         <p v-if="currentSlideData.header.sub_header" class="module-text__sub-header"> {{ currentSlideData.header.sub_header }} </p>
-        <info-photo v-for="(element, id) in currentSlideData.content.images"
+        <photo v-for="(element, id) in currentSlideData.content.images"
           :key="`${id}-${element.id}`"
-          :image="element">
-        </info-photo>
+          :image="element"/>
         <quiz-question  v-for="(element, id) in currentSlideData.content.questions"
           :object="element"
           :options="element.options"
           :answer="element.answer"
           :index="id"
-          :key="id">
-        </quiz-question>
+          :key="id"/>
       </div>
     </div>
   </div>
@@ -27,12 +25,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import QuizQuestion from './quiz/QuizQuestion'
-import InfoPhoto from './info/InfoPhoto'
+import Photo from './shared/Photo'
 
 export default {
   components: {
     QuizQuestion,
-    InfoPhoto
+    Photo
   },
 
   computed: {

@@ -504,16 +504,20 @@ export const alcoholModuleSlides = {
   },
   // slide 14
   12: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'What type of drinker is Sarah?',
       sub_header: 'Watch this video to hear a story about Sarah’s week. Heads up: There\'s a quiz on the next slide!',
       tooltip: 'Finish the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: 'JfsqxIEQk6U',
-      video_length: (30000 / 2) + 5000,
-      caption: null
+      0: {
+        video: {
+          video_id: 'JfsqxIEQk6U',
+          video_length: (30000 / 2) + 5000,
+          caption: null
+        }
+      }
     }
   },
   // slide 15
@@ -609,16 +613,20 @@ export const alcoholModuleSlides = {
   },
   // slide 16
   14: {
-    slide_type: 'video',
+    slide_type: 'info',
     header: {
       header: 'Binge Drinking',
       sub_header: null,
       tooltip: 'Watch the video or await the allotted time to proceed to the next slide'
     },
     content: {
-      video_id: '5jNEVGj6gS0',
-      video_length: (122400 / 2) + 5000,
-      caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drinks in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+      0: {
+        video: {
+          video_id: '5jNEVGj6gS0',
+          video_length: (122400 / 2) + 5000,
+          caption: 'Drinking with friends at parties can be loads of fun – but if you\'re feeling like you\'re on the slippery binge road (5+ drinks in 2 hours for guys or 4+ drinks in 2 hours for gals), then it\'s time to take a break from the booze!'
+        }
+      }
     }
   },
   // slide 17

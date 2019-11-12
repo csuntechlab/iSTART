@@ -15,31 +15,35 @@
           </div>
         </div>
         <template v-for="(element, currentSlideIndex) in currentSlideData.content">
-          <info-paragraph
+          <paragraph
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].paragraph"
             :paragraph="currentSlideData.content[`${currentSlideIndex}`].paragraph"/>
-          <info-photo
+          <photo
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].image"
             :image="currentSlideData.content[`${currentSlideIndex}`].image"/>
-          <info-photo-grid
+          <photo-grid
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].image_grid"
             :image_grid="currentSlideData.content[`${currentSlideIndex}`].image_grid"
             :content_alignment="currentSlideData.content[`${currentSlideIndex}`].image_grid_align_content"/>
-          <info-photo-list
-            :key="`${currentSlideIndex}`"
-            v-if="currentSlideData.content[`${currentSlideIndex}`].photo_list"
-            :listItems="currentSlideData.content[`${currentSlideIndex}`].photo_list"/>
-          <info-carousel
-            :key="`${currentSlideIndex}`"
-            v-if="currentSlideData.content[`${currentSlideIndex}`].carousel"
-            :images="currentSlideData.content[`${currentSlideIndex}`].carousel"/>
-          <info-list
+          <list
             :key="`${currentSlideIndex}`"
             v-if="currentSlideData.content[`${currentSlideIndex}`].list_element"
             :listItems="currentSlideData.content[`${currentSlideIndex}`].list_element"/>
+          <list-photo
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].photo_list"
+            :listItems="currentSlideData.content[`${currentSlideIndex}`].photo_list"/>
+          <carousel
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].carousel"
+            :images="currentSlideData.content[`${currentSlideIndex}`].carousel"/>
+          <video-playback
+            :key="`${currentSlideIndex}`"
+            v-if="currentSlideData.content[`${currentSlideIndex}`].video"
+            :video="currentSlideData.content[`${currentSlideIndex}`].video"/>
         </template>
       </div>
     </div>
@@ -49,22 +53,24 @@
 <script>
 import { mapGetters } from 'vuex'
 import { awaitTimeBeforeContinue } from './../../../mixins/awaitTimeBeforeContinue'
-import InfoParagraph from './info/InfoParagraph'
-import InfoCarousel from './info/InfoCarousel'
-import InfoPhoto from './info/InfoPhoto'
-import InfoPhotoGrid from './info/infoPhotoGrid'
-import InfoList from './info/InfoList'
-import InfoPhotoList from './info/InfoPhotoList'
+import Paragraph from './shared/Paragraph'
+import Photo from './shared/Photo'
+import PhotoGrid from './shared/PhotoGrid'
+import List from './shared/List'
+import ListPhoto from './shared/ListPhoto'
+import Carousel from './shared/Carousel'
+import VideoPlayback from './shared/VideoPlayback'
 
 export default {
   mixins: [awaitTimeBeforeContinue],
   components: {
-    InfoCarousel,
-    InfoParagraph,
-    InfoPhoto,
-    InfoPhotoGrid,
-    InfoList,
-    InfoPhotoList
+    Paragraph,
+    Photo,
+    PhotoGrid,
+    List,
+    ListPhoto,
+    Carousel,
+    VideoPlayback
   },
 
   computed: {
