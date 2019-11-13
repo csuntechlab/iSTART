@@ -19,8 +19,18 @@
     margin: 0;
   }
 
+  &__button {
+    color: $primaryColor;
+    font-weight: bold;
+    padding: 0.5rem 0;
+  }
+
   &__button-accept {
     width: 100%;
     margin-top: 0.75rem;
+  }
+
+  &__policy {
+    padding: 0.5rem 1rem;
   }
 }

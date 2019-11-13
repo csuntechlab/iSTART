@@ -4,6 +4,13 @@
 	* i.e. &--active, scrollbar, media queries, etc.
 */
 
+a{
+	color: $link-text-color;
+	&:hover{
+		color: $primaryColor;
+	}
+}
+
 .pointer {
 	cursor: pointer;
 }

@@ -1,4 +1,8 @@
 .introSlide {
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+
   &__image-container {
     height: calc(100vh - 14rem);
     min-height: 25rem;
@@ -19,6 +23,7 @@
     bottom: 0;
     background-color: $introSlide--backgroundColor;
     padding: 2rem 0;
+    height: 100%;
     @include media-breakpoint-down(md) {
       padding-left: 0;
       padding-right: 0;

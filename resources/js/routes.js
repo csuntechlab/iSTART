@@ -3,7 +3,9 @@ import Logout from './views/Logout.vue'
 import Dashboard from './views/Dashboard.vue'
 import Module from './views/Module.vue'
 // import Error from './views/Error.vue'
-import Schedule from './views/Schedule.vue'
+import About from './views/About.vue'
+import Resources from './views/Resources.vue'
+import Contact from './views/Contact.vue'
 import Admin from './views/Admin.vue'
 export default [
   {
@@ -36,11 +38,25 @@ export default [
     meta: { title: 'iSTART | Modules' }
   },
   {
-    path: '/schedule',
-    name: 'Schedule',
-    component: Schedule,
-    // meta: { title: 'iSTART | Schedule', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Schedule' }
+    path: '/about',
+    name: 'About',
+    component: About,
+    // meta: { title: 'iSTART | About', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | About' }
+  },
+  {
+    path: '/resources',
+    name: 'Resources',
+    component: Resources,
+    // meta: { title: 'iSTART | Resources', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Resources' }
+  },
+  {
+    path: '/contact',
+    name: 'Contact Us',
+    component: Contact,
+    // meta: { title: 'iSTART | Contact Us', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Contact Us' }
   },
   {
     path: '/admin',

@@ -34,25 +34,6 @@
                 }
             }
         }
-
-        &__schedule {
-            &-button {
-                display: inline-block;
-                text-align: right;
-
-                &  * {
-                color: $black;
-
-                &:hover {
-                    text-decoration: none;
-                }
-                }
-            }
-
-            &-text {
-                font-weight: normal;
-            }
-        }
     }
 
     &-module {
