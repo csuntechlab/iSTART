@@ -29,6 +29,14 @@ export default {
       },
       options1: {
         tooltips: {
+          enabled: true,
+          custom: function (tooltipItem) {
+            if (tooltipItem.dataPoints) {
+              if (tooltipItem.dataPoints[0].index !== 0) {
+                tooltipItem.backgroundColor = 'rgba(0, 0, 0, 0)'
+              }
+            }
+          },
           callbacks: {
             label: function (tooltipItem, data) {
               if (tooltipItem.index === 0) {
@@ -56,6 +64,13 @@ export default {
       options2: {
         tooltips: {
           enabled: true,
+          custom: function (tooltipItem) {
+            if (tooltipItem.dataPoints) {
+              if (tooltipItem.dataPoints[0].index !== 0) {
+                tooltipItem.backgroundColor = 'rgba(0, 0, 0, 0)'
+              }
+            }
+          },
           callbacks: {
             label: function (tooltipItem, data) {
               if (tooltipItem.index === 0) {
