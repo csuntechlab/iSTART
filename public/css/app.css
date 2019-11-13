@@ -11711,6 +11711,7 @@ body {
 }
 
 .module-text__list,
+.module-quiz__text,
 .about-page__text,
 .resource-page__text,
 .contact-page__text,
@@ -11723,6 +11724,7 @@ body {
 
 @media (max-width: 767.98px) {
   .module-text__list,
+  .module-quiz__text,
   .about-page__text,
   .resource-page__text,
   .contact-page__text,
@@ -11731,6 +11733,7 @@ body {
   }
 }
 
+.module-quiz__text,
 .about-page__text,
 .resource-page__text,
 .contact-page__text,
@@ -13024,7 +13027,6 @@ a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   cursor: pointer;
-  height: 100%;
 }
 
 .module-quiz__option--correct {
@@ -13037,6 +13039,7 @@ a:hover {
 
 .module-quiz__option-container {
   margin: 0.5rem 0;
+  height: intrinsic;
 }
 
 .module-quiz__option-indicator {
@@ -13624,6 +13627,9 @@ a:hover {
   margin: 0 1rem;
   max-width: 32rem;
   border: 0.1rem #CECECE solid;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .final-slide-card__icon {

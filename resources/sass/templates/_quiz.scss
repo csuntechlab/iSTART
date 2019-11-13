@@ -8,12 +8,15 @@
         padding-right: 2.75rem;
     }
 
+    &__text{
+        @extend %default-copy-text-style-on-white-with-margin;
+    }
+
     &__option {
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
         cursor: pointer;
-        height: 100%;
 
         &--correct {
             border-color: rgb(40,167,69);
@@ -25,6 +28,7 @@
 
         &-container {
             margin: 0.5rem 0;
+            height: intrinsic;
         }
 
         &-indicator {
