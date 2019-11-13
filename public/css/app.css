@@ -13027,6 +13027,10 @@ a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   cursor: pointer;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  background: white;
 }
 
 .module-quiz__option--correct {

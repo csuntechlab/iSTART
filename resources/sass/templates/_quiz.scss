@@ -17,6 +17,10 @@
         flex-flow: row;
         flex-wrap: wrap;
         cursor: pointer;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        background:$white;
 
         &--correct {
             border-color: rgb(40,167,69);
