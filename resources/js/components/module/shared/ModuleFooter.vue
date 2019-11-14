@@ -35,8 +35,13 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { idleTimeout } from './../../../mixins/idleTimeout'
 
 export default {
+  mixins: [
+    idleTimeout
+  ],
+
   computed: {
     ...mapGetters(
       [
@@ -56,6 +61,10 @@ export default {
         return false
       }
     }
+  },
+
+  updated () {
+    this.resetIdleTimer()
   },
 
   methods: {

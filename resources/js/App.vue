@@ -7,32 +7,45 @@
 
 <script>
 import CookiesNotification from './components/global/CookiesNotification'
-import { clearTimeout, setTimeout } from 'timers'
 import { mapActions, mapState } from 'vuex'
+import { idleTimeout } from './mixins/idleTimeout'
 
 export default {
+  mixins: [
+    idleTimeout
+  ],
+
   components: {
     CookiesNotification
   },
-  data () {
-    return {
-      timeout: null
-    }
-  },
+
   computed: {
     ...mapState({
       userObject: state => state.User.user
     })
   },
+
+  mounted () {
+    this.checkForCookies()
+    this.setIdleTimer()
+    this.userExists()
+  },
+
+  updated () {
+    this.resetIdleTimer()
+  },
+
   methods: {
     ...mapActions([
       'clearUserData'
     ]),
+
     userExists () {
       if (Object.keys(this.userObject).length === 0) {
         this.clearUserData()
       }
     },
+
     checkForCookies () {
       if (document.cookie.includes('userKey')) {
         if (this.$route.fullPath === '/login') {
@@ -41,29 +54,7 @@ export default {
       } else {
         this.$router.push({ name: 'Login' })
       }
-    },
-    checkUserInactivity () {
-      var idleTimeout = parseFloat(document.querySelector('meta[name=idle-timeout]').content)
-      this.timeout = setTimeout(() => {
-        this.clearUserData()
-      }, idleTimeout * 60 * 1000)
-      window.addEventListener('mousemove', this.resetTimer, { passive: true })
-      window.addEventListener('mousedown', this.resetTimer, { passive: true })
-      window.addEventListener('keypress', this.resetTimer, { passive: true })
-      window.addEventListener('DOMMouseScroll', this.resetTimer, { passive: true })
-      window.addEventListener('mousewheel', this.resetTimer, { passive: true })
-      window.addEventListener('touchmove', this.resetTimer, { passive: true })
-      window.addEventListener('MSPointerMove', this.resetTimer, { passive: true })
-    },
-    resetTimer () {
-      clearTimeout(this.timeout)
-      this.checkUserInactivity()
     }
-  },
-  mounted () {
-    this.checkForCookies()
-    this.checkUserInactivity()
-    this.userExists()
   }
 }
 </script>

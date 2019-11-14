@@ -19,28 +19,35 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
+import { idleTimeout } from './../mixins/idleTimeout'
 import XLSX from 'xlsx'
 import Participants from './../components/admin/Participants.vue'
 
 export default {
   name: 'admin',
-  mixins: [changeRouteTitle],
+  mixins: [
+    changeRouteTitle,
+    idleTimeout
+  ],
+
   data () {
     return {
       participants: [],
       incorrectFileType: false
     }
   },
+
   components: {
     Participants
   },
+
   computed: {
     ...mapGetters([
       'participantsWereSubmitted'
     ])
   },
+
   methods: {
     handleFileChange (event) {
       var files = event.target.files
@@ -48,12 +55,15 @@ export default {
         this.readFile(files[0])
       }
     },
+
     submitFile (event) {
       event.stopPropagation()
       event.preventDefault()
       this.$store.commit('PARTICIPANTS_WERE_SUBMITTED', null)
       this.$store.dispatch('verifyExcelSheet', this.participants)
+      this.resetIdleTimer()
     },
+
     readFile (file) {
       /* Boilerplate to set up FileReader */
       var reader = new FileReader()
@@ -78,6 +88,7 @@ export default {
       }
       reader.readAsBinaryString(file)
     },
+
     parseFile (excelSheetJSON) {
       var parsedExcelSheet = []
       for (var i = 1; i < excelSheetJSON.length; i++) {
@@ -89,6 +100,7 @@ export default {
       }
       return parsedExcelSheet
     },
+
     checkFileType (fileName) {
       var acceptedFileTypes = ['xlsx', 'xlsb', 'xlsm', 'xls', 'csv']
       var fileIsAccepted = false
