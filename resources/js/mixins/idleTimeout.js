@@ -14,12 +14,11 @@ export const idleTimeout = {
 
     setIdleTimer () {
       const idleTime = document.querySelector('meta[name=idle-timeout]').content
-      const parseTime = parseFloat(idleTime)
-      const roundedTime = Math.round(parseTime)
+      const parsedTime = parseFloat(idleTime)
 
       this.timeout = setTimeout(() => {
         this.clearUserData()
-      }, roundedTime * 60 * 1000)
+      }, parsedTime * 60 * 1000)
     },
 
     resetIdleTimer () {
