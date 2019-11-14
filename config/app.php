@@ -189,7 +189,7 @@ return [
         App\Providers\StudentRemovedFromStudyServiceProvider::class,
         App\Providers\EmailServiceProvider::class,
 
-        CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
+        // CSUNMetaLab\Authentication\Providers\AuthServiceProvider::class,
         CSUNMetaLab\ProxyPass\Providers\ProxyPassServiceProvider::class,
         CSUNMetaLab\ForceHttps\Providers\ForceHttpsServiceProvider::class,
 
