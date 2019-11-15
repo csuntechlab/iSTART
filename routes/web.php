@@ -28,7 +28,7 @@ Route::get('/send-mail-test','MailController@sendMail');
 Route::get('/send-student-removed-email', 'StudentRemovedFromStudyController@sendStudentRemovedMail');
 
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
-Route::get('/get-module-progress/{user_id}/{current_module}','ModuleProgressController@getModuleProgress');
+Route::post('/get-module-progress','ModuleProgressController@getModuleProgress');
 Route::post('/set-module-progress','ModuleProgressController@setModuleProgress');
 
 Route::post('/verify-excel-sheet', 'AdminController@checkEmailsInJson');
