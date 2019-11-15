@@ -1,15 +1,15 @@
 <template>
-<div class="control-group container">
-  <div class="row">
-    <div class="col-8 offset-2 text-center">
-      <div class="control-group__body">
-        <i class="control-group__icon fas fa-user"></i>
-        <div class="mt-3">
-          <p class="control-group__text">Thank you for participating.<br>
+<div class="dashboard-module--control container">
+  <div class="final-slide-card">
+    <i class="fas fa-user final-slide-card__icon"></i>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="final-slide-card__paragraph">
+          Thank you for participating.<br>
           You are part of the control group.<br>
           You will receive an email with further<br>
-          instructions.</p>
-        </div>
+          instructions.
+        </p>
       </div>
     </div>
   </div>
