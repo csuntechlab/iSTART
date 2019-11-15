@@ -5,11 +5,12 @@ namespace App\Models;
 use App\Models\User;
 
 use Illuminate\Database\Eloquent\Model;
- 
+
 class Participant extends Model
 {
     protected $table = 'participant';
     protected $primaryKey = 'user_id';
+    public $incrementing = false;
     public $timestamps = false;
     /**
      * The attributes that are mass assignable.
