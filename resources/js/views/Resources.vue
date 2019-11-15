@@ -26,7 +26,9 @@ import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
 
 export default {
   name: 'Resources',
-  mixins: [changeRouteTitle],
+  mixins: [
+    changeRouteTitle
+  ],
   components: {
     Navbar
   }

@@ -22,6 +22,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import { changeRouteTitle } from './../mixins/changeRouteTitle'
 import alcoholModuleSlides from './../components/module/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/module/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/module/data/modules/marijuanaModule'
@@ -44,6 +45,9 @@ import SelfAssessmentResults from './../components/module/templates/SelfAssessme
 import WellnessGoal from './../components/module/templates/WellnessGoal'
 
 export default {
+  mixins: [
+    changeRouteTitle
+  ],
   components: {
     Navbar,
     ModuleProgressBar,

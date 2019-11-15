@@ -19,8 +19,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-
 import { changeRouteTitle } from './../mixins/changeRouteTitle.js'
+
 import XLSX from 'xlsx'
 import Participants from './../components/admin/Participants.vue'
 

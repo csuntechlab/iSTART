@@ -52,9 +52,15 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import { changeRouteTitle } from './../mixins/changeRouteTitle'
 
 export default {
   name: 'Login',
+
+  mixins: [
+    changeRouteTitle
+  ],
+
   data () {
     return {
       userInfoForm: {
