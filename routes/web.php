@@ -11,15 +11,6 @@
 |
 */
 
-Route::get('/users', function () {
-    return App\Models\User::all();
-});
-
-Route::get('lol', function () {
-    DB::table('users')->where('email', 'brian.linggadjaja.785@my.csun.edu')->update(['email' => 'brianlinggadjaja98@gmail.com']);
-    return true;
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
