@@ -1,5 +1,9 @@
 <template>
     <div class="dashboard-module-wrap mt-3">
+      <div>
+        <button class="btn button-primary btn-lg" @click="this.getProgress">Get Module Progress</button>
+        <button class="btn button-primary btn-lg" @click="this.setProgress">Set Module Progress</button>
+      </div>
       <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
         <div @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
           <div class="row">
@@ -88,7 +92,6 @@ export default {
   mounted () {
     this.setModuleData(moduleData)
     this.resetScreenPosition()
-    this.testProgress()
   },
 
   methods: {
@@ -101,12 +104,6 @@ export default {
         'setProgress'
       ]
     ),
-
-    testProgress () {
-      this.getProgress()
-      this.setProgress()
-      this.getProgress()
-    },
 
     populateModule (index) {
       this.setCurrentModule(this.getModuleData[index].name)
