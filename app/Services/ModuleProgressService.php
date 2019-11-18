@@ -42,6 +42,7 @@ class ModuleProgressService implements ModuleProgressContract
                 'max_page' => $data['max_page']
             ]
         );
+        return response()->json(true);
     }
 
     public function moduleComplete($data){
