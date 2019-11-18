@@ -50,7 +50,7 @@ class ModuleProgressController extends Controller
             'max_page' => $request->max_page
         ];
 
-        $this->moduleProgressUtility->getModuleProgress($data);
+        return $this->moduleProgressUtility->setModuleProgress($data);
     }
     public function moduleComplete(Request $request){
 
