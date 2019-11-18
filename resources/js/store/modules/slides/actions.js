@@ -1,6 +1,41 @@
 import SlidesAPI from './../../../api/slides'
+import axios from 'axios'
 
 export default {
+  getProgress () {
+    axios.post('get-module-progress', {
+      user_id: 'members:000022575',
+      current_module: 'alcohol'
+    })
+      .then(
+        response => {
+          console.log('getProgress', response)
+        })
+      .catch(
+        error => {
+          console.error(error)
+        }
+      )
+  },
+
+  setProgress () {
+    axios.post('set-module-progress', {
+      user_id: 'members:000022575',
+      current_module: 'alcohol',
+      current_page: 20,
+      max_page: 20
+    })
+      .then(
+        response => {
+          console.log('setProgress', response)
+        })
+      .catch(
+        error => {
+          console.error(error)
+        }
+      )
+  },
+
   // Module Functionality
   setModuleData ({ commit }, payload) {
     commit('SET_MODULE_DATA', payload)

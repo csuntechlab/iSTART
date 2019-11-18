@@ -88,6 +88,7 @@ export default {
   mounted () {
     this.setModuleData(moduleData)
     this.resetScreenPosition()
+    this.testProgress()
   },
 
   methods: {
@@ -95,9 +96,17 @@ export default {
       [
         'setModuleData',
         'setCurrentModule',
-        'setModuleIndex'
+        'setModuleIndex',
+        'getProgress',
+        'setProgress'
       ]
     ),
+
+    testProgress () {
+      this.getProgress()
+      this.setProgress()
+      this.getProgress()
+    },
 
     populateModule (index) {
       this.setCurrentModule(this.getModuleData[index].name)
