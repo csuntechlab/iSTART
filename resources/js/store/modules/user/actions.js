@@ -18,6 +18,7 @@ export default {
             cookieExpirationDate.setMonth(cookieExpirationDate.getMonth() + 1)
             document.cookie = `userKey = ${cookieValue}; expires = ${cookieExpirationDate.toUTCString()};`
             commit('VERIFY_USER_DATA', response.data)
+            commit('SET_INITIAL_DATA_LOAD', true)
             if (response.data.isAdmin) {
               router.push({ name: 'Admin' })
             } else {
@@ -37,18 +38,20 @@ export default {
     router.push({ name: 'Login' })
     commit('CLEAR_USER_DATA')
   },
-  async verifyExcelSheet({commit}, payload) {
+
+  async verifyExcelSheet ({ commit }, payload) {
     return UserAPI.verifyExcelSheetAPI(payload)
-    .then(
-      response => {
-        const categorizedPartipants = response.data;
-        commit('SET_CATEGORIZED_PARTICIPANTS', categorizedPartipants);
-      }
-    ).catch(
-      failure => console.error(failure)
-    )
+      .then(
+        response => {
+          const categorizedPartipants = response.data
+          commit('SET_CATEGORIZED_PARTICIPANTS', categorizedPartipants)
+        }
+      ).catch(
+        failure => console.error(failure)
+      )
   },
-  async submitGoodParticipants({commit}, payload) {
+
+  async submitGoodParticipants ({ commit }, payload) {
     return UserAPI.submitGoodParticipantsAPI(payload).then(
       response => {
         commit('PARTICIPANTS_WERE_SUBMITTED', true)

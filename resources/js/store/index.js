@@ -9,10 +9,11 @@ Vue.use(Vuex)
 
 // MODULE MAP
 const store = new Vuex.Store({
+  namespaced: true,
   strict: process.env.NODE_ENV !== 'production',
   modules: {
-    User,
-    Slides
+    User: User,
+    Slides: Slides
   }
 })
 
