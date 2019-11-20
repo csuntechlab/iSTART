@@ -5,16 +5,14 @@
     </div>
     <div class="row">
       <div class="module-quiz__option-container col-sm-6 col-12" v-for="(element, optionIndex) in options" :key="optionIndex">
-        <button @click="showResponse(optionIndex)" :class="[(element.show && element.isAnswer ? 'module-quiz__option--correct' : '' ), (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : ''), 'module-quiz__option interactable-container']">
-          <div v-if="object.showResponse" :class="[(object.options[optionIndex].show ? 'module-quiz__option-indicator--active' : ''), 'module-quiz__option-indicator']">
-            <div v-if="element.isAnswer && element.show" class="module-quiz__option-indicator-container bg-success">
-              <i class="fa fa-check-circle"></i>
-            </div>
-            <div v-else-if="!element.isAnswer && element.show" class="module-quiz__option-indicator-container bg-danger">
-              <i class="fa fa-times-circle"></i>
-            </div>
-          </div>
-
+        <button
+          @click="showResponse(optionIndex)"
+          class="module-quiz__option"
+          :class="[(element.show && element.isAnswer ? 'module-quiz__option--correct' : '' ),
+                  (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : ''), '']"
+        >
+            <!-- <i v-if="element.isAnswer && element.show" class="fa fa-check-circle" style="color: blue; position: absolute; left: 1.5rem; top: 1rem;"></i>
+            <i v-else-if="!element.isAnswer && element.show" class="fa fa-times-circle" style="color: blue; position: absolute; left: 1.5rem; top: 1rem;"></i> -->
           <div :class="[(object.options[optionIndex].show ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
             <img v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
             <p v-if="element.text" v-html="element.text"></p>
