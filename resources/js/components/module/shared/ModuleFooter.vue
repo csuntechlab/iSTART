@@ -36,7 +36,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import { idleTimeout } from './../../../mixins/idleTimeout'
-// import SlidesAPI from './../../../api/slides'
+import SlidesAPI from './../../../api/slides'
 
 export default {
   mixins: [
@@ -86,7 +86,6 @@ export default {
       this.setSlideContentVisibility(false)
       this.resetSlideNavigation()
       this.storeModuleProgress()
-      console.log(this.currentSlideNumber, this.latestSlideNumber, this.totalSlides)
       this.navigateFromSlide('forward')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
@@ -100,20 +99,19 @@ export default {
       this.checkForVisitedSlide()
     },
 
-    /* storeModuleProgress () {
+    storeModuleProgress () {
       let userId = this.user.user_id
       let moduleName = this.getCurrentModule.toLowerCase()
       let maxPage = this.totalSlides
       let currentSlideNumber = this.currentSlideNumber
       let latestSlideNumber = this.latestSlideNumber
-      let totalSlides = (this.totalSlides - 1)
 
-      if (currentSlideNumber = latestSlideNumber) {
+      if (currentSlideNumber === latestSlideNumber) {
         let payload = {
           userId: userId,
           moduleName: moduleName,
           currentPage: latestSlideNumber,
-          maxPage: totalSlides
+          maxPage: maxPage
         }
 
         return SlidesAPI.setModuleProgressAPI(payload)
@@ -122,7 +120,7 @@ export default {
               console.error(error)
             })
       }
-    }, */
+    },
 
     checkForStart () {
       if (this.currentSlideNumber === 0) {
