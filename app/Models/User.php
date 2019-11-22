@@ -41,4 +41,9 @@ class User extends MetaUser
         return $this->hasOne('App\Models\UserGroup');
     }
 
+    public function moduleProgress()
+    {
+        return $this->hasMany('App\Models\ModuleProgress');
+    }
+
 }
