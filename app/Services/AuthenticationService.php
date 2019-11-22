@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Services;
-use App\Models\UserGroup;
+use App\Models\ModuleProgress;
 use App\Contracts\AuthenticationContract;
 use App\Contracts\ParticipantContract;
 use App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface;
 use App\Contracts\UserGroupContract;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -42,6 +43,15 @@ class AuthenticationService implements AuthenticationContract
             if($this->participantUtility->userHasParticipantId($user) == true){
                 $user['valid'] = '1';
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
+                if ($userGroup !== 'control') {
+                    $moduleProgress = ModuleProgress::create([
+                        'user_id' => $user['user_id'],
+                        'current_module' => '',
+                        'current_page' => 0,
+                        'max_page' => 0,
+                        'expiration_date' => Carbon::now()->addDays(env(EXPIRATION_DATE)),
+                    ]);
+                }
 
                 return [
                     'user_id' => $user['user_id'],
