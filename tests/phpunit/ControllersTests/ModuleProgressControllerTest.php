@@ -47,7 +47,6 @@ class ModuleProgressControllerTest extends TestCase
         $request = new Request();
         $request->replace([
             'user_id' => 'member:1123334',
-            'current_module' => 'alcohol'
         ]);
 
         $this->utility
@@ -55,31 +54,6 @@ class ModuleProgressControllerTest extends TestCase
             ->andReturn($data);
 
         $this->assertEquals($data, $this->ModuleProgressController->getModuleProgress($request));
-    }
-
-    /**
-     * @test
-     */
-    public function getModuleProgress_throws_a_ValidationException_if_request_is_missing_current_module()
-    {
-        $this->expectException(ValidationException::class);
-        $data = [
-            'user_id' => 'member:1123334',
-            'current_module' => 'alcohol',
-            'current_page' => 7,
-            'max_page' => 17
-        ];
-
-        $request = new Request();
-        $request->replace([
-            'user_id' => 'member:1123334',
-        ]);
-
-        $this->utility
-            ->shouldReceive('getModuleProgress')
-            ->andReturn($data);
-
-        $this->ModuleProgressController->getModuleProgress($request);
     }
 
     /**
@@ -97,7 +71,7 @@ class ModuleProgressControllerTest extends TestCase
 
         $request = new Request();
         $request->replace([
-            'current_module' => 'alcohol'
+            'replace_data' => 'replaced_data'
         ]);
 
         $this->utility
@@ -239,6 +213,6 @@ class ModuleProgressControllerTest extends TestCase
         SendReminderModuleEmail::dispatch($moduleComplete);
         Queue::assertPushed(SendReminderModuleEmail::class);
     }
-    
-    
+
+
 }

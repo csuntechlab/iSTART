@@ -44,7 +44,6 @@ class ModuleProgressSerivceTest extends TestCase
 
         $input_data = [
             'user_id' => '1',
-            'current_module' => 'drugs'
         ];
         $this->assertEquals($this->service->getModuleProgress($input_data), $return_data);
     }
