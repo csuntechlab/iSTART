@@ -157,7 +157,7 @@ class AuthenticationServiceTest extends TestCase
             'valid'=>'1',
             'user_group'=> 'intervention',
             'isAdmin' => false,
-            'expiration_date' => Carbon::now()->addDays(config('app.expiration_date'))->toDateTimeString(),
+            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
         ];
 
         $user = new User([

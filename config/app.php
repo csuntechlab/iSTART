@@ -133,7 +133,7 @@ return [
     |
     */
 
-    'expiration_date' => env('EXPIRATION_DATE', 1),
+    'days_to_expire' => env('DAYS_TO_EXPIRE', 1),
 
     /*
     |--------------------------------------------------------------------------

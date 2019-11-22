@@ -53,7 +53,7 @@ class AuthenticationService implements AuthenticationContract
                         'current_module' => '',
                         'current_page' => 0,
                         'max_page' => 0,
-                        'expiration_date' => Carbon::now()->addDays(config('app.expiration_date'))->toDateTimeString(),
+                        'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
                     ]);
                     $response['expiration_date'] = $moduleProgress->expiration_date;
                 }
