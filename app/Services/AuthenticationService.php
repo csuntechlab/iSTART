@@ -41,7 +41,11 @@ class AuthenticationService implements AuthenticationContract
             }
 
             if($this->participantUtility->userHasParticipantId($user) == true){
-                $user['valid'] = '1';
+                $response = [
+                    'user_id' => $user['user_id'],
+                    'valid' => '1',
+                    'isAdmin' => false
+                ];
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
                 if ($userGroup !== 'control') {
                     $moduleProgress = ModuleProgress::create([
@@ -49,16 +53,13 @@ class AuthenticationService implements AuthenticationContract
                         'current_module' => '',
                         'current_page' => 0,
                         'max_page' => 0,
-                        'expiration_date' => Carbon::now()->addDays(env(EXPIRATION_DATE)),
+                        'expiration_date' => Carbon::now()->addDays(config('app.expiration_date'))->toDateTimeString(),
                     ]);
+                    $response['expiration_date'] = $moduleProgress->expiration_date;
                 }
+                $response['user_group'] = $userGroup;
 
-                return [
-                    'user_id' => $user['user_id'],
-                    'valid' => $user['valid'],
-                    'isAdmin' => false,
-                    'user_group' => $userGroup
-                ];
+                return $response;
             } else{
                 return ['valid' => '0'];
             }

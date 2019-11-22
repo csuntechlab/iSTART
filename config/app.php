@@ -125,6 +125,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Module Expiration Date
+    |--------------------------------------------------------------------------
+    |
+    | This key is used by the reminder job to determine when to email the user
+    | and when the module has expired.
+    |
+    */
+
+    'expiration_date' => env('EXPIRATION_DATE', 1),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
