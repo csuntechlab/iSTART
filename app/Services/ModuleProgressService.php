@@ -14,18 +14,19 @@ class ModuleProgressService implements ModuleProgressContract
 
     public function getModuleProgress($data): array
     {
-        $response = [];
+        $response = [
+            'user_id' => $data['user_id'],
+            'current_module' => '',
+            'current_page' => 0,
+            'max_page' => ''
+        ];
         $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])
-                                            ->where('current_module',$data['current_module'])
                                             ->first();
         if ($moduleProgress !== null) {
-            $moduleProgress->toArray();
-            $response = [
-                'user_id' => $moduleProgress['user_id'],
-                'current_module' => $moduleProgress['current_module'],
-                'current_page' => $moduleProgress['current_page'],
-                'max_page' => $moduleProgress['max_page'],
-            ];
+            $response['user_id'] = $moduleProgress->user_id;
+            $response['current_module'] = $moduleProgress->current_module;
+            $response['current_page'] = $moduleProgress->current_page;
+            $response['max_page'] = $moduleProgress->max_page;
         }
         return $response;
     }
