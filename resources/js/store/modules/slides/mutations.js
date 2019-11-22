@@ -4,6 +4,40 @@ export default {
     state.moduleData = payload
   },
 
+  SET_INITIAL_DATA_LOAD (state, payload) {
+    state.isInitialDataLoad = payload
+  },
+
+  REQUEST_MODULE_PROGRESS (state, payload) {
+    let completedSlideNumber = (payload.completedSlideNumber + 1)
+    let maxSlideNumber = payload.maxSlideNumber
+
+    if (completedSlideNumber === undefined || completedSlideNumber === null) {
+      completedSlideNumber = 0
+    }
+
+    state.moduleData[payload.index].progress.current_slide = completedSlideNumber
+    state.moduleData[payload.index].progress.latest_slide = completedSlideNumber
+
+    if (maxSlideNumber === undefined || maxSlideNumber === null) {
+      state.moduleData[payload.index].progress.slide_percentage = 0
+    } else {
+      let slidePercentage = Math.floor((completedSlideNumber / maxSlideNumber) * 100)
+      state.moduleData[payload.index].progress.slide_percentage = slidePercentage
+    }
+
+    if (completedSlideNumber === 0) {
+      state.moduleData[payload.index].progress.is_start = true
+      state.moduleData[payload.index].progress.is_complete = false
+    } else if (completedSlideNumber === maxSlideNumber) {
+      state.moduleData[payload.index].progress.is_start = false
+      state.moduleData[payload.index].progress.is_complete = true
+    } else {
+      state.moduleData[payload.index].progress.is_start = false
+      state.moduleData[payload.index].progress.is_complete = false
+    }
+  },
+
   SET_MODULE_INDEX (state, payload) {
     state.currentModuleIndex = payload
   },

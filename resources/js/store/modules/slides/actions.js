@@ -6,6 +6,34 @@ export default {
     commit('SET_MODULE_DATA', payload)
   },
 
+  async requestModuleProgress ({ commit }, payload) {
+    let moduleData = payload.moduleData
+    let moduleDataLength = Object.keys(payload.moduleData).length
+    for (let i = 0; i < moduleDataLength; i += 1) {
+      let moduleGroup = moduleData[i].group
+      let userGroup = payload.userGroup
+      if (moduleGroup === userGroup) {
+        let moduleName = moduleData[i].name.toLowerCase()
+        SlidesAPI.getModuleProgressAPI(payload, moduleName)
+          .then(
+            response => {
+              let currentPage = response.data.current_page
+              let maxPage = response.data.max_page
+              console.log(moduleName)
+              commit('REQUEST_MODULE_PROGRESS', { index: i, completedSlideNumber: currentPage, maxSlideNumber: maxPage })
+            })
+          .catch(
+            error => {
+              console.error(error)
+            }
+          )
+          .finally(() => {
+            commit('SET_INITIAL_DATA_LOAD', false)
+          })
+      }
+    }
+  },
+
   setModuleIndex ({ commit }, payload) {
     commit('SET_MODULE_INDEX', payload)
   },
