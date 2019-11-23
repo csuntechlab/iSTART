@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="module-quiz">
     <div class="module-quiz__question">
       <p class="module-quiz__text" v-html="object.question"></p>
     </div>
@@ -9,19 +9,19 @@
           @click="showResponse(optionIndex)"
           class="module-quiz__option"
           :class="[(element.show && element.isAnswer ? 'module-quiz__option--correct' : '' ),
-                  (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : ''), '']"
-        >
-            <!-- <i v-if="element.isAnswer && element.show" class="fa fa-check-circle" style="color: blue; position: absolute; left: 1.5rem; top: 1rem;"></i>
-            <i v-else-if="!element.isAnswer && element.show" class="fa fa-times-circle" style="color: blue; position: absolute; left: 1.5rem; top: 1rem;"></i> -->
-          <div :class="[(object.options[optionIndex].show ? 'module-quiz__option-content--active' : ''), 'module-quiz__option-content']">
-            <img v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
-            <p v-if="element.text" v-html="element.text"></p>
+                  (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : '')]">
 
-            <div v-if="element.show" :class="[(element.show ? 'module-quiz__response--active' : ''), 'module-quiz__response']">
+          <span class="module-quiz__option-indicator" :class="element.show ? 'module-quiz__option-indicator--show': ''">
+            <i class="fa" :class="element.isAnswer ? 'fa-check-circle' : 'fa-times-circle' "></i>
+          </span>
+
+          <div :class="[(object.options[optionIndex].show ? 'module-quiz__response-option--active' : ''), 'module-quiz__option-content']">
+            <img v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
+            <p v-if="element.text" v-html="element.text" class="module-quiz__option-text"></p>
+
+            <div class="module-quiz__response-option" :class="[(element.show ? 'module-quiz__response-option--active' : '')]">
               <p v-if="element.response.text" class="module-quiz__text" v-html="element.response.text"></p>
-              <div class="module-quiz__response-image">
-                <img v-if="element.response.img.src" :src="element.response.img.src" :alt="element.response.img.alt">
-              </div>
+              <img v-if="element.response.img.src" :src="element.response.img.src" :alt="element.response.img.alt" class="module-quiz__option-response-image">
             </div>
           </div>
         </button>

@@ -25,6 +25,11 @@
         background:$white;
         transition: all 0.3s linear;
 
+        &-text{
+            @extend %default-copy-text-style-on-white;
+            margin: 0;
+        }
+
         &--correct {
             border-color: rgb(40,167,69);
         }
@@ -43,30 +48,14 @@
         }
 
         &-indicator {
-            display: inline-flex;
-            justify-content: center;
-            overflow: hidden;
-            width: 0;
-
-            &-container {
-                display: inline-flex;
-                justify-content: center;
-                border-radius: 0.25rem 0 0 0.25rem;
-                padding: 1rem 0.1rem 0 0;
-                overflow: hidden;
-                width: 0;
-            }
-
-            &--active {
-                width: 2rem;
-            }
-
-            &--active &-container {
-                width: 2rem;
-            }
-
-            & > * {
-                color: $white;
+            color: white; 
+            position: absolute; 
+            left: 1.5rem; 
+            top: 1rem;
+            opacity: 0;
+            transition: all 0.2s linear;
+            &--show{
+                opacity: 1;
             }
         }
 
@@ -77,9 +66,6 @@
             width: 100%;
             padding: 0.75rem 1rem;
 
-            &--active {
-                width: calc(100% - 2rem);
-            }
 
             & img {
                 max-width: 80%;
@@ -93,8 +79,14 @@
         display: none;
         margin-top: 1rem;
 
-        &--active {
-            display: block;
+        &-option{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s linear;
+        }
+
+        &-option--active {
+            max-height: 20rem;
         }
 
         &-image {
