@@ -50,17 +50,4 @@ class ModuleProgressController extends Controller
 
         return $this->moduleProgressUtility->setModuleProgress($data);
     }
-    public function moduleComplete(Request $request){
-
-        $user = $request->all();
-        if($user['user_id']) {
-
-            $this->moduleProgressUtility->moduleComplete($user);
-
-        }else{
-
-            return null;
-        }
-
-        }
 }
