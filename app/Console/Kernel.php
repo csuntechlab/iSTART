@@ -26,6 +26,8 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('istart:reminder')
                  ->daily();
+         $schedule->command('istart:new-module')
+                ->daily();
     }
 
     /**
