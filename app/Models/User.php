@@ -43,7 +43,7 @@ class User extends MetaUser
 
     public function moduleProgress()
     {
-        return $this->hasMany('App\Models\ModuleProgress');
+        return $this->hasMany('App\Models\ModuleProgress', 'user_id', 'user_id');
     }
 
 }

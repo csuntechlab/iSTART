@@ -43,7 +43,7 @@ class SendReminderModuleEmail implements ShouldQueue
 
         $moduleCreatedTimeStamp = Carbon::createFromTimeString($moduleCreated);
 
-        $expirationTime = Carbon::now()->subDays(3);
+        $expirationTime = Carbon::now()->subDays(config('app.expires_at'));
 
         if($moduleCreatedTimeStamp->day == $expirationTime->day){
 
