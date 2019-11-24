@@ -63,17 +63,4 @@ class ModuleProgressController extends Controller
         }
 
         }
-
-    public function remindUserofModule(Request $request){
-
-
-        $user = $request->all();
-        $moduleInfo = ModuleProgress::find($user['user_id']);
-
-        $this->dispatch(new SendReminderModuleEmail($moduleInfo));
-
-
-        return 'true';
-
-    }
 }

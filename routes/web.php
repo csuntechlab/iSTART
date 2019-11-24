@@ -36,4 +36,3 @@ Route::post('/new-module-available','ModuleProgressController@moduleComplete');
 Route::post('/submit-good-participants','ParticipantController@addGoodParticipantsToParticipantsTable');
 
 Route::post('/remove-participant','ParticipantController@removeParticipantFromStudy');
-Route::post('/get-reminder','ModuleProgressController@remindUserofModule');
