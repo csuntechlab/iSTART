@@ -18,7 +18,8 @@ class CreateUserGroups extends Migration
             $table->string('user_group')->nullable();
             $table->string('display_name')->nullable();
             $table->string('remember_token')->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->timestamp('updated_at')->nullable();
         });
     }
 
