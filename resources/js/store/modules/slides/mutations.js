@@ -9,32 +9,34 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
-    let completedSlideNumber = (payload.completedSlideNumber + 1)
-    let maxSlideNumber = payload.maxSlideNumber
+    let currentModule = payload.currentModule
+    let currentPage = payload.currentPage
+    let maxPage = payload.maxPage
+    let userGroup = payload.userGroup
+    let moduleData = payload.moduleData
+    let moduleDataCount = Array.from(moduleData).length
 
-    if (completedSlideNumber === undefined || completedSlideNumber === null) {
-      completedSlideNumber = 0
-    }
-
-    state.moduleData[payload.index].progress.current_slide = completedSlideNumber
-    state.moduleData[payload.index].progress.latest_slide = completedSlideNumber
-
-    if (maxSlideNumber === undefined || maxSlideNumber === null) {
-      state.moduleData[payload.index].progress.slide_percentage = 0
-    } else {
-      let slidePercentage = Math.floor((completedSlideNumber / maxSlideNumber) * 100)
-      state.moduleData[payload.index].progress.slide_percentage = slidePercentage
-    }
-
-    if (completedSlideNumber === 0) {
-      state.moduleData[payload.index].progress.is_start = true
-      state.moduleData[payload.index].progress.is_complete = false
-    } else if (completedSlideNumber === maxSlideNumber) {
-      state.moduleData[payload.index].progress.is_start = false
-      state.moduleData[payload.index].progress.is_complete = true
-    } else {
-      state.moduleData[payload.index].progress.is_start = false
-      state.moduleData[payload.index].progress.is_complete = false
+    if (userGroup !== 'control' && currentModule === '') {
+      for (let i = 0; i < moduleDataCount; i += 1) {
+        let indexedModuleGroup = moduleData.group
+        if (userGroup === indexedModuleGroup) {
+          let currentModule = moduleData[i].name
+          state.currentModule = currentModule
+          break
+        }
+      }
+    } else if (userGroup !== 'control' && currentModule !== '') {
+      for (let i = 0; i < moduleDataCount; i += 1) {
+        let moduleNameInState = state.module.name
+        if (currentModule === moduleNameInState) {
+          state.moduleData[i].progress.current_slide = currentPage
+          state.moduleData[i].progress.latest_slide = currentPage
+          break
+        } else {
+          state.moduleData[i].progress.slide_percentage = 100
+          state.moduleData[i].progress.latest_slide = maxPage
+        }
+      }
     }
   },
 

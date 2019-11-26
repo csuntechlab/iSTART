@@ -7,10 +7,9 @@ export default {
     })
   },
 
-  async getModuleProgressAPI (payload, moduleName) {
+  async getModuleProgressAPI (payload) {
     let api = await axios.post('get-module-progress', {
-      user_id: payload.userId,
-      current_module: moduleName
+      user_id: payload
     })
 
     return api
