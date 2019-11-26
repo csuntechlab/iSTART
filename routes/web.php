@@ -20,8 +20,8 @@ Route::get('logout','LoginController@logout');
 
 Route::get('/get-group/{user_id}','UserGroupController@getGroup');
 
-Route::get('/send-complete-module-mail-admin-test','UserCompletesModuleEmailController@sendMailToAdmin');
-Route::get('/send-complete-module-mail-student-test','UserCompletesModuleEmailController@sendMailToStudent');
+Route::get('/send-complete-module-mail-admin','UserCompletesModuleEmailController@sendMailToAdmin');
+Route::get('/send-complete-module-mail-student','UserCompletesModuleEmailController@sendMailToStudent');
 Route::post('/send-module-info-mail', 'InfoFromModuleEmailController@sendModuleInfo');
 
 Route::get('/send-mail-test','MailController@sendMail');
