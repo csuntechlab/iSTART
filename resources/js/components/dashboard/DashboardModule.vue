@@ -94,7 +94,7 @@ export default {
     this.resetScreenPosition()
 
     if (this.isInitialDataLoad) {
-      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group, moduleData: this.getModuleData })
+      this.requestModuleProgress({ userId: this.user.user_id, moduleData: this.getModuleData })
     }
   },
 
