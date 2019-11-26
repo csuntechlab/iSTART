@@ -14,14 +14,14 @@ class DeadlineReminderCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'istart:reminder';
+    protected $signature = 'istart:deadline-reminder';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Handles the reminder logic.';
+    protected $description = 'Notifies users of the module deadline.';
 
     /**
      * Create a new command instance.
@@ -52,7 +52,7 @@ class DeadlineReminderCommand extends Command
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expires_at);
                     if ($dayCheck == 2 || $dayCheck == 1) {
                         // send out the email.
-                        Mail::to((env('RECIEVE_EMAIL')))->send(new GenericEmail($user));
+                        Mail::to((env('RECIEVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($user));
                     }
                 }
             }
