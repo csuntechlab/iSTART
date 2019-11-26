@@ -24,5 +24,10 @@ export default {
     })
 
     return api
+  },
+
+  sendCompletedModuleMail () {
+    axios.post('/send-complete-module-mail-admin')
+    axios.post('/send-complete-module-mail-student')
   }
 }
