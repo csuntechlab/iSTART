@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapActions, mapState, mapGetters } from 'vuex'
 import { idleTimeout } from './../../../mixins/idleTimeout'
 import SlidesAPI from './../../../api/slides'
 
@@ -58,8 +58,18 @@ export default {
       ]
     ),
 
+    ...mapState(
+      [
+        'JSONSlideData'
+      ]
+    ),
+
     checkForEnd () {
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        let currentModule = this.getCurrentModule
+        let moduleData = this.JSONSlideData
+        this.submitEmailOnModuleCompletion({ currentModule: currentModule, moduleData: moduleData })
+
         return true
       } else {
         return false
@@ -78,7 +88,8 @@ export default {
         'navigateFromSlide',
         'resetSlideNavigation',
         'setSlideContentVisibility',
-        'enableContinue'
+        'enableContinue',
+        'submitEmailOnModuleCompletion'
       ]
     ),
 

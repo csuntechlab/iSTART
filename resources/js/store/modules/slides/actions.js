@@ -78,6 +78,19 @@ export default {
     commit('SET_SLIDE_CONTENT_VISIBILITY', payload)
   },
 
+  // On Module Completion
+  submitEmailOnModuleCompletion ({ commit }, payload) {
+    let currentModule = payload.currentModule
+    let moduleData = payload.moduleData
+    let moduleDataCount = Array.from(moduleData).length
+
+    for (let i = 0; i < moduleDataCount; i += 1) {
+      if (currentModule === moduleData[i].name && !moduleData[i].is_complete) {
+        SlidesAPI.sendCompletedModuleMail(payload)
+      }
+    }
+  },
+
   // Email Form Template
   async emailSurveyResults ({ commit }, payload) {
     return SlidesAPI.emailSurveyResultsAPI(payload)
