@@ -1,64 +1,56 @@
 .module-quiz {
+    $animation-timing: .25s;
     width: 100%;
     &__question {
         margin-bottom: 1rem;
-    }
-
-    &__header {
-        padding-right: 2.75rem;
     }
 
     &__text{
         @extend %default-copy-text-style-on-white-with-margin;
     }
 
-    button:focus {outline:0;}
     &__option {
         @extend .interactable-container ;
+        border: 0.1rem $border-color solid;
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
-        cursor: pointer;
         padding: 0;
         width: 100%;
         text-align: left;
         background:$white;
-        transition: all 0.3s linear;
-
-        &-text{
-            @extend %default-copy-text-style-on-white;
-            margin: 0;
-        }
-
-        &--correct {
-            border-color: rgb(40,167,69);
-        }
-
-        &--incorrect {
-            border-color: rgb(220,53,69);
-        }
-
-        &--correct, &--incorrect{
-            border-left-width: 2rem;
-        }
-
+        transition: all $animation-timing linear;
+        
         &-container {
             margin: 0.5rem 0;
             height: intrinsic;
         }
+        
+        &--correct, &--incorrect{
+            border-left-width: 2rem;
+        }
+        &--correct {
+            border-color: $green;
+        }
 
+        &--incorrect {
+            border-color: $red;
+        }
+        
         &-indicator {
             color: white; 
             position: absolute; 
-            left: 1.5rem; 
+            left: 2rem; 
             top: 1rem;
             opacity: 0;
-            transition: all 0.2s linear;
+            transform: translateX(-50%);
+            transition: all $animation-timing ease-in-out;
             &--show{
                 opacity: 1;
             }
         }
-
+        
+        
         &-content {
             display: inline-flex;
             flex-flow: row;
@@ -66,8 +58,12 @@
             width: 100%;
             padding: 0.75rem 1rem;
 
+            &-text{
+                @extend %default-copy-text-style-on-white;
+                margin: 0;
+            }
 
-            & img {
+            &-image {
                 max-width: 80%;
                 object-fit: contain;
                 max-height: 12rem;
@@ -76,24 +72,26 @@
     }
 
     &__response {
+        max-height: 0;
+        overflow: hidden;
         display: none;
-        margin-top: 1rem;
+        transition: max-height $animation-timing linear;
 
-        &-option{
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s linear;
+        &--active{
+            max-height: 80rem;
+            display: block;
         }
-
-        &-option--active {
-            max-height: 20rem;
+        
+        &-text{
+            @extend %default-copy-text-style-on-white;
+            color: $black;
+            margin: 1rem 0;
         }
 
         &-image {
-            display: flex;
-            flex-flow: row;
-            justify-content: center;
-            margin-top: 1rem;
+            max-width: 80%;
+            object-fit: contain;
+            max-height: 12rem;
         }
     }
 }

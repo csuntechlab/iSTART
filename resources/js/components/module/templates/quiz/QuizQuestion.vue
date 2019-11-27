@@ -15,13 +15,13 @@
             <i class="fa" :class="element.isAnswer ? 'fa-check-circle' : 'fa-times-circle' "></i>
           </span>
 
-          <div :class="[(object.options[optionIndex].show ? 'module-quiz__response-option--active' : ''), 'module-quiz__option-content']">
-            <img v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
-            <p v-if="element.text" v-html="element.text" class="module-quiz__option-text"></p>
+          <div class="module-quiz__option-content" :class="[(object.options[optionIndex].show ? 'module-quiz__response-option--active' : '')]">
+            <img class="module-quiz__option-content-image" v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
+            <p v-if="element.text" v-html="element.text" class="module-quiz__option-content-text"></p>
 
-            <div class="module-quiz__response-option" :class="[(element.show ? 'module-quiz__response-option--active' : '')]">
-              <p v-if="element.response.text" class="module-quiz__text" v-html="element.response.text"></p>
-              <img v-if="element.response.img.src" :src="element.response.img.src" :alt="element.response.img.alt" class="module-quiz__option-response-image">
+            <div class="module-quiz__response" :class="[(element.show ? 'module-quiz__response--active' : '')]">
+              <p v-if="element.response.text" class="module-quiz__response-text" v-html="element.response.text"></p>
+              <img v-if="element.response.img.src" :src="element.response.img.src" :alt="element.response.img.alt" class="module-quiz__response-image">
             </div>
           </div>
         </button>
@@ -32,7 +32,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-
+// module-quiz__response-option--active
 export default {
   props: [
     'object',
