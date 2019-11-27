@@ -9,7 +9,8 @@
           @click="showResponse(optionIndex)"
           class="module-quiz__option"
           :class="[(element.show && element.isAnswer ? 'module-quiz__option--correct' : '' ),
-                  (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : '')]">
+                  (element.show && !element.isAnswer ? 'module-quiz__option--incorrect' : '')]"
+          :aria-expanded="element.show ? 'tree' : 'false'">
 
           <span class="module-quiz__option-indicator" :class="element.show ? 'module-quiz__option-indicator--show': ''">
             <i class="fa" :class="element.isAnswer ? 'fa-check-circle' : 'fa-times-circle' "></i>

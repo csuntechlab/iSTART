@@ -2,7 +2,7 @@
 <nav class="navbar">
   <img class="navbar__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
   <div class="navbar__mobile-wrapper">
-    <button class="navbar__button" type="button" @click="toggleNavigation">
+    <button class="navbar__button" type="button" @click="toggleNavigation" :aria-expanded="isNavOpen ? 'tree' : 'false'">
       <i class="fas fa-bars"></i>
     </button>
     <span class="navbar__location"> {{ displayCurrentPage }} </span>
