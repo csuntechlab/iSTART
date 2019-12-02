@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
+use App\Contracts\StudentRemovedFromStudyAdminEmailContract;
+use App\Contracts\StudentRemovedFromStudyContract;
 use App\Mail\GenericEmail;
 use App\Models\User;
 
@@ -23,14 +25,20 @@ class DeadlineReminderCommand extends Command
      */
     protected $description = 'Notifies users of the module deadline.';
 
+    protected $studentRemovedFromStudyAdminEmailUtility;
+
+    protected $studentRemovedFromStudyEmailUtility;
+
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(StudentRemovedFromStudyAdminEmailContract $studentRemovedFromStudyAdminEmailUtility, StudentRemovedFromStudyContract $studentRemovedFromStudyEmailUtility)
     {
         parent::__construct();
+        $this->studentRemovedFromStudyAdminEmailUtility = $studentRemovedFromStudyAdminEmailUtility;
+        $this->studentRemovedFromStudyEmailUtility = $studentRemovedFromStudyEmailUtility;
     }
 
     /**
@@ -50,9 +58,15 @@ class DeadlineReminderCommand extends Command
                 if (!empty($user->moduleProgress)) {
                     $currentModule = $user->moduleProgress->first();
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expires_at);
-                    if ($dayCheck == 2 || $dayCheck == 1) {
+                    if ($dayCheck === 2 || $dayCheck === 1) {
                         // send out the email.
                         Mail::to((env('RECIEVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($user));
+                    }
+                    if ($dayCheck === 0) {
+                        if ($currentModule->current_page !== $currentModule->max_page) {
+                            $this->studentRemovedFromStudyEmailUtility->sendStudentRemovedMail();
+                            $this->studentRemovedFromStudyEmailUtility->sendStudentRemovedFromStudyAdmin();
+                        }
                     }
                 }
             }
