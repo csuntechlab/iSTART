@@ -1,7 +1,6 @@
 .dashboard {
     background-color: $white;
     position: relative;
-    padding: 0;
 
     @include media-breakpoint-down(sm) {
         max-width: 100%;
@@ -52,8 +51,16 @@
             font-weight: bold;
         }
 
+        &--control {
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
         &-wrap {
-            margin-bottom: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         &__overview {
@@ -216,7 +223,8 @@
                 }
 
                 &-indicator {
-                    display: none;
+                    color: $white;
+                    margin-top: 0.1rem;
                 }  
             }
         }

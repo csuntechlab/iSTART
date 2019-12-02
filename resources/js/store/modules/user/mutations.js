@@ -20,12 +20,13 @@ export default {
   LOGIN_IS_LOADING (state, payload) {
     state.loginIsLoading = payload
   },
+
   SET_CATEGORIZED_PARTICIPANTS (state, payload) {
     state.categorizedParticipants = payload
   },
 
   PARTICIPANTS_WERE_SUBMITTED (state, payload) {
-    state.categorizedParticipants= {}
+    state.categorizedParticipants = {}
     state.participantsWereSubmitted = payload
   }
 }

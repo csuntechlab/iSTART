@@ -34,9 +34,15 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapActions, mapState, mapGetters } from 'vuex'
+import { idleTimeout } from './../../../mixins/idleTimeout'
+import SlidesAPI from './../../../api/slides'
 
 export default {
+  mixins: [
+    idleTimeout
+  ],
+
   computed: {
     ...mapGetters(
       [
@@ -45,17 +51,34 @@ export default {
         'isSlideContentVisible',
         'currentSlideData',
         'currentSlideNumber',
+        'getCurrentModule',
         'latestSlideNumber',
-        'totalSlides'
+        'totalSlides',
+        'user'
       ]
     ),
+
+    ...mapState(
+      [
+        'JSONSlideData'
+      ]
+    ),
+
     checkForEnd () {
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        let currentModule = this.getCurrentModule
+        let moduleData = this.JSONSlideData
+        this.submitEmailOnModuleCompletion({ currentModule: currentModule, moduleData: moduleData })
+
         return true
       } else {
         return false
       }
     }
+  },
+
+  updated () {
+    this.resetIdleTimer()
   },
 
   methods: {
@@ -65,13 +88,15 @@ export default {
         'navigateFromSlide',
         'resetSlideNavigation',
         'setSlideContentVisibility',
-        'enableContinue'
+        'enableContinue',
+        'submitEmailOnModuleCompletion'
       ]
     ),
 
     slideForward () {
       this.setSlideContentVisibility(false)
       this.resetSlideNavigation()
+      this.storeModuleProgress()
       this.navigateFromSlide('forward')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
@@ -83,6 +108,29 @@ export default {
       this.navigateFromSlide('back')
       this.setSlideContentVisibility(true)
       this.checkForVisitedSlide()
+    },
+
+    storeModuleProgress () {
+      let userId = this.user.user_id
+      let moduleName = this.getCurrentModule.toLowerCase()
+      let maxPage = this.totalSlides
+      let currentSlideNumber = this.currentSlideNumber
+      let latestSlideNumber = this.latestSlideNumber
+
+      if (currentSlideNumber === latestSlideNumber) {
+        let payload = {
+          userId: userId,
+          moduleName: moduleName,
+          currentPage: latestSlideNumber,
+          maxPage: maxPage
+        }
+
+        return SlidesAPI.setModuleProgressAPI(payload)
+          .catch(
+            error => {
+              console.error(error)
+            })
+      }
     },
 
     checkForStart () {

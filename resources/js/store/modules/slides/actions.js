@@ -6,6 +6,28 @@ export default {
     commit('SET_MODULE_DATA', payload)
   },
 
+  async requestModuleProgress ({ commit }, payload) {
+    let userId = payload.userId
+    let userGroup = payload.userGroup
+    let moduleData = payload.moduleData
+    SlidesAPI.getModuleProgressAPI(userId)
+      .then(
+        response => {
+          let currentModule = response.current_module
+          let currentPage = response.current_page
+          let maxPage = response.max_page
+          commit('REQUEST_MODULE_PROGRESS', { currentModule: currentModule, currentPage: currentPage, maxPage: maxPage, userGroup: userGroup, moduleData: moduleData })
+        })
+      .catch(
+        error => {
+          console.error(error)
+        }
+      )
+      .finally(() => {
+        commit('SET_INITIAL_DATA_LOAD', false)
+      })
+  },
+
   setModuleIndex ({ commit }, payload) {
     commit('SET_MODULE_INDEX', payload)
   },
@@ -48,6 +70,19 @@ export default {
   // Toggles If Slide is Displayed (true/false)
   setSlideContentVisibility ({ commit }, payload) {
     commit('SET_SLIDE_CONTENT_VISIBILITY', payload)
+  },
+
+  // On Module Completion
+  submitEmailOnModuleCompletion ({ commit }, payload) {
+    let currentModule = payload.currentModule
+    let moduleData = payload.moduleData
+    let moduleDataCount = Array.from(moduleData).length
+
+    for (let i = 0; i < moduleDataCount; i += 1) {
+      if (currentModule === moduleData[i].name && !moduleData[i].is_complete) {
+        SlidesAPI.sendCompletedModuleMail(payload)
+      }
+    }
   },
 
   // Email Form Template

@@ -4,6 +4,42 @@ export default {
     state.moduleData = payload
   },
 
+  SET_INITIAL_DATA_LOAD (state, payload) {
+    state.isInitialDataLoad = payload
+  },
+
+  REQUEST_MODULE_PROGRESS (state, payload) {
+    let currentModule = payload.currentModule
+    let currentPage = payload.currentPage
+    let maxPage = payload.maxPage
+    let userGroup = payload.userGroup
+    let moduleData = payload.moduleData
+    let moduleDataCount = Array.from(moduleData).length
+
+    if (userGroup !== 'control' && currentModule === '') {
+      for (let i = 0; i < moduleDataCount; i += 1) {
+        let indexedModuleGroup = moduleData.group
+        if (userGroup === indexedModuleGroup) {
+          let currentModule = moduleData[i].name
+          state.currentModule = currentModule
+          break
+        }
+      }
+    } else if (userGroup !== 'control' && currentModule !== '') {
+      for (let i = 0; i < moduleDataCount; i += 1) {
+        let moduleNameInState = state.module.name
+        if (currentModule === moduleNameInState) {
+          state.moduleData[i].progress.current_slide = currentPage
+          state.moduleData[i].progress.latest_slide = currentPage
+          break
+        } else {
+          state.moduleData[i].progress.slide_percentage = 100
+          state.moduleData[i].progress.latest_slide = maxPage
+        }
+      }
+    }
+  },
+
   SET_MODULE_INDEX (state, payload) {
     state.currentModuleIndex = payload
   },

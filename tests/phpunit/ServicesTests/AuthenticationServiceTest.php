@@ -16,6 +16,7 @@ use App\Models\User;
 use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Carbon\Carbon;
 
 class AuthenticationServiceTest extends TestCase
 {
@@ -39,7 +40,7 @@ class AuthenticationServiceTest extends TestCase
         $this->userAdminModelUtility = Mockery::spy(UserAdminModelRepositoryInterface::class);
         $this->service = new AuthenticationService(
             $this->participantUtility,
-            $this->userGroupUtility, 
+            $this->userGroupUtility,
             $this->userAdminModelUtility
         );
     }
@@ -99,7 +100,7 @@ class AuthenticationServiceTest extends TestCase
             ->andReturn(true);
         Auth::shouldReceive('user')
             ->andReturn($user);
-        
+
         $this->userAdminModelUtility
             ->shouldReceive(['find' => $user['user_id']])
             ->andReturn(true);
@@ -134,7 +135,7 @@ class AuthenticationServiceTest extends TestCase
             ->andReturn(true);
         Auth::shouldReceive('user')
             ->andReturn($user);
-        
+
 
         $this->participantUtility
             ->shouldReceive(['userHasParticipantId' => $user])
@@ -155,7 +156,8 @@ class AuthenticationServiceTest extends TestCase
             'user_id'=>'members:000021315',
             'valid'=>'1',
             'user_group'=> 'intervention',
-            'isAdmin' => false
+            'isAdmin' => false,
+            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
         ];
 
         $user = new User([

@@ -22,6 +22,8 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import { changeRouteTitle } from './../mixins/changeRouteTitle'
+
 import alcoholModuleSlides from './../components/module/data/modules/alcoholModule'
 import nicotineModuleSlides from './../components/module/data/modules/nicotineModule'
 import marijuanaModuleSlides from './../components/module/data/modules/marijuanaModule'
@@ -44,6 +46,9 @@ import SelfAssessmentResults from './../components/module/templates/SelfAssessme
 import WellnessGoal from './../components/module/templates/WellnessGoal'
 
 export default {
+  mixins: [
+    changeRouteTitle
+  ],
   components: {
     Navbar,
     ModuleProgressBar,
@@ -59,17 +64,14 @@ export default {
     SelfAssessmentResults,
     WellnessGoal
   },
-
   data () {
     return {
       windowWidth: 0
     }
   },
-
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
-
     let currentModule = this.getCurrentModule
     if (currentModule === 'Alcohol') {
       this.storeJSONInState(alcoholModuleSlides)
@@ -93,11 +95,9 @@ export default {
       this.$router.push({ name: 'Dashboard' })
     }
   },
-
   destroyed () {
     window.addEventListener('resize', this.getWindowWidth)
   },
-
   computed: {
     ...mapGetters([
       'currentSlideData',
@@ -105,7 +105,6 @@ export default {
       'isSlideContentVisible',
       'getCurrentModule'
     ]),
-
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'
@@ -114,7 +113,6 @@ export default {
       }
     }
   },
-
   methods: {
     ...mapActions([
       'storeJSONInState',
@@ -122,12 +120,10 @@ export default {
       'navigateFromSlide',
       'navigateToSlide'
     ]),
-
     getWindowWidth () {
       this.windowWidth = window.innerWidth
     }
   },
-
   mounted () {
     document.onkeyup = e => {
       if (
@@ -141,12 +137,10 @@ export default {
           )
           this.navigateToSlide(responseAsSlideNumber)
         }
-
         // Shift + Right Arrow = Go forward 1 slide
         if (e.shiftKey && e.which === 39) {
           this.navigateFromSlide('forward')
         }
-
         // Shift + Left Arrow = Go back 1 slide
         if (e.shiftKey && e.which === 37) {
           this.navigateFromSlide('back')

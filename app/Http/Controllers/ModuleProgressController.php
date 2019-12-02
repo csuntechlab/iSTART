@@ -23,12 +23,10 @@ class ModuleProgressController extends Controller
     {
         $validator = $request->validate([
             'user_id' => 'required',
-            'current_module' => 'required',
         ]);
 
         $data = [
             'user_id' => $request->user_id,
-            'current_module' => $request->current_module,
         ];
 
         return $this->moduleProgressUtility->getModuleProgress($data);
@@ -50,32 +48,6 @@ class ModuleProgressController extends Controller
             'max_page' => $request->max_page
         ];
 
-        $this->moduleProgressUtility->getModuleProgress($data);
-    }
-    public function moduleComplete(Request $request){
-
-        $user = $request->all();
-        if($user['user_id']) {
-
-            $this->moduleProgressUtility->moduleComplete($user);
-
-        }else{
-
-            return null;
-        }
-
-        }
-
-    public function remindUserofModule(Request $request){
-
-
-        $user = $request->all();
-        $moduleInfo = ModuleProgress::find($user['user_id']);
-
-        $this->dispatch(new SendReminderModuleEmail($moduleInfo));
-
-
-        return 'true';
-
+        return $this->moduleProgressUtility->setModuleProgress($data);
     }
 }

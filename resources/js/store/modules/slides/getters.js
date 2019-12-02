@@ -2,6 +2,7 @@ export default {
   isSlideContentVisible: state => state.slideContentVisibility,
   isContinueButtonEnabled: state => state.enableContinue,
   isBackButtonEnabled: state => state.enableBack,
+  isInitialDataLoad: state => state.isInitialDataLoad,
 
   getModuleData: state => state.moduleData,
   getCurrentModule: state => state.currentModule,

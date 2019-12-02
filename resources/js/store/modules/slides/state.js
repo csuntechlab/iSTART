@@ -3,6 +3,7 @@ export default {
   JSONSlideData: {},
   currentModule: null,
   currentModuleIndex: 0,
+  isInitialDataLoad: false,
 
   slideContentVisibility: false,
   enableContinue: false,
