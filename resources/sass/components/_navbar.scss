@@ -90,7 +90,9 @@
         text-align: center;
         font-weight: 600;
         font-size: .9rem;
+        height: 1.25rem;
         @include media-breakpoint-down(sm) {
+            height: auto;
             width: 100%;
             text-align: left;
             &:hover{

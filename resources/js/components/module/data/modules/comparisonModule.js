@@ -853,7 +853,7 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'The smoke from vaping is NOT just “harmless water vapor'
+          0: 'The smoke from vaping is NOT just harmless "water vapor"'
         }
       },
       1: {
