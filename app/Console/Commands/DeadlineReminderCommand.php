@@ -4,8 +4,6 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
-use App\Contracts\StudentRemovedFromStudyAdminEmailContract;
-use App\Contracts\StudentRemovedFromStudyContract;
 use App\Mail\GenericEmail;
 use App\Models\User;
 
@@ -25,20 +23,14 @@ class DeadlineReminderCommand extends Command
      */
     protected $description = 'Notifies users of the module deadline.';
 
-    protected $studentRemovedFromStudyAdminEmailUtility;
-
-    protected $studentRemovedFromStudyEmailUtility;
-
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(StudentRemovedFromStudyAdminEmailContract $studentRemovedFromStudyAdminEmailUtility, StudentRemovedFromStudyContract $studentRemovedFromStudyEmailUtility)
+    public function __construct()
     {
         parent::__construct();
-        $this->studentRemovedFromStudyAdminEmailUtility = $studentRemovedFromStudyAdminEmailUtility;
-        $this->studentRemovedFromStudyEmailUtility = $studentRemovedFromStudyEmailUtility;
     }
 
     /**
@@ -51,7 +43,7 @@ class DeadlineReminderCommand extends Command
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
             $q->orderBy('created_at', 'DESC')->first();
-        }])->whereHas('moduleProgress')->get();
+        }, 'participant'])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
@@ -64,8 +56,8 @@ class DeadlineReminderCommand extends Command
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page !== $currentModule->max_page) {
-                            $this->studentRemovedFromStudyEmailUtility->sendStudentRemovedMail();
-                            $this->studentRemovedFromStudyEmailUtility->sendStudentRemovedFromStudyAdmin();
+                            Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudy());
+                            Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($user->participant));
                         }
                     }
                 }
