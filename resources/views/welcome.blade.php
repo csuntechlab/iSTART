@@ -9,6 +9,7 @@
         <title>iSTART</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+        <link rel="icon" type="image/png" href="{{ asset('images/logos/favicon.png') }}">
     </head>
     <body>
         <div id="app">
