@@ -49,7 +49,7 @@ class NewModuleCommand extends Command
             foreach ($users as $user) {
                 if (!empty($user->moduleProgress)) {
                     $currentModule = $user->moduleProgress->first();
-                    $dayCheck = $currentModule->expires_at->diffInDays(Carbon::now());
+                    $dayCheck = $currentModule->expiration_date->diffInDays(Carbon::now());
                     if ($dayCheck == 0) {
                         // send out the email.
                         Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($user));
