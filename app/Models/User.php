@@ -38,7 +38,7 @@ class User extends MetaUser
 
     public function getUserGroup()
     {
-        return $this->hasOne('App\Models\UserGroup');
+        return $this->hasOne('App\Models\UserGroup', 'user_id', 'user_id');
     }
 
     public function moduleProgress()

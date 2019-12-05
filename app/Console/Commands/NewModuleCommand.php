@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
+use App\Mail\NewModuleAvailable;
 use Carbon\Carbon;
 
 class NewModuleCommand extends Command
@@ -47,12 +48,17 @@ class NewModuleCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (!empty($user->moduleProgress)) {
+                if (count($user->moduleProgress)) {
                     $currentModule = $user->moduleProgress->first();
-                    $dayCheck = $currentModule->expiration_date->diffInDays(Carbon::now());
-                    if ($dayCheck == 0) {
-                        // send out the email.
-                        Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($user));
+                    if ($currentModule !== null) {
+                        if ($currentModule->current_page !== 0 && ($currentModule->current_page === $currentModule->max_page)) {
+                            $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
+                            // $dayCheck = $currentModule->expiration_date->diffInDays(Carbon::now()->toDateTimeString());
+                            if ($dayCheck === 0) {
+                                // send out the email.
+                                Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($user));
+                            }
+                        }
                     }
                 }
             }
