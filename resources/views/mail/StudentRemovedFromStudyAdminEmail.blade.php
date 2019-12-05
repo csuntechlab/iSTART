@@ -1,4 +1,7 @@
 @component('mail::message')
     Hello Admin,
-    User with Participant ID: {{$studentRemovedFromStudyAdminEmail->participant_id}} has been removed from the study
+    <br>
+    The following user:
+    <br>
+    {{ $studentRemovedFromStudyAdminEmail->email }} with Participant ID: {{ $studentRemovedFromStudyAdminEmail->participant->participant_id}} has been removed from the study.
 

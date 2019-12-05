@@ -4,7 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\GenericEmail;
+use App\Mail\StudentRemovedFromStudyAdminEmail;
+use App\Mail\UserRunningOutOfTimeEmail;
 use App\Models\User;
 
 class DeadlineReminderCommand extends Command
@@ -47,7 +48,7 @@ class DeadlineReminderCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (!empty($user->moduleProgress)) {
+                if (count($user->moduleProgress)) {
                     $currentModule = $user->moduleProgress->first();
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expiration_date);
                     if ($dayCheck === 2 || $dayCheck === 1) {
@@ -55,9 +56,8 @@ class DeadlineReminderCommand extends Command
                         Mail::to((env('RECIEVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($user));
                     }
                     if ($dayCheck === 0) {
-                        if ($currentModule->current_page !== $currentModule->max_page) {
-                            Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudy());
-                            Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($user->participant));
+                        if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
+                            Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($user));
                         }
                     }
                 }
