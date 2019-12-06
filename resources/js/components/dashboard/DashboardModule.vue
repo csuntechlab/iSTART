@@ -1,7 +1,8 @@
 <template>
   <section class="dashboard-module-wrap container">
+    <loading v-if="isInitialDataLoad"/>
     <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
-      <div v-if="user.user_group === item.group" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
+      <div v-if="item.show" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
         <div class="row">
           <div class="dashboard-module__overview-wrapper col-12 col-md-6">
             <div class="dashboard-module__overview row">
@@ -27,7 +28,7 @@
                   </p>
                   <loading-progress
                     class="dashboard-module__loader"
-                    :progress="item.progress.slide_percentage/100"
+                    :progress="Math.round(item.progress.slide_percentage/100)"
                     :size="size"
                     :shape="shape.circle"
                   />
@@ -42,12 +43,12 @@
                 </p>
               </div>
               <div class="dashboard-module__status-wrapper col-4 col-md-12">
-                <button v-if="item.progress.is_start" class="dashboard-module__status">Start</button>
-                <button v-if="!item.progress.is_complete && !item.progress.is_start" class="dashboard-module__status">
+                <button v-if="!item.progress.is_review && item.progress.slide_percentage === 0" class="dashboard-module__status">Start</button>
+                <button v-if="!item.progress.is_review && item.progress.slide_percentage !== 0" class="dashboard-module__status">
                   Continue
                   <i class="dashboard-module__status-indicator fas fa-chevron-right"></i>
                 </button>
-                <button v-if="item.progress.is_complete" class="dashboard-module__status">Review</button>
+                <button v-if="item.progress.is_review" class="dashboard-module__status">Review</button>
               </div>
             </div>
           </div>
@@ -61,12 +62,17 @@
 import { mapActions, mapGetters } from 'vuex'
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
 import moduleData from './../module/data/moduleData'
+import Loading from './../global/Loading'
 
 export default {
   name: 'DashboardModule',
   mixins: [
     changeRouteTitle
   ],
+
+  components: {
+    Loading
+  },
 
   data () {
     return {
@@ -94,7 +100,7 @@ export default {
     this.resetScreenPosition()
 
     if (this.isInitialDataLoad) {
-      this.requestModuleProgress({ userId: this.user.user_id, moduleData: this.getModuleData })
+      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group })
     }
   },
 

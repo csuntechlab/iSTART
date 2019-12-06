@@ -9,32 +9,40 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
-    let currentModule = payload.currentModule
-    let currentPage = payload.currentPage
-    let maxPage = payload.maxPage
-    let userGroup = payload.userGroup
-    let moduleData = payload.moduleData
-    let moduleDataCount = Array.from(moduleData).length
+    let userGroup = payload.data.userGroup
+    let currentModule = payload.data.current_module
+    let moduleDataLength = Object.keys(state.moduleData).length
 
-    if (userGroup !== 'control' && currentModule === '') {
-      for (let i = 0; i < moduleDataCount; i += 1) {
-        let indexedModuleGroup = moduleData.group
-        if (userGroup === indexedModuleGroup) {
-          let currentModule = moduleData[i].name
-          state.currentModule = currentModule
-          break
-        }
-      }
-    } else if (userGroup !== 'control' && currentModule !== '') {
-      for (let i = 0; i < moduleDataCount; i += 1) {
-        let moduleNameInState = state.module.name
-        if (currentModule === moduleNameInState) {
-          state.moduleData[i].progress.current_slide = currentPage
-          state.moduleData[i].progress.latest_slide = currentPage
+    for (let i = 0; i < moduleDataLength; i += 1) {
+      let moduleDataName = state.moduleData[i].name.toLowerCase()
+      let moduleDataGroup = state.moduleData[i].group
+
+      if (currentModule === '' && userGroup === moduleDataGroup) {
+        state.moduleData[i].show = true
+        break
+      } else if (userGroup === moduleDataGroup) {
+        // If reached current_module, set progress from API then break, else mark moduleData[i] as review
+        if (currentModule === moduleDataName) {
+          state.moduleData[i].show = true
+
+          // Calculate progress
+          let latestSlide = payload.data.current_page
+          let totalSlides = payload.data.max_page
+          let totalProgressAsNumber = ((latestSlide / (totalSlides - 1)) * 100).toFixed(2)
+          state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
+
+          state.moduleData[i].progress.current_slide = latestSlide
+          state.moduleData[i].progress.latest_slide = latestSlide
+
+          if (latestSlide === (totalSlides - 1)) {
+            state.moduleData[i].progress.is_review = true
+          }
+
           break
         } else {
+          state.moduleData[i].show = true
+          state.moduleData[i].progress.is_review = true
           state.moduleData[i].progress.slide_percentage = 100
-          state.moduleData[i].progress.latest_slide = maxPage
         }
       }
     }
@@ -114,6 +122,11 @@ export default {
   // Toggles If Slide is Displayed (true/false)
   SET_SLIDE_CONTENT_VISIBILITY (state, payload) {
     state.slideContentVisibility = payload
+  },
+
+  // Set module as review state
+  MARK_MODULE_AS_REVIEW (state, index) {
+    state.moduleData[index].progress.is_review = true
   },
 
   // Email Form Template
