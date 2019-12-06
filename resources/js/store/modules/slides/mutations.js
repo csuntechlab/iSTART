@@ -14,8 +14,6 @@ export default {
     let moduleDataLength = Object.keys(state.moduleData).length
 
     for (let i = 0; i < moduleDataLength; i += 1) {
-      console.log(state.moduleData[i])
-      console.log(currentModule)
       let moduleDataName = state.moduleData[i].name.toLowerCase()
       let moduleDataGroup = state.moduleData[i].group
 
@@ -23,13 +21,23 @@ export default {
         state.moduleData[i].show = true
         break
       } else if (userGroup === moduleDataGroup) {
-        state.moduleData[i].show = true
-        state.moduleData[i].progress.is_review = true
-        state.moduleData[i].progress.slide_percentage = 100
+        // If reached current_module, set progress from API then break, else mark moduleData[i] as review
         if (currentModule === moduleDataName) {
-          // check if current_slide === max_slide, if is MARK COMPLETED
-          // else set progress of current_module
+          state.moduleData[i].show = true
+          state.moduleData[i].progress.is_review = true
+
+          // Calculate progress
+          let latestSlide = payload.data.current_page
+          let totalSlides = payload.data.max_page
+          let totalProgressAsNumber = ((latestSlide / totalSlides) * 100)
+          state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
+
+          console.log(state.JSONSlideData)
           break
+        } else {
+          state.moduleData[i].show = true
+          state.moduleData[i].progress.is_review = true
+          state.moduleData[i].progress.slide_percentage = 100
         }
       }
     }
