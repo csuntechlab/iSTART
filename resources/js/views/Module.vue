@@ -64,11 +64,13 @@ export default {
     SelfAssessmentResults,
     WellnessGoal
   },
+
   data () {
     return {
       windowWidth: 0
     }
   },
+
   created () {
     window.addEventListener('resize', this.getWindowWidth)
     this.getWindowWidth()
@@ -95,9 +97,7 @@ export default {
       this.$router.push({ name: 'Dashboard' })
     }
   },
-  destroyed () {
-    window.addEventListener('resize', this.getWindowWidth)
-  },
+
   computed: {
     ...mapGetters([
       'currentSlideData',
@@ -105,6 +105,7 @@ export default {
       'isSlideContentVisible',
       'getCurrentModule'
     ]),
+
     checkWindowWidth () {
       if (this.windowWidth >= 768) {
         return 'container module'
@@ -113,17 +114,7 @@ export default {
       }
     }
   },
-  methods: {
-    ...mapActions([
-      'storeJSONInState',
-      'setSlideContentVisibility',
-      'navigateFromSlide',
-      'navigateToSlide'
-    ]),
-    getWindowWidth () {
-      this.windowWidth = window.innerWidth
-    }
-  },
+
   mounted () {
     document.onkeyup = e => {
       if (
@@ -146,6 +137,23 @@ export default {
           this.navigateFromSlide('back')
         }
       }
+    }
+  },
+
+  destroyed () {
+    window.addEventListener('resize', this.getWindowWidth)
+  },
+
+  methods: {
+    ...mapActions([
+      'storeJSONInState',
+      'setSlideContentVisibility',
+      'navigateFromSlide',
+      'navigateToSlide'
+    ]),
+
+    getWindowWidth () {
+      this.windowWidth = window.innerWidth
     }
   }
 }
