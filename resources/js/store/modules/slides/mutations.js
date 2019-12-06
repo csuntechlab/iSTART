@@ -30,6 +30,7 @@ export default {
           let totalSlides = payload.data.max_page
           let totalProgressAsNumber = ((latestSlide / totalSlides) * 100)
           state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
+
           state.moduleData[i].progress.current_slide = latestSlide
           state.moduleData[i].progress.latest_slide = latestSlide
 
