@@ -1,5 +1,6 @@
 <template>
   <section class="dashboard-module-wrap container">
+    <loading v-if="isInitialDataLoad"/>
     <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
       <div v-if="item.show" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
         <div class="row">
@@ -61,12 +62,17 @@
 import { mapActions, mapGetters } from 'vuex'
 import { changeRouteTitle } from './../../mixins/changeRouteTitle.js'
 import moduleData from './../module/data/moduleData'
+import Loading from './../global/Loading'
 
 export default {
   name: 'DashboardModule',
   mixins: [
     changeRouteTitle
   ],
+
+  components: {
+    Loading
+  },
 
   data () {
     return {

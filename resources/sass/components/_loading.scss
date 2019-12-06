@@ -1,0 +1,56 @@
+.loading {
+    &-container {
+        background-color: rgba(245, 245, 245, 0.9);
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+
+    &__dot {
+        background-color: rgb(225, 0, 0);
+        border-radius: 6rem;
+        position: absolute;
+        top: -3.5rem;
+        height: 2rem;
+        width: 2rem;
+        animation: grow 1.5s infinite;
+    }
+
+    @keyframes grow {
+        0% {
+            top: -2.5rem;
+            height: 2rem;
+            width: 2rem;
+        }
+        50% {
+            top: -3.25rem;
+            height: 2.75rem;
+            width: 2.75rem;
+        }
+        100% {
+            top: -2.5rem;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    &__logo-container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    &__logo {
+        height: 6rem;
+        width: 6rem;
+        max-height: 225px;
+        max-width: 225px;
+    }
+}
