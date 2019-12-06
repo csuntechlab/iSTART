@@ -4,6 +4,7 @@ namespace App\Services;
 use App\Models\ModuleProgress;
 use App\Contracts\AuthenticationContract;
 use App\Contracts\ParticipantContract;
+use App\Contracts\ModuleProgressContract;
 use App\ModelRepositoryInterfaces\UserAdminModelRepositoryInterface;
 use App\Contracts\UserGroupContract;
 use Carbon\Carbon;
@@ -15,15 +16,18 @@ class AuthenticationService implements AuthenticationContract
     protected $participantUtility = null;
     protected $userGroupUtility = null;
     protected $userAdminModelUtility = null;
+    protected $moduleProgressUtility = null;
 
     public function __construct(
         ParticipantContract $participantUtility,
         UserGroupContract $userGroupUtility,
-        UserAdminModelRepositoryInterface $userAdminModelUtility
+        UserAdminModelRepositoryInterface $userAdminModelUtility,
+        ModuleProgressContract $moduleProgressUtility
         ){
         $this->participantUtility = $participantUtility;
         $this->userGroupUtility = $userGroupUtility;
         $this->userAdminModelUtility = $userAdminModelUtility;
+        $this->moduleProgressUtility = $moduleProgressUtility;
     }
 
     public function authenticateUser($credentials){
@@ -47,19 +51,17 @@ class AuthenticationService implements AuthenticationContract
                     'isAdmin' => false
                 ];
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
-                if ($userGroup !== 'control') {
-                    $moduleProgress = ModuleProgress::create([
-                        'user_id' => $user['user_id'],
-                        'current_module' => '',
-                        'current_page' => 0,
-                        'max_page' => 0,
-                        'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
-                    ]);
-                    $response['expiration_date'] = $moduleProgress->expiration_date;
-                }
                 $response['user_group'] = $userGroup;
-
+                $response['user_name'] = $userGroup['display_name'];
+                $moduleCheck = $this->moduleProgressUtility->moduleExists($user);
+                if ($moduleCheck === false) {
+                    if ($userGroup !== 'control') {
+                        $moduleProgress = $this->moduleProgressUtility->createNewModule($user);
+                        $response['expiration_date'] = $moduleProgress->expiration_date;
+                    }
+                }
                 return $response;
+
             } else{
                 return ['valid' => '0'];
             }
