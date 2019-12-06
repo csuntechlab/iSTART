@@ -19,6 +19,14 @@ html, body {
 
 body {
     background-color: $body-bg;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#app {
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .navbar-laravel {
