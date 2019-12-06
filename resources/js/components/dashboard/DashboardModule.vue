@@ -42,12 +42,12 @@
                 </p>
               </div>
               <div class="dashboard-module__status-wrapper col-4 col-md-12">
-                <button v-if="item.progress.is_start" class="dashboard-module__status">Start</button>
-                <button v-if="!item.progress.is_complete && !item.progress.is_start" class="dashboard-module__status">
+                <button v-if="!item.progress.is_review && item.progress.slide_percentage === 0" class="dashboard-module__status">Start</button>
+                <button v-if="!item.progress.is_review && item.progress.slide_percentage !== 0" class="dashboard-module__status">
                   Continue
                   <i class="dashboard-module__status-indicator fas fa-chevron-right"></i>
                 </button>
-                <button v-if="item.progress.is_complete" class="dashboard-module__status">Review</button>
+                <button v-if="item.progress.is_review" class="dashboard-module__status">Review</button>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default {
     this.resetScreenPosition()
 
     if (this.isInitialDataLoad) {
-      this.requestModuleProgress({ userId: this.user.user_id, moduleData: this.getModuleData })
+      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group })
     }
   },
 

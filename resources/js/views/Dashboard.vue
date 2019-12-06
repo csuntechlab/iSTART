@@ -15,6 +15,7 @@ import Navbar from './../components/global/Navbar'
 import ControlGroup from './../components/dashboard/ControlGroup'
 import DashboardModule from './../components/dashboard/DashboardModule'
 import DashboardNotification from './../components/dashboard/DashboardNotification'
+
 export default {
   name: 'Dashboard',
   mixins: [changeRouteTitle],

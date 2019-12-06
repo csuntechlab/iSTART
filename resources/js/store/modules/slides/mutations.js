@@ -9,32 +9,22 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
-    let currentModule = payload.currentModule
-    let currentPage = payload.currentPage
-    let maxPage = payload.maxPage
-    let userGroup = payload.userGroup
-    let moduleData = payload.moduleData
-    let moduleDataCount = Array.from(moduleData).length
+    let userGroup = payload.data.userGroup
+    let currentModule = payload.data.current_module
+    let moduleDataLength = Object.keys(state.moduleData).length
 
-    if (userGroup !== 'control' && currentModule === '') {
-      for (let i = 0; i < moduleDataCount; i += 1) {
-        let indexedModuleGroup = moduleData.group
-        if (userGroup === indexedModuleGroup) {
-          let currentModule = moduleData[i].name
-          state.currentModule = currentModule
-          break
-        }
-      }
-    } else if (userGroup !== 'control' && currentModule !== '') {
-      for (let i = 0; i < moduleDataCount; i += 1) {
-        let moduleNameInState = state.module.name
-        if (currentModule === moduleNameInState) {
-          state.moduleData[i].progress.current_slide = currentPage
-          state.moduleData[i].progress.latest_slide = currentPage
-          break
-        } else {
-          state.moduleData[i].progress.slide_percentage = 100
-          state.moduleData[i].progress.latest_slide = maxPage
+    for (let i = 0; i < moduleDataLength; i += 1) {
+      console.log(state.moduleData[i])
+      console.log(currentModule)
+      let moduleDataName = state.moduleData[i].name.toLowerCase()
+      let moduleDataGroup = state.moduleData[i].group
+
+      if (currentModule === '' && userGroup === moduleDataGroup) {
+        // If initial login, Show First Module of specified group & Break
+      } else if (userGroup === moduleDataGroup) {
+        // Keep showing modules for User group until reached currentmodule & Break
+        if (currentModule === moduleDataName) {
+          // Once current_module matches the module in index, show the module & break
         }
       }
     }
