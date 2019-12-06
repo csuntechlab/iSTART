@@ -11,7 +11,7 @@ export default {
     let api = await axios.post('get-module-progress', {
       user_id: payload.userId
     })
-    console.log('api', api)
+
     api.data.userGroup = payload.userGroup
     return api
   },

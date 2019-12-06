@@ -28,13 +28,13 @@ export default {
           // Calculate progress
           let latestSlide = payload.data.current_page
           let totalSlides = payload.data.max_page
-          let totalProgressAsNumber = ((latestSlide / totalSlides) * 100)
+          let totalProgressAsNumber = ((latestSlide / (totalSlides - 1)) * 100).toFixed(2)
           state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
 
           state.moduleData[i].progress.current_slide = latestSlide
           state.moduleData[i].progress.latest_slide = latestSlide
 
-          if (latestSlide === totalSlides) {
+          if (latestSlide === (totalSlides - 1)) {
             state.moduleData[i].progress.is_review = true
           }
 
@@ -122,6 +122,11 @@ export default {
   // Toggles If Slide is Displayed (true/false)
   SET_SLIDE_CONTENT_VISIBILITY (state, payload) {
     state.slideContentVisibility = payload
+  },
+
+  // Set module as review state
+  MARK_MODULE_AS_REVIEW (state, index) {
+    state.moduleData[index].progress.is_review = true
   },
 
   // Email Form Template
