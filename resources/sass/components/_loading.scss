@@ -1,6 +1,6 @@
 .loading {
     &-container {
-        background-color: rgba(245, 245, 245, 0.9);
+        background-color: rgba(245, 245, 245, 0.95);
         display: flex;
         position: fixed;
         top: 0;
@@ -45,6 +45,7 @@
         display: flex;
         position: relative;
         justify-content: center;
+        margin-bottom: 4rem;
     }
 
     &__logo {
