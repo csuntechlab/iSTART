@@ -1,7 +1,7 @@
 <template>
   <section class="dashboard-module-wrap container">
     <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
-      <div v-if="user.user_group === item.group" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
+      <div v-if="item.show" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
         <div class="row">
           <div class="dashboard-module__overview-wrapper col-12 col-md-6">
             <div class="dashboard-module__overview row">

@@ -20,11 +20,16 @@ export default {
       let moduleDataGroup = state.moduleData[i].group
 
       if (currentModule === '' && userGroup === moduleDataGroup) {
-        // If initial login, Show First Module of specified group & Break
+        state.moduleData[i].show = true
+        break
       } else if (userGroup === moduleDataGroup) {
-        // Keep showing modules for User group until reached currentmodule & Break
+        state.moduleData[i].show = true
+        state.moduleData[i].progress.is_review = true
+        state.moduleData[i].progress.slide_percentage = 100
         if (currentModule === moduleDataName) {
-          // Once current_module matches the module in index, show the module & break
+          // check if current_slide === max_slide, if is MARK COMPLETED
+          // else set progress of current_module
+          break
         }
       }
     }
