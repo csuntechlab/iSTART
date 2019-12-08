@@ -10,5 +10,9 @@ interface ModuleProgressContract
 
     public function moduleComplete($data);
 
+    public function createNewModule($data): object;
+
+    public function moduleExists($data): boolean;
+
 
 }

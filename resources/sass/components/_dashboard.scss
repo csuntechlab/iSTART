@@ -1,6 +1,7 @@
 .dashboard {
     background-color: $white;
     position: relative;
+    padding: 0;
 
     @include media-breakpoint-down(sm) {
         max-width: 100%;

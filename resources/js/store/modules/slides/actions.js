@@ -9,14 +9,11 @@ export default {
   async requestModuleProgress ({ commit }, payload) {
     let userId = payload.userId
     let userGroup = payload.userGroup
-    let moduleData = payload.moduleData
-    SlidesAPI.getModuleProgressAPI(userId)
+    payload = { userId: userId, userGroup: userGroup }
+    SlidesAPI.getModuleProgressAPI(payload)
       .then(
         response => {
-          let currentModule = response.current_module
-          let currentPage = response.current_page
-          let maxPage = response.max_page
-          commit('REQUEST_MODULE_PROGRESS', { currentModule: currentModule, currentPage: currentPage, maxPage: maxPage, userGroup: userGroup, moduleData: moduleData })
+          commit('REQUEST_MODULE_PROGRESS', response)
         })
       .catch(
         error => {
@@ -73,16 +70,16 @@ export default {
   },
 
   // On Module Completion
-  submitEmailOnModuleCompletion ({ commit }, payload) {
-    let currentModule = payload.currentModule
-    let moduleData = payload.moduleData
-    let moduleDataCount = Array.from(moduleData).length
-
-    for (let i = 0; i < moduleDataCount; i += 1) {
-      if (currentModule === moduleData[i].name && !moduleData[i].is_complete) {
-        SlidesAPI.sendCompletedModuleMail(payload)
-      }
-    }
+  submitEmailOnModuleCompletion ({ commit }, index) {
+    SlidesAPI.sendCompletedModuleMail()
+      .then(
+        commit('MARK_MODULE_AS_REVIEW', index)
+      )
+      .catch(
+        error => {
+          console.error(error)
+        }
+      )
   },
 
   // Email Form Template

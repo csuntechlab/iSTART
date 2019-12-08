@@ -51,6 +51,7 @@ export default {
         'isSlideContentVisible',
         'currentSlideData',
         'currentSlideNumber',
+        'getModuleData',
         'getCurrentModule',
         'latestSlideNumber',
         'totalSlides',
@@ -67,9 +68,18 @@ export default {
     checkForEnd () {
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
         let currentModule = this.getCurrentModule
-        let moduleData = this.JSONSlideData
-        this.submitEmailOnModuleCompletion({ currentModule: currentModule, moduleData: moduleData })
+        let moduleData = this.getModuleData
+        let moduleDataLength = Object.keys(moduleData).length
 
+        for (let i = 0; i < moduleDataLength; i += 1) {
+          let moduleDataName = moduleData[i].name.toLowerCase()
+          let moduleDataIsReview = moduleData[i].progress.is_review
+          // Send email to User & Admin on completion, then mark module as review
+          if (moduleDataName === currentModule && !moduleDataIsReview) {
+            this.submitEmailOnModuleCompletion(i)
+            break
+          }
+        }
         return true
       } else {
         return false
@@ -113,9 +123,9 @@ export default {
     storeModuleProgress () {
       let userId = this.user.user_id
       let moduleName = this.getCurrentModule.toLowerCase()
-      let maxPage = this.totalSlides
       let currentSlideNumber = this.currentSlideNumber
       let latestSlideNumber = this.latestSlideNumber
+      let maxPage = this.totalSlides
 
       if (currentSlideNumber === latestSlideNumber) {
         let payload = {

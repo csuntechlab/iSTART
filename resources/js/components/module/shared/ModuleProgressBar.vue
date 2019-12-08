@@ -1,14 +1,14 @@
 <template>
   <header class="module__progressBarWrapper">
     <loading-progress class="module__progressBar"
-      :progress="latestSlideNumber/totalSlides"
+      :progress="Math.round(((latestSlideNumber / (totalSlides - 1))).toFixed(2))"
       :shape="module.shape"
       :height="module.height"
       :size="module.width"
       :width="module.width"
     />
     <p class="module__percentage">
-      {{ Math.floor((latestSlideNumber/totalSlides) * 100) }}%
+      {{ Math.round(((latestSlideNumber / (totalSlides - 1)) * 100).toFixed(2)) }}%
     </p>
   </header>
 </template>

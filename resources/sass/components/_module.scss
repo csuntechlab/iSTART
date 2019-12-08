@@ -1,5 +1,7 @@
 
 .module {
+    display: flex;
+    flex-flow: column;
     overflow-x: hidden;
     min-height: 100vh;
     border: 1px solid $border-color;
@@ -14,8 +16,8 @@
     }
 
     &__content {
-        min-height: calc(100vh - 8.25rem);
         display: flex;
+        flex: 1;
     }
 
     &__wrapper {

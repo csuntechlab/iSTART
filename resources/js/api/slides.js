@@ -9,9 +9,10 @@ export default {
 
   async getModuleProgressAPI (payload) {
     let api = await axios.post('get-module-progress', {
-      user_id: payload
+      user_id: payload.userId
     })
 
+    api.data.userGroup = payload.userGroup
     return api
   },
 
