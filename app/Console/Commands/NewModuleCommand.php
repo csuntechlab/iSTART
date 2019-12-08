@@ -53,10 +53,9 @@ class NewModuleCommand extends Command
                     if ($currentModule !== null) {
                         if ($currentModule->current_page !== 0 && ($currentModule->current_page === $currentModule->max_page)) {
                             $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
-                            // $dayCheck = $currentModule->expiration_date->diffInDays(Carbon::now()->toDateTimeString());
                             if ($dayCheck === 0) {
                                 // send out the email.
-                                Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($user));
+                                Mail::to($user->email)->send(new NewModuleAvailable($user));
                             }
                         }
                     }

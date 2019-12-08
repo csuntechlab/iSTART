@@ -53,7 +53,7 @@ class DeadlineReminderCommand extends Command
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expiration_date);
                     if ($dayCheck === 2 || $dayCheck === 1) {
                         // send out the email.
-                        Mail::to((env('RECIEVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($user));
+                        Mail::to($user->email)->send(new UserRunningOutOfTimeEmail($user));
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
