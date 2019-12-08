@@ -50,7 +50,7 @@ class LoginReminderCommand extends Command
 
                 if ($dayCheck === 3) {
                     // send out the email.
-                    Mail::to(env('RECIEVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
+                    Mail::to($user->email)->send(new UserHasntLoggedInEmail($user));
                 }
             }
         }

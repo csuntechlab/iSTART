@@ -52,19 +52,14 @@ class ModuleProgressService implements ModuleProgressContract
 
         $user = $data['user_id'];
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
-
         if($moduleComplete == null){
 
             return null;
         }
-
-        $job = (new SendNewModuleEmail($moduleComplete))
-            ->delay(Carbon::now()->addSeconds(env('MODULE_COMPLETION')));
-            dispatch($job);
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
         $moduleComplete->save();
-
+        return true;
     }
 
     public function createNewModule($data)

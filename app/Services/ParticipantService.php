@@ -25,7 +25,6 @@ class ParticipantService implements ParticipantContract
         $goodParticipantsMembers = $goodParticipants['goodParticipants'];
 
         foreach ($goodParticipantsMembers as $goodParticipantsMember){
-
             Arr::forget($goodParticipantsMember,'email');
             $ParticipantsEmailRemoved[] = $goodParticipantsMember;
         }
@@ -44,4 +43,3 @@ class ParticipantService implements ParticipantContract
 
     }
 }
-

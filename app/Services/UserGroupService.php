@@ -38,10 +38,8 @@ class UserGroupService implements UserGroupContract
 
             $userInUserGroup = new UserGroup();
             $userInUserGroup->user_id = $user['user_id'];
-            $userInUserGroup->user_group = null;
             $userInUserGroup->display_name = null;
             $userInUserGroup->remember_token = null;
-            $userInUserGroup->save();
 
             $groups = DB::table('user_groups')
                 ->selectRaw('user_group, COUNT(*) as count')
@@ -102,7 +100,7 @@ class UserGroupService implements UserGroupContract
                 $userInUserGroup->save();
             }
 
-            $this->userAssignedGroupEmailUtility->sendMail();
+            $this->userAssignedGroupEmailUtility->sendMail($user, $userInUserGroup);
         }
 
 

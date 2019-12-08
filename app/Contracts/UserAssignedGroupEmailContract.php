@@ -6,5 +6,5 @@ namespace App\Contracts;
 interface UserAssignedGroupEmailContract
 {
 
-    public function sendMail();
+    public function sendMail($user, $userInUserGroup);
 }
