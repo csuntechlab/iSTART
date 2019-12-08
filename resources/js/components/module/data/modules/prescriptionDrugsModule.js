@@ -553,7 +553,7 @@ export const prescriptionDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Here are the results based off your responses.'
+          0: 'Your responses indicate that you know you need healthy alternatives to reduce stress and anxiety. This module offers alternatives that can help you take steps to achieving this goal'
         }
       }
     }
@@ -713,7 +713,7 @@ export const prescriptionDrugsModuleSlides = {
       2: {
         paragraph: {
           0: 'Did you know CSUN has a Learning Resource Center with FREE workshops, labs and online tutoring?',
-          1: 'See the resources in the Aspp menu.'
+          1: 'See the resources in the App menu.'
         }
       }
     }
