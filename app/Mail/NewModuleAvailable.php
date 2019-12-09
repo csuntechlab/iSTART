@@ -30,6 +30,6 @@ class NewModuleAvailable extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.NewModuleAvailable');
+        return $this->subject(config('mail.from.name'). ' new module is ready for you.')->view('mail.NewModuleAvailable');
     }
 }

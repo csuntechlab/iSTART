@@ -30,6 +30,6 @@ class UserHasntLoggedInEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.UserHasntLoggedInEmail');
+        return $this->subject(config('mail.from.name').' Log-in Reminder')->view('mail.UserHasntLoggedInEmail');
     }
 }

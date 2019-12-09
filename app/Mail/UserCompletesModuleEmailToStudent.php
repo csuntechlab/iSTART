@@ -37,6 +37,6 @@ class UserCompletesModuleEmailToStudent extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.UserCompletesModuleEmailToStudent');
+        return $this->subject(config('mail.from.name'). ' module completion confirmation')->view('mail.UserCompletesModuleEmailToStudent');
     }
 }

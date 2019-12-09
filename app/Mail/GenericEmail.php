@@ -32,7 +32,7 @@ class GenericEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.generic');
+        return $this->subject(config('mail.from.name'))->view('mail.generic');
 
     }
 }

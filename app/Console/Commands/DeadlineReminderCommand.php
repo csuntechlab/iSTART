@@ -44,7 +44,7 @@ class DeadlineReminderCommand extends Command
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
             $q->orderBy('created_at', 'DESC')->first();
-        }, 'participant'])->whereHas('moduleProgress')->get();
+        }])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
@@ -57,6 +57,7 @@ class DeadlineReminderCommand extends Command
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
+                            $user->participant()->delete();
                             Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($user));
                         }
                     }

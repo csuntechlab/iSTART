@@ -37,6 +37,6 @@ class UserCompletesModuleEmailToAdmin extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.UserCompletesModuleEmailToAdmin');
+        return $this->subject(config('mail.from.name'). ' module completion email.')->view('mail.UserCompletesModuleEmailToAdmin');
     }
 }

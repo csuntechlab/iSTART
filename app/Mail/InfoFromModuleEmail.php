@@ -25,6 +25,6 @@ class InfoFromModuleEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.InfoFromModuleEmail');
+        return $this->subject(config('mail.from.name'). ' progress.')->view('mail.InfoFromModuleEmail');
     }
 }

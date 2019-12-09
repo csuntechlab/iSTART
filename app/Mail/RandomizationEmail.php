@@ -33,6 +33,6 @@ class RandomizationEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.randomizationEmail');
+        return $this->subject(config('mail.from.name'). ' welcome to the app.')->view('mail.randomizationEmail');
     }
 }

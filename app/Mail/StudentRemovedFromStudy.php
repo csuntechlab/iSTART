@@ -28,6 +28,6 @@ class StudentRemovedFromStudy extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.StudentRemovedFromStudyEmail');
+        return $this->subject(config('mail.from.name'). ' you have been removed.')->view('mail.StudentRemovedFromStudyEmail');
     }
 }
