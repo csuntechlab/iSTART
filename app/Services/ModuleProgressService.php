@@ -55,7 +55,8 @@ class ModuleProgressService implements ModuleProgressContract
         return false;
     }
 
-    public function moduleComplete($data){
+    public function moduleComplete($data)
+    {
         $user = $data['user_id'];
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
         if($moduleComplete == null){

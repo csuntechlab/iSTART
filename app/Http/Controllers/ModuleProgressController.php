@@ -55,7 +55,8 @@ class ModuleProgressController extends Controller
     {
         $validator = $request->validate([
             'user_id' => 'required',
-            'next_module' => 'required'
+            'next_module' => 'required',
+            'current_module' => 'required'
         ]);
 
         return $this->moduleProgressUtility->moduleComplete($validator);
