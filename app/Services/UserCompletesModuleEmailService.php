@@ -20,7 +20,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $userCompletesModuleEmailToAdmin = new \stdClass();
         $userCompletesModuleEmailToAdmin->current_module = $currentModule['current_module'];
         $userCompletesModuleEmailToAdmin->participant_id = $ParticipantID['participant_id'];
-        Mail::to((env('RECIEVE_EMAIL')))->send(new UserCompletesModuleEmailToAdmin($userCompletesModuleEmailToAdmin));
+        Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToAdmin($userCompletesModuleEmailToAdmin));
 
     }
 
@@ -33,7 +33,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         if((env('APP_ENV') === 'production')) {
             Mail::to($user['email'])->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
         } else {
-            Mail::to((env('RECIEVE_EMAIL')))->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
+            Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
         }
     }
 }

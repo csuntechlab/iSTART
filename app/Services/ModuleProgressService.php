@@ -21,7 +21,7 @@ class ModuleProgressService implements ModuleProgressContract
             'max_page' => '',
             'expiration_date' => null
         ];
-        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('creaded_at', 'DESC')
+        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')
                                             ->first();
         if ($moduleProgress !== null) {
             $response['user_id'] = $moduleProgress->user_id;
@@ -35,21 +35,28 @@ class ModuleProgressService implements ModuleProgressContract
 
     public function setModuleProgress($data)
     {
-        $moduleProgress = ModuleProgress::updateOrCreate(
-            [
+        $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
+
+        if ($moduleProgress === null) {
+            ModuleProgress::create([
                 'user_id' => $data['user_id'],
-                'current_module' => $data['current_module']
-            ],
-            [
+                'current_module' => $data['current_module'],
                 'current_page' => $data['current_page'],
-                'max_page' => $data['max_page']
-            ]
-        );
-        return response()->json(true);
+                'max_page' => $data['max_page'],
+                'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
+            ]);
+            return true;
+        } else {
+            $moduleProgress->current_page = $data['current_page'];
+            $moduleProgress->touch();
+            $moduleProgress->save();
+            return true;
+        }
+        return false;
     }
 
-    public function moduleComplete($data){
-
+    public function moduleComplete($data)
+    {
         $user = $data['user_id'];
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
         if($moduleComplete == null){
@@ -59,14 +66,19 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
         $moduleComplete->save();
-        return true;
+        $newModule = $this->createNewModule($data);
+        return $newModule;
+        if ($newModule !== null) {
+            return true;
+        }
+        return null;
     }
 
     public function createNewModule($data)
     {
         $moduleProgress = ModuleProgress::create([
             'user_id' => $data['user_id'],
-            'current_module' => '',
+            'current_module' => $data['next_module'],
             'current_page' => 0,
             'max_page' => 0,
             'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),

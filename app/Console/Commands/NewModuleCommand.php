@@ -56,7 +56,7 @@ class NewModuleCommand extends Command
                             if ($dayCheck === 0) {
                                 // send out the email.
                                 // Mail::to($user->email)->send(new NewModuleAvailable($user));
-                                Mail::to((env('RECIEVE_EMAIL')))->send(new NewModuleAvailable($user));
+                                Mail::to((env('RECEIVE_EMAIL')))->send(new NewModuleAvailable($user));
                             }
                         }
                     }

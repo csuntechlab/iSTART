@@ -34,7 +34,7 @@ export default {
           state.moduleData[i].progress.current_slide = latestSlide
           state.moduleData[i].progress.latest_slide = latestSlide
 
-          if (latestSlide === (totalSlides - 1)) {
+          if ((totalSlides > 0) && (latestSlide === totalSlides)) {
             state.moduleData[i].progress.is_review = true
           }
 

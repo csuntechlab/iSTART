@@ -35,3 +35,4 @@ Route::post('/verify-excel-sheet', 'AdminController@checkEmailsInJson');
 Route::post('/submit-good-participants','ParticipantController@addGoodParticipantsToParticipantsTable');
 
 Route::post('/remove-participant','ParticipantController@removeParticipantFromStudy');
+Route::post('/module-complete', 'ModuleProgressController@moduleComplete');
