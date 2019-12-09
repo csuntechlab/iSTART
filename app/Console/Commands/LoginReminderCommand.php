@@ -49,7 +49,7 @@ class LoginReminderCommand extends Command
                 $dayCheck = (Carbon::now()->diffInDays($user->getUserGroup->created_at));
                 if ($dayCheck === 3) {
                     // send out the email.
-                    Mail::to($user->email)->send(new UserHasntLoggedInEmail($user));
+                    Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
                 }
             }
         }
