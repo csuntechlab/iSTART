@@ -6,13 +6,11 @@
         <thead>
           <tr>
             <th scope="col">email</th>
-            <th scope="col">participant ID</th>
           </tr>
         </thead>
         <tbody>
           <tr :key="participant.participant_id" v-for="participant in categorizedParticipants.bad">
             <td>{{participant.email}}</td>
-            <td>{{participant.participant_id}}</td>
           </tr>
         </tbody>
       </table>
@@ -23,13 +21,11 @@
         <thead>
           <tr>
             <th scope="col">email</th>
-            <th scope="col">participant ID</th>
           </tr>
         </thead>
         <tbody>
           <tr :key="participant.participant_id" v-for="participant in categorizedParticipants.good">
             <td>{{participant.email}}</td>
-            <td>{{participant.participant_id}}</td>
           </tr>
         </tbody>
       </table>

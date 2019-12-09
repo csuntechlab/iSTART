@@ -100,11 +100,12 @@ export default {
 
     parseFile (excelSheetJSON) {
       var parsedExcelSheet = []
-      for (var i = 1; i < excelSheetJSON.length; i++) {
-        var currentStudent = {
+      for (let i = 1; i < excelSheetJSON.length; i += 1) {
+        let currentStudent = {
           email: excelSheetJSON[i][0],
           participant_id: excelSheetJSON[i][1]
         }
+        currentStudent.participant_id = i
         parsedExcelSheet.push(currentStudent)
       }
       return parsedExcelSheet

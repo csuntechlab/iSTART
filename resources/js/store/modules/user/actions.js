@@ -36,6 +36,7 @@ export default {
   },
 
   async verifyExcelSheet ({ commit }, payload) {
+    console.log('verify', payload)
     return UserAPI.verifyExcelSheetAPI(payload)
       .then(
         response => {
@@ -54,7 +55,6 @@ export default {
       }
     ).catch(
       failure => {
-        console.error(failure)
         commit('PARTICIPANTS_WERE_SUBMITTED', false)
       }
     )
