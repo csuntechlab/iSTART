@@ -15,7 +15,7 @@
           <label class="admin__upload-label" for="file">File</label>
           <input id="file" class="admin__upload-file" type="file" ref="file" @change="handleFileChange">
         </div>
-        <button v-if="!incorrectFileType" class="admin__submit" @click.prevent="submitFile">Submit</button>
+        <button v-if="!incorrectFileType" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
         <div>
           <Participants v-if="participantsWereSubmitted===null"/>
           <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>

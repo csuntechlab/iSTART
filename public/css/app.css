@@ -12959,6 +12959,10 @@ a:hover {
   width: 100%;
 }
 
+.admin__button {
+  margin-bottom: 4rem;
+}
+
 .admin__nav {
   background-color: #3771dc;
   width: 100%;
@@ -13008,7 +13012,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 2rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .admin__upload {
@@ -13026,22 +13030,26 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 4rem;
 }
 
 .admin__upload-label {
   visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
-.admin__submit {
-  background-color: #3771dc;
-  color: white;
-  padding: 1rem;
-  margin: 2rem 0;
+.admin__upload-file {
+  padding-left: 6rem;
 }
 
 .participants__good,
 .participants__bad {
   margin-bottom: 2rem;
+}
+
+.participants__good table {
+  margin-bottom: 6rem;
 }
 
 .introSlide {
