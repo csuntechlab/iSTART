@@ -21,7 +21,7 @@ class ModuleProgressService implements ModuleProgressContract
             'max_page' => '',
             'expiration_date' => null
         ];
-        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('creaded_at', 'DESC')
+        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')
                                             ->first();
         if ($moduleProgress !== null) {
             $response['user_id'] = $moduleProgress->user_id;

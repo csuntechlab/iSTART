@@ -15,6 +15,6 @@ class UserRunningOutOfTimeEmailService implements UserRunningOutOfTimeEmailContr
         $currentModule = ModuleProgress::find($userId);
         $userRunningOutOfTimeEmail = new \stdClass();
         $userRunningOutOfTimeEmail->current_module = $currentModule['current_module'];
-        Mail::to((env('RECIEVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($userRunningOutOfTimeEmail));
+        Mail::to((env('RECEIVE_EMAIL')))->send(new UserRunningOutOfTimeEmail($userRunningOutOfTimeEmail));
     }
 }
