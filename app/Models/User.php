@@ -46,4 +46,9 @@ class User extends MetaUser
         return $this->hasMany('App\Models\ModuleProgress', 'user_id', 'user_id');
     }
 
+    public function individual()
+    {
+        return $this->hasOne('App\Models\Individual', 'individuals_id', 'user_id');
+    }
+
 }
