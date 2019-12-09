@@ -21,6 +21,6 @@ class UserRunningOutOfTimeEmail extends Mailable
 
     public function build()
     {
-        return $this->view('mail.UserRunningOutOfTimeEmail');
+        return $this->subject(config('mail.from.name').' module completion reminder.')->view('mail.UserRunningOutOfTimeEmail');
     }
 }

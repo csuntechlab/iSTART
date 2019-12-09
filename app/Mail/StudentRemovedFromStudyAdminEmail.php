@@ -30,6 +30,6 @@ class StudentRemovedFromStudyAdminEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.StudentRemovedFromStudyAdminEmail');
+        return $this->subject(config('mail.from.name'). ' student removed from study.')->view('mail.StudentRemovedFromStudyAdminEmail');
     }
 }
