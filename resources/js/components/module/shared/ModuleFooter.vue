@@ -36,7 +36,6 @@
 <script>
 import { mapActions, mapState, mapGetters } from 'vuex'
 import { idleTimeout } from './../../../mixins/idleTimeout'
-import SlidesAPI from './../../../api/slides'
 
 export default {
   mixins: [
@@ -67,16 +66,40 @@ export default {
 
     checkForEnd () {
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
-        let currentModule = this.getCurrentModule
+        let currentModule = this.getCurrentModule.toLowerCase()
         let moduleData = this.getModuleData
         let moduleDataLength = Object.keys(moduleData).length
 
         for (let i = 0; i < moduleDataLength; i += 1) {
           let moduleDataName = moduleData[i].name.toLowerCase()
           let moduleDataIsReview = moduleData[i].progress.is_review
-          // Send email to User & Admin on completion, then mark module as review
-          if (moduleDataName === currentModule && !moduleDataIsReview) {
+
+          if ((moduleDataName === currentModule) && !moduleDataIsReview) {
+            let userId = this.user.user_id
+            let moduleName = this.getCurrentModule.toLowerCase()
+            let latestSlideNumber = this.latestSlideNumber
+            let maxPage = this.totalSlides
+
+            let progressPayload = {
+              userId: userId,
+              moduleName: moduleName,
+              currentPage: latestSlideNumber,
+              maxPage: (maxPage - 1)
+            }
+
+            this.setModuleProgress(progressPayload)
+
             this.submitEmailOnModuleCompletion(i)
+
+            let nextModule = moduleData[i + 1].name.toLowerCase()
+            if (i !== moduleDataLength) {
+              let completePayload = {
+                user_id: userId,
+                current_module: currentModule,
+                next_module: nextModule
+              }
+              this.completeModule(completePayload)
+            }
             break
           }
         }
@@ -99,7 +122,9 @@ export default {
         'resetSlideNavigation',
         'setSlideContentVisibility',
         'enableContinue',
-        'submitEmailOnModuleCompletion'
+        'submitEmailOnModuleCompletion',
+        'setModuleProgress',
+        'completeModule'
       ]
     ),
 
@@ -131,15 +156,11 @@ export default {
         let payload = {
           userId: userId,
           moduleName: moduleName,
-          currentPage: latestSlideNumber,
-          maxPage: maxPage
+          currentPage: (latestSlideNumber + 1),
+          maxPage: (maxPage - 1)
         }
 
-        return SlidesAPI.setModuleProgressAPI(payload)
-          .catch(
-            error => {
-              console.error(error)
-            })
+        this.setModuleProgress(payload)
       }
     },
 

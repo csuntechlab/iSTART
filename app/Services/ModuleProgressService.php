@@ -49,7 +49,6 @@ class ModuleProgressService implements ModuleProgressContract
     }
 
     public function moduleComplete($data){
-
         $user = $data['user_id'];
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
         if($moduleComplete == null){
@@ -59,15 +58,19 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
         $moduleComplete->save();
-        $this->createNewModule($data);
-        return true;
+        $newModule = $this->createNewModule($data);
+        return $newModule;
+        if ($newModule !== null) {
+            return true;
+        }
+        return null;
     }
 
     public function createNewModule($data)
     {
         $moduleProgress = ModuleProgress::create([
             'user_id' => $data['user_id'],
-            'current_module' => '',
+            'current_module' => $data['next_module'],
             'current_page' => 0,
             'max_page' => 0,
             'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
