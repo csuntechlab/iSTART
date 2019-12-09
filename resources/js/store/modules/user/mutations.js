@@ -1,8 +1,4 @@
 export default {
-  SET_TO_DEVELOPMENT_MODE (state) {
-    state.developmentMode = true
-  },
-
   VERIFY_USER_DATA (state, payload) {
     if (payload.valid === '1') {
       state.user = payload

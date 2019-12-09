@@ -2,10 +2,6 @@ import UserAPI from './../../../api/user'
 import router from './../../../router'
 
 export default {
-  setToDevelopmentMode ({ commit }) {
-    commit('SET_TO_DEVELOPMENT_MODE', true)
-  },
-
   async verifyUserData ({ commit }, payload) {
     commit('LOGIN_IS_LOADING', true)
     return UserAPI.verifyUserDataAPI(payload)

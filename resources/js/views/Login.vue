@@ -37,11 +37,6 @@
                   </div>
                 </div>
               </form>
-
-              <!-- Development use -->
-              <span @click="bypassLogin()">Development Bypass</span>
-              <!-- End of Development Code -->
-
             </div>
           </div>
         </div>
@@ -68,14 +63,8 @@ export default {
 
   methods: {
     ...mapActions([
-      'verifyUserData',
-      'setToDevelopmentMode'
+      'verifyUserData'
     ]),
-
-    bypassLogin () {
-      this.setToDevelopmentMode()
-      this.$router.push({ name: 'Dashboard' })
-    },
 
     submitForm () {
       let isCookiesPolicyAccepted = window.localStorage.isCookiesPolicyAccepted
