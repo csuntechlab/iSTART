@@ -59,6 +59,7 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
         $moduleComplete->save();
+        $this->createNewModule($data);
         return true;
     }
 

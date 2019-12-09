@@ -50,4 +50,14 @@ class ModuleProgressController extends Controller
 
         return $this->moduleProgressUtility->setModuleProgress($data);
     }
+
+    public function moduleComplete(Request $request)
+    {
+        $validator = $request->validate([
+            'user_id' => 'required',
+            'current_module' => 'required'
+        ]);
+
+        return $this->moduleProgressUtility->moduleComplte($validator);
+    }
 }
