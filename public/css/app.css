@@ -12927,6 +12927,123 @@ a:hover {
   background-color: #106dbc;
 }
 
+.admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+
+@media (max-width: 767.98px) {
+  .admin {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.admin-wrap {
+  height: 100%;
+  width: 100%;
+}
+
+.admin__nav {
+  background-color: #3771dc;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.admin__logo {
+  width: 5.75rem;
+}
+
+.admin__link {
+  display: block;
+  color: white;
+  padding: 0 .15rem;
+  height: 1.5rem;
+}
+
+.admin__link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .admin__link:hover {
+    border-bottom: 0.2rem solid white;
+  }
+}
+
+.admin__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+}
+
+.admin__upload {
+  position: relative;
+  border: 4px dashed #3771dc;
+  border-radius: 2rem;
+  height: 16rem;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin__upload-label {
+  visibility: hidden;
+}
+
+.admin__submit {
+  background-color: #3771dc;
+  color: white;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.participants__good,
+.participants__bad {
+  margin-bottom: 2rem;
+}
+
 .introSlide {
   display: -webkit-box;
   display: -ms-flexbox;
