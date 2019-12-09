@@ -241,7 +241,7 @@ export const illicitDrugsModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'They are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
+          0: 'There are also no safety standards for making, packaging, or selling synthetic cannabinoid products, so be wary!'
         }
       },
       3: {
@@ -353,21 +353,6 @@ export const illicitDrugsModuleSlides = {
           show: false,
           front: {
             img: {
-              src: 'images/illicitDrugsModule/ill_s13_01.png',
-              alt: 'smoking',
-              caption: null
-            },
-            question: null
-          },
-          back: {
-            description: 'Smoking: Cough, asthma, and higher risk for infections like pneumonia.'
-          }
-        },
-        1: {
-          was_flipped: false,
-          show: false,
-          front: {
-            img: {
               src: 'images/illicitDrugsModule/ill_s13_04.png',
               alt: 'snorting',
               caption: null
@@ -376,6 +361,21 @@ export const illicitDrugsModuleSlides = {
           },
           back: {
             description: 'Snorting: loss of smell, nosebleeds, frequent runny nose, and problems swallowing.'
+          }
+        },
+        1: {
+          was_flipped: false,
+          show: false,
+          front: {
+            img: {
+              src: 'images/illicitDrugsModule/ill_s13_01.png',
+              alt: 'smoking',
+              caption: null
+            },
+            question: null
+          },
+          back: {
+            description: 'Smoking: Cough, asthma, and higher risk for infections like pneumonia.'
           }
         },
         2: {

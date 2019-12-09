@@ -5,7 +5,7 @@ export const comparisonModuleSlides = {
     content: {
       title: 'Substance Use Prevention',
       background_image: 'images/thumbnail/comparison-module_thumbnail.jpg',
-      goal: null,
+      goal: 'In this module, you will learn about five types of substances: alcohol, marijuana, nicotine, prescription drugs, and illicit drugs, and how they each may impact your health and wellness. You will also learn about ways to maintain a healthy lifestyle.',
       definition: null,
       estimated_completion: '30 minutes'
     }
@@ -853,7 +853,7 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'The smoke from vaping is NOT just harmless "water vapor"'
+          0: 'The smoke from vaping is NOT just “harmless water vapor". Below are some chemicals that are present in vape smoke'
         }
       },
       1: {
@@ -1176,7 +1176,7 @@ export const comparisonModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Stimulants'
+          0: '<b>Stimulants</b>'
         }
       },
       1: {
@@ -1187,7 +1187,7 @@ export const comparisonModuleSlides = {
       },
       2: {
         paragraph: {
-          0: 'Anti-anxiety/Sedatives'
+          0: '<b>Anti-anxiety/Sedatives</b>'
         }
       },
       3: {
@@ -1198,13 +1198,13 @@ export const comparisonModuleSlides = {
       },
       4: {
         paragraph: {
-          0: 'Opioids/Pain Killers'
+          0: '<b>Opioids/Pain Killers<b>'
         }
       },
       5: {
         list_element: [
           'Oxycontin, Percocet, & Norco',
-          'College students may take Rx opioids to get high or drown out life\'s problems. But these painkillers are highly addictive, and can lead to dangerous habits.'
+          'College students may take Rx opioids to get high or drown out life\'s problems. But these painkillers are highly addictive, and can lead to dangerous habits'
         ]
       }
     }
@@ -1269,7 +1269,7 @@ export const comparisonModuleSlides = {
         paragraph: {
           0: '<b>Stimulants:</b> Ritalin and Adderall are intended to treat ADHD. Repeated use by someone who does NOT have ADHD can increase risk of drug dependency and addiction. Stimulants actually share chemical similarities with Methamphetamine and can cause headaches, increased heart rate, agitation, anxiety and insomnia.',
           1: '<b>Anti-anxiety meds/Sedatives:</b> Meds like Xanax and Valium are highly addictive. Side effects include drowsiness, confusion, dizziness, nausea, memory impairment, slurred speech and slowed breathing.  If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects.',
-          2: '<b>RX Opioids:</b> Some people might think Rx opioids, such as Oxycontinor Vicodinare safer than alcohol or illegal drugs, but the truth is prescribed opioids can act just like heroin! Repeated use can lead to addiction and dependency, and high use or mixing it with other drugs can cause a person to overdose and stop breathing altogether.'
+          2: '<b>RX Opioids:</b> Some people might think prescription opioids, such as Oxycontin or Vicodin, are safer than alcohol or illegal drugs, but the truth is, prescribed opioids can have similar effects to heroin!'
         }
       }
     }

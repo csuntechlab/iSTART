@@ -414,7 +414,7 @@ export const alcoholModuleSlides = {
             andResponse: '',
             isAndMet: false,
             orAll: true,
-            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes. To make a change, having a clear next step in mind can be useful.<br><br> For example:<br> Cut back on how often or how much you drink; never drink and drive; or get help from a counselor at CSUN (see resources in App menu).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
+            orResponse: 'You might consider making a change to address your concerns. Continuing your current pattern could potentially lead to harmful outcomes. To make a change, having a clear next step in mind can be useful. For example: how much you drink; never drink and drive; or get help from a counselor at CSUN (see resources in App menu).<br> In the next slides, you\'ll learn how you can drink responsibly, or try wellness activities that make you feel great without drinking!',
             isOrMet: false
           },
           no: {

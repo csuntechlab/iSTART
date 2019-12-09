@@ -648,7 +648,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'College students often assume that the majority of their peers smoke or vape; but only 7% of students reported vaping in the last month.',
+          0: 'College students often assume that the majority of their peers smoke or vape; but only 7% of CSUN students reported vaping in the last month.',
           1: 'Don\'t be misled—these types of assumptions often lead students to smoke or vape in an attempt to fit in with their peers.'
         }
       },
@@ -869,6 +869,16 @@ export const nicotineModuleSlides = {
           mobile_size: '1/2',
           tablet_size: '1/2',
           desktop_size: '1/3'
+        }
+      },
+      2: {
+        paragraph: {
+          0: '<b>Audio Clip Transcript</b>',
+          1: '<b>ANNC</b>:  Did you know the nicotine in e-cigarettes can harm brain development?',
+          2: 'It\'s a fact. Brain development continues through the mid-20s, and using nicotine during adolescence can impact attention, learning, and memory.',
+          3: 'Did you know the nicotine in e-cigarettes can prime the brain for addiction – especially while it is still growing?',
+          4: 'It’s a fact.',
+          5: '<b>SG</b>: This is U.S. Surgeon General Jerome Adams. For more facts about the risks of e-cigarettes, and how to protect our youth, visit <a href="https://e-cigarettes.surgeongeneral.gov/" target="_blank">e-cigarettes.surgeongeneral.gov</a>'
         }
       }
     }
