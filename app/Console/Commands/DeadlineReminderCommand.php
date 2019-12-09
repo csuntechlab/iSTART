@@ -43,7 +43,7 @@ class DeadlineReminderCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->orderBy('created_at', 'DESC')->first();
+            $q->whereNotNull('expiration_date')->orderBy('created_at', 'DESC')->first();
         }])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {
@@ -52,8 +52,10 @@ class DeadlineReminderCommand extends Command
                     $currentModule = $user->moduleProgress->first();
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expiration_date);
                     if ($dayCheck === 2 || $dayCheck === 1) {
-                        // send out the email.
-                        Mail::to($user->email)->send(new UserRunningOutOfTimeEmail($user));
+                        if ($currentModule->current_page !== $currentModule->max_page) {
+                            // send out the email.
+                            Mail::to($user->email)->send(new UserRunningOutOfTimeEmail($user));
+                        }
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
