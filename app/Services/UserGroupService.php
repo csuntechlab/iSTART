@@ -32,13 +32,14 @@ class UserGroupService implements UserGroupContract
 
     public function sortAuthenticatedUsers($user)
     {
+        $user->load('individual');
         $userInUserGroup = UserGroup::where('user_id', $user['user_id'])->first();
 
         if($userInUserGroup == null) {
 
             $userInUserGroup = new UserGroup();
             $userInUserGroup->user_id = $user['user_id'];
-            $userInUserGroup->display_name = null;
+            $userInUserGroup->display_name = $user->individual->common_name;
             $userInUserGroup->remember_token = null;
 
             $groups = DB::table('user_groups')
