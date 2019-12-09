@@ -35,17 +35,24 @@ class ModuleProgressService implements ModuleProgressContract
 
     public function setModuleProgress($data)
     {
-        $moduleProgress = ModuleProgress::updateOrCreate(
-            [
+        $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
+
+        if ($moduleProgress === null) {
+            ModuleProgress::create([
                 'user_id' => $data['user_id'],
-                'current_module' => $data['current_module']
-            ],
-            [
+                'current_module' => $data['current_module'],
                 'current_page' => $data['current_page'],
-                'max_page' => $data['max_page']
-            ]
-        );
-        return response()->json(true);
+                'max_page' => $data['max_page'],
+                'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
+            ]);
+            return true;
+        } else {
+            $moduleProgress->current_page = $data['current_page'];
+            $moduleProgress->touch();
+            $moduleProgress->save();
+            return true;
+        }
+        return false;
     }
 
     public function moduleComplete($data){
