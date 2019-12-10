@@ -14,24 +14,8 @@ class ModuleProgressService implements ModuleProgressContract
 
     public function getModuleProgress($data): array
     {
-        $response = [
-            'user_id' => $data['user_id'],
-            'current_module' => '',
-            'current_page' => 0,
-            'max_page' => 0,
-            'expiration_date' => null,
-            'completed_at' => null
-        ];
         $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->get();
-        if (count($moduleProgress) !== 0) {
-            $response['user_id'] = $moduleProgress->user_id;
-            $response['current_module'] = $moduleProgress->current_module;
-            $response['current_page'] = $moduleProgress->current_page;
-            $response['max_page'] = $moduleProgress->max_page;
-            $response['expiration_date'] = $moduleProgress->expiration_date;
-            $response['completed_at'] = $moduleProgress->completed_at;
-        }
-        return $response;
+        return $moduleProgress;
     }
 
     public function setModuleProgress($data)
