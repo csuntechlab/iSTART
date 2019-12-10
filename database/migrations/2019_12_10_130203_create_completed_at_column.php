@@ -14,7 +14,7 @@ class CreateCompletedAtColumn extends Migration
     public function up()
     {
         Schema::table('module_progresses', function (Blueprint $table) {
-            $table->timestamp('completed_at')->nullable();
+            $table->timestamp('completed_at')->after('expiration_date')->nullable();
         });
     }
 
