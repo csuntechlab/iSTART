@@ -35,7 +35,10 @@ class ModuleProgressService implements ModuleProgressContract
 
     public function setModuleProgress($data)
     {
-        $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
+        $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])
+        ->where('current_module', $data['current_module'])
+        ->whereNotNull('expiration_date')
+        ->first();
 
         if ($moduleProgress === null) {
             ModuleProgress::create([
@@ -45,14 +48,14 @@ class ModuleProgressService implements ModuleProgressContract
                 'max_page' => $data['max_page'],
                 'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
             ]);
-            return true;
+            return json(true);
         } else {
             $moduleProgress->current_page = $data['current_page'];
             $moduleProgress->touch();
             $moduleProgress->save();
-            return true;
+            return json(true);
         }
-        return false;
+        return json(false);
     }
 
     public function moduleComplete($data)
@@ -61,7 +64,7 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
         if($moduleComplete == null){
 
-            return null;
+            return json(null);
         }
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
@@ -69,9 +72,9 @@ class ModuleProgressService implements ModuleProgressContract
         $newModule = $this->createNewModule($data);
         return $newModule;
         if ($newModule !== null) {
-            return true;
+            return json(true);
         }
-        return null;
+        return json(null);
     }
 
     public function createNewModule($data)
@@ -90,9 +93,9 @@ class ModuleProgressService implements ModuleProgressContract
     {
         $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])->whereNotNull('expiration_date')->orderBy('created_at', 'DESC')->first();
         if ($moduleProgress === null) {
-            return false;
+            return json(false);
         }
-        return true;
+        return json(true);
     }
 
 }
