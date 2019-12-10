@@ -1,9 +1,9 @@
 @component('mail::message')
-<h1>Thank you for participating in the iSTART substance use prevention study.</h1>
+Thank you for participating in the iSTART substance use prevention study.
 <br>
 <br>
 @if ($userInUserGroup->user_group === 'prevention')
-    You have been randomized into <strong>Group 1: Prevention</strong>
+    You have been randomized into <b>Group 1: Prevention</b>
     <br>
     You will participate in 5 substance use prevention modules (approximately 1 module per week). You will be able to access the first module immediately.
     <br>
@@ -11,7 +11,7 @@
     <br>
     After the 5th and final module, you will receive an EXIT survey via email, and then a 90-day follow-up survey.
 @elseif ($userInUserGroup->user_group === 'comparison')
-    You have been randomized into <strong>Group 2: Comparison</strong>
+    You have been randomized into <b>Group 2: Comparison</b>
     <br>
     You will participate in one substance use prevention module, available immediately.
     <br>
@@ -19,7 +19,7 @@
     <br>
     On day 30, if you completed the module, you will receive an EXIT survey via email, and then a 90-day follow-up survey.
 @else
-    You have been randomized into <strong>Group 3: Control</strong>
+    You have been randomized into <b>Group 3: Control</b>
     <br>
     You are part of the control group and not required to participate in the web-application modules. You may view the iSTART website for more information.
     <br>
