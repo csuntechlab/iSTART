@@ -23,10 +23,12 @@ class ModuleProgressController extends Controller
     {
         $validator = $request->validate([
             'user_id' => 'required',
+            'current_module' => 'required',
         ]);
 
         $data = [
             'user_id' => $request->user_id,
+            'current_module' => $request->current_module,
         ];
 
         return $this->moduleProgressUtility->getModuleProgress($data);
