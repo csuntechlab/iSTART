@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export default {
   // Module Functionality
   SET_MODULE_DATA (state, payload) {
@@ -18,6 +20,7 @@ export default {
       let moduleDataGroup = state.moduleData[i].group
 
       if (currentModule === '' && userGroup === moduleDataGroup) {
+        // If initial Login, show first module
         state.moduleData[i].show = true
         break
       } else if (userGroup === moduleDataGroup) {
@@ -34,8 +37,19 @@ export default {
           state.moduleData[i].progress.current_slide = latestSlide
           state.moduleData[i].progress.latest_slide = latestSlide
 
-          if ((totalSlides > 0) && (latestSlide === totalSlides)) {
+          let currentDate = moment().format('YYYY-MM-DD')
+          let expirationDate = payload.data.expiration_date.split(' ')[0]
+
+          if ((totalSlides > 0) && (latestSlide >= totalSlides)) {
             state.moduleData[i].progress.is_review = true
+            if (moment(currentDate).isSameOrAfter(expirationDate) && i !== moduleDataLength) {
+              state.moduleData[i + 1].show = true
+            }
+          } else {
+            let splitDate = expirationDate.split('-')
+            let formattedExpirationDate = splitDate[1] + '/' + splitDate[2] + '/' + splitDate[0]
+            state.moduleData[i].progress.due_date = formattedExpirationDate
+            state.nextModuleDate = formattedExpirationDate
           }
 
           break

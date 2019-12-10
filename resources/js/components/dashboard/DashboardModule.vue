@@ -39,7 +39,7 @@
 
               <div v-if="!item.progress.is_review" class="col-6 col-md-10">
                 <p class="dashboard-module__date">
-                  Due: {{ item.progress.completion_date }}
+                  Due: {{ item.progress.due_date }}
                 </p>
               </div>
               <div class="dashboard-module__status-wrapper col-4 col-md-12">
@@ -98,8 +98,6 @@ export default {
   mounted () {
     this.setModuleData(moduleData)
     this.resetScreenPosition()
-
-    console.log(this.getu)
 
     if (this.isInitialDataLoad) {
       this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group })

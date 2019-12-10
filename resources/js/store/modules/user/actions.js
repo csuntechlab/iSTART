@@ -36,7 +36,6 @@ export default {
   },
 
   async verifyExcelSheet ({ commit }, payload) {
-    console.log('verify', payload)
     return UserAPI.verifyExcelSheetAPI(payload)
       .then(
         response => {
@@ -49,7 +48,6 @@ export default {
   },
 
   async submitGoodParticipants ({ commit }, payload) {
-    console.log(payload)
     return UserAPI.submitGoodParticipantsAPI(payload).then(
       response => {
         commit('PARTICIPANTS_WERE_SUBMITTED', true)
