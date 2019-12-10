@@ -60,7 +60,7 @@ class DeadlineReminderCommand extends Command
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
                             $user->participant()->delete();
-                            Mail::to(env('RECIEVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user));
+                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user));
                         }
                     }
                 }

@@ -25,6 +25,31 @@ export default {
       })
   },
 
+  async setModuleProgress ({ commit }, payload) {
+    SlidesAPI.setModuleProgressAPI(payload)
+      .catch(
+        error => {
+          console.error(error)
+        })
+  },
+
+  async completeModule ({ commit }, payload) {
+    SlidesAPI.moduleCompleteAPI(payload)
+      .catch(
+        error => {
+          console.error(error)
+        })
+  },
+
+  async submitEmailOnModuleCompletion ({ commit }, payload) {
+    SlidesAPI.sendCompletedModuleMail()
+      .catch(
+        error => {
+          console.error(error)
+        }
+      )
+  },
+
   setModuleIndex ({ commit }, payload) {
     commit('SET_MODULE_INDEX', payload)
   },
@@ -67,19 +92,6 @@ export default {
   // Toggles If Slide is Displayed (true/false)
   setSlideContentVisibility ({ commit }, payload) {
     commit('SET_SLIDE_CONTENT_VISIBILITY', payload)
-  },
-
-  // On Module Completion
-  submitEmailOnModuleCompletion ({ commit }, index) {
-    SlidesAPI.sendCompletedModuleMail()
-      .then(
-        commit('MARK_MODULE_AS_REVIEW', index)
-      )
-      .catch(
-        error => {
-          console.error(error)
-        }
-      )
   },
 
   // Email Form Template

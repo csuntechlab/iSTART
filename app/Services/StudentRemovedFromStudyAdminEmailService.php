@@ -21,7 +21,7 @@ class StudentRemovedFromStudyAdminEmailService implements StudentRemovedFromStud
         $studentRemovedFromStudyAdminEmail = new \stdClass();
         $studentRemovedFromStudyAdminEmail->user_group = $userGroup['user_group'];
         $studentRemovedFromStudyAdminEmail->participant_id = $participantID['participant_id'];
-        Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($studentRemovedFromStudyAdminEmail));
+        Mail::to((env('RECEIVE_EMAIL')))->send(new StudentRemovedFromStudyAdminEmail($studentRemovedFromStudyAdminEmail));
 
         return 'true';
     }

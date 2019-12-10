@@ -11,7 +11,7 @@ class StudentRemovedFromStudyService implements StudentRemovedFromStudyContract
     public function sendStudentRemovedMail()
     {
 
-        Mail::to((env('RECIEVE_EMAIL')))->send(new StudentRemovedFromStudy());
+        Mail::to((env('RECEIVE_EMAIL')))->send(new StudentRemovedFromStudy());
 
         return 'true';
     }

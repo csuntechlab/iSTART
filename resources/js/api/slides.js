@@ -27,6 +27,17 @@ export default {
     return api
   },
 
+  async moduleCompleteAPI (payload) {
+    console.log(payload)
+    let api = await axios.post('module-complete', {
+      user_id: payload.user_id,
+      current_module: payload.current_module,
+      next_module: payload.next_module
+    })
+
+    return api
+  },
+
   sendCompletedModuleMail () {
     axios.post('/send-complete-module-mail-admin')
     axios.post('/send-complete-module-mail-student')
