@@ -100,7 +100,8 @@ export default {
     this.resetScreenPosition()
 
     if (this.isInitialDataLoad) {
-      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group })
+      let daysToRelease = document.head.querySelector('meta[name="days-to-release"]').content
+      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group, daysToRelease: daysToRelease })
     }
   },
 

@@ -11,6 +11,7 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
+    console.log(payload)
     let userGroup = payload.data.userGroup
     let currentModule = payload.data.current_module
     let moduleDataLength = Object.keys(state.moduleData).length
