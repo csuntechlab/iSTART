@@ -21,9 +21,8 @@ class ModuleProgressService implements ModuleProgressContract
             'max_page' => '',
             'expiration_date' => null
         ];
-        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')
-                                            ->first();
-        if ($moduleProgress !== null) {
+        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->get();
+        if (count($moduleProgress) === 0) {
             $response['user_id'] = $moduleProgress->user_id;
             $response['current_module'] = $moduleProgress->current_module;
             $response['current_page'] = $moduleProgress->current_page;
@@ -37,7 +36,7 @@ class ModuleProgressService implements ModuleProgressContract
     {
         $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])
         ->where('current_module', $data['current_module'])
-        ->whereNotNull('expiration_date')
+        ->whereNotNull('completed_at')
         ->first();
 
         if ($moduleProgress === null) {
@@ -63,12 +62,12 @@ class ModuleProgressService implements ModuleProgressContract
         $user = $data['user_id'];
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])
         ->where('current_module', $data['current_module'])
-        ->whereNotNull('expiration_date')
+        ->whereNotNull('completed_at')
         ->first();
         if($moduleComplete == null){
             return null;
         }
-        $moduleComplete->expiration_date = null;
+        $moduleComplete->completed_at = Carbon::now()->toDateTimeString();
         $moduleComplete->touch();
         $moduleComplete->save();
         $newModule = $this->createNewModule($data);

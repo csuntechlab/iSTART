@@ -15,6 +15,6 @@ class ModuleProgress extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'current_module', 'current_page', 'max_page', 'expiration_date'
+        'user_id', 'current_module', 'current_page', 'max_page', 'expiration_date', 'completed_at'
     ];
 }
