@@ -22,7 +22,7 @@ class ModuleProgressService implements ModuleProgressContract
             'expiration_date' => null,
             'completed_at' => null
         ];
-        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->where('current_module', $data['current_module'])->first();
+        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->first();
         if ($moduleProgress !== null) {
             $response['user_id'] = $moduleProgress->user_id;
             $response['current_module'] = $moduleProgress->current_module;
