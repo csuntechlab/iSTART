@@ -28,7 +28,6 @@ export default {
   },
 
   async moduleCompleteAPI (payload) {
-    console.log(payload)
     let api = await axios.post('module-complete', {
       user_id: payload.user_id,
       current_module: payload.current_module,

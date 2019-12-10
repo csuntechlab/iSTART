@@ -33,15 +33,10 @@
                   <!-- <div v-if="submitted && !userInfoForm.password" class="invalid-feedback">Please Enter your password</div> -->
                   <div v-if="correctLoginInfo===false" class="invalid-feedback mt-0 mb-2 text-center">Login failed. Make sure you have the correct access rights.</div>
                   <div class="form-group text-center pt-5">
-                    <button type="submit" @click.prevent="submitForm" class="btn button-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
+                    <button type="submit" @click.prevent="submitForm" class="admin__button btn button-primary btn-lg" :disabled="loginIsLoading">Sign In</button>
                   </div>
                 </div>
               </form>
-
-              <!-- Development use -->
-              <span @click="bypassLogin()">Development Bypass</span>
-              <!-- End of Development Code -->
-
             </div>
           </div>
         </div>
@@ -68,14 +63,8 @@ export default {
 
   methods: {
     ...mapActions([
-      'verifyUserData',
-      'setToDevelopmentMode'
+      'verifyUserData'
     ]),
-
-    bypassLogin () {
-      this.setToDevelopmentMode()
-      this.$router.push({ name: 'Dashboard' })
-    },
 
     submitForm () {
       let isCookiesPolicyAccepted = window.localStorage.isCookiesPolicyAccepted

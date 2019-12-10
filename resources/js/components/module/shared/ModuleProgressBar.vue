@@ -1,7 +1,7 @@
 <template>
   <header class="module__progressBarWrapper">
     <loading-progress class="module__progressBar"
-      :progress="Math.round(((latestSlideNumber / (totalSlides - 1))).toFixed(2))"
+      :progress="(latestSlideNumber / (totalSlides - 1))"
       :shape="module.shape"
       :height="module.height"
       :size="module.width"

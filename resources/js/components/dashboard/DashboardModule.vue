@@ -15,6 +15,8 @@
           <div class="dashboard-module__info col-12 col-md-6">
             <div class="dashboard-module__header">
               {{item.name}}
+              <i v-if="item.progress.is_review" class="fas fa-check-circle text-success"></i>
+              <i v-else class="fas fa-times-circle text-danger"></i>
             </div>
             <div class="dashboard-module__description">
               {{item.description}}
@@ -35,11 +37,9 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-10">
+              <div v-if="!item.progress.is_review" class="col-6 col-md-10">
                 <p class="dashboard-module__date">
-                  Due: {{ item.progress.completion_date }}
-                  <i v-if="item.progress.is_complete" class="fas fa-check-circle text-success"></i>
-                  <i v-if="!item.progress.is_complete" class="fas fa-times-circle text-danger"></i>
+                  Due: {{ item.progress.due_date }}
                 </p>
               </div>
               <div class="dashboard-module__status-wrapper col-4 col-md-12">

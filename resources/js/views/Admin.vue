@@ -1,20 +1,29 @@
 <template>
-  <div>
-  <h1>Admin</h1>
-  <div v-if="incorrectFileType" class="invalid-feedback ">Please enter an excel file</div>
-  <div class="col-12">
-    <label>File
-      <input type="file" id="file" ref="file" @change="handleFileChange"/>
-    </label>
-    <button v-if="!incorrectFileType" @click.prevent="submitFile">Submit</button>
+  <div class="admin container">
+    <div class="admin-wrap">
+      <nav class="admin__nav">
+      <img class="admin__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
+      <router-link to="/logout" class="admin__link">
+        Logout
+      </router-link>
+      </nav>
+      <main class="admin__container">
+        <h1>Import Participants</h1>
+        <p>Upload file to verify and add participant emails to the system.</p>
+        <div v-if="incorrectFileType" class="invalid-feedback ">Please enter an excel file</div>
+        <div class="admin__upload">
+          <label class="admin__upload-label" for="file">File</label>
+          <input id="file" class="admin__upload-file" type="file" ref="file" @change="handleFileChange">
+        </div>
+        <button v-if="!incorrectFileType" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
+        <div>
+          <Participants v-if="participantsWereSubmitted===null"/>
+          <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>
+          <h2 v-if="participantsWereSubmitted==false"> Participants were not submitted</h2>
+        </div>
+      </main>
+    </div>
   </div>
-  <div>
-    <Participants v-if="participantsWereSubmitted===null"/>
-    <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>
-    <h2 v-if="participantsWereSubmitted==false"> Participants were not submitted</h2>
-  </div>
-  </div>
-
 </template>
 
 <script>
@@ -91,11 +100,12 @@ export default {
 
     parseFile (excelSheetJSON) {
       var parsedExcelSheet = []
-      for (var i = 1; i < excelSheetJSON.length; i++) {
-        var currentStudent = {
+      for (let i = 1; i < excelSheetJSON.length; i += 1) {
+        let currentStudent = {
           email: excelSheetJSON[i][0],
           participant_id: excelSheetJSON[i][1]
         }
+        currentStudent.participant_id = i
         parsedExcelSheet.push(currentStudent)
       }
       return parsedExcelSheet

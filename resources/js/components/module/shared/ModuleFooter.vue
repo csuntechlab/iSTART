@@ -76,23 +76,11 @@ export default {
 
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
             let userId = this.user.user_id
-            let moduleName = this.getCurrentModule.toLowerCase()
-            let latestSlideNumber = this.latestSlideNumber
-            let maxPage = this.totalSlides
-
-            let progressPayload = {
-              userId: userId,
-              moduleName: moduleName,
-              currentPage: latestSlideNumber,
-              maxPage: (maxPage - 1)
-            }
-
-            this.setModuleProgress(progressPayload)
 
             this.submitEmailOnModuleCompletion(i)
 
             let nextModule = moduleData[i + 1].name.toLowerCase()
-            if (i !== moduleDataLength) {
+            if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
               let completePayload = {
                 user_id: userId,
                 current_module: currentModule,
@@ -159,7 +147,6 @@ export default {
           currentPage: (latestSlideNumber + 1),
           maxPage: (maxPage - 1)
         }
-
         this.setModuleProgress(payload)
       }
     },

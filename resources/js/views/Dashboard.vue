@@ -30,8 +30,7 @@ export default {
 
   computed: {
     ...mapGetters([
-      'user',
-      'isDevelopmentMode'
+      'user'
     ])
   }
 }
