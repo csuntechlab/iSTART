@@ -1,4 +1,4 @@
-<template>
+    <template>
   <div>
     <div class="participants__bad" v-if="categorizedParticipants.bad !== undefined">
       <h2>The following emails were not found: </h2>

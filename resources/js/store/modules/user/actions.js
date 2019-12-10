@@ -49,6 +49,7 @@ export default {
   },
 
   async submitGoodParticipants ({ commit }, payload) {
+    console.log(payload)
     return UserAPI.submitGoodParticipantsAPI(payload).then(
       response => {
         commit('PARTICIPANTS_WERE_SUBMITTED', true)
