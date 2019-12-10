@@ -48,14 +48,14 @@ class ModuleProgressService implements ModuleProgressContract
                 'max_page' => $data['max_page'],
                 'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
             ]);
-            return json(true);
+            return 'true';
         } else {
             $moduleProgress->current_page = $data['current_page'];
             $moduleProgress->touch();
             $moduleProgress->save();
-            return json(true);
+            return 'true';
         }
-        return json(false);
+        return 'false';
     }
 
     public function moduleComplete($data)
@@ -64,7 +64,7 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
         if($moduleComplete == null){
 
-            return json(null);
+            return null;
         }
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
@@ -72,9 +72,9 @@ class ModuleProgressService implements ModuleProgressContract
         $newModule = $this->createNewModule($data);
         return $newModule;
         if ($newModule !== null) {
-            return json(true);
+            return 'true';
         }
-        return json(null);
+        return null;
     }
 
     public function createNewModule($data)
@@ -93,9 +93,9 @@ class ModuleProgressService implements ModuleProgressContract
     {
         $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])->whereNotNull('expiration_date')->orderBy('created_at', 'DESC')->first();
         if ($moduleProgress === null) {
-            return json(false);
+            return 'false';
         }
-        return json(true);
+        return 'true';
     }
 
 }
