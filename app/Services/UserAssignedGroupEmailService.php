@@ -11,6 +11,6 @@ class UserAssignedGroupEmailService implements UserAssignedGroupEmailContract
     public function sendMail($user, $userInUserGroup)
     {
         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new RandomizationEmail($user, $userInUserGroup));
-        return true;
+        return 'true';
     }
 }
