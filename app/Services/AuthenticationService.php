@@ -52,13 +52,6 @@ class AuthenticationService implements AuthenticationContract
                 ];
                 $userGroup = $this->userGroupUtility->sortAuthenticatedUsers($user);
                 $response['user_group'] = $userGroup;
-                $moduleCheck = $this->moduleProgressUtility->moduleExists($user);
-                if ($moduleCheck === false) {
-                    /* if ($userGroup !== 'control') {
-                        $moduleProgress = $this->moduleProgressUtility->createNewModule($user);
-                        $response['expiration_date'] = $moduleProgress->expiration_date;
-                    }*/
-                }
                 return $response;
 
             } else{
