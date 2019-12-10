@@ -61,16 +61,17 @@ class ModuleProgressService implements ModuleProgressContract
     public function moduleComplete($data)
     {
         $user = $data['user_id'];
-        $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])->where('current_module', $data['current_module'])->first();
+        $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])
+        ->where('current_module', $data['current_module'])
+        ->whereNotNull('expiration_date')
+        ->first();
         if($moduleComplete == null){
-
             return null;
         }
         $moduleComplete->expiration_date = null;
         $moduleComplete->touch();
         $moduleComplete->save();
         $newModule = $this->createNewModule($data);
-        return $newModule;
         if ($newModule !== null) {
             return 'true';
         }
