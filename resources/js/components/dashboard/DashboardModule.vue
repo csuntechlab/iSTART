@@ -16,7 +16,6 @@
             <div class="dashboard-module__header">
               {{item.name}}
               <i v-if="item.progress.is_review" class="fas fa-check-circle text-success"></i>
-              <i v-else class="fas fa-times-circle text-danger"></i>
             </div>
             <div class="dashboard-module__description">
               {{item.description}}
