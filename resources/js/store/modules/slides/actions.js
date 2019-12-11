@@ -43,15 +43,6 @@ export default {
         })
   },
 
-  async submitEmailOnModuleCompletion ({ commit }, payload) {
-    SlidesAPI.sendCompletedModuleMail()
-      .catch(
-        error => {
-          console.error(error)
-        }
-      )
-  },
-
   setModuleIndex ({ commit }, payload) {
     commit('SET_MODULE_INDEX', payload)
   },

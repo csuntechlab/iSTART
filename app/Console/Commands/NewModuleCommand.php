@@ -43,7 +43,7 @@ class NewModuleCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->whereNotNull('expiration_date')->orderBy('created_at', 'DESC')->first();
+            $q->whereNotNull('completed_at')->orderBy('created_at', 'DESC')->first();
         }])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {

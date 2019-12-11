@@ -76,9 +76,6 @@ export default {
 
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
             let userId = this.user.user_id
-
-            this.submitEmailOnModuleCompletion(i)
-
             let nextModule = moduleData[i + 1].name.toLowerCase()
             if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
               let completePayload = {
@@ -110,7 +107,6 @@ export default {
         'resetSlideNavigation',
         'setSlideContentVisibility',
         'enableContinue',
-        'submitEmailOnModuleCompletion',
         'setModuleProgress',
         'completeModule'
       ]
