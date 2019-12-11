@@ -26,7 +26,7 @@
               <div class="col-2">
                 <div class="dashboard-module__progress">
                   <p class="dashboard-module__progress-text">
-                    {{ Math.round(item.progress.slide_percentage) }}%
+                    {{ item.progress.slide_percentage }}%
                   </p>
                   <loading-progress
                     class="dashboard-module__loader"
@@ -100,7 +100,7 @@ export default {
     this.resetScreenPosition()
 
     if (this.isInitialDataLoad) {
-      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group })
+      this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group, currentModule: this.getCurrentModule })
     }
   },
 
