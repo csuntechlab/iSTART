@@ -26,10 +26,12 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('istart:deadline-reminder')
                  ->dailyAt('12:00');
-         $schedule->command('istart:new-module')
+        $schedule->command('istart:new-module')
                 ->dailyAt('12:00');
         $schedule->command('istart:login-reminder')
                 ->dailyAt('12:00');
+        $schedule->command('istart:exit-survey')
+                ->dailyAt('12:00')
 
     }
 
