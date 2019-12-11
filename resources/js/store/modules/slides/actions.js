@@ -41,7 +41,7 @@ export default {
         })
   },
 
-  async submitEmailOnModuleCompletion ({ commit }, payload) {
+  async submitEmailOnModuleCompletion ({ commit }) {
     SlidesAPI.sendCompletedModuleMail()
       .catch(
         error => {
