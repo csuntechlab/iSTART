@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Contracts\ParticipantContract;
 use App\Models\Participant;
+use App\Mail\WelcomeEmail;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Arr;
@@ -26,6 +27,7 @@ class ParticipantService implements ParticipantContract
 
         foreach ($goodParticipantsMembers as $goodParticipantsMember){
             Arr::forget($goodParticipantsMember,'email');
+            Mail::to($goodParticipantsMember)->send(new WelcomeEmail());
             $ParticipantsEmailRemoved[] = $goodParticipantsMember;
         }
 
