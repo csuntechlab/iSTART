@@ -12182,7 +12182,7 @@ a:hover {
 }
 
 .loading-container {
-  background-color: rgba(245, 245, 245, 0.95);
+  background-color: rgba(245, 245, 245, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

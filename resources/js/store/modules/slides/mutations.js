@@ -11,7 +11,6 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
-    console.log(payload)
     let userGroup = payload.data.userGroup
     let currentModule = payload.data.current_module
     let moduleDataLength = Object.keys(state.moduleData).length
@@ -32,7 +31,7 @@ export default {
           // Calculate progress
           let latestSlide = payload.data.current_page
           let totalSlides = payload.data.max_page
-          let totalProgressAsNumber = ((latestSlide / (totalSlides - 1)) * 100).toFixed(2)
+          let totalProgressAsNumber = ((latestSlide / (totalSlides)) * 100).toFixed(2)
           state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
 
           state.moduleData[i].progress.current_slide = latestSlide
