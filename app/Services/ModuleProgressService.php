@@ -20,18 +20,15 @@ class ModuleProgressService implements ModuleProgressContract
             'current_page' => 0,
             'max_page' => 0,
             'expiration_date' => null,
-            'completed_at' => null
+            'completed_at' => null,
+            'created_at' => null,
+            'updated_at' => null
         ];
-        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->first();
-        if ($moduleProgress !== null) {
-            $response['user_id'] = $moduleProgress->user_id;
-            $response['current_module'] = $moduleProgress->current_module;
-            $response['current_page'] = $moduleProgress->current_page;
-            $response['max_page'] = $moduleProgress->max_page;
-            $response['expiration_date'] = $moduleProgress->expiration_date;
-            $response['completed_at'] = $moduleProgress->completed_at;
+        $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->get();
+        if (count($moduleProgress) === 0) {
+            return $response;
         }
-        return $response;
+        return $moduleProgress->toArray();
     }
 
     public function setModuleProgress($data)
@@ -66,7 +63,7 @@ class ModuleProgressService implements ModuleProgressContract
         ->where('current_module', $data['current_module'])
         ->whereNull('completed_at')
         ->first();
-        if($moduleComplete == null) {
+        if ($moduleComplete == null) {
             return null;
         }
         $moduleComplete->completed_at = Carbon::now()->toDateTimeString();
