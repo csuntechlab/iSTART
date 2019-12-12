@@ -66,7 +66,7 @@ class ModuleProgressService implements ModuleProgressContract
         ->where('current_module', $data['current_module'])
         ->whereNotNull('completed_at')
         ->first();
-        if($moduleComplete == null){
+        if($moduleComplete == null) {
             return null;
         }
         $moduleComplete->completed_at = Carbon::now()->toDateTimeString();
@@ -74,7 +74,7 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete->save();
         $newModule = $this->createNewModule($data);
         if ($newModule !== null) {
-            return 'true';
+            return true;
         }
         return null;
     }

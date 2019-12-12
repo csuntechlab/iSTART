@@ -70,7 +70,7 @@ class ModuleProgressController extends Controller
         if ($result == true) {
             $this->userCompletesEmailUtility->sendMailToStudent();
             $this->userCompletesEmailUtility->sendMailToAdmin();
-            return response()->json('true');
+            return response()->json(true);
         }
 
         return response()->json(null);
