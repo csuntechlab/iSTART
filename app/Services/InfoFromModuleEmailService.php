@@ -12,10 +12,6 @@ class InfoFromModuleEmailService implements InfoFromModuleEmailContract
         $user = auth()->user();
         $infoFromModuleEmail = new \stdClass();
         $infoFromModuleEmail->info = $data['module_data'];
-        if((env('APP_ENV') === 'production')) {
-            Mail::to($user['email'])->send(new InfoFromModuleEmail($infoFromModuleEmail));
-        } else {
-            Mail::to((env('RECEIVE_EMAIL')))->send(new InfoFromModuleEmail($infoFromModuleEmail));
-        }
+        Mail::to($user['email'])->send(new InfoFromModuleEmail($infoFromModuleEmail));
     }
 }

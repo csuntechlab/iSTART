@@ -1,4 +1,5 @@
 @component('mail::message')
     Hello Admin,
-    User with Participant ID: {{$userCompletesModuleEmailToAdmin->participant_id}} has completed the {{$userCompletesModuleEmailToAdmin->current_module}} module
-
+    <br>
+    The following student: {{$userCompletesModuleEmailToAdmin->student->getUserGroup()->display_name}} has
+    completed the {{ ucfirst($userCompletesModuleEmailToAdmin->current_module)}} module.
