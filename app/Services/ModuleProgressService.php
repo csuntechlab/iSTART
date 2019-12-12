@@ -52,6 +52,7 @@ class ModuleProgressService implements ModuleProgressContract
             return 'true';
         } else {
             $moduleProgress->current_page = $data['current_page'];
+            $moduleProgress->max_page = $data['max_page'];
             $moduleProgress->touch();
             $moduleProgress->save();
             return 'true';
@@ -98,5 +99,4 @@ class ModuleProgressService implements ModuleProgressContract
         }
         return 'true';
     }
-
 }
