@@ -7,7 +7,7 @@ use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
-use app\Contracts\UserCompletesModuleEmailContract;
+use App\Contracts\UserCompletesModuleEmailContract;
 
 
 
