@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="idle-timeout" content="{{ env('IDLE_TIMEOUT')}}">
         <meta name="days-to-release" content="{{ env('DAYS_TO_RELEASE')}}">
+        <meta name="slide-wait-time" content="{{ env('SLIDE_WAIT_TIME_IN_SECONDS')}}">
 
         <title>iSTART</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">

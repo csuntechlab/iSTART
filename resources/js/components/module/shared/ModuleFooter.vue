@@ -66,6 +66,7 @@ export default {
 
     checkForEnd () {
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        console.log('end')
         let currentModule = this.getCurrentModule.toLowerCase()
         let moduleData = this.getModuleData
         let moduleDataLength = Object.keys(moduleData).length
