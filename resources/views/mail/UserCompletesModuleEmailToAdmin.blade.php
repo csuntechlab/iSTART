@@ -3,4 +3,3 @@
     <br>
     The following student: {{$userCompletesModuleEmailToAdmin->student}} has
     completed the {{ ucfirst($userCompletesModuleEmailToAdmin->current_module)}} module.
-@endcomponent
