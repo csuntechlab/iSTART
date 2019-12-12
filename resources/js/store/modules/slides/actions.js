@@ -11,10 +11,11 @@ export default {
     let userGroup = payload.userGroup
     let daysToRelease = payload.daysToRelease
     payload = { userId: userId, userGroup: userGroup }
+
     SlidesAPI.getModuleProgressAPI(payload)
       .then(
         response => {
-          response.data.days_to_release = daysToRelease
+          response.data.days_to_release = parseInt(daysToRelease)
           commit('REQUEST_MODULE_PROGRESS', response)
         })
       .catch(
@@ -27,7 +28,7 @@ export default {
       })
   },
 
-  async setModuleProgress ({ commit }, payload) {
+  async setModuleProgress ({}, payload) {
     SlidesAPI.setModuleProgressAPI(payload)
       .catch(
         error => {
