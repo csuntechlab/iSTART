@@ -18,6 +18,7 @@ export default {
   },
 
   async setModuleProgressAPI (payload) {
+    console.log(payload)
     let api = await axios.post('set-module-progress', {
       user_id: payload.userId,
       current_module: payload.moduleName,

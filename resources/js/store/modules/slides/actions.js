@@ -28,8 +28,13 @@ export default {
       })
   },
 
-  async setModuleProgress ({}, payload) {
+  async setModuleProgress ({ commit }, payload) {
     SlidesAPI.setModuleProgressAPI(payload)
+      .then(
+        response => {
+          console.log(response)
+        }
+      )
       .catch(
         error => {
           console.error(error)
@@ -38,6 +43,11 @@ export default {
 
   async completeModule ({ commit }, payload) {
     SlidesAPI.moduleCompleteAPI(payload)
+      .then(
+        () => {
+          commit('MARK_MODULE_AS_REVIEW')
+        }
+      )
       .catch(
         error => {
           console.error(error)
