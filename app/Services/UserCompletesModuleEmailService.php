@@ -18,7 +18,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $currentModule = ModuleProgress::find($user['user_id']);
         $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmailToAdmin = new \stdClass();
-        $userCompletesModuleEmailToAdmin->student = $user['display_name']
+        $userCompletesModuleEmailToAdmin->student = $user['display_name'];
         $userCompletesModuleEmailToAdmin->current_module = $currentModule['current_module'];
         Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToAdmin($userCompletesModuleEmailToAdmin));
 
@@ -29,7 +29,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $user = auth()->user();
         $currentModule = ModuleProgress::find($user['user_id']);
         $userCompletesModuleEmailToStudent = new \stdClass();
-        $userCompletesModuleEmailToStudent->student = $user['display_name']
+        $userCompletesModuleEmailToStudent->student = $user['display_name'];
         $userCompletesModuleEmailToStudent->current_module = $currentModule['current_module'];
         Mail::to($user['email'])->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
     }
