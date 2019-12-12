@@ -52,6 +52,7 @@ class ModuleProgressService implements ModuleProgressContract
             return 'true';
         } else {
             $moduleProgress->current_page = $data['current_page'];
+            $moduleProgress->max_page = $data['max_page'];
             $moduleProgress->touch();
             $moduleProgress->save();
             return 'true';
@@ -63,9 +64,9 @@ class ModuleProgressService implements ModuleProgressContract
     {
         $moduleComplete = ModuleProgress::where('user_id', $data['user_id'])
         ->where('current_module', $data['current_module'])
-        ->whereNotNull('completed_at')
+        ->whereNull('completed_at')
         ->first();
-        if($moduleComplete == null){
+        if($moduleComplete == null) {
             return null;
         }
         $moduleComplete->completed_at = Carbon::now()->toDateTimeString();
@@ -73,7 +74,7 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleComplete->save();
         $newModule = $this->createNewModule($data);
         if ($newModule !== null) {
-            return 'true';
+            return true;
         }
         return null;
     }
@@ -98,5 +99,4 @@ class ModuleProgressService implements ModuleProgressContract
         }
         return 'true';
     }
-
 }

@@ -17,22 +17,14 @@ Route::get('/', function () {
 
 Route::post('login-verification', 'LoginController@authenticateUser');
 Route::get('logout','LoginController@logout');
-
 Route::get('/get-group/{user_id}','UserGroupController@getGroup');
-
-Route::post('/send-complete-module-mail-admin','UserCompletesModuleEmailController@sendMailToAdmin');
-Route::post('/send-complete-module-mail-student','UserCompletesModuleEmailController@sendMailToStudent');
 Route::post('/send-module-info-mail', 'InfoFromModuleEmailController@sendModuleInfo');
-
 Route::get('/send-mail-test','MailController@sendMail');
 Route::get('/send-student-removed-email', 'StudentRemovedFromStudyController@sendStudentRemovedMail');
-
 Route::get('/user','UserGroupController@sortAuthenticatedUsers');
 Route::post('/get-module-progress','ModuleProgressController@getModuleProgress');
 Route::post('/set-module-progress','ModuleProgressController@setModuleProgress');
-
 Route::post('/verify-excel-sheet', 'AdminController@checkEmailsInJson');
 Route::post('/submit-good-participants','ParticipantController@addGoodParticipantsToParticipantsTable');
-
 Route::post('/remove-participant','ParticipantController@removeParticipantFromStudy');
 Route::post('/module-complete', 'ModuleProgressController@moduleComplete');

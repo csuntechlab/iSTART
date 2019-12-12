@@ -7,16 +7,22 @@ use App\Models\ModuleProgress;
 use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
 use App\Contracts\ModuleProgressContract;
+use App\Contracts\UserCompletesModuleEmailContract;
 
 
 
 class ModuleProgressController extends Controller
 {
     protected $moduleProgressUtility = null;
+    protected $userCompletesEmailUtility = null;
 
-    public function __construct(ModuleProgressContract $moduleProgressContract)
+    public function __construct(
+        ModuleProgressContract $moduleProgressContract,
+        UserCompletesModuleEmailContract $userCompletesModuleContract
+        )
     {
         $this->moduleProgressUtility = $moduleProgressContract;
+        $this->userCompletesEmailUtility = $userCompletesModuleContract;
     }
 
     public function getModuleProgress(Request $request)
@@ -59,6 +65,14 @@ class ModuleProgressController extends Controller
             'current_module' => 'required'
         ]);
 
-        return $this->moduleProgressUtility->moduleComplete($validator);
+        $result = $this->moduleProgressUtility->moduleComplete($validator);
+
+        if ($result == true) {
+            $this->userCompletesEmailUtility->sendMailToStudent();
+            $this->userCompletesEmailUtility->sendMailToAdmin();
+            return response()->json(true);
+        }
+
+        return response()->json(null);
     }
 }
