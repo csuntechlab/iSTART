@@ -13,7 +13,7 @@ export default {
     })
 
     api.data.userGroup = payload.userGroup
-    console.log(api)
+
     return api
   },
 

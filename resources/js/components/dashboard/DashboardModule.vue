@@ -29,7 +29,7 @@
                   </p>
                   <loading-progress
                     class="dashboard-module__loader"
-                    :progress="Math.round(item.progress.slide_percentage/100)"
+                    :progress="(item.progress.slide_percentage / 100)"
                     :size="size"
                     :shape="shape.circle"
                   />
