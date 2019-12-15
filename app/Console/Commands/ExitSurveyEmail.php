@@ -42,13 +42,15 @@ class ExitSurveyEmail extends Command
      */
     public function handle()
     {
-        $users = User::with('participant')->get();
+        $users = User::with('participant', 'getUserGroup')->whereHas('getUserGroup')->get();
         $today = Carbon::now();
         if (count($users)) {
             foreach($users as $user) {
-                $difference = $today->diffInDays($user->participant->created_at);
-                if ($difference === 30) {
-                    Mail::to($user->email)->send(new ExitSurveyEmail());
+                if ($user->getUserGroup->user_group === 'control' || $user->getUserGroup->user_group === 'comparison') {
+                    $difference = $today->diffInDays($user->participant->created_at);
+                    if ($difference === 30) {
+                        Mail::to($user->email)->send(new ExitSurveyEmail());
+                    }
                 }
             }
         }
