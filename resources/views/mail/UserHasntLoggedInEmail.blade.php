@@ -1,5 +1,5 @@
 @component('mail::message')
-    Hello admin.
-    The following participant has not logged in to the system.
-    <br>
-    {{ $user->email }} group: {{ $user->getUserGroup->user_group }}
+    Hello there.
+    Please make sure to log-in to the iSTART web app by visting the link below so that you can continue
+    participating in the study.
+{{ url('/').'#/login' }}
