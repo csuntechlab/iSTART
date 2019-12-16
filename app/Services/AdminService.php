@@ -23,14 +23,16 @@ class AdminService implements AdminContract
         $good = [];
         $bad = [];
         foreach ($emailParticipantIdPairings as $emailPair) {
-            $userId = $this->userModelUtility->find($emailPair['email']);
-            if(null === $userId) {
-                array_push($bad, $emailPair);
-            } else {
-                array_push($good, [
-                    'email' => $emailPair['email'],
-                    'participant_id' => $emailPair['participant_id'],
-                    'user_id' => $userId]);
+            if (isset($emailPair['email'])) {
+                $userId = $this->userModelUtility->find($emailPair['email']);
+                if(null === $userId) {
+                    array_push($bad, $emailPair);
+                } else {
+                    array_push($good, [
+                        'email' => $emailPair['email'],
+                        'participant_id' => $emailPair['participant_id'],
+                        'user_id' => $userId]);
+                    }
             }
         }
 
