@@ -83,7 +83,7 @@ class ModuleProgressService implements ModuleProgressContract
             'current_module' => $data['next_module'],
             'current_page' => 0,
             'max_page' => 0,
-            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
+            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire')+config('app.days_to_release'))->toDateTimeString(),
         ]);
         return $moduleProgress;
     }
