@@ -12,8 +12,6 @@ export default {
       user_id: payload.userId
     })
 
-    api.data.userGroup = payload.userGroup
-
     return api
   },
 
@@ -36,10 +34,5 @@ export default {
     })
 
     return api
-  },
-
-  sendCompletedModuleMail () {
-    axios.post('/send-complete-module-mail-admin')
-    axios.post('/send-complete-module-mail-student')
   }
 }

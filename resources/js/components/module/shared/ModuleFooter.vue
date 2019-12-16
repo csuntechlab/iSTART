@@ -75,17 +75,17 @@ export default {
           let moduleDataIsReview = moduleData[i].progress.is_review
 
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
+            console.log('1')
             let userId = this.user.user_id
-
-            this.submitEmailOnModuleCompletion(i)
-
             let nextModule = moduleData[i + 1].name.toLowerCase()
             if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
               let completePayload = {
                 user_id: userId,
                 current_module: currentModule,
-                next_module: nextModule
+                next_module: nextModule,
+                index: i
               }
+              console.log('2')
               this.completeModule(completePayload)
             }
             break
@@ -110,7 +110,6 @@ export default {
         'resetSlideNavigation',
         'setSlideContentVisibility',
         'enableContinue',
-        'submitEmailOnModuleCompletion',
         'setModuleProgress',
         'completeModule'
       ]

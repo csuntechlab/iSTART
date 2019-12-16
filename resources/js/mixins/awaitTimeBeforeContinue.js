@@ -35,7 +35,9 @@ export const awaitTimeBeforeContinue = {
     ),
 
     setTimeToContinue () {
-      const allottedTime = 5000
+      let awaitTimeFromEnv = document.head.querySelector("meta[name='slide-wait-time']").content
+      awaitTimeFromEnv = parseFloat(awaitTimeFromEnv)
+      const allottedTime = (parseFloat(awaitTimeFromEnv) * 1000)
 
       this.contentTimer = setTimeout(() => {
         this.allowContinue()
