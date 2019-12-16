@@ -75,7 +75,6 @@ export default {
           let moduleDataIsReview = moduleData[i].progress.is_review
 
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
-            console.log('1')
             let userId = this.user.user_id
             let nextModule = moduleData[i + 1].name.toLowerCase()
             if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
@@ -85,7 +84,6 @@ export default {
                 next_module: nextModule,
                 index: i
               }
-              console.log('2')
               this.completeModule(completePayload)
             }
             break

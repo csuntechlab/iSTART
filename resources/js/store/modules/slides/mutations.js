@@ -43,12 +43,13 @@ export default {
         // Date Conditionals
         let currentDate = moment().format('YYYY-MM-DD')
         let daysToRelease = payload.conditions.days_to_release
-        let previousModuleCompletion = payload.data[1].completed_at.split(' ')[0]
-        let releaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
-        let formattedReleaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
-        let isModuleReleased = moment(currentDate).isSameOrAfter(releaseDate)
 
         if (isModuleNameMatching && isSlideNumberEqual && isSlideNumberZero) {
+          let previousModuleCompletion = payload.data[1].completed_at.split(' ')[0]
+          let releaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
+          let formattedReleaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
+          let isModuleReleased = moment(currentDate).isSameOrAfter(releaseDate)
+
           // If module has not been started
           if (isModuleReleased) {
             moduleDataItem.show = true
@@ -168,7 +169,6 @@ export default {
 
   // Set module as review state
   MARK_MODULE_AS_REVIEW (state, index) {
-    console.log('mark', index)
     state.moduleData[index].progress.is_review = true
   },
 
