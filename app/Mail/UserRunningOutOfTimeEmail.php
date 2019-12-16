@@ -14,9 +14,10 @@ class UserRunningOutOfTimeEmail extends Mailable
 
     public $userRunningOutOfTimeEmail;
 
-    public function __construct($userRunningOutOfTimeEmail)
+    public function __construct($userRunningOutOfTimeEmail, $currentModule)
     {
         $this->userRunningOutOfTimeEmail = $userRunningOutOfTimeEmail;
+        $this->userRunningOutOfTimeEmail->current_module = $currentModule
     }
 
     public function build()
