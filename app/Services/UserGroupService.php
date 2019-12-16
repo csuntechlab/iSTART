@@ -45,6 +45,7 @@ class UserGroupService implements UserGroupContract
             $groups = DB::table('user_groups')
                 ->selectRaw('user_group, COUNT(*) as count')
                 ->groupBy('user_group')
+                ->orderBy('count')
                 ->get();
 
             $comparison_Count = 0;
