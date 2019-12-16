@@ -5,6 +5,7 @@
 
     @include media-breakpoint-down(sm) {
         max-width: 100%;
+        margin-top: 3.6rem;
     }
 
     &:hover a {
@@ -195,6 +196,13 @@
 
             &-wrapper {
                 text-align: right;
+            }
+
+            @include media-breakpoint-down(sm) {
+                &-wrapper {
+                    margin-left: auto;
+                    text-align: right;
+                }
             }
 
             &--completed {

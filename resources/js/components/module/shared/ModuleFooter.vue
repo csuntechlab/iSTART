@@ -70,22 +70,22 @@ export default {
         let moduleData = this.getModuleData
         let moduleDataLength = Object.keys(moduleData).length
 
-        console.log('end 1')
         for (let i = 0; i < moduleDataLength; i += 1) {
           let moduleDataName = moduleData[i].name.toLowerCase()
           let moduleDataIsReview = moduleData[i].progress.is_review
 
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
-            console.log('end 2')
+            console.log('1')
             let userId = this.user.user_id
             let nextModule = moduleData[i + 1].name.toLowerCase()
             if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
-              console.log('end 3')
               let completePayload = {
                 user_id: userId,
                 current_module: currentModule,
-                next_module: nextModule
+                next_module: nextModule,
+                index: i
               }
+              console.log('2')
               this.completeModule(completePayload)
             }
             break
@@ -139,7 +139,6 @@ export default {
       let latestSlideNumber = this.latestSlideNumber
       let maxPage = this.totalSlides
 
-      console.log('set-end 1')
       if (currentSlideNumber === latestSlideNumber) {
         let payload = {
           userId: userId,

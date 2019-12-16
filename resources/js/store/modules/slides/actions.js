@@ -15,7 +15,11 @@ export default {
     SlidesAPI.getModuleProgressAPI(payload)
       .then(
         response => {
-          response.data.days_to_release = parseInt(daysToRelease)
+          let conditions = {
+            user_group: userGroup,
+            days_to_release: parseInt(daysToRelease)
+          }
+          response.conditions = conditions
           commit('REQUEST_MODULE_PROGRESS', response)
         })
       .catch(
@@ -30,11 +34,6 @@ export default {
 
   async setModuleProgress ({ commit }, payload) {
     SlidesAPI.setModuleProgressAPI(payload)
-      .then(
-        response => {
-          console.log(response)
-        }
-      )
       .catch(
         error => {
           console.error(error)
@@ -42,10 +41,11 @@ export default {
   },
 
   async completeModule ({ commit }, payload) {
+    let index = payload.index
     SlidesAPI.moduleCompleteAPI(payload)
       .then(
         () => {
-          commit('MARK_MODULE_AS_REVIEW')
+          commit('MARK_MODULE_AS_REVIEW', index)
         }
       )
       .catch(

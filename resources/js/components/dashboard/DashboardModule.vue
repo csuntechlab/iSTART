@@ -15,7 +15,6 @@
           <div class="dashboard-module__info col-12 col-md-6">
             <div class="dashboard-module__header">
               {{item.name}}
-              <i v-if="item.progress.is_review" class="fas fa-check-circle text-success"></i>
             </div>
             <div class="dashboard-module__description">
               {{item.description}}
@@ -36,7 +35,7 @@
                 </div>
               </div>
 
-              <div v-if="!item.progress.is_review" class="col-6 col-md-10">
+              <div v-if="item.progress.due_date && !item.progress.is_review" class="col-6 col-md-10">
                 <p class="dashboard-module__date">
                   Due: {{ item.progress.due_date }}
                 </p>

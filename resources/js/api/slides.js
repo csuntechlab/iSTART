@@ -12,13 +12,11 @@ export default {
       user_id: payload.userId
     })
 
-    api.data.userGroup = payload.userGroup
-    console.log(api)
+    console.log('get', api)
     return api
   },
 
   async setModuleProgressAPI (payload) {
-    console.log(payload)
     let api = await axios.post('set-module-progress', {
       user_id: payload.userId,
       current_module: payload.moduleName,
@@ -26,6 +24,7 @@ export default {
       max_page: payload.maxPage
     })
 
+    console.log('set', api)
     return api
   },
 
@@ -36,6 +35,7 @@ export default {
       next_module: payload.next_module
     })
 
+    console.log('complete', api)
     return api
   }
 }

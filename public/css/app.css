@@ -12320,6 +12320,7 @@ a:hover {
 @media (max-width: 767.98px) {
   .dashboard {
     max-width: 100%;
+    margin-top: 3.6rem;
   }
 }
 
@@ -12553,6 +12554,13 @@ a:hover {
 
 .dashboard-module__status-wrapper {
   text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-module__status-wrapper {
+    margin-left: auto;
+    text-align: right;
+  }
 }
 
 .dashboard-module__status--completed {
