@@ -42,16 +42,14 @@ class LoginReminderCommand extends Command
     public function handle()
     {
         // Let's get the users that do not have a Module
-        $users = User::with('getUserGroup')->doesntHave('moduleProgress')->whereHas('getUserGroup')->get();
+        $users = User::with('participant')->doesntHave('getUserGroup')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if ($user->getUserGroup->user_group !== 'control') {
-                    $dayCheck = (Carbon::now()->diffInDays($user->participant->created_at));
-                    if ($dayCheck === 3) {
-                        // send out the email.
-                        Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
-                    }
+                $dayCheck = (Carbon::now()->diffInDays($user->participant->created_at));
+                if ($dayCheck === 3) {
+                    // send out the email.
+                    Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
                 }
             }
         }
