@@ -43,21 +43,18 @@ class NewModuleCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->whereNotNull('completed_at')->orderBy('created_at', 'DESC')->first();
+            $q->where('current_module', '!=', 'comparison')->orderBy('created_at', 'DESC');
         }])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (count($user->moduleProgress)) {
+                if (count($user->moduleProgress) > 1) {
                     $currentModule = $user->moduleProgress->first();
-                    if ($currentModule !== null) {
-                        if ($currentModule->current_page !== 0 && ($currentModule->current_page === $currentModule->max_page)) {
-                            $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
-                            if ($dayCheck === 0) {
-                                // send out the email.
-                                // Mail::to($user->email)->send(new NewModuleAvailable($user));
-                                Mail::to((env('RECEIVE_EMAIL')))->send(new NewModuleAvailable($user));
-                            }
+                    $previousModule = $user->moduleProgress[1];
+                    if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
+                        $dayCheck = Carbon::now()->addDays(config('app.days_to_release'))->diffInDays($previousModule->completed_at);
+                        if ($dayCheck === 0) {
+                            Mail::to($user->email)->send(new NewModuleAvailable($currentModule->current_module));
                         }
                     }
                 }

@@ -135,6 +135,8 @@ return [
 
     'days_to_expire' => env('DAYS_TO_EXPIRE', 1),
 
+    'days_to_release' => env('DAYS_TO_RELEASE', 7),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
