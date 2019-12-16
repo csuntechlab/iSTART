@@ -12,7 +12,6 @@ export default {
       user_id: payload.userId
     })
 
-    console.log('get', api)
     return api
   },
 
@@ -24,7 +23,6 @@ export default {
       max_page: payload.maxPage
     })
 
-    console.log('set', api)
     return api
   },
 
@@ -35,7 +33,6 @@ export default {
       next_module: payload.next_module
     })
 
-    console.log('complete', api)
     return api
   }
 }

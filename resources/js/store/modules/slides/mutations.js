@@ -45,6 +45,7 @@ export default {
         let daysToRelease = payload.conditions.days_to_release
         let previousModuleCompletion = payload.data[1].completed_at.split(' ')[0]
         let releaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
+        let formattedReleaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
         let isModuleReleased = moment(currentDate).isSameOrAfter(releaseDate)
 
         if (isModuleNameMatching && isSlideNumberEqual && isSlideNumberZero) {
@@ -56,6 +57,8 @@ export default {
             moduleDataItem.progress.latest_slide = 0
             moduleDataItem.progress.slide_percentage = 0
             moduleDataItem.progress.due_date = parseDate.parseDate(expirationDate)
+          } else {
+            state.nextModuleDate = formattedReleaseDate
           }
 
           break
