@@ -21,7 +21,7 @@ class StudentRemovedFromStudyAdminEmail extends Mailable
     public function __construct($studentRemovedFromStudyAdminEmail, $currentModule)
     {
         $this->studentRemovedFromStudyAdminEmail = $studentRemovedFromStudyAdminEmail;
-        $his->studentRemovedFromStudyAdminEmail->current_module = $currentModule;
+        $this->studentRemovedFromStudyAdminEmail->current_module = $currentModule;
     }
 
     /**

@@ -50,18 +50,18 @@ class DeadlineReminderCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                foreach ($user->moudleProgress as $currentModule) {
+                foreach ($user->moduleProgress as $currentModule) {
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expiration_date);
                     if ($dayCheck === 2 || $dayCheck === 1) {
                         if ($currentModule->current_page !== $currentModule->max_page) {
                             // send out the email.
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule));
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                         }
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
                             $user->participant()->delete();
-                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule));
+                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
                         }
                     }
                 }
