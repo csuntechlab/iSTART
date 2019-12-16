@@ -7,6 +7,7 @@ use App\Models\Participant;
 use App\Mail\WelcomeEmail;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 class ParticipantService implements ParticipantContract
