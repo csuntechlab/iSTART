@@ -9,7 +9,7 @@ use App\Mail\ExitSurveyEmail;
 use Carbon\Carbon;
 
 
-class ExitSurveyEmail extends Command
+class ExitSurveyEmailCommand extends Command
 {
     /**
      * The name and signature of the console command.

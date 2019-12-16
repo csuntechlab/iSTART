@@ -25,13 +25,13 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('istart:deadline-reminder')
-                 ->dailyAt('12:01');
+                ->dailyAt('12:01');
         $schedule->command('istart:new-module')
                 ->dailyAt('12:03');
         $schedule->command('istart:login-reminder')
                 ->dailyAt('12:05');
         $schedule->command('istart:exit-survey')
-                ->dailyAt('12:07')
+                ->dailyAt('12:07');
 
     }
 
