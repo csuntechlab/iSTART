@@ -26,8 +26,8 @@ class ParticipantService implements ParticipantContract
         $goodParticipantsMembers = $goodParticipants['goodParticipants'];
 
         foreach ($goodParticipantsMembers as $goodParticipantsMember){
+            Mail::to($goodParticipantsMember['email'])->send(new WelcomeEmail());
             Arr::forget($goodParticipantsMember,'email');
-            Mail::to($goodParticipantsMember)->send(new WelcomeEmail());
             $ParticipantsEmailRemoved[] = $goodParticipantsMember;
         }
 
