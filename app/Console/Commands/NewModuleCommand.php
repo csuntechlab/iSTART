@@ -52,8 +52,7 @@ class NewModuleCommand extends Command
                     $currentModule = $user->moduleProgress->first();
                     $previousModule = $user->moduleProgress[1];
                     if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
-                        // $dayCheck = Carbon::now()->addDays()->diffInDays($previousModule->completed_at);
-                        $dayCheck = Carbon::now()->diffInDays($previousModule->completed_at);
+                        $dayCheck = Carbon::now()->addDays(config('app.days_to_release'))->diffInDays($previousModule->completed_at);
                         if ($dayCheck === 0) {
                             Mail::to($user->email)->send(new NewModuleAvailable($currentModule->current_module));
                         }
