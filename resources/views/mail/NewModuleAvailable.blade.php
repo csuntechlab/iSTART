@@ -1,4 +1,4 @@
 @component('mail::message')
     Hello,
     <br>
-    You have a new module available for completion. Please log-in to <a href="{{ url('/').'/#/login' }}">iSTART</a>
+    The following new module: <b>{{ ucfirst($NewModuleAvailable) }}</b> is available for completion. Please log-in to <a href="{{ url('/').'/#/login' }}">iSTART</a> to begin progress on the new module.
