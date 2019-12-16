@@ -43,24 +43,25 @@ class DeadlineReminderCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->whereNotNull('completed_at')->orderBy('created_at', 'DESC')->first();
-        }])->whereHas('moduleProgress')->get();
+            $q->whereNull('completed_at')->orderBy('created_at', 'DESC');
+        }, 'getUserGroup' => function ($q) {
+            $q->where('user_group', '!=', 'control');
+        }])->whereHas('moduleProgress')->whereHas('getUserGroup')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (count($user->moduleProgress)) {
-                    $currentModule = $user->moduleProgress->first();
+                foreach ($user->moduleProgress as $currentModule) {
                     $dayCheck = $currentModule->created_at->diffInDays($currentModule->expiration_date);
                     if ($dayCheck === 2 || $dayCheck === 1) {
                         if ($currentModule->current_page !== $currentModule->max_page) {
                             // send out the email.
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user));
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                         }
                     }
                     if ($dayCheck === 0) {
                         if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
                             $user->participant()->delete();
-                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user));
+                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
                         }
                     }
                 }
