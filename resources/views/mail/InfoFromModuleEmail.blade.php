@@ -1,7 +1,7 @@
 @component('mail::message')
     Hello there,
     <br>
-    You requested the following information to be emailed to you.
+    Below you will find the goal you wrote for yourself.
     <br>
     <br>
     {!! html_entity_decode($infoFromModuleEmail->info) !!}
