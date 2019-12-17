@@ -54,7 +54,7 @@ class NewModuleCommand extends Command
                     if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
                         $dayCheck = Carbon::now()->diffInDays($previousModule->completed_at);
                         if ($dayCheck == config('app.days_to_release')) {
-                            Mail::to($user->email)->send(new NewModuleAvailable($currentModule->current_module));
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
                         }
                     }
                 }
