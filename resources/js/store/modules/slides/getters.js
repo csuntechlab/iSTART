@@ -5,6 +5,7 @@ export default {
   isInitialDataLoad: state => state.isInitialDataLoad,
 
   getModuleData: state => state.moduleData,
+  getCurrentModuleData: state => state.moduleData[state.currentModuleIndex],
   getCurrentModule: state => state.currentModule,
   getSlideData: state => index => state.JSONSlideData[index], // Gets specified slide data
   currentSlideData: state => state.JSONSlideData[state.moduleData[state.currentModuleIndex].progress.current_slide], // Gets current slide data
