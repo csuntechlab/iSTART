@@ -35,7 +35,6 @@ class ModuleProgressService implements ModuleProgressContract
     {
         $moduleProgress = ModuleProgress::where('user_id', $data['user_id'])
         ->where('current_module', $data['current_module'])
-        ->whereNull('completed_at')
         ->first();
 
         if ($moduleProgress === null) {
