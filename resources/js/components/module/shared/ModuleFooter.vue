@@ -7,7 +7,7 @@
       </button>
     </div>
     <!-- If review mode -->
-    <div v-if="checkForReviewMode && !checkForEnd" class="module-footer__item-right module-footer__item">
+    <div v-if="checkForReviewMode() && !checkForEnd" class="module-footer__item-right module-footer__item">
       <button @click="slideForward" class="module-footer__button button button-primary text-left text-md-center">
         Next
         <svg class="svg-inline--fa fa-chevron-right fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
@@ -147,7 +147,7 @@ export default {
       let latestSlideNumber = this.latestSlideNumber
       let maxPage = this.totalSlides
 
-      if ((currentSlideNumber === latestSlideNumber) && !this.checkForReviewMode) {
+      if ((currentSlideNumber === latestSlideNumber) && !this.checkForReviewMode()) {
         let payload = {
           userId: userId,
           moduleName: moduleName,
