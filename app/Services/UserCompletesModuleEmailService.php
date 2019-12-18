@@ -16,7 +16,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
     {
         $user = auth()->user();
         $user->load('getUserGroup');
-        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC');
+        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC')->find($user['user_id']);
         $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmailToAdmin = new \stdClass();
         $userCompletesModuleEmailToAdmin->student = $user->getUserGroup->display_name;
@@ -29,7 +29,7 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
     {
         $user = auth()->user();
         $user->load('getUserGroup');
-        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC');
+        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC')->find($user['user_id']);
         $userCompletesModuleEmailToStudent = new \stdClass();
         $userCompletesModuleEmailToStudent->student = $user->getUserGroup->display_name;
         $userCompletesModuleEmailToStudent->current_module = $currentModule['current_module'];
