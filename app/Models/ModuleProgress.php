@@ -9,6 +9,7 @@ class ModuleProgress extends Model
     protected $table = 'module_progresses';
     protected $primaryKey = 'user_id';
     public $incrementing = false;
+    protected $keyType = 'string';
     /**
      * The attributes that are mass assignable.
      *
