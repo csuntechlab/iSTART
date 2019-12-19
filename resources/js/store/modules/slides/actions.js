@@ -98,17 +98,18 @@ export default {
     commit('SET_SLIDE_CONTENT_VISIBILITY', payload)
   },
 
-  // Email Form Template
-  async emailSurveyResults ({ commit }, payload) {
-    return SlidesAPI.emailSurveyResultsAPI(payload)
+  // Email Wellness Goal
+  async emailWellnessGoal ({ commit }, payload) {
+    commit('INITIATE_WELLNESS_GOAL_LOAD')
+    return SlidesAPI.emailWellnessGoalAPI(payload)
       .then(
         () => {
-          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', true)
+          commit('WELLNESS_GOAL_EMAIL_WAS_SUBMITTED', true)
         })
       .catch(
         error => {
           console.error(error)
-          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', false)
+          commit('WELLNESS_GOAL_EMAIL_WAS_SUBMITTED', false)
         }
       )
   },
