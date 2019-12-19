@@ -44,8 +44,8 @@ export default {
   computed: {
     ...mapGetters(
       [
-        'surveyResultLinks',
         'surveyResultsEmailWasSubmitted',
+        'getCurrentModule',
         'currentSlideData'
       ]
     )
@@ -58,8 +58,12 @@ export default {
         'enableContinue'
       ]
     ),
+
     sendUserSurveyResults () {
-      var formattedWellnessResults = `<p>${this.wellnessGoal}</p>`
+      let formattedWellnessResults = `
+        <p>Wellness goal from <b>${this.getCurrentModule}</b> module...</p>
+        <p>${this.wellnessGoal}</p>`
+
       this.emailSurveyResults(formattedWellnessResults)
     }
   }
