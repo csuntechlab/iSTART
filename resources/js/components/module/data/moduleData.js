@@ -3,7 +3,7 @@ export const moduleData = {
     name: 'Alcohol',
     group: 'intervention',
     show: false,
-    description: 'Alcohol is a liquid that is produced by the natural brew of sugars and is the main intoxicant in beer...',
+    description: 'In this module, we will discuss what alcohol use among college students looks like, what alcohol dependency is...',
     thumbnail: {
       src: 'images/thumbnail/alcohol_thumbnail.jpg',
       alt: 'Alcohol'
@@ -20,7 +20,7 @@ export const moduleData = {
     name: 'Marijuana',
     group: 'intervention',
     show: false,
-    description: 'Cannabis, or marijuana, is a psychoactive drug derived from the Cannabis plant...',
+    description: 'In this module, we will discuss what marijuana is, explore common ways that marijuana is used, discuss the long-term...',
     thumbnail: {
       src: 'images/thumbnail/marijuana_thumbnail.jpg',
       alt: 'Marijuana'
@@ -37,7 +37,7 @@ export const moduleData = {
     name: 'Nicotine',
     group: 'intervention',
     show: false,
-    description: 'Tobacco is a plant grown for its leaves, which are processed into tobacco products...',
+    description: 'In this module, we will discuss nicotine and tobacco use among college students, how nicotine can affect your health...',
     thumbnail: {
       src: 'images/thumbnail/nicotine_thumbnail.jpg',
       alt: 'Tobacco'
@@ -54,7 +54,7 @@ export const moduleData = {
     name: 'Prescription Drugs',
     group: 'intervention',
     show: false,
-    description: 'A prescription drug is a pharmaceutical drug that requires a medical prescription to be legally dispensed...',
+    description: 'A prescription drug (also known as Rx or prescription medication) is a pharmaceutical drug that...',
     thumbnail: {
       src: 'images/thumbnail/prescription-drugs_thumbnail.jpg',
       alt: 'Pills'
@@ -71,7 +71,7 @@ export const moduleData = {
     name: 'Illicit Drugs',
     group: 'intervention',
     show: false,
-    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
+    description: 'In this module, we will discuss the harms related to illicit drugs and their usage among college students...',
     thumbnail: {
       src: 'images/thumbnail/illicit-drugs_thumbnail.jpg',
       alt: 'Illicit Drugs'
@@ -88,7 +88,7 @@ export const moduleData = {
     name: 'Comparison',
     group: 'comparison',
     show: false,
-    description: 'Illicit drugs are illegal substances that can stimulate (such as cocaine) or inhibit (such as heroine) the central nervous system...',
+    description: 'In this module, you will learn about five types of substances: alcohol, marijuana, nicotine, prescription drugs, and illicit drugs...',
     thumbnail: {
       src: 'images/thumbnail/comparison-module_thumbnail.jpg',
       alt: 'Comparison Module'

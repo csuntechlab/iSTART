@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard container">
     <navbar :displayCurrentPage="$route.name"/>
-    <div class="container">
+    <div class="dashboard-content container">
       <dashboard-notification v-if="this.user.user_group === 'intervention'"/>
       <control-group v-if="this.user.user_group === 'control'"/>
       <dashboard-module v-if="this.user.user_group === 'comparison' || this.user.user_group === 'intervention'"/>
