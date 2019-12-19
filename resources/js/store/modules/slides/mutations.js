@@ -172,9 +172,14 @@ export default {
     state.moduleData[index].progress.is_review = true
   },
 
-  // Email Form Template
-  SURVEY_RESULTS_EMAIL_WAS_SUBMITTED (state, payload) {
-    state.surveyResultsEmailWasSubmitted = payload
+  // Wellness Goal
+  INITIATE_WELLNESS_GOAL_LOAD (state) {
+    state.isWellnessGoalLoading = true
+  },
+
+  WELLNESS_GOAL_EMAIL_WAS_SUBMITTED (state, payload) {
+    state.wasWellnessGoalEmailSubmitted = payload
+    state.isWellnessGoalLoading = false
   },
 
   // Card Flip Template

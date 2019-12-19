@@ -14,5 +14,6 @@ export default {
   totalSlides: state => Object.keys(state.JSONSlideData).length,
   nextModuleDate: state => state.nextModuleDate,
 
-  surveyResultsEmailWasSubmitted: state => state.surveyResultsEmailWasSubmitted
+  wasWellnessGoalEmailSubmitted: state => state.wasWellnessGoalEmailSubmitted,
+  isWellnessGoalLoading: state => state.isWellnessGoalLoading
 }

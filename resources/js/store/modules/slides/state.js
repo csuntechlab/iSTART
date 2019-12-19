@@ -10,5 +10,6 @@ export default {
   enableContinue: false,
   enableBack: false,
 
-  surveyResultsEmailWasSubmitted: null
+  wasWellnessGoalEmailSubmitted: null,
+  isWellnessGoalLoading: null
 }
