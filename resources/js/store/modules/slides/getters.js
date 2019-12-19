@@ -14,5 +14,6 @@ export default {
   latestSlideNumber: state => state.moduleData[state.currentModuleIndex].progress.latest_slide,
   totalSlides: state => Object.keys(state.JSONSlideData).length,
 
-  surveyResultsEmailWasSubmitted: state => state.surveyResultsEmailWasSubmitted
+  wasWellnessGoalEmailSubmitted: state => state.wasWellnessGoalEmailSubmitted,
+  isWellnessGoalLoading: state => state.isWellnessGoalLoading
 }
