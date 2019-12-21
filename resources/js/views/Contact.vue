@@ -14,7 +14,7 @@
                             <p class="contact-page__text">Do you have urgent substance-use related questions? You can call the <abbr title="Substance Abuse and Mental Health Services Administration">SAMHSA</abbr> 24/7 hotline: <a href="tel:18006624357">1-800-662-4357</a>.</p>
                             <p class="contact-page__text">If you have <strong>non-urgent</strong> substance-related questions, you can email our Tarzana Treatment Centers counselor confidentially (Use <strong>iSTART web-app</strong> as subject line): <a href="mailto:crusch@tarzanatc.org?subject=iSTART web app">crusch@tarzanatc.org</a></p>
                             <p class="contact-page__text">For non-urgent participation questions: <a href="mailto:iSTART@csun.edu">iSTART@csun.edu</a> or</p>
-                            <p class="contact-page__text">For Technical Assistance if you experience problems with the web-app during the pilot: brian.linggadjaja.785@my.csun.edu</p>
+                            <p class="contact-page__text">For Technical Assistance if you experience problems with the web-app during the pilot: <a href="mailto:brian.linggadjaja.785@my.csun.edu">brian.linggadjaja.785@my.csun.edu</a></p>
                         </div>
                     </div>
                 </div>
