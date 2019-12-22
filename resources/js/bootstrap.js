@@ -37,26 +37,26 @@ if (url) {
   console.error("Please set the app url 'meta' tag.");
 }
 
-const idle-timeout = document.head.querySelector('meta[name="idle-timeout"]');
+const idleTimeout = document.head.querySelector('meta[name="idle-timeout"]');
 
-if (idle-timeout) {
-  window.idleTimeout = idle-timeout;
+if (idleTimeout) {
+  window.idleTimeout = idleTimeout;
 } else {
   console.error("Please set the idle time out 'meta' tag.");
 }
 
-const days-to-release = document.head.querySelector('meta[name="days-to-release"]');
+const daysToRelease = document.head.querySelector('meta[name="days-to-release"]');
 
-if (days-to-release) {
-  window.daysToRelease = days-to-release;
+if (daysToRelease) {
+  window.daysToRelease = daysToRelease;
 } else {
   console.error("Please se the days-to-release 'meta' tag.");
 }
 
-const slide-wait-time = document.head.querySelector('meta[name="slide-wait-time"]');
+const slideWaitTime = document.head.querySelector('meta[name="slide-wait-time"]');
 
-if (slide-wait-time) {
-  window.slideWaitTime = slide-wait-time;
+if (slideWaitTime) {
+  window.slideWaitTime = slideWaitTime;
 } else {
   console.error("Please set the slide-wait-time 'meta' tag.");
 }
