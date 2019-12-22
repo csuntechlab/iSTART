@@ -6,6 +6,8 @@ import store from './store/index.js'
 import { Pie } from 'vue-chartjs'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 
+require('./bootstrap')
+
 Vue.use(Pie)
 Vue.use(VueProgress)
 Vue.use(VueYouTubeEmbed)
@@ -17,8 +19,6 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-
-require('./bootstrap.js')
 
 // Before each route change check if route needs & has proper authentication
 router.beforeEach((to, from, next) => {
