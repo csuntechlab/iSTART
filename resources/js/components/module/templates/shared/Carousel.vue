@@ -5,7 +5,7 @@
     </ol>
     <div class="carousel-inner">
       <div :class="['module-info__carousel-item carousel-item', ( index === '0' ? 'active' : '' )]" v-for="(element, index) in images" :key="index">
-        <img class="d-block w-100" :src="element.src" :alt="element.alt">
+        <img class="d-block w-100" :src="url+'/'+element.src" :alt="element.alt">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -21,6 +21,11 @@
 export default {
   props: [
     'images'
-  ]
+  ],
+  data () {
+    return {
+      url: window.appURL
+    }
+  }
 }
 </script>
