@@ -20,7 +20,7 @@
             <figcaption v-if="item.caption_y_position === 'top' || (!item.caption_y_position && item.caption)">
                 <b>{{ item.caption }}</b>
             </figcaption>
-            <img class="image-grid__img" :src="item.src" :alt="item.alt">
+            <img class="image-grid__img" :src="url+'/'+item.src" :alt="item.alt">
             <figcaption v-if="item.caption_y_position === 'bottom' && item.caption">
                 <b>{{ item.caption }}</b>
             </figcaption>
@@ -34,6 +34,11 @@ export default {
   props: [
     'image_grid',
     'content_alignment'
-  ]
+  ],
+  data () {
+    return {
+      url: window.appURL
+    }
+  }
 }
 </script>

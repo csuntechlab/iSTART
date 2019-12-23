@@ -17,12 +17,12 @@
           </span>
 
           <div class="module-quiz__option-content" :class="[(object.options[optionIndex].show ? 'module-quiz__response-option--active' : '')]">
-            <img class="module-quiz__option-content-image" v-if="element.img.src" :src="element.img.src" :alt="element.img.alt">
+            <img class="module-quiz__option-content-image" v-if="element.img.src" :src="url+'/'+element.img.src" :alt="element.img.alt">
             <p v-if="element.text" v-html="element.text" class="module-quiz__option-content-text"></p>
 
             <div class="module-quiz__response" :class="[(element.show ? 'module-quiz__response--active' : '')]">
               <p v-if="element.response.text" class="module-quiz__response-text" v-html="element.response.text"></p>
-              <img v-if="element.response.img.src" :src="element.response.img.src" :alt="element.response.img.alt" class="module-quiz__response-image">
+              <img v-if="element.response.img.src" :src="url+'/'+element.response.img.src" :alt="element.response.img.alt" class="module-quiz__response-image">
             </div>
           </div>
         </button>
@@ -35,6 +35,11 @@
 import { mapActions, mapGetters } from 'vuex'
 // module-quiz__response-option--active
 export default {
+  data () {
+    return {
+      url: window.appURL
+    }
+  },
   props: [
     'object',
     'options',
