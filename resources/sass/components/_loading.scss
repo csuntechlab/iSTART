@@ -1,6 +1,6 @@
 .loading {
     &-container {
-        background-color: rgba(245, 245, 245, 0.95);
+        background-color: rgba(245, 245, 245, 0.9);
         display: flex;
         position: fixed;
         top: 0;
@@ -11,6 +11,10 @@
         height: 100%;
         width: 100%;
         z-index: 100;
+    }
+
+    &-form {
+        top: 10% !important;
     }
 
     &__dot {

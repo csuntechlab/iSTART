@@ -1,23 +1,20 @@
-import axios from 'axios'
-
 export default {
-  emailSurveyResultsAPI (payload) {
-    return axios.post('send-module-info-mail', {
+  emailWellnessGoalAPI (payload) {
+    return window.axios.post('send-module-info-mail', {
       module_data: payload
     })
   },
 
   async getModuleProgressAPI (payload) {
-    let api = await axios.post('get-module-progress', {
+    let api = await window.axios.post('get-module-progress', {
       user_id: payload.userId
     })
 
-    api.data.userGroup = payload.userGroup
     return api
   },
 
   async setModuleProgressAPI (payload) {
-    let api = await axios.post('set-module-progress', {
+    let api = await window.axios.post('set-module-progress', {
       user_id: payload.userId,
       current_module: payload.moduleName,
       current_page: payload.currentPage,
@@ -28,17 +25,12 @@ export default {
   },
 
   async moduleCompleteAPI (payload) {
-    let api = await axios.post('module-complete', {
+    let api = await window.axios.post('module-complete', {
       user_id: payload.user_id,
       current_module: payload.current_module,
       next_module: payload.next_module
     })
 
     return api
-  },
-
-  sendCompletedModuleMail () {
-    axios.post('/send-complete-module-mail-admin')
-    axios.post('/send-complete-module-mail-student')
   }
 }

@@ -15,11 +15,12 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
     public function sendMailToAdmin()
     {
         $user = auth()->user();
-        $currentModule = ModuleProgress::find($user['user_id']);
+        $user->load('getUserGroup');
+        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC')->find($user['user_id']);
         $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmailToAdmin = new \stdClass();
+        $userCompletesModuleEmailToAdmin->student = $user->getUserGroup->display_name;
         $userCompletesModuleEmailToAdmin->current_module = $currentModule['current_module'];
-        $userCompletesModuleEmailToAdmin->participant_id = $ParticipantID['participant_id'];
         Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToAdmin($userCompletesModuleEmailToAdmin));
 
     }
@@ -27,13 +28,11 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
     public function sendMailToStudent()
     {
         $user = auth()->user();
-        $currentModule = ModuleProgress::find($user['user_id']);
+        $user->load('getUserGroup');
+        $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC')->find($user['user_id']);
         $userCompletesModuleEmailToStudent = new \stdClass();
+        $userCompletesModuleEmailToStudent->student = $user->getUserGroup->display_name;
         $userCompletesModuleEmailToStudent->current_module = $currentModule['current_module'];
-        if((env('APP_ENV') === 'production')) {
-            Mail::to($user['email'])->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
-        } else {
-            Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
-        }
+        Mail::to($user['email'])->send(new UserCompletesModuleEmailToStudent($userCompletesModuleEmailToStudent));
     }
 }

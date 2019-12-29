@@ -5,7 +5,7 @@
         <div class="col-12 align-self-center">
           <div class="row">
             <div class="col-12 text-center py-5">
-              <img class="login__logo" src="images/logos/logo_color.svg" alt="iStart Logo"/>
+              <img class="login__logo" :src="url + '/images/logos/logo_color.svg'" alt="iStart Logo"/>
             </div>
           </div>
           <div class="row justify-content-center">
@@ -47,11 +47,14 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import { changeRouteTitle } from './../mixins/changeRouteTitle'
 
 export default {
   name: 'Login',
+  mixins: [changeRouteTitle],
   data () {
     return {
+      url: window.appURL,
       userInfoForm: {
         username: '',
         password: ''

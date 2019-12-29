@@ -17,7 +17,7 @@
         <div class="card-flip__card-front interactable-container">
           <figure v-if="item.front.img.src !== null">
             <figcaption class="card-flip__card-caption">{{item.front.img.caption}}</figcaption>
-            <img v-bind:src="item.front.img.src" v-bind:alt="item.front.img.alt" class="card-flip__card-image">
+            <img v-bind:src="url + '/' + item.front.img.src" v-bind:alt="item.front.img.alt" class="card-flip__card-image">
           </figure>
           <section v-if="item.front.question !== null">
             {{item.front.question}}
@@ -36,6 +36,11 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
+  data () {
+    return {
+      url: window.appURL
+    }
+  },
   computed: {
     ...mapGetters(
       [

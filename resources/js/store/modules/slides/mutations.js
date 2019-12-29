@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { parseDate } from './../../../mixins/parseDate'
 
 export default {
   // Module Functionality
@@ -11,52 +12,80 @@ export default {
   },
 
   REQUEST_MODULE_PROGRESS (state, payload) {
-    let userGroup = payload.data.userGroup
-    let currentModule = payload.data.current_module
+    let userGroup = payload.conditions.user_group
     let moduleDataLength = Object.keys(state.moduleData).length
 
     for (let i = 0; i < moduleDataLength; i += 1) {
-      let moduleDataName = state.moduleData[i].name.toLowerCase()
-      let moduleDataGroup = state.moduleData[i].group
+      let completedModuleArrayLength = payload.data.length
+      let moduleDataItem = state.moduleData[i]
+      let moduleDataGroup = moduleDataItem.group
 
-      if (currentModule === '' && userGroup === moduleDataGroup) {
-        // If initial Login, show first module
+      if ((completedModuleArrayLength === undefined || completedModuleArrayLength === null) && (userGroup === moduleDataGroup)) {
+        // If there are no completedModules, show first module that matches user_group
+        let dueDate = payload.data.expiration_date
+
         state.moduleData[i].show = true
+        state.moduleData[i].progress.due_date = parseDate.parseDate(dueDate)
         break
       } else if (userGroup === moduleDataGroup) {
-        // If reached current_module, set progress from API then break, else mark moduleData[i] as review
-        if (currentModule === moduleDataName) {
-          state.moduleData[i].show = true
+        let currentCompletedModule = payload.data[0]
+        let currentCompletedModuleName = currentCompletedModule.current_module.toLowerCase()
+        let currentCompletedModuleSlideNumber = currentCompletedModule.current_page
+        let currentCompletedModuleSlideTotal = currentCompletedModule.max_page
+        let moduleDataName = moduleDataItem.name.toLowerCase()
+        let expirationDate = currentCompletedModule.expiration_date
 
-          // Calculate progress
-          let latestSlide = payload.data.current_page
-          let totalSlides = payload.data.max_page
-          let totalProgressAsNumber = ((latestSlide / (totalSlides - 1)) * 100).toFixed(2)
-          state.moduleData[i].progress.slide_percentage = totalProgressAsNumber
+        // Conditionals Checks
+        let isModuleNameMatching = (moduleDataName === currentCompletedModuleName)
+        let isSlideNumberZero = ((currentCompletedModuleSlideNumber === 0) && (currentCompletedModuleSlideTotal === 0))
+        let isSlideNumberEqual = (currentCompletedModuleSlideNumber === currentCompletedModuleSlideTotal)
 
-          state.moduleData[i].progress.current_slide = latestSlide
-          state.moduleData[i].progress.latest_slide = latestSlide
+        // Date Conditionals
+        let currentDate = moment().format('YYYY-MM-DD')
+        let daysToRelease = payload.conditions.days_to_release
 
-          let currentDate = moment().format('YYYY-MM-DD')
-          let expirationDate = payload.data.expiration_date.split(' ')[0]
+        if (isModuleNameMatching && isSlideNumberEqual && isSlideNumberZero) {
+          let previousModuleCompletion = payload.data[1].completed_at.split(' ')[0]
+          let releaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
+          let formattedReleaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
+          let isModuleReleased = moment(currentDate).isSameOrAfter(releaseDate)
 
-          if ((totalSlides > 0) && (latestSlide >= totalSlides)) {
-            state.moduleData[i].progress.is_review = true
-            if (moment(currentDate).isSameOrAfter(expirationDate) && i !== moduleDataLength) {
-              state.moduleData[i + 1].show = true
-            }
+          // If module has not been started
+          if (isModuleReleased) {
+            moduleDataItem.show = true
+            moduleDataItem.progress.is_review = false
+            moduleDataItem.progress.current_slide = 0
+            moduleDataItem.progress.latest_slide = 0
+            moduleDataItem.progress.slide_percentage = 0
+            moduleDataItem.progress.due_date = parseDate.parseDate(expirationDate)
           } else {
-            let splitDate = expirationDate.split('-')
-            let formattedExpirationDate = splitDate[1] + '/' + splitDate[2] + '/' + splitDate[0]
-            state.moduleData[i].progress.due_date = formattedExpirationDate
-            state.nextModuleDate = formattedExpirationDate
+            state.nextModuleDate = formattedReleaseDate
           }
 
           break
+        } else if (isModuleNameMatching && isSlideNumberEqual && !isSlideNumberZero) {
+          // If module is complete
+          moduleDataItem.show = true
+          moduleDataItem.progress.is_review = true
+          moduleDataItem.progress.current_slide = 0
+          moduleDataItem.progress.latest_slide = 0
+          moduleDataItem.progress.slide_percentage = 100
+
+          break
+        } else if (isModuleNameMatching && !isSlideNumberZero) {
+          // Set Progress for current Module
+          moduleDataItem.show = true
+          moduleDataItem.progress.is_review = false
+          moduleDataItem.progress.current_slide = currentCompletedModuleSlideNumber
+          moduleDataItem.progress.latest_slide = currentCompletedModuleSlideNumber
+          moduleDataItem.progress.slide_percentage = ((currentCompletedModuleSlideNumber / currentCompletedModuleSlideTotal) * 100).toFixed(2)
+
+          break
         } else {
-          state.moduleData[i].show = true
-          state.moduleData[i].progress.is_review = true
-          state.moduleData[i].progress.slide_percentage = 100
+          // Mark module as completed if already completed previously
+          moduleDataItem.show = true
+          moduleDataItem.progress.is_review = true
+          moduleDataItem.progress.slide_percentage = 100
         }
       }
     }
@@ -143,9 +172,14 @@ export default {
     state.moduleData[index].progress.is_review = true
   },
 
-  // Email Form Template
-  SURVEY_RESULTS_EMAIL_WAS_SUBMITTED (state, payload) {
-    state.surveyResultsEmailWasSubmitted = payload
+  // Wellness Goal
+  INITIATE_WELLNESS_GOAL_LOAD (state) {
+    state.isWellnessGoalLoading = true
+  },
+
+  WELLNESS_GOAL_EMAIL_WAS_SUBMITTED (state, payload) {
+    state.wasWellnessGoalEmailSubmitted = payload
+    state.isWellnessGoalLoading = false
   },
 
   // Card Flip Template

@@ -21,7 +21,7 @@
               ]"
               v-html="image.caption">
             </figcaption>
-            <img class="module-info__img" :src="image.src" :alt="image.alt">
+            <img class="module-info__img" :src="url+'/'+image.src" :alt="image.alt">
             <figcaption
               v-if="image.caption_y_position == 'bottom' && image.caption"
               class="module-text__caption"
@@ -43,6 +43,11 @@ export default {
   props: [
     'image'
   ],
+  data () {
+    return {
+      url: window.appURL
+    }
+  },
   computed: {
     determineColSize: function () {
       if (

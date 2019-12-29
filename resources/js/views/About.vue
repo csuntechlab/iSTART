@@ -9,9 +9,14 @@
                             <h1 class="about-page__header">About</h1>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-2">
                         <div class="col-12">
                             <p class="about-page__text">iSTART is a grant program funded by <abbr title="Substance Abuse and Mental Health Services Administration">SAMHSA</abbr>. We focus on both substance use prevention, as well as HIV and Hep-C prevention. You can learn more about us <a href="https://www.csun.edu/istart/about" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="about-page__text">The iSTART web-app was developed by students and faculty at CSUN. We strive to provide you the best experience using our app! If you have an questions or concerns, please visit the contact us section so we can here more about it.</p>
                         </div>
                     </div>
                 </div>

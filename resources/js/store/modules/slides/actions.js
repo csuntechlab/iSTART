@@ -9,10 +9,17 @@ export default {
   async requestModuleProgress ({ commit }, payload) {
     let userId = payload.userId
     let userGroup = payload.userGroup
+    let daysToRelease = payload.daysToRelease
     payload = { userId: userId, userGroup: userGroup }
+
     SlidesAPI.getModuleProgressAPI(payload)
       .then(
         response => {
+          let conditions = {
+            user_group: userGroup,
+            days_to_release: parseInt(daysToRelease)
+          }
+          response.conditions = conditions
           commit('REQUEST_MODULE_PROGRESS', response)
         })
       .catch(
@@ -34,20 +41,17 @@ export default {
   },
 
   async completeModule ({ commit }, payload) {
+    let index = payload.index
     SlidesAPI.moduleCompleteAPI(payload)
+      .then(
+        () => {
+          commit('MARK_MODULE_AS_REVIEW', index)
+        }
+      )
       .catch(
         error => {
           console.error(error)
         })
-  },
-
-  async submitEmailOnModuleCompletion ({ commit }, payload) {
-    SlidesAPI.sendCompletedModuleMail()
-      .catch(
-        error => {
-          console.error(error)
-        }
-      )
   },
 
   setModuleIndex ({ commit }, payload) {
@@ -94,17 +98,18 @@ export default {
     commit('SET_SLIDE_CONTENT_VISIBILITY', payload)
   },
 
-  // Email Form Template
-  async emailSurveyResults ({ commit }, payload) {
-    return SlidesAPI.emailSurveyResultsAPI(payload)
+  // Email Wellness Goal
+  async emailWellnessGoal ({ commit }, payload) {
+    commit('INITIATE_WELLNESS_GOAL_LOAD')
+    return SlidesAPI.emailWellnessGoalAPI(payload)
       .then(
         () => {
-          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', true)
+          commit('WELLNESS_GOAL_EMAIL_WAS_SUBMITTED', true)
         })
       .catch(
         error => {
           console.error(error)
-          commit('SURVEY_RESULTS_EMAIL_WAS_SUBMITTED', false)
+          commit('WELLNESS_GOAL_EMAIL_WAS_SUBMITTED', false)
         }
       )
   },
