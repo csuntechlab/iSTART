@@ -42,17 +42,48 @@ class ExitSurveyEmailCommand extends Command
      */
     public function handle()
     {
-        $users = User::with('participant', 'getUserGroup')->whereHas('getUserGroup')->get();
+        $users = User::with([
+                'participant',
+                'getUserGroup',
+                'moduleProgress' => function ($q) {
+                    $q->orderBy('created_at', 'DESC');
+                }
+            ])
+            ->whereHas('getUserGroup')
+            ->whereHas('participant')
+            ->get();
         $today = Carbon::now();
         if (count($users)) {
             foreach($users as $user) {
-                if ($user->getUserGroup->user_group === 'control' || $user->getUserGroup->user_group === 'comparison') {
-                    $difference = $today->diffInDays($user->participant->created_at);
-                    if ($difference === 30) {
-                        Mail::to($user->email)->send(new ExitSurveyEmail());
+                $difference = $today->diffInDays($user->participan->created_at);
+                if ($difference === 30) {
+                    if ($user->getUserGroup->user_group === 'control') {
+                        $this->sendEmail($user);
+                    } else if ($user->getUserGroup->user_group === 'comparison') {
+                        $lastModule = $user->moduleProgress->first();
+                        if (!is_null($lastModule->completed_at)) {
+                            $this->sendEmail($user);
+                        }
+                    } else {
+                        if (count($user->moduleProgress) === 4) {
+                            $lastModule = $user->moduleProgress->first();
+                            if (!is_null($lastModule->completed_at)) {
+                                $this->sendEmail($user);
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+
+    /**
+     * Sends out the actual Email
+     * @param  App\Models\User $user instance of one user
+     * @return void
+     */
+    private function sendEmail($user)
+    {
+        Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new ExitSurveyEmail($user));
     }
 }

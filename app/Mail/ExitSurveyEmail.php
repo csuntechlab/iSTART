@@ -11,14 +11,16 @@ class ExitSurveyEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $user;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -28,6 +30,6 @@ class ExitSurveyEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject(config('mail.from.name'). ' exit survey.')->view('mail.exitsurvey');
+        return $this->subject(config('mail.from.name'). ' - You completed all the modules!')->view('mail.exitsurvey');
     }
 }
