@@ -55,7 +55,7 @@ class ExitSurveyEmailCommand extends Command
         $today = Carbon::now();
         if (count($users)) {
             foreach($users as $user) {
-                $difference = $today->diffInDays($user->participan->created_at);
+                $difference = $today->diffInDays($user->participant->created_at);
                 if ($difference === 30) {
                     if ($user->getUserGroup->user_group === 'control') {
                         $this->sendEmail($user);
