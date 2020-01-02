@@ -30,7 +30,7 @@ export default {
       for (var i = 0; i < getPhotoList.length; i++) {
         cssDependentRule +=
           `.photo-list__list-item--` + i.toString() + `:before {
-            background-image: url(` + getPhotoList[i].src + `);
+            background-image: url(` + window.appURL + `/` + getPhotoList[i].src + `);
           }`
         if ((getPhotoList.length - 1) === i) {
           cssImageRule += `

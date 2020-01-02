@@ -7,7 +7,7 @@
           <div class="dashboard-module__overview-wrapper col-12 col-md-6">
             <div class="dashboard-module__overview row">
               <div class="dashboard-module__thumbnail">
-                <img class="dashboard-module__thumbnail-image" v-bind:src="item.thumbnail.src" v-bind:alt="item.thumbnail.alt">
+                <img class="dashboard-module__thumbnail-image" v-bind:src="url+'/'+item.thumbnail.src" v-bind:alt="item.thumbnail.alt">
               </div>
             </div>
           </div>
@@ -74,6 +74,7 @@ export default {
 
   data () {
     return {
+      url: window.appURL,
       size: 50,
       shape: {
         circle: 'circle',

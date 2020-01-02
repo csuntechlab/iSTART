@@ -1,14 +1,12 @@
-import axios from 'axios'
-
 export default {
   emailWellnessGoalAPI (payload) {
-    return axios.post('send-module-info-mail', {
+    return window.axios.post('send-module-info-mail', {
       module_data: payload
     })
   },
 
   async getModuleProgressAPI (payload) {
-    let api = await axios.post('get-module-progress', {
+    let api = await window.axios.post('get-module-progress', {
       user_id: payload.userId
     })
 
@@ -16,7 +14,7 @@ export default {
   },
 
   async setModuleProgressAPI (payload) {
-    let api = await axios.post('set-module-progress', {
+    let api = await window.axios.post('set-module-progress', {
       user_id: payload.userId,
       current_module: payload.moduleName,
       current_page: payload.currentPage,
@@ -27,7 +25,7 @@ export default {
   },
 
   async moduleCompleteAPI (payload) {
-    let api = await axios.post('module-complete', {
+    let api = await window.axios.post('module-complete', {
       user_id: payload.user_id,
       current_module: payload.current_module,
       next_module: payload.next_module
