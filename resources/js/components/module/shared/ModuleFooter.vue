@@ -28,7 +28,7 @@
         <div id="tooltip" class="module-footer__tooltip hidden">
           {{ currentSlideData.header.tooltip }}
         </div>
-        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" class="module-footer__button button button-primary--disabled text-left text-md-center">
+        <button @click="showTooltip" @mouseover="showTooltip" @mouseout="hideTooltip" disabled aria-disabled="true" class="module-footer__button button button-primary--disabled text-left text-md-center">
           Next
         </button>
       </div>

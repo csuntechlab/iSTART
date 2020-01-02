@@ -13,8 +13,10 @@
   </section>
   <div class="card-flip-content mb-5">
     <div :class="[(currentSlideData.content.card_break ? 'col-12' : 'col-12 col-md-6'), 'card-flip__card']" v-for="(item, index) in currentSlideData.content.cards" :key="index">
-      <div @click="flipCard(index, item.show); checkForCardsFlipped()" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
-        <div class="card-flip__card-front interactable-container">
+      <div tabindex="0" @keydown.enter="flipCard(index, item.show)" @keydown.space="flipCard(index, item.show)" @click="flipCard(index, item.show); checkForCardsFlipped()" v-bind:class="[item.show ? 'card-flip__card--active' : '', 'card-flip__card-wrapper transition-350ms']">
+
+        <!-- Front of Card -->
+        <div class="card-flip__card-front">
           <figure v-if="item.front.img.src !== null">
             <figcaption class="card-flip__card-caption">{{item.front.img.caption}}</figcaption>
             <img v-bind:src="item.front.img.src" v-bind:alt="item.front.img.alt" class="card-flip__card-image">
@@ -23,7 +25,9 @@
             {{item.front.question}}
           </section>
         </div>
-        <div class="card-flip__card-back interactable-container">
+
+        <!-- Back of Card -->
+        <div class="card-flip__card-back">
           <p class="module-text__text" v-html="item.back.description"></p>
         </div>
       </div>
