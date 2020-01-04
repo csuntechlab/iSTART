@@ -1,6 +1,6 @@
 <template>
 <nav class="navbar">
-  <img class="navbar__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
+  <img class="navbar__logo" :src="url + 'images/logos/logo_white.svg'" alt="iStart Logo"/>
   <div class="navbar__mobile-wrapper">
     <button class="navbar__button" type="button" @click="toggleNavigation" :aria-expanded="isNavOpen ? 'tree' : 'false'">
       <i class="fas fa-bars"></i>
@@ -47,6 +47,7 @@ export default {
 
   data () {
     return {
+      url: window.appURL,
       isNavOpen: false,
       module_title: 'Alcohol'
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="introSlide col-12">
-    <div class="row introSlide__image-container" :style="'background-image: url(' + currentSlideData.content.background_image + ')'">
+    <div class="row introSlide__image-container" :style="'background-image: url(' + url + '/' + currentSlideData.content.background_image + ')'">
     </div>
     <div class="row introSlide__content-wrapper">
       <div class="introSlide__title-container col-12 col-lg-4">
@@ -34,6 +34,11 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  data () {
+    return {
+      url: window.appURL
+    }
+  },
   computed: {
     ...mapGetters(
       [
