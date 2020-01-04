@@ -51,20 +51,22 @@ class DeadlineReminderCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                foreach ($user->moduleProgress as $currentModule) {
-                    // we want to check today's date vs the expiration date of the module.
-                    $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
-                    if ($dayCheck === 0) {
-                        $user->participant()->delete();
-                        Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
-                    }
-                    if ($user->getUserGroup->user_group !== 'comparison') {
-                        if ($dayCheck === 2 || $dayCheck === 1) {
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                if (count($user->moduleProgress)) {
+                    foreach ($user->moduleProgress as $currentModule) {
+                        // we want to check today's date vs the expiration date of the module.
+                        $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
+                        if ($dayCheck === 0) {
+                            $user->participant()->delete();
+                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
                         }
-                    } else {
-                        if ($dayCheck === 10 || $dayCheck === 3)  {
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                        if ($user->getUserGroup->user_group !== 'comparison') {
+                            if ($dayCheck === 2 || $dayCheck === 1) {
+                                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                            }
+                        } else {
+                            if ($dayCheck === 10 || $dayCheck === 3)  {
+                                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                            }
                         }
                     }
                 }
