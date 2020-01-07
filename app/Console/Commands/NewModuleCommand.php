@@ -48,11 +48,10 @@ class NewModuleCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (count($user->moduleProgress) > 1) {
+                if (count($user->moduleProgress)) {
                     $currentModule = $user->moduleProgress->first();
-                    $previousModule = $user->moduleProgress[1];
                     if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
-                        $dayCheck = Carbon::now()->diffInDays($previousModule->completed_at);
+                        $dayCheck = Carbon::now()->diffInDays($currentModule->created_at);
                         if ($dayCheck == config('app.days_to_release')) {
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
                         }
