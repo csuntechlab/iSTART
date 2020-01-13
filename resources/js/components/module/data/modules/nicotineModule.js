@@ -45,7 +45,7 @@ export const nicotineModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filter, the paper–even the chemicals!'
+          0: 'When you smoke cigarettes, you inhale more than just the tobacco. Everything is burned—the tobacco filler, the paper–even the chemicals!'
         }
       },
       1: {
@@ -113,7 +113,7 @@ export const nicotineModuleSlides = {
             question: null
           },
           back: {
-            description: 'The filter is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
+            description: 'The filler is made of chopped tobacco leaves, stems and scraps. When burned, you breathe in its hazardous chemicals.'
           }
         }
       }
