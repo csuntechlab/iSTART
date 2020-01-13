@@ -48,7 +48,7 @@ class NewModuleCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (!is_null($user->parcipant)) {
+                if (!is_null($user->participant)) {
                     if (count($user->moduleProgress)) {
                         $currentModule = $user->moduleProgress->first();
                         if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
