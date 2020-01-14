@@ -66,7 +66,7 @@ class ExitSurveyEmailCommand extends Command
                                 $this->sendEmail($user);
                             }
                         } else {
-                            if (count($user->moduleProgress) === 4) {
+                            if (count($user->moduleProgress) === 5) {
                                 $lastModule = $user->moduleProgress->first();
                                 if (!is_null($lastModule->completed_at)) {
                                     $this->sendEmail($user);
