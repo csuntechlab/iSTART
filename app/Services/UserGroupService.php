@@ -68,21 +68,6 @@ class UserGroupService implements UserGroupContract
                 $intervention_Count = $interventionCountFromData->count;
             }
 
-            // if ($control_Count == $comparison_Count && $comparison_Count == $intervention_Count) {
-            //     $randomNumber = rand(0, 2);
-            //     $userInUserGroup->user_group = $groups[$randomNumber]->user_group;
-            //     $userInUserGroup->save();
-            // }
-            // if ($control_Count == 0) {
-            //     $userInUserGroup->user_group = 'control';
-            //     $userInUserGroup->save();
-            // } else if ($comparison_Count == 0) {
-            //     $userInUserGroup->user_group = 'comparison';
-            //     $userInUserGroup->save();
-            // } else if ($intervention_Count == 0) {
-            //     $userInUserGroup->user_group = 'intervention';
-            //     $userInUserGroup->save();
-            //
             if ($control_Count == $comparison_Count && $comparison_Count == $intervention_Count) {
                 $randomNumber = rand(0, 2);
                 $userInUserGroup->user_group = $groups[$randomNumber]->user_group;
