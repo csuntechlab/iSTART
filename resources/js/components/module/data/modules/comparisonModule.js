@@ -1762,7 +1762,7 @@ export const comparisonModuleSlides = {
           '"I have a game/practice tomorrow."',
           '"I\'m OK for now!" (For alcohol: you can BYOC (bring your own cup) and keep it filled with something other than alcohol!)',
           '"No thanks, I\'ve tried it and I didn\'t like it."',
-          '"or simply...No thanks, I\'m, not into drugs."'
+          '"or simply...No thanks, I\'m not into drugs."'
         ]
       },
       2: {
