@@ -11,5 +11,7 @@ export default {
   enableBack: false,
 
   wasWellnessGoalEmailSubmitted: null,
-  isWellnessGoalLoading: null
+  isWellnessGoalLoading: null,
+
+  demoMode: false
 }

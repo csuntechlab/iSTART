@@ -22,6 +22,7 @@ export default {
   props: [
     'images'
   ],
+
   data () {
     return {
       url: window.appURL

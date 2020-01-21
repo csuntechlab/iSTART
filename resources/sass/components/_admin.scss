@@ -19,7 +19,7 @@
     }
 
     &__button {
-        margin-bottom: 4rem;
+        margin: 3rem 0 4rem;
     }
 
     &__nav {
@@ -35,10 +35,16 @@
         width: 5.75rem;
     }
 
+    &__file-icon {
+        font-size: 4rem;
+        color: rgb(15, 125, 10);
+    }
+
     &__link {
-        display: block;
+        display: inline-block;
         color: $white;
-        padding: 0 .15rem;
+        padding: 0 0.15rem;
+        margin-left: 0.5rem;
         height: 1.5rem;
 
         &:hover {
@@ -55,10 +61,11 @@
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem 0 2rem 0;
+        padding: 2rem 1rem;
     }
 
     &__upload {
+        background-color: rgb(245, 245, 245);
         position: relative;
         border: 4px dashed $primaryColor;
         border-radius: 2rem;
@@ -67,7 +74,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 4rem;
+        flex-flow: column;
+        margin: 1rem 0;
 
         &-label {
             visibility: hidden;
@@ -75,8 +83,25 @@
             width: 0;
         }
 
+        &-description {
+            text-align: center;
+            font-size: 1.25rem;
+
+            &--invalid {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.25rem;
+                color: $red;
+            }
+        }
+
         &-file {
-            padding-left: 6rem;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 2rem;
+            opacity: 0;
+            cursor: pointer;
         }
     }
 }

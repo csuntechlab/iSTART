@@ -2,6 +2,11 @@ import moment from 'moment'
 import { parseDate } from './../../../mixins/parseDate'
 
 export default {
+  // Enable Demo Mode
+  SET_DEMO_MODE (state) {
+    state.demoMode = true
+  },
+
   // Module Functionality
   SET_MODULE_DATA (state, payload) {
     state.moduleData = payload
@@ -170,6 +175,16 @@ export default {
   // Set module as review state
   MARK_MODULE_AS_REVIEW (state, index) {
     state.moduleData[index].progress.is_review = true
+  },
+
+  // Mark ALL modules into Review mode (Demo Mode)
+  MARK_ALL_MODULES_AS_REVIEW (state) {
+    let moduleDataLength = Object.keys(state.moduleData).length
+
+    for (let i = 0; i < moduleDataLength; i += 1) {
+      let moduleDataItem = state.moduleData[i]
+      moduleDataItem.progress.is_review = true
+    }
   },
 
   // Wellness Goal

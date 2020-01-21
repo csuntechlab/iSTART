@@ -15,7 +15,7 @@
         :placeholder="currentSlideData.content.textAreaPlaceHolder"
         v-model="wellnessGoal"
         ></textarea>
-        <h2 v-if="(wellnessGoal.length > 0) && !wasWellnessGoalEmailSubmitted" @click="sendWellnessGoal" class="module-text__text multiChoiceSurveyResults__mail transition-350ms">
+        <h2 v-if="(wellnessGoal.length > 0) && !wasWellnessGoalEmailSubmitted && !isDemoModeEnabled" @click="sendWellnessGoal" class="module-text__text multiChoiceSurveyResults__mail transition-350ms">
           <i class="fas fa-envelope"></i>
           Email this goal to yourself
         </h2>
@@ -49,6 +49,7 @@ export default {
   computed: {
     ...mapGetters(
       [
+        'isDemoModeEnabled',
         'wasWellnessGoalEmailSubmitted',
         'isWellnessGoalLoading',
         'getCurrentModule',
