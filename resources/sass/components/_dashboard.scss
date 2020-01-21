@@ -73,6 +73,8 @@
         }
 
         &-wrap {
+            display: flex;
+            flex-flow: column-reverse;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
