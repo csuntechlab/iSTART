@@ -19034,6 +19034,10 @@ a:hover {
   margin-bottom: 1.3rem;
 }
 
+.invalid-feedback.fatal {
+  text-align: center;
+}
+
 .form-control {
   border-radius: 10px;
   border-color: #CECECE;

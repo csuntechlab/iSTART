@@ -4,6 +4,10 @@
     font-weight: 700;
     margin-top: -.7rem;
     margin-bottom: 1.3rem;
+
+    &.fatal {
+        text-align: center;
+    }
 }
 
 .form-control {

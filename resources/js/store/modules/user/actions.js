@@ -25,7 +25,11 @@ export default {
           }
         })
       .catch(
-        failure => console.error(failure)
+        failure => {
+          commit('LOGIN_IS_LOADING', false)
+          commit('LOGIN_FAILED', false)
+          console.error(failure)
+        }
       )
   },
 
