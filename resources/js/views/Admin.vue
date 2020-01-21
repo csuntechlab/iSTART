@@ -10,12 +10,19 @@
       <main class="admin__container">
         <h1>Import Participants</h1>
         <p>Upload file to verify and add participant emails to the system.</p>
-        <div v-if="incorrectFileType" class="invalid-feedback ">Please enter an excel file</div>
         <div class="admin__upload">
+          <i class="admin__file-icon fas fa-file-excel"></i>
           <label class="admin__upload-label" for="file">File</label>
           <input id="file" class="admin__upload-file" type="file" ref="file" @change="handleFileChange">
+          <span v-if="incorrectFileType" class="admin__upload-description--invalid">*Please upload an excel file</span>
+          <span v-else-if="!incorrectFileType && !initialFileUpload" class="admin__upload-description">{{ fileName }}</span>
+          <span v-else class="admin__upload-description">Upload an excel file</span>
         </div>
-        <button v-if="!incorrectFileType" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
+        <p>
+          <b>Accepted File Formats</b>
+          .xls & .xlsx
+        </p>
+        <button v-if="!incorrectFileType && !initialFileUpload" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
         <div>
           <Participants v-if="participantsWereSubmitted===null"/>
           <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>
@@ -43,6 +50,8 @@ export default {
   data () {
     return {
       participants: [],
+      fileName: null,
+      initialFileUpload: true,
       incorrectFileType: false
     }
   },
@@ -81,7 +90,9 @@ export default {
         try {
           var workBook = XLSX.read(binaryString, { type: 'binary' })
           this.incorrectFileType = false
-          var fileName = this.$refs.file.files[0].name
+          this.initialFileUpload = false
+          this.fileName = this.$refs.file.files[0].name
+          var fileName = this.fileName
 
           if (this.checkFileType(fileName)) {
             var worksheetName = workBook.SheetNames[0]
@@ -93,6 +104,7 @@ export default {
           }
         } catch (err) {
           this.incorrectFileType = true
+          this.initialFileUpload = false
         }
       }
       reader.readAsBinaryString(file)
