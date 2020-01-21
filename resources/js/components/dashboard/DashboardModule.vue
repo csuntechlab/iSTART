@@ -102,7 +102,15 @@ export default {
     if (this.isInitialDataLoad && !this.isDemoModeEnabled) {
       let daysToRelease = document.head.querySelector('meta[name="days-to-release"]').content
       this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group, daysToRelease: daysToRelease, currentModule: this.getCurrentModule })
-    } else if (this.isDemoModeEnabled) {
+    }
+
+    if (this.isDemoModeEnabled) {
+      this.markAllModulesAsReview()
+    }
+  },
+
+  updated () {
+    if (this.isDemoModeEnabled) {
       this.markAllModulesAsReview()
     }
   },

@@ -2,6 +2,11 @@ import moment from 'moment'
 import { parseDate } from './../../../mixins/parseDate'
 
 export default {
+  // Enable Demo Mode
+  SET_DEMO_MODE (state) {
+    state.demoMode = true
+  },
+
   // Module Functionality
   SET_MODULE_DATA (state, payload) {
     state.moduleData = payload

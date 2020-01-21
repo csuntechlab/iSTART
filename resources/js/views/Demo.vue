@@ -25,10 +25,6 @@ export default {
     this.setDemoMode()
   },
 
-  updated () {
-    this.setDemoMode()
-  },
-
   methods: {
     ...mapActions(
       [
