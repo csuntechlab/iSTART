@@ -24,5 +24,9 @@ export default {
   PARTICIPANTS_WERE_SUBMITTED (state, payload) {
     state.categorizedParticipants = {}
     state.participantsWereSubmitted = payload
+  },
+
+  SET_DEMO_MODE (state) {
+    state.demoMode = true
   }
 }

@@ -7,6 +7,8 @@ import About from './views/About.vue'
 import Resources from './views/Resources.vue'
 import Contact from './views/Contact.vue'
 import Admin from './views/Admin.vue'
+import Demo from './views/Demo.vue'
+
 export default [
   {
     path: '*'
@@ -64,5 +66,12 @@ export default [
     component: Admin,
     // meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
     meta: { title: 'iSTART | Admin' }
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: Demo,
+    // meta: { title: 'iSTART | Demo', requiresAuth: true, adminAuth: true }
+    meta: { title: 'iSTART | Demo' }
   }
 ]

@@ -57,5 +57,9 @@ export default {
         commit('PARTICIPANTS_WERE_SUBMITTED', false)
       }
     )
+  },
+
+  setDemoMode ({ commit }) {
+    commit('SET_DEMO_MODE')
   }
 }

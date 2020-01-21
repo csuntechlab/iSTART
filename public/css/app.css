@@ -18840,9 +18840,10 @@ a:hover {
 }
 
 .admin__link {
-  display: block;
+  display: inline-block;
   color: white;
-  padding: 0 .15rem;
+  padding: 0 0.15rem;
+  margin-left: 0.5rem;
   height: 1.5rem;
 }
 

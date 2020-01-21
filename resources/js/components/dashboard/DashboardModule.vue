@@ -2,7 +2,7 @@
   <section class="dashboard-module-wrap container">
     <loading v-if="isInitialDataLoad"/>
     <div class="dashboard-module text-center col-12" v-for="(item, index) in getModuleData" :key="index">
-      <div v-if="item.show" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
+      <div v-if="item.show || isDemoModeEnabled" @click="setModuleIndex(index); populateModule(index); resetScreenPosition()">
         <div class="row">
           <div class="dashboard-module__overview-wrapper col-12 col-md-6">
             <div class="dashboard-module__overview row">
@@ -87,6 +87,7 @@ export default {
     ...mapGetters(
       [
         'user',
+        'isDemoModeEnabled',
         'getModuleData',
         'getCurrentModule',
         'isInitialDataLoad'
@@ -98,9 +99,11 @@ export default {
     this.setModuleData(moduleData)
     this.resetScreenPosition()
 
-    if (this.isInitialDataLoad) {
+    if (this.isInitialDataLoad && !this.isDemoModeEnabled) {
       let daysToRelease = document.head.querySelector('meta[name="days-to-release"]').content
       this.requestModuleProgress({ userId: this.user.user_id, userGroup: this.user.user_group, daysToRelease: daysToRelease, currentModule: this.getCurrentModule })
+    } else if (this.isDemoModeEnabled) {
+      this.markAllModulesAsReview()
     }
   },
 
@@ -110,7 +113,8 @@ export default {
         'setModuleData',
         'setCurrentModule',
         'setModuleIndex',
-        'requestModuleProgress'
+        'requestModuleProgress',
+        'markAllModulesAsReview'
       ]
     ),
 

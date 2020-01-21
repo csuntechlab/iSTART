@@ -172,6 +172,16 @@ export default {
     state.moduleData[index].progress.is_review = true
   },
 
+  // Mark ALL modules into Review mode (Demo Mode)
+  MARK_ALL_MODULES_AS_REVIEW (state) {
+    let moduleDataLength = Object.keys(state.moduleData).length
+
+    for (let i = 0; i < moduleDataLength; i += 1) {
+      let moduleDataItem = state.moduleData[i]
+      moduleDataItem.progress.is_review = true
+    }
+  },
+
   // Wellness Goal
   INITIATE_WELLNESS_GOAL_LOAD (state) {
     state.isWellnessGoalLoading = true

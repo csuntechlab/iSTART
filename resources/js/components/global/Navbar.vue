@@ -9,7 +9,12 @@
   </div>
   <ul id="dropdown" class="navbar__item-wrapper" :class="isNavOpen ? 'navbar__item-wrapper--active' : ''">
     <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/" class="navbar__link">
+      <router-link v-show="!isAdminUser && !isDemoModeEnabled" to="/" class="navbar__link">
+        Dashboard
+      </router-link>
+    </li>
+    <li class="navbar__item">
+      <router-link v-show="!isAdminUser && isDemoModeEnabled" to="/demo" class="navbar__link">
         Dashboard
       </router-link>
     </li>
@@ -52,11 +57,14 @@ export default {
       module_title: 'Alcohol'
     }
   },
+
   computed: {
     ...mapGetters([
-      'isAdminUser'
+      'isAdminUser',
+      'isDemoModeEnabled'
     ])
   },
+
   methods: {
     toggleNavigation () {
       if (this.isNavOpen === false) {

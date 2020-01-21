@@ -2,10 +2,15 @@
   <div class="admin container">
     <div class="admin-wrap">
       <nav class="admin__nav">
-      <img class="admin__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
-      <router-link to="/logout" class="admin__link">
-        Logout
-      </router-link>
+        <img class="admin__logo" src="images/logos/logo_white.svg" alt="iStart Logo"/>
+        <div>
+          <router-link to="/demo" class="admin__link">
+            Demo Mode
+          </router-link>
+          <router-link to="/logout" class="admin__link">
+            Logout
+          </router-link>
+        </div>
       </nav>
       <main class="admin__container">
         <h1>Import Participants</h1>

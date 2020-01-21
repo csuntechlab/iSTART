@@ -54,6 +54,10 @@ export default {
         })
   },
 
+  markAllModulesAsReview ({ commit }) {
+    commit('MARK_ALL_MODULES_AS_REVIEW')
+  },
+
   setModuleIndex ({ commit }, payload) {
     commit('SET_MODULE_INDEX', payload)
   },
