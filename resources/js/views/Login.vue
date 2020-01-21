@@ -26,7 +26,7 @@
                     required>
                   </div>
                   <div v-if="submitted && !userInfoForm.username" class="invalid-feedback">Please enter your credentials</div>
-                  <div v-else-if="submitted && wasLoginAFailure" class="invalid-feedback fatal">Error contacting service provider, please try again later. If the problem persist contact the iStart admin.</div>
+                  <div v-else-if="submitted && wasLoginAFailure" class="invalid-feedback fatal">Error contacting service provider, please try again later. If the problem persists contact the iStart admin.</div>
                   <div class="form-group">
                     <label for="password" class="loginForm__label">Password</label>
                     <input v-model="userInfoForm.password" type="password" class="form-control" placeholder="Password"  :disabled="loginIsLoading ? true: false" required>
