@@ -6,6 +6,10 @@ import store from './store/index.js'
 import { Pie } from 'vue-chartjs'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 
+// Require Bootstrap Package
+require('bootstrap')
+
+// Add Bootstrap JS
 require('./bootstrap')
 
 Vue.use(Pie)

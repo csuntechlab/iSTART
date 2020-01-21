@@ -4,7 +4,6 @@
     display: flex;
     flex-flow: column;
     position: relative;
-    height: 100%;
     padding: 0;
 
     @include media-breakpoint-down(sm) {
