@@ -2482,11 +2482,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_mixins_idleTimeout__WEBPACK_IMPORTED_MODULE_6__["idleTimeout"]],
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapGetters"])(['isContinueButtonEnabled', 'isBackButtonEnabled', 'isSlideContentVisible', 'currentSlideData', 'currentSlideNumber', 'getModuleData', 'getCurrentModule', 'getCurrentModuleData', 'latestSlideNumber', 'totalSlides', 'user']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapState"])(['JSONSlideData']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapGetters"])(['isDemoModeEnabled', 'isContinueButtonEnabled', 'isBackButtonEnabled', 'isSlideContentVisible', 'currentSlideData', 'currentSlideNumber', 'getModuleData', 'getCurrentModule', 'getCurrentModuleData', 'latestSlideNumber', 'totalSlides', 'user']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_5__["mapState"])(['JSONSlideData']), {
     checkForEnd: function checkForEnd() {
       if (this.currentSlideNumber === this.totalSlides - 1) {
         var currentModule = this.getCurrentModule.toLowerCase();
@@ -2585,6 +2591,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
     returnToDashboard: function returnToDashboard() {
       this.$router.push({
         name: 'Dashboard'
+      });
+    },
+    returnToDemoDashboard: function returnToDemoDashboard() {
+      this.$router.push({
+        name: 'Demo'
       });
     },
     showTooltip: function showTooltip() {
@@ -27725,7 +27736,7 @@ var render = function() {
         )
       : _vm._e(),
     _vm._v(" "),
-    _vm.checkForEnd
+    _vm.checkForEnd && !_vm.isDemoModeEnabled
       ? _c(
           "div",
           {
@@ -27738,6 +27749,24 @@ var render = function() {
               {
                 staticClass: "module-footer__button button button-primary",
                 on: { click: _vm.returnToDashboard }
+              },
+              [_vm._v("\n      Return to Dashboard\n    ")]
+            )
+          ]
+        )
+      : _vm.checkForEnd && _vm.isDemoModeEnabled
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "module-footer__item-right module-footer__item module-footer__item-return"
+          },
+          [
+            _c(
+              "button",
+              {
+                staticClass: "module-footer__button button button-primary",
+                on: { click: _vm.returnToDemoDashboard }
               },
               [_vm._v("\n      Return to Dashboard\n    ")]
             )

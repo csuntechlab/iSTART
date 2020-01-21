@@ -30,8 +30,14 @@
       </div>
     </div>
     <!-- If end of content -->
-    <div v-if="checkForEnd" class="module-footer__item-right module-footer__item module-footer__item-return">
+    <div v-if="checkForEnd && !isDemoModeEnabled" class="module-footer__item-right module-footer__item module-footer__item-return">
       <button @click="returnToDashboard" class="module-footer__button button button-primary">
+        Return to Dashboard
+      </button>
+    </div>
+    <!-- Check for end & demo mode -->
+    <div v-else-if="checkForEnd && isDemoModeEnabled" class="module-footer__item-right module-footer__item module-footer__item-return">
+      <button @click="returnToDemoDashboard" class="module-footer__button button button-primary">
         Return to Dashboard
       </button>
     </div>
@@ -50,6 +56,7 @@ export default {
   computed: {
     ...mapGetters(
       [
+        'isDemoModeEnabled',
         'isContinueButtonEnabled',
         'isBackButtonEnabled',
         'isSlideContentVisible',
@@ -185,6 +192,10 @@ export default {
 
     returnToDashboard () {
       this.$router.push({ name: 'Dashboard' })
+    },
+
+    returnToDemoDashboard () {
+      this.$router.push({ name: 'Demo' })
     },
 
     showTooltip () {
