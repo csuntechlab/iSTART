@@ -37,7 +37,7 @@
 
               <div v-if="item.progress.due_date && !item.progress.is_review" class="col-6 col-md-10">
                 <p class="dashboard-module__date">
-                  Due: {{ item.progress.due_date }}
+                  Due: {{ dueDate(item.progress.due_date) }}
                 </p>
               </div>
               <div class="dashboard-module__status-wrapper col-4 col-md-12">
@@ -135,6 +135,9 @@ export default {
 
     resetScreenPosition () {
       document.getElementById('app').scrollIntoView()
+    },
+    dueDate (date) {
+      return window.moment(date).format('MM/DD/YYYY')
     }
   }
 }

@@ -4,6 +4,7 @@ namespace App\Services;
 use App\Models\ModuleProgress;
 use App\Contracts\ModuleProgressContract;
 use App\Jobs\SendNewModuleEmail;
+use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Jobs\SendReminderModuleEmail;
@@ -20,13 +21,17 @@ class ModuleProgressService implements ModuleProgressContract
             'current_module' => '',
             'current_page' => 0,
             'max_page' => 0,
-            'expiration_date' => Carbon::now(config('app.user_timezone'))->addDays(config('app.days_to_expire'))->toDateTimeString(),
+            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
             'completed_at' => null,
             'created_at' => null,
             'updated_at' => null
         ];
         $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->get();
         if (count($moduleProgress) === 0) {
+            $user = User::with('getUserGroup')->find($data['user_id']);
+            if ($user->getUserGroup->user_group === 'comparison') {
+                $response['expiration_date'] = Carbon::now()->addDays(30)->toDateTimeString();
+            }
             return $response;
         }
         return $moduleProgress->toArray();
@@ -38,16 +43,12 @@ class ModuleProgressService implements ModuleProgressContract
         ->find($data['user_id']);
 
         if ($moduleProgress === null) {
-            $expirationDate = Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString();
-            if ($data['current_module'] === 'comparison') {
-                $expirationDate = Carbon::now()->addDays(30)->toDateTimeString();
-            }
             ModuleProgress::create([
                 'user_id' => $data['user_id'],
                 'current_module' => $data['current_module'],
                 'current_page' => $data['current_page'],
                 'max_page' => $data['max_page'],
-                'expiration_date' => $expirationDate,
+                'expiration_date' => $data['expiration_date'],
             ]);
             return 'true';
         } else {

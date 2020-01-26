@@ -149,13 +149,15 @@ export default {
       let currentSlideNumber = this.currentSlideNumber
       let latestSlideNumber = this.latestSlideNumber
       let maxPage = this.totalSlides
+      let expirationDate = this.getCurrentModuleData.progress.due_date
 
       if ((currentSlideNumber === latestSlideNumber) && !this.checkForReviewMode()) {
         let payload = {
           userId: userId,
           moduleName: moduleName,
           currentPage: (latestSlideNumber + 1),
-          maxPage: (maxPage - 1)
+          maxPage: (maxPage - 1),
+          expirationDate: expirationDate
         }
         this.setModuleProgress(payload)
       }
