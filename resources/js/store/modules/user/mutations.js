@@ -25,6 +25,14 @@ export default {
     state.categorizedParticipants = payload
   },
 
+  SHOW_PARTICIPANTS_LIST (state) {
+    state.isParticipantsListShown = true
+  },
+
+  HIDE_PARTICIPANTS_LIST (state) {
+    state.isParticipantsListShown = false
+  },
+
   PARTICIPANTS_WERE_SUBMITTED (state, payload) {
     state.categorizedParticipants = {}
     state.participantsWereSubmitted = payload
