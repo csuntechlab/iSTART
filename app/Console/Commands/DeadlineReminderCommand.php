@@ -55,7 +55,8 @@ class DeadlineReminderCommand extends Command
                     if (count($user->moduleProgress)) {
                         foreach ($user->moduleProgress as $currentModule) {
                             // we want to check today's date vs the expiration date of the module.
-                            $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
+                            $convertedTime = Carbon::parse($currentModule->expiration_date)->setTimezone(config('app.user_timezone'));
+                            $dayCheck = Carbon::now(config('app.user_timezone'))->diffInDays($convertedTime);
                             if ($dayCheck === 0) {
                                 $user->participant()->delete();
                                 Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));

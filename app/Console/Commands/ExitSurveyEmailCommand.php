@@ -52,11 +52,12 @@ class ExitSurveyEmailCommand extends Command
             ->whereHas('getUserGroup')
             ->whereHas('participant')
             ->get();
-        $today = Carbon::now();
+        $today = Carbon::now(config('app.user_timezone'));
         if (count($users)) {
             foreach($users as $user) {
                 if (!is_null($user->participant)) {
-                    $difference = $today->diffInDays($user->participant->created_at);
+                    $convertedTime = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
+                    $difference = $today->diffInDays($convertedTime);
                     if ($difference === 30) {
                         if ($user->getUserGroup->user_group === 'control') {
                             $this->sendEmail($user);

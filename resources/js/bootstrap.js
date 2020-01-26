@@ -24,6 +24,14 @@ if (token) {
 }
 
 /**
+ * We'll also attach a the Moment JS Timezone package to moment
+ * We will also set the default timezone to PST
+ */
+
+window.moment = require('moment-timezone')
+window.moment.tz.setDefault('America/Los_Angeles')
+
+/**
  * Add the app url to the javascript side of things
  */
 

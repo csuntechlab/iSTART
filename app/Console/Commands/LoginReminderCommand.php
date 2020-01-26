@@ -47,7 +47,9 @@ class LoginReminderCommand extends Command
         if (!empty($users)) {
             foreach ($users as $user) {
                 if (!is_null($user->participant)) {
-                    $dayCheck = (Carbon::now()->diffInDays($user->participant->created_at));
+                    $today = Carbon::now(config('app.user_timezone'));
+                    $then = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
+                    $dayCheck = $today->diffInDays($then);
                     if ($dayCheck === 3 || $dayCheck === 5) {
                         // send out the email.
                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));

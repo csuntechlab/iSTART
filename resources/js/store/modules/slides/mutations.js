@@ -1,5 +1,3 @@
-import moment from 'moment'
-import { parseDate } from './../../../mixins/parseDate'
 
 export default {
   // Enable Demo Mode
@@ -30,7 +28,7 @@ export default {
         let dueDate = payload.data.expiration_date
 
         state.moduleData[i].show = true
-        state.moduleData[i].progress.due_date = parseDate.parseDate(dueDate)
+        state.moduleData[i].progress.due_date = dueDate
         break
       } else if (userGroup === moduleDataGroup) {
         let currentCompletedModule = payload.data[0]
@@ -46,14 +44,14 @@ export default {
         let isSlideNumberEqual = (currentCompletedModuleSlideNumber === currentCompletedModuleSlideTotal)
 
         // Date Conditionals
-        let currentDate = moment().format('YYYY-MM-DD')
+        let currentDate = window.moment().format('YYYY-MM-DD')
         let daysToRelease = payload.conditions.days_to_release
 
         if (isModuleNameMatching && isSlideNumberEqual && isSlideNumberZero) {
           let previousModuleCompletion = payload.data[1].completed_at.split(' ')[0]
-          let releaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
-          let formattedReleaseDate = moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
-          let isModuleReleased = moment(currentDate).isSameOrAfter(releaseDate)
+          let releaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
+          let formattedReleaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
+          let isModuleReleased = window.moment(currentDate).isSameOrAfter(releaseDate)
 
           // If module has not been started
           if (isModuleReleased) {
@@ -62,12 +60,10 @@ export default {
             moduleDataItem.progress.current_slide = 0
             moduleDataItem.progress.latest_slide = 0
             moduleDataItem.progress.slide_percentage = 0
-            moduleDataItem.progress.due_date = parseDate.parseDate(expirationDate)
+            moduleDataItem.progress.due_date = expirationDate
           } else {
             state.nextModuleDate = formattedReleaseDate
           }
-
-          break
         } else if (isModuleNameMatching && isSlideNumberEqual && !isSlideNumberZero) {
           // If module is complete
           moduleDataItem.show = true
@@ -75,8 +71,6 @@ export default {
           moduleDataItem.progress.current_slide = 0
           moduleDataItem.progress.latest_slide = 0
           moduleDataItem.progress.slide_percentage = 100
-
-          break
         } else if (isModuleNameMatching && !isSlideNumberZero) {
           // Set Progress for current Module
           moduleDataItem.show = true
@@ -84,8 +78,7 @@ export default {
           moduleDataItem.progress.current_slide = currentCompletedModuleSlideNumber
           moduleDataItem.progress.latest_slide = currentCompletedModuleSlideNumber
           moduleDataItem.progress.slide_percentage = ((currentCompletedModuleSlideNumber / currentCompletedModuleSlideTotal) * 100).toFixed(2)
-
-          break
+          moduleDataItem.progress.due_date = expirationDate
         } else {
           // Mark module as completed if already completed previously
           moduleDataItem.show = true
