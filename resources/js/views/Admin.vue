@@ -12,27 +12,27 @@
           </router-link>
         </div>
       </nav>
-      <main class="admin__container">
-        <h1>Import Participants</h1>
-        <p>Upload file to verify and add participant emails to the system.</p>
-        <div class="admin__upload">
-          <i class="admin__file-icon fas fa-file-excel"></i>
-          <label class="admin__upload-label" for="file">File</label>
-          <input id="file" class="admin__upload-file" type="file" ref="file" @change="handleFileChange">
-          <span v-if="incorrectFileType" class="admin__upload-description--invalid">*Please upload an excel file</span>
-          <span v-else-if="!incorrectFileType && !initialFileUpload" class="admin__upload-description">{{ fileName }}</span>
-          <span v-else class="admin__upload-description">Upload an excel file</span>
-        </div>
-        <p>
-          <b>Accepted File Formats</b>
-          .xls & .xlsx
-        </p>
-        <button v-if="!incorrectFileType && !initialFileUpload" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
-        <div>
-          <Participants v-if="participantsWereSubmitted===null"/>
-          <h2 v-if="participantsWereSubmitted==true">Participants were submitted!</h2>
-          <h2 v-if="participantsWereSubmitted==false"> Participants were not submitted</h2>
-        </div>
+      <main>
+        <section v-if="!isParticipantsListShown" class="admin__container">
+          <h1>Import Participants</h1>
+          <p>Upload file to verify and add participant emails to the system.</p>
+          <div class="admin__upload">
+            <i class="admin__file-icon fas fa-file-excel"></i>
+            <label class="admin__upload-label" for="file">File</label>
+            <input id="file" class="admin__upload-file" type="file" ref="file" @change="handleFileChange">
+            <span v-if="incorrectFileType" class="admin__upload-description--invalid">*Please upload an excel file</span>
+            <span v-else-if="!incorrectFileType && !initialFileUpload" class="admin__upload-description">{{ fileName }}</span>
+            <span v-else class="admin__upload-description">Upload an excel file</span>
+          </div>
+          <p>
+            <b>Accepted File Formats</b>
+            .xls & .xlsx
+          </p>
+          <button v-if="!incorrectFileType && !initialFileUpload" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
+        </section>
+        <section v-if="isParticipantsListShown">
+          <participants/>
+        </section>
       </main>
     </div>
   </div>
@@ -67,7 +67,7 @@ export default {
 
   computed: {
     ...mapGetters([
-      'participantsWereSubmitted'
+      'isParticipantsListShown'
     ])
   },
 

@@ -45,10 +45,17 @@ export default {
         response => {
           const categorizedPartipants = response.data
           commit('SET_CATEGORIZED_PARTICIPANTS', categorizedPartipants)
+          commit('SHOW_PARTICIPANTS_LIST')
         }
       ).catch(
-        failure => console.error(failure)
+        error => {
+          console.error(error)
+        }
       )
+  },
+
+  hideParticipantList ({ commit }) {
+    commit('HIDE_PARTICIPANTS_LIST')
   },
 
   async submitGoodParticipants ({ commit }, payload) {

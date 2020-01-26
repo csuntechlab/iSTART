@@ -5,5 +5,6 @@ export default {
   loginIsLoading: false,
   loginFailed: false,
   categorizedParticipants: {},
+  isParticipantsListShown: false,
   participantsWereSubmitted: null
 }
