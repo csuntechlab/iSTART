@@ -28,7 +28,7 @@ class ParticipantService implements ParticipantContract
         $participants = Participant::all();
 
         foreach ($goodParticipantsMembers as $key => $goodParticipantsMember) {
-            if ($participants->where('user_id', $goodParticipantsMember['email'])->first()) {
+            if ($participants->where('user_id', $goodParticipantsMember['user_id'])->first()) {
                 unset($goodParticipantsMembers[$key]);
             } else {
                 Mail::to($goodParticipantsMember['email'])->send(new WelcomeEmail());
