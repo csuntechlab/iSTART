@@ -25,11 +25,16 @@ class ParticipantService implements ParticipantContract
     public function addGoodParticipantsToParticipantsTable($goodParticipants){
 
         $goodParticipantsMembers = $goodParticipants['goodParticipants'];
+        $participants = Participant::all();
 
-        foreach ($goodParticipantsMembers as $goodParticipantsMember){
-            Mail::to($goodParticipantsMember['email'])->send(new WelcomeEmail());
-            Arr::forget($goodParticipantsMember,'email');
-            $ParticipantsEmailRemoved[] = $goodParticipantsMember;
+        foreach ($goodParticipantsMembers as $key => $goodParticipantsMember) {
+            if ($participants->where('user_id', $goodParticipantsMember['user_id'])->first()) {
+                unset($goodParticipantsMembers[$key]);
+            } else {
+                Mail::to($goodParticipantsMember['email'])->send(new WelcomeEmail());
+                Arr::forget($goodParticipantsMember,'email');
+                $ParticipantsEmailRemoved[] = $goodParticipantsMember;
+            }
         }
 
         Participant::insert($ParticipantsEmailRemoved);
