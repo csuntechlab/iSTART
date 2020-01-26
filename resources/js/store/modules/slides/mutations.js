@@ -64,8 +64,6 @@ export default {
           } else {
             state.nextModuleDate = formattedReleaseDate
           }
-
-          break
         } else if (isModuleNameMatching && isSlideNumberEqual && !isSlideNumberZero) {
           // If module is complete
           moduleDataItem.show = true
@@ -73,8 +71,6 @@ export default {
           moduleDataItem.progress.current_slide = 0
           moduleDataItem.progress.latest_slide = 0
           moduleDataItem.progress.slide_percentage = 100
-
-          break
         } else if (isModuleNameMatching && !isSlideNumberZero) {
           // Set Progress for current Module
           moduleDataItem.show = true
@@ -82,8 +78,7 @@ export default {
           moduleDataItem.progress.current_slide = currentCompletedModuleSlideNumber
           moduleDataItem.progress.latest_slide = currentCompletedModuleSlideNumber
           moduleDataItem.progress.slide_percentage = ((currentCompletedModuleSlideNumber / currentCompletedModuleSlideTotal) * 100).toFixed(2)
-
-          break
+          moduleDataItem.progress.due_date = expirationDate
         } else {
           // Mark module as completed if already completed previously
           moduleDataItem.show = true
