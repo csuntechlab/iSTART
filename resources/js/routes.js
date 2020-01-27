@@ -23,55 +23,48 @@ export default [
     path: '/logout',
     name: 'Logout',
     component: Logout,
-    meta: { title: 'iSTART | Logout', requiresAuth: true, userAuth: true, adminAuth: true }
+    meta: { title: 'iSTART', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/',
     name: 'Dashboard',
     component: Dashboard,
-    // meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Dashboard' }
+    meta: { title: 'iSTART | Dashboard', requiresAuth: true, userAuth: true }
   },
   {
     path: '/module',
     name: 'Module',
     component: Module,
-    // meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Modules' }
+    meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/about',
     name: 'About',
     component: About,
-    // meta: { title: 'iSTART | About', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | About' }
+    meta: { title: 'iSTART | About', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/resources',
     name: 'Resources',
     component: Resources,
-    // meta: { title: 'iSTART | Resources', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Resources' }
+    meta: { title: 'iSTART | Resources', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/contact',
     name: 'Contact Us',
     component: Contact,
-    // meta: { title: 'iSTART | Contact Us', requiresAuth: true, userAuth: true }
-    meta: { title: 'iSTART | Contact Us' }
+    meta: { title: 'iSTART | Contact Us', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/admin',
     name: 'Admin',
     component: Admin,
-    // meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
-    meta: { title: 'iSTART | Admin' }
+    meta: { title: 'iSTART | Admin', requiresAuth: true, adminAuth: true }
   },
   {
     path: '/demo',
     name: 'Demo',
     component: Demo,
-    // meta: { title: 'iSTART | Demo', requiresAuth: true, adminAuth: true }
-    meta: { title: 'iSTART | Demo' }
+    meta: { title: 'iSTART | Demo', requiresAuth: true, adminAuth: true }
   }
 ]
