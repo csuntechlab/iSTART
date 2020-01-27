@@ -35,25 +35,25 @@ export default [
     path: '/module',
     name: 'Module',
     component: Module,
-    meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Modules', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/about',
     name: 'About',
     component: About,
-    meta: { title: 'iSTART | About', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | About', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/resources',
     name: 'Resources',
     component: Resources,
-    meta: { title: 'iSTART | Resources', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Resources', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/contact',
     name: 'Contact Us',
     component: Contact,
-    meta: { title: 'iSTART | Contact Us', requiresAuth: true, userAuth: true }
+    meta: { title: 'iSTART | Contact Us', requiresAuth: true, userAuth: true, adminAuth: true }
   },
   {
     path: '/admin',
