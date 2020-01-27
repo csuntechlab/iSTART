@@ -8,28 +8,28 @@
     <span class="navbar__location"> {{ displayCurrentPage }} </span>
   </div>
   <ul id="dropdown" class="navbar__item-wrapper" :class="isNavOpen ? 'navbar__item-wrapper--active' : ''">
-    <li class="navbar__item">
-      <router-link v-show="!isAdminUser && !isDemoModeEnabled" to="/" class="navbar__link">
+    <li v-show="!isAdminUser && !isDemoModeEnabled" class="navbar__item">
+      <router-link to="/" class="navbar__link">
         Dashboard
       </router-link>
     </li>
-    <li class="navbar__item">
-      <router-link v-show="!isAdminUser && isDemoModeEnabled" to="/demo" class="navbar__link">
+    <li v-show="!isAdminUser && isDemoModeEnabled" class="navbar__item">
+      <router-link to="/demo" class="navbar__link">
         Dashboard
       </router-link>
     </li>
-    <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/about" class="navbar__link">
+    <li v-show="!isAdminUser" class="navbar__item">
+      <router-link to="/about" class="navbar__link">
         About
       </router-link>
     </li>
-    <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/resources" class="navbar__link">
+    <li v-show="!isAdminUser" class="navbar__item">
+      <router-link to="/resources" class="navbar__link">
         Resources
       </router-link>
     </li>
-    <li class="navbar__item">
-      <router-link v-show="!isAdminUser" to="/contact" class="navbar__link">
+    <li v-show="!isAdminUser" class="navbar__item">
+      <router-link to="/contact" class="navbar__link">
         Contact Us
       </router-link>
     </li>
