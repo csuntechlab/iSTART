@@ -1,4 +1,11 @@
 const mix = require('laravel-mix')
+
+mix.options({
+  processCssUrls: false,
+  uglify: {
+    parallel: true
+  }
+})
 // const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 // mix.webpackConfig({
