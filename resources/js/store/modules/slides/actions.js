@@ -1,6 +1,11 @@
 import SlidesAPI from './../../../api/slides'
 
 export default {
+  // Enable Demo Mode
+  setDemoMode ({ commit }) {
+    commit('SET_DEMO_MODE')
+  },
+
   // Module Functionality
   setModuleData ({ commit }, payload) {
     commit('SET_MODULE_DATA', payload)
@@ -52,6 +57,10 @@ export default {
         error => {
           console.error(error)
         })
+  },
+
+  markAllModulesAsReview ({ commit }) {
+    commit('MARK_ALL_MODULES_AS_REVIEW')
   },
 
   setModuleIndex ({ commit }, payload) {

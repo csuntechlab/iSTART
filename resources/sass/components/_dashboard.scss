@@ -4,11 +4,9 @@
     display: flex;
     flex-flow: column;
     position: relative;
-    height: 100%;
     padding: 0;
 
     @include media-breakpoint-down(sm) {
-        height: calc(100% - 3.6rem);
         max-width: 100%;
         margin-top: 3.6rem;
     }
@@ -74,6 +72,8 @@
         }
 
         &-wrap {
+            display: flex;
+            flex-flow: column-reverse;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }

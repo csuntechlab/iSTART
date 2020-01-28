@@ -18,7 +18,8 @@ export default {
       user_id: payload.userId,
       current_module: payload.moduleName,
       current_page: payload.currentPage,
-      max_page: payload.maxPage
+      max_page: payload.maxPage,
+      expiration_date: payload.expirationDate
     })
 
     return api

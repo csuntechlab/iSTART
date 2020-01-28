@@ -56,48 +56,29 @@ class UserGroupService implements UserGroupContract
             $controlCountFromData = $groups->where('user_group', 'control')->first();
             $interventionCountFromData = $groups->where('user_group', 'intervention')->first();
 
-
-            if ( $comparisonCountFromData != NULL){
+            if ($comparisonCountFromData != NULL) {
                 $comparison_Count = $comparisonCountFromData->count;
-
             }
+
             if ($controlCountFromData != NULL) {
                 $control_Count = $controlCountFromData->count;
             }
 
             if ($interventionCountFromData != NULL) {
                 $intervention_Count = $interventionCountFromData->count;
-
             }
 
-            if ($control_Count == 0){
-
-                $userInUserGroup->user_group = 'control';
+            if ($control_Count == $comparison_Count && $comparison_Count == $intervention_Count) {
+                $randomNumber = rand(0, 2);
+                $userInUserGroup->user_group = $groups[$randomNumber]->user_group;
                 $userInUserGroup->save();
-
-            }elseif($comparison_Count == 0){
-
+            } else if ($comparison_Count <= $control_Count and $comparison_Count<= $intervention_Count) {
                 $userInUserGroup->user_group = 'comparison';
                 $userInUserGroup->save();
-
-
-            }elseif ($intervention_Count == 0){
-
-                $userInUserGroup->user_group = 'intervention';
-                $userInUserGroup->save();
-
-            }elseif ( $comparison_Count <= $control_Count and $comparison_Count<= $intervention_Count){
-
-                $userInUserGroup->user_group = 'comparison';
-                $userInUserGroup->save();
-
-            } elseif ($control_Count < $comparison_Count and $control_Count< $intervention_Count) {
-
+            } else if ($control_Count < $comparison_Count and $control_Count< $intervention_Count) {
                 $userInUserGroup->user_group = 'control';
                 $userInUserGroup->save();
-
-            } else{
-
+            } else {
                 $userInUserGroup->user_group = 'intervention';
                 $userInUserGroup->save();
             }

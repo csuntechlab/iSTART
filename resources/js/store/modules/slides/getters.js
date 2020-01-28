@@ -15,5 +15,7 @@ export default {
   totalSlides: state => Object.keys(state.JSONSlideData).length,
 
   wasWellnessGoalEmailSubmitted: state => state.wasWellnessGoalEmailSubmitted,
-  isWellnessGoalLoading: state => state.isWellnessGoalLoading
+  isWellnessGoalLoading: state => state.isWellnessGoalLoading,
+
+  isDemoModeEnabled: state => state.demoMode
 }

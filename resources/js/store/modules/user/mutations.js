@@ -17,8 +17,20 @@ export default {
     state.loginIsLoading = payload
   },
 
+  LOGIN_FAILED (state) {
+    state.loginFailed = true
+  },
+
   SET_CATEGORIZED_PARTICIPANTS (state, payload) {
     state.categorizedParticipants = payload
+  },
+
+  SHOW_PARTICIPANTS_LIST (state) {
+    state.isParticipantsListShown = true
+  },
+
+  HIDE_PARTICIPANTS_LIST (state) {
+    state.isParticipantsListShown = false
   },
 
   PARTICIPANTS_WERE_SUBMITTED (state, payload) {

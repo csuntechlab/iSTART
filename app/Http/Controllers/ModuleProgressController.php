@@ -51,7 +51,8 @@ class ModuleProgressController extends Controller
             'user_id' => $request->user_id,
             'current_module' => $request->current_module,
             'current_page' => $request->current_page,
-            'max_page' => $request->max_page
+            'max_page' => $request->max_page,
+            'expiration_date' => $request->expiration_date,
         ];
 
         return $this->moduleProgressUtility->setModuleProgress($data);

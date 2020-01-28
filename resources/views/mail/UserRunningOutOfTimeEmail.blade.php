@@ -6,6 +6,6 @@
         You are almost out of time!
     </p>
     <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;">
-        Please log-in to iSTART web app and finish the {{ ucfirst($userRunningOutOfTimeEmail->current_module) }} module as soon as possible to not be removed from the study.
+        Please log-in to iSTART web app and finish the {{ ucwords($userRunningOutOfTimeEmail->current_module) }} module as soon as possible to not be removed from the study.
     </p>
 @endsection

@@ -759,8 +759,8 @@ export const illicitDrugsModuleSlides = {
     content: {
       0: {
         paragraph: {
-          0: 'Thank you for having completed all of the module in this web-app. Now we will ask you to complete a short Exit survey (in SurveyMonkey) in order to receive your $25 Amazon.com gift card.',
-          1: 'To do this instantly, you can access it here: REPLACE-WITH-LINK-TO-SURVEY-MONKEY (it will also be sent to your email).',
+          0: 'Thank you for having completed all of the modules in this web-app. Now we will ask you to complete a short Exit survey (in SurveyMonkey) in order to receive your $25 Amazon.com gift card.',
+          1: 'To do this instantly, you can access it here: <a href="https://www.surveymonkey.com/r/Exit_Survey_Participants" target="_blank">SurveyMonkey</a> (it will also be sent to your email).',
           2: 'Within a few days of completing the exit survey, you will receive your gift card via email.'
         }
       }

@@ -104,7 +104,8 @@ export default {
       'currentSlideData',
       'currentSlideNumber',
       'isSlideContentVisible',
-      'getCurrentModule'
+      'getCurrentModule',
+      'isDemoModeEnabled'
     ]),
 
     checkWindowWidth () {
@@ -120,7 +121,7 @@ export default {
     document.onkeyup = e => {
       if (
         process.env.NODE_ENV === 'development' ||
-        process.env.NODE_ENV === 'production'
+        this.isDemoModeEnabled === true
       ) {
         // Shift + Tilde = Set slide index
         if (e.shiftKey && e.which === 192) {

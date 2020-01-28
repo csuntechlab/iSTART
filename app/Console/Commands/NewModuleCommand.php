@@ -44,17 +44,20 @@ class NewModuleCommand extends Command
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
             $q->where('current_module', '!=', 'comparison')->orderBy('created_at', 'DESC');
-        }])->whereHas('moduleProgress')->get();
+        }, 'participant'])->whereHas('moduleProgress')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                if (count($user->moduleProgress) > 1) {
-                    $currentModule = $user->moduleProgress->first();
-                    $previousModule = $user->moduleProgress[1];
-                    if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
-                        $dayCheck = Carbon::now()->diffInDays($previousModule->completed_at);
-                        if ($dayCheck == config('app.days_to_release')) {
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
+                if (!is_null($user->participant)) {
+                    if (count($user->moduleProgress)) {
+                        $currentModule = $user->moduleProgress->first();
+                        if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
+                            $today = Carbon::now(config('app.user_timezone'));
+                            $then = Carbon::parse($currentModule->created_at)->setTimezone(config('app.user_timezone'));
+                            $dayCheck = $today->diffInDays($then);
+                            if ($dayCheck == config('app.days_to_release')) {
+                                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
+                            }
                         }
                     }
                 }

@@ -52,23 +52,26 @@ class ExitSurveyEmailCommand extends Command
             ->whereHas('getUserGroup')
             ->whereHas('participant')
             ->get();
-        $today = Carbon::now();
+        $today = Carbon::now(config('app.user_timezone'));
         if (count($users)) {
             foreach($users as $user) {
-                $difference = $today->diffInDays($user->participant->created_at);
-                if ($difference === 30) {
-                    if ($user->getUserGroup->user_group === 'control') {
-                        $this->sendEmail($user);
-                    } else if ($user->getUserGroup->user_group === 'comparison') {
-                        $lastModule = $user->moduleProgress->first();
-                        if (!is_null($lastModule->completed_at)) {
+                if (!is_null($user->participant)) {
+                    $convertedTime = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
+                    $difference = $today->diffInDays($convertedTime);
+                    if ($difference === 30) {
+                        if ($user->getUserGroup->user_group === 'control') {
                             $this->sendEmail($user);
-                        }
-                    } else {
-                        if (count($user->moduleProgress) === 4) {
+                        } else if ($user->getUserGroup->user_group === 'comparison') {
                             $lastModule = $user->moduleProgress->first();
                             if (!is_null($lastModule->completed_at)) {
                                 $this->sendEmail($user);
+                            }
+                        } else {
+                            if (count($user->moduleProgress) === 5) {
+                                $lastModule = $user->moduleProgress->first();
+                                if (!is_null($lastModule->completed_at)) {
+                                    $this->sendEmail($user);
+                                }
                             }
                         }
                     }

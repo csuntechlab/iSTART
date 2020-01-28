@@ -47,29 +47,29 @@ class DeadlineReminderCommand extends Command
             $q->whereNull('completed_at')->orderBy('created_at', 'DESC');
         }, 'getUserGroup' => function ($q) {
             $q->where('user_group', '!=', 'control');
-        }])->whereHas('moduleProgress')->whereHas('getUserGroup')->get();
+        }, 'participant'])->whereHas('moduleProgress')->whereHas('getUserGroup')->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                foreach ($user->moduleProgress as $currentModule) {
-                    // we want to check today's date vs the expiration date of the module.
-                    $dayCheck = Carbon::now()->diffInDays($currentModule->expiration_date);
-                    if ($user->getUserGroup->user_group !== 'comparison') {
-                        if ($dayCheck === 2 || $dayCheck === 1) {
-                            if ($currentModule->current_page !== $currentModule->max_page) {
-                                // send out the email.
-                                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
-                            }
-                        }
-                        if ($dayCheck === 0) {
-                            if ($currentModule->current_page === 0 && $currentModule->max_page === 0) {
+                if (!is_null($user->participant)) {
+                    if (count($user->moduleProgress)) {
+                        foreach ($user->moduleProgress as $currentModule) {
+                            // we want to check today's date vs the expiration date of the module.
+                            $convertedTime = Carbon::parse($currentModule->expiration_date)->setTimezone(config('app.user_timezone'));
+                            $dayCheck = Carbon::now(config('app.user_timezone'))->diffInDays($convertedTime);
+                            if ($dayCheck === 0) {
                                 $user->participant()->delete();
                                 Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
                             }
-                        }
-                    } else {
-                        if ($dayCheck === 10 || $daCheck === 3)  {
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                            if ($user->getUserGroup->user_group !== 'comparison') {
+                                if ($dayCheck === 2 || $dayCheck === 1) {
+                                    Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                                }
+                            } else {
+                                if ($dayCheck === 10 || $dayCheck === 3)  {
+                                    Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                                }
+                            }
                         }
                     }
                 }
