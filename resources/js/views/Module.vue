@@ -46,6 +46,7 @@ import SelfAssessmentResults from './../components/module/templates/SelfAssessme
 import WellnessGoal from './../components/module/templates/WellnessGoal'
 
 export default {
+  name: `${this.getCurrentModule} Module`,
   mixins: [
     changeRouteTitle
   ],
