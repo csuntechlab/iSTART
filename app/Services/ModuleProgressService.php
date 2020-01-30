@@ -29,10 +29,12 @@ class ModuleProgressService implements ModuleProgressContract
         $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->get();
         if (count($moduleProgress) === 0) {
             $user = User::with('getUserGroup')->find($data['user_id']);
-            if ($user->getUserGroup->user_group === 'comparison') {
-                $response['expiration_date'] = Carbon::now()->addDays(30)->toDateTimeString();
+            if ($user->getUserGroup !== null && $user !== null) {
+                if ($user->getUserGroup->user_group === 'comparison') {
+                    $response['expiration_date'] = Carbon::now()->addDays(30)->toDateTimeString();
+                }
+                return $response;
             }
-            return $response;
         }
         return $moduleProgress->toArray();
     }

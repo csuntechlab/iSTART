@@ -10,7 +10,7 @@
         Each module will last about 15 minutes and will be released 5 days after the previous module is completed. You will have 7 days to complete each module in order to continue in the study and receive your gift cards.
         After the 5th and final module, you will receive an EXIT survey via email, and then a 90-day follow-up survey.
     </p>
-    @elseif ($userInUserGrup->user_group === 'comparison')
+    @elseif ($userInUserGroup->user_group === 'comparison')
     <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;">
         You have been randomized into <b>Group 2: Comparison</b>
         You will participate in one substance use prevention module, available immediately.
