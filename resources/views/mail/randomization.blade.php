@@ -3,7 +3,7 @@
 @section('content')
     <h2 style="color: #000000; font-family: sans-serif; font-weight: 400; line-height: 1.4; margin: 0 0 30px;">Hello there,</h2>
     <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;">Thank you for participating in the iSTART substance use prevention study.</p>
-    @if ($userInUserGroup->user_group === 'prevention')
+    @if ($userInUserGroup->user_group === 'intervention')
     <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;">
         You have been randomized into <b>Group 1: Prevention</b>
         You will participate in 5 substance use prevention modules (approximately 1 module per week). You will be able to access the first module immediately.
