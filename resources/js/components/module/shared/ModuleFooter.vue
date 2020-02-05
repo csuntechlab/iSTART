@@ -78,32 +78,17 @@ export default {
     ),
 
     checkForEnd () {
-      if (this.currentSlideNumber === (this.totalSlides - 1)) {
-        let currentModule = this.getCurrentModule.toLowerCase()
-        let moduleData = this.getModuleData
-        let moduleDataLength = Object.keys(moduleData).length
+      let currentSlideData = this.getCurrentSlideData
+      let currentSlideType = currentSlideData.slide_type
 
-        for (let i = 0; i < moduleDataLength; i += 1) {
-          let moduleDataName = moduleData[i].name.toLowerCase()
-          let moduleDataIsReview = moduleData[i].progress.is_review
+      if (currentSlideType === 'finalSlide' && !this.checkForReviewMode()) {
+        let isUserIntervention = (this.user.user_group === 'intervention')
 
-          if ((moduleDataName === currentModule) && !moduleDataIsReview) {
-            let userId = this.user.user_id
-            let nextModule = moduleData[i + 1].name.toLowerCase()
-            let isUserMarkedToComplete = ((this.user.user_group === 'intervention') || (this.user.user_group === 'comparison'))
-
-            if ((i !== moduleDataLength) && isUserMarkedToComplete) {
-              let completePayload = {
-                user_id: userId,
-                current_module: currentModule,
-                next_module: nextModule,
-                index: i
-              }
-              this.completeModule(completePayload)
-            }
-            break
-          }
+        // If user is intervention group, pass info to back-end on completed module
+        if (isUserIntervention) {
+          this.sendModuleCompleted()
         }
+
         return true
       } else {
         return false
@@ -162,6 +147,24 @@ export default {
           expirationDate: expirationDate
         }
         this.setModuleProgress(payload)
+      }
+    },
+
+    sendModuleCompleted () {
+      let moduleData = this.getModuleData
+      let moduleDataLength = Object.keys(moduleData).length
+
+      for (let i = 0; i < moduleDataLength; i += 1) {
+        let userId = this.user.user_id
+        let currentModule = this.getCurrentModule.toLowerCase()
+        let nextModule = moduleData[i + 1].name.toLowerCase()
+        let completePayload = {
+          user_id: userId,
+          current_module: currentModule,
+          next_module: nextModule,
+          index: i
+        }
+        this.completeModule(completePayload)
       }
     },
 
