@@ -90,7 +90,9 @@ export default {
           if ((moduleDataName === currentModule) && !moduleDataIsReview) {
             let userId = this.user.user_id
             let nextModule = moduleData[i + 1].name.toLowerCase()
-            if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
+            let isUserMarkedToComplete = ((this.user.user_group === 'intervention') || (this.user.user_group === 'comparison'))
+
+            if ((i !== moduleDataLength) && isUserMarkedToComplete) {
               let completePayload = {
                 user_id: userId,
                 current_module: currentModule,
