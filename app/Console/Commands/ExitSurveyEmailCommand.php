@@ -51,6 +51,7 @@ class ExitSurveyEmailCommand extends Command
             ])
             ->whereHas('getUserGroup')
             ->whereHas('participant')
+            ->whereHas('moduleProgress')
             ->get();
         $today = Carbon::now(config('app.user_timezone'));
         if (count($users)) {
