@@ -42,7 +42,10 @@ class LoginReminderCommand extends Command
     public function handle()
     {
         // Let's get the users that do not have a Module
-        $users = User::with('participant')->doesntHave('getUserGroup')->get();
+        $users = User::with('participant')
+            ->whereHas('participant')
+            ->doesntHave('getUserGroup')
+            ->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {

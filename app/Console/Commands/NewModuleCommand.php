@@ -44,7 +44,10 @@ class NewModuleCommand extends Command
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
             $q->where('current_module', '!=', 'comparison')->orderBy('created_at', 'DESC');
-        }, 'participant'])->whereHas('moduleProgress')->get();
+        }, 'participant'])
+            ->whereHas('moduleProgress')
+            ->whereHas('participant')
+            ->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
