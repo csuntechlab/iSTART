@@ -78,32 +78,58 @@ export default {
     ),
 
     checkForEnd () {
+      // let's check to see if we're at the end of the slide
       if (this.currentSlideNumber === (this.totalSlides - 1)) {
+        let userId = this.user.user_id
         let currentModule = this.getCurrentModule.toLowerCase()
-        let moduleData = this.getModuleData
-        let moduleDataLength = Object.keys(moduleData).length
-
-        for (let i = 0; i < moduleDataLength; i += 1) {
-          let moduleDataName = moduleData[i].name.toLowerCase()
-          let moduleDataIsReview = moduleData[i].progress.is_review
-
-          if ((moduleDataName === currentModule) && !moduleDataIsReview) {
-            let userId = this.user.user_id
-            let nextModule = moduleData[i + 1].name.toLowerCase()
-            if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
-              let completePayload = {
-                user_id: userId,
-                current_module: currentModule,
-                next_module: nextModule,
-                index: i
-              }
-              this.completeModule(completePayload)
-            }
-            break
+        // let's check to see if we're on comparison
+        if (this.getCurrentModuleData.group === 'comparison') {
+          // let's mark the module as finished
+          let completePayload = {
+            user_id: userId,
+            current_module: currentModule,
+            next_module: null,
+            index: 5
           }
+          this.completeModule(completePayload)
+          return true
+        } else {
+          // we are not in comparison we are in intervention.
+          let moduleData = this.getModuleData
+          // remove the last index since that one is comparison
+          delete moduleData[5]
+          let moduleDataLength = Object.keys(moduleData).length
+          for (let i = 0; i < moduleDataLength; i++) {
+            let moduleDataName = moduleData[i].name.toLowerCase()
+            let moduleDataIsReview = moduleData[i].progress.is_review
+            if ((moduleDataName === currentModule) && !moduleDataIsReview) {
+              if ((i + 1) < moduleDataLength) {
+                let nextModule = moduleData[i + 1].name.toLowerCase()
+                if ((i !== moduleDataLength) && (this.user.user_group === 'intervention')) {
+                  let completePayload = {
+                    user_id: userId,
+                    current_module: currentModule,
+                    next_module: nextModule,
+                    index: i
+                  }
+                  this.completeModule(completePayload)
+                }
+              } else {
+                // we finished the intervention modules
+                let completePayload = {
+                  user_id: userId,
+                  current_module: currentModule,
+                  next_module: null,
+                  index: i
+                }
+                this.completeModule(completePayload)
+              }
+            }
+          }
+          return true
         }
-        return true
       } else {
+        // we are not on the last slide so let's proceed as usual
         return false
       }
     }
@@ -162,7 +188,6 @@ export default {
         this.setModuleProgress(payload)
       }
     },
-
     checkForStart () {
       if (this.currentSlideNumber === 0) {
         this.enableContinue()

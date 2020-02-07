@@ -47,7 +47,11 @@ class DeadlineReminderCommand extends Command
             $q->whereNull('completed_at')->orderBy('created_at', 'DESC');
         }, 'getUserGroup' => function ($q) {
             $q->where('user_group', '!=', 'control');
-        }, 'participant'])->whereHas('moduleProgress')->whereHas('getUserGroup')->get();
+        }, 'participant'])
+            ->whereHas('moduleProgress')
+            ->whereHas('getUserGroup')
+            ->whereHas('participant')
+            ->get();
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {

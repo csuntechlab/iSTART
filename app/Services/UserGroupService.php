@@ -48,6 +48,8 @@ class UserGroupService implements UserGroupContract
                 ->orderBy('count')
                 ->get();
 
+            $groupsArr = ['comparison', 'control', 'intervention'];
+
             $comparison_Count = 0;
             $control_Count = 0;
             $intervention_Count = 0;
@@ -70,7 +72,7 @@ class UserGroupService implements UserGroupContract
 
             if ($control_Count == $comparison_Count && $comparison_Count == $intervention_Count) {
                 $randomNumber = rand(0, 2);
-                $userInUserGroup->user_group = $groups[$randomNumber]->user_group;
+                $userInUserGroup->user_group = $groupsArr[$randomNumber];
                 $userInUserGroup->save();
             } else if ($comparison_Count <= $control_Count and $comparison_Count<= $intervention_Count) {
                 $userInUserGroup->user_group = 'comparison';
