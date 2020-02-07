@@ -97,7 +97,7 @@ export default {
           // we are not in comparison we are in intervention.
           let moduleData = this.getModuleData
           // remove the last index since that one is comparison
-          moduleData.pop()
+          delete moduleData[5]
           let moduleDataLength = Object.keys(moduleData).length
           for (let i = 0; i < moduleDataLength; i++) {
             let moduleDataName = moduleData[i].name.toLowerCase()
@@ -113,7 +113,6 @@ export default {
                     index: i
                   }
                   this.completeModule(completePayload)
-                  return true
                 }
               } else {
                 // we finished the intervention modules
@@ -124,14 +123,15 @@ export default {
                   index: i
                 }
                 this.completeModule(completePayload)
-                return true
               }
             }
           }
+          return true
         }
+      } else {
+        // we are not on the last slide so let's proceed as usual
+        return false
       }
-      // we are not on the last slide so let's proceed as usual
-      return false
     }
   },
 
