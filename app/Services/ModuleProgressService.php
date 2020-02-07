@@ -73,17 +73,24 @@ class ModuleProgressService implements ModuleProgressContract
         ->where('current_module', $data['current_module'])
         ->whereNull('completed_at')
         ->first();
-        if ($moduleComplete == null) {
-            return null;
+        if ($moduleComplete === null) {
+            return false;
         }
-        $moduleComplete->completed_at = Carbon::now()->toDateTimeString();
-        $moduleComplete->touch();
-        $moduleComplete->save();
-        $newModule = $this->createNewModule($data);
-        if ($newModule !== null) {
+        DB::table('module_progresses')
+            ->where('user_id', $data['user_id'])
+            ->where('current_module', $data['current_module'])
+            ->update([
+                'completed_at' => Carbon::now()->toDateTimeString(),
+                'updated_at' => Carbon::now()->toDateTimeString()
+            ]);
+        if ($data['next_module'] === null && ($data['current_module'] === 'comparison' || $data['current_module'] === 'illicit drugs')) {
             return true;
+        } else {
+            $newModule = $this->createNewModule($data);
+            if ($newModule !== null) {
+                return true;
+            }
         }
-        return null;
     }
 
     public function createNewModule($data)
