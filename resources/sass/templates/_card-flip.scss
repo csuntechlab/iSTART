@@ -35,6 +35,7 @@
     }
 
     &-front, &-back {
+      @extend .interactable-container;
       background-color: $white;
       backface-visibility: hidden;
       text-align: center;

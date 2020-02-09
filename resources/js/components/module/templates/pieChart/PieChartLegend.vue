@@ -1,3 +1,8 @@
+
+<template>
+  <span class="sr-only">Your Guess: {{this.response}}%, Actual Percentage: {{this.sources}}%</span>
+</template>
+
 <script>
 import { Pie } from 'vue-chartjs'
 export default {
