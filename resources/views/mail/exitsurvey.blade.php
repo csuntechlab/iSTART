@@ -10,4 +10,5 @@
         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;"> <a href="https://www.surveymonkey.com/r/postcontrolcsun" target="_blank" rel="noreferrer" style="color: rgb(55, 113, 220); font-size: 14px; font-weight: bold; text-align: center; text-decoration: underline;">https://www.surveymonkey.com/r/postcontrolcsun</a>.</p>
     @else
         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0 0 15px;"> <a href="https://www.surveymonkey.com/r/postcomparison" target="_blank" rel="noreferrer" style="color: rgb(55, 113, 220); font-size: 14px; font-weight: bold; text-align: center; text-decoration: underline;">https://www.surveymonkey.com/r/postcomparison</a>.</p>
+    @endif
 @endsection
