@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Services;
+use App\Mail\ExitSurveyEmail;
 use App\Models\ModuleProgress;
 use App\Contracts\ModuleProgressContract;
 use App\Jobs\SendNewModuleEmail;
@@ -9,6 +10,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Jobs\SendReminderModuleEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 
 class ModuleProgressService implements ModuleProgressContract
@@ -83,7 +85,14 @@ class ModuleProgressService implements ModuleProgressContract
                 'completed_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ]);
-        if ($data['next_module'] === null && ($data['current_module'] === 'comparison' || $data['current_module'] === 'illicit drugs')) {
+        if ($data['next_module'] === null && $data['current_module'] === 'illicit drugs') {
+            $user = User::witH('getUserGroup')->find($data['user_id']);
+            if ($user !== null) {
+                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new ExitSurveyEmail($user));
+                return true;
+            }
+            return false;
+        } else if ($data['next_module'] === null && $data['current_module'] === 'comparison') {
             return true;
         } else {
             $newModule = $this->createNewModule($data);

@@ -49,7 +49,9 @@ class ExitSurveyEmailCommand extends Command
                     $q->orderBy('created_at', 'DESC');
                 }
             ])
-            ->whereHas('getUserGroup')
+            ->whereHas('getUserGroup', function ($q) {
+                $q->where('user_group', '!= intervention');
+            })
             ->whereHas('participant')
             ->whereHas('moduleProgress')
             ->get();
@@ -62,17 +64,10 @@ class ExitSurveyEmailCommand extends Command
                     if ($difference === 30) {
                         if ($user->getUserGroup->user_group === 'control') {
                             $this->sendEmail($user);
-                        } else if ($user->getUserGroup->user_group === 'comparison') {
+                        } else {
                             $lastModule = $user->moduleProgress->first();
                             if (!is_null($lastModule->completed_at)) {
                                 $this->sendEmail($user);
-                            }
-                        } else {
-                            if (count($user->moduleProgress) === 5) {
-                                $lastModule = $user->moduleProgress->first();
-                                if (!is_null($lastModule->completed_at)) {
-                                    $this->sendEmail($user);
-                                }
                             }
                         }
                     }
