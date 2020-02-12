@@ -28,9 +28,9 @@ class ModuleProgressService implements ModuleProgressContract
         if (count($moduleProgress) === 0) {
             $user = User::with('getUserGroup', 'participant')->whereHas('getUserGroup')->whereHas('participant')->find($data['user_id']);
             if ($user->getUserGroup !== null && $user !== null) {
-                $response['expiration_date'] = $user->participant->created_at->addDays(config('app.days_to_expire'))->toDateTimeString();
+                $response['expiration_date'] = Carbon::parse($user->participant->created_at)->addDays(config('app.days_to_expire'))->toDateTimeString();
                 if ($user->getUserGroup->user_group === 'comparison') {
-                    $response['expiration_date'] = $user->participant->created_at->addDays(30)->toDateTimeString();
+                    $response['expiration_date'] = Carbon::parse($user->participant->created_at)->addDays(30)->toDateTimeString();
                 }
                 return $response;
             }
