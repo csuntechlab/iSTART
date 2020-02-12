@@ -8,7 +8,9 @@
       :width="module.width"
     />
     <p class="module__percentage">
+      <span class="sr-only">Module</span>
       {{ Math.round(((latestSlideNumber / (totalSlides - 1)) * 100).toFixed(2)) }}%
+      <span class="sr-only">Complete</span>
     </p>
   </header>
 </template>
