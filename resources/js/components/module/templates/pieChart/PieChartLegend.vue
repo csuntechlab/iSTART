@@ -99,7 +99,7 @@ export default {
   },
   mounted () {
     this.$refs.canvas.setAttribute('role', 'img')
-    this.$refs.canvas.setAttribute('aria-label', 'Pie chart showing ' + this.chartdata.userData.labels[0] + ', and ' + this.chartdata.sourcesData.labels[0])
+    this.$refs.canvas.setAttribute('aria-label', 'Two pie charts. ' + this.chartdata.userData.labels[0] + ', and ' + this.chartdata.sourcesData.labels[0])
     if (this.chartId === 'one') {
       this.renderChart(this.chartdata.userData, this.options1)
     }
