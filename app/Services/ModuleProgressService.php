@@ -1,15 +1,12 @@
 <?php
 
 namespace App\Services;
+use App\Contracts\ModuleProgressContract;
 use App\Mail\ExitSurveyEmail;
 use App\Models\ModuleProgress;
-use App\Contracts\ModuleProgressContract;
-use App\Jobs\SendNewModuleEmail;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Jobs\SendReminderModuleEmail;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -23,17 +20,17 @@ class ModuleProgressService implements ModuleProgressContract
             'current_module' => '',
             'current_page' => 0,
             'max_page' => 0,
-            'expiration_date' => Carbon::now()->addDays(config('app.days_to_expire'))->toDateTimeString(),
             'completed_at' => null,
             'created_at' => null,
             'updated_at' => null
         ];
         $moduleProgress = ModuleProgress::where('user_id',$data['user_id'])->orderBy('created_at', 'DESC')->get();
         if (count($moduleProgress) === 0) {
-            $user = User::with('getUserGroup')->find($data['user_id']);
+            $user = User::with('getUserGroup', 'participant')->whereHas('getUserGroup')->whereHas('participant')->find($data['user_id']);
             if ($user->getUserGroup !== null && $user !== null) {
+                $response['expiration_date'] = Carbon::parse($user->participant->created_at)->addDays(config('app.days_to_expire'))->toDateTimeString();
                 if ($user->getUserGroup->user_group === 'comparison') {
-                    $response['expiration_date'] = Carbon::now()->addDays(30)->toDateTimeString();
+                    $response['expiration_date'] = Carbon::parse($user->participant->created_at)->addDays(30)->toDateTimeString();
                 }
                 return $response;
             }
