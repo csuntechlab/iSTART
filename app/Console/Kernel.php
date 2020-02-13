@@ -26,16 +26,16 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('istart:deadline-reminder')
                 ->timezone(config('app.user_timezone'))
-                ->dailyAt('11:01');
+                ->dailyAt('08:00');
         $schedule->command('istart:new-module')
                 ->timezone(config('app.user_timezone'))
-                ->dailyAt('11:02');
+                ->dailyAt('08:10');
         $schedule->command('istart:login-reminder')
                 ->timezone(config('app.user_timezone'))
-                ->dailyAt('11:03');
+                ->dailyAt('08:20');
         $schedule->command('istart:exit-survey')
                 ->timezone(config('app.user_timezone'))
-                ->dailyAt('12:05');
+                ->dailyAt('08:30');
 
     }
 
