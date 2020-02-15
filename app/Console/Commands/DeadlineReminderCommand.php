@@ -69,7 +69,7 @@ class DeadlineReminderCommand extends Command
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                             } else {
                                 if ($user->getUserGroup->user_group !== 'comparison') {
-                                    if ($dayCheck === 5 || $dayCheck === 4 || $dayCheck === 3) {
+                                    if ($dayCheck === 5 || $dayCheck === 3) {
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
                                 } else {
