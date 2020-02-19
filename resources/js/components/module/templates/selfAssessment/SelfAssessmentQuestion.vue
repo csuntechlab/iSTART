@@ -5,9 +5,9 @@
         <div class="multi-quiz__question module-text__question">{{(parseInt(questionsIndex) + 1)}}. {{ questionsElement.question }}</div>
         <div class="multi-quiz-container">
           <div class="multi-quiz__input-container col-12 col-sm-6" v-for="(inputElement, inputIndex) in questionsElement.input" :key="`${inputIndex}`">
-            <div @click="processInput(quizIndex, questionsIndex, inputIndex, inputElement.redirect)" :class="[(inputElement.selected ? 'active' : ''), 'multi-quiz__input module-text__text interactable-container']">
+            <button type="button" role="button" @click="processInput(quizIndex, questionsIndex, inputIndex, inputElement.redirect)" :class="[(inputElement.selected ? 'active' : ''), 'multi-quiz__input module-text__text interactable-container']">
               {{ inputElement.label }}
-            </div>
+            </button>
           </div>
         </div>
       </div>
