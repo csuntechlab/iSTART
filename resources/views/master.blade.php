@@ -127,7 +127,7 @@ background-color: #106dbc !important; border-color: #106dbc !important; -webkit-
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; font-size: 12px; padding-bottom: 10px; padding-top: 10px; color: #716f6f;" align="center" valign="top">
-                    <a href="https://www.csun.edu/istart" target="_blank" rel="noreferrer" style="color: #716f6f; font-size: 12px; text-align: center; text-decoration: underline;"><img class="logo-img" src="https://www.sandbox.csun.edu/apps/istart/images/logos/logo_color.svg" alt="iSTART Logo" style="-ms-interpolation-mode: bicubic; max-width: 100%; width: 15%; border: none;"></a>
+                    <a href="https://www.csun.edu/istart" target="_blank" rel="noreferrer" style="color: #716f6f; font-size: 12px; text-align: center; text-decoration: underline;"><img class="logo-img" src="https://www.sandbox.csun.edu/apps/istart/images/logos/logo_color.png" alt="iSTART Logo" style="-ms-interpolation-mode: bicubic; max-width: 100%; width: 15%; border: none;"></a>
                   </td>
                 </tr>
                 <tr>
