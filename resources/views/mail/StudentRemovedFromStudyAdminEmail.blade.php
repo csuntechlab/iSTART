@@ -7,7 +7,7 @@
             The following participant {{ $studentRemovedFromStudyAdminEmail->email }} did not log-in on time and was removed from the study.
         @else
             The following participant {{ $studentRemovedFromStudyAdminEmail->email }} did not complete the
-            {{ ucfirst($studentRemovedFromStudyAdminEmail->current_module) }} module and has been removed from the study.
+            {{ ucwords($studentRemovedFromStudyAdminEmail->current_module) }} module and has been removed from the study.
         @endif
     </p>
 @endsection
