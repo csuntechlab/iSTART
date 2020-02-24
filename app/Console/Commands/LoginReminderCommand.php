@@ -59,7 +59,7 @@ class LoginReminderCommand extends Command
                     $then = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
                     $dayCheck = $today->diffInDays($then);
                     if ($user->getUserGroup->user_group === 'intervention') {
-                        if ($dayCheck === (config('app.days_to_exipre') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {
+                        if ($dayCheck === (config('app.days_to_expire') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {
                             // send out the email.
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
                         } else if ($dayCheck === (config('app.days_to_expire') - 1)) {
