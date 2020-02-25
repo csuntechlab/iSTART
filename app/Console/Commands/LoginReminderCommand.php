@@ -70,7 +70,7 @@ class LoginReminderCommand extends Command
                             $user->participant()->delete();
                         }
                     } else {
-                        if ($dayCheck === (30 / 2) || $dayCheck === (30 / 3)) {
+                        if ($dayCheck === (30 / 2) || $dayCheck === (30 / 3) || $dayCheck === (30 / 6)) {
                             // send out the email.
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
                         } else if ($dayCheck === (30 - 1)) {
