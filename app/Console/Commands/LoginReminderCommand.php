@@ -63,7 +63,7 @@ class LoginReminderCommand extends Command
                     } else if ($dayCheck >= config('app.days_to_expire')) {
                         // send out the student has been removed email.
                         Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, null));
-//                        $user->participant()->delete();
+                        $user->participant()->delete();
                     }
                 } else if($user->getUserGroup === 'comparison') {
                     if ($dayCheck === (30 / 2) || $dayCheck === (30 / 3) || $dayCheck === (30 / 6)) {
@@ -74,7 +74,7 @@ class LoginReminderCommand extends Command
                     } else if ($dayCheck >= 30) {
                         // send out the student has been removed email.
                         Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, null));
-//                        $user->participant()->delete();
+                        $user->participant()->delete();
                     }
                 }
             }
