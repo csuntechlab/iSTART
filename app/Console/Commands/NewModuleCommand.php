@@ -43,9 +43,11 @@ class NewModuleCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->where('current_module', '!=', 'comparison')->orderBy('created_at', 'DESC');
-        }, 'participant'])
-            ->whereHas('moduleProgress')
+                $q->orderBy('created_at', 'DESC');
+            }, 'participant'])
+            ->whereHas('moduleProgress', function ($q) {
+                $q->where('current_module', '!=', 'comparison');
+            })
             ->whereHas('participant')
             ->get();
         // get calls always return something
@@ -58,7 +60,7 @@ class NewModuleCommand extends Command
                             $today = Carbon::now(config('app.user_timezone'));
                             $then = Carbon::parse($currentModule->created_at)->setTimezone(config('app.user_timezone'));
                             $dayCheck = $today->diffInDays($then);
-                            if ($dayCheck === config('app.days_to_release')) {
+                            if ($dayCheck >= config('app.days_to_release')) {
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
                             }
                         }
