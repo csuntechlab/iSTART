@@ -42,33 +42,30 @@ class ExitSurveyEmailCommand extends Command
      */
     public function handle()
     {
-        $users = User::with([
-                'participant',
-                'getUserGroup',
-                'moduleProgress' => function ($q) {
-                    $q->orderBy('created_at', 'DESC');
-                }
-            ])
-            ->whereHas('getUserGroup', function ($q) {
-                $q->where('user_group', '!= intervention');
-            })
-            ->whereHas('participant')
-            ->whereHas('moduleProgress')
-            ->get();
         $today = Carbon::now(config('app.user_timezone'));
+        $today->subDays(30);
+        $then = $today->toDateTimeString();
+        $users = User::with([
+            'participant' => function ($q) use ($then) {
+                $q->where('created_at', '<=', $then);
+            },
+            'getUserGroup',
+            'moduleProgress' => function ($q) {
+                $q->orderBy('created_at', 'DESC');
+            }
+        ])
+            ->whereHas('getUserGroup')
+            ->whereHas('participant')
+            ->get();
         if (count($users)) {
             foreach($users as $user) {
                 if (!is_null($user->participant)) {
-                    $convertedTime = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
-                    $difference = $today->diffInDays($convertedTime);
-                    if ($difference === 30) {
-                        if ($user->getUserGroup->user_group === 'control') {
+                    if ($user->getUserGroup->user_group === 'control') {
+                        $this->sendEmail($user);
+                    } else if ($user->getUserGroup->user_group === 'comparison') {
+                        $lastModule = $user->moduleProgress->first();
+                        if (!is_null($lastModule->completed_at)) {
                             $this->sendEmail($user);
-                        } else {
-                            $lastModule = $user->moduleProgress->first();
-                            if (!is_null($lastModule->completed_at)) {
-                                $this->sendEmail($user);
-                            }
                         }
                     }
                 }

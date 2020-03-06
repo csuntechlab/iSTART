@@ -65,7 +65,7 @@ class LoginReminderCommand extends Command
                         Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, null));
                         $user->participant()->delete();
                     }
-                } else if($user->getUserGroup === 'comparison') {
+                } else if($user->getUserGroup->user_group === 'comparison') {
                     if ($dayCheck === (30 / 2) || $dayCheck === (30 / 3) || $dayCheck === (30 / 6)) {
                         // send out the email.
                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
