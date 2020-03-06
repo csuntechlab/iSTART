@@ -17,9 +17,8 @@ class UserCompletesModuleEmailService implements UserCompletesModuleEmailContrac
         $user = auth()->user();
         $user->load('getUserGroup');
         $currentModule = ModuleProgress::where('completed_at', '!=', NULL)->orderBy('created_at', 'DESC')->find($user['user_id']);
-        $ParticipantID = Participant::find($user['user_id']);
         $userCompletesModuleEmailToAdmin = new \stdClass();
-        $userCompletesModuleEmailToAdmin->student = $user->getUserGroup->display_name;
+        $userCompletesModuleEmailToAdmin->student = $user->email;
         $userCompletesModuleEmailToAdmin->current_module = $currentModule['current_module'];
         Mail::to((env('RECEIVE_EMAIL')))->send(new UserCompletesModuleEmailToAdmin($userCompletesModuleEmailToAdmin));
 
