@@ -25,7 +25,7 @@ class UserModelRepository implements UserModelRepositoryInterface
             return null;
         } else {
             $participant = Participant::find($user->user_id);
-            if ($participant !== null) {
+            if ($participant === null) {
                 $user_id = $user->toArray()['user_id'];
                 return $user_id;
             }
