@@ -47,8 +47,8 @@
     </div>
 
     <section class="participants__submission">
-      <button class="btn participants__button participants__button-return" @click="returnToImport">Return back to Import</button>
-      <button v-if="participantsWereSubmitted !== true" class="btn button-primary participants__button" @click="submitGoodParticipants">Submit Good Participants</button>
+      <button class="btn participants__button participants__button-return" @click="enableSubmit(); returnToImport();">Return back to Import</button>
+      <button v-if="participantsWereSubmitted !== true" :class="isSubmissionButtonEnabled ? 'btn button-primary participants__button' : 'hide'" @click="disableSubmit(); submitGoodParticipants();">Submit Good Participants</button>
     </section>
   </div>
 </template>
@@ -61,13 +61,26 @@ export default {
   computed: {
     ...mapGetters([
       'participantsWereSubmitted',
+      'isSubmissionButtonEnabled',
       'categorizedParticipants'
     ])
+  },
+
+  mounted () {
+    this.enableSubmit()
   },
 
   methods: {
     returnToImport () {
       this.$store.dispatch('hideParticipantList')
+    },
+
+    enableSubmit () {
+      this.$store.commit('TOGGLE_SUBMISSION_BUTTON', true)
+    },
+
+    disableSubmit () {
+      this.$store.commit('TOGGLE_SUBMISSION_BUTTON', false)
     },
 
     submitGoodParticipants () {

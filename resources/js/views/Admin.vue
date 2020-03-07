@@ -28,7 +28,7 @@
             <b>Accepted File Formats</b>
             .xls & .xlsx
           </p>
-          <button v-if="!incorrectFileType && !initialFileUpload" class="admin__button btn button-primary btn-lg" @click.prevent="submitFile">Submit</button>
+          <button v-if="!incorrectFileType && !initialFileUpload" :class="(isSubmissionButtonEnabled ? 'admin__button btn button-primary btn-lg' : 'hide')" @click="disableSubmit();" @click.prevent="submitFile">Submit</button>
         </section>
         <section v-if="isParticipantsListShown">
           <participants/>
@@ -67,7 +67,8 @@ export default {
 
   computed: {
     ...mapGetters([
-      'isParticipantsListShown'
+      'isParticipantsListShown',
+      'isSubmissionButtonEnabled'
     ])
   },
 
@@ -77,6 +78,14 @@ export default {
       if (files && files[0]) {
         this.readFile(files[0])
       }
+    },
+
+    enableSubmit () {
+      this.$store.commit('TOGGLE_SUBMISSION_BUTTON', true)
+    },
+
+    disableSubmit () {
+      this.$store.commit('TOGGLE_SUBMISSION_BUTTON', false)
     },
 
     submitFile (event) {
