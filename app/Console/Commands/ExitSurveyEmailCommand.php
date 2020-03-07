@@ -47,7 +47,7 @@ class ExitSurveyEmailCommand extends Command
         $then = $today->toDateTimeString();
         $users = User::with([
             'participant' => function ($q) use ($then) {
-                $q->where('created_at', '<=', $then);
+                $q->where('created_at', '=', $then);
             },
             'getUserGroup',
             'moduleProgress' => function ($q) {

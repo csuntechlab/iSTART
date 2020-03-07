@@ -6,5 +6,6 @@ export default {
   wasLoginAFailure: state => state.loginFailed,
   isParticipantsListShown: state => state.isParticipantsListShown,
   categorizedParticipants: state => state.categorizedParticipants,
+  isSubmissionButtonEnabled: state => state.isSubmissionButtonEnabled,
   participantsWereSubmitted: state => state.participantsWereSubmitted
 }

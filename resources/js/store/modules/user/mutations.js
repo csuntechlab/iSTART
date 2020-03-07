@@ -33,6 +33,10 @@ export default {
     state.isParticipantsListShown = false
   },
 
+  TOGGLE_SUBMISSION_BUTTON (state, payload) {
+    state.isSubmissionButtonEnabled = payload
+  },
+
   PARTICIPANTS_WERE_SUBMITTED (state, payload) {
     state.categorizedParticipants = {}
     state.participantsWereSubmitted = payload
