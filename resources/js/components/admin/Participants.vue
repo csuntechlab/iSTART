@@ -6,7 +6,7 @@
         <thead>
           <tr>
             <th class="participants__table-header" scope="col">
-              <span class="participants__table-description">Emails not found in the system</span>
+              <span class="participants__table-description">Duplicate emails or emails not found in the system</span>
               <a href="#" @click="toggleBadParticipantsList">
                 <i id="badParticipantChevron" class="fas fa-chevron-down"></i>
               </a>
