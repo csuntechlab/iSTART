@@ -45,12 +45,14 @@ class DeadlineReminderCommand extends Command
     {
         // Let's get the users that only have an actual Module
         $users = User::with(['moduleProgress' => function ($q) {
-            $q->whereNull('completed_at')->orderBy('created_at', 'DESC');
-        }, 'getUserGroup' => function ($q) {
-            $q->where('user_group', '!=', 'control');
-        }, 'participant'])
-            ->whereHas('moduleProgress')
-            ->whereHas('getUserGroup')
+            $q->orderBy('created_at', 'DESC');
+        }, 'getUserGroup', 'participant'])
+            ->whereHas('moduleProgress', function ($q) {
+                $q->whereNull('completed_at');
+            })
+            ->whereHas('getUserGroup', function ($q) {
+                $q->where('user_group', '!=', 'control');
+            })
             ->whereHas('participant')
             ->get();
         // get calls always return something
@@ -68,7 +70,7 @@ class DeadlineReminderCommand extends Command
                             } else if ($dayCheck === 1) {
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                             } else {
-                                if ($user->getUserGroup->user_group !== 'comparison') {
+                                if ($user->getUserGroup->user_group !== 'intervention') {
                                     if ($dayCheck === 5 || $dayCheck === 3) {
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
