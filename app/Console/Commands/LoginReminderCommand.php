@@ -46,6 +46,9 @@ class LoginReminderCommand extends Command
         // Let's get the users that do not have a Module
         $users = User::with(['participant', 'moduleProgress', 'getUserGroup'])
             ->whereHas('participant')
+            ->whereHas('getUserGroup', function ($q) {
+                $q->where('user_group', 'control');
+            })
             ->doesntHave('moduleProgress')
             ->get();
         // get calls always return something
