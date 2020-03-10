@@ -51,14 +51,14 @@ class NewModuleCommand extends Command
             ->whereHas('participant')
             ->get();
         // get calls always return something
+        $today = Carbon::now();
         if (!empty($users)) {
             foreach ($users as $user) {
                 if (!is_null($user->participant)) {
                     if (count($user->moduleProgress)) {
                         $currentModule = $user->moduleProgress->first();
                         if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
-                            $today = Carbon::now(config('app.user_timezone'));
-                            $then = Carbon::parse($currentModule->created_at)->setTimezone(config('app.user_timezone'));
+                            $then = Carbon::parse($currentModule->created_at);
                             $dayCheck = $today->diffInDays($then);
                             if ($dayCheck === config('app.days_to_release')) {
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));

@@ -51,8 +51,8 @@ class LoginReminderCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                $today = Carbon::now(config('app.user_timezone'));
-                $then = Carbon::parse($user->participant->created_at)->setTimezone(config('app.user_timezone'));
+                $today = Carbon::now();
+                $then = Carbon::parse($user->participant->created_at);
                 $dayCheck = $today->diffInDays($then);
                 if ($user->getUserGroup === null) {
                     if ($dayCheck === (config('app.days_to_expire') - 4) || $dayCheck === (config('app.days_to_expire') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {

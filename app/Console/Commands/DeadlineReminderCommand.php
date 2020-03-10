@@ -58,10 +58,10 @@ class DeadlineReminderCommand extends Command
                 if (!is_null($user->participant)) {
                     if (count($user->moduleProgress)) {
                         $currentModule = $user->moduleProgress->first();
-                        if ($currentModule) {
+                        if ($currentModule->completed_at === null) {
                             // we want to check today's date vs the expiration date of the module.
-                            $convertedTime = Carbon::parse($currentModule->expiration_date)->setTimezone(config('app.user_timezone'));
-                            $dayCheck = Carbon::now(config('app.user_timezone'))->diffInDays($convertedTime);
+                            $convertedTime = Carbon::parse($currentModule->expiration_date);
+                            $dayCheck = Carbon::now()->diffInDays($convertedTime);
                             if ($dayCheck === 0) {
                                 $user->participant()->delete();
                                 Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
@@ -73,7 +73,7 @@ class DeadlineReminderCommand extends Command
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
                                 } else {
-                                    if ($dayCheck === 15 || $dayCheck === 10 || $dayCheck === 5)  {
+                                    if ($dayCheck === 25 || $dayCheck === 20 || $dayCheck === 15 || $dayCheck === 10 || $dayCheck === 5)  {
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
                                 }
@@ -81,12 +81,17 @@ class DeadlineReminderCommand extends Command
                         }
                     } else {
                         // no module available but they have logged in at least
-                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at)->setTimezone('app.user_timezone');
-                        $dayCheck = Carbon::now(config('app.user_timezone'))->diffInDays($loggedInTime);
-                        if ($dayCheck === 4 || $dayCheck === 5 || $dayCheck === 3) {
-                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
-                        } else if ($dayCheck == 1) {
+                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at);
+                        $dayCheck = Carbon::now()->diffInDays($loggedInTime);
+                        if ($dayCheck === (config('app.days_to_expire') - 4) || $dayCheck === (config('app.days_to_expire') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {
+                            // send out the email.
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, null));
+                        } else if ($dayCheck === (config('app.days_to_expire') - 1)) {
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
+                        } else if ($dayCheck >= config('app.days_to_expire')) {
+                            // send out the student has been removed email.
+                            Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, null));
+                            $user->participant()->delete();
                         }
                     }
                 }
