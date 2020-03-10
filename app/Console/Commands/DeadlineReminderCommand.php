@@ -47,9 +47,6 @@ class DeadlineReminderCommand extends Command
         $users = User::with(['moduleProgress' => function ($q) {
             $q->orderBy('created_at', 'DESC');
         }, 'getUserGroup', 'participant'])
-            ->whereHas('moduleProgress', function ($q) {
-                $q->whereNull('completed_at');
-            })
             ->whereHas('getUserGroup', function ($q) {
                 $q->where('user_group', '!=', 'control');
             })
@@ -72,7 +69,7 @@ class DeadlineReminderCommand extends Command
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                             } else {
                                 if ($user->getUserGroup->user_group !== 'intervention') {
-                                    if ($dayCheck === 5 || $dayCheck === 3) {
+                                    if ($dayCheck === 4 || $dayCheck === 5 || $dayCheck === 3) {
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
                                 } else {
@@ -81,6 +78,15 @@ class DeadlineReminderCommand extends Command
                                     }
                                 }
                             }
+                        }
+                    } else {
+                        // no module available but they have logged in at least
+                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at)->setTimezone('app.user_timezone');
+                        $dayCheck = Carbon::now(config('app.user_timezone'))->diffInDays($loggedInTime);
+                        if ($dayCheck === 4 || $dayCheck === 5 || $dayCheck === 3) {
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
+                        } else if ($dayCheck == 1) {
+                            Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                         }
                     }
                 }

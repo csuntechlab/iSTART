@@ -42,20 +42,21 @@ class ExitSurveyEmailCommand extends Command
      */
     public function handle()
     {
-        $today = Carbon::now(config('app.user_timezone'));
-        $today->subDays(30);
-        $then = $today->toDateTimeString();
+        $today = Carbon::now(config('app.user_timezone'))->subDays(30);
+        $todayCopy = clone($today);
+        $beginTimeString = $today->startOfDay()->toDateTimeString();
+        $endTimeString = $todayCopy->endOfDay()->toDateTimeString();
         $users = User::with([
-            'participant' => function ($q) use ($then) {
-                $q->where('created_at', '=', $then);
-            },
+            'participant',
             'getUserGroup',
             'moduleProgress' => function ($q) {
                 $q->orderBy('created_at', 'DESC');
             }
         ])
             ->whereHas('getUserGroup')
-            ->whereHas('participant')
+            ->whereHas('participant', function ($q) use ($beginTimeString, $endTimeString) {
+                $q->where('created_at', '<=', $endTimeString)->where('created_at', '>=', $beginTimeString);
+            })
             ->get();
         if (count($users)) {
             foreach($users as $user) {

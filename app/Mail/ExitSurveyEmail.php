@@ -30,6 +30,14 @@ class ExitSurveyEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject(config('mail.from.name'). ' - You completed all the modules!')->view('mail.exitsurvey');
+        $subject = config('mail.from.name');
+        if ($this->user->getUserGroup->user_group === 'control') {
+            $subject .= ' - Exit Survey';
+        } else if ($this->user->getUserGroup->user_group === 'comparison') {
+            $subject .= ' - Stuff';
+        } else {
+            $subject .= ' - You have completed all the modules!';
+        }
+        return $this->subject($subject)->view('mail.exitsurvey');
     }
 }
