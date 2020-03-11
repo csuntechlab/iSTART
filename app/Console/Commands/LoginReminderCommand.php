@@ -51,14 +51,14 @@ class LoginReminderCommand extends Command
         // get calls always return something
         if (!empty($users)) {
             foreach ($users as $user) {
-                $today = Carbon::now();
-                $then = Carbon::parse($user->participant->created_at);
+                $today = Carbon::now()->startOfDay();
+                $then = Carbon::parse($user->participant->created_at)->startOfDay();
                 $dayCheck = $today->diffInDays($then);
                 if ($user->getUserGroup === null) {
-                    if ($dayCheck === (config('app.days_to_expire') - 4) || $dayCheck === (config('app.days_to_expire') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {
+                    if ($dayCheck == (config('app.days_to_expire') - 4) || $dayCheck == (config('app.days_to_expire') - 2)) {
                         // send out the email.
                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHasntLoggedInEmail($user));
-                    } else if ($dayCheck === (config('app.days_to_expire') - 1)) {
+                    } else if ($dayCheck == (config('app.days_to_expire') - 1)) {
                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                     } else if ($dayCheck >= config('app.days_to_expire')) {
                         // send out the student has been removed email.

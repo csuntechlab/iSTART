@@ -53,6 +53,7 @@ class DeadlineReminderCommand extends Command
             ->whereHas('participant')
             ->get();
         // get calls always return something
+        $today = Carbon::now()->startOfDay();
         if (!empty($users)) {
             foreach ($users as $user) {
                 if (!is_null($user->participant)) {
@@ -60,8 +61,8 @@ class DeadlineReminderCommand extends Command
                         $currentModule = $user->moduleProgress->first();
                         if ($currentModule->completed_at === null) {
                             // we want to check today's date vs the expiration date of the module.
-                            $convertedTime = Carbon::parse($currentModule->expiration_date);
-                            $dayCheck = Carbon::now()->diffInDays($convertedTime);
+                            $convertedTime = Carbon::parse($currentModule->expiration_date)->startOfDay();
+                            $dayCheck = $today->diffInDays($convertedTime);
                             if ($dayCheck === 0) {
                                 $user->participant()->delete();
                                 Mail::to(env('RECEIVE_EMAIL'))->send(new StudentRemovedFromStudyAdminEmail($user, $currentModule->current_module));
@@ -69,7 +70,7 @@ class DeadlineReminderCommand extends Command
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                             } else {
                                 if ($user->getUserGroup->user_group !== 'intervention') {
-                                    if ($dayCheck === 4 || $dayCheck === 5 || $dayCheck === 3) {
+                                    if ($dayCheck === 5 || $dayCheck === 3) {
                                         Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, $currentModule->current_module));
                                     }
                                 } else {
@@ -81,12 +82,12 @@ class DeadlineReminderCommand extends Command
                         }
                     } else {
                         // no module available but they have logged in at least
-                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at);
-                        $dayCheck = Carbon::now()->diffInDays($loggedInTime);
-                        if ($dayCheck === (config('app.days_to_expire') - 4) || $dayCheck === (config('app.days_to_expire') - 2) || $dayCheck === (config('app.days_to_expire') - 3)) {
+                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at)->startOfDay();
+                        $dayCheck = $today->diffInDays($loggedInTime);
+                        if ($dayCheck == (config('app.days_to_expire') - 2) || $dayCheck == (config('app.days_to_expire') - 4)) {
                             // send out the email.
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, null));
-                        } else if ($dayCheck === (config('app.days_to_expire') - 1)) {
+                        } else if ($dayCheck == (config('app.days_to_expire') - 1)) {
                             Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserHas24HoursLeftEmail($user));
                         } else if ($dayCheck >= config('app.days_to_expire')) {
                             // send out the student has been removed email.
