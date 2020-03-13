@@ -53,10 +53,10 @@ class ExitSurveyEmailCommand extends Command
                 $q->orderBy('created_at', 'DESC');
             }
         ])
-            ->whereHas('getUserGroup')
-            ->whereHas('participant', function ($q) use ($beginTimeString, $endTimeString) {
+            ->whereHas('getUserGroup', function ($q) use ($beginTimeString, $endTimeString) {
                 $q->where('created_at', '<=', $endTimeString)->where('created_at', '>=', $beginTimeString);
             })
+            ->whereHas('participant')
             ->get();
         if (count($users)) {
             foreach($users as $user) {

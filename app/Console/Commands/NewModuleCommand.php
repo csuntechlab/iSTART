@@ -57,7 +57,7 @@ class NewModuleCommand extends Command
                 if (!is_null($user->participant)) {
                     if (count($user->moduleProgress)) {
                         $currentModule = $user->moduleProgress->first();
-                        if ($currentModule->completed_at === null && ($currentModule->current_page == 0 && $currentModule->max_page == 0)) {
+                        if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
                             $then = Carbon::parse($currentModule->created_at)->setTimezone(config('app.user_timezone'))->startOfDay();
                             $dayCheck = $today->diffInDays($then);
                             if ($dayCheck == config('app.days_to_release')) {
