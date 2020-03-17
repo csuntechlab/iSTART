@@ -53,7 +53,7 @@ class DeadlineReminderCommand extends Command
             ->whereHas('participant')
             ->get();
         // get calls always return something
-        $today = Carbon::now()->startOfDay();
+        $today = Carbon::now(config('app.user_timezone'))->startOfDay();
         if (!empty($users)) {
             foreach ($users as $user) {
                 if (!is_null($user->participant)) {
@@ -61,7 +61,7 @@ class DeadlineReminderCommand extends Command
                         $currentModule = $user->moduleProgress->first();
                         if ($currentModule->completed_at === null) {
                             // we want to check today's date vs the expiration date of the module.
-                            $convertedTime = Carbon::parse($currentModule->expiration_date)->startOfDay();
+                            $convertedTime = Carbon::parse($currentModule->expiration_date)->setTimezone(config('app.user_timezone'))->startOfDay();
                             $dayCheck = $today->diffInDays($convertedTime);
                             if ($dayCheck === 0) {
                                 $user->participant()->delete();
@@ -82,10 +82,10 @@ class DeadlineReminderCommand extends Command
                         }
                     } else {
                         // no module available but they have logged in at least
-                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at)->startOfDay();
+                        $loggedInTime = Carbon::parse($user->getUserGroup->created_at)->setTimezone(config('app.user_timezone'))->startOfDay();
                         $dayCheck = $today->diffInDays($loggedInTime);
                         if ($user->getUserGroup->user_group === 'intervention' ) {
-                            if ($dayCheck == 3 || $dayCheck == 5) {
+                            if ($dayCheck == 3 || $dayCheck == 4 || $dayCheck == 5) {
                                 // send out the email.
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new UserRunningOutOfTimeEmail($user, null));
                             } else if ($dayCheck == 6) {
