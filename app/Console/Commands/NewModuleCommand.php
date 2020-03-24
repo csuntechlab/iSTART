@@ -60,7 +60,10 @@ class NewModuleCommand extends Command
                         if ($currentModule->completed_at === null && ($currentModule->current_page === 0 && $currentModule->max_page === 0)) {
                             $then = Carbon::parse($currentModule->created_at)->setTimezone(config('app.user_timezone'))->startOfDay();
                             $dayCheck = $today->diffInDays($then);
-                            if ($dayCheck == config('app.days_to_release')) {
+                            if ($currentModule->current_module === 'illicit drugs' && $dayCheck === 0) {
+                                Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
+                            }
+                            if ($currentModule->current_module !== 'illicit drugs' && $dayCheck == config('app.days_to_release')) {
                                 Mail::to($user->email)->cc(env('RECEIVE_EMAIL'))->send(new NewModuleAvailable($currentModule->current_module));
                             }
                         }
