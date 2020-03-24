@@ -52,9 +52,23 @@ export default {
           let releaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
           let formattedReleaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
           let isModuleReleased = window.moment(currentDate).isSameOrAfter(releaseDate)
+          let isLastModule = (currentCompletedModuleName === 'prescription')
+          let lastModuleCreatedAtDate = payload.data[0].created_at.split(' ')[0]
+          let isLastModuleReleased = window.moment(currentDate).isSameOrAfter(lastModuleCreatedAtDate)
 
-          // If module has not been started
-          if (isModuleReleased) {
+          // If module has not been started, check release date
+          if (isLastModule) {
+            // If final module, release on 30 day period
+            if (isLastModuleReleased) {
+              moduleDataItem.show = true
+              moduleDataItem.progress.is_review = false
+              moduleDataItem.progress.current_slide = 0
+              moduleDataItem.progress.latest_slide = 0
+              moduleDataItem.progress.slide_percentage = 0
+              moduleDataItem.progress.due_date = expirationDate
+              break
+            }
+          } else if (isModuleReleased) {
             moduleDataItem.show = true
             moduleDataItem.progress.is_review = false
             moduleDataItem.progress.current_slide = 0
@@ -66,7 +80,7 @@ export default {
           }
           break
         } else if (isModuleNameMatching && isSlideNumberEqual && !isSlideNumberZero) {
-          // If module is complete
+          // Mark module as complete if already completed
           moduleDataItem.show = true
           moduleDataItem.progress.is_review = true
           moduleDataItem.progress.current_slide = 0
@@ -74,7 +88,7 @@ export default {
           moduleDataItem.progress.slide_percentage = 100
           break
         } else if (isModuleNameMatching && !isSlideNumberZero) {
-          // Set Progress for current Module
+          // Set Progress for current in-complete module
           moduleDataItem.show = true
           moduleDataItem.progress.is_review = false
           moduleDataItem.progress.current_slide = currentCompletedModuleSlideNumber
@@ -83,7 +97,7 @@ export default {
           moduleDataItem.progress.due_date = expirationDate
           break
         } else {
-          // Mark module as completed if already completed previously
+          // If no other conditions meet, mark as review mode
           moduleDataItem.show = true
           moduleDataItem.progress.is_review = true
           moduleDataItem.progress.slide_percentage = 100
