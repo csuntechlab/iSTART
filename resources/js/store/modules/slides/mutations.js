@@ -52,12 +52,13 @@ export default {
           let releaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('YYYY-MM-DD')
           let formattedReleaseDate = window.moment(previousModuleCompletion).add(daysToRelease, 'days').format('MM/DD/YYYY')
           let isModuleReleased = window.moment(currentDate).isSameOrAfter(releaseDate)
-          let isLastModule = (currentCompletedModuleName === 'prescription')
+          let isLastModule = (currentCompletedModuleName === 'illicit drugs')
           let lastModuleCreatedAtDate = payload.data[0].created_at.split(' ')[0]
           let isLastModuleReleased = window.moment(currentDate).isSameOrAfter(lastModuleCreatedAtDate)
 
           // If module has not been started, check release date
           if (isLastModule) {
+            state.nextModuleDate = window.moment(payload.data[0].created_at.split(' ')[0]).format('MM/DD/YYYY')
             // If final module, release on 30 day period
             if (isLastModuleReleased) {
               moduleDataItem.show = true
