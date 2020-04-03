@@ -42,7 +42,7 @@ class ExitSurveyEmailCommand extends Command
      */
     public function handle()
     {
-        $today = Carbon::now()->subDays(30);
+        $today = Carbon::now(config('app.user_timezone'))->endOfDay();
         $todayCopy = clone($today);
         $beginTimeString = $today->startOfDay()->toDateTimeString();
         $endTimeString = $todayCopy->endOfDay()->toDateTimeString();
@@ -53,20 +53,25 @@ class ExitSurveyEmailCommand extends Command
                 $q->orderBy('created_at', 'DESC');
             }
         ])
-            ->whereHas('getUserGroup', function ($q) use ($beginTimeString, $endTimeString) {
-                $q->where('created_at', '<=', $endTimeString)->where('created_at', '>=', $beginTimeString);
+            ->whereHas('getUserGroup', function ($q) {
+                $q->where('user_group', '!=', 'intervention');
             })
+            ->whereHas('getUserGroup')
             ->whereHas('participant')
             ->get();
         if (count($users)) {
             foreach($users as $user) {
-                if (!is_null($user->participant)) {
-                    if ($user->getUserGroup->user_group === 'control') {
-                        $this->sendEmail($user);
-                    } else if ($user->getUserGroup->user_group === 'comparison') {
-                        $lastModule = $user->moduleProgress->first();
-                        if (!is_null($lastModule->completed_at)) {
+                if ($user->participant !== null && $user->getUserGroup !== null) {
+                    $then = Carbon::parse($user->getUserGroup->created_at)->setTimezone(config('app.user_timezone'))->startOfDay();
+                    $diff = $today->diffInDays($then);
+                    if ($diff === 30) {
+                        if ($user->getUserGroup->user_group === 'control') {
                             $this->sendEmail($user);
+                        } else if ($user->getUserGroup->user_group === 'comparison') {
+                            $lastModule = $user->moduleProgress->first();
+                            if (!is_null($lastModule->completed_at)) {
+                                $this->sendEmail($user);
+                            }
                         }
                     }
                 }
