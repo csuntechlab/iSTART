@@ -51,7 +51,7 @@ class NewModuleCommand extends Command
             ->whereHas('participant')
             ->get();
         // get calls always return something
-        $today = Carbon::now(config('app.user_timezone'))->endOfDay();
+        $today = Carbon::now(config('app.user_timezone'))->startOfDay();
         if (!empty($users)) {
             foreach ($users as $user) {
                 if (!is_null($user->participant)) {
