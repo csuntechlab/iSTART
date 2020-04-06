@@ -42,10 +42,7 @@ class ExitSurveyEmailCommand extends Command
      */
     public function handle()
     {
-        $today = Carbon::now(config('app.user_timezone'))->endOfDay();
-        $todayCopy = clone($today);
-        $beginTimeString = $today->startOfDay()->toDateTimeString();
-        $endTimeString = $todayCopy->endOfDay()->toDateTimeString();
+        $today = Carbon::now(config('app.user_timezone'))->startOfDay();
         $users = User::with([
             'participant',
             'getUserGroup',
