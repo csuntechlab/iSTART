@@ -28,6 +28,6 @@ class WelcomeEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Welcome to the '.config('mail.from.name'))->view('mail.welcome');
+        return $this->subject('Welcome - log in to the '.config('mail.from.name'). ' now')->view('mail.welcome');
     }
 }
