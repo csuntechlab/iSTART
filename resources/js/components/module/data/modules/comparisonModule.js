@@ -365,6 +365,22 @@ export const comparisonModuleSlides = {
     }
   },
   12: {
+    slide_type: 'info',
+    header: {
+      header: 'Marijuana Use: Be Aware',
+      sub_header: null,
+      tooltip: 'Wait 5 seconds to proceed to the next slide'
+    },
+    content: {
+      0: {
+        paragraph: {
+          0: 'Marijuana is most commonly smoked. Since pot smokers tend to inhale more deeply and hold their breath longer, they inhale <b>4 times</b> the amount of tar compared to cigarette smoke!',
+          1: 'Eating (or drinking) marijuana can mask how much THC we ingest, since different products contain different amounts. It can take up to <b>2 hours or longer</b> to feel a high from edibles. Be careful! We may eat more edibles to get high faster, which can lead to dangerous results.'
+        }
+      }
+    }
+  },
+  13: {
     slide_type: 'cardFlip',
     header: {
       header: 'How does marijuana affect the brain?',
@@ -427,7 +443,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  13: {
+  14: {
     slide_type: 'info',
     header: {
       header: 'What are the long-term effects of marijuana use?',
@@ -456,7 +472,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  14: {
+  15: {
     slide_type: 'info',
     header: {
       header: 'Academic Performance',
@@ -484,7 +500,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  15: {
+  16: {
     slide_type: 'info',
     header: {
       header: 'What\'s legal in California?',
@@ -533,7 +549,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  16: {
+  17: {
     slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
@@ -552,7 +568,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  17: {
+  18: {
     slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -560,7 +576,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  18: {
+  19: {
     slide_type: 'info',
     header: {
       header: 'Responsible Marijuana Use Checklist',
@@ -609,7 +625,7 @@ export const comparisonModuleSlides = {
     }
   },
   // Nicotine Section
-  19: {
+  20: {
     slide_type: 'info',
     header: {
       header: 'Substance 3: Nicotine',
@@ -632,7 +648,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  20: {
+  21: {
     slide_type: 'info',
     header: {
       header: 'Nicotine',
@@ -655,7 +671,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  21: {
+  22: {
     slide_type: 'cardFlip',
     header: {
       header: 'What\'s in a cigarette?',
@@ -717,7 +733,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  22: {
+  23: {
     slide_type: 'info',
     header: {
       header: 'What other ingredients are in cigarettes?',
@@ -777,7 +793,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  23: {
+  24: {
     slide_type: 'info',
     header: {
       header: 'Is hookah considered smoking?',
@@ -799,7 +815,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  24: {
+  25: {
     slide_type: 'info',
     header: {
       header: 'Did you know?',
@@ -821,7 +837,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  25: {
+  26: {
     slide_type: 'info',
     header: {
       header: 'Vaping',
@@ -843,7 +859,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  26: {
+  27: {
     slide_type: 'info',
     header: {
       header: 'What\'s in vape smoke?',
@@ -882,7 +898,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  27: {
+  28: {
     slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
@@ -915,7 +931,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  28: {
+  29: {
     slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -923,7 +939,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  29: {
+  30: {
     slide_type: 'cardFlip',
     header: {
       header: 'Smoke-free Benefits',
@@ -1031,7 +1047,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  30: {
+  31: {
     slide_type: 'info',
     header: {
       header: 'CSUN Clear the Air!',
@@ -1060,7 +1076,7 @@ export const comparisonModuleSlides = {
     }
   },
   // Prescription Drugs Section
-  31: {
+  32: {
     slide_type: 'info',
     header: {
       header: 'Substance 4: Prescription Drugs',
@@ -1083,7 +1099,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  32: {
+  33: {
     slide_type: 'info',
     header: {
       header: 'What\'s the concern?',
@@ -1094,7 +1110,8 @@ export const comparisonModuleSlides = {
       0: {
         paragraph: {
           0: 'Many students may not realize that they, or someone they know, are misusing or abusing prescription (Rx) medications.',
-          1: 'When used the right way and under a doctor’s supervision, Rx drugs can be a safe and effective treatment. However, when used the wrong way, and without a prescription, Rx drugs can be dangerous.'
+          1: 'When used the right way and under a doctor’s supervision, Rx drugs can be a safe and effective treatment. However, when used the wrong way, and without a prescription, Rx drugs can be dangerous.',
+          2: 'Be aware that it is also illegal to use Rx drugs that are not prescribed to you.'
         }
       },
       1: {
@@ -1105,7 +1122,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  33: {
+  34: {
     slide_type: 'cardFlip',
     header: {
       header: 'Drug Use, Misuse and Abuse',
@@ -1166,7 +1183,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  34: {
+  35: {
     slide_type: 'info',
     header: {
       header: 'Commonly Abused Rx Drugs',
@@ -1209,7 +1226,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  35: {
+  36: {
     slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
@@ -1249,7 +1266,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  36: {
+  37: {
     slide_type: 'pieChartResults',
     header: {
       header: 'Here are the results',
@@ -1257,7 +1274,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  37: {
+  38: {
     slide_type: 'info',
     header: {
       header: 'Side effects of RX Drugs',
@@ -1269,12 +1286,13 @@ export const comparisonModuleSlides = {
         paragraph: {
           0: '<b>Stimulants:</b> Ritalin and Adderall are intended to treat ADHD. Repeated use by someone who does NOT have ADHD can increase risk of drug dependency and addiction. Stimulants actually share chemical similarities with Methamphetamine and can cause headaches, increased heart rate, agitation, anxiety and insomnia.',
           1: '<b>Anti-anxiety meds/Sedatives:</b> Meds like Xanax and Valium are highly addictive. Side effects include drowsiness, confusion, dizziness, nausea, memory impairment, slurred speech and slowed breathing.  If you stop taking them abruptly, you can experience severe withdrawal symptoms, risk of seizures, and other serious side effects.',
-          2: '<b>RX Opioids:</b> Some people might think prescription opioids, such as Oxycontin or Vicodin, are safer than alcohol or illegal drugs, but the truth is, prescribed opioids can have similar effects to heroin!'
+          2: '<b>RX Opioids:</b> Some people might think prescription opioids, such as Oxycontin or Vicodin, are safer than alcohol or illegal drugs, but the truth is, prescribed opioids can have similar effects to heroin!',
+          3: 'Be aware that it can be deadly to mix sedatives or opioids with alcohol!'
         }
       }
     }
   },
-  38: {
+  39: {
     slide_type: 'info',
     header: {
       header: 'Painkiller Alternatives',
@@ -1309,7 +1327,7 @@ export const comparisonModuleSlides = {
     }
   },
   // Illicit Drugs Section
-  39: {
+  40: {
     slide_type: 'info',
     header: {
       header: 'Substance 5: Illicit Drugs',
@@ -1332,7 +1350,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  40: {
+  41: {
     slide_type: 'info',
     header: {
       header: 'Illicit Drug Use in College',
@@ -1350,7 +1368,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  41: {
+  42: {
     slide_type: 'info',
     header: {
       header: 'MDMA/Ecstasy',
@@ -1374,7 +1392,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  42: {
+  43: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of MDMA/Ecstasy',
@@ -1429,7 +1447,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  43: {
+  44: {
     slide_type: 'info',
     header: {
       header: 'Synthetic Marijuana',
@@ -1453,7 +1471,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  44: {
+  45: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of Synthetic Marijuana',
@@ -1490,7 +1508,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  45: {
+  46: {
     slide_type: 'info',
     header: {
       header: 'Cocaine',
@@ -1512,7 +1530,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  46: {
+  47: {
     slide_type: 'cardFlip',
     header: {
       header: 'Cocaine Use and Side Effects',
@@ -1590,7 +1608,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  47: {
+  48: {
     slide_type: 'info',
     header: {
       header: 'Opioids: Heroin/Fentanyl',
@@ -1613,7 +1631,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  48: {
+  49: {
     slide_type: 'info',
     header: {
       header: 'Side Effects of Heroin and Fentanyl',
@@ -1673,7 +1691,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  49: {
+  50: {
     slide_type: 'info',
     header: {
       header: 'Injection Drug Use, HIV, and Hepatitis',
@@ -1700,7 +1718,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  50: {
+  51: {
     slide_type: 'pieChartInput',
     header: {
       header: 'What\'s your guess?',
@@ -1733,7 +1751,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  51: {
+  52: {
     slide_type: 'pieChartResults',
     header: {
       header: 'Your Guess vs. Actual Percentage',
@@ -1741,7 +1759,7 @@ export const comparisonModuleSlides = {
       tooltip: 'Wait 5 seconds to proceed to the next slide'
     }
   },
-  52: {
+  53: {
     slide_type: 'info',
     header: {
       header: 'Saying "No"',
@@ -1782,7 +1800,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  53: {
+  54: {
     slide_type: 'info',
     header: {
       header: 'Healthy Alternatives',
@@ -1805,7 +1823,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  54: {
+  55: {
     slide_type: 'info',
     header: {
       header: 'Physical Activities',
@@ -1827,7 +1845,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  55: {
+  56: {
     slide_type: 'info',
     header: {
       header: 'Social Activities',
@@ -1861,7 +1879,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  56: {
+  57: {
     slide_type: 'cardFlip',
     header: {
       header: 'Mind-Body Activities',
@@ -1911,7 +1929,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  57: {
+  58: {
     slide_type: 'info',
     header: {
       header: 'Go beyond yourself!',
@@ -1935,7 +1953,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  58: {
+  59: {
     slide_type: 'info',
     header: {
       header: 'Be Well!',
@@ -1957,7 +1975,7 @@ export const comparisonModuleSlides = {
       }
     }
   },
-  59: {
+  60: {
     slide_type: 'finalSlide',
     header: {
       header: null
