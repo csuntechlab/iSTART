@@ -9,7 +9,7 @@
         You will participate in 5 substance use prevention modules (approximately 1 module per week).
         <ol type="A">
             <li>The first module is available now, and takes about 15 minutes to complete.</li>
-            <li>You will have 7 days to complete each module, with a 5 day rest period after completion of each module.</li>
+            <li>You will have 7 days to complete each module, with a {{ env('DAYS_TO_RELEASE') }} day rest period after completion of each module.</li>
             <li>After the 5th and final module, you will receive an EXIT survey via email, and then a 90-day follow-up survey.</li>
         </ol>
     </p>
