@@ -31,7 +31,7 @@ class ParticipantService implements ParticipantContract
             if ($participants->where('user_id', $goodParticipantsMember['user_id'])->first()) {
                 unset($goodParticipantsMembers[$key]);
             } else {
-                Mail::to($goodParticipantsMember['email'])->send(new WelcomeEmail());
+                Mail::to($goodParticipantsMember['email'])->cc(env('RECEIVE_EMAIL'))->send(new WelcomeEmail());
                 Arr::forget($goodParticipantsMember,'email');
                 $ParticipantsEmailRemoved[] = $goodParticipantsMember;
             }
