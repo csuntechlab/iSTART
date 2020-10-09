@@ -108,8 +108,15 @@ class ModuleProgressService implements ModuleProgressContract
             if ($getUserGroup !== null) {
                 $createdAt = Carbon::parse($getUserGroup->created_at);
                 $dateToExpire = clone($createdAt);
-                $createdAt->addDays(30);
-                $dateToExpire->addDays(30 + config('app.days_to_expire'));
+                $today = Carbon::now()->startofDay();
+                $diff = $today->diff(Carbon::parse($getUserGroup->created_at)->startOfDay());
+                if ($diff >= 30) {
+                    $createdAt->addDays(config('app.days_to_release'));
+                    $dateToExpire->addDays(config('app.days_to_release') + config('app.days_to_expire'));
+                } else {
+                    $createdAt->addDays(30);
+                    $dateToExpire->addDays(30 + config('app.days_to_expire'));
+                }
                 $moduleProgress = new ModuleProgress();
                 $moduleProgress->user_id = $data['user_id'];
                 $moduleProgress->current_module = $data['next_module'];
