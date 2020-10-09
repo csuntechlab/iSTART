@@ -106,14 +106,14 @@ class ModuleProgressService implements ModuleProgressContract
             // I want to make the diff between initial log-in and the module creation be 25!
             $getUserGroup = UserGroup::find($data['user_id']);
             if ($getUserGroup !== null) {
-                $createdAt = Carbon::parse($getUserGroup->created_at);
-                $dateToExpire = clone($createdAt);
-                $today = Carbon::now()->startofDay();
-                $diff = $today->diff(Carbon::parse($getUserGroup->created_at)->startOfDay());
+                $today = Carbon::now()->startOfDay();
+                $diff = $today->diffInDays(Carbon::parse($getUserGroup->created_at)->startOfDay());
                 if ($diff >= 30) {
-                    $createdAt->addDays(config('app.days_to_release'));
-                    $dateToExpire->addDays(config('app.days_to_release') + config('app.days_to_expire'));
+                    $createdAt = Carbon::now()->addDays(config('app.days_to_release'));
+                    $dateToExpire = Carbon::now()->addDays(config('app.days_to_release') + config('app.days_to_expire'));
                 } else {
+                    $createdAt = Carbon::parse($getUserGroup->created_at);
+                    $dateToExpire = clone($createdAt);
                     $createdAt->addDays(30);
                     $dateToExpire->addDays(30 + config('app.days_to_expire'));
                 }
