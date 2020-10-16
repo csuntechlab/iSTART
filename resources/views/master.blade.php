@@ -126,7 +126,7 @@ background-color: #106dbc !important; border-color: #106dbc !important; -webkit-
             <div class="footer" style="clear: both; margin-top: 10px; width: 100%;" align="center">
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
-                  <td style="font-family: sans-serif; font-size: 14px; font-weight: bold; padding-bottom: 10px;" align="center">Don't forget to visit iStart by clicking the button below!</td>
+                  <td style="font-family: sans-serif; font-size: 14px; font-weight: bold; padding-bottom: 10px;" align="center">Don't forget to visit the iStart web app by clicking the button below!</td>
                 </tr>
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; font-size: 12px; padding-bottom: 10px; padding-top: 10px; color: #716f6f;" align="center" valign="top">
