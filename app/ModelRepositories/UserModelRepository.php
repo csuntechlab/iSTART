@@ -13,15 +13,9 @@ class UserModelRepository implements UserModelRepositoryInterface
 {
     public function find($email)
     {
-        $status = Str::contains($email, '@csun.edu');
-
-        if ($status) {
-            return null;
-        }
-
         $user = User::where('email', $email)->first();
 
-        if (null === $user) {
+        if (null === $user || !($user->affiliation === 'student')) {
             return null;
         } else {
             $participant = Participant::find($user->user_id);
