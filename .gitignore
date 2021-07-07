@@ -5,7 +5,6 @@
 /vendor
 .env
 .phpunit.result.cache
-appendonly.aof
 laravel-echo-server.lock
 npm-debug.log
 yarn-error.log
