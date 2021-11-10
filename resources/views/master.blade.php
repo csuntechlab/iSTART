@@ -104,6 +104,9 @@ background-color: #106dbc !important; border-color: #106dbc !important; -webkit-
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
+                                      <td style="font-family: sans-serif; font-size: 14px; font-weight: bold; padding-bottom: 10px;" align="center">Don't forget to visit the iStart web app by clicking the button below!</td>
+                                    </tr>
+                                    <tr>
                                       <td style="font-family: sans-serif; font-size: 14px; border-radius: 5px;" align="center" bgcolor="3771DC" valign="top"> <a href="{{ url('/') }}" target="_blank" style="color: #ffffff; text-decoration: none; background-color: rgb(55, 113, 220); border-radius: 5px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; border: 1px solid rgb(55,113,220);">iStart Web App</a> </td>
                                     </tr>
                                   </tbody>
@@ -125,9 +128,6 @@ background-color: #106dbc !important; border-color: #106dbc !important; -webkit-
 
             <div class="footer" style="clear: both; margin-top: 10px; width: 100%;" align="center">
               <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                <tr>
-                  <td style="font-family: sans-serif; font-size: 14px; font-weight: bold; padding-bottom: 10px;" align="center">Don't forget to visit the iStart web app by clicking the button below!</td>
-                </tr>
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; font-size: 12px; padding-bottom: 10px; padding-top: 10px; color: #716f6f;" align="center" valign="top">
                     <a href="https://www.csun.edu/istart" target="_blank" rel="noreferrer" style="color: #716f6f; font-size: 12px; text-align: center; text-decoration: underline;"><img class="logo-img" src="{{ url('/images/logos/logo_color.png') }}" alt="iSTART Logo" style="-ms-interpolation-mode: bicubic; max-width: 100%; width: 15%; border: none;"></a>
