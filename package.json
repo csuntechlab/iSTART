@@ -57,7 +57,7 @@
     "laravel-mix": "^4.0.7",
     "lint-staged": "^8.1.0",
     "lodash": "^4.17.5",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.12",
     "resolve-url-loader": "^2.3.1",
     "sass": "^1.15.2",
