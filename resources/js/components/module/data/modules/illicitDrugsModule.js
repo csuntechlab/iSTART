@@ -760,7 +760,7 @@ export const illicitDrugsModuleSlides = {
       0: {
         paragraph: {
           0: 'Thank you for having completed all of the modules in this web-app. Now we will ask you to complete a short Exit survey (in Qualtrics) in order to receive your $25 Amazon.com gift card.',
-          1: 'To do this instantly, you can access it here: <a href="https://csun.sjc1.qualtrics.com/jfe/form/SV_8k2unIx47852n2K" target="_blank">Qualtrics</a> (it will also be sent to your email).',
+          1: 'To do this instantly, you can access it here: <a href="https://csun.sjc1.qualtrics.com/jfe/form/SV_elntFK4J5ig3wWO" target="_blank">Qualtrics</a> (it will also be sent to your email).',
           2: 'Within a few days of completing the exit survey, you will receive your gift card via email.'
         }
       }
