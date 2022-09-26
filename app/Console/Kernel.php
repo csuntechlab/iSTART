@@ -8,15 +8,6 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 class Kernel extends ConsoleKernel
 {
     /**
-     * The Artisan commands provided by your application.
-     *
-     * @var array
-     */
-    protected $commands = [
-        //
-    ];
-
-    /**
      * Define the application's command schedule.
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
@@ -36,7 +27,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('istart:exit-survey')
                 ->timezone(config('app.user_timezone'))
                 ->dailyAt('8:30');
-
     }
 
     /**
